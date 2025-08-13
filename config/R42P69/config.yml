@@ -1,5 +1,6 @@
 object_base: orig/R42P69
 object: sys/main.dol
+name: sys/main
 hash: 11e139f12c86f46ea1563e059a0c3c67bfa29d90
 symbols: config/R42P69/symbols.txt
 splits: config/R42P69/splits.txt

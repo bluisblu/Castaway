@@ -199,7 +199,6 @@ cflags_base = [
     "-enum int",
     "-fp hardware",
     "-Cpp_exceptions off",
-    # "-W all",
     "-O4,p",
     "-inline auto",
     '-pragma "cats off"',
@@ -209,8 +208,10 @@ cflags_base = [
     "-RTTI off",
     "-fp_contract on",
     "-str reuse",
-    "-multibyte",  # For Wii compilers, replace with `-enc SJIS`
     "-i include",
+    "-i include/revolution",
+    "-i include/stl",
+    "-ir include/MSL",
     f"-i build/{config.version}/include",
     f"-DBUILD_VERSION={version_num}",
     f"-DVERSION_{config.version}",
@@ -241,37 +242,16 @@ cflags_runtime = [
     "-inline auto",
 ]
 
-# REL flags
-cflags_rel = [
+# RVL SDK flags
+cflags_rvl = [
     *cflags_base,
-    "-sdata 0",
-    "-sdata2 0",
+    "-enc SJIS",
+    "-fp_contract off",
+    "-ipa file",
+    "-W off",
 ]
 
 config.linker_version = "Wii/1.7"
-
-
-# Helper function for Dolphin libraries
-def DolphinLib(lib_name: str, objects: List[Object]) -> Dict[str, Any]:
-    return {
-        "lib": lib_name,
-        "mw_version": config.linker_version,
-        "cflags": cflags_base,
-        "progress_category": "sdk",
-        "objects": objects,
-    }
-
-
-# Helper function for REL script objects
-def Rel(lib_name: str, objects: List[Object]) -> Dict[str, Any]:
-    return {
-        "lib": lib_name,
-        "mw_version": config.linker_version,
-        "cflags": cflags_rel,
-        "progress_category": "game",
-        "objects": objects,
-    }
-
 
 Matching = True                   # Object matches and should be linked
 NonMatching = False               # Object does not match and should not be linked
@@ -294,6 +274,42 @@ config.libs = [
         "objects": [
             Object(NonMatching, "Runtime.PPCEABI.H/global_destructor_chain.c"),
             Object(NonMatching, "Runtime.PPCEABI.H/__init_cpp_exceptions.cpp"),
+        ],
+    },
+    {
+        "lib": "RVL_SDK",
+        "mw_version": config.linker_version,
+        "cflags": cflags_rvl,
+        "progress_category": "sdk",
+        "objects": [
+            Object(Matching, "revolution/OS/OS.c"),
+            Object(Matching, "revolution/OS/OSAlarm.c"),
+            Object(Matching, "revolution/OS/OSAlloc.c"),
+            Object(Matching, "revolution/OS/OSArena.c"),
+            Object(Matching, "revolution/OS/OSAudioSystem.c"),
+            Object(Matching, "revolution/OS/OSCache.c"),
+            Object(Matching, "revolution/OS/OSContext.c"),
+            #Object(Matching, "revolution/OS/OSError.c"),
+            #Object(Matching, "revolution/OS/OSExec.c"),
+            Object(Matching, "revolution/OS/OSFatal.c"),
+            Object(Matching, "revolution/OS/OSFont.c"),
+            Object(Matching, "revolution/OS/OSInterrupt.c"),
+            Object(Matching, "revolution/OS/OSLink.c"),
+            Object(Matching, "revolution/OS/OSMessage.c"),
+            Object(Matching, "revolution/OS/OSMemory.c"),
+            Object(Matching, "revolution/OS/OSMutex.c"),
+            #Object(Matching, "revolution/OS/OSReset.c"),
+            Object(Matching, "revolution/OS/OSRtc.c"),
+            Object(Matching, "revolution/OS/OSSync.c"),
+            Object(Matching, "revolution/OS/OSThread.c"),
+            Object(Matching, "revolution/OS/OSTime.c"),
+            Object(Matching, "revolution/OS/OSUtf.c"),
+            Object(Matching, "revolution/OS/OSIpc.c"),
+            Object(Matching, "revolution/OS/OSStateTM.c"),
+            Object(Matching, "revolution/OS/__start.c"),
+            Object(Matching, "revolution/OS/OSPlayRecord.c"),
+            Object(Matching, "revolution/OS/OSStateFlags.c"),
+            #Object(Matching, "revolution/OS/OSNet.c"),
         ],
     },
 ]
