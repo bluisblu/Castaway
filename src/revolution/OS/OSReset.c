@@ -238,3 +238,8 @@ void OSResetSystem(u32 arg0, u32 arg1, u32 arg2) {
     OSError("OSResetSystem() is obsoleted. It doesn't work any longer.\n");
     // clang-format on
 }
+
+void OSRestart(u32 arg0) {
+#pragma unused(arg0)
+    // todo
+}

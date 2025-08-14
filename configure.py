@@ -251,6 +251,12 @@ cflags_rvl = [
     "-W off",
 ]
 
+# WPAD flags
+cflags_rvl = [
+    *cflags_rvl,
+    "-i src/revolution/wpad",
+]
+
 config.linker_version = "Wii/1.7"
 
 Matching = True                   # Object matches and should be linked
@@ -290,7 +296,7 @@ config.libs = [
             Object(Matching, "revolution/OS/OSCache.c"),
             Object(Matching, "revolution/OS/OSContext.c"),
             Object(Matching, "revolution/OS/OSError.c"),
-            #Object(Matching, "revolution/OS/OSExec.c"),
+            Object(Matching, "revolution/OS/OSExec.c"),
             Object(Matching, "revolution/OS/OSFatal.c"),
             Object(Matching, "revolution/OS/OSFont.c"),
             Object(Matching, "revolution/OS/OSInterrupt.c"),
@@ -298,7 +304,8 @@ config.libs = [
             Object(Matching, "revolution/OS/OSMessage.c"),
             Object(Matching, "revolution/OS/OSMemory.c"),
             Object(Matching, "revolution/OS/OSMutex.c"),
-            #Object(Matching, "revolution/OS/OSReset.c"),
+            Object(Matching, "revolution/OS/OSReboot.c"),
+            Object(Matching, "revolution/OS/OSReset.c"),
             Object(Matching, "revolution/OS/OSRtc.c"),
             Object(Matching, "revolution/OS/OSSync.c"),
             Object(Matching, "revolution/OS/OSThread.c"),
@@ -309,11 +316,10 @@ config.libs = [
             Object(Matching, "revolution/OS/__start.c"),
             Object(Matching, "revolution/OS/OSPlayRecord.c"),
             Object(Matching, "revolution/OS/OSStateFlags.c"),
-            #Object(Matching, "revolution/OS/OSNet.c"),
+            Object(Matching, "revolution/OS/OSNet.c"),
         ],
-    },
+    }
 ]
-
 
 # Optional callback to adjust link order. This can be used to add, remove, or reorder objects.
 # This is called once per module, with the module ID and the current link order.

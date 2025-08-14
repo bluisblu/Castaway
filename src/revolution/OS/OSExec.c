@@ -9,7 +9,7 @@
 // Force CW to align the file boundary to 64
 u8 FORCE_BSS_ALIGN[0xABCD] ALIGN(64);
 
-static u8 views[0xBD00] ALIGN(32);
+u8 views[0xBD00] ALIGN(32);
 
 BOOL __OSInReboot;
 
@@ -59,6 +59,45 @@ void __OSLaunchMenu(void) {
     while (TRUE) {
         ;
     }
+}
+
+static void __OSBootDolSimple(u32 v, u32 b, void* start, void* end, int argc, u32 count, void* argv)
+{
+    // todo
+}
+
+void __OSBootDol(u32 doloffset, u32 restartCode, const char** argv) {
+    char doloffInString[20];
+    s32 argvlen;
+    char** argvToPass;
+    s32 i;
+    void* saveStart;
+    void* saveEnd;
+
+    OSGetSaveRegion(&saveStart, &saveEnd);
+    sprintf(doloffInString, "%d", doloffset);
+    argvlen = 0;
+
+    if (argv != 0) {
+        while (argv[argvlen] != 0) {
+            argvlen++;
+        }
+    }
+
+    argvlen++;
+    argvToPass = OSAllocFromMEM1ArenaLo((argvlen + 1) * 4, 1);
+    *argvToPass = doloffInString;
+
+    for (i = 1; i < argvlen; i++) {
+        argvToPass[i] = (char*)argv[i - 1];
+    }
+
+    __OSBootDolSimple(-1, restartCode, saveStart, saveEnd, FALSE, argvlen, argvToPass);
+}
+
+void __OSRelaunchTitle(int arg)
+{
+    // todo
 }
 
 /**
