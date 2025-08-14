@@ -251,10 +251,10 @@ cflags_rvl = [
     "-W off",
 ]
 
-# WPAD flags
-cflags_rvl = [
+# STL flags
+cflags_stl = [
     *cflags_rvl,
-    "-i src/revolution/wpad",
+    "-D_IEEE_LIBM",
 ]
 
 config.linker_version = "Wii/1.7"
@@ -318,7 +318,47 @@ config.libs = [
             Object(Matching, "revolution/OS/OSStateFlags.c"),
             #Object(Matching, "revolution/OS/OSNet.c"),
         ],
+    },
+    {
+        "lib": "stl",
+        "mw_version": config.linker_version,
+        "cflags": cflags_stl,
+        "progress_category": "sdk",
+        "objects": [
+            Object(Matching, "stl/e_acos.c"),
+            Object(Matching, "stl/e_asin.c"),
+            Object(Matching, "stl/e_atan2.c"),
+            Object(Matching, "stl/e_fmod.c"),
+            Object(Matching, "stl/e_pow.c"),
+            Object(Matching, "stl/e_rem_pio2.c"),
+            Object(Matching, "stl/e_sqrt.c"),
+            Object(Matching, "stl/float.c"),
+            Object(Matching, "stl/k_cos.c"),
+            Object(Matching, "stl/k_rem_pio2.c"),
+            Object(Matching, "stl/k_sin.c"),
+            Object(Matching, "stl/k_tan.c"),
+            Object(Matching, "stl/math_ppc.c"),
+            Object(Matching, "stl/s_atan.c"),
+            Object(Matching, "stl/s_ceil.c"),
+            Object(Matching, "stl/s_copysign.c"),
+            Object(Matching, "stl/s_cos.c"),
+            Object(Matching, "stl/s_floor.c"),
+            Object(Matching, "stl/s_frexp.c"),
+            Object(Matching, "stl/s_ldexp.c"),
+            Object(Matching, "stl/s_modf.c"),
+            Object(Matching, "stl/s_sin.c"),
+            Object(Matching, "stl/s_tan.c"),
+            Object(Matching, "stl/w_acos.c"),
+            Object(Matching, "stl/w_asin.c"),
+            Object(Matching, "stl/w_atan2.c"),
+            Object(Matching, "stl/w_fmod.c"),
+            Object(Matching, "stl/w_pow.c"),
+            Object(Matching, "stl/w_sqrt.c"),
+            Object(Matching, "stl/wstring.c"),
+        ],
     }
+
+    
 ]
 
 # Optional callback to adjust link order. This can be used to add, remove, or reorder objects.

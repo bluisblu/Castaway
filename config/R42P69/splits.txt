@@ -3807,136 +3807,136 @@ math_double.c:
 extras.c:
 	.text       start:0x8040C214 end:0x8040C3C0
 
-e_acos.c:
+stl/e_acos.c:
 	.text       start:0x8040C3C0 end:0x8040C684
 	.sdata2     start:0x805DFB28 end:0x805DFBB0
 
-e_asin.c:
+stl/e_asin.c:
 	.text       start:0x8040C684 end:0x8040C91C
 	.sdata2     start:0x805DFBB0 end:0x805DFC38
 
-e_atan2.c:
+stl/e_atan2.c:
 	.text       start:0x8040C91C end:0x8040CB8C
 	.sdata2     start:0x805DFC38 end:0x805DFC90
 
-e_exp.c:
+stl/e_exp.c:
 	.text       start:0x8040CB8C end:0x8040CDC0
 	.rodata     start:0x804234E8 end:0x80423518
 	.sdata2     start:0x805DFC90 end:0x805DFD08
 
-e_fmod.c:
+stl/e_fmod.c:
 	.text       start:0x8040CDC0 end:0x8040D0F0
 	.rodata     start:0x80423518 end:0x80423528
 
-e_log.c:
+stl/e_log.c:
 	.text       start:0x8040D0F0 end:0x8040D3A4
 	.sbss       start:0x805DCD48 end:0x805DCD50
 	.sdata2     start:0x805DFD08 end:0x805DFD88
 
-e_log10.c:
+stl/e_log10.c:
 	.text       start:0x8040D3A4 end:0x8040D4B8
 	.sbss       start:0x805DCD50 end:0x805DCD58
 	.sdata2     start:0x805DFD88 end:0x805DFDB8
 
-e_pow.c:
+stl/e_pow.c:
 	.text       start:0x8040D4B8 end:0x8040DD00
 	.rodata     start:0x80423528 end:0x80423558
 	.sdata2     start:0x805DFDB8 end:0x805DFEC8
 
-e_rem_pio2.c:
+stl/e_rem_pio2.c:
 	.text       start:0x8040DD00 end:0x8040E098
 	.rodata     start:0x80423558 end:0x804236E0
 	.sdata2     start:0x805DFEC8 end:0x805DFF20
 
-k_cos.c:
+stl/k_cos.c:
 	.text       start:0x8040E098 end:0x8040E1A8
 	.sdata2     start:0x805DFF20 end:0x805DFF68
 
-k_rem_pio2.c:
+stl/k_rem_pio2.c:
 	.text       start:0x8040E1A8 end:0x8040F8B4
 	.rodata     start:0x804236E0 end:0x80423730
 	.sdata2     start:0x805DFF68 end:0x805DFFA8
 
-k_sin.c:
+stl/k_sin.c:
 	.text       start:0x8040F8B4 end:0x8040F974
 	.sdata2     start:0x805DFFA8 end:0x805DFFE0
 
-k_tan.c:
+stl/k_tan.c:
 	.text       start:0x8040F974 end:0x8040FBCC
 	.rodata     start:0x80423730 end:0x80423798
 	.sdata2     start:0x805DFFE0 end:0x805E0018
 
-s_atan.c:
+stl/s_atan.c:
 	.text       start:0x8040FBCC end:0x8040FE0C
 	.rodata     start:0x80423798 end:0x80423830
 	.sdata2     start:0x805E0018 end:0x805E0040
 
-s_ceil.c:
+stl/s_ceil.c:
 	.text       start:0x8040FE0C end:0x8040FF4C
 	.sdata2     start:0x805E0040 end:0x805E0050
 
-s_copysign.c:
+stl/s_copysign.c:
 	.text       start:0x8040FF4C end:0x8040FF78
 
-s_cos.c:
+stl/s_cos.c:
 	.text       start:0x8040FF78 end:0x8041004C
 	.sdata2     start:0x805E0050 end:0x805E0058
 
-s_floor.c:
+stl/s_floor.c:
 	.text       start:0x8041004C end:0x80410190
 	.sdata2     start:0x805E0058 end:0x805E0068
 
-s_frexp.c:
+stl/s_frexp.c:
 	.text       start:0x80410190 end:0x80410218
 	.sdata2     start:0x805E0068 end:0x805E0070
 
-s_ldexp.c:
+stl/s_ldexp.c:
 	.text       start:0x80410218 end:0x80410384
 	.sdata2     start:0x805E0070 end:0x805E0098
 
-s_modf.c:
+stl/s_modf.c:
 	.text       start:0x80410384 end:0x80410480
 
-s_sin.c:
+stl/s_sin.c:
 	.text       start:0x80410480 end:0x80410558
 	.sdata2     start:0x805E0098 end:0x805E00A0
 
-s_tan.c:
+stl/s_tan.c:
 	.text       start:0x80410558 end:0x804105D0
 	.sdata2     start:0x805E00A0 end:0x805E00A8
 
-w_acos.c:
+stl/w_acos.c:
 	.text       start:0x804105D0 end:0x804105D4
 
-w_asin.c:
+stl/w_asin.c:
 	.text       start:0x804105D4 end:0x804105D8
 
-w_atan2.c:
+stl/w_atan2.c:
 	.text       start:0x804105D8 end:0x804105DC
 
-w_exp.c:
+stl/w_exp.c:
 	.text       start:0x804105DC end:0x804105E0
 
-w_fmod.c:
+stl/w_fmod.c:
 	.text       start:0x804105E0 end:0x804105E4
 
-w_log.c:
+stl/w_log.c:
 	.text       start:0x804105E4 end:0x804105E8
 
-w_log10.c:
+stl/w_log10.c:
 	.text       start:0x804105E8 end:0x804105EC
 
-w_pow.c:
+stl/w_pow.c:
 	.text       start:0x804105EC end:0x804105F0
 
-e_sqrt.c:
+stl/e_sqrt.c:
 	.text       start:0x804105F0 end:0x80410838
 	.sdata2     start:0x805E00A8 end:0x805E00B0
 
-math_ppc.c:
+stl/math_ppc.c:
 	.text       start:0x80410838 end:0x8041083C
 
-w_sqrt.c:
+stl/w_sqrt.c:
 	.text       start:0x8041083C end:0x80410840
 
 __mem.c:
