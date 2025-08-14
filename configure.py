@@ -316,7 +316,7 @@ config.libs = [
             Object(Matching, "revolution/OS/__start.c"),
             Object(Matching, "revolution/OS/OSPlayRecord.c"),
             Object(Matching, "revolution/OS/OSStateFlags.c"),
-            Object(Matching, "revolution/OS/OSNet.c"),
+            #Object(Matching, "revolution/OS/OSNet.c"),
         ],
     }
 ]
