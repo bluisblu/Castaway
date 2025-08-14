@@ -1,8 +1,7 @@
 #include <revolution/OS.h>
 
 static BOOL OnShutdown(BOOL final, u32 event);
-static OSShutdownFunctionInfo ShutdownFunctionInfo = {OnShutdown, 127, NULL,
-                                                      NULL};
+static OSShutdownFunctionInfo ShutdownFunctionInfo = {OnShutdown, 127};
 
 u32 OSGetPhysicalMem1Size(void) {
     return OS_PHYSICAL_MEM1_SIZE;
@@ -33,7 +32,7 @@ static BOOL OnShutdown(BOOL final, u32 event) {
     return TRUE;
 }
 
-// TYPO
+// @typo
 static void MEMIntrruptHandler(s16 intr, OSContext* ctx) {
 #pragma unused(intr)
 

@@ -48,6 +48,12 @@ extern "C" {
 // Real name! (from patent)
 typedef unsigned char GXBool;
 
+#define GX_TRUE ((GXBool)TRUE)
+#define GX_FALSE ((GXBool)FALSE)
+
+#define GX_ENABLE GX_TRUE
+#define GX_DISABLE GX_FALSE
+
 /**
  * Common structs
  */
@@ -431,14 +437,14 @@ typedef enum _GXMtxType {
 } GXMtxType;
 
 typedef enum _GXPixelFmt {
-    GX_PF_RGB8_Z24,    // from Dolphin
-    GX_PF_RGBA6_Z24,   // from EGG
-    GX_PF_RGBA565_Z16, // from Dolphin
-    GX_PF_Z24,         // from Dolphin
-    GX_PF_Y8,          // from Dolphin
-    GX_PF_U8,          // from Dolphin
-    GX_PF_V8,          // from Dolphin
-    GX_PF_YUV420,      // from Dolphin
+    GX_PF_RGB8_Z24,
+    GX_PF_RGBA6_Z24,
+    GX_PF_RGBA565_Z16,
+    GX_PF_Z24,
+    GX_PF_Y8,
+    GX_PF_U8,
+    GX_PF_V8,
+    GX_PF_YUV420,
 
     GX_MAX_PIXELFMT
 } GXPixelFmt;
@@ -683,9 +689,9 @@ typedef enum _GXTevKColorSel {
 typedef enum _GXTevMode {
     GX_MODULATE,
     GX_DECAL,
+    GX_BLEND,
     GX_REPLACE,
-    GX_PASSCLR,
-    GX_BLEND
+    GX_PASSCLR
 } GXTevMode;
 
 typedef enum _GXTexCoordID {
@@ -810,6 +816,20 @@ typedef enum _GXTexMtx {
     GX_TEXMTX7 = 51,
     GX_TEXMTX8 = 54,
     GX_TEXMTX9 = 57,
+    GX_IDENTITY = 60,
+
+    // Any dimension (in standard XF matrix memory)
+    // Enum represents base row of matrix
+    // GX_TEXMTX0 = 30,
+    // GX_TEXMTX1 = 33,
+    // GX_TEXMTX2 = 36,
+    // GX_TEXMTX3 = 39,
+    // GX_TEXMTX4 = 42,
+    // GX_TEXMTX5 = 45,
+    // GX_TEXMTX6 = 48,
+    // GX_TEXMTX7 = 51,
+    // GX_TEXMTX8 = 54,
+    // GX_TEXMTX9 = 57,
     GX_TEXMTX_IDENT = 60,
 
     // 3x4 matrices (in dual-tex XF matrix memory)
@@ -836,6 +856,32 @@ typedef enum _GXTexMtx {
     GX_DUALMTX19 = 121,
     GX_DUALMTX_IDENT = 125,
 } GXTexMtx;
+
+typedef enum _GXPTTexMtx {
+    // 3x4 matrices (in dual-tex / "post-matrix" XF matrix memory)
+    // Enum represents base row of matrix
+    GX_PTTEXMTX0 = 64,
+    GX_PTTEXMTX1 = 67,
+    GX_PTTEXMTX2 = 70,
+    GX_PTTEXMTX3 = 73,
+    GX_PTTEXMTX4 = 76,
+    GX_PTTEXMTX5 = 79,
+    GX_PTTEXMTX6 = 82,
+    GX_PTTEXMTX7 = 85,
+    GX_PTTEXMTX8 = 88,
+    GX_PTTEXMTX9 = 91,
+    GX_PTTEXMTX10 = 94,
+    GX_PTTEXMTX11 = 97,
+    GX_PTTEXMTX12 = 100,
+    GX_PTTEXMTX13 = 103,
+    GX_PTTEXMTX14 = 106,
+    GX_PTTEXMTX15 = 109,
+    GX_PTTEXMTX16 = 112,
+    GX_PTTEXMTX17 = 115,
+    GX_PTTEXMTX18 = 118,
+    GX_PTTEXMTX19 = 121,
+    GX_PTIDENTITY = 125
+} GXPTTexMtx;
 
 typedef enum _GXTexWrapMode {
     GX_CLAMP,
@@ -901,7 +947,7 @@ typedef enum _GXZFmt16 {
 typedef enum _GXZTexOp {
     GX_ZT_DISABLE,
     GX_ZT_ADD,
-    GZ_ZT_REPLACE,
+    GX_ZT_REPLACE,
 
     GX_MAX_ZTEXOP
 } GXZTexOp;

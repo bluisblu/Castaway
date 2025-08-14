@@ -26,32 +26,24 @@ typedef struct OSExecParams OSExecParams;
     static const u32 OS_CACHED_##name = (addr);                                \
     static const u32 OS_UNCACHED_##name = (addr) + (0xC0000000 - 0x80000000);
 
-// MWCC compiler extension to map global variables to particular
-// memory addresses. Unsupported compilers must not include this
-#ifdef __MWERKS__
-#define MEMORY_MAP_EXT(addr) : (addr)
-#else
-#define MEMORY_MAP_EXT(addr)
-#endif
-
 // Define a global variable in *CACHED* MEM1.
 // Can be accessed directly or with OSAddress functions.
 #define OS_DEF_GLOBAL_VAR(type, name, addr)                                    \
     /* Memory-mapped value for direct access */                                \
-    type OS_##name MEMORY_MAP_EXT(addr);                                       \
+    type OS_##name : (addr);                                                   \
     __DEF_ADDR_OFFSETS(name, addr)
 
 // Define a global array in *CACHED* MEM1.
 // Can be accessed directly or with OSAddress functions.
 #define OS_DEF_GLOBAL_ARR(type, name, arr, addr)                               \
     /* Memory-mapped value for direct access */                                \
-    type OS_##name arr MEMORY_MAP_EXT(addr);                                   \
+    type OS_##name arr : (addr);                                               \
     __DEF_ADDR_OFFSETS(name, addr)
 
 // Define an global variable in the hardware-register range.
 #define OS_DEF_HW_REG(type, name, addr)                                        \
     /* Memory-mapped value for direct access */                                \
-    type OS_##name MEMORY_MAP_EXT(addr);
+    type OS_##name : (addr);
 
 typedef enum {
     OS_BOOT_MAGIC_BOOTROM = 0xD15EA5E,
@@ -161,6 +153,7 @@ OS_DEF_GLOBAL_VAR(u32, NAND_TITLE_LAUNCH_CODE,           0x8000318C);
 OS_DEF_GLOBAL_VAR(u32, NAND_TITLE_RETURN_CODE,           0x80003190);
 OS_DEF_GLOBAL_VAR(u32, BOOT_PARTITION_TYPE,              0x80003194);
 OS_DEF_GLOBAL_VAR(u32, BOOT_PARTITION_OFFSET,            0x80003198);
+OS_DEF_GLOBAL_VAR(s8, WIFI_AFH_CHANNEL,                  0x800031A2);
 OS_DEF_GLOBAL_ARR(u8, NWC24_USER_ID_BUFFER, [32],        0x800031C0);
 OS_DEF_GLOBAL_VAR(u64, NWC24_USER_ID,                    0x800031C0);
 OS_DEF_GLOBAL_ARR(u8, SC_PRDINFO, [0x100],               0x80003800);
@@ -169,12 +162,7 @@ OS_DEF_GLOBAL_ARR(u8, SC_PRDINFO, [0x100],               0x80003800);
 /**
  * PI hardware globals
  */
-volatile u32 PI_HW_REGS[]
-#ifdef __MWERKS__
-: 0xCC003000
-#endif
-;
-
+volatile u32 PI_HW_REGS[] : 0xCC003000;
 typedef enum {
     PI_INTSR,    //!< 0xCC003000
     PI_INTMR,    //!< 0xCC003004
@@ -227,11 +215,7 @@ typedef enum {
 /**
  * MI hardware registers
  */
-volatile u16 MI_HW_REGS[]
-#ifdef __MWERKS__
-: 0xCC004000
-#endif
-;
+volatile u16 MI_HW_REGS[] : 0xCC004000;
 typedef enum {
     MI_PAGE_MEM0_H, //!< 0xCC004000
     MI_PAGE_MEM0_L, //!< 0xCC004002
@@ -272,22 +256,13 @@ typedef enum {
 #define MI_INTSR_ADDR (1 << 4)
 
 /**
- * DI hardware globals
+ * DI hardware registers
  */
-// clang-format off
-OS_DEF_HW_REG(volatile u32, DI_DMA_ADDR, 0xCD006014);
-OS_DEF_HW_REG(volatile u32, DI_CONFIG,   0xCD006024);
-// clang-format on
-
-/**
- * Misc/unknown globals
- */
-// clang-format off
-OS_DEF_HW_REG(volatile u32, UNK_CD000034, 0xCD000034);
-OS_DEF_HW_REG(volatile u32, UNK_CD800180, 0xCD800180);
-OS_DEF_HW_REG(volatile u32, UNK_CD8001CC, 0xCD8001CC);
-OS_DEF_HW_REG(volatile u32, UNK_CD8001D0, 0xCD8001D0);
-// clang-format on
+volatile u32 DI_HW_REGS[] : 0xCD006000;
+typedef enum {
+    DI_DMA_ADDR = 5, // !< 0xCD006014
+    DI_CONFIG = 9,   // !< 0xCD006024
+} DIHwReg;
 
 #ifdef __cplusplus
 }

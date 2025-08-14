@@ -1,7 +1,7 @@
 #ifndef RVL_FACE_LIBRARY_INTERNAL_TEXTURE_H
 #define RVL_FACE_LIBRARY_INTERNAL_TEXTURE_H
 #include <RVLFaceLib/RFLi_Types.h>
-#include <revolution/types.h>
+#include <types.h>
 #ifdef __cplusplus
 extern "C" {
 #endif

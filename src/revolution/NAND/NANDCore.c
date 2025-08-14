@@ -1,6 +1,7 @@
 #include <revolution/ESP.h>
 #include <revolution/NAND.h>
 #include <revolution/OS.h>
+
 #include <stdio.h>
 #include <string.h>
 #include <wchar.h>
@@ -26,8 +27,7 @@ const char* __NANDVersion =
 
 static NANDLibState s_libState = NAND_LIB_UNINITIALIZED;
 static char s_currentDir[64] ALIGN(32) = "/";
-static OSShutdownFunctionInfo s_shutdownFuncInfo = {nandOnShutdown, 255, NULL,
-                                                    NULL};
+static OSShutdownFunctionInfo s_shutdownFuncInfo = {nandOnShutdown, 255};
 
 static char s_homeDir[64] ALIGN(32);
 
@@ -147,7 +147,7 @@ BOOL nandIsInitialized(void) {
 }
 
 // Stubbed for release
-void nandReportErrorCode(s32 result){
+void nandReportErrorCode(s32 result) {
 #pragma unused(result)
 }
 
@@ -203,7 +203,7 @@ s32 nandConvertErrorCode(s32 result) {
         return result;
     }
 
-    for (; i < LENGTHOF(errorMap); i += 2) {
+    for (; i < ARRAY_SIZE(errorMap); i += 2) {
         if (result == errorMap[i]) {
             nandReportErrorCode(result);
             return errorMap[i + 1];

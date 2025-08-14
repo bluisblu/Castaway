@@ -1,7 +1,8 @@
 #ifndef RVL_SDK_GX_ATTR_H
 #define RVL_SDK_GX_ATTR_H
-#include <revolution/GX/GXTypes.h>
 #include <types.h>
+
+#include <revolution/GX/GXTypes.h>
 #ifdef __cplusplus
 extern "C" {
 #endif
@@ -46,9 +47,9 @@ void __GXSetVCD(void);
 void __GXCalculateVLim(void);
 void __GXSetVAT(void);
 
-inline void GXSetTexCoordGen(GXTexCoordID id, GXTexGenType type,
+static void GXSetTexCoordGen(GXTexCoordID id, GXTexGenType type,
                              GXTexGenSrc src, u32 texMtxIdx) {
-    GXSetTexCoordGen2(id, type, src, texMtxIdx, FALSE, GX_DUALMTX_IDENT);
+    GXSetTexCoordGen2(id, type, src, texMtxIdx, FALSE, GX_PTIDENTITY);
 }
 
 #ifdef __cplusplus

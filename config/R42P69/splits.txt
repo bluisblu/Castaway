@@ -2813,14 +2813,14 @@ HBMRemoteSpk.cpp:
 	.data       start:0x8046D0C8 end:0x8046D0D8
 	.sbss       start:0x805DC898 end:0x805DC8A0
 
-db_assert.cpp:
+nw4r/db/db_assert.cpp:
 	.text       start:0x80387710 end:0x80387DF8
 	.data       start:0x8046D0D8 end:0x8046D1B8
 	.bss        start:0x80595AD0 end:0x80595B00
 	.sdata      start:0x805DB118 end:0x805DB120
 	.sbss       start:0x805DC8A0 end:0x805DC8B0
 
-db_console.cpp:
+nw4r/db/db_console.cpp:
 	.text       start:0x80387DF8 end:0x80388734
 	.data       start:0x8046D1B8 end:0x8046D308
 	.bss        start:0x80595B00 end:0x80595F18
@@ -2844,70 +2844,70 @@ db_mapFile.cpp:
 	.sdata      start:0x805DB128 end:0x805DB130
 	.sbss       start:0x805DC8B8 end:0x805DC8C8
 
-lyt_animation.cpp:
+nw4r/lyt/lyt_animation.cpp:
 	.text       start:0x80389D6C end:0x8038B618
 	.data       start:0x8046D5C0 end:0x8046DA30
 	.sdata      start:0x805DB130 end:0x805DB138
 	.sdata2     start:0x805DF628 end:0x805DF648
 
-lyt_arcResourceAccessor.cpp:
+nw4r/lyt/lyt_arcResourceAccessor.cpp:
 	.text       start:0x8038B618 end:0x8038C158
 	.data       start:0x8046DA30 end:0x8046DCA8
 	.sdata      start:0x805DB138 end:0x805DB140
 
-lyt_bounding.cpp:
+nw4r/lyt/lyt_bounding.cpp:
 	.text       start:0x8038C158 end:0x8038C32C
 	.ctors      start:0x8041A7FC end:0x8041A800
 	.data       start:0x8046DCA8 end:0x8046DD10
 	.sbss       start:0x805DC8C8 end:0x805DC8D0
 
-lyt_common.cpp:
+nw4r/lyt/lyt_common.cpp:
 	.text       start:0x8038C32C end:0x8038CF58
 	.data       start:0x8046DD10 end:0x8046DD80
 	.bss        start:0x80596180 end:0x805961A0
 	.sbss       start:0x805DC8D0 end:0x805DC8D8
 	.sdata2     start:0x805DF648 end:0x805DF658
 
-lyt_drawInfo.cpp:
+nw4r/lyt/lyt_drawInfo.cpp:
 	.text       start:0x8038CF58 end:0x8038D044
 	.data       start:0x8046DD80 end:0x8046DD90
 	.sdata2     start:0x805DF658 end:0x805DF660
 
-lyt_group.cpp:
+nw4r/lyt/lyt_group.cpp:
 	.text       start:0x8038D044 end:0x8038DAD8
 	.data       start:0x8046DD90 end:0x8046DE90
 
-lyt_layout.cpp:
+nw4r/lyt/lyt_layout.cpp:
 	.text       start:0x8038DAD8 end:0x8038EE00
 	.data       start:0x8046DE90 end:0x8046E0F8
 	.sbss       start:0x805DC8D8 end:0x805DC8E0
 	.sdata2     start:0x805DF660 end:0x805DF668
 
-lyt_material.cpp:
+nw4r/lyt/lyt_material.cpp:
 	.text       start:0x8038EE00 end:0x803933C0
 	.data       start:0x8046E0F8 end:0x8046EB68
 	.sdata      start:0x805DB140 end:0x805DB208
 	.sdata2     start:0x805DF668 end:0x805DF690
 
-lyt_pane.cpp:
+nw4r/lyt/lyt_pane.cpp:
 	.text       start:0x803933C0 end:0x80394C8C
 	.ctors      start:0x8041A800 end:0x8041A804
 	.data       start:0x8046EB68 end:0x8046EEF0
 	.sbss       start:0x805DC8E0 end:0x805DC8E8
 	.sdata2     start:0x805DF690 end:0x805DF6B0
 
-lyt_picture.cpp:
+nw4r/lyt/lyt_picture.cpp:
 	.text       start:0x80394C8C end:0x803954D0
 	.ctors      start:0x8041A804 end:0x8041A808
 	.data       start:0x8046EEF0 end:0x8046F118
 	.sbss       start:0x805DC8E8 end:0x805DC8F0
 	.sdata2     start:0x805DF6B0 end:0x805DF6B8
 
-lyt_resourceAccessor.cpp:
+nw4r/lyt/lyt_resourceAccessor.cpp:
 	.text       start:0x803954D0 end:0x80395528
 	.data       start:0x8046F118 end:0x8046F130
 
-lyt_textBox.cpp:
+nw4r/lyt/lyt_textBox.cpp:
 	.text       start:0x80395528 end:0x80398598
 	.ctors      start:0x8041A808 end:0x8041A80C
 	.data       start:0x8046F130 end:0x8046F880
@@ -2915,20 +2915,20 @@ lyt_textBox.cpp:
 	.sbss       start:0x805DC8F0 end:0x805DC8F8
 	.sdata2     start:0x805DF6B8 end:0x805DF6D0
 
-lyt_window.cpp:
+nw4r/lyt/lyt_window.cpp:
 	.text       start:0x80398598 end:0x8039A804
 	.ctors      start:0x8041A80C end:0x8041A810
 	.data       start:0x8046F880 end:0x8046FAE0
 	.sbss       start:0x805DC8F8 end:0x805DC900
 	.sdata2     start:0x805DF6D0 end:0x805DF6E0
 
-math_arithmetic.cpp:
+revolution/HBM/nw4hbm/math/math_arithmetic.cpp:
 	.text       start:0x8039A804 end:0x8039A8E4
 
-math_equation.cpp:
+revolution/HBM/nw4hbm/math/math_equation.cpp:
 	.text       start:0x8039A8E4 end:0x8039A8EC
 
-math_triangular.cpp:
+revolution/HBM/nw4hbm/math/math_triangular.cpp:
 	.text       start:0x8039A8EC end:0x8039ABF4
 	.data       start:0x8046FAE0 end:0x80470BF8
 	.sdata2     start:0x805DF6E0 end:0x805DF700
@@ -3214,75 +3214,75 @@ snd_WsdTrack.cpp:
 	.data       start:0x80476BB0 end:0x80476DD8
 	.sdata2     start:0x805DF908 end:0x805DF930
 
-ut_ArchiveFont.cpp:
+revolution/HBM/nw4hbm/ut/ut_ArchiveFont.cpp:
 	.text       start:0x803BED30 end:0x803BED4C
 
-ut_binaryFileFormat.cpp:
+revolution/HBM/nw4hbm/ut/ut_binaryFileFormat.cpp:
 	.text       start:0x803BED4C end:0x803BF094
 	.data       start:0x80476DD8 end:0x80476F28
 
-ut_CharStrmReader.cpp:
+revolution/HBM/nw4hbm/ut/ut_CharStrmReader.cpp:
 	.text       start:0x803BF094 end:0x803BFAF8
 	.data       start:0x80476F28 end:0x804770A0
 
-ut_CharWriter.cpp:
+revolution/HBM/nw4hbm/ut/ut_CharWriter.cpp:
 	.text       start:0x803BFAF8 end:0x803C359C
 	.data       start:0x804770A0 end:0x804773B0
 	.bss        start:0x805B0B10 end:0x805B0B30
 	.sbss       start:0x805DC980 end:0x805DC988
 	.sdata2     start:0x805DF930 end:0x805DF950
 
-ut_DvdFileStream.cpp:
+revolution/HBM/nw4hbm/ut/ut_DvdFileStream.cpp:
 	.text       start:0x803C359C end:0x803C4240
 	.ctors      start:0x8041A834 end:0x8041A838
 	.data       start:0x804773B0 end:0x80477690
 	.sbss       start:0x805DC988 end:0x805DC990
 
-ut_DvdLockedFileStream.cpp:
+revolution/HBM/nw4hbm/ut/ut_DvdLockedFileStream.cpp:
 	.text       start:0x803C4240 end:0x803C4468
 	.ctors      start:0x8041A838 end:0x8041A83C
 	.data       start:0x80477690 end:0x804776F8
 	.bss        start:0x805B0B30 end:0x805B0B48
 	.sbss       start:0x805DC990 end:0x805DC998
 
-ut_FileStream.cpp:
+revolution/HBM/nw4hbm/ut/ut_FileStream.cpp:
 	.text       start:0x803C4468 end:0x803C4690
 	.ctors      start:0x8041A83C end:0x8041A840
 	.data       start:0x804776F8 end:0x80477810
 	.sbss       start:0x805DC998 end:0x805DC9A0
 
-ut_Font.cpp:
+revolution/HBM/nw4hbm/ut/ut_Font.cpp:
 	.text       start:0x803C4690 end:0x803C4854
 	.data       start:0x80477810 end:0x804778B8
 
-ut_IOStream.cpp:
+revolution/HBM/nw4hbm/ut/ut_IOStream.cpp:
 	.text       start:0x803C4854 end:0x803C4A90
 	.ctors      start:0x8041A840 end:0x8041A844
 	.data       start:0x804778B8 end:0x804779B0
 	.sbss       start:0x805DC9A0 end:0x805DC9A8
 
-ut_LinkList.cpp:
+revolution/HBM/nw4hbm/ut/ut_LinkList.cpp:
 	.text       start:0x803C4A90 end:0x803C4E98
 	.data       start:0x804779B0 end:0x80477B58
 
-ut_list.cpp:
+revolution/HBM/nw4hbm/ut/ut_list.cpp:
 	.text       start:0x803C4E98 end:0x803C5270
 	.data       start:0x80477B58 end:0x80477BB8
 
-ut_ResFont.cpp:
+revolution/HBM/nw4hbm/ut/ut_ResFont.cpp:
 	.text       start:0x803C5270 end:0x803C630C
 	.data       start:0x80477BB8 end:0x804784A0
 
-ut_ResFontBase.cpp:
+revolution/HBM/nw4hbm/ut/ut_ResFontBase.cpp:
 	.text       start:0x803C630C end:0x803C950C
 	.data       start:0x804784A0 end:0x804787E8
 
-ut_TagProcessorBase.cpp:
+revolution/HBM/nw4hbm/ut/ut_TagProcessorBase.cpp:
 	.text       start:0x803C950C end:0x803CA644
 	.data       start:0x804787E8 end:0x804788F0
 	.sdata2     start:0x805DF950 end:0x805DF958
 
-ut_TextWriterBase.cpp:
+revolution/HBM/nw4hbm/ut/ut_TextWriterBase.cpp:
 	.text       start:0x803CA644 end:0x803CFBE8
 	.ctors      start:0x8041A844 end:0x8041A848
 	.data       start:0x804788F0 end:0x80478EE8
@@ -3291,26 +3291,26 @@ ut_TextWriterBase.cpp:
 	.sbss       start:0x805DC9A8 end:0x805DC9B8
 	.sdata2     start:0x805DF958 end:0x805DF970
 
-ipcMain.c:
+revolution/IPC/ipcMain.c:
 	.text       start:0x803CFBE8 end:0x803CFC6C
 	.sbss       start:0x805DC9B8 end:0x805DC9D0
 
-ipcclt.c:
+revolution/IPC/ipcclt.c:
 	.text       start:0x803CFC6C end:0x803D136C
 	.bss        start:0x805B0B60 end:0x805B0BB0
 	.sdata      start:0x805DB338 end:0x805DB340
 	.sbss       start:0x805DC9D0 end:0x805DC9E0
 
-memory.c:
+revolution/IPC/memory.c:
 	.text       start:0x803D136C end:0x803D1890
 	.bss        start:0x805B0BB0 end:0x805B0C30
 
-ipcProfile.c:
+revolution/IPC/ipcProfile.c:
 	.text       start:0x803D1890 end:0x803D1A54
 	.bss        start:0x805B0C30 end:0x805B0D30
 	.sbss       start:0x805DC9E0 end:0x805DC9E8
 
-KPAD.c:
+revolution/KPAD/KPAD.c:
 	.text       start:0x803D1A54 end:0x803D4910
 	.data       start:0x80478EE8 end:0x80478F40
 	.bss        start:0x805B0D30 end:0x805B21C0
@@ -3318,25 +3318,25 @@ KPAD.c:
 	.sbss       start:0x805DC9E8 end:0x805DCA08
 	.sdata2     start:0x805DF970 end:0x805DF9D0
 
-mem_heapCommon.c:
+revolution/MEM/mem_heapCommon.c:
 	.text       start:0x803D4910 end:0x803D4D7C
 	.bss        start:0x805B21C0 end:0x805B21E8
 	.sbss       start:0x805DCA08 end:0x805DCA10
 
-mem_expHeap.c:
+revolution/MEM/mem_expHeap.c:
 	.text       start:0x803D4D7C end:0x803D54E8
 
-mem_frameHeap.c:
+revolution/MEM/mem_frameHeap.c:
 	.text       start:0x803D54E8 end:0x803D57D4
 
-mem_unitHeap.c:
+revolution/MEM/mem_unitHeap.c:
 	.text       start:0x803D57D4 end:0x803D5AAC
 
-mem_allocator.c:
+revolution/MEM/mem_allocator.c:
 	.text       start:0x803D5AAC end:0x803D5B30
 	.sdata2     start:0x805DF9D0 end:0x805DF9E0
 
-mem_list.c:
+revolution/MEM/mem_list.c:
 	.text       start:0x803D5B30 end:0x803D5C44
 
 mix.c:
@@ -3350,29 +3350,29 @@ remote.c:
 	.bss        start:0x805B4BE8 end:0x805B6580
 	.sbss       start:0x805DCA20 end:0x805DCA28
 
-mtx.c:
+revolution/MTX/mtx.c:
 	.text       start:0x803D9150 end:0x803D9660
 	.sdata      start:0x805DB3B0 end:0x805DB3B8
 	.sdata2     start:0x805DF9E0 end:0x805DF9E8
 
-mtxvec.c:
+revolution/MTX/mtxvec.c:
 	.text       start:0x803D9660 end:0x803D9708
 
-mtx44.c:
+revolution/MTX/mtx44.c:
 	.text       start:0x803D9708 end:0x803D98A4
 	.sdata2     start:0x805DF9E8 end:0x805DF9F8
 
-vec.c:
+revolution/MTX/vec.c:
 	.text       start:0x803D98A4 end:0x803D99C8
 	.sdata2     start:0x805DF9F8 end:0x805DFA00
 
-nand.c:
+revolution/NAND/nand.c:
 	.text       start:0x803D99C8 end:0x803DA52C
 
-NANDOpenClose.c:
+revolution/NAND/NANDOpenClose.c:
 	.text       start:0x803DA52C end:0x803DAA10
 
-NANDCore.c:
+revolution/NAND/NANDCore.c:
 	.text       start:0x803DAA10 end:0x803DB9F8
 	.rodata     start:0x804226A8 end:0x804227E8
 	.data       start:0x80479AE0 end:0x80479C00
@@ -3380,7 +3380,7 @@ NANDCore.c:
 	.sdata      start:0x805DB3B8 end:0x805DB3E0
 	.sbss       start:0x805DCA28 end:0x805DCA30
 
-NANDCheck.c:
+revolution/NAND/NANDCheck.c:
 	.text       start:0x803DB9F8 end:0x803DBBBC
 	.data       start:0x80479C00 end:0x80479CB0
 	.sdata      start:0x805DB3E0 end:0x805DB3F0
@@ -3535,18 +3535,18 @@ revolution/OS/OSNandbootInfo.c:
 	.text       start:0x803E777C end:0x803E7A6C
 	.data       start:0x804875D8 end:0x804875F8
 
-__ppc_eabi_init.cpp:
+revolution/OS/__ppc_eabi_init.cpp:
 	.init       start:0x800042E0 end:0x80004338
 	.text       start:0x803E7A6C end:0x803E7B20
 
-Pad.c:
+revolution/PAD/Pad.c:
 	.text       start:0x803E7B20 end:0x803E93B8
 	.data       start:0x804875F8 end:0x80487650
 	.bss        start:0x805C7EC0 end:0x805C7F40
 	.sdata      start:0x805DB470 end:0x805DB490
 	.sbss       start:0x805DCB68 end:0x805DCB98
 
-scsystem.c:
+revolution/SC/scsystem.c:
 	.text       start:0x803E93B8 end:0x803EAD1C
 	.rodata     start:0x804227E8 end:0x80422840
 	.data       start:0x80487650 end:0x80487820
@@ -3554,63 +3554,63 @@ scsystem.c:
 	.sdata      start:0x805DB490 end:0x805DB590
 	.sbss       start:0x805DCB98 end:0x805DCBB0
 
-scapi.c:
+evolution/SC/:
 	.text       start:0x803EAD1C end:0x803EB0E0
 
-scapi_prdinfo.c:
+revolution/SC/scapi_prdinfo.c:
 	.text       start:0x803EB0E0 end:0x803EB2D0
 	.data       start:0x80487820 end:0x80487868
 	.sdata      start:0x805DB590 end:0x805DB598
 
-SIBios.c:
+revolution/SI/SIBios.c:
 	.text       start:0x803EB2D0 end:0x803EC850
 	.data       start:0x80487868 end:0x804878D8
 	.bss        start:0x805D00E0 end:0x805D0300
 	.sdata      start:0x805DB598 end:0x805DB5A0
 	.sbss       start:0x805DCBB0 end:0x805DCBC0
 
-SISamplingRate.c:
+revolution/SI/SISamplingRate.c:
 	.text       start:0x803EC850 end:0x803EC930
 	.data       start:0x804878D8 end:0x80487970
 	.sbss       start:0x805DCBC0 end:0x805DCBC8
 
-TPL.c:
+revolution/TPL/TPL.c:
 	.text       start:0x803EC930 end:0x803ECB44
 	.data       start:0x80487970 end:0x804879A0
 	.sdata      start:0x805DB5A0 end:0x805DB5A8
 	.sdata2     start:0x805DFA50 end:0x805DFA58
 
-usb.c:
+revolution/USB/usb.c:
 	.text       start:0x803ECB44 end:0x803EDBE4
 	.data       start:0x804879A0 end:0x80487FC0
 	.sdata      start:0x805DB5A8 end:0x805DB5B8
 	.sbss       start:0x805DCBC8 end:0x805DCBD8
 
-vi.c:
+revolution/VI/vi.c:
 	.text       start:0x803EDBE4 end:0x803F057C
 	.data       start:0x80487FC0 end:0x80488440
 	.bss        start:0x805D0300 end:0x805D0470
 	.sdata      start:0x805DB5B8 end:0x805DB5D8
 	.sbss       start:0x805DCBD8 end:0x805DCC88
 
-i2c.c:
+revolution/VI/i2c.c:
 	.text       start:0x803F057C end:0x803F0F98
 	.sdata      start:0x805DB5D8 end:0x805DB5E0
 	.sbss       start:0x805DCC88 end:0x805DCC90
 
-vi3in1.c:
+revolution/VI/vi3in1.c:
 	.text       start:0x803F0F98 end:0x803F263C
 	.data       start:0x80488440 end:0x804889D0
 	.bss        start:0x805D0470 end:0x805D04A0
 	.sdata      start:0x805DB5E0 end:0x805DB5F8
 	.sbss       start:0x805DCC90 end:0x805DCCA8
 
-wenc.c:
+revolution/WENC/wenc.c:
 	.text       start:0x803F263C end:0x803F2914
 	.rodata     start:0x80422840 end:0x80422880
 	.sdata2     start:0x805DFA58 end:0x805DFA60
 
-WPAD.c:
+revolution/WPAD/WPAD.c:
 	.text       start:0x803F2914 end:0x803F9EBC
 	.rodata     start:0x80422880 end:0x804228C0
 	.data       start:0x804889D0 end:0x80488CB8
@@ -3619,25 +3619,25 @@ WPAD.c:
 	.sbss       start:0x805DCCA8 end:0x805DCCD8
 	.sdata2     start:0x805DFA60 end:0x805DFA68
 
-WPADHIDParser.c:
+revolution/WPAD/WPADHIDParser.c:
 	.text       start:0x803F9EBC end:0x803FE970
 	.data       start:0x80488CB8 end:0x80489118
 	.bss        start:0x805D3BC8 end:0x805D3BE0
 	.sbss       start:0x805DCCD8 end:0x805DCCF0
 	.sdata2     start:0x805DFA68 end:0x805DFA90
 
-WPADMem.c:
+revolution/WPAD/WPADMem.c:
 	.bss        start:0x805D3BE0 end:0x805D3C40
 
-WPADEncrypt.c:
+revolution/WPAD/WPADEncrypt.c:
 	.text       start:0x803FE970 end:0x803FFA18
 	.data       start:0x80489118 end:0x8048A440
 	.sbss       start:0x805DCCF0 end:0x805DCCF8
 
-debug_msg.c:
+revolution/WPAD/debug_msg.c:
 	.text       start:0x803FFA18 end:0x803FFA68
 
-WUD.c:
+revolution/WUD/WUD.c:
 	.text       start:0x803FFA68 end:0x80403DD8
 	.data       start:0x8048A440 end:0x8048B2A8
 	.bss        start:0x805D3C40 end:0x805D5A20
@@ -3645,35 +3645,35 @@ WUD.c:
 	.sbss       start:0x805DCCF8 end:0x805DCD18
 	.sdata2     start:0x805DFA90 end:0x805DFA98
 
-WUDHidHost.c:
+revolution/WUD/WUDHidHost.c:
 	.text       start:0x80403DD8 end:0x80404324
 	.data       start:0x8048B2A8 end:0x8048B528
 
-debug_msg_1.c_1:
+revolution/WUD/debug_msg.c:
 	.text       start:0x80404324 end:0x80404374
 
-DebuggerDriver.c:
+revolution/NdevExi2AD/DebuggerDriver.c:
 	.text       start:0x80404374 end:0x804046A8
 	.sdata      start:0x805DB610 end:0x805DB618
 	.sbss       start:0x805DCD18 end:0x805DCD30
 
-errno.c:
+MSL/errno.c:
 	.sbss       start:0x805DCD30 end:0x805DCD38
 
 float.cpp:
 	.sdata      start:0x805DB618 end:0x805DB628
 
-exi2.c:
+revolution/NdevExi2AD/exi2.c:
 	.text       start:0x804046A8 end:0x80404E34
 
-ansi_files.c:
+MSL/ansi_files.c:
 	extab       start:0x800064E0 end:0x800064F0
 	extabindex  start:0x800066A0 end:0x800066B8
 	.text       start:0x80404E34 end:0x80404F44
 	.data       start:0x8048B528 end:0x8048B668
 	.bss        start:0x805D5A20 end:0x805D5D20
 
-ansi_fp.c:
+MSL/ansi_fp.c:
 	extab       start:0x800064F0 end:0x80006528
 	extabindex  start:0x800066B8 end:0x8000670C
 	.text       start:0x80404F44 end:0x804068B4
@@ -3681,7 +3681,7 @@ ansi_fp.c:
 	.data       start:0x8048B668 end:0x8048B7D0
 	.sdata2     start:0x805DFA98 end:0x805DFAD0
 
-arith.c:
+MSL/arith.c:
 	.text       start:0x804068B4 end:0x804068C4
 
 bsearch.c:
@@ -3689,7 +3689,7 @@ bsearch.c:
 	extabindex  start:0x8000670C end:0x80006718
 	.text       start:0x804068C4 end:0x804069B4
 
-buffer_io.c:
+MSL/buffer_io.c:
 	extab       start:0x80006530 end:0x80006538
 	extabindex  start:0x80006718 end:0x80006724
 	.text       start:0x804069B4 end:0x80406A94
@@ -3698,48 +3698,48 @@ ctype.c:
 	.text       start:0x80406A94 end:0x80406B94
 	.rodata     start:0x804229A0 end:0x80422DA0
 
-locale.c:
+MSL/locale.c:
 	.rodata     start:0x80422DA0 end:0x80422EA8
 	.data       start:0x8048B7D0 end:0x8048B9C8
 	.sdata2     start:0x805DFAD0 end:0x805DFAE8
 
-direct_io.c:
+MSL/direct_io.c:
 	extab       start:0x80006538 end:0x80006540
 	extabindex  start:0x80006724 end:0x80006730
 	.text       start:0x80406B94 end:0x80406E9C
 
-file_io.c:
+MSL/file_io.c:
 	extab       start:0x80006540 end:0x80006550
 	extabindex  start:0x80006730 end:0x80006748
 	.text       start:0x80406E9C end:0x8040714C
 
-FILE_POS.C:
+MSL/FILE_POS.C:
 	extab       start:0x80006550 end:0x80006558
 	extabindex  start:0x80006748 end:0x80006754
 	.text       start:0x8040714C end:0x804073BC
 
-mbstring.c:
+MSL/mbstring.c:
 	extab       start:0x80006558 end:0x80006560
 	extabindex  start:0x80006754 end:0x80006760
 	.text       start:0x804073BC end:0x804074DC
 
-mem.c:
+MSL/mem.c:
 	extab       start:0x80006560 end:0x80006568
 	extabindex  start:0x80006760 end:0x8000676C
 	.text       start:0x804074DC end:0x8040764C
 
-mem_funcs.c:
+MSL/mem_funcs.c:
 	.text       start:0x8040764C end:0x8040791C
 
-math_api.c:
+MSL/math_api.c:
 	extab       start:0x80006568 end:0x80006578
 	extabindex  start:0x8000676C end:0x80006784
 	.text       start:0x8040791C end:0x804079B4
 
-misc_io.c:
+MSL/misc_io.c:
 	.text       start:0x804079B4 end:0x804079C4
 
-printf.c:
+MSL/printf.c:
 	extab       start:0x80006578 end:0x800065E0
 	extabindex  start:0x80006784 end:0x80006820
 	.text       start:0x804079C4 end:0x80409E50
@@ -3753,48 +3753,48 @@ qsort.c:
 	extabindex  start:0x80006820 end:0x8000682C
 	.text       start:0x80409E50 end:0x80409FC0
 
-rand.c:
+MSL/rand.c:
 	.text       start:0x80409FC0 end:0x80409FE8
 	.sdata      start:0x805DB630 end:0x805DB638
 
-scanf.c:
+MSL/scanf.c:
 	.text       start:0x80409FE8 end:0x8040A078
 
-string.c:
+MSL/string.c:
 	.text       start:0x8040A078 end:0x8040A434
 
-strtold.c:
+MSL/strtold.c:
 	extab       start:0x800065E8 end:0x80006600
 	extabindex  start:0x8000682C end:0x80006850
 	.text       start:0x8040A434 end:0x8040B95C
 	.rodata     start:0x80422ED8 end:0x80422EE8
 	.sdata2     start:0x805DFAF0 end:0x805DFB28
 
-wctype.c:
+MSL/wctype.c:
 	.rodata     start:0x80422EE8 end:0x804234E8
 
-strtoul.c:
+MSL/strtoul.c:
 	extab       start:0x80006600 end:0x80006620
 	extabindex  start:0x80006850 end:0x80006880
 	.text       start:0x8040B95C end:0x8040BFE4
 	.data       start:0x8048BC18 end:0x8048BC60
 
-wstring.c:
+MSL/wstring.c:
 	.text       start:0x8040BFE4 end:0x8040C000
 
-wchar_io.c:
+MSL/wchar_io.c:
 	.text       start:0x8040C000 end:0x8040C084
 
-uart_console_io_gcn.c:
+MSL/uart_console_io_gcn.c:
 	extab       start:0x80006620 end:0x80006628
 	extabindex  start:0x80006880 end:0x8000688C
 	.text       start:0x8040C084 end:0x8040C15C
 	.sbss       start:0x805DCD38 end:0x805DCD40
 
-abort_exit_ppc_eabi.c:
+MSL/abort_exit_ppc_eabi.c:
 	.sbss       start:0x805DCD40 end:0x805DCD48
 
-math_sun.c:
+MSL/math_sun.c:
 	extab       start:0x80006628 end:0x80006630
 	extabindex  start:0x8000688C end:0x80006898
 	.text       start:0x8040C15C end:0x8040C19C
@@ -3807,283 +3807,283 @@ math_double.c:
 extras.c:
 	.text       start:0x8040C214 end:0x8040C3C0
 
-stl/e_acos.c:
+MSL/e_acos.c:
 	.text       start:0x8040C3C0 end:0x8040C684
 	.sdata2     start:0x805DFB28 end:0x805DFBB0
 
-stl/e_asin.c:
+MSL/e_asin.c:
 	.text       start:0x8040C684 end:0x8040C91C
 	.sdata2     start:0x805DFBB0 end:0x805DFC38
 
-stl/e_atan2.c:
+MSL/e_atan2.c:
 	.text       start:0x8040C91C end:0x8040CB8C
 	.sdata2     start:0x805DFC38 end:0x805DFC90
 
-stl/e_exp.c:
+MSL/e_exp.c:
 	.text       start:0x8040CB8C end:0x8040CDC0
 	.rodata     start:0x804234E8 end:0x80423518
 	.sdata2     start:0x805DFC90 end:0x805DFD08
 
-stl/e_fmod.c:
+MSL/e_fmod.c:
 	.text       start:0x8040CDC0 end:0x8040D0F0
 	.rodata     start:0x80423518 end:0x80423528
 
-stl/e_log.c:
+MSL/e_log.c:
 	.text       start:0x8040D0F0 end:0x8040D3A4
 	.sbss       start:0x805DCD48 end:0x805DCD50
 	.sdata2     start:0x805DFD08 end:0x805DFD88
 
-stl/e_log10.c:
+MSL/e_log10.c:
 	.text       start:0x8040D3A4 end:0x8040D4B8
 	.sbss       start:0x805DCD50 end:0x805DCD58
 	.sdata2     start:0x805DFD88 end:0x805DFDB8
 
-stl/e_pow.c:
+MSL/e_pow.c:
 	.text       start:0x8040D4B8 end:0x8040DD00
 	.rodata     start:0x80423528 end:0x80423558
 	.sdata2     start:0x805DFDB8 end:0x805DFEC8
 
-stl/e_rem_pio2.c:
+MSL/e_rem_pio2.c:
 	.text       start:0x8040DD00 end:0x8040E098
 	.rodata     start:0x80423558 end:0x804236E0
 	.sdata2     start:0x805DFEC8 end:0x805DFF20
 
-stl/k_cos.c:
+MSL/k_cos.c:
 	.text       start:0x8040E098 end:0x8040E1A8
 	.sdata2     start:0x805DFF20 end:0x805DFF68
 
-stl/k_rem_pio2.c:
+MSL/k_rem_pio2.c:
 	.text       start:0x8040E1A8 end:0x8040F8B4
 	.rodata     start:0x804236E0 end:0x80423730
 	.sdata2     start:0x805DFF68 end:0x805DFFA8
 
-stl/k_sin.c:
+MSL/k_sin.c:
 	.text       start:0x8040F8B4 end:0x8040F974
 	.sdata2     start:0x805DFFA8 end:0x805DFFE0
 
-stl/k_tan.c:
+MSL/k_tan.c:
 	.text       start:0x8040F974 end:0x8040FBCC
 	.rodata     start:0x80423730 end:0x80423798
 	.sdata2     start:0x805DFFE0 end:0x805E0018
 
-stl/s_atan.c:
+MSL/s_atan.c:
 	.text       start:0x8040FBCC end:0x8040FE0C
 	.rodata     start:0x80423798 end:0x80423830
 	.sdata2     start:0x805E0018 end:0x805E0040
 
-stl/s_ceil.c:
+MSL/s_ceil.c:
 	.text       start:0x8040FE0C end:0x8040FF4C
 	.sdata2     start:0x805E0040 end:0x805E0050
 
-stl/s_copysign.c:
+MSL/s_copysign.c:
 	.text       start:0x8040FF4C end:0x8040FF78
 
-stl/s_cos.c:
+MSL/s_cos.c:
 	.text       start:0x8040FF78 end:0x8041004C
 	.sdata2     start:0x805E0050 end:0x805E0058
 
-stl/s_floor.c:
+MSL/s_floor.c:
 	.text       start:0x8041004C end:0x80410190
 	.sdata2     start:0x805E0058 end:0x805E0068
 
-stl/s_frexp.c:
+MSL/s_frexp.c:
 	.text       start:0x80410190 end:0x80410218
 	.sdata2     start:0x805E0068 end:0x805E0070
 
-stl/s_ldexp.c:
+MSL/s_ldexp.c:
 	.text       start:0x80410218 end:0x80410384
 	.sdata2     start:0x805E0070 end:0x805E0098
 
-stl/s_modf.c:
+MSL/s_modf.c:
 	.text       start:0x80410384 end:0x80410480
 
-stl/s_sin.c:
+MSL/s_sin.c:
 	.text       start:0x80410480 end:0x80410558
 	.sdata2     start:0x805E0098 end:0x805E00A0
 
-stl/s_tan.c:
+MSL/s_tan.c:
 	.text       start:0x80410558 end:0x804105D0
 	.sdata2     start:0x805E00A0 end:0x805E00A8
 
-stl/w_acos.c:
+MSL/w_acos.c:
 	.text       start:0x804105D0 end:0x804105D4
 
-stl/w_asin.c:
+MSL/w_asin.c:
 	.text       start:0x804105D4 end:0x804105D8
 
-stl/w_atan2.c:
+MSL/w_atan2.c:
 	.text       start:0x804105D8 end:0x804105DC
 
-stl/w_exp.c:
+MSL/w_exp.c:
 	.text       start:0x804105DC end:0x804105E0
 
-stl/w_fmod.c:
+MSL/w_fmod.c:
 	.text       start:0x804105E0 end:0x804105E4
 
-stl/w_log.c:
+MSL/w_log.c:
 	.text       start:0x804105E4 end:0x804105E8
 
-stl/w_log10.c:
+MSL/w_log10.c:
 	.text       start:0x804105E8 end:0x804105EC
 
-stl/w_pow.c:
+MSL/w_pow.c:
 	.text       start:0x804105EC end:0x804105F0
 
-stl/e_sqrt.c:
+MSL/e_sqrt.c:
 	.text       start:0x804105F0 end:0x80410838
 	.sdata2     start:0x805E00A8 end:0x805E00B0
 
-stl/math_ppc.c:
+MSL/math_ppc.c:
 	.text       start:0x80410838 end:0x8041083C
 
-stl/w_sqrt.c:
+MSL/w_sqrt.c:
 	.text       start:0x8041083C end:0x80410840
 
-__mem.c:
+Runtime/__mem.c:
 	.init       start:0x80004338 end:0x8000446C
 	.text       start:0x80410840 end:0x8041085C
 
-__va_arg.c:
+Runtime/__va_arg.c:
 	.text       start:0x8041085C end:0x80410924
 
-global_destructor_chain.c:
+Runtime/global_destructor_chain.c:
 	.text       start:0x80410924 end:0x80410984
 	.sbss       start:0x805DCD58 end:0x805DCD60
 
-NMWException.cp:
+Runtime/NMWException.cp:
 	extab       start:0x80006648 end:0x80006698
 	extabindex  start:0x800068BC end:0x80006904
 	.text       start:0x80410984 end:0x80410DF0
 
-ptmf.c:
+Runtime/ptmf.c:
 	.text       start:0x80410DF0 end:0x80410E54
 	.rodata     start:0x80423830 end:0x80423840
 
-runtime.c:
+Runtime/runtime.c:
 	.text       start:0x80410E54 end:0x804115B0
 	.rodata     start:0x80423840 end:0x80423858
 
-__init_cpp_exceptions.cpp:
+Runtime/__init_cpp_exceptions.cpp:
 	.text       start:0x804115B0 end:0x80411620
 	.ctors      start:0x8041A780 end:0x8041A784 rename:.ctors$10
 	.dtors      start:0x8041A860 end:0x8041A864 rename:.dtors$10
 	.dtors      start:0x8041A864 end:0x8041A868 rename:.dtors$15
 	.sdata      start:0x805DB638 end:0x805DB640
 
-Gecko_ExceptionPPC.cp:
+Runtime/Gecko_ExceptionPPC.c:
 	.text       start:0x80411620 end:0x80411684
 	.bss        start:0x805D5D20 end:0x805D5D30
 
-mainloop.c:
+MetroTRK/debugger/Portable/:
 	.text       start:0x80411684 end:0x8041177C
 
-nubevent.c:
+MetroTRK/debugger/Portable/nubevent.c:
 	.text       start:0x8041177C end:0x804119A4
 	.bss        start:0x805D5D30 end:0x805D5D58
 
-nubinit.c:
+MetroTRK/debugger/Portable/nubinit.c:
 	.text       start:0x804119A4 end:0x80411B28
 	.rodata     start:0x80423858 end:0x80423878
 	.bss        start:0x805D5D58 end:0x805D5D60
 
-msg.c:
+MetroTRK/debugger/Portable/msg.c:
 	.text       start:0x80411B28 end:0x80411B54
 
-msgbuf.c:
+MetroTRK/debugger/Portable/msgbuf.c:
 	.text       start:0x80411B54 end:0x80412390
 	.rodata     start:0x80423878 end:0x80423898
 	.bss        start:0x805D5D60 end:0x805D7710
 
-serpoll.c:
+MetroTRK/debugger/Portable/serpoll.c:
 	.text       start:0x80412390 end:0x8041253C
 	.bss        start:0x805D7710 end:0x805D7728
 	.sbss       start:0x805DCD60 end:0x805DCD68
 
-usr_put.c:
+MetroTRK/debugger/Os/dolphin/usr_put.c:
 	.text       start:0x8041253C end:0x804125C8
 
-dispatch.c:
+MetroTRK/debugger/Portable/dispatch.c:
 	.text       start:0x804125C8 end:0x80412710
 	.data       start:0x8048BC60 end:0x8048BCD0
 
-msghndlr.c:
+MetroTRK/debugger/Portable/msghndlr.c:
 	.text       start:0x80412710 end:0x804137EC
 	.rodata     start:0x80423898 end:0x804238D0
 	.data       start:0x8048BCD0 end:0x8048BD08
 	.bss        start:0x805D7728 end:0x805D7730
 
-support.c:
+MetroTRK/debugger/Portable/support.c:
 	.text       start:0x804137EC end:0x80413EA0
 
-mutex_TRK.c:
+MetroTRK/debugger/Portable/mutex_TRK.c:
 	.text       start:0x80413EA0 end:0x80413EB8
 
-notify.c:
+MetroTRK/debugger/Portable/notify.c:
 	.text       start:0x80413EB8 end:0x80413F50
 
-flush_cache.c:
+MetroTRK/debugger/Processor/flush_cache.c:
 	.text       start:0x80413F50 end:0x80413F88
 
-mem_TRK.c:
+MetroTRK/debugger/Portable/mem_TRK.c:
 	.init       start:0x8000446C end:0x800044C0
 	.text       start:0x80413F88 end:0x80414040
 
-string_TRK.c:
+MetroTRK/debugger/Portable/string_TRK.c:
 	.text       start:0x80414040 end:0x8041405C
 
-targimpl.c:
+MetroTRK/debugger/Processor/targimpl.c:
 	.text       start:0x8041405C end:0x80415A80
 	.rodata     start:0x804238D0 end:0x80423958
 	.data       start:0x8048BD08 end:0x8048BD38
 	.bss        start:0x805D7730 end:0x805D7CB0
 
-targsupp.s:
+MetroTRK/debugger/Processor/targsupp.c:
 	.text       start:0x80415A80 end:0x80415AA0
 
-mpc_7xx_603e.c:
+MetroTRK/debugger/Processor/mpc_7xx_603e.c:
 	.text       start:0x80415AA0 end:0x80415E10
 
-mslsupp.c:
+MetroTRK/debugger/Export/mslsupp.c:
 	.text       start:0x80415E10 end:0x80415F88
 
-__exception.s:
+MetroTRK/debugger/Processor/__exception.c:
 	.init       start:0x800044C0 end:0x800063F4
 
-dolphin_trk.c:
+MetroTRK/debugger/Os/dolphin/dolphin_trk.c:
 	.init       start:0x800063F4 end:0x80006420
 	.text       start:0x80415F88 end:0x804162A4
 	.data       start:0x8048BD38 end:0x8048BD78
 	.bss        start:0x805D7CB0 end:0x805D7CB8
 
-main_TRK.c:
+MetroTRK/debugger/Portable/main_TRK.c:
 	.text       start:0x804162A4 end:0x804162E8
 	.bss        start:0x805D7CB8 end:0x805D7CC0
 
-dolphin_trk_glue.c:
+MetroTRK/debugger/Os/dolphin/dolphin_trk_glue.c:
 	.text       start:0x804162E8 end:0x804167A8
 	.rodata     start:0x80423958 end:0x80423A60
 	.data       start:0x8048BD78 end:0x8048BDA0
 	.bss        start:0x805D7CC0 end:0x805D7CC8
 
-targcont.c:
+MetroTRK/debugger/Os/dolphin/targcont.c:
 	.text       start:0x804167A8 end:0x804167DC
 
-target_options.c:
+MetroTRK/debugger/Os/dolphin/target_options.c:
 	.text       start:0x804167DC end:0x804167F8
 	.bss        start:0x805D7CC8 end:0x805D7CD0
 
-UDP_Stubs.c:
+MetroTRK/debugger/Os/dolphin/UDP_Stubs.c:
 	.text       start:0x804167F8 end:0x80416840
 
-main.c:
+MetroTRK/gamedev/main.c:
 	.text       start:0x80416840 end:0x80416B00
 	.bss        start:0x805D7CD0 end:0x805D8200
 	.sbss       start:0x805DCD68 end:0x805DCD70
 
-CircleBuffer.c:
+MetroTRK/gamedev/CircleBuffer.c:
 	.text       start:0x80416B00 end:0x80416D68
 
-MWCriticalSection_gc.cpp:
+MetroTRK/gamedev/MWCriticalSection_gc.cpp:
 	.text       start:0x80416D68 end:0x80416DC0
 
 GDBase.c:

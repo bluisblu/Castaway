@@ -25,7 +25,6 @@ DECL_SECTION(".init") static BOOL __get_debug_bba(void) {
     return Debug_BBA;
 }
 
-void __start(void);
 DECL_SECTION(".init") DECL_WEAK asm void __start(void) {
     // clang-format off
     nofralloc

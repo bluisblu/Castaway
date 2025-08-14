@@ -4,7 +4,7 @@
 #include <RVLFaceLib/RFLi_Types.h>
 #include <revolution/GX.h>
 #include <revolution/MTX.h>
-#include <revolution/types.h>
+#include <types.h>
 #ifdef __cplusplus
 extern "C" {
 #endif
@@ -133,140 +133,20 @@ typedef struct RFLiCharModel {
     GXTexObj* maskTexObj[RFLExp_Max]; // at 0x6C
 } RFLiCharModel;
 
-typedef struct RFLiCharInfo {
-    union {
-        struct {
-            u16 type : 3;
-            u16 color : 3;
-            u16 texture : 4;
-            u16 padding : 6;
-        };
-        u16 rawdata;
-    } faceline; // at 0x0
-
-    union {
-        struct {
-            u16 type : 7;
-            u16 color : 3;
-            u16 flip : 1;
-            u16 padding : 5;
-        };
-        u16 rawdata;
-    } hair; // at 0x2
-
-    union {
-        struct {
-            u32 type : 6;
-            u32 color : 3;
-            u32 scale : 4;
-            u32 rotate : 5;
-            u32 x : 4;
-            u32 y : 5;
-            u32 padding : 5;
-        };
-        u32 rawdata;
-    } eye; // at 0x4
-
-    union {
-        struct {
-            u32 type : 5;
-            u32 color : 3;
-            u32 scale : 4;
-            u32 rotate : 5;
-            u32 x : 4;
-            u32 y : 5;
-            u32 padding : 6;
-        };
-        u32 rawdata;
-    } eyebrow; // at 0x8
-
-    union {
-        struct {
-            u16 type : 4;
-            u16 scale : 4;
-            u16 y : 5;
-            u16 padding : 3;
-        };
-        u16 rawdata;
-    } nose; // at 0xC
-
-    union {
-        struct {
-            u16 type : 5;
-            u16 color : 2;
-            u16 scale : 4;
-            u16 y : 5;
-        };
-        u16 rawdata;
-    } mouth; // at 0xE
-
-    union {
-        struct {
-            u16 mustache : 2;
-            u16 type : 2;
-            u16 color : 3;
-            u16 scale : 4;
-            u16 y : 5;
-        };
-        u16 rawdata;
-    } beard; // at 0x10
-
-    union {
-        struct {
-            u16 type : 4;
-            u16 color : 3;
-            u16 scale : 4;
-            u16 y : 5;
-        };
-        u16 rawdata;
-    } glass; // at 0x12
-
-    union {
-        struct {
-            u16 type : 1;
-            u16 scale : 4;
-            u16 x : 5;
-            u16 y : 5;
-            u16 padding : 1;
-        };
-        u16 rawdata;
-    } mole; // at 0x14
-
-    struct {
-        u8 height;
-        u8 build;
-    } body; // at 0x16
-
-    struct {
-        wchar_t name[RFL_NAME_LEN + 1];
-        wchar_t creator[RFL_CREATOR_LEN + 1];
-        u16 sex : 1;
-        u16 bmonth : 4;
-        u16 bday : 5;
-        u16 color : 4;
-        u16 favorite : 1;
-        u16 localOnly : 1;
-    } personal; // at 0x18
-
-    struct {
-        u8 data[RFL_CREATEID_LEN];
-    } createID; // at 0x46
-} RFLiCharInfo;
-
 extern RFLiCoordinateData coordinateData;
 
-static inline void RFLiSetCoordinateData(const RFLiCoordinateData* data) {
+inline void RFLiSetCoordinateData(const RFLiCoordinateData* data) {
     coordinateData = *data;
 }
 
 u32 RFLiGetExpressionNum(u32 exprFlags);
 void RFLiInitCharModel(RFLCharModel* model, RFLiCharInfo* info, void* work,
                        RFLResolution res, u32 exprFlags);
-GXColor RFLiGetFacelineColor(RFLiCharInfo* info);
+GXColor RFLiGetFacelineColor(const RFLiCharInfo* info);
 void RFLiInitCharModelRes(RFLiCharModelRes* res, const RFLiCharInfo* info);
 void RFLiInitShapeRes(RFLiShapeRes* shape);
 void RFLiInitTexRes(GXTexObj* texObj, RFLiPartsShpTex part, u16 file,
-                    void* buffer);
+                    void* buffer) DECOMP_DONT_INLINE;
 void RFLiTransformCoordinate(s16* to, const s16* from);
 
 #ifdef __cplusplus

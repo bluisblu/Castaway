@@ -1,63 +1,77 @@
-typedef struct {
-	char gpr;
-	char fpr;
-	char reserved[2];
-	char *input_arg_area;
-	char *reg_save_area;
-} va_list[1];
+#include <types.h>
 
-typedef enum {
-    arg_ARGPOINTER,
-    arg_WORD,
-    arg_DOUBLEWORD,
-    arg_REAL,
-    arg_VECTOR
-} _va_arg_type;
+void* __va_arg(va_list argp, int type) {
+    char* pRegNo = &argp->gpr;
+    int regNo = argp->gpr;
+    int maxRegNo = 8;
 
-#define ALIGN(addr,amount)	(((unsigned int)(addr)+((amount)-1))&~((amount)-1))
+    void* arg;
+    int argSize = 4;
 
-void* __va_arg(va_list ap, _va_arg_type type) {
-    char* addr;
-    char* r = &(ap->gpr);
-    int rr = ap->gpr;
-    int max = 8;
-    int size = 4;
-    int inc = 1;
-    int even = 0;
-    int fpr_offset = 0;
-    int size_reg = 4;
+    int regsUsed = 1;
+    int regAddend = 0;
 
-    if (type == 3) {
-		r = &(ap->fpr);
-		rr = ap->fpr;
-		size = 8;
-		fpr_offset = 32;
-		size_reg = 8;
-	}
+    int savedRegBase = 0;
+    int savedRegSize = 4;
 
-	if (type == 2) {
-		size = 8;
-		max = max - 1;
+    // Float/double argument (floats are passed as doubles)
+    if (type == arg_ARGREAL) {
+        // These use FPRs instead of GPRs
+        regNo = argp->fpr;
+        pRegNo = &argp->fpr;
 
-		if (rr & 1) {
-			even = 1;
+        // These are 8 bytes
+        argSize = 8;
+        // These are saved after GPRs on the stack
+        savedRegBase = 8 * 4;
+        // These are saved as doubles (8-bytes)
+        savedRegSize = 8;
+    }
+
+    // 64-bit ("double word") integral argument
+    if (type == arg_DOUBLEWORD) {
+        // These are 8 bytes
+        argSize = 8;
+        // These use two registers, so they cannot start after GPR 7
+        maxRegNo = 7;
+
+        // These do not start at even registers (aside from GPR 3).
+        // An uneven reg ID means this is the first *of two* registers
+        if (regNo & 1 != 0) {
+            regAddend = 1;
         }
 
-		inc = 2;
-	}
+        // These use two GPRs
+        regsUsed = 2;
+    }
 
-    if (rr < max) {
-		rr += even;
-		addr = ap->reg_save_area + fpr_offset + (rr * size_reg);
-		*r = rr + inc;
-	} else {
-		*r = 8;
-		addr = ap->input_arg_area;
-		addr = (char*)ALIGN(addr, size);
-		ap->input_arg_area = addr + size;
-	}
-    if (type == 0)
-        addr = *((char**)addr);
+    // Argument was passed via a register
+    if (regNo < maxRegNo) {
+        // Correct for double-register args
+        regNo += regAddend;
 
-	return addr;
+        // Access arg in the saved area
+        arg = argp->reg_save_area + savedRegBase + (regNo * savedRegSize);
+        // Advance register index
+        *pRegNo = regNo + regsUsed;
+    }
+    // Argument was passed via the stack
+    else {
+        // Fix register index to stop further saved area access
+        // May be a fix for double word args (maxRegNo would be 7)?
+        *pRegNo = 8;
+
+        // Access arg in the input area
+        arg = ROUND_UP_PTR(argp->input_arg_area, argSize);
+        // Advance input area pointer
+        argp->input_arg_area = (char*)arg + argSize;
+    }
+
+    // Object reference
+    if (type == arg_ARGPOINTER) {
+        // Dereference pointer
+        arg = *(void**)arg;
+    }
+
+    return arg;
 }

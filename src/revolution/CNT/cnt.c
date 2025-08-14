@@ -35,7 +35,7 @@ static s32 __CNTConvertErrorCode(s32 error) {
         return error;
     }
 
-    for (; i < LENGTHOF(errorMap); i += 2) {
+    for (; i < ARRAY_SIZE(errorMap); i += 2) {
         if (error == errorMap[i]) {
             return errorMap[i + 1];
         }
@@ -53,8 +53,8 @@ s32 contentFastOpenNAND(CNTHandle* handle, s32 entrynum, CNTFileInfo* info) {
     }
 
     info->handle = handle;
-    info->offset = arcInfo.offset;
-    info->length = arcInfo.size;
+    info->offset = arcInfo.startOffset;
+    info->length = arcInfo.length;
     info->position = 0;
 
     return 0;

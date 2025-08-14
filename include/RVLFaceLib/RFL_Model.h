@@ -3,7 +3,7 @@
 #include <RVLFaceLib/RFL_Types.h>
 #include <revolution/GX.h>
 #include <revolution/MTX.h>
-#include <revolution/types.h>
+#include <types.h>
 #ifdef __cplusplus
 extern "C" {
 #endif
@@ -51,17 +51,18 @@ typedef struct RFLDrawCoreSetting {
 void RFLSetCoordinate(RFLCoordinateType t1, RFLCoordinateType t2);
 u32 RFLGetModelBufferSize(RFLResolution res, u32 exprFlags);
 RFLErrcode RFLInitCharModel(RFLCharModel* model, RFLDataSource src,
-                            RFLMiddleDB* db, u16 id, void* work,
+                            struct RFLMiddleDB* db, u16 id, void* work,
                             RFLResolution res, u32 exprFlags);
 void RFLSetMtx(RFLCharModel* model, const Mtx mvMtx);
 void RFLSetExpression(RFLCharModel* model, RFLExpression expr);
-RFLExpression RFLGetExpression(RFLCharModel* model);
+RFLExpression RFLGetExpression(const RFLCharModel* model);
 GXColor RFLGetFavoriteColor(RFLFavoriteColor color);
 void RFLLoadDrawSetting(const RFLDrawSetting* setting);
 void RFLDrawOpa(const RFLCharModel* model);
 void RFLDrawXlu(const RFLCharModel* model);
 void RFLLoadVertexSetting(const RFLDrawCoreSetting* setting);
-void RFLLoadMaterialSetting(const RFLDrawCoreSetting* setting) DECOMP_DONT_INLINE;
+void RFLLoadMaterialSetting(const RFLDrawCoreSetting* setting)
+    DECOMP_DONT_INLINE;
 void RFLDrawOpaCore(const RFLCharModel* model,
                     const RFLDrawCoreSetting* setting);
 void RFLDrawXluCore(const RFLCharModel* model,

@@ -52,7 +52,7 @@ void __GXSetProjection(void) {
     // Temp required to match
     volatile void* wgpipe = &WGPIPE;
 
-    GX_XF_LOAD_REGS(LENGTHOF(gxdt->proj), GX_XF_REG_PROJECTIONA);
+    GX_XF_LOAD_REGS(ARRAY_SIZE(gxdt->proj), GX_XF_REG_PROJECTIONA);
     WriteProjPS(wgpipe, gxdt->proj);
     WGPIPE.i = gxdt->projType;
 }
@@ -76,13 +76,13 @@ void GXSetProjection(const Mtx44 proj, GXProjectionType type) {
     gxdt->gxDirtyFlags |= GX_DIRTY_PROJECTION;
 }
 
-void GXSetProjectionv(const f32 proj[7]) {
+void GXSetProjectionv(const f32 proj[GX_PROJECTION_SZ]) {
     gxdt->projType = proj[0] == 0.0f ? GX_PERSPECTIVE : GX_ORTHOGRAPHIC;
     Copy6Floats(gxdt->proj, proj + 1);
     gxdt->gxDirtyFlags |= GX_DIRTY_PROJECTION;
 }
 
-void GXGetProjectionv(f32 proj[7]) {
+void GXGetProjectionv(f32 proj[GX_PROJECTION_SZ]) {
     proj[0] = gxdt->projType != GX_PERSPECTIVE ? 1.0f : 0.0f;
     LoadProjPS(proj + 1);
 }
@@ -181,8 +181,8 @@ void GXLoadTexMtxImm(const Mtx mtx, u32 id, GXMtxType type) {
     u32 num;
 
     // Base row address in XF memory
-    addr = id >= GX_DUALMTX0
-               ? (id - GX_DUALMTX0) * sizeof(f32) + GX_XF_MEM_DUALTEXMTX
+    addr = id >= GX_PTTEXMTX0
+               ? (id - GX_PTTEXMTX0) * sizeof(f32) + GX_XF_MEM_DUALTEXMTX
                : id * 4 + (u64)GX_XF_MEM_POSMTX;
 
     // Number of elements in matrix
@@ -246,7 +246,7 @@ void GXSetViewport(f32 ox, f32 oy, f32 sx, f32 sy, f32 near, f32 far) {
     gxdt->gxDirtyFlags |= GX_DIRTY_VIEWPORT;
 }
 
-void GXGetViewportv(f32 view[6]) {
+void GXGetViewportv(f32 view[GX_VIEWPORT_SZ]) {
     Copy6Floats(view, gxdt->view);
 }
 

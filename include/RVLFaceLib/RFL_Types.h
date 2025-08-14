@@ -1,6 +1,6 @@
 #ifndef RVL_FACE_LIBRARY_TYPES_H
 #define RVL_FACE_LIBRARY_TYPES_H
-#include <revolution/types.h>
+#include <types.h>
 #ifdef __cplusplus
 extern "C" {
 #endif
@@ -23,14 +23,14 @@ extern "C" {
 #define RFL_CREATOR_LEN 10
 #define RFL_CREATEID_LEN 8
 
-#define RFL_CTRL_MAX 4
 #define RFL_CTRL_CHAR_MAX 10
-
 #define RFL_DB_CHAR_MAX 100
 
 /**
  * Common enums
  */
+
+typedef enum { RFLAge_Child, RFLAge_Adult, RFLAge_Elder, RFLAge_All } RFLAge;
 
 typedef enum {
     RFLDataSource_Official,
@@ -98,21 +98,46 @@ typedef enum {
 } RFLFavoriteColor;
 
 typedef enum {
+    RFLRace_Black,
+    RFLRace_White,
+    RFLRace_Asian,
+    RFLRace_All
+} RFLRace;
+
+typedef enum {
+    // No mipmap
     RFLResolution_64 = 64,
     RFLResolution_128 = 128,
     RFLResolution_256 = 256,
 
-    RFLResolution_64M = 96,
-    RFLResolution_128M = 224,
-    RFLResolution_256M = 480
+    // Mipmap
+    RFLResolution_64M = 64 | 32,
+    RFLResolution_128M = 128 | 64 | 32,
+    RFLResolution_256M = 256 | 128 | 64 | 32
 } RFLResolution;
+
+typedef enum { RFLSex_Male, RFLSex_Female, RFLSex_All } RFLSex;
 
 /**
  * Common typedefs
  */
 
-typedef void (*RFLIconDrawDoneCallback)(void);
-typedef void (*RFLModelDrawDoneCallback)(void);
+typedef void (*RFLCallback)(void);
+
+/**
+ * Common structs
+ */
+typedef struct RFLCreateID {
+    u8 data[RFL_CREATEID_LEN];
+} RFLCreateID;
+
+typedef struct RFLCharData {
+    u8 dummy[0x4A];
+} RFLCharData;
+
+typedef struct RFLStoreData {
+    u8 dummy[0x4C];
+} RFLStoreData;
 
 #ifdef __cplusplus
 }

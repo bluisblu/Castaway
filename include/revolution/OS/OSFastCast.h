@@ -10,7 +10,7 @@ extern "C" {
 #define OS_GQR_TYPE_S8 6
 #define OS_GQR_TYPE_S16 7
 
-static inline void OSInitFastCast(void) {
+static void OSInitFastCast(void) {
     // clang-format off
     asm {
         li r3, 4
@@ -32,7 +32,7 @@ static inline void OSInitFastCast(void) {
     // clang-format on
 }
 
-static inline void OSSetGQR6(register u32 type, register u32 scale) {
+static void OSSetGQR6(register u32 type, register u32 scale) {
     register u32 val = ((scale << 8 | type) << 16) | ((scale << 8) | type);
 
     // clang-format off
@@ -42,7 +42,7 @@ static inline void OSSetGQR6(register u32 type, register u32 scale) {
     // clang-format on
 }
 
-static inline void OSSetGQR7(register u32 type, register u32 scale) {
+static void OSSetGQR7(register u32 type, register u32 scale) {
     register u32 val = ((scale << 8 | type) << 16) | ((scale << 8) | type);
 
     // clang-format off
@@ -57,7 +57,7 @@ static inline void OSSetGQR7(register u32 type, register u32 scale) {
  * Convert from U8
  *
  ******************************************************************************/
-static inline f32 __OSu8tof32(register u8* in) {
+static f32 __OSu8tof32(register u8* in) {
     register f32 ret;
 
     // clang-format off
@@ -69,7 +69,7 @@ static inline f32 __OSu8tof32(register u8* in) {
     return ret;
 }
 
-static inline void OSu8tof32(u8* in, volatile f32* out) {
+static void OSu8tof32(u8* in, volatile f32* out) {
     *out = __OSu8tof32(in);
 }
 
@@ -78,7 +78,7 @@ static inline void OSu8tof32(u8* in, volatile f32* out) {
  * Convert from U16
  *
  ******************************************************************************/
-static inline f32 __OSu16tof32(register u16* arg) {
+static f32 __OSu16tof32(register u16* arg) {
     register f32 ret;
 
     // clang-format off
@@ -90,7 +90,7 @@ static inline f32 __OSu16tof32(register u16* arg) {
     return ret;
 }
 
-static inline void OSu16tof32(u16* in, volatile f32* out) {
+static void OSu16tof32(u16* in, volatile f32* out) {
     *out = __OSu16tof32(in);
 }
 
@@ -99,7 +99,7 @@ static inline void OSu16tof32(u16* in, volatile f32* out) {
  * Convert from S16
  *
  ******************************************************************************/
-static inline f32 __OSs16tof32(register s16* arg) {
+static f32 __OSs16tof32(register s16* arg) {
     register f32 ret;
 
     // clang-format off
@@ -111,7 +111,7 @@ static inline f32 __OSs16tof32(register s16* arg) {
     return ret;
 }
 
-static inline void OSs16tof32(s16* in, volatile f32* out) {
+static void OSs16tof32(s16* in, volatile f32* out) {
     *out = __OSs16tof32(in);
 }
 
@@ -120,7 +120,7 @@ static inline void OSs16tof32(s16* in, volatile f32* out) {
  * Convert from F32
  *
  ******************************************************************************/
-static inline u8 __OSf32tou8(register f32 arg) {
+static u8 __OSf32tou8(register f32 arg) {
     f32 a;
     register f32* ptr = &a;
     u8 r;
@@ -135,11 +135,11 @@ static inline u8 __OSf32tou8(register f32 arg) {
     return r;
 }
 
-static inline void OSf32tou8(f32* in, volatile u8* out) {
+static void OSf32tou8(f32* in, volatile u8* out) {
     *out = __OSf32tou8(*in);
 }
 
-static inline u16 __OSf32tou16(register f32 arg) {
+static u16 __OSf32tou16(register f32 arg) {
     f32 a;
     register f32* ptr = &a;
     u16 r;
@@ -154,11 +154,11 @@ static inline u16 __OSf32tou16(register f32 arg) {
     return r;
 }
 
-static inline void OSf32tou16(f32* in, volatile u16* out) {
+static void OSf32tou16(f32* in, volatile u16* out) {
     *out = __OSf32tou16(*in);
 }
 
-static inline s16 __OSf32tos16(register f32 arg) {
+static s16 __OSf32tos16(register f32 arg) {
     f32 a;
     register f32* ptr = &a;
     s16 r;
@@ -173,7 +173,7 @@ static inline s16 __OSf32tos16(register f32 arg) {
     return r;
 }
 
-static inline void OSf32tos16(f32* in, volatile s16* out) {
+static void OSf32tos16(f32* in, volatile s16* out) {
     *out = __OSf32tos16(*in);
 }
 

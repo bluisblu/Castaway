@@ -110,8 +110,9 @@ void SCGetBtDeviceInfoArray(SCBtDeviceInfoArray* info) {
     SCFindByteArrayItem(info, sizeof(SCBtDeviceInfoArray), SC_ITEM_BT_DINF);
 }
 
-void SCSetBtDeviceInfoArray(const SCBtDeviceInfoArray* info) {
-    SCReplaceByteArrayItem(info, sizeof(SCBtDeviceInfoArray), SC_ITEM_BT_DINF);
+BOOL SCSetBtDeviceInfoArray(const SCBtDeviceInfoArray* info) {
+    return SCReplaceByteArrayItem(info, sizeof(SCBtDeviceInfoArray),
+                                  SC_ITEM_BT_DINF);
 }
 
 u32 SCGetBtDpdSensibility(void) {
@@ -140,7 +141,7 @@ u8 SCGetWpadMotorMode(void) {
     return item;
 }
 
-void SCSetWpadMotorMode(u8 mode) {
+BOOL SCSetWpadMotorMode(u8 mode) {
     SCReplaceU8Item(mode, SC_ITEM_BT_MOT);
 }
 
@@ -168,6 +169,6 @@ u8 SCGetWpadSpeakerVolume(void) {
     return item;
 }
 
-void SCSetWpadSpeakerVolume(u8 vol) {
+BOOL SCSetWpadSpeakerVolume(u8 vol) {
     SCReplaceU8Item(vol, SC_ITEM_BT_SPKV);
 }
