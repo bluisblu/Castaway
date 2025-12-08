@@ -1403,7 +1403,7 @@ SKU2_Code/src/target/game/game_unity.cpp:
 	.sbss       start:0x805DBB78 end:0x805DBDC0
 	.sdata2     start:0x805DE7A8 end:0x805DEB68
 
-SKU2_Code/src/target/game/Wii/game_wii_unity.cpp:
+SKU2_Code/src/target/game/wii/game_wii_unity.cpp:
 	.text       start:0x80246654 end:0x80246ED4
 	.text       start:0x80246ED4 end:0x80246EE8
 	.text       start:0x80246EE8 end:0x80246EF0

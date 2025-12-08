@@ -244,7 +244,8 @@ cflags_sku2 = [
     "-str reuse,pool,readonly",
     "-fp_contract off",
     "-D_IEEE_LIBM",
-    "-i src/SKU2_Code/src/target/"
+    "-i src/SKU2_Code/src/target/",
+    "-i src/SKU2_Code/src/common/"
 ]
 
 # Metrowerks library flags
@@ -314,15 +315,44 @@ config.warn_missing_config = False  # TODO enable
 config.warn_missing_source = False
 config.libs = [
     {
-        "lib": "SKU2_Code",
+        "lib": "Game Code",
         "mw_version": config.linker_version,
         "cflags": cflags_sku2,
         "progress_category": "game",
         "objects": [
             Object(Matching, "SKU2_Code/src/target/game/simulator/core/bomb.cpp"),
-            Object(NonMatching, "SKU2_Code/src/target/game/simulator/core/syncaudio.cpp"),
-            Object(NonMatching, "SKU2_Code/src/target/game/simulator/core/game_simulator_core2_unity.cpp"),
-            Object(NonMatching, "SKU2_Code/src/target/game/simulator/core/game_simulator_core_unity.cpp"),
+            Object(NonMatching, "SKU2_Code/src/target/game/simulator/core/syncaudio.cpp", extra_cflags=["-sym on"]),
+            Object(NonMatching, "SKU2_Code/src/target/game/simulator/core/game_simulator_core2_unity.cpp", extra_cflags=["-sym on"]),
+            Object(NonMatching, "SKU2_Code/src/target/game/simulator/core/game_simulator_core_unity.cpp", extra_cflags=["-sym on"]),
+            Object(NonMatching, "SKU2_Code/src/target/game/simulator/objectdata/objectdatafactory.cpp"),
+            Object(NonMatching, "SKU2_Code/src/target/game/simulator/objectdata/game_simulator_objectdata_unity.cpp", extra_cflags=["-sym on"]),
+            Object(NonMatching, "SKU2_Code/src/target/game/simulator/utility/game_simulator_utility_unity.cpp", extra_cflags=["-sym on"]),
+            Object(NonMatching, "SKU2_Code/src/target/game/animation/game_animation_unity.cpp", extra_cflags=["-sym on"]),
+            Object(NonMatching, "SKU2_Code/src/target/game/cas/game_cas_unity.cpp", extra_cflags=["-sym on"]),
+            Object(NonMatching, "SKU2_Code/src/target/game/interactor/game_interactor_unity.cpp", extra_cflags=["-sym on"]),
+            Object(NonMatching, "SKU2_Code/src/target/game/level/game_level_unity.cpp", extra_cflags=["-sym on"]),
+            Object(NonMatching, "SKU2_Code/src/target/game/game_misc_unity.cpp", extra_cflags=["-sym on"]),
+            Object(NonMatching, "SKU2_Code/src/target/game/statemachine/game_statemachine_unity.cpp", extra_cflags=["-sym on"]),
+            Object(NonMatching, "SKU2_Code/src/target/game/ui/core/game_ui_core_unity.cpp", extra_cflags=["-sym on"]),
+            Object(NonMatching, "SKU2_Code/src/target/game/ui/targets/game_ui_targets_cas_unity.cpp", extra_cflags=["-sym on"]),
+            Object(NonMatching, "SKU2_Code/src/target/game/ui/targets/game_ui_targets_s2c_unity.cpp", extra_cflags=["-sym on"]),
+            Object(NonMatching, "SKU2_Code/src/target/game/ui/targets/game_ui_targets_tsc5_unity.cpp", extra_cflags=["-sym on"]),
+            Object(NonMatching, "SKU2_Code/src/target/game/ui/targets/game_ui_targets_tsc6_unity.cpp", extra_cflags=["-sym on"]),
+            Object(NonMatching, "SKU2_Code/src/target/game/game_unity.cpp", extra_cflags=["-sym on"]),
+            Object(NonMatching, "SKU2_Code/src/target/game/wii/game_wii_unity.cpp", extra_cflags=["-sym on"]),
+            Object(NonMatching, "SKU2_Code/src/target/game/weather/weather_unity.cpp", extra_cflags=["-sym on"]),
+            Object(NonMatching, "SKU2_Code/src/common/base/core/base_core_engine_dependencies_unity.cpp", extra_cflags=["-sym on"]),
+            Object(NonMatching, "SKU2_Code/src/common/base/core/base_core_unity.cpp", extra_cflags=["-sym on"]),
+            Object(NonMatching, "SKU2_Code/src/common/base/ngc/base_ngc_unity.cpp", extra_cflags=["-sym on"]),
+            Object(NonMatching, "SKU2_Code/src/common/engine/utility/e_cheatmenu.cpp"),
+            Object(NonMatching, "SKU2_Code/src/common/engine/utility/engine_utility_unity.cpp", extra_cflags=["-sym on"]),
+            Object(NonMatching, "SKU2_Code/src/common/engine/core/engine_core_unity.cpp", extra_cflags=["-sym on"]),
+            Object(NonMatching, "SKU2_Code/src/common/engine/effects/engine_effects2_unity.cpp", extra_cflags=["-sym on"]),
+            Object(NonMatching, "SKU2_Code/src/common/engine/effects/engine_effects_unity.cpp", extra_cflags=["-sym on"]),
+            Object(NonMatching, "SKU2_Code/src/common/engine/graphics/engine_graphics_unity.cpp", extra_cflags=["-sym on"]),
+            Object(NonMatching, "SKU2_Code/src/common/engine/manager/engine_manager_unity.cpp", extra_cflags=["-sym on"]),
+            Object(NonMatching, "SKU2_Code/src/common/engine/ngc/engine_ngc_unity.cpp", extra_cflags=["-sym on"]),
+            Object(NonMatching, "SKU2_Code/src/common/engine/resource/engine_resource_unity.cpp", extra_cflags=["-sym on"]),
         ],
     },
     {
