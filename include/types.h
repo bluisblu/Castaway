@@ -1,6 +1,15 @@
 #ifndef TYPES_H
 #define TYPES_H
 
+#ifdef __cplusplus
+#include <cstdarg>
+#include <cstddef>
+#include <new>
+#else
+#include <stdarg.h>
+#include <stddef.h>
+#endif
+
 #include <decomp.h>
 #include <lang.h>
 #include <macros.h>
