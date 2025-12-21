@@ -299,7 +299,7 @@ cflags_rp = [
     "-str reuse,pool,readonly",
 ]
 
-config.linker_version = "Wii/1.7"
+config.linker_version = "GC/3.0a3"
 
 Matching = True                   # Object matches and should be linked
 NonMatching = False               # Object does not match and should not be linked
