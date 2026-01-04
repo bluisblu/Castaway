@@ -17,10 +17,12 @@ unsigned char CasEventResetCharacterDraw::GetRenderCharacter() {}
 int CasEventResetCharacterDraw::GetCharID() {}
 
 // Range: 0x8003A850 -> 0x8003A8A8
-void * CasEventResetCharacterDraw::~CasEventResetCharacterDraw(class CasEventResetCharacterDraw * const this /* r30 */) {}
+// this: r30
+CasEventResetCharacterDraw::~CasEventResetCharacterDraw() {}
 
 // Range: 0x8003A8A8 -> 0x8003A918
-void * CasEventResetCharacterDraw::CasEventResetCharacterDraw(class CasEventResetCharacterDraw * const this /* r27 */, unsigned char bSpeciesChanged /* r28 */, unsigned char bRenderCharacter /* r29 */, int iCharID /* r30 */, unsigned char bBlockOnLoad /* r31 */) {
+// this: r27
+CasEventResetCharacterDraw::CasEventResetCharacterDraw(unsigned char bSpeciesChanged /* r28 */, unsigned char bRenderCharacter /* r29 */, int iCharID /* r30 */, unsigned char bBlockOnLoad /* r31 */) {
     // References
     // -> struct [anonymous] __vt__26CasEventResetCharacterDraw;
 }

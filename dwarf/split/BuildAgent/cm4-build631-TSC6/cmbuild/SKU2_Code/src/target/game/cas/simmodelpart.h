@@ -5,61 +5,78 @@
     Code range: 0x8003E814 -> 0x8003F3B4
 */
 // Range: 0x8003E814 -> 0x8003E86C
-void * SimModelPartUnused::~SimModelPartUnused(class SimModelPartUnused * const this /* r30 */) {}
+// this: r30
+SimModelPartUnused::~SimModelPartUnused() {}
 
 // Range: 0x8003E86C -> 0x8003E8C4
-void * SimModelPartSleeves::~SimModelPartSleeves(class SimModelPartSleeves * const this /* r30 */) {}
+// this: r30
+SimModelPartSleeves::~SimModelPartSleeves() {}
 
 // Range: 0x8003E8C4 -> 0x8003E91C
-void * SimModelPartAddonLowerBody::~SimModelPartAddonLowerBody(class SimModelPartAddonLowerBody * const this /* r30 */) {}
+// this: r30
+SimModelPartAddonLowerBody::~SimModelPartAddonLowerBody() {}
 
 // Range: 0x8003E91C -> 0x8003E974
-void * SimModelPartAddonUpperBody::~SimModelPartAddonUpperBody(class SimModelPartAddonUpperBody * const this /* r30 */) {}
+// this: r30
+SimModelPartAddonUpperBody::~SimModelPartAddonUpperBody() {}
 
 // Range: 0x8003E974 -> 0x8003E9CC
-void * SimModelPartBelt::~SimModelPartBelt(class SimModelPartBelt * const this /* r30 */) {}
+// this: r30
+SimModelPartBelt::~SimModelPartBelt() {}
 
 // Range: 0x8003E9CC -> 0x8003EA24
-void * SimModelPartArmAccessory::~SimModelPartArmAccessory(class SimModelPartArmAccessory * const this /* r30 */) {}
+// this: r30
+SimModelPartArmAccessory::~SimModelPartArmAccessory() {}
 
 // Range: 0x8003EA24 -> 0x8003EA7C
-void * SimModelPartNecklaceEarring::~SimModelPartNecklaceEarring(class SimModelPartNecklaceEarring * const this /* r30 */) {}
+// this: r30
+SimModelPartNecklaceEarring::~SimModelPartNecklaceEarring() {}
 
 // Range: 0x8003EA7C -> 0x8003EAD4
-void * SimModelPartHat::~SimModelPartHat(class SimModelPartHat * const this /* r30 */) {}
+// this: r30
+SimModelPartHat::~SimModelPartHat() {}
 
 // Range: 0x8003EAD4 -> 0x8003EB2C
-void * SimModelPartShoes::~SimModelPartShoes(class SimModelPartShoes * const this /* r30 */) {}
+// this: r30
+SimModelPartShoes::~SimModelPartShoes() {}
 
 // Range: 0x8003EB2C -> 0x8003EB84
-void * SimModelPartLowerBody::~SimModelPartLowerBody(class SimModelPartLowerBody * const this /* r30 */) {}
+// this: r30
+SimModelPartLowerBody::~SimModelPartLowerBody() {}
 
 // Range: 0x8003EB84 -> 0x8003EBDC
-void * SimModelPartTorso::~SimModelPartTorso(class SimModelPartTorso * const this /* r30 */) {}
+// this: r30
+SimModelPartTorso::~SimModelPartTorso() {}
 
 // Range: 0x8003EBDC -> 0x8003EC34
-void * SimModelPartGlasses::~SimModelPartGlasses(class SimModelPartGlasses * const this /* r30 */) {}
+// this: r30
+SimModelPartGlasses::~SimModelPartGlasses() {}
 
 // Range: 0x8003EC34 -> 0x8003EC8C
-void * SimModelPartHair::~SimModelPartHair(class SimModelPartHair * const this /* r30 */) {}
+// this: r30
+SimModelPartHair::~SimModelPartHair() {}
 
 // Range: 0x8003EC8C -> 0x8003ECE4
-void * SimModelPartFacialFeature::~SimModelPartFacialFeature(class SimModelPartFacialFeature * const this /* r30 */) {}
+// this: r30
+SimModelPartFacialFeature::~SimModelPartFacialFeature() {}
 
 // Range: 0x8003ECE4 -> 0x8003ED3C
-void * SimModelPartHead::~SimModelPartHead(class SimModelPartHead * const this /* r30 */) {}
+// this: r30
+SimModelPartHead::~SimModelPartHead() {}
 
 // Range: 0x8003ED3C -> 0x8003ED44
 void SimModelPart::SetSimModel() {}
 
 // Range: 0x8003ED44 -> 0x8003ED80
-void * SimModelPartUnused::SimModelPartUnused(class SimModelPartUnused * const this /* r31 */) {
+// this: r31
+SimModelPartUnused::SimModelPartUnused() {
     // References
     // -> struct [anonymous] __vt__18SimModelPartUnused;
 }
 
 // Range: 0x8003ED80 -> 0x8003EDDC
-void * SimModelPartSleeves::SimModelPartSleeves(class SimModelPartSleeves * const this /* r31 */) {
+// this: r31
+SimModelPartSleeves::SimModelPartSleeves() {
     // References
     // -> struct [anonymous] __vt__19SimModelPartSleeves;
 }
@@ -68,79 +85,92 @@ void * SimModelPartSleeves::SimModelPartSleeves(class SimModelPartSleeves * cons
 void SimModelPart::SetModelFlag() {}
 
 // Range: 0x8003EDE4 -> 0x8003EE20
-void * SimModelPartAddonLowerBody::SimModelPartAddonLowerBody(class SimModelPartAddonLowerBody * const this /* r31 */) {
+// this: r31
+SimModelPartAddonLowerBody::SimModelPartAddonLowerBody() {
     // References
     // -> struct [anonymous] __vt__26SimModelPartAddonLowerBody;
 }
 
 // Range: 0x8003EE20 -> 0x8003EE7C
-void * SimModelPartAddonUpperBody::SimModelPartAddonUpperBody(class SimModelPartAddonUpperBody * const this /* r31 */) {
+// this: r31
+SimModelPartAddonUpperBody::SimModelPartAddonUpperBody() {
     // References
     // -> struct [anonymous] __vt__26SimModelPartAddonUpperBody;
 }
 
 // Range: 0x8003EE7C -> 0x8003EEC8
-void * SimModelPartBelt::SimModelPartBelt(class SimModelPartBelt * const this /* r31 */) {
+// this: r31
+SimModelPartBelt::SimModelPartBelt() {
     // References
     // -> struct [anonymous] __vt__16SimModelPartBelt;
 }
 
 // Range: 0x8003EEC8 -> 0x8003EF14
-void * SimModelPartArmAccessory::SimModelPartArmAccessory(class SimModelPartArmAccessory * const this /* r31 */) {
+// this: r31
+SimModelPartArmAccessory::SimModelPartArmAccessory() {
     // References
     // -> struct [anonymous] __vt__24SimModelPartArmAccessory;
 }
 
 // Range: 0x8003EF14 -> 0x8003EF80
-void * SimModelPartNecklaceEarring::SimModelPartNecklaceEarring(class SimModelPartNecklaceEarring * const this /* r31 */) {
+// this: r31
+SimModelPartNecklaceEarring::SimModelPartNecklaceEarring() {
     // References
     // -> struct [anonymous] __vt__27SimModelPartNecklaceEarring;
 }
 
 // Range: 0x8003EF80 -> 0x8003EFEC
-void * SimModelPartHat::SimModelPartHat(class SimModelPartHat * const this /* r31 */) {
+// this: r31
+SimModelPartHat::SimModelPartHat() {
     // References
     // -> struct [anonymous] __vt__15SimModelPartHat;
 }
 
 // Range: 0x8003EFEC -> 0x8003F028
-void * SimModelPartShoes::SimModelPartShoes(class SimModelPartShoes * const this /* r31 */) {
+// this: r31
+SimModelPartShoes::SimModelPartShoes() {
     // References
     // -> struct [anonymous] __vt__17SimModelPartShoes;
 }
 
 // Range: 0x8003F028 -> 0x8003F074
-void * SimModelPartLowerBody::SimModelPartLowerBody(class SimModelPartLowerBody * const this /* r31 */) {
+// this: r31
+SimModelPartLowerBody::SimModelPartLowerBody() {
     // References
     // -> struct [anonymous] __vt__21SimModelPartLowerBody;
 }
 
 // Range: 0x8003F074 -> 0x8003F0E0
-void * SimModelPartTorso::SimModelPartTorso(class SimModelPartTorso * const this /* r31 */) {
+// this: r31
+SimModelPartTorso::SimModelPartTorso() {
     // References
     // -> struct [anonymous] __vt__17SimModelPartTorso;
 }
 
 // Range: 0x8003F0E0 -> 0x8003F13C
-void * SimModelPartGlasses::SimModelPartGlasses(class SimModelPartGlasses * const this /* r31 */) {
+// this: r31
+SimModelPartGlasses::SimModelPartGlasses() {
     // References
     // -> struct [anonymous] __vt__19SimModelPartGlasses;
 }
 
 // Range: 0x8003F13C -> 0x8003F1A8
-void * SimModelPartHair::SimModelPartHair(class SimModelPartHair * const this /* r31 */) {
+// this: r31
+SimModelPartHair::SimModelPartHair() {
     // References
     // -> struct [anonymous] __vt__16SimModelPartHair;
 }
 
 // Range: 0x8003F1A8 -> 0x8003F214
-void * SimModelPartFacialFeature::SimModelPartFacialFeature(class SimModelPartFacialFeature * const this /* r31 */) {
+// this: r31
+SimModelPartFacialFeature::SimModelPartFacialFeature() {
     // References
     // -> struct [anonymous] __vt__25SimModelPartFacialFeature;
 }
 
 // Range: 0x8003F214 -> 0x8003F290
-void * SimModelPartHead::SimModelPartHead(class SimModelPartHead * const this /* r31 */) {
+// this: r31
+SimModelPartHead::SimModelPartHead() {
     // References
     // -> struct [anonymous] __vt__16SimModelPartHead;
 }

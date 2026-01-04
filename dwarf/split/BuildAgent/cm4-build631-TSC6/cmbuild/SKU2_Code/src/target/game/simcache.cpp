@@ -5,10 +5,11 @@
     Code range: 0x80244A90 -> 0x80245108
 */
 // Range: 0x80244A90 -> 0x80244AA0
-void * CachedSimData::CachedSimData() {}
+CachedSimData::CachedSimData() {}
 
 // Range: 0x80244AA0 -> 0x80244AEC
-void * CachedSimData::~CachedSimData(class CachedSimData * const this /* r31 */) {}
+// this: r31
+CachedSimData::~CachedSimData() {}
 
 // Range: 0x80244AEC -> 0x80244AF4
 unsigned int CachedSimData::GetGUID() {}
@@ -23,13 +24,16 @@ class SimModelTSC6 * CachedSimData::GetSimModel() {}
 void CachedSimData::SetSimModel() {}
 
 // Range: 0x80244B18 -> 0x80244B68
-void * SimCache::SimCache(class SimCache * const this /* r31 */) {}
+// this: r31
+SimCache::SimCache() {}
 
 // Range: 0x80244B68 -> 0x80244BD4
-void * SimCache::~SimCache(class SimCache * const this /* r30 */) {}
+// this: r30
+SimCache::~SimCache() {}
 
 // Range: 0x80244BD4 -> 0x80244C4C
-class CachedSimData * SimCache::GetCachedSimFromGUID(class SimCache * const this /* r29 */, unsigned int guid /* r30 */) {
+// this: r29
+class CachedSimData * SimCache::GetCachedSimFromGUID(unsigned int guid /* r30 */) {
     // Local variables
     class CachedSimData * iter; // r31
 }
@@ -41,25 +45,29 @@ class SimModelTSC6 * SimCache::GetModelFromCacheByGUID() {
 }
 
 // Range: 0x80244C80 -> 0x80244CE4
-class SimModelTSC6 * SimCache::GetModelFromCacheByIndex(class SimCache * const this /* r30 */, unsigned int index /* r31 */) {
+// this: r30
+class SimModelTSC6 * SimCache::GetModelFromCacheByIndex(unsigned int index /* r31 */) {
     // Local variables
     class EAutoMutex pcmut; // r1+0x8
 }
 
 // Range: 0x80244CE4 -> 0x80244D34
-unsigned int SimCache::GetNumCachedSims(class SimCache * const this /* r31 */) {
+// this: r31
+unsigned int SimCache::GetNumCachedSims() {
     // Local variables
     class EAutoMutex pcmut; // r1+0x8
 }
 
 // Range: 0x80244D34 -> 0x80244DAC
-void SimCache::CacheSim(class SimCache * const this /* r29 */, unsigned int guid /* r30 */, class SimModelTSC6 * pModel /* r31 */) {
+// this: r29
+void SimCache::CacheSim(unsigned int guid /* r30 */, class SimModelTSC6 * pModel /* r31 */) {
     // Local variables
     class CachedSimData simCache; // r1+0x8
 }
 
 // Range: 0x80244DAC -> 0x80244E60
-void SimCache::ClearSimCache(class SimCache * const this /* r29 */) {
+// this: r29
+void SimCache::ClearSimCache() {
     // Local variables
     class EAutoMutex pcmut; // r1+0x8
     class CachedSimData * iter; // r31
@@ -67,7 +75,8 @@ void SimCache::ClearSimCache(class SimCache * const this /* r29 */) {
 }
 
 // Range: 0x80244E60 -> 0x80244F44
-void SimCache::ClearOneSimFromCache(class SimCache * const this /* r28 */, unsigned int guid /* r29 */) {
+// this: r28
+void SimCache::ClearOneSimFromCache(unsigned int guid /* r29 */) {
     // Local variables
     class EAutoMutex pcmut; // r1+0x8
     class CachedSimData * iter; // r31
@@ -76,7 +85,8 @@ void SimCache::ClearOneSimFromCache(class SimCache * const this /* r28 */, unsig
 }
 
 // Range: 0x80244F44 -> 0x80244FF0
-void SimCache::TransferModelToCache(class SimCache * const this /* r29 */, unsigned int guid /* r30 */, class SimModelTSC6 * pModel /* r31 */) {
+// this: r29
+void SimCache::TransferModelToCache(unsigned int guid /* r30 */, class SimModelTSC6 * pModel /* r31 */) {
     // Local variables
     class EAutoMutex pcmut; // r1+0x8
     int size; // r0
@@ -84,7 +94,8 @@ void SimCache::TransferModelToCache(class SimCache * const this /* r29 */, unsig
 }
 
 // Range: 0x80244FF0 -> 0x80245108
-void SimCache::ForceFillSimCache(class SimCache * const this /* r27 */) {
+// this: r27
+void SimCache::ForceFillSimCache() {
     // Local variables
     class NeighborList * pNeighbours; // r30
     class Neighbor * * i; // r29

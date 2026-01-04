@@ -5,19 +5,22 @@
     Code range: 0x8016EDD8 -> 0x80170C6C
 */
 // Range: 0x8016EDD8 -> 0x8016EE60
-void InLevelBaseState::Reset(class InLevelBaseState * const this /* r30 */) {
+// this: r30
+void InLevelBaseState::Reset() {
     // References
     // -> class GameData _gd;
 }
 
 // Range: 0x8016EE60 -> 0x8016EEF4
-void InLevelBaseState::Shutdown(class InLevelBaseState * const this /* r30 */) {
+// this: r30
+void InLevelBaseState::Shutdown() {
     // References
     // -> class GameData _gd;
 }
 
 // Range: 0x8016EEF4 -> 0x801707B0
-void InLevelBaseState::Update(class InLevelBaseState * const this /* r29 */) {
+// this: r29
+void InLevelBaseState::Update() {
     // Local variables
     int callStateResult; // r0
     enum eGameState flowstaterequest; // r28
@@ -47,7 +50,8 @@ void InLevelBaseState::HandleFlowToIngameDialog() {
 }
 
 // Range: 0x80170808 -> 0x8017092C
-void InLevelBaseState::HandleExitToMainMenu(class InLevelBaseState * const this /* r31 */) {
+// this: r31
+void InLevelBaseState::HandleExitToMainMenu() {
     // References
     // -> class GameData _gd;
 }
@@ -69,13 +73,15 @@ void InLevelBaseState::SavePlayerInteractorState() {
 }
 
 // Range: 0x801709D8 -> 0x80170A6C
-void * InLevelBaseState::InLevelBaseState(class InLevelBaseState * const this /* r31 */) {
+// this: r31
+InLevelBaseState::InLevelBaseState() {
     // References
     // -> struct [anonymous] __vt__16InLevelBaseState;
 }
 
 // Range: 0x80170A6C -> 0x80170C6C
-void * InLevelBaseState::~InLevelBaseState(class InLevelBaseState * const this /* r29 */) {
+// this: r29
+InLevelBaseState::~InLevelBaseState() {
     // References
     // -> struct [anonymous] __vt__16InLevelBaseState;
 }

@@ -13,28 +13,20 @@ int kPreComputedTableSize; // size: 0x4, address: 0x805DEDC8
 unsigned int gPrecomputedRand32Table[128]; // size: 0x200, address: 0x804F95E0
 static float kSinCosTable[20][4]; // size: 0x140, address: 0x8041CAA0
 static const float (* s_pSinCosTable)[4]; // size: 0x4, address: 0x805DA318
-class MotionBlurNGC : public MotionBlur {
-    // total size: 0x38
-};
-class BloomNGC : public Bloom {
-    // total size: 0x98
-};
-class DepthOfFieldNGC : public DepthOfField {
-    // total size: 0x50
-};
-struct {
-    // total size: 0x20
-} __vt__15DepthOfFieldNGC; // size: 0x20, address: 0x80453E88
-struct {
-    // total size: 0x20
-} __vt__8BloomNGC; // size: 0x20, address: 0x80453EA8
-struct {
-    // total size: 0x20
-} __vt__13MotionBlurNGC; // size: 0x20, address: 0x80453EC8
-struct {
-    // total size: 0x20
-} __vt__11FrameEffect; // size: 0x20, address: 0x80453EE8
-struct {
-    // total size: 0x1C
-} __vt__Q27Effects6Effect; // size: 0x1C, address: 0x80453F08
+// total size: 0x38
+class MotionBlurNGC : public MotionBlur {};
+// total size: 0x98
+class BloomNGC : public Bloom {};
+// total size: 0x50
+class DepthOfFieldNGC : public DepthOfField {};
+// total size: 0x20
+struct {} __vt__15DepthOfFieldNGC; // size: 0x20, address: 0x80453E88
+// total size: 0x20
+struct {} __vt__8BloomNGC; // size: 0x20, address: 0x80453EA8
+// total size: 0x20
+struct {} __vt__13MotionBlurNGC; // size: 0x20, address: 0x80453EC8
+// total size: 0x20
+struct {} __vt__11FrameEffect; // size: 0x20, address: 0x80453EE8
+// total size: 0x1C
+struct {} __vt__Q27Effects6Effect; // size: 0x1C, address: 0x80453F08
 

@@ -12,12 +12,6 @@ unsigned char StateMachineFlow::IsFlowRequestPending() {
 }
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\target\game\statemachine\statemachineflow.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x8009B1BC -> 0x8009B1C4
-*/
 // Range: 0x8009B1BC -> 0x8009B1C4
 void StateMachineFlow::SetFlowRequest() {
     // References
@@ -25,12 +19,6 @@ void StateMachineFlow::SetFlowRequest() {
 }
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\target\game\statemachine\statemachineflow.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x8016E42C -> 0x8016E450
-*/
 // Range: 0x8016E42C -> 0x8016E440
 void StateMachineFlow::AcceptFlowRequest() {
     // References

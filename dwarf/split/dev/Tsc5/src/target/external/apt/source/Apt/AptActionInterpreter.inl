@@ -14,12 +14,6 @@ class AptValue * AptActionInterpreter::stackAt() {}
 void AptActionInterpreter::stackPush() {}
 
 
-/*
-    Compile unit: C:\dev\Tsc5\src\target\external\apt\source\Apt\AptActionInterpreter.inl
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x8030D3A8 -> 0x8030D44C
-*/
 // Range: 0x8030D3A8 -> 0x8030D3AC
 void AptActionInterpreter::stackSafePop() {}
 
@@ -36,7 +30,8 @@ void AptActionInterpreter::stackPop() {}
 void AptActionInterpreter::stackPopAndPush() {}
 
 // Range: 0x8030D3BC -> 0x8030D44C
-void AptActionInterpreter::stackPushIndirect(struct AptActionInterpreter * const this /* r30 */, class AptValue * const pValue /* r31 */) {
+// this: r30
+void AptActionInterpreter::stackPushIndirect(class AptValue * const pValue /* r31 */) {
     // Local variables
     class AptValue * pPushValue; // [invalid]
     int iRegNum; // r0

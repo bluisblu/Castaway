@@ -30,7 +30,8 @@ unsigned int GetTutorialLocks() {
 }
 
 // Range: 0x801CB4DC -> 0x801CB6DC
-void * HUDTarget::HUDTarget(class HUDTarget * const this /* r29 */) {
+// this: r29
+HUDTarget::HUDTarget() {
     // References
     // -> class GameData _gd;
     // -> class ERFont * m_pFont;
@@ -40,14 +41,16 @@ void * HUDTarget::HUDTarget(class HUDTarget * const this /* r29 */) {
 }
 
 // Range: 0x801CB6DC -> 0x801CB7A0
-void * HUDTarget::~HUDTarget(class HUDTarget * const this /* r30 */) {
+// this: r30
+HUDTarget::~HUDTarget() {
     // References
     // -> class GameData _gd;
     // -> struct [anonymous] __vt__9HUDTarget;
 }
 
 // Range: 0x801CB7A0 -> 0x801CB814
-void HUDTarget::AttachControllers(class HUDTarget * const this /* r30 */) {
+// this: r30
+void HUDTarget::AttachControllers() {
     // Local variables
     class EController * pController0; // r31
 
@@ -56,7 +59,8 @@ void HUDTarget::AttachControllers(class HUDTarget * const this /* r30 */) {
 }
 
 // Range: 0x801CB814 -> 0x801CB86C
-void HUDTarget::ReleaseControllers(class HUDTarget * const this /* r31 */) {
+// this: r31
+void HUDTarget::ReleaseControllers() {
     // Local variables
     class EController * pController0; // r0
 
@@ -68,7 +72,8 @@ void HUDTarget::ReleaseControllers(class HUDTarget * const this /* r31 */) {
 void HUDTarget::SetVariable() {}
 
 // Range: 0x801CB870 -> 0x801CBA28
-void HUDTarget::SetPlayerVariable(class HUDTarget * const this /* r28 */, const char * szCommand /* r29 */, const char * szParams /* r30 */) {
+// this: r28
+void HUDTarget::SetPlayerVariable(const char * szCommand /* r29 */, const char * szParams /* r30 */) {
     // Local variables
     unsigned int newState; // r0
 }
@@ -77,7 +82,8 @@ void HUDTarget::SetPlayerVariable(class HUDTarget * const this /* r28 */, const 
 char * HUDTarget::GetVariable() {}
 
 // Range: 0x801CBA2C -> 0x801CBBFC
-char * HUDTarget::GetPlayerVariable(class HUDTarget * const this /* r28 */, const char * szVar /* r29 */) {
+// this: r28
+char * HUDTarget::GetPlayerVariable(const char * szVar /* r29 */) {
     // Local variables
     char * retStr; // r30
 
@@ -89,7 +95,8 @@ char * HUDTarget::GetPlayerVariable(class HUDTarget * const this /* r28 */, cons
 unsigned short * HUDTarget::GetLocalizable() {}
 
 // Range: 0x801CBC00 -> 0x801CBE18
-unsigned short * HUDTarget::GetPlayerLocalizable(class HUDTarget * const this /* r28 */, const char * szVar /* r29 */) {
+// this: r28
+unsigned short * HUDTarget::GetPlayerLocalizable(const char * szVar /* r29 */) {
     // Local variables
     unsigned short * wideStr; // r30
     const char * houseName; // r29
@@ -101,13 +108,15 @@ unsigned short * HUDTarget::GetPlayerLocalizable(class HUDTarget * const this /*
 }
 
 // Range: 0x801CBE18 -> 0x801CBE90
-void HUDTarget::ShowHUD(class HUDTarget * const this /* r31 */) {
+// this: r31
+void HUDTarget::ShowHUD() {
     // References
     // -> class AptViewer * _gpAptViewer;
 }
 
 // Range: 0x801CBE90 -> 0x801CBF00
-void HUDTarget::HideHUD(const class HUDTarget * const this /* r31 */) {
+// this: r31
+void HUDTarget::HideHUD() const {
     // References
     // -> class AptViewer * _gpAptViewer;
 }
@@ -119,7 +128,8 @@ void HUDTarget::OnPlayerHUDShow() {}
 void HUDTarget::OnPlayerHUDHide() {}
 
 // Range: 0x801CBF1C -> 0x801CBF80
-void HUDTarget::OnPlayerHUDHideStart(class HUDTarget * const this /* r31 */) {}
+// this: r31
+void HUDTarget::OnPlayerHUDHideStart() {}
 
 // Range: 0x801CBF80 -> 0x801CBF84
 void HUDTarget::OnHUDShow() {}
@@ -131,13 +141,15 @@ void HUDTarget::OnHUDHideStart() {}
 void HUDTarget::OnHUDHide() {}
 
 // Range: 0x801CBF8C -> 0x801CC038
-void HUDTarget::InstallHUDIcons(class HUDTarget * const this /* r30 */) {
+// this: r30
+void HUDTarget::InstallHUDIcons() {
     // References
     // -> static char * s_strMeterIcons[5];
 }
 
 // Range: 0x801CC038 -> 0x801CC128
-unsigned char HUDTarget::ShouldHUDBeVisible(const class HUDTarget * const this /* r30 */) {
+// this: r30
+unsigned char HUDTarget::ShouldHUDBeVisible() const {
     // References
     // -> class EGlobal _globals;
     // -> class GameData _gd;
@@ -153,7 +165,8 @@ void HUDTarget::UpdateTutorialLocks() {
 }
 
 // Range: 0x801CC15C -> 0x801CC1A8
-void HUDTarget::Update(class HUDTarget * const this /* r31 */) {}
+// this: r31
+void HUDTarget::Update() {}
 
 // Range: 0x801CC1A8 -> 0x801CC274
 void HUDTarget::UpdateClock() {
@@ -169,13 +182,16 @@ void HUDTarget::UpdateActivePlayer() {
 }
 
 // Range: 0x801CC290 -> 0x801CC300
-void HUDTarget::AddMenu(class HUDTarget * const this /* r27 */, class cXObject * pObj /* r28 */, const class BString2 & strName /* r29 */, unsigned int shaderID /* r30 */, class ERShader * pShader /* r31 */) {}
+// this: r27
+void HUDTarget::AddMenu(class cXObject * pObj /* r28 */, const class BString2 & strName /* r29 */, unsigned int shaderID /* r30 */, class ERShader * pShader /* r31 */) {}
 
 // Range: 0x801CC300 -> 0x801CC380
-void HUDTarget::AddMenuItem(const class HUDTarget * const this /* r25 */, class cXObject * pObj /* r26 */, class Interaction * pAction /* r27 */, const class BString2 & strName /* r28 */, unsigned int shaderID /* r29 */, class ERShader * pShader /* r30 */, unsigned char bDisabled /* r31 */) {}
+// this: r25
+void HUDTarget::AddMenuItem(class cXObject * pObj /* r26 */, class Interaction * pAction /* r27 */, const class BString2 & strName /* r28 */, unsigned int shaderID /* r29 */, class ERShader * pShader /* r30 */, unsigned char bDisabled /* r31 */) const {}
 
 // Range: 0x801CC380 -> 0x801CC3D4
-void HUDTarget::NotifyMenuRemoveObj(class HUDTarget * const this /* r31 */) {}
+// this: r31
+void HUDTarget::NotifyMenuRemoveObj() {}
 
 // Range: 0x801CC3D4 -> 0x801CC3E8
 void HUDTarget::NotifyLotEndOccured() {}
@@ -184,16 +200,19 @@ void HUDTarget::NotifyLotEndOccured() {}
 void HUDTarget::NotifyLotStartOccured() {}
 
 // Range: 0x801CC3FC -> 0x801CC444
-void HUDTarget::CompleteMenu(class HUDTarget * const this /* r31 */) {}
+// this: r31
+void HUDTarget::CompleteMenu() {}
 
 // Range: 0x801CC444 -> 0x801CC4A8
-unsigned char HUDTarget::ShowMenu(class HUDTarget * const this /* r30 */, unsigned char dcObjectChange /* r31 */) {
+// this: r30
+unsigned char HUDTarget::ShowMenu(unsigned char dcObjectChange /* r31 */) {
     // Local variables
     unsigned char rc; // r4
 }
 
 // Range: 0x801CC4A8 -> 0x801CC52C
-unsigned char HUDTarget::IsMenuAvailable(const class HUDTarget * const this /* r30 */) {
+// this: r30
+unsigned char HUDTarget::IsMenuAvailable() const {
     // Local variables
     unsigned char rc; // r31
 }
@@ -202,7 +221,8 @@ unsigned char HUDTarget::IsMenuAvailable(const class HUDTarget * const this /* r
 void HUDTarget::CloseMenu() {}
 
 // Range: 0x801CC544 -> 0x801CC614
-unsigned char HUDTarget::RequestHUD(class HUDTarget * const this /* r31 */) {
+// this: r31
+unsigned char HUDTarget::RequestHUD() {
     // Local variables
     char strPlayerNum[8]; // r1+0x10
     char strHudMode[8]; // r1+0x8
@@ -221,7 +241,8 @@ unsigned char HUDTarget::RemoveHUDControl() {}
 unsigned char HUDTarget::ManageHUD() {}
 
 // Range: 0x801CC6CC -> 0x801CC778
-unsigned char HUDTarget::ApplyMotiveCurveArray(class HUDTarget * const this /* r29 */, unsigned int namespaceID /* r30 */, signed short curveTable /* r31 */) {}
+// this: r29
+unsigned char HUDTarget::ApplyMotiveCurveArray(unsigned int namespaceID /* r30 */, signed short curveTable /* r31 */) {}
 
 // Range: 0x801CC778 -> 0x801CC788
 void HUDTarget::GotoMainMenu() {}

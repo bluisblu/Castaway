@@ -14,13 +14,15 @@ class StringSet * StringSet::CreateInstance() {}
 void StringSet::DestroyInstance() {}
 
 // Range: 0x80169BF8 -> 0x80169C50
-void * QuickStringSet::QuickStringSet(class QuickStringSet * const this /* r31 */) {
+// this: r31
+QuickStringSet::QuickStringSet() {
     // References
     // -> unsigned short * s_nullPointer;
     // -> struct [anonymous] __vt__14QuickStringSet;
 }
 
 // Range: 0x80169C50 -> 0x80169CA8
-void * QuickStringSet::~QuickStringSet(class QuickStringSet * const this /* r30 */) {}
+// this: r30
+QuickStringSet::~QuickStringSet() {}
 
 

@@ -32,12 +32,6 @@ struct EPropItem * * uninitialized_copy_ptr(struct EPropItem * * first /* r1+0x8
 class generic_iterator uninitialized_copy_impl() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\common\EASTL\1.03.00\include\EASTL\memory.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x8004DAC4 -> 0x8004DDA0
-*/
 // Range: 0x8004DAC4 -> 0x8004DB6C
 struct ClothingSetIndexInfo * uninitialized_copy_ptr(struct ClothingSetIndexInfo * first /* r1+0x8 */, struct ClothingSetIndexInfo * last /* r1+0xC */, struct ClothingSetIndexInfo * result /* r1+0x10 */) {
     // Local variables
@@ -66,12 +60,6 @@ void uninitialized_fill_n_ptr(class CasListener * * first /* r1+0x8 */, unsigned
 void uninitialized_fill_n_impl() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\common\EASTL\1.03.00\include\EASTL\memory.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x8006B8C4 -> 0x8006D4DC
-*/
 // Range: 0x8006B8C4 -> 0x8006B96C
 class EOrderTableData * uninitialized_copy_ptr(class EOrderTableData * first /* r1+0x8 */, class EOrderTableData * last /* r1+0xC */, class EOrderTableData * result /* r1+0x10 */) {
     // Local variables
@@ -334,12 +322,6 @@ class generic_iterator uninitialized_copy_impl(class generic_iterator & first /*
 }
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\common\EASTL\1.03.00\include\EASTL\memory.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x8009B1C4 -> 0x8009B400
-*/
 // Range: 0x8009B1C4 -> 0x8009B26C
 class EMidLotInstance * * uninitialized_copy_ptr(class EMidLotInstance * * first /* r1+0x8 */, class EMidLotInstance * * last /* r1+0xC */, class EMidLotInstance * * result /* r1+0x10 */) {
     // Local variables
@@ -362,12 +344,6 @@ class generic_iterator uninitialized_copy_impl(class generic_iterator & first /*
 }
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\common\EASTL\1.03.00\include\EASTL\memory.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x8009F334 -> 0x8009F50C
-*/
 // Range: 0x8009F334 -> 0x8009F3DC
 class PaneItem * * uninitialized_copy_ptr(class PaneItem * * first /* r1+0x8 */, class PaneItem * * last /* r1+0xC */, class PaneItem * * result /* r1+0x10 */) {
     // Local variables
@@ -387,12 +363,6 @@ class WrapperPaneBase * * uninitialized_copy_ptr(class WrapperPaneBase * * first
 class generic_iterator uninitialized_copy_impl() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\common\EASTL\1.03.00\include\EASTL\memory.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x800B32CC -> 0x800B56A4
-*/
 // Range: 0x800B32CC -> 0x800B3374
 struct TilePt * uninitialized_copy_ptr(struct TilePt * first /* r1+0x8 */, struct TilePt * last /* r1+0xC */, struct TilePt * result /* r1+0x10 */) {
     // Local variables
@@ -724,12 +694,6 @@ void uninitialized_fill_n_impl(class generic_iterator & first /* r0 */, unsigned
 }
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\common\EASTL\1.03.00\include\EASTL\memory.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x800FDB78 -> 0x800FF3E0
-*/
 // Range: 0x800FDB78 -> 0x800FDC20
 class ObjectDataBehaviorTree * * uninitialized_copy_ptr(class ObjectDataBehaviorTree * * first /* r1+0x8 */, class ObjectDataBehaviorTree * * last /* r1+0xC */, class ObjectDataBehaviorTree * * result /* r1+0x10 */) {
     // Local variables
@@ -962,12 +926,6 @@ void uninitialized_fill_n_ptr(class Neighbor * * first /* r1+0x8 */, unsigned lo
 void uninitialized_fill_n_impl() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\common\EASTL\1.03.00\include\EASTL\memory.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x80164040 -> 0x801644C8
-*/
 // Range: 0x80164040 -> 0x801640B4
 void uninitialized_fill_n_ptr(class ConsoleAutoRefCount * first /* r1+0x8 */, unsigned long n /* r29 */, const class ConsoleAutoRefCount & value /* r30 */) {}
 
@@ -1011,12 +969,6 @@ class generic_iterator uninitialized_copy_impl(class generic_iterator & first /*
 }
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\common\EASTL\1.03.00\include\EASTL\memory.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x8016D4CC -> 0x8016D830
-*/
 // Range: 0x8016D4CC -> 0x8016D574
 class StateMachineState * * uninitialized_copy_ptr(class StateMachineState * * first /* r1+0x8 */, class StateMachineState * * last /* r1+0xC */, class StateMachineState * * result /* r1+0x10 */) {
     // Local variables
@@ -1051,12 +1003,6 @@ class StateMachineStatus * * uninitialized_copy_ptr(class StateMachineStatus * *
 class generic_iterator uninitialized_copy_impl() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\common\EASTL\1.03.00\include\EASTL\memory.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x8019AA4C -> 0x8019AC10
-*/
 // Range: 0x8019AA4C -> 0x8019AAF4
 struct CASUIScreenState * uninitialized_copy_ptr(struct CASUIScreenState * first /* r1+0x8 */, struct CASUIScreenState * last /* r1+0xC */, struct CASUIScreenState * result /* r1+0x10 */) {
     // Local variables
@@ -1070,12 +1016,6 @@ class generic_iterator uninitialized_copy_impl(class generic_iterator & first /*
 }
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\common\EASTL\1.03.00\include\EASTL\memory.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x801F60CC -> 0x801F62AC
-*/
 // Range: 0x801F60CC -> 0x801F6174
 struct KFTRecord * * uninitialized_copy_ptr(struct KFTRecord * * first /* r1+0x8 */, struct KFTRecord * * last /* r1+0xC */, struct KFTRecord * * result /* r1+0x10 */) {
     // Local variables
@@ -1095,12 +1035,6 @@ void uninitialized_fill_n_impl(class generic_iterator & first /* r0 */, unsigned
 }
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\common\EASTL\1.03.00\include\EASTL\memory.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x8020073C -> 0x80200BBC
-*/
 // Range: 0x8020073C -> 0x802007E4
 struct AptAuxIDToChar * uninitialized_copy_ptr(struct AptAuxIDToChar * first /* r1+0x8 */, struct AptAuxIDToChar * last /* r1+0xC */, struct AptAuxIDToChar * result /* r1+0x10 */) {
     // Local variables
@@ -1144,12 +1078,6 @@ class ENeighborhoodCustomChar * * uninitialized_copy_ptr(class ENeighborhoodCust
 class generic_iterator uninitialized_copy_impl() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\common\EASTL\1.03.00\include\EASTL\memory.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x8024D798 -> 0x8024DA38
-*/
 // Range: 0x8024D798 -> 0x8024D840
 struct DamageEvent * uninitialized_copy_ptr(struct DamageEvent * first /* r1+0x8 */, struct DamageEvent * last /* r1+0xC */, struct DamageEvent * result /* r1+0x10 */) {
     // Local variables
@@ -1175,12 +1103,6 @@ class generic_iterator uninitialized_copy_impl(class generic_iterator & first /*
 }
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\common\EASTL\1.03.00\include\EASTL\memory.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x802EB9DC -> 0x802EBD80
-*/
 // Range: 0x802EB9DC -> 0x802EBB30
 void uninitialized_fill_n_impl(unsigned long n /* r29 */, const class ERAmbientSound & value /* r30 */) {}
 

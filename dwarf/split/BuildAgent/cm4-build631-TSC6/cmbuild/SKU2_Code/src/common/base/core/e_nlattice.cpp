@@ -5,7 +5,8 @@
     Code range: 0x80266D50 -> 0x80268770
 */
 // Range: 0x80266D50 -> 0x80266E2C
-void * ENLattice::~ENLattice(class ENLattice * const this /* r27 */) {
+// this: r27
+ENLattice::~ENLattice() {
     // Local variables
     int nSize; // r30
     int i; // r29
@@ -16,7 +17,8 @@ void * ENLattice::~ENLattice(class ENLattice * const this /* r27 */) {
 }
 
 // Range: 0x80266E2C -> 0x802670D4
-void ENLattice::Write(class ENLattice * const this /* r30 */, class EStream & s /* r31 */) {
+// this: r30
+void ENLattice::Write(class EStream & s /* r31 */) {
     // Local variables
     int numProcessControlPoints; // r26
     int i; // r25
@@ -26,7 +28,8 @@ void ENLattice::Write(class ENLattice * const this /* r30 */, class EStream & s 
 }
 
 // Range: 0x802670D4 -> 0x80267388
-void ENLattice::Read(class ENLattice * const this /* r29 */, class EStream & s /* r30 */) {
+// this: r29
+void ENLattice::Read(class EStream & s /* r30 */) {
     // Local variables
     int nVersion; // r1+0xC
     int i; // r31
@@ -39,7 +42,8 @@ void ENLattice::Read(class ENLattice * const this /* r29 */, class EStream & s /
 }
 
 // Range: 0x80267388 -> 0x802674E8
-void ENLattice::ProcessControlPoints(class ENLattice * const this /* r26 */) {
+// this: r26
+void ENLattice::ProcessControlPoints() {
     // Local variables
     int nSize; // r28
     int i; // r29
@@ -51,7 +55,8 @@ void ENLattice::ProcessControlPoints(class ENLattice * const this /* r26 */) {
 }
 
 // Range: 0x802674E8 -> 0x80268770
-class EVec3 ENLattice::GetProcessPoint(class EVec3 * p /* r23 */, class ENLattice * const this /* r24 */, int i /* r25 */, int x /* r26 */, int y /* r27 */, int z /* r28 */) {
+// this: r23
+class EVec3 ENLattice::GetProcessPoint(class ENLattice * const this /* r24 */, int i /* r25 */, int x /* r26 */, int y /* r27 */, int z /* r28 */) {
     // Local variables
     int xx; // r31
     int yy; // r30

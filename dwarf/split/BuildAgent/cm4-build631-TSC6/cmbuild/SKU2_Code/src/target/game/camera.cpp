@@ -48,7 +48,8 @@ static void HandleEffectNote(const struct EAnimNote & event /* r31 */) {
 static unsigned char IsNaN(const class EVec2 & vec /* r30 */) {}
 
 // Range: 0x802066C0 -> 0x80206ABC
-void * SimsCameraParameters::SimsCameraParameters(class SimsCameraParameters * const this /* r29 */) {
+// this: r29
+SimsCameraParameters::SimsCameraParameters() {
     // References
     // -> float kMaximumTilt;
     // -> float kMinimumTilt;
@@ -60,10 +61,12 @@ void * SimsCameraParameters::SimsCameraParameters(class SimsCameraParameters * c
 }
 
 // Range: 0x80206ABC -> 0x80206AFC
-void * SimsCameraParameters::~SimsCameraParameters(class SimsCameraParameters * const this /* r31 */) {}
+// this: r31
+SimsCameraParameters::~SimsCameraParameters() {}
 
 // Range: 0x80206AFC -> 0x80206B7C
-void SimsCameraParameters::Validate(class SimsCameraParameters * const this /* r31 */) {
+// this: r31
+void SimsCameraParameters::Validate() {
     // References
     // -> float kHomeLotPetCamMaxZoom;
     // -> float kHomeLotSimCamMaxZoom;
@@ -85,34 +88,39 @@ float SimsCameraParameters::GetMaxTilt() {}
 float SimsCameraParameters::GetLookatHeight() {}
 
 // Range: 0x80206C08 -> 0x80206E18
-void * ESimsCam::ESimsCam(class ESimsCam * const this /* r29 */) {
+// this: r29
+ESimsCam::ESimsCam() {
     // References
     // -> class SimsCameraParameters s_params;
     // -> struct [anonymous] __vt__8ESimsCam;
 }
 
 // Range: 0x80206E18 -> 0x80206EB4
-void * ESimsCam::~ESimsCam(class ESimsCam * const this /* r30 */) {
+// this: r30
+ESimsCam::~ESimsCam() {
     // References
     // -> struct [anonymous] __vt__8ESimsCam;
 }
 
 // Range: 0x80206EB4 -> 0x80206F40
-float ESimsCam::GetCurZoomRatio(const class ESimsCam * const this /* r31 */) {
+// this: r31
+float ESimsCam::GetCurZoomRatio() const {
     // Local variables
     float dz; // f31
     float mu; // f0
 }
 
 // Range: 0x80206F40 -> 0x80206FCC
-float ESimsCam::GetActualZoomRatio(const class ESimsCam * const this /* r31 */) {
+// this: r31
+float ESimsCam::GetActualZoomRatio() const {
     // Local variables
     float dz; // f31
     float mu; // f0
 }
 
 // Range: 0x80206FCC -> 0x80207198
-float ESimsCam::GetNearPlane(class ESimsCam * const this /* r28 */) {
+// this: r28
+float ESimsCam::GetNearPlane() {
     // Local variables
     float minZoomNearPlane; // f29
     class SAnimator2 * sAnimator; // r30
@@ -137,21 +145,24 @@ void ESimsCam::SetTarget() {}
 float ESimsCam::GetFarPlane() {}
 
 // Range: 0x802071B0 -> 0x802071FC
-float ESimsCam::GetFov(class ESimsCam * const this /* r31 */) {
+// this: r31
+float ESimsCam::GetFov() {
     // Local variables
     float zoom; // f0
     float fov; // f1
 }
 
 // Range: 0x802071FC -> 0x802072A4
-void ESimsCam::SetFov(class ESimsCam * const this /* r31 */, float fov /* f29 */) {
+// this: r31
+void ESimsCam::SetFov(float fov /* f29 */) {
     // Local variables
     float dz; // f31
     float df; // f30
 }
 
 // Range: 0x802072A4 -> 0x802072F8
-void ESimsCam::ForceFullScreenViewport(class ESimsCam * const this /* r31 */) {}
+// this: r31
+void ESimsCam::ForceFullScreenViewport() {}
 
 // Range: 0x802072F8 -> 0x8020731C
 void ESimsCam::Init() {
@@ -160,7 +171,8 @@ void ESimsCam::Init() {
 }
 
 // Range: 0x8020731C -> 0x80207434
-void ESimsCam::Reset(class ESimsCam * const this /* r29 */) {
+// this: r29
+void ESimsCam::Reset() {
     // Local variables
     class SimsCameraParameters default_params; // r1+0x8
     unsigned int i; // r30
@@ -173,16 +185,19 @@ void ESimsCam::Reset(class ESimsCam * const this /* r29 */) {
 }
 
 // Range: 0x80207434 -> 0x802074C4
-void ESimsCam::SetState(class ESimsCam * const this /* r31 */) {}
+// this: r31
+void ESimsCam::SetState() {}
 
 // Range: 0x802074C4 -> 0x80207530
-void ESimsCam::SetMode(class ESimsCam * const this /* r30 */, enum CameraMode newmode /* r31 */) {
+// this: r30
+void ESimsCam::SetMode(enum CameraMode newmode /* r31 */) {
     // References
     // -> class EGlobal _globals;
 }
 
 // Range: 0x80207530 -> 0x802077D0
-void ESimsCam::FollowPlayerInteractor(class ESimsCam * const this /* r27 */) {
+// this: r27
+void ESimsCam::FollowPlayerInteractor() {
     // Local variables
     float elevation; // r1+0xC
     class Interactor * pInteractor; // r0
@@ -207,7 +222,8 @@ void ESimsCam::FollowPlayerInteractor(class ESimsCam * const this /* r27 */) {
 }
 
 // Range: 0x802077D0 -> 0x80207A84
-void ESimsCam::Update(class ESimsCam * const this /* r31 */) {
+// this: r31
+void ESimsCam::Update() {
     // Local variables
     class SAnimator2 * animator; // r30
     class EVec3 vUp; // r1+0x8
@@ -227,7 +243,8 @@ void ESimsCam::ApplyPan() {}
 static void WrapAngle() {}
 
 // Range: 0x80207AC8 -> 0x80207B80
-void ESimsCam::ApplyZoom(class ESimsCam * const this /* r31 */, float zoom /* f30 */) {
+// this: r31
+void ESimsCam::ApplyZoom(float zoom /* f30 */) {
     // Local variables
     float maxZFact; // f31
 }
@@ -239,14 +256,16 @@ void ESimsCam::SetZoom() {}
 void ESimsCam::SetRotAng() {}
 
 // Range: 0x80207B94 -> 0x80207C60
-void ESimsCam::AlignCameraToWorld(class ESimsCam * const this /* r31 */) {
+// this: r31
+void ESimsCam::AlignCameraToWorld() {
     // Local variables
     float curAngle; // f0
     float newAngle; // f0
 }
 
 // Range: 0x80207C60 -> 0x80207D70
-unsigned char ESimsCam::HandlePlayerRotation(class ESimsCam * const this /* r31 */) {
+// this: r31
+unsigned char ESimsCam::HandlePlayerRotation() {
     // Local variables
     float playerMovementX; // f1
     class EVec3 vTargetToEye; // r1+0x8
@@ -258,7 +277,8 @@ unsigned char ESimsCam::HandlePlayerRotation(class ESimsCam * const this /* r31 
 }
 
 // Range: 0x80207D70 -> 0x80208074
-unsigned char ESimsCam::HandleRotation(class ESimsCam * const this /* r30 */) {
+// this: r30
+unsigned char ESimsCam::HandleRotation() {
     // Local variables
     float cMag; // f31
     float mag; // f30
@@ -282,7 +302,8 @@ unsigned char ESimsCam::HandleRotation(class ESimsCam * const this /* r30 */) {
 static unsigned char IsUsingSocialModeInteractor() {}
 
 // Range: 0x8020807C -> 0x8020818C
-unsigned char ESimsCam::HandleZoom(class ESimsCam * const this /* r31 */) {
+// this: r31
+unsigned char ESimsCam::HandleZoom() {
     // Local variables
     float zoom; // f31
     class EVec3 CursorToEye; // r1+0x2C
@@ -295,7 +316,8 @@ unsigned char ESimsCam::HandleZoom(class ESimsCam * const this /* r31 */) {
 }
 
 // Range: 0x8020818C -> 0x80208630
-void ESimsCam::UpdateWin(class ESimsCam * const this /* r29 */) {
+// this: r29
+void ESimsCam::UpdateWin() {
     // Local variables
     class RoomManager * roomManager; // r30
     class Room * room; // r0
@@ -313,7 +335,8 @@ void ESimsCam::UpdateWin(class ESimsCam * const this /* r29 */) {
 }
 
 // Range: 0x80208630 -> 0x80208768
-void ESimsCam::FindZoomTiltFromHorizontalDistance(class ESimsCam * const this /* r28 */, float dist /* f29 */, float & outZoom /* r29 */, float & outTilt /* r30 */) {
+// this: r28
+void ESimsCam::FindZoomTiltFromHorizontalDistance(float dist /* f29 */, float & outZoom /* r29 */, float & outTilt /* r30 */) {
     // Local variables
     float actualDist; // f0
     float delta; // f30
@@ -333,13 +356,15 @@ float ESimsCam::CalcRegularTiltFromZoom() {
 }
 
 // Range: 0x80208794 -> 0x80208834
-float ESimsCam::CalcTiltFromZoom(const class ESimsCam * const this /* r31 */, float zoom /* f30 */) {
+// this: r31
+float ESimsCam::CalcTiltFromZoom(float zoom /* f30 */) const {
     // Local variables
     float tilt; // f30
 }
 
 // Range: 0x80208834 -> 0x80208A3C
-void ESimsCam::CalcEyePositionRayInteractorMode(class ESimsCam * const this /* r27 */, class EVec3 & vEye /* r28 */, struct CameraParameters & camParams /* r29 */) {
+// this: r27
+void ESimsCam::CalcEyePositionRayInteractorMode(class EVec3 & vEye /* r28 */, struct CameraParameters & camParams /* r29 */) {
     // Local variables
     class EMat4 mRot; // r1+0x78
     float oldEyeHeight; // f30
@@ -353,7 +378,8 @@ void ESimsCam::CalcEyePositionRayInteractorMode(class ESimsCam * const this /* r
 }
 
 // Range: 0x80208A3C -> 0x80208BE8
-void ESimsCam::CalcEyePositionBluePrintMode(class ESimsCam * const this /* r29 */, class EVec3 & vEye /* r30 */, const struct CameraParameters & camParams /* r31 */) {
+// this: r29
+void ESimsCam::CalcEyePositionBluePrintMode(class EVec3 & vEye /* r30 */, const struct CameraParameters & camParams /* r31 */) {
     // Local variables
     class EMat4 mRot; // r1+0xC0
     class EVec3 vEyeToTarg; // r1+0x74
@@ -365,7 +391,8 @@ void ESimsCam::CalcEyePositionBluePrintMode(class ESimsCam * const this /* r29 *
 }
 
 // Range: 0x80208BE8 -> 0x80208D64
-void ESimsCam::CalcEyePosition(const class ESimsCam * const this /* r29 */, class EVec3 & vEye /* r30 */, const struct CameraParameters & camParams /* r31 */) {
+// this: r29
+void ESimsCam::CalcEyePosition(class EVec3 & vEye /* r30 */, const struct CameraParameters & camParams /* r31 */) const {
     // Local variables
     class EMat4 mRot; // r1+0x80
     class EVec3 vEyeToTarg; // r1+0x74
@@ -375,7 +402,8 @@ void ESimsCam::CalcEyePosition(const class ESimsCam * const this /* r29 */, clas
 }
 
 // Range: 0x80208D64 -> 0x80208F3C
-void ESimsCam::CalcAndAdjustEyePosition(class ESimsCam * const this /* r28 */, class EVec3 & vEye /* r29 */, struct CameraParameters & camParams /* r30 */) {
+// this: r28
+void ESimsCam::CalcAndAdjustEyePosition(class EVec3 & vEye /* r29 */, struct CameraParameters & camParams /* r30 */) {
     // Local variables
     class EMat4 mRot; // r1+0x78
     float oldEyeHeight; // f30
@@ -388,7 +416,8 @@ void ESimsCam::CalcAndAdjustEyePosition(class ESimsCam * const this /* r28 */, c
 }
 
 // Range: 0x80208F3C -> 0x80209074
-unsigned char ESimsCam::AdjustEyePositionForNoCameraZone(class ESimsCam * const this /* r28 */, class EVec3 & vEye /* r29 */, class EVec3 & vLookAt /* r30 */, unsigned char bFindLegalPos /* r31 */) {
+// this: r28
+unsigned char ESimsCam::AdjustEyePositionForNoCameraZone(class EVec3 & vEye /* r29 */, class EVec3 & vLookAt /* r30 */, unsigned char bFindLegalPos /* r31 */) {
     // Local variables
     float elevation; // r1+0x8
     float dt; // f0
@@ -408,7 +437,8 @@ static unsigned char InterpolateSmooth(class EVec3 * currVal /* r30 */, const cl
 }
 
 // Range: 0x8020915C -> 0x80209584
-void ESimsCam::FindLegalCameraPosition(class ESimsCam * const this /* r26 */, class EVec3 & vEye /* r28 */, class EVec3 & vLookAt /* r27 */) {
+// this: r26
+void ESimsCam::FindLegalCameraPosition(class EVec3 & vEye /* r28 */, class EVec3 & vLookAt /* r27 */) {
     // Local variables
     class EVec3 vEyeToLookAt; // r1+0x6C
     float hzDistance; // f0
@@ -441,7 +471,8 @@ void ESimsCam::FindLegalCameraPosition(class ESimsCam * const this /* r26 */, cl
 }
 
 // Range: 0x80209584 -> 0x8020972C
-void ESimsCam::UpdateCameraPositionForTerrainDetection(class ESimsCam * const this /* r30 */, struct CameraParameters & camParams /* r31 */) {
+// this: r30
+void ESimsCam::UpdateCameraPositionForTerrainDetection(struct CameraParameters & camParams /* r31 */) {
     // Local variables
     class EMat4 mRot; // r1+0x90
     class EVec3 vEyeToTarg; // r1+0x84
@@ -464,7 +495,8 @@ float ESimsCam::GetZoomBasedHeightOffset() {
 }
 
 // Range: 0x80209788 -> 0x802099D8
-void ESimsCam::InterpolateSmoothCameraHeight(class ESimsCam * const this /* r29 */, class EVec3 & vEye /* r30 */, float oldEyeHeight /* f29 */, struct CameraParameters & camParams /* r31 */) {
+// this: r29
+void ESimsCam::InterpolateSmoothCameraHeight(class EVec3 & vEye /* r30 */, float oldEyeHeight /* f29 */, struct CameraParameters & camParams /* r31 */) {
     // Local variables
     float dt; // f31
     float updatedHeight; // r1+0xC
@@ -488,7 +520,8 @@ void ESimsCam::InterpolateSmoothCameraHeight(class ESimsCam * const this /* r29 
 unsigned char ESimsCam::IsCameraOnWater() {}
 
 // Range: 0x802099F0 -> 0x80209AF0
-unsigned char ESimsCam::IsCameraCloseToGround(class ESimsCam * const this /* r30 */, class EVec3 & pos /* r31 */) {
+// this: r30
+unsigned char ESimsCam::IsCameraCloseToGround(class EVec3 & pos /* r31 */) {
     // Local variables
     float elevation; // r1+0x8
     class EVec3 eyeLoc; // r1+0xC
@@ -499,7 +532,8 @@ unsigned char ESimsCam::IsCameraCloseToGround(class ESimsCam * const this /* r30
 }
 
 // Range: 0x80209AF0 -> 0x80209C48
-void ESimsCam::ResetPos(class ESimsCam * const this /* r30 */) {
+// this: r30
+void ESimsCam::ResetPos() {
     // Local variables
     float degreesRot; // f1
     class Interactor * pInteractor; // r31
@@ -510,7 +544,8 @@ void ESimsCam::ResetPos(class ESimsCam * const this /* r30 */) {
 }
 
 // Range: 0x80209C48 -> 0x80209EA8
-void ESimsCam::FollowSimStiff(class ESimsCam * const this /* r28 */) {
+// this: r28
+void ESimsCam::FollowSimStiff() {
     // Local variables
     class Interactor * pInteractor; // r30
     class EVec2 newSimPos; // r1+0x10
@@ -525,7 +560,8 @@ void ESimsCam::FollowSimStiff(class ESimsCam * const this /* r28 */) {
 }
 
 // Range: 0x80209EA8 -> 0x80209F70
-void ESimsCam::SetTrackSimCameraState(class ESimsCam * const this /* r30 */) {
+// this: r30
+void ESimsCam::SetTrackSimCameraState() {
     // Local variables
     unsigned short flag; // r0
     unsigned char bSimOnWater; // r0
@@ -554,10 +590,12 @@ enum eTrackSimCameraState ESimsCam::GetStateFromFlag() {
 }
 
 // Range: 0x8020A0C0 -> 0x8020A1B0
-void ESimsCam::UpdateTrackSimCameraState(class ESimsCam * const this /* r31 */) {}
+// this: r31
+void ESimsCam::UpdateTrackSimCameraState() {}
 
 // Range: 0x8020A1B0 -> 0x8020A2E8
-void ESimsCam::TransitionToCameraParams(class ESimsCam * const this /* r27 */, enum eCameraParamIdx eCamParamMinIdx /* r31 */, enum eCameraParamIdx eCamParamMaxIdx /* r28 */) {
+// this: r27
+void ESimsCam::TransitionToCameraParams(enum eCameraParamIdx eCamParamMinIdx /* r31 */, enum eCameraParamIdx eCamParamMaxIdx /* r28 */) {
     // Local variables
     float dt; // f0
     unsigned char bMinTilt; // r0
@@ -571,7 +609,8 @@ void ESimsCam::TransitionToCameraParams(class ESimsCam * const this /* r27 */, e
 }
 
 // Range: 0x8020A2E8 -> 0x8020A3AC
-unsigned char ESimsCam::IsInDeadZone(const class ESimsCam * const this /* r29 */, const class EVec3 & pos /* r30 */) {
+// this: r29
+unsigned char ESimsCam::IsInDeadZone(const class EVec3 & pos /* r30 */) const {
     // Local variables
     float deadZoneRadiusSquare; // f0
     class EVec3 dispVec; // r1+0x8
@@ -581,16 +620,20 @@ unsigned char ESimsCam::IsInDeadZone(const class ESimsCam * const this /* r29 */
 static float InterpolateLinear() {}
 
 // Range: 0x8020A3F0 -> 0x8020A45C
-float ESimsCam::CalcTranslationStiffness(const class ESimsCam * const this /* r30 */) {}
+// this: r30
+float ESimsCam::CalcTranslationStiffness() const {}
 
 // Range: 0x8020A45C -> 0x8020A4C8
-float ESimsCam::CalcRotationStiffness(const class ESimsCam * const this /* r30 */) {}
+// this: r30
+float ESimsCam::CalcRotationStiffness() const {}
 
 // Range: 0x8020A4C8 -> 0x8020A534
-float ESimsCam::CalcZoomStiffness(const class ESimsCam * const this /* r30 */) {}
+// this: r30
+float ESimsCam::CalcZoomStiffness() const {}
 
 // Range: 0x8020A534 -> 0x8020A780
-void ESimsCam::InterpolateActualCameraParamsToTarget(class ESimsCam * const this /* r30 */, float deltaTime /* f31 */) {
+// this: r30
+void ESimsCam::InterpolateActualCameraParamsToTarget(float deltaTime /* f31 */) {
     // Local variables
     class EVec2 oldLookAt; // r1+0x18
     class EVec2 newLookAt; // r1+0x10
@@ -600,10 +643,12 @@ void ESimsCam::InterpolateActualCameraParamsToTarget(class ESimsCam * const this
 }
 
 // Range: 0x8020A780 -> 0x8020A790
-void ESimsCam::SnapActualCameraParamsToTarget(class ESimsCam * const this /* r4 */) {}
+// this: r4
+void ESimsCam::SnapActualCameraParamsToTarget() {}
 
 // Range: 0x8020A7C4 -> 0x8020AC7C
-void ESimsCam::CenterOnSelectedSim(class ESimsCam * const this /* r31 */) {
+// this: r31
+void ESimsCam::CenterOnSelectedSim() {
     // Local variables
     class Interactor * pInteractor; // r0
     class EVec3 vPos; // r1+0x48
@@ -628,13 +673,16 @@ void ESimsCam::CenterOnSelectedSim(class ESimsCam * const this /* r31 */) {
 }
 
 // Range: 0x8020AC7C -> 0x8020ACE0
-void ESimsCam::GetPos(const class ESimsCam * const this /* r29 */, class EVec3 & vTargetOut /* r30 */, class EVec3 & vUpOut /* r31 */) {}
+// this: r29
+void ESimsCam::GetPos(class EVec3 & vTargetOut /* r30 */, class EVec3 & vUpOut /* r31 */) const {}
 
 // Range: 0x8020ACE0 -> 0x8020AD50
-void ESimsCam::GetActualParams(const class ESimsCam * const this /* r27 */, class EVec3 & vPosition /* r28 */, float & zoom /* r29 */, float & rot /* r30 */, float & tilt /* r31 */) {}
+// this: r27
+void ESimsCam::GetActualParams(class EVec3 & vPosition /* r28 */, float & zoom /* r29 */, float & rot /* r30 */, float & tilt /* r31 */) const {}
 
 // Range: 0x8020AD50 -> 0x8020AE64
-void ESimsCam::SetPosAndReset(class ESimsCam * const this /* r28 */, const class EVec3 & vEye /* r29 */, const class EVec3 & vTarget /* r30 */, const class EVec3 & vUp /* r31 */) {
+// this: r28
+void ESimsCam::SetPosAndReset(const class EVec3 & vEye /* r29 */, const class EVec3 & vTarget /* r30 */, const class EVec3 & vUp /* r31 */) {
     // Local variables
     class EVec3 vEyeToTarg; // r1+0x14
     float rot; // f31
@@ -643,7 +691,8 @@ void ESimsCam::SetPosAndReset(class ESimsCam * const this /* r28 */, const class
 }
 
 // Range: 0x8020AE64 -> 0x8020AF8C
-void ESimsCam::SetPos(class ESimsCam * const this /* r28 */, const class EVec3 & vEye /* r29 */, const class EVec3 & vTarget /* r30 */, const class EVec3 & vUp /* r31 */) {
+// this: r28
+void ESimsCam::SetPos(const class EVec3 & vEye /* r29 */, const class EVec3 & vTarget /* r30 */, const class EVec3 & vUp /* r31 */) {
     // Local variables
     class EVec3 vEyeToTarg; // r1+0x14
     float pitch; // f0
@@ -653,7 +702,8 @@ void ESimsCam::SetPos(class ESimsCam * const this /* r28 */, const class EVec3 &
 }
 
 // Range: 0x8020AF8C -> 0x8020B0B4
-void ESimsCam::ForcePosition(class ESimsCam * const this /* r28 */, const class EVec3 & vEye /* r29 */, const class EVec3 & vTarget /* r30 */, const class EVec3 & vUp /* r31 */) {
+// this: r28
+void ESimsCam::ForcePosition(const class EVec3 & vEye /* r29 */, const class EVec3 & vTarget /* r30 */, const class EVec3 & vUp /* r31 */) {
     // Local variables
     class EVec3 vEyeToTarg; // r1+0x14
     float pitch; // f0
@@ -663,7 +713,8 @@ void ESimsCam::ForcePosition(class ESimsCam * const this /* r28 */, const class 
 }
 
 // Range: 0x8020B0B4 -> 0x8020B118
-void ESimsCam::ForceTarget(class ESimsCam * const this /* r30 */, const class EVec3 & vTarget /* r31 */) {
+// this: r30
+void ESimsCam::ForceTarget(const class EVec3 & vTarget /* r31 */) {
     // Local variables
     class EVec3 vEye; // r1+0x8
 }
@@ -672,14 +723,16 @@ void ESimsCam::ForceTarget(class ESimsCam * const this /* r30 */, const class EV
 int ESimsCam::PointOffScreen() {}
 
 // Range: 0x8020B130 -> 0x8020B248
-int ESimsCam::PointOutsideScreenRect(class ESimsCam * const this /* r30 */, const class EVec3 & pos /* r31 */, float fLeft /* f28 */, float fTop /* f29 */, float fRight /* f30 */, float fBottom /* f31 */) {
+// this: r30
+int ESimsCam::PointOutsideScreenRect(const class EVec3 & pos /* r31 */, float fLeft /* f28 */, float fTop /* f29 */, float fRight /* f30 */, float fBottom /* f31 */) {
     // Local variables
     class EVec2 vCurScreen; // r1+0x8
     int retval; // r31
 }
 
 // Range: 0x8020B248 -> 0x8020B42C
-void ESimsCam::ValidateCursorPosition(class ESimsCam * const this /* r29 */, class EVec3 * pos /* r30 */) {
+// this: r29
+void ESimsCam::ValidateCursorPosition(class EVec3 * pos /* r30 */) {
     // Local variables
     class EVec3 temp; // r1+0x38
 
@@ -713,7 +766,8 @@ unsigned char ESimsCam::IsManipulatorOnIllegalSpot() {
 }
 
 // Range: 0x8020B69C -> 0x8020BA98
-void ESimsCam::SetWinPos(class ESimsCam * const this /* r29 */, class E3DWindow & win /* r30 */) {
+// this: r29
+void ESimsCam::SetWinPos(class E3DWindow & win /* r30 */) {
     // Local variables
     class EVec3 noiseEye; // r1+0x68
     class EVec3 direction; // r1+0x5C
@@ -751,7 +805,8 @@ float ESimsCam::CalcZAxisTheta() {
 }
 
 // Range: 0x8020BBAC -> 0x8020BCC0
-class EVec3 ESimsCam::GetCursorPos(class EVec3 * pos /* r28 */, class ESimsCam * const this /* r29 */) {
+// this: r28
+class EVec3 ESimsCam::GetCursorPos(class ESimsCam * const this /* r29 */) {
     // Local variables
     class Interactor * pInteractor; // r31
     class InteractorManager * pIM; // r30
@@ -761,14 +816,16 @@ class EVec3 ESimsCam::GetCursorPos(class EVec3 * pos /* r28 */, class ESimsCam *
 }
 
 // Range: 0x8020BCC0 -> 0x8020BD34
-float ESimsCam::GetCursorSpeed(const class ESimsCam * const this /* r31 */) {
+// this: r31
+float ESimsCam::GetCursorSpeed() const {
     // Local variables
     float dz; // f31
     float mu; // f1
 }
 
 // Range: 0x8020BD34 -> 0x8020BDAC
-float ESimsCam::GetCursorLimitTopWidth(const class ESimsCam * const this /* r31 */) {
+// this: r31
+float ESimsCam::GetCursorLimitTopWidth() const {
     // Local variables
     float dz; // f31
     float mu; // f1
@@ -778,7 +835,8 @@ float ESimsCam::GetCursorLimitTopWidth(const class ESimsCam * const this /* r31 
 }
 
 // Range: 0x8020BDAC -> 0x8020BE24
-float ESimsCam::GetCursorLimitDepth(const class ESimsCam * const this /* r31 */) {
+// this: r31
+float ESimsCam::GetCursorLimitDepth() const {
     // Local variables
     float dz; // f31
     float mu; // f1
@@ -811,13 +869,15 @@ unsigned char ESimsCam::CursorNotActive() {
 }
 
 // Range: 0x8020BFD8 -> 0x8020C0EC
-void ESimsCam::SetActiveNoiseSetting(class ESimsCam * const this /* r31 */, enum CameraNoiseSetting noiseSetting /* r30 */) {
+// this: r31
+void ESimsCam::SetActiveNoiseSetting(enum CameraNoiseSetting noiseSetting /* r30 */) {
     // References
     // -> class GameData _gd;
 }
 
 // Range: 0x8020C0EC -> 0x8020C518
-class EVec3 ESimsCam::ApplyNoise(class ESimsCam * const this /* r30 */, const class EVec3 & eye /* r31 */) {
+// this: r30
+class EVec3 ESimsCam::ApplyNoise(const class EVec3 & eye /* r31 */) {
     // Local variables
     int i; // r5
     class EVec3 newPos; // r1+0xBC
@@ -832,10 +892,12 @@ class EVec3 ESimsCam::ApplyNoise(class ESimsCam * const this /* r30 */, const cl
 }
 
 // Range: 0x8020C518 -> 0x8020C560
-void ESimsCam::UpdateStaticCamera(class ESimsCam * const this /* r30 */, const class EVec3 & vLookAt /* r31 */) {}
+// this: r30
+void ESimsCam::UpdateStaticCamera(const class EVec3 & vLookAt /* r31 */) {}
 
 // Range: 0x8020C560 -> 0x8020C818
-void ESimsCam::DrawCameraInfo(class ESimsCam * const this /* r26 */, class ERC * prc /* r27 */) {
+// this: r26
+void ESimsCam::DrawCameraInfo(class ERC * prc /* r27 */) {
     // Local variables
     char displayString[128]; // r1+0x58
 
@@ -850,7 +912,8 @@ unsigned char ESimsCam::SetControllerFilterId() {}
 unsigned char ESimsCam::ClearControllerFilterId() {}
 
 // Range: 0x8020C834 -> 0x8020C978
-float ESimsCam::ReadControllerZoom(class ESimsCam * const this /* r30 */) {
+// this: r30
+float ESimsCam::ReadControllerZoom() {
     // Local variables
     class EController * pCtrl; // r31
     float fRet; // f31
@@ -862,7 +925,8 @@ float ESimsCam::ReadControllerZoom(class ESimsCam * const this /* r30 */) {
 }
 
 // Range: 0x8020C978 -> 0x8020CA2C
-float ESimsCam::ReadControllerRotation(class ESimsCam * const this /* r30 */) {
+// this: r30
+float ESimsCam::ReadControllerRotation() {
     // Local variables
     class EController * pCtrl; // r31
     float fRet; // f31
@@ -873,7 +937,8 @@ float ESimsCam::ReadControllerRotation(class ESimsCam * const this /* r30 */) {
 }
 
 // Range: 0x8020CA2C -> 0x8020CAC8
-float ESimsCam::ReadPlayerControllerRotationX(class ESimsCam * const this /* r31 */) {
+// this: r31
+float ESimsCam::ReadPlayerControllerRotationX() {
     // Local variables
     class EController * pCtrl; // r30
     float fRet; // f31
@@ -891,19 +956,23 @@ struct CameraParameters & ESimsCam::GetDefaultCameraParam() {
 }
 
 // Range: 0x8020CADC -> 0x8020CB8C
-void * CameraDirector::CameraDirector(class CameraDirector * const this /* r31 */) {}
+// this: r31
+CameraDirector::CameraDirector() {}
 
 // Range: 0x8020CB8C -> 0x8020CC1C
-void * CameraDirector::~CameraDirector(class CameraDirector * const this /* r29 */) {}
+// this: r29
+CameraDirector::~CameraDirector() {}
 
 // Range: 0x8020CC1C -> 0x8020CCE4
-void CameraDirector::Reset(class CameraDirector * const this /* r30 */) {}
+// this: r30
+void CameraDirector::Reset() {}
 
 // Range: 0x8020CCE4 -> 0x8020CD0C
 void CameraDirector::RegisterCurrentCamera() {}
 
 // Range: 0x8020CD0C -> 0x8020CE14
-void CameraDirector::InitSimsCamera(class CameraDirector * const this /* r31 */) {
+// this: r31
+void CameraDirector::InitSimsCamera() {
     // Local variables
     class EVec3 simsEye; // r1+0x20
     class EVec3 simsLookAt; // r1+0x14
@@ -911,13 +980,16 @@ void CameraDirector::InitSimsCamera(class CameraDirector * const this /* r31 */)
 }
 
 // Range: 0x8020CE14 -> 0x8020CE74
-void CameraDirector::InitCurrentCamera(class CameraDirector * const this /* r31 */) {}
+// this: r31
+void CameraDirector::InitCurrentCamera() {}
 
 // Range: 0x8020CE74 -> 0x8020CF98
-void CameraDirector::ReleaseCurrentCamera(class CameraDirector * const this /* r30 */) {}
+// this: r30
+void CameraDirector::ReleaseCurrentCamera() {}
 
 // Range: 0x8020CF98 -> 0x8020D01C
-void CameraDirector::DisableControls(class CameraDirector * const this /* r31 */) {
+// this: r31
+void CameraDirector::DisableControls() {
     // Local variables
     class EController * pCtrl; // r0
 
@@ -926,7 +998,8 @@ void CameraDirector::DisableControls(class CameraDirector * const this /* r31 */
 }
 
 // Range: 0x8020D01C -> 0x8020D098
-void CameraDirector::EnableControls(class CameraDirector * const this /* r31 */) {
+// this: r31
+void CameraDirector::EnableControls() {
     // Local variables
     class EController * pCtrl; // r0
 
@@ -935,13 +1008,16 @@ void CameraDirector::EnableControls(class CameraDirector * const this /* r31 */)
 }
 
 // Range: 0x8020D098 -> 0x8020D174
-void CameraDirector::AttachDummy(class CameraDirector * const this /* r29 */, class ENDummy * dummy /* r30 */, class EMat4 * offsetMat /* r31 */) {}
+// this: r29
+void CameraDirector::AttachDummy(class ENDummy * dummy /* r30 */, class EMat4 * offsetMat /* r31 */) {}
 
 // Range: 0x8020D174 -> 0x8020D29C
-void CameraDirector::SetCameraCut(class CameraDirector * const this /* r30 */, class ENCamera * camera /* r31 */) {}
+// this: r30
+void CameraDirector::SetCameraCut(class ENCamera * camera /* r31 */) {}
 
 // Range: 0x8020D29C -> 0x8020D484
-void CameraDirector::SetCameraCutAnim(class CameraDirector * const this /* r30 */, int animResId /* r31 */) {
+// this: r30
+void CameraDirector::SetCameraCutAnim(int animResId /* r31 */) {
     // Local variables
     class EMat4 * animMat; // r3
     class EVec3 simsEye; // r1+0x2C
@@ -951,10 +1027,12 @@ void CameraDirector::SetCameraCutAnim(class CameraDirector * const this /* r30 *
 }
 
 // Range: 0x8020D484 -> 0x8020D5DC
-void CameraDirector::SetCameraInterp(class CameraDirector * const this /* r29 */, class ENCamera * camera /* r30 */, float speed /* f31 */, enum CamDirInterpType interpType /* r31 */) {}
+// this: r29
+void CameraDirector::SetCameraInterp(class ENCamera * camera /* r30 */, float speed /* f31 */, enum CamDirInterpType interpType /* r31 */) {}
 
 // Range: 0x8020D5DC -> 0x8020D6F8
-void CameraDirector::SetCameraInterpAnim(class CameraDirector * const this /* r31 */) {
+// this: r31
+void CameraDirector::SetCameraInterpAnim() {
     // Local variables
     float currZoom; // f0
     class EMat4 simToWorldMat; // r1+0x58
@@ -962,7 +1040,8 @@ void CameraDirector::SetCameraInterpAnim(class CameraDirector * const this /* r3
 }
 
 // Range: 0x8020D6F8 -> 0x8020D8EC
-void CameraDirector::SetUpInterpCamera(class CameraDirector * const this /* r30 */, float speed /* f29 */, enum CamDirInterpType interpType /* r31 */) {
+// this: r30
+void CameraDirector::SetUpInterpCamera(float speed /* f29 */, enum CamDirInterpType interpType /* r31 */) {
     // Local variables
     class EVec3 simsEye; // r1+0x78
     class EVec3 simsLookAt; // r1+0x6C
@@ -982,7 +1061,8 @@ void CameraDirector::SetUpInterpCamera(class CameraDirector * const this /* r30 
 }
 
 // Range: 0x8020D8EC -> 0x8020DA28
-unsigned char CameraDirector::ReleaseToGameCamera(class CameraDirector * const this /* r31 */) {
+// this: r31
+unsigned char CameraDirector::ReleaseToGameCamera() {
     // Local variables
     class EVec3 eye; // r1+0x2C
     class EVec3 target; // r1+0x20
@@ -990,7 +1070,8 @@ unsigned char CameraDirector::ReleaseToGameCamera(class CameraDirector * const t
 }
 
 // Range: 0x8020DA28 -> 0x8020DBA4
-unsigned char CameraDirector::InterpToGameCamera(class CameraDirector * const this /* r31 */) {
+// this: r31
+unsigned char CameraDirector::InterpToGameCamera() {
     // Local variables
     class EVec3 eye; // r1+0x2C
     class EVec3 target; // r1+0x20
@@ -1002,10 +1083,12 @@ unsigned char CameraDirector::InterpToGameCamera(class CameraDirector * const th
 void CameraDirector::SetHoldState() {}
 
 // Range: 0x8020DBB4 -> 0x8020DC58
-unsigned char CameraDirector::InterpToCancelCamera(class CameraDirector * const this /* r29 */, float speed /* f31 */, enum CamDirInterpType interpType /* r30 */, unsigned char recalCancelCam /* r31 */) {}
+// this: r29
+unsigned char CameraDirector::InterpToCancelCamera(float speed /* f31 */, enum CamDirInterpType interpType /* r30 */, unsigned char recalCancelCam /* r31 */) {}
 
 // Range: 0x8020DC58 -> 0x8020DE34
-void CameraDirector::CalcSimsCam(class CameraDirector * const this /* r30 */) {
+// this: r30
+void CameraDirector::CalcSimsCam() {
     // Local variables
     enum CameraDirectorMode oldMode; // r31
     class EVec3 currSimsEye; // r1+0x68
@@ -1024,7 +1107,8 @@ void CameraDirector::CalcSimsCam(class CameraDirector * const this /* r30 */) {
 class FrameEffectsManager * CameraDirector::GetFrameEffectsManager() {}
 
 // Range: 0x8020DE3C -> 0x8020E00C
-void CameraDirector::CalcCancelCam(class CameraDirector * const this /* r31 */) {
+// this: r31
+void CameraDirector::CalcCancelCam() {
     // Local variables
     class EVec3 currSimsEye; // r1+0x68
     class EVec3 currSimsLookAt; // r1+0x5C
@@ -1039,7 +1123,8 @@ void CameraDirector::CalcCancelCam(class CameraDirector * const this /* r31 */) 
 }
 
 // Range: 0x8020E00C -> 0x8020E0D4
-unsigned char CameraDirector::CheckCancelled(class CameraDirector * const this /* r30 */) {
+// this: r30
+unsigned char CameraDirector::CheckCancelled() {
     // Local variables
     class EController * pCtrl; // r31
 
@@ -1048,7 +1133,8 @@ unsigned char CameraDirector::CheckCancelled(class CameraDirector * const this /
 }
 
 // Range: 0x8020E0D4 -> 0x8020E4FC
-unsigned char CameraDirector::Interp(class CameraDirector * const this /* r29 */) {
+// this: r29
+unsigned char CameraDirector::Interp() {
     // Local variables
     float delta; // f31
     float interpFOV; // f29
@@ -1076,7 +1162,8 @@ unsigned char CameraDirector::Interp(class CameraDirector * const this /* r29 */
 }
 
 // Range: 0x8020E4FC -> 0x8020E560
-void CameraDirector::SetFOV(class CameraDirector * const this /* r31 */) {
+// this: r31
+void CameraDirector::SetFOV() {
     // Local variables
     float fovDeg; // f1
 }
@@ -1085,7 +1172,8 @@ void CameraDirector::SetFOV(class CameraDirector * const this /* r31 */) {
 void CameraDirector::InitAnim() {}
 
 // Range: 0x8020E570 -> 0x8020E72C
-unsigned char CameraDirector::StartAnim(class CameraDirector * const this /* r28 */, int resId /* r29 */, unsigned char relative /* r30 */, unsigned char holdAtEnd /* r31 */) {
+// this: r28
+unsigned char CameraDirector::StartAnim(int resId /* r29 */, unsigned char relative /* r30 */, unsigned char holdAtEnd /* r31 */) {
     // Local variables
     class EVec3 vEye; // r1+0x20
     class EVec3 vTarget; // r1+0x14
@@ -1093,10 +1181,12 @@ unsigned char CameraDirector::StartAnim(class CameraDirector * const this /* r28
 }
 
 // Range: 0x8020E72C -> 0x8020E780
-unsigned char CameraDirector::StartAnim(class CameraDirector * const this /* r30 */, const struct AnimRef * pAnimRef /* r31 */) {}
+// this: r30
+unsigned char CameraDirector::StartAnim(const struct AnimRef * pAnimRef /* r31 */) {}
 
 // Range: 0x8020E780 -> 0x8020EA94
-void CameraDirector::Update(class CameraDirector * const this /* r31 */) {
+// this: r31
+void CameraDirector::Update() {
     // Local variables
     class EMat4 finalMat; // r1+0x130
     class EVec3 vEye; // r1+0x20
@@ -1111,7 +1201,8 @@ void CameraDirector::Update(class CameraDirector * const this /* r31 */) {
 void CameraDirector::UpdateAnimNoteTrack() {}
 
 // Range: 0x8020EA98 -> 0x8020ECC0
-void CameraDirector::UpdateCameraPosAndFOV(class CameraDirector * const this /* r30 */) {
+// this: r30
+void CameraDirector::UpdateCameraPosAndFOV() {
     // Local variables
     class EMat4 cameraMat; // r1+0x70
     class EMat4 * animMat; // r31
@@ -1132,13 +1223,16 @@ void CameraDirector::UpdateCameraPosAndFOV(class CameraDirector * const this /* 
 static void FlipXCoord(class EVec4 & vec /* r30 */, const class EMat4 & fromLocal /* r31 */) {}
 
 // Range: 0x8020ED38 -> 0x8020ED7C
-void CameraDirector::LetterBox(class CameraDirector * const this /* r30 */, unsigned char status /* r31 */) {}
+// this: r30
+void CameraDirector::LetterBox(unsigned char status /* r31 */) {}
 
 // Range: 0x8020ED7C -> 0x8020EF98
-void CameraDirector::Draw(class CameraDirector * const this /* r28 */, class ERC * prc /* r27 */) {}
+// this: r28
+void CameraDirector::Draw(class ERC * prc /* r27 */) {}
 
 // Range: 0x8020EF98 -> 0x8020F07C
-void CameraDirector::ProcessPropertyEventTags(class CameraDirector * const this /* r29 */) {
+// this: r29
+void CameraDirector::ProcessPropertyEventTags() {
     // Local variables
     float timeMultiplier; // f0
     int interval; // r30
@@ -1148,7 +1242,8 @@ void CameraDirector::ProcessPropertyEventTags(class CameraDirector * const this 
 }
 
 // Range: 0x8020F07C -> 0x8020F1AC
-int CameraDirector::ProcessAnimEvents(class CameraDirector * const this /* r24 */, const struct AnimRef * pAnimRef /* r25 */, int iStartTime /* r26 */, int interval /* r27 */) {
+// this: r24
+int CameraDirector::ProcessAnimEvents(const struct AnimRef * pAnimRef /* r25 */, int iStartTime /* r26 */, int interval /* r27 */) {
     // Local variables
     class ERAnim * pAnim; // r0
     int size; // r30
@@ -1176,7 +1271,7 @@ void CameraDirector::ForceDisableHud() {}
 unsigned char CameraDirector::IsForceDisableHud() {}
 
 // Range: 0x8020F2DC -> 0x8020F494
-void * NewControlParms::NewControlParms() {
+NewControlParms::NewControlParms() {
     // References
     // -> struct [anonymous] __vt__15NewControlParms;
 }

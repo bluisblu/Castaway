@@ -5,10 +5,12 @@
     Code range: 0x8025C324 -> 0x8025C730
 */
 // Range: 0x8025C324 -> 0x8025C38C
-void * AllocPoolManager::~AllocPoolManager(class AllocPoolManager * const this /* r30 */) {}
+// this: r30
+AllocPoolManager::~AllocPoolManager() {}
 
 // Range: 0x8025C38C -> 0x8025C57C
-void AllocPoolManager::InitAllocPools(class AllocPoolManager * const this /* r29 */, const unsigned int * poolBlockCounts /* r30 */) {
+// this: r29
+void AllocPoolManager::InitAllocPools(const unsigned int * poolBlockCounts /* r30 */) {
     // Local variables
     int totalSize; // r31
     int pool; // r5
@@ -36,6 +38,7 @@ class ProtectedAllocPool * AllocPoolManager::FindPoolForBlock() {
 }
 
 // Range: 0x8025C6BC -> 0x8025C730
-unsigned char * AllocPoolManager::InitPoolByIndex(class AllocPoolManager * const this /* r29 */, unsigned char * address /* r30 */) {}
+// this: r29
+unsigned char * AllocPoolManager::InitPoolByIndex(unsigned char * address /* r30 */) {}
 
 

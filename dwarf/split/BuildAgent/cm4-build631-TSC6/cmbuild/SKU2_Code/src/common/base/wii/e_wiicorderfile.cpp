@@ -5,7 +5,8 @@
     Code range: 0x80279A70 -> 0x80279DA0
 */
 // Range: 0x80279A70 -> 0x80279ACC
-void * EWiicorderFile::~EWiicorderFile(class EWiicorderFile * const this /* r30 */) {}
+// this: r30
+EWiicorderFile::~EWiicorderFile() {}
 
 // Range: 0x80279ACC -> 0x80279BE4
 class EFile * EWiicorderFile::Creator(class EFile * pFile /* r29 */, const char * fileName /* r30 */) {
@@ -24,7 +25,8 @@ class EFile * EWiicorderFile::Creator(class EFile * pFile /* r29 */, const char 
 void EWiicorderFile::Destroy() {}
 
 // Range: 0x80279C04 -> 0x80279CF8
-unsigned long EWiicorderFile::Write(class EWiicorderFile * const this /* r25 */, unsigned long nSize /* r26 */) {
+// this: r25
+unsigned long EWiicorderFile::Write(unsigned long nSize /* r26 */) {
     // Local variables
     unsigned long sizeleft; // r29
     char * pStringleft; // r28

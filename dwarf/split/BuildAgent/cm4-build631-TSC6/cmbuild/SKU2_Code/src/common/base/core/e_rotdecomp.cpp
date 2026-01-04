@@ -11,19 +11,20 @@ void ERotDecomp::Init() {
 }
 
 // Range: 0x8026A9C4 -> 0x8026AA8C
-void * ERotDecomp::__nw(unsigned long size /* r28 */) {
+void * ERotDecomp::operator new(unsigned long size /* r28 */) {
     // References
     // -> class ProtectedAllocPool g_poolRotAnimDecompObjects;
 }
 
 // Range: 0x8026AA8C -> 0x8026AB5C
-void ERotDecomp::__dl(void * p /* r29 */) {
+void ERotDecomp::operator delete(void * p /* r29 */) {
     // References
     // -> class ProtectedAllocPool g_poolRotAnimDecompObjects;
 }
 
 // Range: 0x8026AB5C -> 0x8026B2D8
-class EQuat ERotDecomp::GetFrame(class ERotDecomp * const this /* r31 */, float frame /* f31 */) {
+// this: r31
+class EQuat ERotDecomp::GetFrame(float frame /* f31 */) {
     // Local variables
     float fCurrentSplineStartFrame; // f2
     float fCurrentSplineEndFrame; // f3
@@ -35,13 +36,15 @@ class EQuat ERotDecomp::GetFrame(class ERotDecomp * const this /* r31 */, float 
 }
 
 // Range: 0x8026B2D8 -> 0x8026B548
-void ERotDecomp::NextSegment(class ERotDecomp * const this /* r31 */) {
+// this: r31
+void ERotDecomp::NextSegment() {
     // Local variables
     int nextTimePos; // r4
 }
 
 // Range: 0x8026B548 -> 0x8026B7A8
-void ERotDecomp::LastSegment(class ERotDecomp * const this /* r31 */) {
+// this: r31
+void ERotDecomp::LastSegment() {
     // Local variables
     int lastTimePos; // r4
 }
@@ -59,10 +62,12 @@ void ERotDecomp::ResetEnd() {
 }
 
 // Range: 0x8026B984 -> 0x8026BBF0
-void ERotDecomp::ReadAllQs(class ERotDecomp * const this /* r30 */) {}
+// this: r30
+void ERotDecomp::ReadAllQs() {}
 
 // Range: 0x8026BBF0 -> 0x8026C0C0
-void ERotDecomp::GetKeyframe(class ERotDecomp * const this /* r28 */, int keyframe /* r29 */, struct ERotKeyframe & out /* r30 */) {
+// this: r28
+void ERotDecomp::GetKeyframe(int keyframe /* r29 */, struct ERotKeyframe & out /* r30 */) {
     // Local variables
     struct ERotKeyframe * pKeyFrame; // r0
     int currentKeyframe; // r31
@@ -77,7 +82,8 @@ void ERotDecomp::GetQuatVal(int dataPos /* r4 */) {
 }
 
 // Range: 0x8026C8B0 -> 0x8026D180
-void ERotDecomp::GetQ(class ERotDecomp * const this /* r28 */, int sel /* r29 */, int keyframe /* r30 */, class EQuat & qOut /* r31 */) {
+// this: r28
+void ERotDecomp::GetQ(int sel /* r29 */, int keyframe /* r30 */, class EQuat & qOut /* r31 */) {
     // Local variables
     struct ERotKeyframe kn_1; // r1+0x190
     struct ERotKeyframe kn; // r1+0x174

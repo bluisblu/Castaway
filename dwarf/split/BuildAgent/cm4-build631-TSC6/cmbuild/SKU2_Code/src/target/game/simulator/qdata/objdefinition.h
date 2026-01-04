@@ -8,32 +8,15 @@
 unsigned int ObjAnimDef::GetEffectAttachmentId() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\target\game\simulator\qdata\objdefinition.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x800669AC -> 0x800669BC
-*/
 // Range: 0x800669AC -> 0x800669BC
 unsigned char ObjDefinition::IsSingleTile() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\target\game\simulator\qdata\objdefinition.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x800A4634 -> 0x800A4688
-*/
 // Range: 0x800A4634 -> 0x800A4688
-unsigned char ObjDefinition::IsMasterObject(const struct ObjDefinition * const this /* r30 */) {}
+// this: r30
+unsigned char ObjDefinition::IsMasterObject() const {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\target\game\simulator\qdata\objdefinition.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x801CB204 -> 0x801CB224
-*/
 // Range: 0x801CB204 -> 0x801CB20C
 void ObjAnimDef::SetAnimationID() {}
 
@@ -47,12 +30,6 @@ unsigned int ObjAnimDef::GetAnimationID() {}
 unsigned int ObjAnimDef::GetModelID() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\target\game\simulator\qdata\objdefinition.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x80227748 -> 0x80227780
-*/
 // Range: 0x80227748 -> 0x80227750
 void ObjAnimDef::SetShaderID() {}
 

@@ -5,25 +5,27 @@
     Code range: 0x800BB6FC -> 0x800BE764
 */
 // Range: 0x800BB6FC -> 0x800BB70C
-void * TrackDataReader::TrackDataReader() {}
+TrackDataReader::TrackDataReader() {}
 
 // Range: 0x800BB70C -> 0x800BB754
-void * TrackDataReader::~TrackDataReader(class TrackDataReader * const this /* r31 */) {}
+// this: r31
+TrackDataReader::~TrackDataReader() {}
 
 // Range: 0x800BB754 -> 0x800BB768
-class TrackDataReader & TrackDataReader::__as() {}
+class TrackDataReader & TrackDataReader::operator=() {}
 
 // Range: 0x800BB768 -> 0x800BB778
-class TrackDataReader & TrackDataReader::__as() {}
+class TrackDataReader & TrackDataReader::operator=() {}
 
 // Range: 0x800BB778 -> 0x800BB788
-class TrackDataReader & TrackDataReader::__mm() {}
+class TrackDataReader & TrackDataReader::operator--() {}
 
 // Range: 0x800BB788 -> 0x800BB798
-class TrackDataReader & TrackDataReader::__apl() {}
+class TrackDataReader & TrackDataReader::operator+=() {}
 
 // Range: 0x800BB798 -> 0x800BB83C
-union SndInstruction & TrackDataReader::ReadCommand(class TrackDataReader * const this /* r31 */) {
+// this: r31
+union SndInstruction & TrackDataReader::ReadCommand() {
     // References
     // -> static union SndInstruction nopInst;
 }
@@ -32,29 +34,33 @@ union SndInstruction & TrackDataReader::ReadCommand(class TrackDataReader * cons
 void TrackDataReader::Trace() {}
 
 // Range: 0x800BB840 -> 0x800BB884
-void cTrack::HandleTrackFlowError(class cTrack * const this /* r31 */) {}
+// this: r31
+void cTrack::HandleTrackFlowError() {}
 
 // Range: 0x800BB884 -> 0x800BB890
 unsigned char cHitMan::RegisterSourceDataRequestHandler() {}
 
 // Range: 0x800BB890 -> 0x800BB8AC
-unsigned char cHitMan::GetSourceDataField(class cHitMan * const this /* r7 */) {
+// this: r7
+unsigned char cHitMan::GetSourceDataField() {
     // Local variables
     unsigned char bOk; // r0
 }
 
 // Range: 0x800BB8AC -> 0x800BB954
-class cHitControlGroup * cHitMan::ControlGroup(class cHitMan * const this /* r30 */, int lControlGroupId /* r1+0x8 */) {
+// this: r30
+class cHitControlGroup * cHitMan::ControlGroup(int lControlGroupId /* r1+0x8 */) {
     // Local variables
     class cHitControlGroup * pControlGroup; // r31
     struct rbtree_iterator it; // r1+0x10
 }
 
 // Range: 0x800BB954 -> 0x800BB964
-void * cHitControlGroup::cHitControlGroup() {}
+cHitControlGroup::cHitControlGroup() {}
 
 // Range: 0x800BB964 -> 0x800BBA3C
-unsigned char cHitControlGroup::SetVolume(class cHitControlGroup * const this /* r30 */) {
+// this: r30
+unsigned char cHitControlGroup::SetVolume() {
     // Local variables
     class list & listActive; // r31
     struct ListIterator itTrack; // r1+0x14
@@ -66,10 +72,12 @@ unsigned char cHitControlGroup::SetVolume(class cHitControlGroup * const this /*
 }
 
 // Range: 0x800BBA3C -> 0x800BBAF4
-void * cHitMan::cHitMan(class cHitMan * const this /* r29 */) {}
+// this: r29
+cHitMan::cHitMan() {}
 
 // Range: 0x800BBB4C -> 0x800BBBBC
-unsigned char cHitMan::Init(class cHitMan * const this /* r30 */) {
+// this: r30
+unsigned char cHitMan::Init() {
     // Local variables
     int i; // r31
 
@@ -78,10 +86,12 @@ unsigned char cHitMan::Init(class cHitMan * const this /* r30 */) {
 }
 
 // Range: 0x800BBBBC -> 0x800BBC44
-void * cHitMan::~cHitMan(class cHitMan * const this /* r30 */) {}
+// this: r30
+cHitMan::~cHitMan() {}
 
 // Range: 0x800BBC44 -> 0x800BBD28
-unsigned char cHitMan::Shutdown(class cHitMan * const this /* r30 */) {
+// this: r30
+unsigned char cHitMan::Shutdown() {
     // Local variables
     struct rbtree_iterator itBegin; // r1+0x20
     struct rbtree_iterator itEnd; // r1+0x1C
@@ -90,7 +100,8 @@ unsigned char cHitMan::Shutdown(class cHitMan * const this /* r30 */) {
 }
 
 // Range: 0x800BBD28 -> 0x800BBE04
-void cHitMan::UpdateActiveTrackVolumes(class cHitMan * const this /* r28 */) {
+// this: r28
+void cHitMan::UpdateActiveTrackVolumes() {
     // Local variables
     class cTrack * tracks[64]; // r1+0x18
     int i; // r30
@@ -105,7 +116,8 @@ void cHitMan::SetSequenceGroupTrackId() {}
 class ERSoundEvent * cHitMan::SequenceGroupTrackId() {}
 
 // Range: 0x800BBE2C -> 0x800BBF10
-void cHitMan::TimerCallback(class cHitMan * const this /* r30 */) {
+// this: r30
+void cHitMan::TimerCallback() {
     // Local variables
     struct ListIterator itCopy; // r1+0x14
     class cTrack * track; // r31
@@ -115,16 +127,19 @@ void cHitMan::TimerCallback(class cHitMan * const this /* r30 */) {
 }
 
 // Range: 0x800BBF10 -> 0x800BBF50
-unsigned char cHitMan::AddToUpdateList(class cHitMan * const this /* r31 */, class cTrack * pTrack /* r1+0x8 */) {}
+// this: r31
+unsigned char cHitMan::AddToUpdateList(class cTrack * pTrack /* r1+0x8 */) {}
 
 // Range: 0x800BBF50 -> 0x800BC058
-unsigned char cHitMan::RemoveFromUpdateList(class cHitMan * const this /* r30 */, const class cTrack * pTrack /* r31 */) {
+// this: r30
+unsigned char cHitMan::RemoveFromUpdateList(const class cTrack * pTrack /* r31 */) {
     // Local variables
     struct ListIterator it; // r1+0x24
 }
 
 // Range: 0x800BC058 -> 0x800BC0CC
-void cHitMan::DuckMapSetSndobPri(class cHitMan * const this /* r30 */, class cTrack * pSndob /* r1+0x8 */, int lPri /* r31 */) {
+// this: r30
+void cHitMan::DuckMapSetSndobPri(class cTrack * pSndob /* r1+0x8 */, int lPri /* r31 */) {
     // Local variables
     int lNewDuckPri; // r0
 
@@ -133,7 +148,8 @@ void cHitMan::DuckMapSetSndobPri(class cHitMan * const this /* r30 */, class cTr
 }
 
 // Range: 0x800BC0CC -> 0x800BC15C
-int cHitMan::DuckMapMaxPri(class cHitMan * const this /* r30 */) {
+// this: r30
+int cHitMan::DuckMapMaxPri() {
     // Local variables
     int lMaxPri; // r31
     struct rbtree_iterator itEnd; // r1+0x10
@@ -142,35 +158,41 @@ int cHitMan::DuckMapMaxPri(class cHitMan * const this /* r30 */) {
 }
 
 // Range: 0x800BC15C -> 0x800BC1C0
-void cHitMan::DuckMapRemoveAll(class cHitMan * const this /* r31 */) {
+// this: r31
+void cHitMan::DuckMapRemoveAll() {
     // References
     // -> static int s_activeDuckPri;
 }
 
 // Range: 0x800BC1C0 -> 0x800BC2EC
-void * cTrack::cTrack(class cTrack * const this /* r29 */, class ERSoundEvent * pEvent /* r30 */) {
+// this: r29
+cTrack::cTrack(class ERSoundEvent * pEvent /* r30 */) {
     // References
     // -> struct [anonymous] __vt__6cTrack;
 }
 
 // Range: 0x800BC2EC -> 0x800BC3BC
-void * cTrack::~cTrack(class cTrack * const this /* r30 */) {
+// this: r30
+cTrack::~cTrack() {
     // References
     // -> class cHitMan * g_pHitMan;
     // -> struct [anonymous] __vt__6cTrack;
 }
 
 // Range: 0x800BC3BC -> 0x800BC460
-unsigned char cTrack::OnStartPlaying(class cTrack * const this /* r30 */) {}
+// this: r30
+unsigned char cTrack::OnStartPlaying() {}
 
 // Range: 0x800BC460 -> 0x800BC4C0
-unsigned char cTrack::OnEndPlaying(class cTrack * const this /* r31 */) {}
+// this: r31
+unsigned char cTrack::OnEndPlaying() {}
 
 // Range: 0x800BC4C0 -> 0x800BC4CC
 class ERSoundTrackData * cTrack::StartPos() {}
 
 // Range: 0x800BC4CC -> 0x800BC684
-void cTrack::HandleTimerCallback(class cTrack * const this /* r30 */) {
+// this: r30
+void cTrack::HandleTimerCallback() {
     // Local variables
     int lCurrentValue; // r5
     unsigned int time; // r0
@@ -181,7 +203,8 @@ void cTrack::HandleTimerCallback(class cTrack * const this /* r30 */) {
 }
 
 // Range: 0x800BC684 -> 0x800BC868
-unsigned char cTrack::PlayPause(class cTrack * const this /* r27 */, int argInstId /* r28 */, int argVol /* r29 */, int argPan /* r30 */, float timeToPlayAt /* f31 */) {
+// this: r27
+unsigned char cTrack::PlayPause(int argInstId /* r28 */, int argVol /* r29 */, int argPan /* r30 */, float timeToPlayAt /* f31 */) {
     // Local variables
     int group; // r4
     class cHitControlGroup * pGroup; // r0
@@ -191,22 +214,26 @@ unsigned char cTrack::PlayPause(class cTrack * const this /* r27 */, int argInst
 }
 
 // Range: 0x800BC868 -> 0x800BC8C4
-unsigned char cTrack::Pause(class cTrack * const this /* r31 */) {
+// this: r31
+unsigned char cTrack::Pause() {
     // References
     // -> class cHitMan * g_pHitMan;
 }
 
 // Range: 0x800BC8C4 -> 0x800BC930
-unsigned char cTrack::Unpause(class cTrack * const this /* r31 */) {
+// this: r31
+unsigned char cTrack::Unpause() {
     // References
     // -> class cHitMan * g_pHitMan;
 }
 
 // Range: 0x800BC930 -> 0x800BC9DC
-unsigned char cTrack::Stop(class cTrack * const this /* r31 */) {}
+// this: r31
+unsigned char cTrack::Stop() {}
 
 // Range: 0x800BC9DC -> 0x800BCA8C
-unsigned char cTrack::Kill(class cTrack * const this /* r30 */) {
+// this: r30
+unsigned char cTrack::Kill() {
     // References
     // -> class cHitMan * g_pHitMan;
     // -> class EClock _sysclock;
@@ -219,7 +246,8 @@ int cTrack::RegisterVal() {
 }
 
 // Range: 0x800BCB10 -> 0x800BCC6C
-unsigned char cTrack::SetRegister(class cTrack * const this /* r28 */, int lRegisterId /* r29 */, int lValue /* r30 */) {
+// this: r28
+unsigned char cTrack::SetRegister(int lRegisterId /* r29 */, int lValue /* r30 */) {
     // Local variables
     unsigned char bOk; // r31
 
@@ -228,13 +256,15 @@ unsigned char cTrack::SetRegister(class cTrack * const this /* r28 */, int lRegi
 }
 
 // Range: 0x800BCC6C -> 0x800BCCE0
-int cTrack::GetVHitList(class cTrack * const this /* r30 */, int list /* r31 */) {
+// this: r30
+int cTrack::GetVHitList(int list /* r31 */) {
     // Local variables
     class TArray * hpl; // r0
 }
 
 // Range: 0x800BCCE0 -> 0x800BD6F0
-unsigned char cTrack::DoCommand(class cTrack * const this /* r31 */) {
+// this: r31
+unsigned char cTrack::DoCommand() {
     // Local variables
     union SndInstruction cmd; // r1+0x10
     int lVal; // r0
@@ -312,13 +342,15 @@ unsigned char cTrack::DoCommand(class cTrack * const this /* r31 */) {
 void cTrack::SetCompareFlags() {}
 
 // Range: 0x800BD730 -> 0x800BD7B8
-unsigned char cTrack::NoteOn(class cTrack * const this /* r30 */) {
+// this: r30
+unsigned char cTrack::NoteOn() {
     // Local variables
     unsigned char bOk; // r31
 }
 
 // Range: 0x800BD7B8 -> 0x800BD8A4
-unsigned char cTrack::SetPatch(class cTrack * const this /* r30 */, struct SndEvtHitPatch * pSndHitPatch /* r31 */, float timeToPlayAt /* f31 */) {}
+// this: r30
+unsigned char cTrack::SetPatch(struct SndEvtHitPatch * pSndHitPatch /* r31 */, float timeToPlayAt /* f31 */) {}
 
 // Range: 0x800BD8A4 -> 0x800BD8BC
 unsigned char cTrack::NoteOff() {}
@@ -330,7 +362,8 @@ unsigned char cTrack::SetVolume() {}
 unsigned char cTrack::SetPan() {}
 
 // Range: 0x800BD8D4 -> 0x800BDA3C
-int cTrack::CalculateCurrentVolume(class cTrack * const this /* r29 */) {
+// this: r29
+int cTrack::CalculateCurrentVolume() {
     // Local variables
     int baseVolume; // r31
     int lControlGroupId; // r30
@@ -348,7 +381,8 @@ int cTrack::CalculateCurrentVolume(class cTrack * const this /* r29 */) {
 }
 
 // Range: 0x800BDA3C -> 0x800BDA90
-unsigned char cTrack::UpdateVolPan(class cTrack * const this /* r31 */) {}
+// this: r31
+unsigned char cTrack::UpdateVolPan() {}
 
 // Range: 0x800BDA90 -> 0x800BDA9C
 unsigned char cTrack::GetMinRange() {}
@@ -363,31 +397,37 @@ int cTrack::GetControlGroup() {}
 int cTrack::GetArgsType() {}
 
 // Range: 0x800BDAC8 -> 0x800BDAF4
-void * cSamplePatch::cSamplePatch() {}
+cSamplePatch::cSamplePatch() {}
 
 // Range: 0x800BDAF4 -> 0x800BDB48
-void * cSamplePatch::~cSamplePatch(class cSamplePatch * const this /* r30 */) {}
+// this: r30
+cSamplePatch::~cSamplePatch() {}
 
 // Range: 0x800BDB48 -> 0x800BDB50
 void cSamplePatch::SetLooped() {}
 
 // Range: 0x800BDB50 -> 0x800BDBDC
-unsigned char cSamplePatch::CreateSnd(class cSamplePatch * const this /* r31 */) {
+// this: r31
+unsigned char cSamplePatch::CreateSnd() {
     // References
     // -> class cIGZSndSys * g_pSndSys;
 }
 
 // Range: 0x800BDBDC -> 0x800BDC30
-unsigned char cSamplePatch::FreeSnd(class cSamplePatch * const this /* r31 */) {}
+// this: r31
+unsigned char cSamplePatch::FreeSnd() {}
 
 // Range: 0x800BDC30 -> 0x800BDC70
-class cSampleChannel * cSamplePatch::CreateChannel(class cSamplePatch * const this /* r31 */) {}
+// this: r31
+class cSampleChannel * cSamplePatch::CreateChannel() {}
 
 // Range: 0x800BDC70 -> 0x800BDCAC
-void * cSampleChannel::cSampleChannel(class cSampleChannel * const this /* r31 */) {}
+// this: r31
+cSampleChannel::cSampleChannel() {}
 
 // Range: 0x800BDCAC -> 0x800BDD0C
-void * cSampleChannel::~cSampleChannel(class cSampleChannel * const this /* r30 */) {}
+// this: r30
+cSampleChannel::~cSampleChannel() {}
 
 // Range: 0x800BDD0C -> 0x800BDD30
 unsigned char cSampleChannel::SetVolume() {}
@@ -396,13 +436,16 @@ unsigned char cSampleChannel::SetVolume() {}
 unsigned char cSampleChannel::Shutdown() {}
 
 // Range: 0x800BDD54 -> 0x800BDE0C
-unsigned char cSampleChannel::SetChannelPatch(class cSampleChannel * const this /* r30 */, class cSamplePatch * pPatch /* r31 */) {}
+// this: r30
+unsigned char cSampleChannel::SetChannelPatch(class cSamplePatch * pPatch /* r31 */) {}
 
 // Range: 0x800BDE0C -> 0x800BDE6C
-unsigned char cSampleChannel::SetPan(class cSampleChannel * const this /* r30 */, int lPanPos /* r31 */) {}
+// this: r30
+unsigned char cSampleChannel::SetPan(int lPanPos /* r31 */) {}
 
 // Range: 0x800BDE6C -> 0x800BDEF4
-unsigned char cSampleChannel::NoteOn(class cSampleChannel * const this /* r31 */) {
+// this: r31
+unsigned char cSampleChannel::NoteOn() {
     // Local variables
     float time; // f31
 
@@ -411,7 +454,8 @@ unsigned char cSampleChannel::NoteOn(class cSampleChannel * const this /* r31 */
 }
 
 // Range: 0x800BDEF4 -> 0x800BDF48
-unsigned char cSampleChannel::NoteOff(class cSampleChannel * const this /* r31 */) {}
+// this: r31
+unsigned char cSampleChannel::NoteOff() {}
 
 // Range: 0x800BDF48 -> 0x800BDF6C
 unsigned char cSampleChannel::IsPlaying() {}
@@ -429,10 +473,12 @@ unsigned char cSampleChannel::Unpause() {
 }
 
 // Range: 0x800BDFFC -> 0x800BE03C
-void * cSoundCache::cSoundCache(class cSoundCache * const this /* r31 */) {}
+// this: r31
+cSoundCache::cSoundCache() {}
 
 // Range: 0x800BE03C -> 0x800BE090
-void * cSoundCache::~cSoundCache(class cSoundCache * const this /* r30 */) {}
+// this: r30
+cSoundCache::~cSoundCache() {}
 
 // Range: 0x800BE090 -> 0x800BE0CC
 void cSoundCache::onTrackDelete() {
@@ -447,7 +493,8 @@ void cSoundCache::Shutdown() {
 }
 
 // Range: 0x800BE144 -> 0x800BE284
-void cSoundCache::CleanupIdleTracks(class cSoundCache * const this /* r31 */) {
+// this: r31
+void cSoundCache::CleanupIdleTracks() {
     // Local variables
     int i; // r28
     int iNumActiveTracks; // r27
@@ -491,7 +538,8 @@ void cSoundCache::UnpauseGroup(int group /* r29 */) {
 }
 
 // Range: 0x800BE4FC -> 0x800BE638
-class cTrack * cSoundCache::GetTrackObject(class cSoundCache * const this /* r31 */, class ERSoundEvent * id /* r30 */) {
+// this: r31
+class cTrack * cSoundCache::GetTrackObject(class ERSoundEvent * id /* r30 */) {
     // Local variables
     class cTrack * pResult; // r0
     int i; // r8

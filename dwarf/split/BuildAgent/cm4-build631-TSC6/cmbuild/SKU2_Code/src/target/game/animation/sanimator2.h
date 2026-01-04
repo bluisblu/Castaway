@@ -8,7 +8,7 @@
 void SAnimator2::SetBoneIndex() {}
 
 // Range: 0x800183A8 -> 0x800183DC
-void SAnimator2::__dl(void * ptr /* r31 */) {}
+void SAnimator2::operator delete(void * ptr /* r31 */) {}
 
 // Range: 0x800183DC -> 0x800183E4
 class ESim * SAnimator2::GetSim() {}
@@ -24,13 +24,15 @@ float SAnimator2::getPersonDirection() {
 }
 
 // Range: 0x80018468 -> 0x800184C0
-unsigned char SAnimator2::EndAutoRun(class SAnimator2 * const this /* r31 */) {}
+// this: r31
+unsigned char SAnimator2::EndAutoRun() {}
 
 // Range: 0x800184C0 -> 0x800184E4
 void SAnimator2::SetSkillName() {}
 
 // Range: 0x800184E4 -> 0x80018570
-int SAnimator2::getIndexOfPropID(class SAnimator2 * const this /* r28 */, unsigned int Id /* r29 */) {
+// this: r28
+int SAnimator2::getIndexOfPropID(unsigned int Id /* r29 */) {
     // Local variables
     int index; // r31
     int i; // r30
@@ -82,7 +84,7 @@ float SAnimator2::GetFrontBackMulFactorForRaycast() {}
 float SAnimator2::GetLeftRightMulFactorForRaycast() {}
 
 // Range: 0x80018608 -> 0x80018664
-void * SAnimator2::__nw(unsigned long size /* r30 */) {
+void * SAnimator2::operator new(unsigned long size /* r30 */) {
     // Local variables
     void * result; // r31
 }
@@ -136,12 +138,6 @@ void SAnimator2::lockCarryArmNodes() {}
 void SAnimator2::startCarry() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\target\game\animation\sanimator2.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x80051EC8 -> 0x80051F7C
-*/
 // Range: 0x80051EC8 -> 0x80051ED0
 void SAnimator2::SetCameraZoomRatio() {}
 
@@ -149,7 +145,8 @@ void SAnimator2::SetCameraZoomRatio() {}
 void SAnimator2::SetDesiredAnimState() {}
 
 // Range: 0x80051ED8 -> 0x80051F74
-void SAnimator2::SetDesiredFacing(class SAnimator2 * const this /* r31 */, float fDesiredFacing /* f31 */) {
+// this: r31
+void SAnimator2::SetDesiredFacing(float fDesiredFacing /* f31 */) {
     // Local variables
     float fAngle; // f1
 }
@@ -158,12 +155,6 @@ void SAnimator2::SetDesiredFacing(class SAnimator2 * const this /* r31 */, float
 enum eAnimState SAnimator2::GetAnimState() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\target\game\animation\sanimator2.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x80095CC8 -> 0x80095CD4
-*/
 // Range: 0x80095CC8 -> 0x80095CD4
 void SAnimator2::SetWallArrayDirty() {
     // References
@@ -171,12 +162,6 @@ void SAnimator2::SetWallArrayDirty() {
 }
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\target\game\animation\sanimator2.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x800CE42C -> 0x800CE478
-*/
 // Range: 0x800CE42C -> 0x800CE434
 void SAnimator2::SetWalkRunStyle() {}
 
@@ -184,18 +169,13 @@ void SAnimator2::SetWalkRunStyle() {}
 unsigned char SAnimator2::GetPlayerControl() {}
 
 // Range: 0x800CE440 -> 0x800CE470
-void SAnimator2::setAnimationDirectionToPersonDirection(class SAnimator2 * const this /* r31 */) {}
+// this: r31
+void SAnimator2::setAnimationDirectionToPersonDirection() {}
 
 // Range: 0x800CE470 -> 0x800CE478
 class CasSimDescription * SAnimator2::GetNonCostumedSimDescription() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\target\game\animation\sanimator2.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x8012D0D4 -> 0x8012D0EC
-*/
 // Range: 0x8012D0D4 -> 0x8012D0DC
 void SAnimator2::ResetAwarenessManager() {}
 

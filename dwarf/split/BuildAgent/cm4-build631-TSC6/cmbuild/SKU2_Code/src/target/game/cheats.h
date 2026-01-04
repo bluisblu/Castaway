@@ -23,7 +23,8 @@ class ECheatDMI * ECheatLookup::GetDebugMenuItem() {}
 void ECheatLookup::SetDebugMenuItem() {}
 
 // Range: 0x80212D58 -> 0x80212DA4
-void * ECheatDMI::ECheatDMI(class ECheatDMI * const this /* r30 */, class ECheatLookup * pVariable /* r31 */) {
+// this: r30
+ECheatDMI::ECheatDMI(class ECheatLookup * pVariable /* r31 */) {
     // References
     // -> struct [anonymous] __vt__9ECheatDMI;
 }

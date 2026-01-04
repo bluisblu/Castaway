@@ -29,23 +29,21 @@ void PlumbBob::SetTargetPos() {}
 void PlumbBob::ClearFrameUpdateCount() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\target\game\plumbbob.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x8023FFB0 -> 0x80240248
-*/
 // Range: 0x8023FFB0 -> 0x80240018
-void * PlumbBobStack::~PlumbBobStack(class PlumbBobStack * const this /* r30 */) {}
+// this: r30
+PlumbBobStack::~PlumbBobStack() {}
 
 // Range: 0x80240018 -> 0x80240058
-void * PlumbBobStackEntry::~PlumbBobStackEntry(class PlumbBobStackEntry * const this /* r31 */) {}
+// this: r31
+PlumbBobStackEntry::~PlumbBobStackEntry() {}
 
 // Range: 0x80240058 -> 0x802400AC
-void * PlumbBobStack::PlumbBobStack(class PlumbBobStack * const this /* r31 */) {}
+// this: r31
+PlumbBobStack::PlumbBobStack() {}
 
 // Range: 0x802400AC -> 0x802400E4
-void * PlumbBobStackEntry::PlumbBobStackEntry(class PlumbBobStackEntry * const this /* r31 */) {}
+// this: r31
+PlumbBobStackEntry::PlumbBobStackEntry() {}
 
 // Range: 0x802400E4 -> 0x80240130
 void PlumbBob::CreateInstance() {
@@ -78,6 +76,7 @@ class PlumbBobOwner * PlumbBob::GetCreateOwner() {
 }
 
 // Range: 0x80240208 -> 0x80240248
-void * PlumbBobParms::~PlumbBobParms(class PlumbBobParms * const this /* r31 */) {}
+// this: r31
+PlumbBobParms::~PlumbBobParms() {}
 
 

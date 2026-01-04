@@ -5,6 +5,7 @@
     Code range: 0x802CD964 -> 0x802CD9BC
 */
 // Range: 0x802CD964 -> 0x802CD9BC
-void * EScheduler::~EScheduler(class EScheduler * const this /* r30 */) {}
+// this: r30
+EScheduler::~EScheduler() {}
 
 

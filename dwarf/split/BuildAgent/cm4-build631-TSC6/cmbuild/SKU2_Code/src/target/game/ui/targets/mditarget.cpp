@@ -5,40 +5,46 @@
     Code range: 0x801B37B8 -> 0x801B47F4
 */
 // Range: 0x801B37B8 -> 0x801B39A4
-void * MDITarget::MDITarget(class MDITarget * const this /* r29 */) {
+// this: r29
+MDITarget::MDITarget() {
     // References
     // -> class EGlobal _globals;
     // -> struct [anonymous] __vt__9MDITarget;
 }
 
 // Range: 0x801B39A4 -> 0x801B3A2C
-void * MDITarget::~MDITarget(class MDITarget * const this /* r30 */) {
+// this: r30
+MDITarget::~MDITarget() {
     // References
     // -> class EGlobal _globals;
     // -> struct [anonymous] __vt__9MDITarget;
 }
 
 // Range: 0x801B3A2C -> 0x801B3AC8
-void MDITarget::SetVariable(class MDITarget * const this /* r30 */, const char * szCommand /* r31 */) {
+// this: r30
+void MDITarget::SetVariable(const char * szCommand /* r31 */) {
     // Local variables
     class UIReflow reflow; // r1+0x8
 }
 
 // Range: 0x801B3AC8 -> 0x801B3C30
-char * MDITarget::GetVariable(class MDITarget * const this /* r28 */, const char * szVar /* r29 */) {
+// this: r28
+char * MDITarget::GetVariable(const char * szVar /* r29 */) {
     // Local variables
     char * retStr; // r30
 }
 
 // Range: 0x801B3C30 -> 0x801B3D34
-unsigned short * MDITarget::GetLocalizable(class MDITarget * const this /* r29 */, const char * szVar /* r30 */) {
+// this: r29
+unsigned short * MDITarget::GetLocalizable(const char * szVar /* r30 */) {
     // Local variables
     unsigned short * wideStr; // r31
     unsigned short * outString; // r30
 }
 
 // Range: 0x801B3D34 -> 0x801B3F00
-void MDITarget::Update(class MDITarget * const this /* r31 */) {
+// this: r31
+void MDITarget::Update() {
     // Local variables
     class UIReflow reflow; // r1+0x20
     class UIReflow reflow; // r1+0x8
@@ -62,7 +68,8 @@ unsigned char MDITarget::IsDuplicate(const class UIDialog * pDialog /* r29 */) {
 }
 
 // Range: 0x801B3FB0 -> 0x801B4130
-void MDITarget::SpawnModelessDialog(class MDITarget * const this /* r28 */, class UIDialog * pDialog /* r29 */) {
+// this: r28
+void MDITarget::SpawnModelessDialog(class UIDialog * pDialog /* r29 */) {
     // References
     // -> class EShaderManager _shaderman;
 }
@@ -78,7 +85,8 @@ void MDITarget::AddToList() {
 int MDITarget::CountModelessDialogs() {}
 
 // Range: 0x801B4200 -> 0x801B4258
-void MDITarget::DeleteAllModelessDialogs(class MDITarget * const this /* r30 */) {
+// this: r30
+void MDITarget::DeleteAllModelessDialogs() {
     // Local variables
     struct ModelessDialog * next; // r31
 }
@@ -87,7 +95,8 @@ void MDITarget::DeleteAllModelessDialogs(class MDITarget * const this /* r30 */)
 void MDITarget::CleanupModelessDialogs() {}
 
 // Range: 0x801B425C -> 0x801B47F4
-void MDITarget::SetupModelessDialog(class MDITarget * const this /* r30 */) {
+// this: r30
+void MDITarget::SetupModelessDialog() {
     // Local variables
     class EVec2 vIconBGBox; // r1+0x50
     class EVec2 vIconBox; // r1+0x48

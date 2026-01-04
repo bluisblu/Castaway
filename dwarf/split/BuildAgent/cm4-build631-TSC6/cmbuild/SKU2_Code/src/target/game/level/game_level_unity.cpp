@@ -17,8 +17,12 @@ class ETypeInfo m_typeInfo; // size: 0x28, address: 0x8048C8E8
 class ETypeInfo * gpTypeInfo_EInstance; // size: 0x4, address: 0x805DB734
 class ETypeInfo m_typeInfo; // size: 0x28, address: 0x8048C910
 class ETypeInfo * gpTypeInfo_EIPointAmbLight; // size: 0x4, address: 0x805DB738
+// total size: 0xBC
 class EIPointAmbLight : public EILight {
-    // total size: 0xBC
+    // Static members
+    static class ETypeInfo m_typeInfo; // size: 0x28
+
+    // Members
 public:
     class EVec3 m_vPos; // offset 0xA4, size 0xC
     float m_falloffStartDistance; // offset 0xB0, size 0x4
@@ -27,8 +31,12 @@ public:
 };
 class ETypeInfo m_typeInfo; // size: 0x28, address: 0x8048C938
 class ETypeInfo * gpTypeInfo_EIPointLight; // size: 0x4, address: 0x805DB73C
+// total size: 0xC8
 class EIPointLight : public EILight {
-    // total size: 0xC8
+    // Static members
+    static class ETypeInfo m_typeInfo; // size: 0x28
+
+    // Members
     class EVec3 m_vPos; // offset 0xA4, size 0xC
     int m_xLoc; // offset 0xB0, size 0x4
     int m_yLoc; // offset 0xB4, size 0x4
@@ -46,8 +54,12 @@ static float c_outerSmall[2]; // size: 0x8, address: 0x805D8620
 static float c_intensityLarge[2]; // size: 0x8, address: 0x805D8628
 static float c_intensityRegular[2]; // size: 0x8, address: 0x805D8630
 static float c_intensitySmall[2]; // size: 0x8, address: 0x805D8638
+// total size: 0xCC
 class EIPortalPointLight : public EIPointLight {
-    // total size: 0xCC
+    // Static members
+    static class ETypeInfo m_typeInfo; // size: 0x28
+
+    // Members
 public:
     unsigned char m_isFlip; // offset 0xC5, size 0x1
 protected:
@@ -56,8 +68,12 @@ protected:
 float _portalOffset; // size: 0x4, address: 0x805D8640
 class ETypeInfo m_typeInfo; // size: 0x28, address: 0x8048C988
 class ETypeInfo * gpTypeInfo_EISpotLight; // size: 0x4, address: 0x805DB744
+// total size: 0xD8
 class EISpotLight : public EILight {
-    // total size: 0xD8
+    // Static members
+    static class ETypeInfo m_typeInfo; // size: 0x28
+
+    // Members
 public:
     class EVec3 m_vPos; // offset 0xA4, size 0xC
     class EVec3 m_vDir; // offset 0xB0, size 0xC
@@ -72,9 +88,8 @@ protected:
 };
 class ETypeInfo m_typeInfo; // size: 0x28, address: 0x8048C9B0
 class ETypeInfo * gpTypeInfo_EIStaticModel; // size: 0x4, address: 0x805DB748
-class FTIteratorPtrType {
-    // total size: 0x0
-};
+// total size: 0x0
+class FTIteratorPtrType {};
 class ETypeInfo m_typeInfo; // size: 0x28, address: 0x8048C9D8
 class ETypeInfo * gpTypeInfo_EIStaticSubModel; // size: 0x4, address: 0x805DB74C
 static class EVec3 s_vDistantPointToForceSkySortOrder; // size: 0xC, address: 0x8048CA00
@@ -85,21 +100,27 @@ static signed short m_lightVertexDummy[4]; // size: 0x8, address: 0x805DB750
 static float k_maxPortalColor; // size: 0x4, address: 0x805D8650
 static float sAmbientPortalScaler; // size: 0x4, address: 0x805D8654
 class EVec3 s_vDistantPointToForceSkySortOrder; // size: 0xC, address: 0x8048D75C
+// total size: 0x4
 class EffectsVisitor {
-    // total size: 0x4
+    // Members
 public:
     void * __vptr$; // offset 0x0, size 0x4
 };
 float indoorObjectCullDistance; // size: 0x4, address: 0x805D8658
 float indoorObjectCullDistanceSq; // size: 0x4, address: 0x805DB758
 static unsigned char g_bERLevelOrderTableDataBuffer[15424]; // size: 0x3C40, address: 0x8048D768
+// total size: 0x8
 struct AllocBlock {
-    // total size: 0x8
+    // Members
     unsigned int m_buf; // offset 0x0, size 0x4
     struct AllocBlock * m_next; // offset 0x4, size 0x4
 };
+// total size: 0x1C
 class FastAllocPool {
-    // total size: 0x1C
+    // Static members
+    static int ALIGNMENT; // size: 0x4
+
+    // Members
 public:
     void * __vptr$; // offset 0x0, size 0x4
 private:
@@ -120,8 +141,12 @@ int m_raycastDelayed; // size: 0x4, address: 0x805DB76C
 unsigned char m_drawingOrderTable; // size: 0x1, address: 0x805DB770
 unsigned char m_fillingOrderTable; // size: 0x1, address: 0x805DB771
 unsigned int kMidLotObjectResIDs[20]; // size: 0x50, address: 0x8041B1F8
+// total size: 0x28
 class EBoundTreeNode : public EStorable {
-    // total size: 0x28
+    // Static members
+    static class ETypeInfo m_typeInfo; // size: 0x28
+
+    // Members
 public:
     class EBound3 m_b; // offset 0x4, size 0x18
     class EBoundTreeNode * m_pParent; // offset 0x1C, size 0x4
@@ -130,8 +155,9 @@ public:
 class EVec3 s_outsideAmbient; // size: 0xC, address: 0x804913F8
 class EVec3 s_outsideDiffuse; // size: 0xC, address: 0x80491404
 float s_outsidePointLightDimmer; // size: 0x4, address: 0x805DB774
+// total size: 0x18
 class EFloorTileGroup {
-    // total size: 0x18
+    // Members
 public:
     class EFloorTileGroup * m_next; // offset 0x0, size 0x4
     class EDL * m_dl; // offset 0x4, size 0x4
@@ -140,8 +166,16 @@ public:
     class ERShader * m_shaderResource; // offset 0x10, size 0x4
     unsigned char m_isCeiling; // offset 0x14, size 0x1
 };
+// total size: 0x134
 class EIFloor : public EInstance {
-    // total size: 0x134
+    // Static members
+    static class ERShader * m_sCeilingShader; // size: 0x4
+    static class TRedBlackTree m_floors; // size: 0xC
+    static unsigned int m_nAlloced; // size: 0x4
+    static unsigned char m_bRebuildFloors; // size: 0x1
+    static class ETypeInfo m_typeInfo; // size: 0x28
+
+    // Members
 protected:
     unsigned int m_roomID; // offset 0x78, size 0x4
     int m_numRoomID; // offset 0x7C, size 0x4
@@ -156,27 +190,32 @@ public:
     float m_ceilingOpacity; // offset 0x12C, size 0x4
     unsigned char m_isCeilingDrawPass; // offset 0x130, size 0x1
 };
+// total size: 0xC
 struct EffectEntry {
-    // total size: 0xC
+    // Members
     unsigned int m_framesScheduledForDeletion; // offset 0x0, size 0x4
     unsigned char m_bIsScheduledForDeletion; // offset 0x4, size 0x1
     class Effect * m_pEffect; // offset 0x8, size 0x4
 };
+// total size: 0xC
 class TNodeList : public ENodeList {
-    // total size: 0xC
+    // Members
 protected:
     unsigned char m_bDeleteData; // offset 0x8, size 0x1
 };
+// total size: 0x28
 class EffectsManager {
-    // total size: 0x28
+    // Static members
+    static class EffectsManager * s_pSingleton; // size: 0x4
+
+    // Members
     class EVec3 m_ambientColor; // offset 0x0, size 0xC
     unsigned char m_bIsInitialized; // offset 0xC, size 0x1
     class TNodeList m_activeEffectList; // offset 0x10, size 0xC
     class TNodeList m_deleteEffectList; // offset 0x1C, size 0xC
 };
-class ERenderer : public EThread {
-    // total size: 0x340
-};
+// total size: 0x340
+class ERenderer : public EThread {};
 enum VITVMode {
     VI_TVMODE_NTSC_INT = 0,
     VI_TVMODE_NTSC_DS = 1,
@@ -197,8 +236,9 @@ enum VIXFBMode {
     VI_XFBMODE_SF = 0,
     VI_XFBMODE_DF = 1,
 };
+// total size: 0x3C
 struct _GXRenderModeObj {
-    // total size: 0x3C
+    // Members
     enum VITVMode viTVmode; // offset 0x0, size 0x4
     unsigned short fbWidth; // offset 0x4, size 0x2
     unsigned short efbHeight; // offset 0x6, size 0x2
@@ -213,19 +253,22 @@ struct _GXRenderModeObj {
     unsigned char sample_pattern[12][2]; // offset 0x1A, size 0x18
     unsigned char vfilter[7]; // offset 0x32, size 0x7
 };
+// total size: 0x80
 struct GXFifoObj {
-    // total size: 0x80
+    // Members
     unsigned char pad[128]; // offset 0x0, size 0x80
 };
+// total size: 0x4
 struct _GXColor {
-    // total size: 0x4
+    // Members
     unsigned char r; // offset 0x0, size 0x1
     unsigned char g; // offset 0x1, size 0x1
     unsigned char b; // offset 0x2, size 0x1
     unsigned char a; // offset 0x3, size 0x1
 };
+// total size: 0x20
 struct _GXTexObj {
-    // total size: 0x20
+    // Members
     unsigned long dummy[8]; // offset 0x0, size 0x20
 };
 enum _GXTexWrapMode {
@@ -234,8 +277,9 @@ enum _GXTexWrapMode {
     GX_MIRROR = 2,
     GX_MAX_TEXWRAPMODE = 3,
 };
+// total size: 0xC
 struct _GXTlutObj {
-    // total size: 0xC
+    // Members
     unsigned long dummy[3]; // offset 0x0, size 0xC
 };
 enum _GXTlut {
@@ -260,8 +304,9 @@ enum _GXTlut {
     GX_BIGTLUT2 = 18,
     GX_BIGTLUT3 = 19,
 };
+// total size: 0x98
 class ENgcTextureBase : public ETexture {
-    // total size: 0x98
+    // Members
 protected:
     class EMutex m_Mutex; // offset 0x28, size 0x1C
     int m_lockCount; // offset 0x44, size 0x4
@@ -279,8 +324,9 @@ protected:
     enum _GXTlut m_tlutName; // offset 0x90, size 0x4
     enum ETextureUpdateType m_updateType; // offset 0x94, size 0x4
 };
+// total size: 0x2C
 class ENgcTexture : public ETexture {
-    // total size: 0x2C
+    // Members
 protected:
     class ENgcTextureBase * m_textureImp; // offset 0x28, size 0x4
 };
@@ -413,8 +459,9 @@ enum _GXTevSwapSel {
     GX_TEV_SWAP3 = 3,
     GX_MAX_TEVSWAP = 4,
 };
+// total size: 0x5C
 struct ENgcRSTevStage {
-    // total size: 0x5C
+    // Members
     enum _GXTexCoordID orderCoord; // offset 0x0, size 0x4
     enum _GXTexMapID orderMap; // offset 0x4, size 0x4
     enum _GXChannelID orderColor; // offset 0x8, size 0x4
@@ -439,8 +486,9 @@ struct ENgcRSTevStage {
     enum _GXTevSwapSel rasSwapIndex; // offset 0x54, size 0x4
     enum _GXTevSwapSel texSwapIndex; // offset 0x58, size 0x4
 };
+// total size: 0x340
 struct ENgcRSTevState {
-    // total size: 0x340
+    // Members
     unsigned char nStages; // offset 0x0, size 0x1
     struct ENgcRSTevStage stage[9]; // offset 0x4, size 0x33C
 };
@@ -454,8 +502,9 @@ enum _GXCompare {
     GX_GEQUAL = 6,
     GX_ALWAYS = 7,
 };
+// total size: 0xC
 struct ENgcRSZMode {
-    // total size: 0xC
+    // Members
     unsigned char compare_enable; // offset 0x0, size 0x1
     enum _GXCompare func; // offset 0x4, size 0x4
     unsigned char update_enable; // offset 0x8, size 0x1
@@ -467,8 +516,9 @@ enum _GXAlphaOp {
     GX_AOP_XNOR = 3,
     GX_MAX_ALPHAOP = 4,
 };
+// total size: 0x14
 struct ENgcRSAlphaCompareMode {
-    // total size: 0x14
+    // Members
     enum _GXCompare comp0; // offset 0x0, size 0x4
     unsigned char ref0; // offset 0x4, size 0x1
     enum _GXAlphaOp op; // offset 0x8, size 0x4
@@ -490,8 +540,9 @@ enum _GXAttnFn {
     GX_AF_SPOT = 1,
     GX_AF_NONE = 2,
 };
+// total size: 0x18
 struct ENgcRSColorChannelState {
-    // total size: 0x18
+    // Members
     unsigned char enable; // offset 0x0, size 0x1
     enum _GXColorSrc ambientSrc; // offset 0x4, size 0x4
     enum _GXColorSrc materialSrc; // offset 0x8, size 0x4
@@ -499,12 +550,14 @@ struct ENgcRSColorChannelState {
     enum _GXDiffuseFn diffuseFunc; // offset 0x10, size 0x4
     enum _GXAttnFn attenuationFunc; // offset 0x14, size 0x4
 };
+// total size: 0x40
 struct _GXLightObj {
-    // total size: 0x40
+    // Members
     unsigned long dummy[16]; // offset 0x0, size 0x40
 };
+// total size: 0x268
 struct ENgcRSLightingState {
-    // total size: 0x268
+    // Members
     struct _GXColor ambientColor; // offset 0x0, size 0x4
     struct _GXColor materialColor; // offset 0x4, size 0x4
     struct ENgcRSColorChannelState colorChannel[4]; // offset 0x8, size 0x60
@@ -547,8 +600,9 @@ enum _GXLogicOp {
     GX_LO_NAND = 14,
     GX_LO_SET = 15,
 };
+// total size: 0x10
 struct ENgcRSBlendMode {
-    // total size: 0x10
+    // Members
     enum _GXBlendMode type; // offset 0x0, size 0x4
     enum _GXBlendFactor src_factor; // offset 0x4, size 0x4
     enum _GXBlendFactor dst_factor; // offset 0x8, size 0x4
@@ -590,8 +644,9 @@ enum _GXTexGenSrc {
     GX_TG_COLOR0 = 19,
     GX_TG_COLOR1 = 20,
 };
+// total size: 0x1C
 struct GXTexCoordGen {
-    // total size: 0x1C
+    // Members
     enum _GXTexCoordID dst; // offset 0x0, size 0x4
     enum _GXTexGenType func; // offset 0x4, size 0x4
     enum _GXTexGenSrc src; // offset 0x8, size 0x4
@@ -606,8 +661,9 @@ enum _GXCullMode {
     GX_CULL_BACK = 2,
     GX_CULL_ALL = 3,
 };
+// total size: 0x18
 struct /* @class$41074game_level_unity_cpp */ {
-    // total size: 0x18
+    // Members
     float left; // offset 0x0, size 0x4
     float top; // offset 0x4, size 0x4
     float width; // offset 0x8, size 0x4
@@ -617,8 +673,9 @@ struct /* @class$41074game_level_unity_cpp */ {
 };
 union /* @class$41073game_level_unity_cpp */ {
     float vp[6]; // offset 0x0, size 0x18
+    // total size: 0x18
     struct /* @class$41074game_level_unity_cpp */ {
-        // total size: 0x18
+        // Members
         float left; // offset 0x0, size 0x4
         float top; // offset 0x4, size 0x4
         float width; // offset 0x8, size 0x4
@@ -633,13 +690,15 @@ union /* @class$41073game_level_unity_cpp */ {
     float nearz; // offset 0x10, size 0x4
     float farz; // offset 0x14, size 0x4
 };
+// total size: 0x18
 struct ENgcRSViewport {
-    // total size: 0x18
+    // Members
     union { // inferred
         union /* @class$41073game_level_unity_cpp */ {
             float vp[6]; // offset 0x0, size 0x18
+            // total size: 0x18
             struct /* @class$41074game_level_unity_cpp */ {
-                // total size: 0x18
+                // Members
                 float left; // offset 0x0, size 0x4
                 float top; // offset 0x4, size 0x4
                 float width; // offset 0x8, size 0x4
@@ -655,8 +714,9 @@ struct ENgcRSViewport {
             float farz; // offset 0x14, size 0x4
         } __anon$41077; // offset 0x0, size 0x18
         float vp[6]; // offset 0x0, size 0x18
+        // total size: 0x18
         struct /* @class$41074game_level_unity_cpp */ {
-            // total size: 0x18
+            // Members
             float left; // offset 0x0, size 0x4
             float top; // offset 0x4, size 0x4
             float width; // offset 0x8, size 0x4
@@ -674,8 +734,9 @@ struct ENgcRSViewport {
         };
     };
 };
+// total size: 0x10
 struct ENgcRSScissor {
-    // total size: 0x10
+    // Members
     unsigned int left; // offset 0x0, size 0x4
     unsigned int top; // offset 0x4, size 0x4
     unsigned int width; // offset 0x8, size 0x4
@@ -686,13 +747,15 @@ enum ENgcRSProjectionType {
     E_NGCRS_PROJSCREEN = 1,
     E_NGCRS_PROJNORMAL = 2,
 };
+// total size: 0x28
 struct ENgcRSViewportStack {
-    // total size: 0x28
+    // Members
     struct ENgcRSViewport viewport; // offset 0x0, size 0x18
     struct ENgcRSScissor scissor; // offset 0x18, size 0x10
 };
+// total size: 0x28
 struct ENgcRenderStateStack {
-    // total size: 0x28
+    // Members
     struct ENgcRSZMode zMode; // offset 0x0, size 0xC
     struct ENgcRSAlphaCompareMode alphaCompareMode; // offset 0xC, size 0x14
     unsigned int geometryModes; // offset 0x20, size 0x4
@@ -747,8 +810,18 @@ enum _GXAttr {
     GX_VA_MAX_ATTR = 26,
     GX_VA_NULL = 255,
 };
+// total size: 0x1224
 class ENgcRenderStateCache {
-    // total size: 0x1224
+    // Static members
+    static int s_vpStackPos; // size: 0x4
+    static int s_stackPos; // size: 0x4
+    static struct ENgcRSViewportStack s_viewportStack[5]; // size: 0xC8
+    static struct ENgcRenderStateStack s_stateStack[9]; // size: 0x168
+    static float projMtx[4][4]; // size: 0x40
+    static float screenOrthoMtx[4][4]; // size: 0x40
+    static float rectOrthoMtx[4][4]; // size: 0x40
+
+    // Members
 protected:
     enum _GXPosNrmMtx currentMtx; // offset 0x0, size 0x4
     enum _GXPosNrmMtx _rsPrev_currentMtx; // offset 0x4, size 0x4
@@ -806,8 +879,9 @@ public:
     enum ENgcRSProjectionType projType; // offset 0x121C, size 0x4
     enum ENgcRSProjectionType _rsPrev_projType; // offset 0x1220, size 0x4
 };
+// total size: 0x1C
 class NGCRendererTevImpl {
-    // total size: 0x1C
+    // Members
     class ENgcRenderStateCache & renderStateCache; // offset 0x0, size 0x4
     struct EShaderRenderPassDef * m_renderPassDefs; // offset 0x4, size 0x4
     class ENgcTexture * * m_pCurrentTextures; // offset 0x8, size 0x4
@@ -816,8 +890,16 @@ class NGCRendererTevImpl {
     unsigned char & m_shaderUses2ndUV; // offset 0x14, size 0x4
     unsigned char & m_usesVertexIntensity; // offset 0x18, size 0x4
 };
+// total size: 0x10
 class NGCRendererAAImpl {
-    // total size: 0x10
+    // Static members
+    static unsigned char garbageBuffer[]; // size: 0x0
+    static unsigned long ANTIALIASING_SCREEN_OVERLAP; // size: 0x4
+    static unsigned char kAASamplePatternOn[12][2]; // size: 0x18
+    static unsigned char kVerticalFilterOff[7]; // size: 0x7
+    static unsigned char kVerticalFilterOn[7]; // size: 0x7
+
+    // Members
     unsigned char m_bCopyPrevFrame; // offset 0x0, size 0x1
     unsigned char m_forceDisabled; // offset 0x1, size 0x1
     struct _GXRenderModeObj & m_renderMode; // offset 0x4, size 0x4
@@ -842,8 +924,9 @@ enum _GXFogType {
     GX_FOG_REVEXP = 6,
     GX_FOG_REVEXP2 = 7,
 };
+// total size: 0x30
 class NGCRendererFogImpl {
-    // total size: 0x30
+    // Members
     unsigned char m_forceDisabled; // offset 0x0, size 0x1
     float m_intensity; // offset 0x4, size 0x4
     float m_projNearPlane; // offset 0x8, size 0x4
@@ -894,8 +977,21 @@ enum _GXTexFmt {
     GX_CTF_Z16L = 60,
     GX_TF_A8 = 39,
 };
+// total size: 0x5860
 class ENgcRenderer : public ERenderer {
-    // total size: 0x5860
+    // Static members
+    static void (ENgcRenderer::* m_jumpTable[77])(void *, void *, struct EDLEntry *); // size: 0x134
+    static class EEvent * s_frameEvent; // size: 0x4
+    static void * s_frameXfb; // size: 0x4
+    static long s_missedVBlanks; // size: 0x4
+    static unsigned char s_frameAvailable; // size: 0x1
+    static class EMutex s_copyMutex; // size: 0x1C
+    static unsigned char s_breakPointSet; // size: 0x1
+    static unsigned short s_lastTokenFromGX; // size: 0x2
+    static unsigned short s_lastTokenToGX; // size: 0x2
+    static enum _GXTexFmt kFrameEffectsBufferFormat; // size: 0x4
+
+    // Members
     unsigned char m_shadowAlpha; // offset 0x33C, size 0x1
     int m_currentBufferIndex; // offset 0x340, size 0x4
     unsigned char * m_xFrameBuffers[2]; // offset 0x344, size 0x8
@@ -960,8 +1056,9 @@ private:
     class NGCRendererAAImpl m_aaImpl; // offset 0x5820, size 0x10
     class NGCRendererFogImpl m_fogImpl; // offset 0x5830, size 0x30
 };
+// total size: 0x40
 class LineFade {
-    // total size: 0x40
+    // Members
     class EVec3 m_eyePoint; // offset 0x0, size 0xC
     class EVec3 m_interestPoint; // offset 0xC, size 0xC
     class EVec3 m_eye2Interest; // offset 0x18, size 0xC
@@ -971,22 +1068,25 @@ class LineFade {
 };
 static class EVec3 vLookAt; // size: 0xC, address: 0x80491410
 static class EVec3 vPosition; // size: 0xC, address: 0x8049141C
+// total size: 0x70
 struct ShadowPlane {
-    // total size: 0x70
+    // Members
     class EVec3 centre; // offset 0x0, size 0xC
     class EVec3 equation; // offset 0xC, size 0xC
     class EVec3 normal; // offset 0x18, size 0xC
     class EVec3 upVector; // offset 0x24, size 0xC
     class EMat4 dropShadow; // offset 0x30, size 0x40
 };
+// total size: 0xC
 struct OrderTableSortReference {
-    // total size: 0xC
+    // Members
     class EOrderTableData * otd; // offset 0x0, size 0x4
     float sortOrderValue1; // offset 0x4, size 0x4
     float sortOrderValue2; // offset 0x8, size 0x4
 };
+// total size: 0x98
 class LevelLightingTuning {
-    // total size: 0x98
+    // Members
 public:
     void * __vptr$; // offset 0x0, size 0x4
     float m_dirtyCornerScaler; // offset 0x4, size 0x4
@@ -1013,15 +1113,17 @@ unsigned char gbDrawUI; // size: 0x1, address: 0x805D865C
 unsigned char gbUpdateUI; // size: 0x1, address: 0x805D865D
 class LevelLightingTuning g_levelLightingTuning; // size: 0x98, address: 0x80491438
 class SimLightingTuning g_simLightingTuning; // size: 0x10, address: 0x804914D0
+// total size: 0x10
 struct LLNode {
-    // total size: 0x10
+    // Members
     struct LLNode * pNext; // offset 0x0, size 0x4
     struct LLNode * pPrev; // offset 0x4, size 0x4
     void * pData; // offset 0x8, size 0x4
     int nUsrFlags; // offset 0xC, size 0x4
 };
+// total size: 0x98
 struct LL {
-    // total size: 0x98
+    // Members
     int nUsrFlags; // offset 0x0, size 0x4
     char sName[128]; // offset 0x4, size 0x80
     int nNumElements; // offset 0x84, size 0x4
@@ -1030,14 +1132,16 @@ struct LL {
     struct LLNode * pTracer; // offset 0x90, size 0x4
     void (* pFreeCB)(void *); // offset 0x94, size 0x4
 };
+// total size: 0x84
 struct _ptableinfo {
-    // total size: 0x84
+    // Members
     char sName[32]; // offset 0x0, size 0x20
     float fProbablitity; // offset 0x20, size 0x4
     char sEmitters[3][32]; // offset 0x24, size 0x60
 };
+// total size: 0x58C
 struct pemitterinfo {
-    // total size: 0x58C
+    // Members
     class PMatrix4 LcsWcs; // offset 0x0, size 0x40
     class PVector4 Turbulence; // offset 0x40, size 0x10
     class PVector4 IColor; // offset 0x50, size 0x10
@@ -1088,8 +1192,9 @@ struct pemitterinfo {
     unsigned int nTableInfo; // offset 0x168, size 0x4
     struct _ptableinfo TableInfo[8]; // offset 0x16C, size 0x420
 };
+// total size: 0x50
 struct particle {
-    // total size: 0x50
+    // Members
     struct LLNode * pNext; // offset 0x0, size 0x4
     struct LLNode * pPrev; // offset 0x4, size 0x4
     void * pad[2]; // offset 0x8, size 0x8
@@ -1098,12 +1203,14 @@ struct particle {
     class PVector4 PrevPos; // offset 0x30, size 0x10
     class PVector4 PPrevPos; // offset 0x40, size 0x10
 };
+// total size: 0x4
 struct psystem {
-    // total size: 0x4
+    // Members
     struct LL * pLL; // offset 0x0, size 0x4
 };
+// total size: 0xC0
 struct pemitter {
-    // total size: 0xC0
+    // Members
     class PMatrix4 LcsWcs; // offset 0x0, size 0x40
     class PVector4 vLocalGravity; // offset 0x40, size 0x10
     unsigned int nFlags; // offset 0x50, size 0x4
@@ -1129,15 +1236,17 @@ struct pemitter {
     struct psystem * pParentPSystem; // offset 0xB8, size 0x4
     float fScale; // offset 0xBC, size 0x4
 };
+// total size: 0xC4
 class Emitter : public EInstance {
-    // total size: 0xC4
+    // Members
     struct pemitter * m_pEmitter; // offset 0x78, size 0x4
     class EVec3 m_vSortPos; // offset 0x7C, size 0xC
 public:
     class EOrderTableData m_otd; // offset 0x88, size 0x3C
 };
+// total size: 0x40
 struct /* @class$42385game_level_unity_cpp */ {
-    // total size: 0x40
+    // Members
     float m00; // offset 0x0, size 0x4
     float m01; // offset 0x4, size 0x4
     float m02; // offset 0x8, size 0x4
@@ -1157,8 +1266,9 @@ struct /* @class$42385game_level_unity_cpp */ {
 };
 union /* @class$42384game_level_unity_cpp */ {
     float m[4][4]; // offset 0x0, size 0x40
+    // total size: 0x40
     struct /* @class$42385game_level_unity_cpp */ {
-        // total size: 0x40
+        // Members
         float m00; // offset 0x0, size 0x4
         float m01; // offset 0x4, size 0x4
         float m02; // offset 0x8, size 0x4
@@ -1177,14 +1287,16 @@ union /* @class$42384game_level_unity_cpp */ {
         float m33; // offset 0x3C, size 0x4
     } mat; // offset 0x0, size 0x40
 };
+// total size: 0x40
 class PMatrix4 {
-    // total size: 0x40
+    // Members
 public:
     union { // inferred
         union /* @class$42384game_level_unity_cpp */ {
             float m[4][4]; // offset 0x0, size 0x40
+            // total size: 0x40
             struct /* @class$42385game_level_unity_cpp */ {
-                // total size: 0x40
+                // Members
                 float m00; // offset 0x0, size 0x4
                 float m01; // offset 0x4, size 0x4
                 float m02; // offset 0x8, size 0x4
@@ -1204,8 +1316,9 @@ public:
             } mat; // offset 0x0, size 0x40
         } __anon$42386; // offset 0x0, size 0x40
         float m[4][4]; // offset 0x0, size 0x40
+        // total size: 0x40
         struct /* @class$42385game_level_unity_cpp */ {
-            // total size: 0x40
+            // Members
             float m00; // offset 0x0, size 0x4
             float m01; // offset 0x4, size 0x4
             float m02; // offset 0x8, size 0x4
@@ -1228,8 +1341,9 @@ public:
 class ERC * g_pRC; // size: 0x4, address: 0x805DB77C
 static class EMat4 g_DefaultFacingMat; // size: 0x40, address: 0x804914E0
 static class EVec4 UnitVec; // size: 0x10, address: 0x80491520
+// total size: 0x10
 struct /* @class$42380game_level_unity_cpp */ {
-    // total size: 0x10
+    // Members
     float x; // offset 0x0, size 0x4
     float y; // offset 0x4, size 0x4
     float z; // offset 0x8, size 0x4
@@ -1237,22 +1351,25 @@ struct /* @class$42380game_level_unity_cpp */ {
 };
 union /* @class$42379game_level_unity_cpp */ {
     float v[4]; // offset 0x0, size 0x10
+    // total size: 0x10
     struct /* @class$42380game_level_unity_cpp */ {
-        // total size: 0x10
+        // Members
         float x; // offset 0x0, size 0x4
         float y; // offset 0x4, size 0x4
         float z; // offset 0x8, size 0x4
         float w; // offset 0xC, size 0x4
     } vec; // offset 0x0, size 0x10
 };
+// total size: 0x10
 class PVector4 {
-    // total size: 0x10
+    // Members
 public:
     union { // inferred
         union /* @class$42379game_level_unity_cpp */ {
             float v[4]; // offset 0x0, size 0x10
+            // total size: 0x10
             struct /* @class$42380game_level_unity_cpp */ {
-                // total size: 0x10
+                // Members
                 float x; // offset 0x0, size 0x4
                 float y; // offset 0x4, size 0x4
                 float z; // offset 0x8, size 0x4
@@ -1260,8 +1377,9 @@ public:
             } vec; // offset 0x0, size 0x10
         } __anon$42381; // offset 0x0, size 0x10
         float v[4]; // offset 0x0, size 0x10
+        // total size: 0x10
         struct /* @class$42380game_level_unity_cpp */ {
-            // total size: 0x10
+            // Members
             float x; // offset 0x0, size 0x4
             float y; // offset 0x4, size 0x4
             float z; // offset 0x8, size 0x4
@@ -1270,8 +1388,10 @@ public:
     };
 };
 class MidLotInstanceFactory * s_pSingleton; // size: 0x4, address: 0x805DB780
+// total size: 0x1
 class MidLotInstanceFactory {
-    // total size: 0x1
+    // Static members
+    static class MidLotInstanceFactory * s_pSingleton; // size: 0x4
 };
 class EVec3 kDefaultStageCameraPos; // size: 0xC, address: 0x80491530
 class EVec3 kDefaultStageCameraLookAt; // size: 0xC, address: 0x8049153C
@@ -1333,19 +1453,71 @@ enum eSequenceRadio {
     eSEQUENCE_RADIO_BILLS = 6,
     eSEQUENCE_RADIO_COUNT = 7,
 };
+// total size: 0x20
 class CachedSimRenderManager {
-    // total size: 0x20
+    // Members
     class CachedSimRenderer * m_SimCacheRenderers[6]; // offset 0x0, size 0x18
     unsigned char m_bSimCacheRenderToggles[6]; // offset 0x18, size 0x6
     unsigned char m_bUseBoneRendering; // offset 0x1E, size 0x1
 };
+// total size: 0xAC
 class EndGameCreditsManager : public UIObjectBase {
-    // total size: 0xAC
+    // Members
     class CRDTarget * m_pCRDTarget; // offset 0xA4, size 0x4
     unsigned char m_bCreditsShowing; // offset 0xA8, size 0x1
 };
+// total size: 0x4A4
 class SequenceManager {
-    // total size: 0x4A4
+    // Static members
+    static class SequenceManager * s_pSequenceManager; // size: 0x4
+    static int kStaticCatamaranPropBone; // size: 0x4
+    static int kStaticSimLeftPropBone; // size: 0x4
+    static int kStaticSimRightPropBone; // size: 0x4
+    static unsigned int kCommonModelBills4[3]; // size: 0xC
+    static unsigned int kCommonModelBills3[3]; // size: 0xC
+    static unsigned int kCommonModelBills2[3]; // size: 0xC
+    static unsigned int kCommonModelBills1[3]; // size: 0xC
+    static unsigned int kCommonModelBillprop[3]; // size: 0xC
+    static unsigned int kCommonModelChair[3]; // size: 0xC
+    static unsigned int kCommonModelTable[3]; // size: 0xC
+    static unsigned int kRadioSamples[7]; // size: 0x1C
+    static unsigned int kRadioBackgroundBills[3]; // size: 0xC
+    static unsigned int kRadioBackgroundHome[3]; // size: 0xC
+    static unsigned int kRadioBackgroundCrew[3]; // size: 0xC
+    static unsigned int kRadioBackgroundWaving[3]; // size: 0xC
+    static unsigned int kRadioBackgroundBoat[3]; // size: 0xC
+    static unsigned int kRadioBackgroundInterior[3]; // size: 0xC
+    static unsigned int kRadioBackgroundOpening[3]; // size: 0xC
+    static class EVec3 kRadioCameraLookAt[7]; // size: 0x54
+    static class EVec3 kRadioCameraPos[7]; // size: 0x54
+    static char * kRadioSequenceSimAnimations[7][6]; // size: 0xA8
+    static class EVec3 kRadioSequenceSimLocs[7][6]; // size: 0x1F8
+    static float kRadioDuration[7]; // size: 0x1C
+    static class EVec3 kCatamaranLocator; // size: 0xC
+    static unsigned int kCatamaranAltAnimation; // size: 0x4
+    static unsigned int kCatSamples[7]; // size: 0x1C
+    static unsigned int kCatBackgroundBills[3]; // size: 0xC
+    static unsigned int kCatBackgroundHome[3]; // size: 0xC
+    static unsigned int kCatBackgroundBoat3[3]; // size: 0xC
+    static unsigned int kCatBackgroundBoat2[3]; // size: 0xC
+    static unsigned int kCatBackgroundBoat[3]; // size: 0xC
+    static unsigned int kCatBackgroundPushing[3]; // size: 0xC
+    static unsigned int kCatBackgroundOpening[3]; // size: 0xC
+    static class EVec3 kCatCameraLookAt[7]; // size: 0x54
+    static class EVec3 kCatCameraPos[7]; // size: 0x54
+    static char * kCatSequenceSimAnimations[7][6]; // size: 0xA8
+    static class EVec3 kCatSequenceSimLocs[7][6]; // size: 0x1F8
+    static float kCatDuration[7]; // size: 0x1C
+    static class EVec3 kDebugOffset; // size: 0xC
+    static class EVec3 kCatamaranOffset; // size: 0xC
+    static class EVec3 kDefaultOffset; // size: 0xC
+    static class EVec3 kDefaultStageCameraLookAt; // size: 0xC
+    static class EVec3 kDefaultStageCameraPos; // size: 0xC
+    static float kDefaultStageDuration; // size: 0x4
+    static float kFadeInTime; // size: 0x4
+    static float kFadeOutTime; // size: 0x4
+
+    // Members
     enum eSequenceType m_eCurrentSequence; // offset 0x0, size 0x4
     float m_fCurrentStageDuration; // offset 0x4, size 0x4
     enum eSequenceCat m_eSequenceCatCurrent; // offset 0x8, size 0x4
@@ -1392,12 +1564,10 @@ enum eDialogNavOptions {
     DIALOG_NAV_NONE = 0,
     DIALOG_NAV_RETURN_TO_ISLAND = 1,
 };
-class CBMemberTranslator0 : public CBFunctor0 {
-    // total size: 0x14
-};
-class CBMemberTranslator1 : public CBFunctor1 {
-    // total size: 0x14
-};
+// total size: 0x14
+class CBMemberTranslator0 : public CBFunctor0 {};
+// total size: 0x14
+class CBMemberTranslator1 : public CBFunctor1 {};
 enum eCommonModels {
     eCOMMON_TABLE = 0,
     eCOMMON_CHAIR = 1,
@@ -1408,90 +1578,69 @@ enum eCommonModels {
     eCOMMON_BILLS4 = 6,
     eCOMMON_COUNT = 7,
 };
-struct {
-    // total size: 0xE0
-} __vt__7Emitter; // size: 0xE0, address: 0x80429710
-struct {
-    // total size: 0xE8
-} __vt__16EIStaticSubModel; // size: 0xE8, address: 0x804297F0
-struct {
-    // total size: 0xC
-} __vt__19LevelLightingTuning; // size: 0xC, address: 0x804298D8
-struct {
-    // total size: 0xFC
-} __vt__11EISpotLight; // size: 0xFC, address: 0x804298E4
-struct {
-    // total size: 0xFC
-} __vt__15EIPointAmbLight; // size: 0xFC, address: 0x804299E0
-struct {
-    // total size: 0x100
-} __vt__18EIPortalPointLight; // size: 0x100, address: 0x80429AE0
-struct {
-    // total size: 0x48
-} __vt__7ERLevel; // size: 0x48, address: 0x80429BE0
-struct {
-    // total size: 0x4C
-} __vt__16WallPostInstance; // size: 0x4C, address: 0x80429C28
-struct {
-    // total size: 0xC
-} __vt__18WallPostCollection; // size: 0xC, address: 0x80429C74
-struct {
-    // total size: 0xC
-} __vt__15WallPostStorage; // size: 0xC, address: 0x80429C80
-struct {
-    // total size: 0x34
-} __vt__13ELevelManager; // size: 0x34, address: 0x80429C8C
-struct {
-    // total size: 0x100
-} __vt__10EIAmbLight; // size: 0x100, address: 0x80429CC0
-struct {
-    // total size: 0xFC
-} __vt__10EIDirLight; // size: 0xFC, address: 0x80429DC0
-struct {
-    // total size: 0xFC
-} __vt__12EIPointLight; // size: 0xFC, address: 0x80429EBC
-struct {
-    // total size: 0xFC
-} __vt__7EILight; // size: 0xFC, address: 0x80429FB8
-struct {
-    // total size: 0xF0
-} __vt__13EIStaticModel; // size: 0xF0, address: 0x8042A0B8
-struct {
-    // total size: 0x4C
-} __vt__12TreeInstance; // size: 0x4C, address: 0x8042A1A8
-struct {
-    // total size: 0x54
-} __vt__14BranchInstance; // size: 0x54, address: 0x8042A1F4
-struct {
-    // total size: 0x4C
-} __vt__15EMidLotInstance; // size: 0x4C, address: 0x8042A248
-struct {
-    // total size: 0xE0
-} __vt__14EIGameInstance; // size: 0xE0, address: 0x8042A298
-struct {
-    // total size: 0xE0
-} __vt__9EInstance; // size: 0xE0, address: 0x8042A378
-struct {
-    // total size: 0x24
-} __vt__13EBaseInstance; // size: 0x24, address: 0x8042A458
-struct {
-    // total size: 0x2C
-} __vt__9EStorable; // size: 0x2C, address: 0x8042A47C
+// total size: 0xE0
+struct {} __vt__7Emitter; // size: 0xE0, address: 0x80429710
+// total size: 0xE8
+struct {} __vt__16EIStaticSubModel; // size: 0xE8, address: 0x804297F0
+// total size: 0xC
+struct {} __vt__19LevelLightingTuning; // size: 0xC, address: 0x804298D8
+// total size: 0xFC
+struct {} __vt__11EISpotLight; // size: 0xFC, address: 0x804298E4
+// total size: 0xFC
+struct {} __vt__15EIPointAmbLight; // size: 0xFC, address: 0x804299E0
+// total size: 0x100
+struct {} __vt__18EIPortalPointLight; // size: 0x100, address: 0x80429AE0
+// total size: 0x48
+struct {} __vt__7ERLevel; // size: 0x48, address: 0x80429BE0
+// total size: 0x4C
+struct {} __vt__16WallPostInstance; // size: 0x4C, address: 0x80429C28
+// total size: 0xC
+struct {} __vt__18WallPostCollection; // size: 0xC, address: 0x80429C74
+// total size: 0xC
+struct {} __vt__15WallPostStorage; // size: 0xC, address: 0x80429C80
+// total size: 0x34
+struct {} __vt__13ELevelManager; // size: 0x34, address: 0x80429C8C
+// total size: 0x100
+struct {} __vt__10EIAmbLight; // size: 0x100, address: 0x80429CC0
+// total size: 0xFC
+struct {} __vt__10EIDirLight; // size: 0xFC, address: 0x80429DC0
+// total size: 0xFC
+struct {} __vt__12EIPointLight; // size: 0xFC, address: 0x80429EBC
+// total size: 0xFC
+struct {} __vt__7EILight; // size: 0xFC, address: 0x80429FB8
+// total size: 0xF0
+struct {} __vt__13EIStaticModel; // size: 0xF0, address: 0x8042A0B8
+// total size: 0x4C
+struct {} __vt__12TreeInstance; // size: 0x4C, address: 0x8042A1A8
+// total size: 0x54
+struct {} __vt__14BranchInstance; // size: 0x54, address: 0x8042A1F4
+// total size: 0x4C
+struct {} __vt__15EMidLotInstance; // size: 0x4C, address: 0x8042A248
+// total size: 0xE0
+struct {} __vt__14EIGameInstance; // size: 0xE0, address: 0x8042A298
+// total size: 0xE0
+struct {} __vt__9EInstance; // size: 0xE0, address: 0x8042A378
+// total size: 0x24
+struct {} __vt__13EBaseInstance; // size: 0x24, address: 0x8042A458
+// total size: 0x2C
+struct {} __vt__9EStorable; // size: 0x2C, address: 0x8042A47C
+// total size: 0x4
 class generic_iterator {
-    // total size: 0x4
+    // Members
 protected:
     class EMidLotInstance * * mIterator; // offset 0x0, size 0x4
 };
+// total size: 0x4
 class generic_iterator {
-    // total size: 0x4
+    // Members
 protected:
     struct MidLotObject * mIterator; // offset 0x0, size 0x4
 };
-class ECharacterManager : public EResourceManager {
-    // total size: 0xD44
-};
+// total size: 0xD44
+class ECharacterManager : public EResourceManager {};
+// total size: 0x268
 class ENgcGraphics : public EGraphics {
-    // total size: 0x268
+    // Members
     class ETexture * m_shadowMapTexture; // offset 0x25C, size 0x4
     class EShader * m_pClearZShader; // offset 0x260, size 0x4
 };
@@ -1501,8 +1650,9 @@ enum EffectState {
     kRunning = 4,
     kFadingOut = 8,
 };
+// total size: 0x14
 class FrameEffect {
-    // total size: 0x14
+    // Members
 public:
     void * __vptr$; // offset 0x0, size 0x4
 protected:
@@ -1512,48 +1662,55 @@ private:
     float m_elapsedTime; // offset 0xC, size 0x4
     enum EffectState m_effectState; // offset 0x10, size 0x4
 };
+// total size: 0xC
 struct MotionBlurSettings {
-    // total size: 0xC
+    // Members
     float m_colorOffset; // offset 0x0, size 0x4
     float m_previousFrameBlendAmount; // offset 0x4, size 0x4
     int m_downSampleLevel; // offset 0x8, size 0x4
 };
+// total size: 0x38
 class MotionBlur : public FrameEffect {
-    // total size: 0x38
+    // Members
 protected:
     struct MotionBlurSettings m_targetSettings; // offset 0x14, size 0xC
     struct MotionBlurSettings m_currentSettings; // offset 0x20, size 0xC
     struct MotionBlurSettings m_interpolationStartSettings; // offset 0x2C, size 0xC
 };
+// total size: 0x2C
 struct BloomSettings {
-    // total size: 0x2C
+    // Members
     float m_frameAmp; // offset 0x0, size 0x4
     float m_bloomThreshold; // offset 0x4, size 0x4
     float m_bloomAmp; // offset 0x8, size 0x4
     float m_bloomFrameBlends[4][2]; // offset 0xC, size 0x20
 };
+// total size: 0x98
 class Bloom : public FrameEffect {
-    // total size: 0x98
+    // Members
 protected:
     struct BloomSettings m_targetSettings; // offset 0x14, size 0x2C
     struct BloomSettings m_currentSettings; // offset 0x40, size 0x2C
     struct BloomSettings m_interpolationStartSettings; // offset 0x6C, size 0x2C
 };
+// total size: 0x14
 struct DepthOfFieldSettings {
-    // total size: 0x14
+    // Members
     int m_downSampleLevel; // offset 0x0, size 0x4
     class EVec3 m_tint; // offset 0x4, size 0xC
     float m_blurFactor; // offset 0x10, size 0x4
 };
+// total size: 0x50
 class DepthOfField : public FrameEffect {
-    // total size: 0x50
+    // Members
 protected:
     struct DepthOfFieldSettings m_targetSettings; // offset 0x14, size 0x14
     struct DepthOfFieldSettings m_currentSettings; // offset 0x28, size 0x14
     struct DepthOfFieldSettings m_interpolationStartSettings; // offset 0x3C, size 0x14
 };
+// total size: 0xC
 class FrameEffectsManager {
-    // total size: 0xC
+    // Members
     class MotionBlur * m_motionBlurObject; // offset 0x0, size 0x4
     class Bloom * m_bloomObject; // offset 0x4, size 0x4
     class DepthOfField * m_depthOfFieldObject; // offset 0x8, size 0x4

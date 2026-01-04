@@ -5,6 +5,7 @@
     Code range: 0x8001D020 -> 0x8001D060
 */
 // Range: 0x8001D020 -> 0x8001D060
-void * AutorunTweakTool::~AutorunTweakTool(class AutorunTweakTool * const this /* r31 */) {}
+// this: r31
+AutorunTweakTool::~AutorunTweakTool() {}
 
 

@@ -5,10 +5,12 @@
     Code range: 0x80332B58 -> 0x80332CC0
 */
 // Range: 0x80332B58 -> 0x80332BBC
-void * AptXmlAttributes::~AptXmlAttributes(class AptXmlAttributes * const this /* r30 */) {}
+// this: r30
+AptXmlAttributes::~AptXmlAttributes() {}
 
 // Range: 0x80332BBC -> 0x80332C0C
-void * AptXmlAttributes::AptXmlAttributes(class AptXmlAttributes * const this /* r30 */, class IAptXmlNode * pIXmlNodeParam /* r31 */) {
+// this: r30
+AptXmlAttributes::AptXmlAttributes(class IAptXmlNode * pIXmlNodeParam /* r31 */) {
     // References
     // -> struct [anonymous] __vt__16AptXmlAttributes;
 }
@@ -22,7 +24,6 @@ unsigned char AptXmlAttributes::objectMemberSet(class AptValue * const pContext 
     class AptXmlAttributes * pXmlAttrib; // r0
 }
 
-struct {
-    // total size: 0x44
-} __vt__16AptXmlAttributes; // size: 0x44, address: 0x8045FA20
+// total size: 0x44
+struct {} __vt__16AptXmlAttributes; // size: 0x44, address: 0x8045FA20
 

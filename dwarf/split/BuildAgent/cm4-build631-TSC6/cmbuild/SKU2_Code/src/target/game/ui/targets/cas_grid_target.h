@@ -5,15 +5,19 @@
     Code range: 0x80196E8C -> 0x80197014
 */
 // Range: 0x80196E8C -> 0x80196EF0
-signed short CASGridTarget::GetHighlightedClothingItemInstanceID(class CASGridTarget * const this /* r30 */) {}
+// this: r30
+signed short CASGridTarget::GetHighlightedClothingItemInstanceID() {}
 
 // Range: 0x80196EF0 -> 0x80196F54
-int CASGridTarget::GetHighlightedOption(class CASGridTarget * const this /* r30 */) {}
+// this: r30
+int CASGridTarget::GetHighlightedOption() {}
 
 // Range: 0x80196F54 -> 0x80196FC0
-unsigned char CASGridTarget::GetIsHighlightedOptionDeletable(class CASGridTarget * const this /* r30 */) {}
+// this: r30
+unsigned char CASGridTarget::GetIsHighlightedOptionDeletable() {}
 
 // Range: 0x80196FC0 -> 0x80197014
-unsigned char CASGridTarget::IsCharacterMale(class CASGridTarget * const this /* r31 */) {}
+// this: r31
+unsigned char CASGridTarget::IsCharacterMale() {}
 
 

@@ -5,13 +5,15 @@
     Code range: 0x8014244C -> 0x80145F94
 */
 // Range: 0x8014244C -> 0x80142574
-void * ObjectModule::ObjectModule(class ObjectModule * const this /* r29 */) {
+// this: r29
+ObjectModule::ObjectModule() {
     // References
     // -> struct [anonymous] __vt__12ObjectModule;
 }
 
 // Range: 0x80142574 -> 0x801426EC
-int ObjectModule::Save(class ObjectModule * const this /* r25 */, class iResFile * pFile /* r26 */) {
+// this: r25
+int ObjectModule::Save(class iResFile * pFile /* r26 */) {
     // Local variables
     int version; // r30
     int currentLot; // r29
@@ -28,7 +30,8 @@ int ObjectModule::Save(class ObjectModule * const this /* r25 */, class iResFile
 }
 
 // Range: 0x801426EC -> 0x80142834
-int ObjectModule::Load(class ObjectModule * const this /* r28 */, class iResFile * pFile /* r29 */) {
+// this: r28
+int ObjectModule::Load(class iResFile * pFile /* r29 */) {
     // Local variables
     class ObjectFolder * const pFolder; // r31
     int version; // r1+0xC
@@ -41,7 +44,8 @@ int ObjectModule::Load(class ObjectModule * const this /* r28 */, class iResFile
 }
 
 // Range: 0x80142834 -> 0x801429A8
-void ObjectModule::killDemolishedObjects(class ObjectModule * const this /* r24 */) {
+// this: r24
+void ObjectModule::killDemolishedObjects() {
     // Local variables
     struct HandleNode * handle; // r30
     class vector killList; // r1+0x10
@@ -55,7 +59,8 @@ void ObjectModule::killDemolishedObjects(class ObjectModule * const this /* r24 
 }
 
 // Range: 0x801429A8 -> 0x80142A30
-void ObjectModule::PostLoad(class ObjectModule * const this /* r27 */, class iResFile * pFile /* r28 */, int version /* r29 */, enum TransitionType transitionType /* r30 */) {
+// this: r27
+void ObjectModule::PostLoad(class iResFile * pFile /* r28 */, int version /* r29 */, enum TransitionType transitionType /* r30 */) {
     // Local variables
     class cXObject * srch; // r31
 }
@@ -73,7 +78,8 @@ void ObjectModule::SelectPlayerSims() {
 }
 
 // Range: 0x80142AB4 -> 0x80142B54
-void ObjectModule::DoReconObject(class ObjectModule * const this /* r29 */, class ReconBuffer * r /* r30 */, class cXObject * * obj /* r31 */) {
+// this: r29
+void ObjectModule::DoReconObject(class ReconBuffer * r /* r30 */, class cXObject * * obj /* r31 */) {
     // Local variables
     signed short objID; // r1+0x8
 }
@@ -85,7 +91,8 @@ void ObjectModule::DoReconPerson(class ReconBuffer * r /* r30 */, class cXPerson
 }
 
 // Range: 0x80142BD4 -> 0x8014305C
-void ObjectModule::DoStream(class ObjectModule * const this /* r29 */, class ReconBuffer * r /* r30 */, int version /* r31 */) {
+// this: r29
+void ObjectModule::DoStream(class ReconBuffer * r /* r30 */, int version /* r31 */) {
     // Local variables
     unsigned char compress; // r1+0x8
     class ObjSelector * placeHolder; // r0
@@ -113,16 +120,19 @@ void ObjectModule::DoStream(class ObjectModule * const this /* r29 */, class Rec
 }
 
 // Range: 0x8014305C -> 0x801430C0
-void ObjectModule::Init(class ObjectModule * const this /* r31 */) {}
+// this: r31
+void ObjectModule::Init() {}
 
 // Range: 0x801430C0 -> 0x80143128
-void ObjectModule::LoadGlobalRoutingSlots(class ObjectModule * const this /* r31 */) {
+// this: r31
+void ObjectModule::LoadGlobalRoutingSlots() {
     // Local variables
     class SlotLoader sl; // r1+0x8
 }
 
 // Range: 0x80143128 -> 0x8014329C
-void ObjectModule::Destroy(class ObjectModule * const this /* r28 */) {
+// this: r28
+void ObjectModule::Destroy() {
     // Local variables
     class cXObject * * i; // r30
     int i; // r29
@@ -131,7 +141,8 @@ void ObjectModule::Destroy(class ObjectModule * const this /* r28 */) {
 }
 
 // Range: 0x8014329C -> 0x80143384
-class cXObject * ObjectModule::GetObjectByGUID(class ObjectModule * const this /* r28 */, int inGUID /* r29 */) {
+// this: r28
+class cXObject * ObjectModule::GetObjectByGUID(int inGUID /* r29 */) {
     // Local variables
     class ObjSelector * sel; // r0
     class cXObject * * i; // r29
@@ -140,19 +151,22 @@ class cXObject * ObjectModule::GetObjectByGUID(class ObjectModule * const this /
 }
 
 // Range: 0x80143384 -> 0x80143404
-class cXPerson * ObjectModule::GetPersonByGUID(class ObjectModule * const this /* r29 */, int guid /* r30 */) {
+// this: r29
+class cXPerson * ObjectModule::GetPersonByGUID(int guid /* r30 */) {
     // Local variables
     class cXPerson * * i; // r31
 }
 
 // Range: 0x80143404 -> 0x80143554
-class cXObject * ObjectModule::ConstructObject(class ObjectModule * const this /* r29 */, class ObjSelector * sel /* r30 */, class cXMTObject * mtLead /* r31 */) {
+// this: r29
+class cXObject * ObjectModule::ConstructObject(class ObjSelector * sel /* r30 */, class cXMTObject * mtLead /* r31 */) {
     // Local variables
     const struct ObjDefinition * def; // r0
 }
 
 // Range: 0x80143554 -> 0x801438CC
-signed short ObjectModule::MakeNewOutOfWorldObject(class ObjectModule * const this /* r20 */, class ObjSelector * objSel /* r21 */, signed short * pIDToUse /* r22 */) {
+// this: r20
+signed short ObjectModule::MakeNewOutOfWorldObject(class ObjSelector * objSel /* r21 */, signed short * pIDToUse /* r22 */) {
     // Local variables
     signed short idToUse; // r30
     signed short newID; // r29
@@ -169,7 +183,8 @@ signed short ObjectModule::MakeNewOutOfWorldObject(class ObjectModule * const th
 }
 
 // Range: 0x801438CC -> 0x80143BE4
-void ObjectModule::KillOutOfWorldObject(class ObjectModule * const this /* r30 */, signed short id /* r31 */, unsigned char multiPart /* r27 */) {
+// this: r30
+void ObjectModule::KillOutOfWorldObject(signed short id /* r31 */, unsigned char multiPart /* r27 */) {
     // Local variables
     class cXObject * obj; // r28
     class ISimInstance * pInstance; // r29
@@ -186,7 +201,8 @@ void ObjectModule::KillOutOfWorldObject(class ObjectModule * const this /* r30 *
 }
 
 // Range: 0x80143BE4 -> 0x80143D9C
-void ObjectModule::KillObject(class ObjectModule * const this /* r26 */, signed short id /* r27 */) {
+// this: r26
+void ObjectModule::KillObject(signed short id /* r27 */) {
     // Local variables
     class cXObject * obj; // r30
     unsigned char hasRoomImpact; // r29
@@ -200,7 +216,8 @@ void ObjectModule::KillObject(class ObjectModule * const this /* r26 */, signed 
 }
 
 // Range: 0x80143D9C -> 0x80143E70
-void ObjectModule::KillQueueFlush(class ObjectModule * const this /* r29 */) {
+// this: r29
+void ObjectModule::KillQueueFlush() {
     // Local variables
     signed short killID; // r31
     class cXObject * obj; // r30
@@ -208,7 +225,8 @@ void ObjectModule::KillQueueFlush(class ObjectModule * const this /* r29 */) {
 }
 
 // Range: 0x80143E70 -> 0x80143F08
-unsigned char ObjectModule::PostSim(class ObjectModule * const this /* r31 */) {
+// this: r31
+unsigned char ObjectModule::PostSim() {
     // Local variables
     class cXPerson * selected; // r0
 }
@@ -220,7 +238,8 @@ void ObjectModule::DayChanged() {
 }
 
 // Range: 0x80143F54 -> 0x80144098
-void ObjectModule::UpdateRooms(class ObjectModule * const this /* r27 */, int inLevel /* r28 */) {
+// this: r27
+void ObjectModule::UpdateRooms(int inLevel /* r28 */) {
     // Local variables
     class cXObject * obj; // r29
     class cXPerson * p; // r0
@@ -228,14 +247,16 @@ void ObjectModule::UpdateRooms(class ObjectModule * const this /* r27 */, int in
 }
 
 // Range: 0x80144098 -> 0x80144118
-void ObjectModule::UpdateInteractionInfluences(class ObjectModule * const this /* r30 */) {
+// this: r30
+void ObjectModule::UpdateInteractionInfluences() {
     // Local variables
     class InfluenceMap * influenceMap; // r31
     class cXObject * obj; // r30
 }
 
 // Range: 0x80144118 -> 0x80144298
-int ObjectModule::KillAllObjects(class ObjectModule * const this /* r30 */) {
+// this: r30
+int ObjectModule::KillAllObjects() {
     // Local variables
     class cXObject * pObj; // r31
     class vector temp; // r1+0x20
@@ -249,7 +270,8 @@ int ObjectModule::KillAllObjects(class ObjectModule * const this /* r30 */) {
 }
 
 // Range: 0x80144298 -> 0x80144410
-int ObjectModule::KillObjectsOutsideBounds(class ObjectModule * const this /* r25 */, int minX /* r26 */, int minY /* r27 */, int maxX /* r28 */, int maxY /* r29 */) {
+// this: r25
+int ObjectModule::KillObjectsOutsideBounds(int minX /* r26 */, int minY /* r27 */, int maxX /* r28 */, int maxY /* r29 */) {
     // Local variables
     class cXObject * cur_obj; // r31
     class CTilePt where; // r1+0x8
@@ -258,7 +280,8 @@ int ObjectModule::KillObjectsOutsideBounds(class ObjectModule * const this /* r2
 }
 
 // Range: 0x80144410 -> 0x8014457C
-void ObjectModule::UpdateSimObjects(class ObjectModule * const this /* r27 */) {
+// this: r27
+void ObjectModule::UpdateSimObjects() {
     // Local variables
     class vector simObjects; // r1+0x10
     class cXObject * srch; // r1+0xC
@@ -270,7 +293,8 @@ void ObjectModule::UpdateSimObjects(class ObjectModule * const this /* r27 */) {
 }
 
 // Range: 0x8014457C -> 0x801446E4
-void ObjectModule::AddToKillQueue(class ObjectModule * const this /* r26 */, signed short id /* r1+0x8 */, unsigned char cleanup /* r27 */) {
+// this: r26
+void ObjectModule::AddToKillQueue(signed short id /* r1+0x8 */, unsigned char cleanup /* r27 */) {
     // Local variables
     class cXObject * obj; // r30
     class cXMTObject * mtObj; // r31
@@ -281,20 +305,23 @@ void ObjectModule::AddToKillQueue(class ObjectModule * const this /* r26 */, sig
 }
 
 // Range: 0x801446E4 -> 0x80144784
-unsigned char ObjectModule::IsFamilyMemberAwakeAndVisible(class ObjectModule * const this /* r30 */) {
+// this: r30
+unsigned char ObjectModule::IsFamilyMemberAwakeAndVisible() {
     // Local variables
     class cXPerson * * i; // r31
 }
 
 // Range: 0x80144784 -> 0x80144870
-unsigned char ObjectModule::DoCommand(class ObjectModule * const this /* r31 */) {
+// this: r31
+unsigned char ObjectModule::DoCommand() {
     // Local variables
     class SlotLoader sl; // r1+0x8
     class cXObject * obj; // r31
 }
 
 // Range: 0x80144870 -> 0x80144B9C
-signed short ObjectModule::AddObject(class ObjectModule * const this /* r28 */, class cXObject * obj /* r29 */, signed short newID /* r30 */, unsigned char eol /* r31 */) {
+// this: r28
+signed short ObjectModule::AddObject(class cXObject * obj /* r29 */, signed short newID /* r30 */, unsigned char eol /* r31 */) {
     // Local variables
     signed short iStart; // [invalid]
     char errorBuffer[256]; // r1+0x18
@@ -307,7 +334,8 @@ signed short ObjectModule::AddObject(class ObjectModule * const this /* r28 */, 
 }
 
 // Range: 0x80144B9C -> 0x80144DD0
-void ObjectModule::RemoveObject(class ObjectModule * const this /* r30 */, class cXObject * obj /* r31 */) {
+// this: r30
+void ObjectModule::RemoveObject(class cXObject * obj /* r31 */) {
     // Local variables
     signed short id; // r0
     class cXObject * last; // r29
@@ -325,13 +353,15 @@ void ObjectModule::RemoveObject(class ObjectModule * const this /* r30 */, class
 void ObjectModule::DisableBuyAndBuild(class cXObject * disabler /* r1+0x8 */) {}
 
 // Range: 0x80144DFC -> 0x80144E78
-void ObjectModule::EnableBuyAndBuild(class ObjectModule * const this /* r29 */, class cXObject * enabler /* r30 */) {
+// this: r29
+void ObjectModule::EnableBuyAndBuild(class cXObject * enabler /* r30 */) {
     // Local variables
     class cXObject * * i; // r31
 }
 
 // Range: 0x80144E78 -> 0x80144F80
-unsigned char ObjectModule::CheckIntegrity(class ObjectModule * const this /* r28 */) {
+// this: r28
+unsigned char ObjectModule::CheckIntegrity() {
     // Local variables
     class cFixedWorld * world; // r31
     class cXObject * obj; // r30
@@ -341,14 +371,16 @@ unsigned char ObjectModule::CheckIntegrity(class ObjectModule * const this /* r2
 }
 
 // Range: 0x80144F80 -> 0x80145004
-void ObjectModule::ClearAwarenessOfObject(class ObjectModule * const this /* r29 */, class cXObject * objToBeCleared /* r30 */) {
+// this: r29
+void ObjectModule::ClearAwarenessOfObject(class cXObject * objToBeCleared /* r30 */) {
     // Local variables
     class cXPerson * * i; // r31
     class cXPerson * pPerson; // r0
 }
 
 // Range: 0x80145004 -> 0x80145084
-void ObjectModule::CleanupPeople(class ObjectModule * const this /* r29 */, class cXObject * respect /* r30 */) {
+// this: r29
+void ObjectModule::CleanupPeople(class cXObject * respect /* r30 */) {
     // Local variables
     class cXPerson * * i; // r31
 }
@@ -369,16 +401,19 @@ void ObjectModule::UpdateWallAdjacencies() {
 }
 
 // Range: 0x80145180 -> 0x801451E4
-void ObjectModule::InvalidateAllRoutes(class ObjectModule * const this /* r30 */) {
+// this: r30
+void ObjectModule::InvalidateAllRoutes() {
     // Local variables
     class cXPerson * * i; // r31
 }
 
 // Range: 0x801451E4 -> 0x8014524C
-void ObjectModule::RelationshipAccessed(class ObjectModule * const this /* r29 */, class Neighbor * from /* r30 */, class Neighbor * to /* r31 */) {}
+// this: r29
+void ObjectModule::RelationshipAccessed(class Neighbor * from /* r30 */, class Neighbor * to /* r31 */) {}
 
 // Range: 0x8014524C -> 0x80145328
-void ObjectModule::OffsetObjectMap(class ObjectModule * const this /* r25 */, const class CTilePt & inOffset /* r26 */) {
+// this: r25
+void ObjectModule::OffsetObjectMap(const class CTilePt & inOffset /* r26 */) {
     // Local variables
     signed short tempObjectMap[64][64]; // r1+0x8
     int x; // r29
@@ -388,7 +423,8 @@ void ObjectModule::OffsetObjectMap(class ObjectModule * const this /* r25 */, co
 }
 
 // Range: 0x80145328 -> 0x8014565C
-void ObjectModule::OffsetWorld(class ObjectModule * const this /* r30 */, const class CTilePt & inOffset /* r31 */) {
+// this: r30
+void ObjectModule::OffsetWorld(const class CTilePt & inOffset /* r31 */) {
     // Local variables
     int minX; // r27
     int minY; // r29
@@ -434,7 +470,8 @@ void ObjectModule::AdvanceSelectedPerson() {}
 class cXPerson * ObjectModule::GetSelectedPerson() {}
 
 // Range: 0x80145990 -> 0x80145A60
-void ObjectModule::ClearIdleStatus(class ObjectModule * const this /* r28 */, int id /* r29 */) {
+// this: r28
+void ObjectModule::ClearIdleStatus(int id /* r29 */) {
     // Local variables
     class cXObject * obj; // r0
     class StackElem * objElem; // r31
@@ -444,7 +481,8 @@ void ObjectModule::ClearIdleStatus(class ObjectModule * const this /* r28 */, in
 }
 
 // Range: 0x80145A60 -> 0x80145AE4
-void ObjectModule::SetSimFlag(class ObjectModule * const this /* r28 */, int id /* r29 */, unsigned char on /* r30 */) {
+// this: r28
+void ObjectModule::SetSimFlag(int id /* r29 */, unsigned char on /* r30 */) {
     // Local variables
     int flag; // r31
 }
@@ -456,27 +494,32 @@ unsigned char ObjectModule::GetSimFlag(enum SimFlag flag /* r31 */) {}
 int ObjectModule::GetIdleStatus() {}
 
 // Range: 0x80145B64 -> 0x80145BD8
-void ObjectModule::SetIdleStatus(class ObjectModule * const this /* r29 */, int id /* r30 */, int ticks /* r31 */) {}
+// this: r29
+void ObjectModule::SetIdleStatus(int id /* r30 */, int ticks /* r31 */) {}
 
 // Range: 0x80145BD8 -> 0x80145C3C
-class cXObject * ObjectModule::GetObjectFromID(class ObjectModule * const this /* r30 */, int id /* r31 */) {}
+// this: r30
+class cXObject * ObjectModule::GetObjectFromID(int id /* r31 */) {}
 
 // Range: 0x80145C3C -> 0x80145CC8
-signed short ObjectModule::GetTileObjectID(class ObjectModule * const this /* r29 */, const class CTilePt & in /* r30 */) {
+// this: r29
+signed short ObjectModule::GetTileObjectID(const class CTilePt & in /* r30 */) {
     // Local variables
     int x; // r0
     int y; // r0
 }
 
 // Range: 0x80145CC8 -> 0x80145D48
-void ObjectModule::SetTileObjectID(class ObjectModule * const this /* r28 */, const class CTilePt & in /* r29 */, signed short objID /* r30 */) {
+// this: r28
+void ObjectModule::SetTileObjectID(const class CTilePt & in /* r29 */, signed short objID /* r30 */) {
     // Local variables
     unsigned int x; // r0
     unsigned int y; // r0
 }
 
 // Range: 0x80145D48 -> 0x80145DA8
-class cXPerson * ObjectModule::CreateNeighbor(class ObjectModule * const this /* r31 */) {
+// this: r31
+class cXPerson * ObjectModule::CreateNeighbor() {
     // Local variables
     class ObjSelector * objSel; // r0
     signed short newObjectID; // r0
@@ -495,7 +538,8 @@ int ObjectModule::GetNumObjects() {
 }
 
 // Range: 0x80145EC4 -> 0x80145F94
-class cXPerson * ObjectModule::GetNextPerson(class ObjectModule * const this /* r29 */, unsigned short personID /* r30 */) {
+// this: r29
+class cXPerson * ObjectModule::GetNextPerson(unsigned short personID /* r30 */) {
     // Local variables
     int size; // r0
     class cXPerson * * i; // r31

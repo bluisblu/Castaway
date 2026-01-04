@@ -5,10 +5,12 @@
     Code range: 0x8003A91C -> 0x8003A9F0
 */
 // Range: 0x8003A91C -> 0x8003A974
-void * CasEventMorphCharacter::~CasEventMorphCharacter(class CasEventMorphCharacter * const this /* r30 */) {}
+// this: r30
+CasEventMorphCharacter::~CasEventMorphCharacter() {}
 
 // Range: 0x8003A974 -> 0x8003A9DC
-void * CasEventMorphCharacter::CasEventMorphCharacter(class CasEventMorphCharacter * const this /* r30 */, enum eMorphRegion morphRegion /* r31 */, float morphValue /* f31 */) {
+// this: r30
+CasEventMorphCharacter::CasEventMorphCharacter(enum eMorphRegion morphRegion /* r31 */, float morphValue /* f31 */) {
     // References
     // -> struct [anonymous] __vt__22CasEventMorphCharacter;
 }

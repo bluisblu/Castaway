@@ -26,12 +26,6 @@ unsigned int HGetSize() {}
 int Error() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\target\game\simulator\utility\mhandle.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x80100768 -> 0x801008A4
-*/
 // Range: 0x80100768 -> 0x80100810
 int HSetSize_nodbg(struct HandleNode * mem /* r29 */, unsigned int newSize /* r30 */) {}
 

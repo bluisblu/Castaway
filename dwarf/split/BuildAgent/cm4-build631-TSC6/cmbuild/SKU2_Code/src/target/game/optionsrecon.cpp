@@ -5,10 +5,12 @@
     Code range: 0x8023D810 -> 0x8023E448
 */
 // Range: 0x8023D810 -> 0x8023D840
-void * OptionsRecon::OptionsRecon(class OptionsRecon * const this /* r31 */) {}
+// this: r31
+OptionsRecon::OptionsRecon() {}
 
 // Range: 0x8023DAC4 -> 0x8023DBD4
-void OptionsRecon::ResetToDefaults(class OptionsRecon * const this /* r28 */) {
+// this: r28
+void OptionsRecon::ResetToDefaults() {
     // Local variables
     int songcount; // r0
     int songindex; // r30
@@ -16,13 +18,15 @@ void OptionsRecon::ResetToDefaults(class OptionsRecon * const this /* r28 */) {
 }
 
 // Range: 0x8023DBD4 -> 0x8023DF74
-void OptionsRecon::DoStream(class OptionsRecon * const this /* r29 */, class ReconBuffer * r /* r30 */, int version /* r31 */) {
+// this: r29
+void OptionsRecon::DoStream(class ReconBuffer * r /* r30 */, int version /* r31 */) {
     // Local variables
     signed char DummyNum; // r1+0x8
 }
 
 // Range: 0x8023DF74 -> 0x8023E080
-enum EMC_OpStatus OptionsRecon::WriteOut(class OptionsRecon * const this /* r29 */) {
+// this: r29
+enum EMC_OpStatus OptionsRecon::WriteOut() {
     // Local variables
     enum EMC_OpStatus ErrReturn; // r31
     struct EChecksummedConfigBuffer * cb; // r30
@@ -33,7 +37,8 @@ enum EMC_OpStatus OptionsRecon::WriteOut(class OptionsRecon * const this /* r29 
 }
 
 // Range: 0x8023E080 -> 0x8023E1D0
-enum EMC_OpStatus OptionsRecon::ReadIn(class OptionsRecon * const this /* r28 */, const class MemoryDevicePort_t & port /* r30 */) {
+// this: r28
+enum EMC_OpStatus OptionsRecon::ReadIn(const class MemoryDevicePort_t & port /* r30 */) {
     // Local variables
     enum EMC_OpStatus ErrReturn; // r30
     struct EChecksummedConfigBuffer * cb; // r29
@@ -52,7 +57,8 @@ int OptionsRecon::GetMusicGenreIndex() {}
 int OptionsRecon::GetMusicGenreSongCount() {}
 
 // Range: 0x8023E2AC -> 0x8023E330
-unsigned char OptionsRecon::GetIsMusicGenreEnabled(const class OptionsRecon * const this /* r28 */, int genreindex /* r29 */) {
+// this: r28
+unsigned char OptionsRecon::GetIsMusicGenreEnabled(int genreindex /* r29 */) const {
     // Local variables
     int songcount; // r0
     int songindex; // r30

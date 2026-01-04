@@ -18,14 +18,19 @@ class ETypeInfo m_typeInfo; // size: 0x28, address: 0x80543B60
 class ETypeInfo * gpTypeInfo_ERDataset; // size: 0x4, address: 0x805DC10C
 class ETypeInfo m_typeInfo; // size: 0x28, address: 0x80543B88
 class ETypeInfo * gpTypeInfo_EREdithTreeSet; // size: 0x4, address: 0x805DC110
+// total size: 0x14
 struct TreeSetHeader {
-    // total size: 0x14
+    // Members
     int version; // offset 0x0, size 0x4
     int empty[3]; // offset 0x4, size 0xC
     int size; // offset 0x10, size 0x4
 };
+// total size: 0x14
 class ChunkHeader {
-    // total size: 0x14
+    // Static members
+    static int headerSize; // size: 0x4
+
+    // Members
 public:
     char type[4]; // offset 0x0, size 0x4
     unsigned int size; // offset 0x4, size 0x4
@@ -49,8 +54,9 @@ union /* @class$18189engine_resource_unity_cpp */ {
     void * pBuffer; // offset 0x0, size 0x4
     class EEvent * pFlushEvent; // offset 0x0, size 0x4
 };
+// total size: 0x2C
 struct EResLoadCmd {
-    // total size: 0x2C
+    // Members
     enum EResCommands cmd; // offset 0x0, size 0x4
     class EResourceManager * pManager; // offset 0x4, size 0x4
     unsigned int id; // offset 0x8, size 0x4
@@ -70,14 +76,16 @@ struct EResLoadCmd {
     int nInitialCount; // offset 0x24, size 0x4
     unsigned int LSN; // offset 0x28, size 0x4
 };
+// total size: 0xC
 struct QueueList {
-    // total size: 0xC
+    // Members
     unsigned int m_pMsgs; // offset 0x0, size 0x4
     struct QueueList * m_prev; // offset 0x4, size 0x4
     struct QueueList * m_next; // offset 0x8, size 0x4
 };
+// total size: 0x70
 class EResLoaderMsgPriQueue {
-    // total size: 0x70
+    // Members
 protected:
     class EMutex m_mutex; // offset 0x0, size 0x1C
     class ESemaphore m_inSema; // offset 0x1C, size 0x18
@@ -92,8 +100,9 @@ protected:
     struct QueueList * m_FreeList; // offset 0x68, size 0x4
     struct QueueList * m_CmdPool; // offset 0x6C, size 0x4
 };
+// total size: 0x400
 class EResourceLoaderImpl : public EResourceLoader, private EThread {
-    // total size: 0x400
+    // Members
     class TLinkedList m_resManList; // offset 0x344, size 0x8
     unsigned char m_bInitialized; // offset 0x34C, size 0x1
     void * m_pGlobalIndex[2]; // offset 0x350, size 0x8
@@ -105,8 +114,9 @@ class EResourceLoaderImpl : public EResourceLoader, private EThread {
     class EEvent m_pauseLoadingNow; // offset 0x3E8, size 0x18
 };
 static class EResourceLoaderImpl _resLoader; // size: 0x400, address: 0x80543BC0
+// total size: 0x8
 class TLinkedList {
-    // total size: 0x8
+    // Members
 protected:
     class EResourceManager * m_pHead; // offset 0x0, size 0x4
     class EResourceManager * m_pTail; // offset 0x4, size 0x4
@@ -116,8 +126,9 @@ class ETypeInfo * gpTypeInfo_EResource; // size: 0x4, address: 0x805DC118
 class EResPrefetch _resPrefetch; // size: 0x418, address: 0x80543FF8
 class ETypeInfo m_typeInfo; // size: 0x28, address: 0x80544410
 class ETypeInfo * gpTypeInfo_ERFlash; // size: 0x4, address: 0x805DC11C
+// total size: 0xC
 class FlashTexture {
-    // total size: 0xC
+    // Members
 public:
     class ERTexture * m_texture; // offset 0x0, size 0x4
     int m_width; // offset 0x4, size 0x4
@@ -127,50 +138,56 @@ static float kFontZValue; // size: 0x4, address: 0x805DA4A4
 class EVec2 m_vScaler; // size: 0x8, address: 0x805DC120
 class ETypeInfo m_typeInfo; // size: 0x28, address: 0x80544438
 class ETypeInfo * gpTypeInfo_ERFont; // size: 0x4, address: 0x805DC128
-class hash_map : public hashtable {
-    // total size: 0x20
-};
+// total size: 0x20
+class hash_map : public hashtable {};
 static class hash_map * weWantFourBones; // size: 0x4, address: 0x805DC12C
-struct rehash_base {
-    // total size: 0x1
-};
+// total size: 0x1
+struct rehash_base {};
+// total size: 0x8
 struct pair {
-    // total size: 0x8
+    // Members
     unsigned int first; // offset 0x0, size 0x4
     unsigned char second; // offset 0x4, size 0x1
 };
-struct use_first {
-    // total size: 0x1
-};
-struct equal_to : public binary_function {
-    // total size: 0x1
-};
-struct hash {
-    // total size: 0x1
-};
+// total size: 0x1
+struct use_first {};
+// total size: 0x1
+struct equal_to : public binary_function {};
+// total size: 0x1
+struct hash {};
+// total size: 0xC
 struct hash_node {
-    // total size: 0xC
+    // Members
     struct pair mValue; // offset 0x0, size 0x8
     struct hash_node * mpNext; // offset 0x8, size 0x4
 };
+// total size: 0x4
 struct hash_code_base {
-    // total size: 0x4
+    // Members
 protected:
     struct use_first mExtractKey; // offset 0x0, size 0x1
     struct equal_to mEqual; // offset 0x1, size 0x1
     struct hash m_h1; // offset 0x2, size 0x1
     struct mod_range_hashing m_h2; // offset 0x3, size 0x1
 };
+// total size: 0x8
 struct hashtable_iterator_base {
-    // total size: 0x8
+    // Members
     struct hash_node * mpNode; // offset 0x0, size 0x4
     struct hash_node * * mpBucket; // offset 0x4, size 0x4
 };
-struct hashtable_iterator : public hashtable_iterator_base {
-    // total size: 0x8
-};
+// total size: 0x8
+struct hashtable_iterator : public hashtable_iterator_base {};
+// total size: 0x20
 class hashtable : public rehash_base, public hash_code_base {
-    // total size: 0x20
+    // Static members
+    static unsigned char kCacheHashCode; // size: 0x1
+    static unsigned long kKeyAlignment; // size: 0x4
+    static unsigned long kKeyAlignmentOffset; // size: 0x4
+    static unsigned long kValueAlignment; // size: 0x4
+    static unsigned long kValueAlignmentOffset; // size: 0x4
+
+    // Members
 protected:
     struct hash_node * * mpBucketArray; // offset 0x4, size 0x4
     unsigned long mnBucketCount; // offset 0x8, size 0x4
@@ -181,22 +198,22 @@ protected:
 static float _collideAnimMaxRot; // size: 0x4, address: 0x805DC130
 class ETypeInfo m_typeInfo; // size: 0x28, address: 0x80544460
 class ETypeInfo * gpTypeInfo_ERModel; // size: 0x4, address: 0x805DC134
-class TFloatTree : public EFloatTree {
-    // total size: 0xC
-};
-class TFloatTree : public EFloatTree {
-    // total size: 0xC
-};
+// total size: 0xC
+class TFloatTree : public EFloatTree {};
+// total size: 0xC
+class TFloatTree : public EFloatTree {};
+// total size: 0x14
 struct ERQTable {
-    // total size: 0x14
+    // Members
     const char * pName; // offset 0x0, size 0x4
     void * pData; // offset 0x4, size 0x4
     const char * const * ppRowNames; // offset 0x8, size 0x4
     unsigned int uNumRows; // offset 0xC, size 0x4
     unsigned int uRowSize; // offset 0x10, size 0x4
 };
+// total size: 0x2C
 struct QD_IMAGE {
-    // total size: 0x2C
+    // Members
     int structVersion; // offset 0x0, size 0x4
     const char * pName; // offset 0x4, size 0x4
     unsigned int uNumTables; // offset 0x8, size 0x4
@@ -205,16 +222,18 @@ struct QD_IMAGE {
     int reserved2; // offset 0x14, size 0x4
     struct ERQTable table[1]; // offset 0x18, size 0x14
 };
+// total size: 0x14
 struct ERQTable {
-    // total size: 0x14
+    // Members
     const char * pName; // offset 0x0, size 0x4
     const char * pData; // offset 0x4, size 0x4
     const char * const * ppRowNames; // offset 0x8, size 0x4
     unsigned int uNumRows; // offset 0xC, size 0x4
     unsigned int uRowSize; // offset 0x10, size 0x4
 };
+// total size: 0x54
 class U32Reader {
-    // total size: 0x54
+    // Members
 public:
     unsigned int m_uBuffer[16]; // offset 0x0, size 0x40
     unsigned int m_uBufferIndex; // offset 0x40, size 0x4
@@ -223,8 +242,9 @@ public:
     class EFile * m_pFile; // offset 0x4C, size 0x4
     unsigned char m_bEOFReached; // offset 0x50, size 0x1
 };
+// total size: 0x18
 struct EXPORT_DIRECTORY {
-    // total size: 0x18
+    // Members
     unsigned int uDirSize; // offset 0x0, size 0x4
     unsigned int uOffsImage; // offset 0x4, size 0x4
     unsigned int uImageSize; // offset 0x8, size 0x4
@@ -235,8 +255,9 @@ struct EXPORT_DIRECTORY {
 unsigned int * _localizationShaders; // size: 0x4, address: 0x805DC138
 unsigned int _localizationShadersCount; // size: 0x4, address: 0x805DC13C
 unsigned int _shaderVersion; // size: 0x4, address: 0x805DA4B4
+// total size: 0x8
 class TLinkedList {
-    // total size: 0x8
+    // Members
 protected:
     struct ERShaderUpdate * m_pHead; // offset 0x0, size 0x4
     struct ERShaderUpdate * m_pTail; // offset 0x4, size 0x4
@@ -247,11 +268,17 @@ unsigned char m_defaultShaderState; // size: 0x1, address: 0x805DC148
 class ETypeInfo m_typeInfo; // size: 0x28, address: 0x805444B0
 class ETypeInfo * gpTypeInfo_ERShader; // size: 0x4, address: 0x805DC14C
 static unsigned int nNextID; // size: 0x4, address: 0x805DA4B8
-class vector : public VectorBase {
-    // total size: 0x10
-};
+// total size: 0x10
+class vector : public VectorBase {};
+// total size: 0x10
 struct VectorBase {
-    // total size: 0x10
+    // Static members
+    static unsigned long kAlignment; // size: 0x4
+    static unsigned long kAlignmentOffset; // size: 0x4
+    static unsigned long npos; // size: 0x4
+    static unsigned long kMaxSize; // size: 0x4
+
+    // Members
 protected:
     class ERShader * * mpBegin; // offset 0x0, size 0x4
     class ERShader * * mpEnd; // offset 0x4, size 0x4
@@ -271,11 +298,17 @@ class ETypeInfo m_typeInfo; // size: 0x28, address: 0x80544BB8
 class ETypeInfo * gpTypeInfo_REffectsAttachment; // size: 0x4, address: 0x805DC160
 unsigned char kUseEmitterPosForAlphaSort; // size: 0x1, address: 0x805DF198
 unsigned char kSendEmitterPosToForeground; // size: 0x1, address: 0x805DF199
-class vector : public VectorBase {
-    // total size: 0x10
-};
+// total size: 0x10
+class vector : public VectorBase {};
+// total size: 0x10
 struct VectorBase {
-    // total size: 0x10
+    // Static members
+    static unsigned long kAlignment; // size: 0x4
+    static unsigned long kAlignmentOffset; // size: 0x4
+    static unsigned long npos; // size: 0x4
+    static unsigned long kMaxSize; // size: 0x4
+
+    // Members
 protected:
     struct AttachmentNodeV1 * mpBegin; // offset 0x0, size 0x4
     struct AttachmentNodeV1 * mpEnd; // offset 0x4, size 0x4
@@ -284,8 +317,9 @@ protected:
 };
 class ETypeInfo m_typeInfo; // size: 0x28, address: 0x80544BE0
 class ETypeInfo * gpTypeInfo_REffectsEmitter; // size: 0x4, address: 0x805DC164
+// total size: 0xF0
 struct FastParticleEmitterInitDataV1 {
-    // total size: 0xF0
+    // Members
     float m_particleLifetime; // offset 0x0, size 0x4
     float m_rotationSpeed; // offset 0x4, size 0x4
     float m_initialSize; // offset 0x8, size 0x4
@@ -348,112 +382,87 @@ class ETypeInfo m_typeInfo; // size: 0x28, address: 0x80544C08
 class ETypeInfo * gpTypeInfo_REffectsSequencer; // size: 0x4, address: 0x805DC168
 class ETypeInfo m_typeInfo; // size: 0x28, address: 0x80544C30
 class ETypeInfo * gpTypeInfo_RParticle; // size: 0x4, address: 0x805DC16C
+// total size: 0x14
 struct ParticleHeader {
-    // total size: 0x14
+    // Members
     int version; // offset 0x0, size 0x4
     int empty[3]; // offset 0x4, size 0xC
     int size; // offset 0x10, size 0x4
 };
+// total size: 0x14
 struct ParticleHeader {
-    // total size: 0x14
+    // Members
     int version; // offset 0x0, size 0x4
     int empty[3]; // offset 0x4, size 0xC
     int size; // offset 0x10, size 0x4
 };
-struct {
-    // total size: 0x48
-} __vt__9RParticle; // size: 0x48, address: 0x804571E8
-struct {
-    // total size: 0x48
-} __vt__17REffectsSequencer; // size: 0x48, address: 0x80457230
-struct {
-    // total size: 0x48
-} __vt__15REffectsEmitter; // size: 0x48, address: 0x80457278
-struct {
-    // total size: 0x48
-} __vt__18REffectsAttachment; // size: 0x48, address: 0x804572C0
-struct {
-    // total size: 0x48
-} __vt__16ERSoundTrackData; // size: 0x48, address: 0x80457308
-struct {
-    // total size: 0x48
-} __vt__20ERSocialAnimationSet; // size: 0x48, address: 0x80457350
-struct {
-    // total size: 0x48
-} __vt__11ERQuickdata; // size: 0x48, address: 0x80457398
-struct {
-    // total size: 0x48
-} __vt__7ERMovie; // size: 0x48, address: 0x804573E0
-struct {
-    // total size: 0x48
-} __vt__6ERFont; // size: 0x48, address: 0x80457428
-struct {
-    // total size: 0x48
-} __vt__9ERTexture; // size: 0x48, address: 0x80457470
-struct {
-    // total size: 0x48
-} __vt__7ERFlash; // size: 0x48, address: 0x804574B8
-struct {
-    // total size: 0x30
-} __vt__12EResPrefetch; // size: 0x30, address: 0x80457500
-struct {
-    // total size: 0x34
-} __vt__16EResPrefetchFile; // size: 0x34, address: 0x80457530
-struct {
-    // total size: 0x14
-} __vt__16EScratchBuffUser; // size: 0x14, address: 0x80457564
-struct {
-    // total size: 0x9C
-} __vt__19EResourceLoaderImpl; // size: 0x9C, address: 0x80457578
-struct {
-    // total size: 0x48
-} __vt__14EREdithTreeSet; // size: 0x48, address: 0x80457618
-struct {
-    // total size: 0x48
-} __vt__9ERDataset; // size: 0x48, address: 0x80457660
-struct {
-    // total size: 0x10
-} __vt__9HDDThread; // size: 0x10, address: 0x804576A8
-struct {
-    // total size: 0x88
-} __vt__15EResourceLoader; // size: 0x88, address: 0x804576B8
-struct {
-    // total size: 0x48
-} __vt__8ERBinary; // size: 0x48, address: 0x80457740
-struct {
-    // total size: 0x48
-} __vt__12ERSoundEvent; // size: 0x48, address: 0x80457788
-struct {
-    // total size: 0x48
-} __vt__14ERAmbientScore; // size: 0x48, address: 0x804577D0
-struct {
-    // total size: 0x48
-} __vt__6ERAnim; // size: 0x48, address: 0x80457818
-struct {
-    // total size: 0x14
-} __vt__14ERAnimBitArray; // size: 0x14, address: 0x80457860
-struct {
-    // total size: 0x48
-} __vt__11ERCharacter; // size: 0x48, address: 0x80457878
-struct {
-    // total size: 0x48
-} __vt__7ERModel; // size: 0x48, address: 0x804578C0
-struct {
-    // total size: 0x1C
-} __vt__13BSplineVolume; // size: 0x1C, address: 0x80457908
-struct {
-    // total size: 0x4C
-} __vt__8ERShader; // size: 0x4C, address: 0x80457924
-struct {
-    // total size: 0x48
-} __vt__9EResource; // size: 0x48, address: 0x80457970
+// total size: 0x48
+struct {} __vt__9RParticle; // size: 0x48, address: 0x804571E8
+// total size: 0x48
+struct {} __vt__17REffectsSequencer; // size: 0x48, address: 0x80457230
+// total size: 0x48
+struct {} __vt__15REffectsEmitter; // size: 0x48, address: 0x80457278
+// total size: 0x48
+struct {} __vt__18REffectsAttachment; // size: 0x48, address: 0x804572C0
+// total size: 0x48
+struct {} __vt__16ERSoundTrackData; // size: 0x48, address: 0x80457308
+// total size: 0x48
+struct {} __vt__20ERSocialAnimationSet; // size: 0x48, address: 0x80457350
+// total size: 0x48
+struct {} __vt__11ERQuickdata; // size: 0x48, address: 0x80457398
+// total size: 0x48
+struct {} __vt__7ERMovie; // size: 0x48, address: 0x804573E0
+// total size: 0x48
+struct {} __vt__6ERFont; // size: 0x48, address: 0x80457428
+// total size: 0x48
+struct {} __vt__9ERTexture; // size: 0x48, address: 0x80457470
+// total size: 0x48
+struct {} __vt__7ERFlash; // size: 0x48, address: 0x804574B8
+// total size: 0x30
+struct {} __vt__12EResPrefetch; // size: 0x30, address: 0x80457500
+// total size: 0x34
+struct {} __vt__16EResPrefetchFile; // size: 0x34, address: 0x80457530
+// total size: 0x14
+struct {} __vt__16EScratchBuffUser; // size: 0x14, address: 0x80457564
+// total size: 0x9C
+struct {} __vt__19EResourceLoaderImpl; // size: 0x9C, address: 0x80457578
+// total size: 0x48
+struct {} __vt__14EREdithTreeSet; // size: 0x48, address: 0x80457618
+// total size: 0x48
+struct {} __vt__9ERDataset; // size: 0x48, address: 0x80457660
+// total size: 0x10
+struct {} __vt__9HDDThread; // size: 0x10, address: 0x804576A8
+// total size: 0x88
+struct {} __vt__15EResourceLoader; // size: 0x88, address: 0x804576B8
+// total size: 0x48
+struct {} __vt__8ERBinary; // size: 0x48, address: 0x80457740
+// total size: 0x48
+struct {} __vt__12ERSoundEvent; // size: 0x48, address: 0x80457788
+// total size: 0x48
+struct {} __vt__14ERAmbientScore; // size: 0x48, address: 0x804577D0
+// total size: 0x48
+struct {} __vt__6ERAnim; // size: 0x48, address: 0x80457818
+// total size: 0x14
+struct {} __vt__14ERAnimBitArray; // size: 0x14, address: 0x80457860
+// total size: 0x48
+struct {} __vt__11ERCharacter; // size: 0x48, address: 0x80457878
+// total size: 0x48
+struct {} __vt__7ERModel; // size: 0x48, address: 0x804578C0
+// total size: 0x1C
+struct {} __vt__13BSplineVolume; // size: 0x1C, address: 0x80457908
+// total size: 0x4C
+struct {} __vt__8ERShader; // size: 0x4C, address: 0x80457924
+// total size: 0x48
+struct {} __vt__9EResource; // size: 0x48, address: 0x80457970
+// total size: 0x4
 class generic_iterator {
-    // total size: 0x4
+    // Members
 protected:
     class ERAmbientSound * mIterator; // offset 0x0, size 0x4
 };
+// total size: 0x20
 struct AttachmentNodeV1 {
-    // total size: 0x20
+    // Members
     class EVec3 pos; // offset 0x0, size 0xC
     signed char effectAttachmentType; // offset 0xC, size 0x1
     signed char boneId; // offset 0xD, size 0x1
@@ -461,8 +470,9 @@ struct AttachmentNodeV1 {
     class EVec3 dir; // offset 0x10, size 0xC
     unsigned int effectId; // offset 0x1C, size 0x4
 };
+// total size: 0xC
 struct pair {
-    // total size: 0xC
+    // Members
     struct hashtable_iterator first; // offset 0x0, size 0x8
     unsigned char second; // offset 0x8, size 0x1
 };

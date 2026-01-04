@@ -5,7 +5,8 @@
     Code range: 0x801822EC -> 0x8018272C
 */
 // Range: 0x801822EC -> 0x8018238C
-void * UIDrawTable::UIDrawTable(class UIDrawTable * const this /* r29 */) {
+// this: r29
+UIDrawTable::UIDrawTable() {
     // Local variables
     class DrawTableRecord * prev; // r31
     int i; // r30
@@ -15,7 +16,8 @@ void * UIDrawTable::UIDrawTable(class UIDrawTable * const this /* r29 */) {
 }
 
 // Range: 0x8018238C -> 0x80182448
-void * UIDrawTable::~UIDrawTable(class UIDrawTable * const this /* r29 */) {
+// this: r29
+UIDrawTable::~UIDrawTable() {
     // Local variables
     class DrawTableRecord * record; // r5
     class DrawTableRecord * next; // r31

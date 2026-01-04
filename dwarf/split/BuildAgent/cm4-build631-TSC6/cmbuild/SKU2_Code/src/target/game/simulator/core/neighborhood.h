@@ -8,17 +8,12 @@
 class IGoalUnlock * Neighborhood::GetGoalAndUnlockData() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\target\game\simulator\core\neighborhood.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x8010D4E8 -> 0x8010D608
-*/
 // Range: 0x8010D4E8 -> 0x8010D4F0
 unsigned char Neighborhood::IsFreeplayLot() {}
 
 // Range: 0x8010D4F0 -> 0x8010D550
-void * NeighborList::~NeighborList(class NeighborList * const this /* r30 */) {}
+// this: r30
+NeighborList::~NeighborList() {}
 
 // Range: 0x8010D550 -> 0x8010D560
 void Neighborhood::SetNeighborhoodVar() {}
@@ -36,7 +31,8 @@ void Neighborhood::FlagDatasetForLot() {}
 void Neighborhood::ResetFlagsForLot() {}
 
 // Range: 0x8010D588 -> 0x8010D5E8
-int Neighborhood::GetNeighborHouseByIndex(class Neighborhood * const this /* r30 */, int iIndex /* r31 */) {}
+// this: r30
+int Neighborhood::GetNeighborHouseByIndex(int iIndex /* r31 */) {}
 
 // Range: 0x8010D5E8 -> 0x8010D5F0
 int Neighborhood::GetNumNeighborHouses() {}
@@ -48,12 +44,6 @@ unsigned char Neighborhood::IsEndSlideShowUp() {}
 signed short & Neighborhood::GetNeighborhoodVarRef() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\target\game\simulator\core\neighborhood.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x80170D20 -> 0x80170D38
-*/
 // Range: 0x80170D20 -> 0x80170D28
 void Neighborhood::SetLastTransitionSimulatorTime() {}
 
@@ -64,23 +54,12 @@ void Neighborhood::DelRefObjectsInLot() {}
 void Neighborhood::AddRefObjectsInLot() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\target\game\simulator\core\neighborhood.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x801A1D50 -> 0x801A1D58
-*/
 // Range: 0x801A1D50 -> 0x801A1D58
 void Neighborhood::SetHouseNum() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\target\game\simulator\core\neighborhood.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x8022A068 -> 0x8022A0E8
-*/
 // Range: 0x8022A068 -> 0x8022A0B8
-void * HouseInfo::HouseInfo(class HouseInfo * const this /* r31 */) {}
+// this: r31
+HouseInfo::HouseInfo() {}
 
 

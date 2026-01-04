@@ -5,13 +5,15 @@
     Code range: 0x800A2044 -> 0x800A2160
 */
 // Range: 0x800A209C -> 0x800A2110
-void * ObjResFile::~ObjResFile(class ObjResFile * const this /* r30 */) {
+// this: r30
+ObjResFile::~ObjResFile() {
     // References
     // -> struct [anonymous] __vt__10ObjResFile;
 }
 
 // Range: 0x800A2110 -> 0x800A2160
-int ObjResFile::Open(class ObjResFile * const this /* r30 */) {
+// this: r30
+int ObjResFile::Open() {
     // Local variables
     int result; // r31
 }

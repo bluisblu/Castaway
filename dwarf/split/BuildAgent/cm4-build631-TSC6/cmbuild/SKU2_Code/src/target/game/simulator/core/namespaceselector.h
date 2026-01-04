@@ -5,9 +5,11 @@
     Code range: 0x80142194 -> 0x80142300
 */
 // Range: 0x80142194 -> 0x8014224C
-void * NamespaceSelector::NamespaceSelector(class NamespaceSelector * const this /* r29 */) {}
+// this: r29
+NamespaceSelector::NamespaceSelector() {}
 
 // Range: 0x8014224C -> 0x80142300
-void * NamespaceSelector::NamespaceSelector(class NamespaceSelector * const this /* r29 */) {}
+// this: r29
+NamespaceSelector::NamespaceSelector() {}
 
 

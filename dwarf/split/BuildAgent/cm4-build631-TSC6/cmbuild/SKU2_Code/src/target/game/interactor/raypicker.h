@@ -16,12 +16,6 @@ unsigned char RayPicker::IntersectRayAABB(const class EVec3 & p /* r26 */, const
 }
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\target\game\interactor\raypicker.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x80075DE4 -> 0x80075DEC
-*/
 // Range: 0x80075DE4 -> 0x80075DEC
 void RayPicker::SetMultisamplingOn() {}
 

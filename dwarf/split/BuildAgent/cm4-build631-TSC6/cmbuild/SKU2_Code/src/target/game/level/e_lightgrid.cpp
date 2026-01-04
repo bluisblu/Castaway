@@ -5,13 +5,15 @@
     Code range: 0x8008A2E4 -> 0x8008BB80
 */
 // Range: 0x8008A2E4 -> 0x8008A3E0
-void * ELightGrid::ELightGrid(class ELightGrid * const this /* r29 */) {
+// this: r29
+ELightGrid::ELightGrid() {
     // References
     // -> static signed short m_lightVertexDummy[4];
 }
 
 // Range: 0x8008A3E0 -> 0x8008A57C
-void ELightGrid::Flush(class ELightGrid * const this /* r29 */) {
+// this: r29
+void ELightGrid::Flush() {
     // Local variables
     int num; // r6
     struct VertexData * curr; // r7
@@ -20,13 +22,15 @@ void ELightGrid::Flush(class ELightGrid * const this /* r29 */) {
 }
 
 // Range: 0x8008A57C -> 0x8008A5F4
-void RoomData::Flush(class RoomData * const this /* r29 */) {
+// this: r29
+void RoomData::Flush() {
     // Local variables
     int i; // r30
 }
 
 // Range: 0x8008A5F4 -> 0x8008A938
-void ELightGrid::Update(class ELightGrid * const this /* r23 */, const class TNodeList & lights /* r24 */, int numRooms /* r25 */) {
+// this: r23
+void ELightGrid::Update(const class TNodeList & lights /* r24 */, int numRooms /* r25 */) {
     // Local variables
     int numLights; // r0
     int roomId; // r28
@@ -48,7 +52,8 @@ void ELightGrid::Update(class ELightGrid * const this /* r23 */, const class TNo
 }
 
 // Range: 0x8008A938 -> 0x8008AB38
-float ELightGrid::ConnectPortalLights(class ELightGrid * const this /* r29 */, class RoomData * rd /* r30 */) {
+// this: r29
+float ELightGrid::ConnectPortalLights(class RoomData * rd /* r30 */) {
     // Local variables
     float lum; // f31
     int j; // r31
@@ -74,7 +79,8 @@ void RoomData::FindClosestLights(const class EVec3 & pos /* r23 */, int end /* r
 }
 
 // Range: 0x8008AC8C -> 0x8008AD30
-int RoomData::GetStrongestDirectionalLightIndex(const class RoomData * const this /* r28 */) {
+// this: r28
+int RoomData::GetStrongestDirectionalLightIndex() const {
     // Local variables
     float fMaxIntensity; // f31
     int nIndexOfStrongestDirectional; // r30
@@ -82,14 +88,16 @@ int RoomData::GetStrongestDirectionalLightIndex(const class RoomData * const thi
 }
 
 // Range: 0x8008AD30 -> 0x8008AE50
-void ELightGrid::EvaluatePointLights(class ELightGrid * const this /* r31 */, int begin /* r29 */, int end /* r30 */) {
+// this: r31
+void ELightGrid::EvaluatePointLights(int begin /* r29 */, int end /* r30 */) {
     // Local variables
     class EVec3 crap; // r1+0x8
     int i; // [invalid]
 }
 
 // Range: 0x8008AE50 -> 0x8008B084
-void ELightGrid::AddLightsToVertices(class ELightGrid * const this /* r23 */) {
+// this: r23
+void ELightGrid::AddLightsToVertices() {
     // Local variables
     class EVec3 pos; // r1+0x8
     int i; // r26
@@ -105,10 +113,12 @@ void ELightGrid::AddLightsToVertices(class ELightGrid * const this /* r23 */) {
 }
 
 // Range: 0x8008B084 -> 0x8008B0C8
-void ELightGrid::EvaluateLights(class ELightGrid * const this /* r31 */) {}
+// this: r31
+void ELightGrid::EvaluateLights() {}
 
 // Range: 0x8008B0C8 -> 0x8008B284
-void ELightGrid::EvaluateOuterLotLights(class ELightGrid * const this /* r31 */) {
+// this: r31
+void ELightGrid::EvaluateOuterLotLights() {
     // Local variables
     const class RoomData & rd; // r0
     int i; // r25
@@ -124,13 +134,15 @@ void ELightGrid::EvaluateOuterLotLights(class ELightGrid * const this /* r31 */)
 }
 
 // Range: 0x8008B284 -> 0x8008B2E4
-void ELightGrid::EvaluateAmbientAndDirectionalLights(class ELightGrid * const this /* r29 */) {
+// this: r29
+void ELightGrid::EvaluateAmbientAndDirectionalLights() {
     // Local variables
     int i; // r30
 }
 
 // Range: 0x8008B2E4 -> 0x8008B3B4
-void RoomData::EvaluateAmbientAndDirectionalLights(class RoomData * const this /* r25 */) {
+// this: r25
+void RoomData::EvaluateAmbientAndDirectionalLights() {
     // Local variables
     class EILight * l; // r0
     int i; // r26
@@ -138,13 +150,15 @@ void RoomData::EvaluateAmbientAndDirectionalLights(class RoomData * const this /
 }
 
 // Range: 0x8008B3B4 -> 0x8008B424
-void ELightGrid::EvaluatePortalLights(class ELightGrid * const this /* r27 */, int end /* r28 */) {
+// this: r27
+void ELightGrid::EvaluatePortalLights(int end /* r28 */) {
     // Local variables
     int i; // r29
 }
 
 // Range: 0x8008B424 -> 0x8008B644
-void ELightGrid::EvaluatePortalLight(class ELightGrid * const this /* r29 */, struct LightData * ld /* r27 */, struct PortalData * pd /* r28 */) {
+// this: r29
+void ELightGrid::EvaluatePortalLight(struct LightData * ld /* r27 */, struct PortalData * pd /* r28 */) {
     // Local variables
     class EVec3 color; // r1+0x48
     class EIPortalPointLight * pl; // r31
@@ -178,7 +192,8 @@ void MergeLightWeights() {
 }
 
 // Range: 0x8008B718 -> 0x8008B988
-void ELightGrid::GetLightWeightsAtLocation(class ELightGrid * const this /* r27 */, int roomId /* r28 */, struct LightWeight * lightWeights /* r29 */) {
+// this: r27
+void ELightGrid::GetLightWeightsAtLocation(int roomId /* r28 */, struct LightWeight * lightWeights /* r29 */) {
     // Local variables
     int x; // r31
     int y; // r30
@@ -194,7 +209,8 @@ void ELightGrid::GetLightWeightsAtLocation(class ELightGrid * const this /* r27 
 }
 
 // Range: 0x8008B988 -> 0x8008BA4C
-void ELightGrid::GetDirectional(class ELightGrid * const this /* r28 */, struct EDirLight & DirLight /* r29 */) {
+// this: r28
+void ELightGrid::GetDirectional(struct EDirLight & DirLight /* r29 */) {
     // Local variables
     int nIndexOfStrongestDirectional; // r0
 }
@@ -212,6 +228,7 @@ signed short * ELightGrid::GetLightsAtLocation() {
 }
 
 // Range: 0x8008BB18 -> 0x8008BB80
-void LightData::Clear(struct LightData * const this /* r31 */) {}
+// this: r31
+void LightData::Clear() {}
 
 

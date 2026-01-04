@@ -31,7 +31,8 @@ static char __PRETTY_FUNCTION__[33]; // size: 0x21, address: 0x80459F38
 static char __PRETTY_FUNCTION__[42]; // size: 0x2A, address: 0x80459F5C
 static char __PRETTY_FUNCTION__[46]; // size: 0x2E, address: 0x80459F88
 // Range: 0x8030D518 -> 0x8030D968
-void AptCharacterAnimation::Fixup(struct AptCharacterAnimation * const this /* r22 */, struct AptConstFile * pConstFile /* r23 */, void * pUserData /* r24 */) {
+// this: r22
+void AptCharacterAnimation::Fixup(struct AptConstFile * pConstFile /* r23 */, void * pUserData /* r24 */) {
     // Local variables
     int i; // r7
     unsigned char * pBase; // r26
@@ -64,7 +65,8 @@ int AptCharacterAnimation::IsImport() {
 }
 
 // Range: 0x8030DA54 -> 0x8030E074
-void AptCharacterAnimation::Unresolve(struct AptCharacterAnimation * const this /* r25 */) {
+// this: r25
+void AptCharacterAnimation::Unresolve() {
     // Local variables
     int i; // r27
     unsigned char * pBase; // r26
@@ -78,13 +80,15 @@ void AptCharacterAnimation::Unresolve(struct AptCharacterAnimation * const this 
 }
 
 // Range: 0x8030E074 -> 0x8030E0EC
-void * AptCharacterAnimationInst::AptCharacterAnimationInst(struct AptCharacterAnimationInst * const this /* r30 */, class AptSharedPtr & file /* r31 */) {
+// this: r30
+AptCharacterAnimationInst::AptCharacterAnimationInst(class AptSharedPtr & file /* r31 */) {
     // References
     // -> struct [anonymous] __vt__25AptCharacterAnimationInst;
 }
 
 // Range: 0x8030E0EC -> 0x8030E158
-void * AptCharacterAnimationInst::~AptCharacterAnimationInst(struct AptCharacterAnimationInst * const this /* r30 */) {}
+// this: r30
+AptCharacterAnimationInst::~AptCharacterAnimationInst() {}
 
 // Range: 0x8030E158 -> 0x8030E1A0
 int AptCharacterAnimationInst::getSwfVersion() {
@@ -96,7 +100,8 @@ int AptCharacterAnimationInst::getSwfVersion() {
 void AptCharacterAnimationInst::PreDestroy() {}
 
 // Range: 0x8030E1AC -> 0x8030E3E4
-void AptCharacterAnimation::Link(struct AptCharacterAnimation * const this /* r27 */, void * pUserData /* r28 */) {
+// this: r27
+void AptCharacterAnimation::Link(void * pUserData /* r28 */) {
     // Local variables
     int i; // r31
     int j; // r6
@@ -110,14 +115,16 @@ void AptCharacterAnimation::Link(struct AptCharacterAnimation * const this /* r2
 static char __PRETTY_FUNCTION__[38]; // size: 0x26, address: 0x8045A018
 static char __PRETTY_FUNCTION__[40]; // size: 0x28, address: 0x8045A040
 // Range: 0x8030E3E4 -> 0x8030E544
-void * AptAnimationPoolData::AptAnimationPoolData(struct AptAnimationPoolData * const this /* r30 */, const struct AptInitParmsT & aptInitParms /* r31 */) {
+// this: r30
+AptAnimationPoolData::AptAnimationPoolData(const struct AptInitParmsT & aptInitParms /* r31 */) {
     // References
     // -> class AptNone * gpUndefinedValue;
     // -> class DOGMA_PoolManager * gpNonGCPoolManager;
 }
 
 // Range: 0x8030E544 -> 0x8030E628
-void * AptAnimationPoolData::~AptAnimationPoolData(struct AptAnimationPoolData * const this /* r30 */) {
+// this: r30
+AptAnimationPoolData::~AptAnimationPoolData() {
     // References
     // -> class DOGMA_PoolManager * gpNonGCPoolManager;
 }
@@ -125,7 +132,8 @@ void * AptAnimationPoolData::~AptAnimationPoolData(struct AptAnimationPoolData *
 static char __PRETTY_FUNCTION__[35]; // size: 0x23, address: 0x8045A068
 static char __PRETTY_FUNCTION__[40]; // size: 0x28, address: 0x8045A090
 // Range: 0x8030E628 -> 0x8030E7C0
-void AptAnimationPoolData::PreDestroy(struct AptAnimationPoolData * const this /* r31 */) {
+// this: r31
+void AptAnimationPoolData::PreDestroy() {
     // Local variables
     int i; // r26
     int nCount; // r28
@@ -138,7 +146,8 @@ void AptAnimationPoolData::PreDestroy(struct AptAnimationPoolData * const this /
 
 static char __PRETTY_FUNCTION__[46]; // size: 0x2E, address: 0x8045A0CC
 // Range: 0x8030E7C0 -> 0x8030EA1C
-void AptAnimationPoolData::tickIntervalTimers(struct AptAnimationPoolData * const this /* r26 */, int nMilliseconds /* r27 */) {
+// this: r26
+void AptAnimationPoolData::tickIntervalTimers(int nMilliseconds /* r27 */) {
     // Local variables
     int i; // r29
     int iCount; // r28
@@ -157,7 +166,8 @@ void AptAnimationPoolData::tickIntervalTimers(struct AptAnimationPoolData * cons
 
 static char __PRETTY_FUNCTION__[38]; // size: 0x26, address: 0x8045A0FC
 // Range: 0x8030EA1C -> 0x8030EB20
-void AptAnimationPoolData::_tickNewInsts(struct AptAnimationPoolData * const this /* r27 */) {
+// this: r27
+void AptAnimationPoolData::_tickNewInsts() {
     // Local variables
     int i; // r28
     struct AptCharacterButtonInst * pButtonInst; // r0
@@ -169,7 +179,8 @@ void AptAnimationPoolData::_tickNewInsts(struct AptAnimationPoolData * const thi
 
 static char __PRETTY_FUNCTION__[45]; // size: 0x2D, address: 0x8045A124
 // Range: 0x8030EB20 -> 0x8030ED08
-void AptAnimationPoolData::runActions(struct AptAnimationPoolData * const this /* r26 */) {
+// this: r26
+void AptAnimationPoolData::runActions() {
     // Local variables
     class AptActionQueueC * pCurrentPool; // r29
     struct AptActionPool * pCur; // r28
@@ -198,7 +209,8 @@ void AptAnimationPoolData::addInput() {}
 
 static char __PRETTY_FUNCTION__[53]; // size: 0x35, address: 0x8045A154
 // Range: 0x8030EDB4 -> 0x8030EEF8
-void AptAnimationPoolData::removeTimerFunctions(struct AptAnimationPoolData * const this /* r27 */, class AptCIH * pAnimCIH /* r28 */) {
+// this: r27
+void AptAnimationPoolData::removeTimerFunctions(class AptCIH * pAnimCIH /* r28 */) {
     // Local variables
     int nCount; // r30
     int i; // r29
@@ -210,7 +222,8 @@ void AptAnimationPoolData::removeTimerFunctions(struct AptAnimationPoolData * co
 
 static char __PRETTY_FUNCTION__[33]; // size: 0x21, address: 0x8045A18C
 // Range: 0x8030EEF8 -> 0x8030EF7C
-void AptAnimationPoolData::clearBIL(struct AptAnimationPoolData * const this /* r27 */) {
+// this: r27
+void AptAnimationPoolData::clearBIL() {
     // Local variables
     int i; // r28
 
@@ -220,14 +233,16 @@ void AptAnimationPoolData::clearBIL(struct AptAnimationPoolData * const this /* 
 
 static char __PRETTY_FUNCTION__[63]; // size: 0x3F, address: 0x8045A1B0
 // Range: 0x8030EF7C -> 0x8030F010
-void AptAnimationPoolData::appendButtonToBIL(struct AptAnimationPoolData * const this /* r30 */, struct AptMatrix * pMatrix /* r31 */) {
+// this: r30
+void AptAnimationPoolData::appendButtonToBIL(struct AptMatrix * pMatrix /* r31 */) {
     // References
     // -> static char __PRETTY_FUNCTION__[63];
 }
 
 static char __PRETTY_FUNCTION__[46]; // size: 0x2E, address: 0x8045A1F0
 // Range: 0x8030F044 -> 0x8030F104
-void AptAnimationPoolData::removeFromBIL(struct AptAnimationPoolData * const this /* r26 */, class AptCIH * pBI /* r27 */) {
+// this: r26
+void AptAnimationPoolData::removeFromBIL(class AptCIH * pBI /* r27 */) {
     // Local variables
     int i; // r28
 
@@ -242,14 +257,16 @@ unsigned char AptAnimationPoolData::isInputMasked() {
 }
 
 // Range: 0x8030F140 -> 0x8030F1E0
-int AptCharacterAnimation::GetIDFromImportFile(struct AptCharacterAnimation * const this /* r25 */) {
+// this: r25
+int AptCharacterAnimation::GetIDFromImportFile() {
     // Local variables
     struct AptCharacter * pImportChar; // r0
     int i; // r26
 }
 
 // Range: 0x8030F1E0 -> 0x8030F2F0
-void AptCharacterAnimation::ExecuteInitActions(struct AptCharacterAnimation * const this /* r29 */, class AptCIH * pInst /* r30 */, int nID /* r31 */) {
+// this: r29
+void AptCharacterAnimation::ExecuteInitActions(class AptCIH * pInst /* r30 */, int nID /* r31 */) {
     // Local variables
     struct AptCharacterAnimation * pTmpAnim; // [invalid]
     struct AptMovie * pMov; // r27
@@ -258,7 +275,8 @@ void AptCharacterAnimation::ExecuteInitActions(struct AptCharacterAnimation * co
 }
 
 // Range: 0x8030F2F0 -> 0x8030F3F4
-void AptCharacterAnimation::ExecuteInitAction(struct AptCharacterAnimation * const this /* r31 */, class AptCIH * pInst /* r27 */) {
+// this: r31
+void AptCharacterAnimation::ExecuteInitAction(class AptCIH * pInst /* r27 */) {
     // Local variables
     int i; // r30
     struct AptControl * pInitTagControl; // r29
@@ -270,7 +288,8 @@ void AptCharacterAnimation::ExecuteInitAction(struct AptCharacterAnimation * con
 }
 
 // Range: 0x8030F3F4 -> 0x8030F548
-void AptCharacterAnimation::ExportClassDefinitionAssets(struct AptCharacterAnimation * const this /* r27 */, class AptCIH * pInst /* r28 */) {
+// this: r27
+void AptCharacterAnimation::ExportClassDefinitionAssets(class AptCIH * pInst /* r28 */) {
     // Local variables
     int j; // r29
     int nID; // r7
@@ -284,7 +303,8 @@ void AptCharacterAnimation::ExportClassDefinitionAssets(struct AptCharacterAnima
 }
 
 // Range: 0x8030F548 -> 0x8030F7DC
-void AptAnimationPoolData::RegisterReferences(struct AptAnimationPoolData * const this /* r31 */) {
+// this: r31
+void AptAnimationPoolData::RegisterReferences() {
     // Local variables
     int i; // r30
     int nLoopCount; // r0
@@ -302,7 +322,8 @@ void AptAnimationPoolData::RegisterReferences(struct AptAnimationPoolData * cons
 
 static char __PRETTY_FUNCTION__[32]; // size: 0x20, address: 0x8045A3C0
 // Range: 0x8030F7DC -> 0x8030F8D0
-void AptActionQueueC::ClearActions(class AptActionQueueC * const this /* r27 */) {
+// this: r27
+void AptActionQueueC::ClearActions() {
     // Local variables
     struct AptActionPool * pCur; // r28
 
@@ -312,7 +333,8 @@ void AptActionQueueC::ClearActions(class AptActionQueueC * const this /* r27 */)
 
 static char __PRETTY_FUNCTION__[73]; // size: 0x49, address: 0x8045A3E0
 // Range: 0x8030F8D0 -> 0x8030F988
-void AptActionQueueC::AddActionBack(class AptActionQueueC * const this /* r27 */, struct AptActionBlock * pActionBlock /* r28 */, class AptCIH * pCIH /* r29 */, unsigned int input /* r30 */) {
+// this: r27
+void AptActionQueueC::AddActionBack(struct AptActionBlock * pActionBlock /* r28 */, class AptCIH * pCIH /* r29 */, unsigned int input /* r30 */) {
     // Local variables
     struct AptActionPool * pTempItem; // r0
 
@@ -322,7 +344,8 @@ void AptActionQueueC::AddActionBack(class AptActionQueueC * const this /* r27 */
 
 static char __PRETTY_FUNCTION__[74]; // size: 0x4A, address: 0x8045A42C
 // Range: 0x8030F988 -> 0x8030FA4C
-void AptActionQueueC::AddActionFront(class AptActionQueueC * const this /* r28 */, struct AptActionBlock * pActionBlock /* r29 */, class AptCIH * pCIH /* r30 */, unsigned int input /* r31 */) {
+// this: r28
+void AptActionQueueC::AddActionFront(struct AptActionBlock * pActionBlock /* r29 */, class AptCIH * pCIH /* r30 */, unsigned int input /* r31 */) {
     // Local variables
     struct AptActionPool * pTempItem; // r0
 
@@ -332,7 +355,8 @@ void AptActionQueueC::AddActionFront(class AptActionQueueC * const this /* r28 *
 
 static char __PRETTY_FUNCTION__[74]; // size: 0x4A, address: 0x8045A478
 // Range: 0x8030FA4C -> 0x8030FB24
-void AptActionQueueC::AddFunctionBack(class AptActionQueueC * const this /* r24 */, class AptCIH * pContext /* r25 */, class AptValue * pFuncDef /* r26 */, int nParams /* r27 */, unsigned int input /* r28 */) {
+// this: r24
+void AptActionQueueC::AddFunctionBack(class AptCIH * pContext /* r25 */, class AptValue * pFuncDef /* r26 */, int nParams /* r27 */, unsigned int input /* r28 */) {
     // Local variables
     struct AptActionPool * pTempItem; // r0
 
@@ -342,7 +366,8 @@ void AptActionQueueC::AddFunctionBack(class AptActionQueueC * const this /* r24 
 
 static char __PRETTY_FUNCTION__[75]; // size: 0x4B, address: 0x8045A4C4
 // Range: 0x8030FB24 -> 0x8030FBF4
-void AptActionQueueC::AddFunctionFront(class AptActionQueueC * const this /* r25 */, class AptCIH * pContext /* r26 */, class AptValue * pFuncDef /* r27 */, int nParams /* r28 */, unsigned int input /* r29 */) {
+// this: r25
+void AptActionQueueC::AddFunctionFront(class AptCIH * pContext /* r26 */, class AptValue * pFuncDef /* r27 */, int nParams /* r28 */, unsigned int input /* r29 */) {
     // Local variables
     struct AptActionPool * pTempItem; // r0
 
@@ -352,7 +377,8 @@ void AptActionQueueC::AddFunctionFront(class AptActionQueueC * const this /* r25
 
 static char __PRETTY_FUNCTION__[43]; // size: 0x2B, address: 0x8045A510
 // Range: 0x8030FBF4 -> 0x8030FDA0
-void AptActionQueueC::RemoveActionFor(class AptActionQueueC * const this /* r31 */, class AptCIH * pCIH /* r29 */) {
+// this: r31
+void AptActionQueueC::RemoveActionFor(class AptCIH * pCIH /* r29 */) {
     // Local variables
     struct AptActionPool * pCur; // r30
 
@@ -373,7 +399,8 @@ struct AptActionPool * AptActionQueueC::GetDequeLocation() {
 }
 
 // Range: 0x8030FE34 -> 0x8030FEF8
-void AptActionQueueC::RegisterReferences(class AptActionQueueC * const this /* r27 */) {
+// this: r27
+void AptActionQueueC::RegisterReferences() {
     // Local variables
     int nLoopCount; // r0
     int i; // r28
@@ -383,7 +410,6 @@ void AptActionQueueC::RegisterReferences(class AptActionQueueC * const this /* r
     // -> void (* sReferenceRegistrationCb)(class AptValue *, class AptValue *, char *);
 }
 
-struct {
-    // total size: 0x14
-} __vt__25AptCharacterAnimationInst; // size: 0x14, address: 0x8045A5B0
+// total size: 0x14
+struct {} __vt__25AptCharacterAnimationInst; // size: 0x14, address: 0x8045A5B0
 

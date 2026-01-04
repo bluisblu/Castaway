@@ -18,9 +18,6 @@
     "*.inc": "c",
     ".clangd": "yaml"
   },
-  "search.exclude": {
-    "dwarf/dwarf_dump.cpp": true
-  },
   // Disable C/C++ IntelliSense, use clangd instead
   "C_Cpp.intelliSenseEngine": "disabled",
 }

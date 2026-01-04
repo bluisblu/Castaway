@@ -5,23 +5,25 @@
     Code range: 0x803105B4 -> 0x80312194
 */
 static char __PRETTY_FUNCTION__[45]; // size: 0x2D, address: 0x8045A650
+// total size: 0x8
 struct ArrayMembers {
-    // total size: 0x8
+    // Members
     char * szName; // offset 0x0, size 0x4
     int nIndex; // offset 0x4, size 0x4
 };
 static struct ArrayMembers wordlist[28]; // size: 0xE0, address: 0x8045A690
-class ArrayMembersIndex {
-    // total size: 0x1
-};
+// total size: 0x1
+class ArrayMembersIndex {};
 // Range: 0x803105B4 -> 0x80310608
-void * AptArray::AptArray(class AptArray * const this /* r31 */) {
+// this: r31
+AptArray::AptArray() {
     // References
     // -> struct [anonymous] __vt__8AptArray;
 }
 
 // Range: 0x80310608 -> 0x80310664
-void * AptArray::~AptArray(class AptArray * const this /* r30 */) {}
+// this: r30
+AptArray::~AptArray() {}
 
 static char __PRETTY_FUNCTION__[33]; // size: 0x21, address: 0x8045A770
 // Range: 0x80310664 -> 0x803108E8
@@ -43,7 +45,8 @@ void AptArray::CleanNativeFunctions() {
 
 static char __PRETTY_FUNCTION__[30]; // size: 0x1E, address: 0x8045A7A4
 // Range: 0x803108E8 -> 0x803109A8
-void AptArray::DestroyGCPointers(class AptArray * const this /* r26 */) {
+// this: r26
+void AptArray::DestroyGCPointers() {
     // Local variables
     int i; // r27
     class AptValue * pValue; // r3
@@ -54,7 +57,8 @@ void AptArray::DestroyGCPointers(class AptArray * const this /* r26 */) {
 }
 
 // Range: 0x803109A8 -> 0x80310A2C
-void AptArray::RegisterReferences(const class AptArray * const this /* r30 */) {
+// this: r30
+void AptArray::RegisterReferences() const {
     // Local variables
     int i; // r31
 
@@ -63,7 +67,8 @@ void AptArray::RegisterReferences(const class AptArray * const this /* r30 */) {
 }
 
 // Range: 0x80310A2C -> 0x80310B04
-void AptArray::_reserve(class AptArray * const this /* r28 */, int nSize /* r0 */) {
+// this: r28
+void AptArray::_reserve(int nSize /* r0 */) {
     // Local variables
     int nCapSize; // r3
     class AptValue * * _aArray; // r29
@@ -73,7 +78,8 @@ void AptArray::_reserve(class AptArray * const this /* r28 */, int nSize /* r0 *
 }
 
 // Range: 0x80310B04 -> 0x80310B7C
-void AptArray::set(class AptArray * const this /* r29 */, int nIndex /* r30 */, class AptValue * pValue /* r31 */) {}
+// this: r29
+void AptArray::set(int nIndex /* r30 */, class AptValue * pValue /* r31 */) {}
 
 // Range: 0x80310B7C -> 0x80310BC4
 class AptValue * AptArray::get() {
@@ -85,7 +91,8 @@ class AptValue * AptArray::get() {
 }
 
 // Range: 0x80310BC4 -> 0x80310C98
-void AptArray::toString(class AptArray * const this /* r27 */, class EAStringC & sBuf /* r28 */, const char * szSeparator /* r29 */) {
+// this: r27
+void AptArray::toString(class EAStringC & sBuf /* r28 */, const char * szSeparator /* r29 */) {
     // Local variables
     int i; // r31
     class AptValue * pValue; // r30
@@ -94,7 +101,8 @@ void AptArray::toString(class AptArray * const this /* r27 */, class EAStringC &
 
 static char __PRETTY_FUNCTION__[78]; // size: 0x4E, address: 0x8045A7C4
 // Range: 0x80310C98 -> 0x80311250
-class AptValue * AptArray::objectMemberLookup(const class AptArray * const this /* r27 */, class AptValue * const pContext /* r28 */, const class EAStringC * const pName /* r29 */) {
+// this: r27
+class AptValue * AptArray::objectMemberLookup(class AptValue * const pContext /* r28 */, const class EAStringC * const pName /* r29 */) const {
     // Local variables
     char * pEnd; // r1+0x8
     int nRet; // r30
@@ -319,12 +327,10 @@ class AptValue * AptArray::sMethod_slice(class AptValue * pThis /* r28 */, int n
     // -> struct AptActionInterpreter gAptActionInterpreter;
 }
 
-struct {
-    // total size: 0x44
-} __vt__8AptArray; // size: 0x44, address: 0x8045A878
-struct {
-    // total size: 0x44
-} __vt__17AptNativeFunction; // size: 0x44, address: 0x8045A8BC
+// total size: 0x44
+struct {} __vt__8AptArray; // size: 0x44, address: 0x8045A878
+// total size: 0x44
+struct {} __vt__17AptNativeFunction; // size: 0x44, address: 0x8045A8BC
 // Range: 0x80312158 -> 0x80312194
 static void __sinit_\AptArray_cpp() {
     // References

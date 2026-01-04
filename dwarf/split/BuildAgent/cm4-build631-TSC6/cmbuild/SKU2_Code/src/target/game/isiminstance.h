@@ -14,12 +14,6 @@ class EAnimController * ISimInstance::GetAnimController() {}
 enum eTreeType ISimInstance::GetTreeType() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\target\game\isiminstance.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x800524A0 -> 0x800524C0
-*/
 // Range: 0x800524A0 -> 0x800524A4
 void ISimInstance::PropigateFlagsToSubModels() {}
 
@@ -36,22 +30,10 @@ unsigned int ISimInstance::GetCursFlags() {}
 class EVec3 ISimInstance::GetObCenter() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\target\game\isiminstance.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x8013D834 -> 0x8013D83C
-*/
 // Range: 0x8013D834 -> 0x8013D83C
 void ISimInstance::SetCursFlags() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\target\game\isiminstance.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x80225594 -> 0x80225780
-*/
 // Range: 0x80225594 -> 0x80225598
 void ISimInstance::RemoveSubModelsFromHouse() {}
 
@@ -80,7 +62,7 @@ void ISimInstance::SetXOb() {}
 void ISimInstance::InsertSubModelsInHouse() {}
 
 // Range: 0x802255F0 -> 0x80225624
-void ISimInstance::__dl(void * p /* r31 */) {}
+void ISimInstance::operator delete(void * p /* r31 */) {}
 
 // Range: 0x80225624 -> 0x80225630
 class ETypeInfo * ISimInstance::GetTypeInfo() {
@@ -138,13 +120,13 @@ void ISimInstance::Destruct() {}
 void ISimInstance::Construct() {}
 
 // Range: 0x802256EC -> 0x802256F4
-void * ISimInstance::__nw() {}
+void * ISimInstance::operator new() {}
 
 // Range: 0x802256F4 -> 0x80225724
 class ISimInstance * ISimInstance::New() {}
 
 // Range: 0x80225724 -> 0x80225780
-void * ISimInstance::__nw(unsigned long size /* r30 */) {
+void * ISimInstance::operator new(unsigned long size /* r30 */) {
     // Local variables
     void * result; // r31
 }

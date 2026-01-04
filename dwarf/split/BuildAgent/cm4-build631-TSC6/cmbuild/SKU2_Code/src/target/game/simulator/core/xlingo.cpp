@@ -23,7 +23,8 @@ int XObjLang::CountPrimitives() {}
 void (* XObjLang::GetSwizzler())(void *, int) {}
 
 // Range: 0x800EB6F8 -> 0x800EB744
-void * XObjLang::XObjLang(class XObjLang * const this /* r30 */, class ObjSelector * selector /* r31 */) {
+// this: r30
+XObjLang::XObjLang(class ObjSelector * selector /* r31 */) {
     // References
     // -> struct [anonymous] __vt__8XObjLang;
 }

@@ -11,13 +11,14 @@ void ScalarDecomp::Init() {
 }
 
 // Range: 0x80273ED4 -> 0x80273F0C
-void * ScalarDecomp::__nw(unsigned long size /* r31 */) {}
+void * ScalarDecomp::operator new(unsigned long size /* r31 */) {}
 
 // Range: 0x80273F0C -> 0x80273F40
-void ScalarDecomp::__dl(void * p /* r31 */) {}
+void ScalarDecomp::operator delete(void * p /* r31 */) {}
 
 // Range: 0x80273F40 -> 0x80274240
-float ScalarDecomp::GetFrame(class ScalarDecomp * const this /* r31 */, float frame /* f31 */) {
+// this: r31
+float ScalarDecomp::GetFrame(float frame /* f31 */) {
     // Local variables
     float fCurrentSplineStartFrame; // f2
     float fCurrentSplineEndFrame; // f3
@@ -28,14 +29,16 @@ float ScalarDecomp::GetFrame(class ScalarDecomp * const this /* r31 */, float fr
 }
 
 // Range: 0x80274240 -> 0x802743E4
-void ScalarDecomp::NextSegment(class ScalarDecomp * const this /* r31 */) {
+// this: r31
+void ScalarDecomp::NextSegment() {
     // Local variables
     int nextTimePos; // r4
     int nextFrame; // r30
 }
 
 // Range: 0x802743E4 -> 0x80274588
-void ScalarDecomp::LastSegment(class ScalarDecomp * const this /* r31 */) {
+// this: r31
+void ScalarDecomp::LastSegment() {
     // Local variables
     int lastTimePos; // r4
     int nextFrame; // r30
@@ -54,7 +57,8 @@ void ScalarDecomp::ResetEnd() {
 }
 
 // Range: 0x80274744 -> 0x802747C0
-void ScalarDecomp::ReadAllVs(class ScalarDecomp * const this /* r30 */) {
+// this: r30
+void ScalarDecomp::ReadAllVs() {
     // Local variables
     int nextFrame; // r31
 }
@@ -77,7 +81,8 @@ void ScalarDecomp::GetVPoint() {
 }
 
 // Range: 0x80274E84 -> 0x802750A8
-void ScalarDecomp::GetV(class ScalarDecomp * const this /* r28 */, int sel /* r29 */, int keyframe /* r30 */, float & vOut /* r31 */) {
+// this: r28
+void ScalarDecomp::GetV(int sel /* r29 */, int keyframe /* r30 */, float & vOut /* r31 */) {
     // Local variables
     struct ScalarKeyframe kn_1; // r1+0x28
     struct ScalarKeyframe kn; // r1+0x1C

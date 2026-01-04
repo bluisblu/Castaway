@@ -5,13 +5,15 @@
     Code range: 0x8015FCC0 -> 0x80160330
 */
 // Range: 0x8015FCC0 -> 0x8015FD3C
-void * ObjectDataObjDefinition::ObjectDataObjDefinition(class ObjectDataObjDefinition * const this /* r31 */) {
+// this: r31
+ObjectDataObjDefinition::ObjectDataObjDefinition() {
     // References
     // -> struct [anonymous] __vt__23ObjectDataObjDefinition;
 }
 
 // Range: 0x8015FD3C -> 0x8015FDA8
-void * ObjectDataObjDefinition::~ObjectDataObjDefinition(class ObjectDataObjDefinition * const this /* r30 */) {
+// this: r30
+ObjectDataObjDefinition::~ObjectDataObjDefinition() {
     // References
     // -> struct [anonymous] __vt__23ObjectDataObjDefinition;
 }
@@ -20,28 +22,33 @@ void * ObjectDataObjDefinition::~ObjectDataObjDefinition(class ObjectDataObjDefi
 void ObjectDataObjDefinition::Detach() {}
 
 // Range: 0x8015FDB4 -> 0x8015FDFC
-void ObjectDataObjDefinition::Reset(class ObjectDataObjDefinition * const this /* r31 */) {}
+// this: r31
+void ObjectDataObjDefinition::Reset() {}
 
 // Range: 0x8015FDFC -> 0x8015FE64
-class ObjectDataObjDefinition & ObjectDataObjDefinition::__as(class ObjectDataObjDefinition * const this /* r30 */, const struct ObjDefinition & from /* r31 */) {
+// this: r30
+class ObjectDataObjDefinition & ObjectDataObjDefinition::operator=(const struct ObjDefinition & from /* r31 */) {
     // Local variables
     class StackString name; // r1+0x8
 }
 
 // Range: 0x8015FE64 -> 0x8015FED4
-void ObjectDataObjDefinition::SetOwnDefinition(class ObjectDataObjDefinition * const this /* r30 */, struct ObjDefinition * from /* r31 */) {
+// this: r30
+void ObjectDataObjDefinition::SetOwnDefinition(struct ObjDefinition * from /* r31 */) {
     // Local variables
     class StackString name; // r1+0x8
 }
 
 // Range: 0x8015FED4 -> 0x8015FF38
-unsigned char ObjectDataObjDefinition::GetResourceName(const class ObjectDataObjDefinition * const this /* r30 */, class StringBuffer * name /* r31 */) {}
+// this: r30
+unsigned char ObjectDataObjDefinition::GetResourceName(class StringBuffer * name /* r31 */) const {}
 
 // Range: 0x8015FF38 -> 0x8015FF44
 unsigned int ObjectDataObjDefinition::GetResourceType() {}
 
 // Range: 0x8015FF44 -> 0x8015FFD0
-unsigned char ObjectDataObjDefinition::LoadFromQDataByID(class ObjectDataObjDefinition * const this /* r28 */, unsigned int fileID /* r30 */, signed short id /* r29 */) {
+// this: r28
+unsigned char ObjectDataObjDefinition::LoadFromQDataByID(unsigned int fileID /* r30 */, signed short id /* r29 */) {
     // Local variables
     class iResFile * file; // r0
     const struct ResFile * pResFile; // r30
@@ -49,7 +56,8 @@ unsigned char ObjectDataObjDefinition::LoadFromQDataByID(class ObjectDataObjDefi
 }
 
 // Range: 0x8015FFD0 -> 0x801600DC
-unsigned char ObjectDataObjDefinition::LoadFromIFFByID(class ObjectDataObjDefinition * const this /* r29 */, unsigned int fileID /* r30 */, signed short id /* r31 */) {
+// this: r29
+unsigned char ObjectDataObjDefinition::LoadFromIFFByID(unsigned int fileID /* r30 */, signed short id /* r31 */) {
     // Local variables
     struct HandleNode * handle; // r31
     class iResFile * file; // r30
@@ -59,7 +67,8 @@ unsigned char ObjectDataObjDefinition::LoadFromIFFByID(class ObjectDataObjDefini
 }
 
 // Range: 0x801600DC -> 0x801601D4
-unsigned char ObjectDataObjDefinition::SaveToIFFFile(class ObjectDataObjDefinition * const this /* r27 */, unsigned int fileID /* r30 */, signed short id /* r28 */, class StringBuffer & name /* r29 */) {
+// this: r27
+unsigned char ObjectDataObjDefinition::SaveToIFFFile(unsigned int fileID /* r30 */, signed short id /* r28 */, class StringBuffer & name /* r29 */) {
     // Local variables
     class iResFile * file; // r31
     struct HandleNode * btHand; // r30
@@ -74,7 +83,8 @@ unsigned char ObjectDataObjDefinition::LoadFromDBByID() {}
 unsigned char ObjectDataObjDefinition::SaveToDB() {}
 
 // Range: 0x801601E4 -> 0x80160284
-unsigned char ObjectDataObjDefinition::QueryInterface(class ObjectDataObjDefinition * const this /* r30 */, void * ppvObject /* r31 */) {}
+// this: r30
+unsigned char ObjectDataObjDefinition::QueryInterface(void * ppvObject /* r31 */) {}
 
 // Range: 0x80160284 -> 0x80160298
 unsigned int ObjectDataObjDefinition::AddRef() {}
@@ -83,7 +93,8 @@ unsigned int ObjectDataObjDefinition::AddRef() {}
 unsigned int ObjectDataObjDefinition::Release() {}
 
 // Range: 0x801602EC -> 0x80160328
-void ObjectDataObjDefinition::SetResourceName(class ObjectDataObjDefinition * const this /* r31 */) {}
+// this: r31
+void ObjectDataObjDefinition::SetResourceName() {}
 
 // Range: 0x80160328 -> 0x80160330
 void ObjectDataObjDefinition::SetResID() {}

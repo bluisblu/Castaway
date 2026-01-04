@@ -11,22 +11,10 @@ char * EApp::GetRootDirectory() {}
 enum OVERALL_GAME_STATE EApp::GetGameState() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\common\engine\core\e_app.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x80170EA0 -> 0x80170EA8
-*/
 // Range: 0x80170EA0 -> 0x80170EA8
 void EApp::SetGameState() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\common\engine\core\e_app.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x801FBAE8 -> 0x801FBB0C
-*/
 // Range: 0x801FBAE8 -> 0x801FBAF0
 unsigned int EApp::GetPrefetchBlockSize() {}
 
@@ -43,12 +31,6 @@ void EApp::UpdateAfterHotSync() {}
 int EApp::GetAppStackSize() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\common\engine\core\e_app.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x8027BD84 -> 0x8027BDB8
-*/
 // Range: 0x8027BD84 -> 0x8027BD88
 void EApp::Shutdown() {}
 

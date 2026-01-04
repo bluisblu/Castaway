@@ -31,14 +31,16 @@ static char __PRETTY_FUNCTION__[33]; // size: 0x21, address: 0x8045B30C
 static char __PRETTY_FUNCTION__[42]; // size: 0x2A, address: 0x8045B330
 static char __PRETTY_FUNCTION__[46]; // size: 0x2E, address: 0x8045B35C
 int emptyAssetString; // size: 0x4, address: 0x805DA740
+// total size: 0x8
 struct ClipEventType {
-    // total size: 0x8
+    // Members
     int nFlag; // offset 0x0, size 0x4
     enum StringCode eName; // offset 0x4, size 0x4
 };
 struct ClipEventType _aClipEvents[6]; // size: 0x30, address: 0x8045B390
 // Range: 0x803178FC -> 0x803179AC
-void * AptCIH::~AptCIH(class AptCIH * const this /* r30 */) {
+// this: r30
+AptCIH::~AptCIH() {
     // References
     // -> class DOGMA_PoolManager * gpNonGCPoolManager;
     // -> struct [anonymous] __vt__6AptCIH;
@@ -46,7 +48,8 @@ void * AptCIH::~AptCIH(class AptCIH * const this /* r30 */) {
 
 static char __PRETTY_FUNCTION__[17]; // size: 0x11, address: 0x8045B3C0
 // Range: 0x803179AC -> 0x80317AC8
-void AptCIH::Remove(class AptCIH * const this /* r31 */) {
+// this: r31
+void AptCIH::Remove() {
     // References
     // -> struct AptActionInterpreter gAptActionInterpreter;
     // -> static char __PRETTY_FUNCTION__[17];
@@ -55,11 +58,13 @@ void AptCIH::Remove(class AptCIH * const this /* r31 */) {
 }
 
 // Range: 0x80317AC8 -> 0x80317B24
-void AptCIH::PreDestroy(class AptCIH * const this /* r31 */) {}
+// this: r31
+void AptCIH::PreDestroy() {}
 
 static char __PRETTY_FUNCTION__[28]; // size: 0x1C, address: 0x8045B3E0
 // Range: 0x80317B24 -> 0x80317BB8
-void AptCIH::DestroyGCPointers(class AptCIH * const this /* r31 */) {
+// this: r31
+void AptCIH::DestroyGCPointers() {
     // References
     // -> static char __PRETTY_FUNCTION__[28];
 }
@@ -68,7 +73,8 @@ static char __PRETTY_FUNCTION__[29]; // size: 0x1D, address: 0x8045B3FC
 static char __PRETTY_FUNCTION__[40]; // size: 0x28, address: 0x8045B420
 static char __PRETTY_FUNCTION__[44]; // size: 0x2C, address: 0x8045B448
 // Range: 0x80317BB8 -> 0x80317E3C
-void AptCIH::ClearCIH(class AptCIH * const this /* r29 */, unsigned char bDestroyGC /* r30 */) {
+// this: r29
+void AptCIH::ClearCIH(unsigned char bDestroyGC /* r30 */) {
     // Local variables
     int i; // r31
     class AptValue * pOnUnloadFnc; // r26
@@ -82,7 +88,8 @@ void AptCIH::ClearCIH(class AptCIH * const this /* r29 */, unsigned char bDestro
 }
 
 // Range: 0x80317E3C -> 0x80317EDC
-void AptCIH::RegisterReferences(const class AptCIH * const this /* r30 */) {
+// this: r30
+void AptCIH::RegisterReferences() const {
     // Local variables
     class AptNativeHash * pNativeHash; // r31
     struct AptCharacterSpriteInstBase * pChar; // r0
@@ -93,7 +100,8 @@ void AptCIH::RegisterReferences(const class AptCIH * const this /* r30 */) {
 }
 
 // Range: 0x80317EDC -> 0x80317F44
-class AptNativeHash * AptCIH::getNativeHash(const class AptCIH * const this /* r31 */) {}
+// this: r31
+class AptNativeHash * AptCIH::getNativeHash() const {}
 
 // Range: 0x80317F44 -> 0x80317F48
 class AptNativeHash * AptCIH::GetNativeHashVirtual() {}
@@ -108,13 +116,15 @@ class AptValue * AptCIH::objectMemberLookup() {}
 unsigned char AptCIH::objectMemberSet() {}
 
 // Range: 0x80317F90 -> 0x80318000
-void AptCIH::Release(class AptCIH * const this /* r27 */, const char * szFuncName /* r28 */, const char * szFileName /* r29 */, int nLineNumber /* r30 */) {
+// this: r27
+void AptCIH::Release(const char * szFuncName /* r28 */, const char * szFileName /* r29 */, int nLineNumber /* r30 */) {
     // Local variables
     int nRefCount; // r0
 }
 
 // Range: 0x80318000 -> 0x80318360
-void AptCIH::ensureStringAllocated(class AptCIH * const this /* r29 */, class AptCIH * pParent /* r28 */) {
+// this: r29
+void AptCIH::ensureStringAllocated(class AptCIH * pParent /* r28 */) {
     // Local variables
     struct AptCharacterTextInst * pTextInst; // r31
     struct AptCharacter * pChar; // r30
@@ -130,7 +140,8 @@ void AptCIH::ensureStringAllocated(class AptCIH * const this /* r29 */, class Ap
 
 static char __PRETTY_FUNCTION__[90]; // size: 0x5A, address: 0x8045B474
 // Range: 0x80318360 -> 0x80318968
-void AptCIH::render(class AptCIH * const this /* r26 */, struct AptRenderingContext * pRenderingContext /* r24 */, enum AptMaskRenderOperation eMaskOperation /* r25 */) {
+// this: r26
+void AptCIH::render(struct AptRenderingContext * pRenderingContext /* r24 */, enum AptMaskRenderOperation eMaskOperation /* r25 */) {
     // Local variables
     struct AptCharacterSpriteInstBase * pSpriteInst; // r27
     class AptCIH * pRectObject; // r24
@@ -162,7 +173,8 @@ void AptCIH::render(class AptCIH * const this /* r26 */, struct AptRenderingCont
 }
 
 // Range: 0x80318968 -> 0x80318A98
-void AptCIH::_getBoundingRect(class AptCIH * const this /* r28 */, struct AptRenderingContext * pRenderingContext /* r29 */, struct AptRect * pRect /* r30 */) {
+// this: r28
+void AptCIH::_getBoundingRect(struct AptRenderingContext * pRenderingContext /* r29 */, struct AptRect * pRect /* r30 */) {
     // Local variables
     struct AptCharacterInst * pInst; // r0
     struct AptCharacterSpriteInstBase * pSpriteInst; // r0
@@ -177,7 +189,8 @@ void AptCIH::getBoundingRect(struct AptRect * pRect /* r31 */) {
 }
 
 // Range: 0x80318B30 -> 0x80318D90
-float AptCIH::GetProceduralProperty(class AptCIH * const this /* r31 */) {
+// this: r31
+float AptCIH::GetProceduralProperty() {
     // Local variables
     struct AptRect rect; // r1+0x18
     float fFloat; // f0
@@ -189,7 +202,8 @@ float AptCIH::GetProceduralProperty(class AptCIH * const this /* r31 */) {
 }
 
 // Range: 0x80318D90 -> 0x8031921C
-void AptCIH::setProceduralProperty(class AptCIH * const this /* r31 */, float fValue /* f31 */) {
+// this: r31
+void AptCIH::setProceduralProperty(float fValue /* f31 */) {
     // Local variables
     struct AptRect rect; // r1+0x18
     float fWidthVal; // f30
@@ -221,7 +235,8 @@ void AptCIH::setProceduralProperty(class AptCIH * const this /* r31 */, float fV
 }
 
 // Range: 0x8031921C -> 0x803192EC
-int AptCIH::FindAndSetEvents(class AptCIH * const this /* r26 */) {
+// this: r26
+int AptCIH::FindAndSetEvents() {
     // Local variables
     int iFound; // r29
     class AptNativeHash * pNativeHash; // r28
@@ -235,7 +250,8 @@ int AptCIH::FindAndSetEvents(class AptCIH * const this /* r26 */) {
 static char __PRETTY_FUNCTION__[45]; // size: 0x2D, address: 0x8045B530
 static char __PRETTY_FUNCTION__[37]; // size: 0x25, address: 0x8045B560
 // Range: 0x803192EC -> 0x8031958C
-void AptCIH::associateInstToClass(class AptCIH * const this /* r31 */) {
+// this: r31
+void AptCIH::associateInstToClass() {
     // Local variables
     struct AptCharacterInst * pCharInst; // r27
     struct AptCharacterAnimation * pAnim; // r0
@@ -259,14 +275,16 @@ void AptCIH::associateInstToClass(class AptCIH * const this /* r31 */) {
 }
 
 // Range: 0x8031958C -> 0x80319664
-void AptCIH::gotoState(class AptCIH * const this /* r27 */, enum AptCharacterButtonRecordState nNewState /* r28 */) {
+// this: r27
+void AptCIH::gotoState(enum AptCharacterButtonRecordState nNewState /* r28 */) {
     // Local variables
     struct AptCharacterButtonInst * pButtonInst; // r0
     int i; // r28
 }
 
 // Range: 0x80319664 -> 0x803197C0
-void AptCIH::jumpToFrame(class AptCIH * const this /* r27 */, int nTargetFrame /* r28 */) {
+// this: r27
+void AptCIH::jumpToFrame(int nTargetFrame /* r28 */) {
     // Local variables
     struct AptCharacterSpriteInstBase * pSprInstBase; // r31
     class AptNativeHash * pOldObject; // r30
@@ -280,14 +298,16 @@ void AptCIH::SetEventHandler(int nEvent /* r31 */) {}
 void AptCIH::RemoveEventHandler(int nEvent /* r31 */) {}
 
 // Range: 0x80319840 -> 0x8031990C
-int AptCIH::HasEvent(class AptCIH * const this /* r29 */, int nEvent /* r27 */) {
+// this: r29
+int AptCIH::HasEvent(int nEvent /* r27 */) {
     // Local variables
     class AptNativeHash * pHash; // r28
 }
 
 static char __PRETTY_FUNCTION__[48]; // size: 0x30, address: 0x8045B588
 // Range: 0x8031990C -> 0x80319D68
-unsigned char AptCIH::queueClipEvents(class AptCIH * const this /* r18 */, int nEventFlags /* r19 */, unsigned int input /* r20 */, int bFromListenerSet /* r21 */) {
+// this: r18
+unsigned char AptCIH::queueClipEvents(int nEventFlags /* r19 */, unsigned int input /* r20 */, int bFromListenerSet /* r21 */) {
     // Local variables
     struct AptCharacterSpriteInstBase * pSprInstBase; // r0
     unsigned char bQueuedClipEvent; // r23
@@ -312,7 +332,8 @@ unsigned char AptCIH::queueClipEvents(class AptCIH * const this /* r18 */, int n
 }
 
 // Range: 0x80319D68 -> 0x80319F2C
-void AptCIH::tick(class AptCIH * const this /* r30 */) {
+// this: r30
+void AptCIH::tick() {
     // Local variables
     struct AptCharacterSpriteInstBase * pSpriteInst; // r0
     struct AptCharacterButtonInst * pButtonInst; // r0
@@ -331,12 +352,12 @@ class AptCIH * AptCIH::getRootAnimation() {
 void AptCIH::decZombieCount() {}
 
 // Range: 0x80319FAC -> 0x8031A0B8
-void AptCIH::GetMovieclipInfo(class AptCIH * const this /* r30 */, struct AptMovieclipInformation * pMCInfo /* r31 */) {
+// this: r30
+void AptCIH::GetMovieclipInfo(struct AptMovieclipInformation * pMCInfo /* r31 */) {
     // Local variables
     enum AptVirtualFunctionTable_Indices eType; // r0
 }
 
-struct {
-    // total size: 0x44
-} __vt__6AptCIH; // size: 0x44, address: 0x8045B5D4
+// total size: 0x44
+struct {} __vt__6AptCIH; // size: 0x44, address: 0x8045B5D4
 

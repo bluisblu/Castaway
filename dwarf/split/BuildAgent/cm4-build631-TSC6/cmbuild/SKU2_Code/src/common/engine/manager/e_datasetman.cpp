@@ -17,7 +17,8 @@ class EResource * EDatasetManager::AddRefAsync() {
 }
 
 // Range: 0x802A8390 -> 0x802A83FC
-void EDatasetManager::AddRefAsyncIfNotLoaded(class EDatasetManager * const this /* r30 */, const char * szName /* r31 */) {
+// this: r30
+void EDatasetManager::AddRefAsyncIfNotLoaded(const char * szName /* r31 */) {
     // References
     // -> class EResourceLoader * _pResLoader;
 }
@@ -26,7 +27,8 @@ void EDatasetManager::AddRefAsyncIfNotLoaded(class EDatasetManager * const this 
 void EDatasetManager::DelRef() {}
 
 // Range: 0x802A8414 -> 0x802A8498
-class EResource * EDatasetManager::AllocateAndLoadResource(class EDatasetManager * const this /* r27 */, class EFile * pFile /* r28 */, unsigned int uLength /* r29 */, unsigned int id /* r30 */) {}
+// this: r27
+class EResource * EDatasetManager::AllocateAndLoadResource(class EFile * pFile /* r28 */, unsigned int uLength /* r29 */, unsigned int id /* r30 */) {}
 
 // Range: 0x802A8498 -> 0x802A84A0
 void EDatasetManager::SetLoadProgress() {}
@@ -38,7 +40,8 @@ unsigned char EDatasetManager::PreloadResource() {
 }
 
 // Range: 0x802A84B8 -> 0x802A84F8
-class EResource * EDatasetManager::GetRef(class EDatasetManager * const this /* r31 */) {}
+// this: r31
+class EResource * EDatasetManager::GetRef() {}
 
 // Range: 0x802A84F8 -> 0x802A8510
 class EResource * EDatasetManager::GetRef() {

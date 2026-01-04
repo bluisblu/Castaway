@@ -5,19 +5,22 @@
     Code range: 0x8024611C -> 0x80246578
 */
 // Range: 0x8024611C -> 0x80246158
-void * CachedSimRenderManager::CachedSimRenderManager() {}
+CachedSimRenderManager::CachedSimRenderManager() {}
 
 // Range: 0x80246158 -> 0x802461BC
-void CachedSimRenderManager::RemoveOneRenderer(class CachedSimRenderManager * const this /* r29 */, unsigned int i /* r30 */) {}
+// this: r29
+void CachedSimRenderManager::RemoveOneRenderer(unsigned int i /* r30 */) {}
 
 // Range: 0x802461BC -> 0x8024624C
-void CachedSimRenderManager::AddSimForRendering(class CachedSimRenderManager * const this /* r28 */, unsigned int index /* r29 */) {
+// this: r28
+void CachedSimRenderManager::AddSimForRendering(unsigned int index /* r29 */) {
     // Local variables
     class SimModelTSC6 * pModel; // r30
 }
 
 // Range: 0x8024624C -> 0x802462B4
-void CachedSimRenderManager::AddAllCachedSimsForRendering(class CachedSimRenderManager * const this /* r29 */) {
+// this: r29
+void CachedSimRenderManager::AddAllCachedSimsForRendering() {
     // Local variables
     unsigned int nCachedSims; // r0
     unsigned int i; // r30
@@ -36,16 +39,19 @@ void CachedSimRenderManager::SetSimPosition() {}
 void CachedSimRenderManager::SetSimAnimation() {}
 
 // Range: 0x80246318 -> 0x80246388
-void CachedSimRenderManager::GetSimBoneOrientation(class CachedSimRenderManager * const this /* r28 */, unsigned int index /* r29 */, int bone /* r30 */, class EMat4 & mOrient /* r31 */) {}
+// this: r28
+void CachedSimRenderManager::GetSimBoneOrientation(unsigned int index /* r29 */, int bone /* r30 */, class EMat4 & mOrient /* r31 */) {}
 
 // Range: 0x80246388 -> 0x802463F8
-void CachedSimRenderManager::Update(class CachedSimRenderManager * const this /* r29 */) {
+// this: r29
+void CachedSimRenderManager::Update() {
     // Local variables
     int i; // r30
 }
 
 // Range: 0x802463F8 -> 0x80246478
-void CachedSimRenderManager::Render(class CachedSimRenderManager * const this /* r28 */, class ERC * prc /* r29 */) {
+// this: r28
+void CachedSimRenderManager::Render(class ERC * prc /* r29 */) {
     // Local variables
     int i; // r30
 }

@@ -5,10 +5,12 @@
     Code range: 0x802CD5C0 -> 0x802CD964
 */
 // Range: 0x802CD5C0 -> 0x802CD64C
-void * ENgcScheduler::~ENgcScheduler(class ENgcScheduler * const this /* r30 */) {}
+// this: r30
+ENgcScheduler::~ENgcScheduler() {}
 
 // Range: 0x802CD64C -> 0x802CD6CC
-unsigned char ENgcScheduler::Init(class ENgcScheduler * const this /* r31 */) {}
+// this: r31
+unsigned char ENgcScheduler::Init() {}
 
 // Range: 0x802CD6CC -> 0x802CD774
 void ENgcScheduler::QueueSetupFrameBuffer() {
@@ -65,12 +67,14 @@ void ENgcScheduler::RenderingComplete() {}
 int ENgcScheduler::GetLastRetraceCount() {}
 
 // Range: 0x802CD8BC -> 0x802CD8F0
-void ENgcScheduler::Main(class ENgcScheduler * const this /* r31 */) {
+// this: r31
+void ENgcScheduler::Main() {
     // Local variables
     unsigned int msg; // r1+0x8
 }
 
 // Range: 0x802CD8F0 -> 0x802CD964
-void ENgcScheduler::FreeSchedCommand(class ENgcScheduler * const this /* r30 */, struct ESchedCommand * p /* r31 */) {}
+// this: r30
+void ENgcScheduler::FreeSchedCommand(struct ESchedCommand * p /* r31 */) {}
 
 

@@ -11,25 +11,14 @@ class CASTargetTSC6 * CASTargetTSC6::GetCASTarget() {}
 unsigned char CASTargetTSC6::HasCharacterInSlot() {}
 
 // Range: 0x8003A72C -> 0x8003A76C
-void CASTargetTSC6::SetHandleInput(class CASTargetTSC6 * const this /* r31 */) {}
+// this: r31
+void CASTargetTSC6::SetHandleInput() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\target\game\ui\targets\castarget_tsc6.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x8016E820 -> 0x8016E82C
-*/
 // Range: 0x8016E820 -> 0x8016E82C
 unsigned char CASTargetTSC6::IsShuttingdown() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\target\game\ui\targets\castarget_tsc6.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x8018E3F8 -> 0x8018E50C
-*/
 // Range: 0x8018E3F8 -> 0x8018E404
 unsigned char CASTargetTSC6::isTargetReady() {}
 

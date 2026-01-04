@@ -59,7 +59,8 @@ int GetIndividualTotalSkillPointsPossible() {}
 int GetIndividualMaxedSkillsPossible() {}
 
 // Range: 0x801BF3F4 -> 0x801BF72C
-void * PRGTarget::PRGTarget(class PRGTarget * const this /* r29 */, unsigned char load_flash /* r30 */) {
+// this: r29
+PRGTarget::PRGTarget(unsigned char load_flash /* r30 */) {
     // References
     // -> class EGlobal _globals;
     // -> static const char * const PRG_TabIcon0;
@@ -100,21 +101,24 @@ void * PRGTarget::PRGTarget(class PRGTarget * const this /* r29 */, unsigned cha
 }
 
 // Range: 0x801BF72C -> 0x801BF7D8
-void * PRGTarget::~PRGTarget(class PRGTarget * const this /* r30 */) {
+// this: r30
+PRGTarget::~PRGTarget() {
     // References
     // -> class EGlobal _globals;
     // -> struct [anonymous] __vt__9PRGTarget;
 }
 
 // Range: 0x801BF7D8 -> 0x801BF87C
-void PRGTarget::SetVariable(class PRGTarget * const this /* r29 */, const char * szCommand /* r30 */, const char * szParams /* r31 */) {
+// this: r29
+void PRGTarget::SetVariable(const char * szCommand /* r30 */, const char * szParams /* r31 */) {
     // References
     // -> static const char * const PRG_CANCEL_BUTTON;
     // -> const char * PRG_CLOSE_MENU;
 }
 
 // Range: 0x801BF87C -> 0x801BFCC8
-unsigned short * PRGTarget::GetLocalizable(class PRGTarget * const this /* r27 */, const char * szVar /* r28 */) {
+// this: r27
+unsigned short * PRGTarget::GetLocalizable(const char * szVar /* r28 */) {
     // Local variables
     unsigned short * wideStr; // r31
     const unsigned short * name; // r0
@@ -136,7 +140,8 @@ unsigned short * PRGTarget::GetLocalizable(class PRGTarget * const this /* r27 *
 }
 
 // Range: 0x801BFCC8 -> 0x801BFDAC
-char * PRGTarget::GetVariable(class PRGTarget * const this /* r28 */, const char * szVar /* r29 */) {
+// this: r28
+char * PRGTarget::GetVariable(const char * szVar /* r29 */) {
     // Local variables
     char * retStr; // r30
 

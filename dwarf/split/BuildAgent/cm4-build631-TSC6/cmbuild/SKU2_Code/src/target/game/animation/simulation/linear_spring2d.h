@@ -5,6 +5,7 @@
     Code range: 0x8002827C -> 0x800282BC
 */
 // Range: 0x8002827C -> 0x800282BC
-void * LinearSpring2D::~LinearSpring2D(class LinearSpring2D * const this /* r31 */) {}
+// this: r31
+LinearSpring2D::~LinearSpring2D() {}
 
 

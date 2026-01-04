@@ -5,13 +5,16 @@
     Code range: 0x800424D8 -> 0x8004337C
 */
 // Range: 0x800424D8 -> 0x80042538
-void * SkinCompositor::SkinCompositor(class SkinCompositor * const this /* r31 */) {}
+// this: r31
+SkinCompositor::SkinCompositor() {}
 
 // Range: 0x80042538 -> 0x80042590
-void * SkinCompositor::~SkinCompositor(class SkinCompositor * const this /* r30 */) {}
+// this: r30
+SkinCompositor::~SkinCompositor() {}
 
 // Range: 0x80042590 -> 0x80042680
-void SkinCompositor::Reset(class SkinCompositor * const this /* r30 */, unsigned short nDestSize /* r31 */) {
+// this: r30
+void SkinCompositor::Reset(unsigned short nDestSize /* r31 */) {
     // References
     // -> class EGraphics * _pGfx;
 }
@@ -34,14 +37,16 @@ unsigned char SkinCompositor::CreateSkinQuadrantPrecomposited(class ERTexture * 
 }
 
 // Range: 0x800427B8 -> 0x8004282C
-void SkinCompositor::CreateSkin(class SkinCompositor * const this /* r30 */, class CasSimDescription & simDesc /* r31 */) {
+// this: r30
+void SkinCompositor::CreateSkin(class CasSimDescription & simDesc /* r31 */) {
     // References
     // -> unsigned short gSimPartsMapSizeMultiplier_Game;
     // -> unsigned short gSimPartsMapSizeMultiplier_CAS;
 }
 
 // Range: 0x8004282C -> 0x800428DC
-void SkinCompositor::InitScratchpadTextures(class SkinCompositor * const this /* r30 */, unsigned short destSize /* r31 */) {
+// this: r30
+void SkinCompositor::InitScratchpadTextures(unsigned short destSize /* r31 */) {
     // Local variables
     struct ETextureDef td; // r1+0x8
 
@@ -50,7 +55,8 @@ void SkinCompositor::InitScratchpadTextures(class SkinCompositor * const this /*
 }
 
 // Range: 0x800428DC -> 0x8004296C
-void SkinCompositor::InitSkinTexture(class SkinCompositor * const this /* r30 */) {
+// this: r30
+void SkinCompositor::InitSkinTexture() {
     // Local variables
     class ETexture * skinTexture; // r31
 
@@ -63,7 +69,8 @@ void SkinCompositor::InitSkinTexture(class SkinCompositor * const this /* r30 */
 void SkinCompositor::FinalizeSkinTexture() {}
 
 // Range: 0x8004299C -> 0x80042BF4
-void SkinCompositor::LoadAllTextureLayers(class SkinCompositor * const this /* r31 */, const class CasSimDescription & simDesc /* r26 */) {
+// this: r31
+void SkinCompositor::LoadAllTextureLayers(const class CasSimDescription & simDesc /* r26 */) {
     // Local variables
     int pitchX; // r1+0xC
     int pitchY; // r1+0x8
@@ -81,7 +88,8 @@ void SkinCompositor::LoadAllTextureLayers(class SkinCompositor * const this /* r
 }
 
 // Range: 0x80042C28 -> 0x800432C0
-void SkinCompositor::BlendTexture(class SkinCompositor * const this /* r15 */, const struct TextureBlendInfo & textureBlendInfo /* r16 */) {
+// this: r15
+void SkinCompositor::BlendTexture(const struct TextureBlendInfo & textureBlendInfo /* r16 */) {
     // Local variables
     class TRect quadrantRect; // r1+0x38
     class ERTexture * blendTexture; // f19
@@ -119,7 +127,8 @@ void SkinCompositor::BlendTexture(class SkinCompositor * const this /* r15 */, c
 }
 
 // Range: 0x800432C0 -> 0x8004337C
-void SkinCompositor::GetFinalReflectionMask(class SkinCompositor * const this /* r27 */) {
+// this: r27
+void SkinCompositor::GetFinalReflectionMask() {
     // Local variables
     unsigned short x; // r30
     unsigned short y; // r29

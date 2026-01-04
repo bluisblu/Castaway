@@ -5,7 +5,8 @@
     Code range: 0x802D6C44 -> 0x802D7F50
 */
 // Range: 0x802D6C44 -> 0x802D6D70
-void * ERAnim::ERAnim(class ERAnim * const this /* r29 */) {
+// this: r29
+ERAnim::ERAnim() {
     // References
     // -> unsigned long m_allocatedAnims;
     // -> struct [anonymous] __vt__14ERAnimBitArray;
@@ -13,7 +14,8 @@ void * ERAnim::ERAnim(class ERAnim * const this /* r29 */) {
 }
 
 // Range: 0x802D6D70 -> 0x802D6F84
-void * ERAnim::~ERAnim(class ERAnim * const this /* r30 */) {
+// this: r30
+ERAnim::~ERAnim() {
     // References
     // -> class EAnimManager _animman;
     // -> struct [anonymous] __vt__9EBitArray;
@@ -33,10 +35,12 @@ unsigned int CopyERAnimNodeArray(class TArray & array /* r27 */, char * buff /* 
 }
 
 // Range: 0x802D70C4 -> 0x802D7784
-void ERAnim::LoadFromFile(class ERAnim * const this /* r30 */, class EFile * s /* r31 */, unsigned int version /* r25 */) {}
+// this: r30
+void ERAnim::LoadFromFile(class EFile * s /* r31 */, unsigned int version /* r25 */) {}
 
 // Range: 0x802D7784 -> 0x802D7970
-void ERAnim::Load(class ERAnim * const this /* r26 */, class EFile * s /* r27 */) {
+// this: r26
+void ERAnim::Load(class EFile * s /* r27 */) {
     // Local variables
     class EDataHeader resourceHeader; // r1+0x8
 
@@ -46,7 +50,8 @@ void ERAnim::Load(class ERAnim * const this /* r26 */, class EFile * s /* r27 */
 }
 
 // Range: 0x802D7970 -> 0x802D7D5C
-void ERAnim::OldLoad(class ERAnim * const this /* r29 */, class EFile * s /* r26 */) {
+// this: r29
+void ERAnim::OldLoad(class EFile * s /* r26 */) {
     // Local variables
     class EDataHeader resourceHeader; // r1+0x18
     char * buffer; // r31
@@ -54,7 +59,8 @@ void ERAnim::OldLoad(class ERAnim * const this /* r29 */, class EFile * s /* r26
 }
 
 // Range: 0x802D7D5C -> 0x802D7F50
-void ERAnim::Refresh(class ERAnim * const this /* r26 */, class EFile * pFile /* r27 */) {
+// this: r26
+void ERAnim::Refresh(class EFile * pFile /* r27 */) {
     // References
     // -> class ESoundEventManager g_soundeventman;
     // -> static unsigned int exceptionTable[2];

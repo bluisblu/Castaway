@@ -8,10 +8,12 @@
 void EFixedString::Init() {}
 
 // Range: 0x8026153C -> 0x8026157C
-void * EFixedString::~EFixedString(class EFixedString * const this /* r31 */) {}
+// this: r31
+EFixedString::~EFixedString() {}
 
 // Range: 0x8026157C -> 0x8026160C
-class EFixedString & EFixedString::MakeCopy(class EFixedString * const this /* r30 */, const char * szSource /* r31 */) {
+// this: r30
+class EFixedString & EFixedString::MakeCopy(const char * szSource /* r31 */) {
     // Local variables
     int len; // r0
 
@@ -20,7 +22,8 @@ class EFixedString & EFixedString::MakeCopy(class EFixedString * const this /* r
 }
 
 // Range: 0x8026160C -> 0x802616CC
-int EFixedString::FindNoCase(const class EFixedString * const this /* r24 */, const char * szString /* r25 */) {
+// this: r24
+int EFixedString::FindNoCase(const char * szString /* r25 */) const {
     // Local variables
     int searchLen; // r0
     int last; // r29
@@ -30,7 +33,8 @@ int EFixedString::FindNoCase(const class EFixedString * const this /* r24 */, co
 }
 
 // Range: 0x802616CC -> 0x802617D4
-void EFixedString::Remove(class EFixedString * const this /* r31 */) {
+// this: r31
+void EFixedString::Remove() {
     // Local variables
     char * szTemp; // r6
     char * szThis; // r9

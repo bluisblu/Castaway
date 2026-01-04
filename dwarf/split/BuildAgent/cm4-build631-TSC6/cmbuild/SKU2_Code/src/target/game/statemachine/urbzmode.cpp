@@ -5,13 +5,15 @@
     Code range: 0x8017AA08 -> 0x8017AF40
 */
 // Range: 0x8017AA08 -> 0x8017AA5C
-void UrbzModeNewGameState::Reset(class UrbzModeNewGameState * const this /* r31 */) {
+// this: r31
+void UrbzModeNewGameState::Reset() {
     // References
     // -> class EGlobal _globals;
 }
 
 // Range: 0x8017AA5C -> 0x8017AF40
-void UrbzModeNewGameState::Update(class UrbzModeNewGameState * const this /* r31 */) {
+// this: r31
+void UrbzModeNewGameState::Update() {
     // Local variables
     class QTimer lqtimer; // r1+0x10
     int iOldStage; // r0

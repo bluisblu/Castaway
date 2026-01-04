@@ -5,7 +5,7 @@
     Code range: 0x802699A4 -> 0x8026A618
 */
 // Range: 0x802699A4 -> 0x802699C0
-void * ERedBlackTree::ERedBlackTree() {
+ERedBlackTree::ERedBlackTree() {
     // References
     // -> struct ERedBlackTreeNode m_sentinel;
 }
@@ -29,13 +29,15 @@ void ERedBlackTree::RotateRight() {
 }
 
 // Range: 0x80269AC8 -> 0x80269C24
-void ERedBlackTree::InsertFixup(class ERedBlackTree * const this /* r29 */, struct ERedBlackTreeNode * x /* r30 */) {
+// this: r29
+void ERedBlackTree::InsertFixup(struct ERedBlackTreeNode * x /* r30 */) {
     // Local variables
     struct ERedBlackTreeNode * y; // r3
 }
 
 // Range: 0x80269C24 -> 0x80269C90
-unsigned int & ERedBlackTree::__vc(class ERedBlackTree * const this /* r30 */, unsigned int key /* r31 */) {
+// this: r30
+unsigned int & ERedBlackTree::operator[](unsigned int key /* r31 */) {
     // Local variables
     struct ERedBlackTreeNode * pParent; // r4
     class RBIteratorPtrType * i; // r0
@@ -64,7 +66,8 @@ class RBIteratorPtrType * ERedBlackTree::Insert(unsigned int key /* r9 */) {
 }
 
 // Range: 0x80269E14 -> 0x80269F94
-class RBIteratorPtrType * ERedBlackTree::InsertAt(class ERedBlackTree * const this /* r30 */, struct ERedBlackTreeNode * pParent /* r27 */, unsigned int key /* r28 */, unsigned int value /* r29 */) {
+// this: r30
+class RBIteratorPtrType * ERedBlackTree::InsertAt(struct ERedBlackTreeNode * pParent /* r27 */, unsigned int key /* r28 */, unsigned int value /* r29 */) {
     // Local variables
     struct ERedBlackTreeNode * x; // r31
 
@@ -73,20 +76,23 @@ class RBIteratorPtrType * ERedBlackTree::InsertAt(class ERedBlackTree * const th
 }
 
 // Range: 0x80269F94 -> 0x8026A16C
-void ERedBlackTree::RemoveFixup(class ERedBlackTree * const this /* r28 */, struct ERedBlackTreeNode * x /* r29 */) {
+// this: r28
+void ERedBlackTree::RemoveFixup(struct ERedBlackTreeNode * x /* r29 */) {
     // Local variables
     struct ERedBlackTreeNode * w; // r4
     struct ERedBlackTreeNode * w; // r4
 }
 
 // Range: 0x8026A16C -> 0x8026A1BC
-unsigned char ERedBlackTree::Remove(class ERedBlackTree * const this /* r31 */) {
+// this: r31
+unsigned char ERedBlackTree::Remove() {
     // Local variables
     class RBIteratorPtrType * i; // r4
 }
 
 // Range: 0x8026A1BC -> 0x8026A3AC
-void ERedBlackTree::Remove(class ERedBlackTree * const this /* r29 */, class RBIteratorPtrType * i /* r30 */) {
+// this: r29
+void ERedBlackTree::Remove(class RBIteratorPtrType * i /* r30 */) {
     // Local variables
     struct ERedBlackTreeNode * z; // [invalid]
     struct ERedBlackTreeNode * y; // r31
@@ -107,7 +113,8 @@ class RBIteratorPtrType * ERedBlackTree::Find() {
 }
 
 // Range: 0x8026A3FC -> 0x8026A464
-void ERedBlackTree::RemoveAll(class ERedBlackTree * const this /* r30 */) {
+// this: r30
+void ERedBlackTree::RemoveAll() {
     // References
     // -> struct ERedBlackTreeNode m_sentinel;
 }
@@ -116,13 +123,15 @@ void ERedBlackTree::RemoveAll(class ERedBlackTree * const this /* r30 */) {
 int ERedBlackTree::GetSize() {}
 
 // Range: 0x8026A484 -> 0x8026A50C
-class ERedBlackTree & ERedBlackTree::__as(class ERedBlackTree * const this /* r29 */, const class ERedBlackTree & s /* r30 */) {
+// this: r29
+class ERedBlackTree & ERedBlackTree::operator=(const class ERedBlackTree & s /* r30 */) {
     // References
     // -> struct ERedBlackTreeNode m_sentinel;
 }
 
 // Range: 0x8026A50C -> 0x8026A618
-void ERedBlackTree::SetValues(class ERedBlackTree * const this /* r28 */, unsigned char allowDuplicates /* r29 */) {
+// this: r28
+void ERedBlackTree::SetValues(unsigned char allowDuplicates /* r29 */) {
     // Local variables
     class RBIteratorPtrType * i; // r30
     unsigned int key; // r0

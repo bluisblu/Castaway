@@ -5,13 +5,15 @@
     Code range: 0x802B86F0 -> 0x802B88DC
 */
 // Range: 0x802B86F0 -> 0x802B8738
-void * ERSampledata::ERSampledata(class ERSampledata * const this /* r31 */) {
+// this: r31
+ERSampledata::ERSampledata() {
     // References
     // -> struct [anonymous] __vt__12ERSampledata;
 }
 
 // Range: 0x802B8738 -> 0x802B87F4
-void * ERSampledata::~ERSampledata(class ERSampledata * const this /* r29 */) {
+// this: r29
+ERSampledata::~ERSampledata() {
     // References
     // -> class EAudioSampleManager * _pAudiosampleman;
     // -> class ENgcAudioSampleManager _ngcAudioSampleMan;
@@ -20,9 +22,11 @@ void * ERSampledata::~ERSampledata(class ERSampledata * const this /* r29 */) {
 }
 
 // Range: 0x802B87F4 -> 0x802B8868
-void ERSampledata::Load(class ERSampledata * const this /* r30 */, class EFile * pFile /* r31 */) {}
+// this: r30
+void ERSampledata::Load(class EFile * pFile /* r31 */) {}
 
 // Range: 0x802B8868 -> 0x802B88DC
-void ERSampledata::LoadStereo(class ERSampledata * const this /* r30 */, class EFile * pFile /* r31 */) {}
+// this: r30
+void ERSampledata::LoadStereo(class EFile * pFile /* r31 */) {}
 
 

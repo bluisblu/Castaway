@@ -5,20 +5,23 @@
     Code range: 0x8004BD4C -> 0x8004CFA8
 */
 // Range: 0x8004BD4C -> 0x8004BE1C
-void * CasSceneDefault::CasSceneDefault(class CasSceneDefault * const this /* r30 */) {
+// this: r30
+CasSceneDefault::CasSceneDefault() {
     // References
     // -> class EGlobal _globals;
     // -> struct [anonymous] __vt__15CasSceneDefault;
 }
 
 // Range: 0x8004BE1C -> 0x8004BEF0
-void * CasSceneDefault::~CasSceneDefault(class CasSceneDefault * const this /* r30 */) {
+// this: r30
+CasSceneDefault::~CasSceneDefault() {
     // References
     // -> struct [anonymous] __vt__15CasSceneDefault;
 }
 
 // Range: 0x8004BEF0 -> 0x8004C43C
-void CasSceneDefault::Reload(class CasSceneDefault * const this /* r30 */) {
+// this: r30
+void CasSceneDefault::Reload() {
     // Local variables
     class ERDataset * pSceneDataset; // r31
     struct CreatedLightingEntry lighting; // r1+0xB8
@@ -53,16 +56,19 @@ void CasSceneDefault::PauseSequence() {}
 void CasSceneDefault::UnpauseSequence() {}
 
 // Range: 0x8004C454 -> 0x8004C4B0
-void CasSceneDefault::Update(class CasSceneDefault * const this /* r31 */, float fDeltaSeconds /* f31 */) {}
+// this: r31
+void CasSceneDefault::Update(float fDeltaSeconds /* f31 */) {}
 
 // Range: 0x8004C4B0 -> 0x8004C520
-void CasSceneDefault::DoFirstUpdate(class CasSceneDefault * const this /* r30 */) {
+// this: r30
+void CasSceneDefault::DoFirstUpdate() {
     // Local variables
     class WeatherManager * pWeatherManager; // r31
 }
 
 // Range: 0x8004C520 -> 0x8004C6E8
-void CasSceneDefault::DrawRoom(class CasSceneDefault * const this /* r28 */, class ERC * prc /* r29 */, const class EMat4 & transform /* r30 */) {
+// this: r28
+void CasSceneDefault::DrawRoom(class ERC * prc /* r29 */, const class EMat4 & transform /* r30 */) {
     // Local variables
     unsigned char bIsViewingMirror; // r31
     class CASTargetTSC6 * pTarget; // r0
@@ -91,13 +97,15 @@ enum eSlideShowPositions CasSceneDefault::MapSimIndexToCrewPosition(unsigned int
 }
 
 // Range: 0x8004C7A8 -> 0x8004C830
-void CasSceneDefault::GetSimOrient(class CasSceneDefault * const this /* r29 */, unsigned int index /* r31 */, class EMat4 & orient /* r30 */) {
+// this: r29
+void CasSceneDefault::GetSimOrient(unsigned int index /* r31 */, class EMat4 & orient /* r30 */) {
     // References
     // -> int kSimBoatLocatorBones[6];
 }
 
 // Range: 0x8004C830 -> 0x8004C91C
-void CasSceneDefault::PlayClosingSequence(class CasSceneDefault * const this /* r29 */) {
+// this: r29
+void CasSceneDefault::PlayClosingSequence() {
     // Local variables
     class CAFTarget * pTarget; // r0
 
@@ -119,7 +127,8 @@ unsigned char CasSceneDefault::SwitchCellPhone(const char * pString /* r31 */) {
 }
 
 // Range: 0x8004CA10 -> 0x8004CAD8
-class EMidLotInstance * CasSceneDefault::GetPropForSim(class CasSceneDefault * const this /* r31 */) {
+// this: r31
+class EMidLotInstance * CasSceneDefault::GetPropForSim() {
     // Local variables
     unsigned int iSimIndex; // r0
 
@@ -128,7 +137,8 @@ class EMidLotInstance * CasSceneDefault::GetPropForSim(class CasSceneDefault * c
 }
 
 // Range: 0x8004CAD8 -> 0x8004CB68
-unsigned int CasSceneDefault::GetPropBoneForSim(class CasSceneDefault * const this /* r31 */) {
+// this: r31
+unsigned int CasSceneDefault::GetPropBoneForSim() {
     // Local variables
     unsigned int iSimIndex; // r0
 
@@ -137,7 +147,8 @@ unsigned int CasSceneDefault::GetPropBoneForSim(class CasSceneDefault * const th
 }
 
 // Range: 0x8004CB68 -> 0x8004CC6C
-void CasSceneDefault::UpdateClosingSnapshot(class CasSceneDefault * const this /* r31 */, float fDeltaSeconds /* f31 */) {
+// this: r31
+void CasSceneDefault::UpdateClosingSnapshot(float fDeltaSeconds /* f31 */) {
     // Local variables
     class CAFTarget * pTarget; // r0
 
@@ -156,7 +167,8 @@ void CasSceneDefault::CheckStartFade() {
 }
 
 // Range: 0x8004CCA4 -> 0x8004CFA8
-void CasSceneDefault::AdvanceClosingSnapshot(class CasSceneDefault * const this /* r31 */) {
+// this: r31
+void CasSceneDefault::AdvanceClosingSnapshot() {
     // Local variables
     unsigned char bAdvanced; // r4
     class CAFTarget * pTarget; // r0

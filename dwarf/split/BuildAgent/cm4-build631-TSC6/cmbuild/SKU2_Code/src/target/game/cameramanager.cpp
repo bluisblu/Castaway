@@ -5,13 +5,14 @@
     Code range: 0x8020F73C -> 0x8020F830
 */
 // Range: 0x8020F73C -> 0x8020F748
-void * CameraManager::CameraManager() {}
+CameraManager::CameraManager() {}
 
 // Range: 0x8020F748 -> 0x8020F74C
 void CameraManager::Initialize() {}
 
 // Range: 0x8020F74C -> 0x8020F7D8
-void CameraManager::Update(const class CameraManager * const this /* r29 */) {
+// this: r29
+void CameraManager::Update() const {
     // Local variables
     class CameraDirector * pCurCamDir; // r30
 

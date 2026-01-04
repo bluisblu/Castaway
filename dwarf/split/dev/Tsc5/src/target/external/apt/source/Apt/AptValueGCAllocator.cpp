@@ -18,64 +18,73 @@ class AptValueGC * AptValueGC_PoolManager::AllocateAptValueGC() {
     // -> unsigned char snOffsetToStoreSize;
 }
 
+// total size: 0xC
 struct /* @class$1549AptValueGCAllocator_cpp */ {
-    // total size: 0xC
+    // Members
     struct _AptValueGC_MemItem * pNextItem; // offset 0x0, size 0x4
     unsigned int bIsAllocated : 1; // offset 0x4, size 0x4
     unsigned int nSize : 31; // offset 0x4, size 0x4
     struct _AptValueGC_MemItem * pPrevItem; // offset 0x8, size 0x4
 };
+// total size: 0xC
 struct /* @class$1550AptValueGCAllocator_cpp */ {
-    // total size: 0xC
+    // Members
     unsigned int bIsAllocated : 1; // offset 0x0, size 0x4
     unsigned int nSize : 31; // offset 0x0, size 0x4
     struct _AptValueGC_MemItem * pNextItem; // offset 0x4, size 0x4
     struct _AptValueGC_MemItem * pPrevItem; // offset 0x8, size 0x4
 };
 union /* @class$1548AptValueGCAllocator_cpp */ {
+    // total size: 0xC
     struct /* @class$1549AptValueGCAllocator_cpp */ {
-        // total size: 0xC
+        // Members
         struct _AptValueGC_MemItem * pNextItem; // offset 0x0, size 0x4
         unsigned int bIsAllocated : 1; // offset 0x4, size 0x4
         unsigned int nSize : 31; // offset 0x4, size 0x4
         struct _AptValueGC_MemItem * pPrevItem; // offset 0x8, size 0x4
     } Type1; // offset 0x0, size 0xC
+    // total size: 0xC
     struct /* @class$1550AptValueGCAllocator_cpp */ {
-        // total size: 0xC
+        // Members
         unsigned int bIsAllocated : 1; // offset 0x0, size 0x4
         unsigned int nSize : 31; // offset 0x0, size 0x4
         struct _AptValueGC_MemItem * pNextItem; // offset 0x4, size 0x4
         struct _AptValueGC_MemItem * pPrevItem; // offset 0x8, size 0x4
     } Type2; // offset 0x0, size 0xC
 };
+// total size: 0xC
 struct _AptValueGC_MemItem {
-    // total size: 0xC
+    // Members
     union { // inferred
         union /* @class$1548AptValueGCAllocator_cpp */ {
+            // total size: 0xC
             struct /* @class$1549AptValueGCAllocator_cpp */ {
-                // total size: 0xC
+                // Members
                 struct _AptValueGC_MemItem * pNextItem; // offset 0x0, size 0x4
                 unsigned int bIsAllocated : 1; // offset 0x4, size 0x4
                 unsigned int nSize : 31; // offset 0x4, size 0x4
                 struct _AptValueGC_MemItem * pPrevItem; // offset 0x8, size 0x4
             } Type1; // offset 0x0, size 0xC
+            // total size: 0xC
             struct /* @class$1550AptValueGCAllocator_cpp */ {
-                // total size: 0xC
+                // Members
                 unsigned int bIsAllocated : 1; // offset 0x0, size 0x4
                 unsigned int nSize : 31; // offset 0x0, size 0x4
                 struct _AptValueGC_MemItem * pNextItem; // offset 0x4, size 0x4
                 struct _AptValueGC_MemItem * pPrevItem; // offset 0x8, size 0x4
             } Type2; // offset 0x0, size 0xC
         } __anon$1555; // offset 0x0, size 0xC
+        // total size: 0xC
         struct /* @class$1549AptValueGCAllocator_cpp */ {
-            // total size: 0xC
+            // Members
             struct _AptValueGC_MemItem * pNextItem; // offset 0x0, size 0x4
             unsigned int bIsAllocated : 1; // offset 0x4, size 0x4
             unsigned int nSize : 31; // offset 0x4, size 0x4
             struct _AptValueGC_MemItem * pPrevItem; // offset 0x8, size 0x4
         } Type1; // offset 0x0, size 0xC
+        // total size: 0xC
         struct /* @class$1550AptValueGCAllocator_cpp */ {
-            // total size: 0xC
+            // Members
             unsigned int bIsAllocated : 1; // offset 0x0, size 0x4
             unsigned int nSize : 31; // offset 0x0, size 0x4
             struct _AptValueGC_MemItem * pNextItem; // offset 0x4, size 0x4
@@ -93,7 +102,8 @@ void AptValueGC_PoolManager::DeallocateAptValueGC() {
 }
 
 // Range: 0x8032F66C -> 0x8032F7B8
-class AptValue * AptValueGC_PoolManager::GetNextAptValue(class AptValueGC_PoolManager * const this /* r29 */, const class AptValue * pPrevious /* r31 */) {
+// this: r29
+class AptValue * AptValueGC_PoolManager::GetNextAptValue(const class AptValue * pPrevious /* r31 */) {
     // Local variables
     struct _DOGMA_MemPool * pPool; // r30
     struct _AptValueGC_MemItem * pItem; // r0

@@ -8,7 +8,8 @@
 enum WallTypes EIWallPart::GetWallType() {}
 
 // Range: 0x802182BC -> 0x80218334
-unsigned char EIWallPart::IsOpaque(class EIWallPart * const this /* r31 */) {}
+// this: r31
+unsigned char EIWallPart::IsOpaque() {}
 
 // Range: 0x80218334 -> 0x802185AC
 enum WallTypes _kBottomLeftWallsEndCapTest(const class CTilePt & point /* r27 */, const class TileWalls & thisTile /* r28 */) {
@@ -230,7 +231,8 @@ unsigned int EIFenceWall::VisibilityTest(class E3DWindow & win /* r31 */) {}
 unsigned char ERoomWall::IsWallsOpaque() {}
 
 // Range: 0x80219EE8 -> 0x80219FA0
-unsigned char ERoomWall::CalWallsOpaque(class ERoomWall * const this /* r29 */, int player /* r31 */) {
+// this: r29
+unsigned char ERoomWall::CalWallsOpaque(int player /* r31 */) {
     // Local variables
     class NLIteratorPtrType * wallInstIdx; // r30
     class EIWallPart * wallPart; // r0
@@ -251,16 +253,17 @@ float ERoomWall::CalShortDistToCam(int player /* r27 */) {
 }
 
 // Range: 0x8021A0B4 -> 0x8021A110
-void * EIWallPart::__nw(unsigned long size /* r30 */) {
+void * EIWallPart::operator new(unsigned long size /* r30 */) {
     // Local variables
     void * p; // r31
 }
 
 // Range: 0x8021A110 -> 0x8021A144
-void EIWallPart::__dl(void * p /* r31 */) {}
+void EIWallPart::operator delete(void * p /* r31 */) {}
 
 // Range: 0x8021A144 -> 0x8021A470
-void * EIFenceWall::EIFenceWall(class EIFenceWall * const this /* r29 */, enum TileWallsSegment & seg /* r30 */, class CTilePt & tile /* r31 */, enum WallStyle style /* r28 */) {
+// this: r29
+EIFenceWall::EIFenceWall(enum TileWallsSegment & seg /* r30 */, class CTilePt & tile /* r31 */, enum WallStyle style /* r28 */) {
     // Local variables
     unsigned int modelid; // r4
     class EMat4 mRot; // r1+0x58
@@ -279,7 +282,8 @@ void * EIFenceWall::EIFenceWall(class EIFenceWall * const this /* r29 */, enum T
 }
 
 // Range: 0x8021A470 -> 0x8021A518
-void * EIFenceWall::~EIFenceWall(class EIFenceWall * const this /* r30 */) {
+// this: r30
+EIFenceWall::~EIFenceWall() {
     // References
     // -> int m_nInstances;
     // -> struct [anonymous] __vt__11EIFenceWall;
@@ -293,7 +297,8 @@ void WallLocation(signed short & loc /* r29 */, signed short & lightLoc /* r30 *
 }
 
 // Range: 0x8021A598 -> 0x8021A648
-void EIWallPart::GetShadowModel(class EIWallPart * const this /* r30 */) {
+// this: r30
+void EIWallPart::GetShadowModel() {
     // Local variables
     unsigned int shadowId; // r31
     signed short location; // r1+0xA
@@ -304,13 +309,15 @@ void EIWallPart::GetShadowModel(class EIWallPart * const this /* r30 */) {
 }
 
 // Range: 0x8021A648 -> 0x8021A778
-void * EIWallPart::EIWallPart(class EIWallPart * const this /* r30 */) {
+// this: r30
+EIWallPart::EIWallPart() {
     // References
     // -> struct [anonymous] __vt__10EIWallPart;
 }
 
 // Range: 0x8021A778 -> 0x8021A864
-void EIWallPart::OptimizeOrderTable(class EIWallPart * const this /* r25 */) {
+// this: r25
+void EIWallPart::OptimizeOrderTable() {
     // Local variables
     class ESubModel & sm; // r28
     int whichWallShader; // r27
@@ -323,7 +330,8 @@ void EIWallPart::OptimizeOrderTable(class EIWallPart * const this /* r25 */) {
 }
 
 // Range: 0x8021A864 -> 0x8021AC04
-void * EIWallPart::EIWallPart(class EIWallPart * const this /* r31 */, class TileWalls & walls /* r25 */, enum TileWallsSegment seg /* r26 */, enum DiagonalSideSelector side /* r28 */, const class CTilePt & point /* r27 */) {
+// this: r31
+EIWallPart::EIWallPart(class TileWalls & walls /* r25 */, enum TileWallsSegment seg /* r26 */, enum DiagonalSideSelector side /* r28 */, const class CTilePt & point /* r27 */) {
     // Local variables
     float rotAngle; // r1+0x10
     enum WallPattern pattern; // r0
@@ -341,13 +349,15 @@ void * EIWallPart::EIWallPart(class EIWallPart * const this /* r31 */, class Til
 }
 
 // Range: 0x8021AC04 -> 0x8021AD98
-void EIWallPart::SetOrient(class EIWallPart * const this /* r30 */, const class EMat4 & mat /* r31 */) {
+// this: r30
+void EIWallPart::SetOrient(const class EMat4 & mat /* r31 */) {
     // Local variables
     class EVec2 worldPos; // r1+0x8
 }
 
 // Range: 0x8021AD98 -> 0x8021AE58
-unsigned int EIWallPart::VisibilityTest(class EIWallPart * const this /* r30 */, class E3DWindow & win /* r31 */) {
+// this: r30
+unsigned int EIWallPart::VisibilityTest(class E3DWindow & win /* r31 */) {
     // Local variables
     const class EVec3 & cameraPos; // r0
     float dot; // f1
@@ -361,7 +371,8 @@ void EIFenceWall::Draw() {}
 void EIWallPart::Draw() {}
 
 // Range: 0x8021AE60 -> 0x8021AF30
-void EIWallPart::DrawShadow(class EIWallPart * const this /* r30 */, struct ELevelDrawData & renderParam /* r31 */) {
+// this: r30
+void EIWallPart::DrawShadow(struct ELevelDrawData & renderParam /* r31 */) {
     // Local variables
     const class EVec3 & light; // r0
     float dot; // f1
@@ -393,25 +404,31 @@ void EIWallPart::DrawOutsideShadows(const class TNodeList & list /* r28 */, cons
 signed short EIWallPart::GetAdjacentRoom() {}
 
 // Range: 0x8021B1AC -> 0x8021B358
-void EIWallPart::GetPoint(class EIWallPart * const this /* r29 */, class CTilePt & outPt /* r30 */, unsigned char offsetDiagonals /* r31 */) {}
+// this: r29
+void EIWallPart::GetPoint(class CTilePt & outPt /* r30 */, unsigned char offsetDiagonals /* r31 */) {}
 
 // Range: 0x8021B358 -> 0x8021B640
-void EIWallPart::GetPoints(class EIWallPart * const this /* r29 */, class CTilePt & outPtOther /* r30 */) {}
+// this: r29
+void EIWallPart::GetPoints(class CTilePt & outPtOther /* r30 */) {}
 
 // Range: 0x8021B640 -> 0x8021B6F0
-void EIWallPart::GetPoints(class EIWallPart * const this /* r29 */, class EVec2 & pt1 /* r30 */, class EVec2 & pt2 /* r31 */) {}
+// this: r29
+void EIWallPart::GetPoints(class EVec2 & pt1 /* r30 */, class EVec2 & pt2 /* r31 */) {}
 
 // Range: 0x8021B6F0 -> 0x8021B700
-void EIWallPart::GetNormal(class EIWallPart * const this /* r5 */) {}
+// this: r5
+void EIWallPart::GetNormal() {}
 
 // Range: 0x8021B700 -> 0x8021B7C4
-void * EIWallPart::~EIWallPart(class EIWallPart * const this /* r30 */) {
+// this: r30
+EIWallPart::~EIWallPart() {
     // References
     // -> struct [anonymous] __vt__10EIWallPart;
 }
 
 // Range: 0x8021B7C4 -> 0x8021BC60
-void EIWallPart::GetWallModelId(class EIWallPart * const this /* r27 */, const class CTilePt & point /* r28 */, const class TileWalls & walls /* r29 */, enum TileWallsSegment seg /* r30 */, enum DiagonalSideSelector side /* r24 */, float & rotAngle /* r23 */) {
+// this: r27
+void EIWallPart::GetWallModelId(const class CTilePt & point /* r28 */, const class TileWalls & walls /* r29 */, enum TileWallsSegment seg /* r30 */, enum DiagonalSideSelector side /* r24 */, float & rotAngle /* r23 */) {
     // Local variables
     int segIndex; // r26
     enum WallTypes wallPiece; // r0
@@ -444,7 +461,8 @@ void EIWallPart::GetWallModelId(class EIWallPart * const this /* r27 */, const c
 }
 
 // Range: 0x8021BC60 -> 0x8021BCF8
-void EIWallPart::ChangeWallpaper(class EIWallPart * const this /* r29 */, unsigned int id /* r30 */) {
+// this: r29
+void EIWallPart::ChangeWallpaper(unsigned int id /* r30 */) {
     // Local variables
     class ERShader * pNewShader; // r0
 
@@ -459,7 +477,8 @@ class ERShader * EIWallPart::GetWallpaperShader() {
 }
 
 // Range: 0x8021BD88 -> 0x8021BE04
-void EIWallPart::SetVisible(class EIWallPart * const this /* r29 */, unsigned char vis /* r30 */) {
+// this: r29
+void EIWallPart::SetVisible(unsigned char vis /* r30 */) {
     // Local variables
     unsigned int flags; // r31
 }
@@ -468,25 +487,28 @@ void EIWallPart::SetVisible(class EIWallPart * const this /* r29 */, unsigned ch
 unsigned char EIWallPart::GetVisible() {}
 
 // Range: 0x8021BE34 -> 0x8021BF74
-void EIWallPart::SetWallState(class EIWallPart * const this /* r31 */, enum EWallUpDownStateType state /* r30 */) {}
+// this: r31
+void EIWallPart::SetWallState(enum EWallUpDownStateType state /* r30 */) {}
 
 // Range: 0x8021BF74 -> 0x8021C000
-void * EFenceWall::EFenceWall(class EFenceWall * const this /* r28 */, enum TileWallsSegment & theSeg /* r29 */, class CTilePt & thePt /* r30 */, enum WallStyle style /* r31 */) {
+// this: r28
+EFenceWall::EFenceWall(enum TileWallsSegment & theSeg /* r29 */, class CTilePt & thePt /* r30 */, enum WallStyle style /* r31 */) {
     // References
     // -> struct [anonymous] __vt__10EFenceWall;
 }
 
 // Range: 0x8021C000 -> 0x8021C05C
-void * ERoomWall::__nw(unsigned long size /* r30 */) {
+void * ERoomWall::operator new(unsigned long size /* r30 */) {
     // Local variables
     void * ptr; // r31
 }
 
 // Range: 0x8021C05C -> 0x8021C090
-void ERoomWall::__dl(void * ptr /* r31 */) {}
+void ERoomWall::operator delete(void * ptr /* r31 */) {}
 
 // Range: 0x8021C090 -> 0x8021C298
-void * ERoomWall::ERoomWall(class ERoomWall * const this /* r26 */, enum TileWallsSegment theSeg /* r27 */, enum DiagonalSideSelector side /* r28 */, class CTilePt & thePt /* r29 */, unsigned char doAlloc /* r30 */) {
+// this: r26
+ERoomWall::ERoomWall(enum TileWallsSegment theSeg /* r27 */, enum DiagonalSideSelector side /* r28 */, class CTilePt & thePt /* r29 */, unsigned char doAlloc /* r30 */) {
     // Local variables
     class TileWalls walls; // r1+0x18
     class Room * r1; // r1+0x14
@@ -502,7 +524,8 @@ void * ERoomWall::ERoomWall(class ERoomWall * const this /* r26 */, enum TileWal
 }
 
 // Range: 0x8021C298 -> 0x8021C370
-void * ERoomWall::~ERoomWall(class ERoomWall * const this /* r28 */) {
+// this: r28
+ERoomWall::~ERoomWall() {
     // Local variables
     class NLIteratorPtrType * i; // r31
     class NLIteratorPtrType * next; // r30
@@ -534,10 +557,12 @@ void ERoomWall::SetWallUpDownMode(enum EWallUpDownStateType mode /* r29 */, unsi
 }
 
 // Range: 0x8021C8C0 -> 0x8021C944
-void ERoomWall::AddTile(class ERoomWall * const this /* r26 */, const class CTilePt & tilePt /* r27 */, class TileWalls & walls /* r28 */, enum TileWallsSegment seg /* r29 */, enum DiagonalSideSelector side /* r30 */, unsigned char doAlloc /* r31 */) {}
+// this: r26
+void ERoomWall::AddTile(const class CTilePt & tilePt /* r27 */, class TileWalls & walls /* r28 */, enum TileWallsSegment seg /* r29 */, enum DiagonalSideSelector side /* r30 */, unsigned char doAlloc /* r31 */) {}
 
 // Range: 0x8021C944 -> 0x8021CD04
-void ERoomWall::DrawWall(class ERoomWall * const this /* r28 */, class ERC * prc /* r29 */) {
+// this: r28
+void ERoomWall::DrawWall(class ERC * prc /* r29 */) {
     // Local variables
     class EVec3 v0; // r1+0x20
     class EVec3 v1; // r1+0x14
@@ -555,7 +580,8 @@ void ERoomWall::getWallNormalOnSideOfCursor(class EVec2 & vNorm /* r31 */) {
 }
 
 // Range: 0x8021CD60 -> 0x8021D0F4
-int ERoomWall::DrawWallpaperPreview(class ERoomWall * const this /* r28 */, class ERC * prc /* r30 */, const class EVec2 & vCursorPos /* r27 */) {
+// this: r28
+int ERoomWall::DrawWallpaperPreview(class ERC * prc /* r30 */, const class EVec2 & vCursorPos /* r27 */) {
     // Local variables
     class EVec3 v0; // r1+0x58
     class EVec3 v1; // r1+0x4C
@@ -566,13 +592,16 @@ int ERoomWall::DrawWallpaperPreview(class ERoomWall * const this /* r28 */, clas
 }
 
 // Range: 0x8021D0F4 -> 0x8021D1FC
-void * ERoom::ERoom(class ERoom * const this /* r31 */) {}
+// this: r31
+ERoom::ERoom() {}
 
 // Range: 0x8021D254 -> 0x8021D388
-void * ERoom::~ERoom(class ERoom * const this /* r30 */) {}
+// this: r30
+ERoom::~ERoom() {}
 
 // Range: 0x8021D388 -> 0x8021D4A0
-void ERoom::InitRoomLookupTab(class ERoom * const this /* r25 */) {
+// this: r25
+void ERoom::InitRoomLookupTab() {
     // Local variables
     int i; // r29
     class TNodeList * plist; // r3
@@ -595,7 +624,8 @@ int ERoom::GetNumWalls() {
 }
 
 // Range: 0x8021D524 -> 0x8021D5E8
-int ERoom::DrawWallpaperPreview(class ERoom * const this /* r31 */, class ERC * prc /* r28 */, unsigned short room /* r30 */, const class EVec2 & vCursorPos /* r29 */) {
+// this: r31
+int ERoom::DrawWallpaperPreview(class ERC * prc /* r28 */, unsigned short room /* r30 */, const class EVec2 & vCursorPos /* r29 */) {
     // Local variables
     class RBIteratorPtrType * iRoomList; // r0
     int wallCount; // r31
@@ -615,7 +645,8 @@ unsigned char ERoom::IsRoomWallsOpaque(int player /* r31 */) {
 }
 
 // Range: 0x8021D670 -> 0x8021D754
-void ERoom::CalAllRoomOpaque(class ERoom * const this /* r26 */, int player /* r25 */) {
+// this: r26
+void ERoom::CalAllRoomOpaque(int player /* r25 */) {
     // Local variables
     class RBIteratorPtrType * iRoomList; // r28
     class RBIteratorPtrType * iRoomOcclude; // r27
@@ -633,7 +664,8 @@ unsigned char ERoom::IsRoomRoofOpaque(int player /* r31 */) {
 }
 
 // Range: 0x8021D7B4 -> 0x8021DA4C
-void ERoom::CalRoofOpaque(class ERoom * const this /* r21 */, int player /* r27 */) {
+// this: r21
+void ERoom::CalRoofOpaque(int player /* r27 */) {
     // Local variables
     class RBIteratorPtrType * iRoomList; // r29
     class RBIteratorPtrType * iRoomOcclude; // r28
@@ -655,7 +687,8 @@ void ERoom::CalRoofOpaque(class ERoom * const this /* r21 */, int player /* r27 
 }
 
 // Range: 0x8021DA4C -> 0x8021DBA4
-void ERoom::CalShortDistToCam(class ERoom * const this /* r25 */, int player /* r26 */) {
+// this: r25
+void ERoom::CalShortDistToCam(int player /* r26 */) {
     // Local variables
     class RBIteratorPtrType * iRoomList; // r29
     class RBIteratorPtrType * iRoomOcclude; // r28
@@ -674,7 +707,8 @@ void SetAllUpOrDownForList(unsigned char up /* r30 */) {
 }
 
 // Range: 0x8021DC18 -> 0x8021DCC0
-void ERoom::SetWallState(class ERoom * const this /* r30 */) {}
+// this: r30
+void ERoom::SetWallState() {}
 
 // Range: 0x8021DCC0 -> 0x8021DDFC
 unsigned char EIWallPart::DoFadeCollisonWallList() {
@@ -698,7 +732,8 @@ void EIWallPart::DoFadeCollisonForList(class TrapezoidFade & interestFade /* r30
 }
 
 // Range: 0x8021DE6C -> 0x8021DF84
-void ERoom::UpdateWallFade(class ERoom * const this /* r29 */, int player /* r30 */) {
+// this: r29
+void ERoom::UpdateWallFade(int player /* r30 */) {
     // References
     // -> class TrapezoidFade _interestFade;
     // -> class WallFadeParms * s_wallFadeParms;
@@ -707,7 +742,8 @@ void ERoom::UpdateWallFade(class ERoom * const this /* r29 */, int player /* r30
 }
 
 // Range: 0x8021DF84 -> 0x8021E02C
-void ERoom::Init(class ERoom * const this /* r31 */) {
+// this: r31
+void ERoom::Init() {
     // Local variables
     int wallcount; // r1+0xC
     int tilecount; // r1+0x8
@@ -719,7 +755,8 @@ void ERoom::Init(class ERoom * const this /* r31 */) {
 }
 
 // Range: 0x8021E02C -> 0x8021E244
-void ERoom::ProcStandardWalls(class ERoom * const this /* r25 */, unsigned char row /* r26 */, int & wallcount /* r27 */, int & tilecount /* r28 */, unsigned char doAlloc /* r29 */) {
+// this: r25
+void ERoom::ProcStandardWalls(unsigned char row /* r26 */, int & wallcount /* r27 */, int & tilecount /* r28 */, unsigned char doAlloc /* r29 */) {
     // Local variables
     class cFixedWorld * gWorld; // r30
     struct ProcStandardWallsInfo listTab[2][2]; // r1+0x28
@@ -737,7 +774,8 @@ void ERoom::ProcStandardWalls(class ERoom * const this /* r25 */, unsigned char 
 }
 
 // Range: 0x8021E244 -> 0x8021E4C8
-void ERoom::ProcDiagonalWalls(class ERoom * const this /* r19 */, int & wallcount /* r20 */, int & tilecount /* r21 */, unsigned char doAlloc /* r22 */) {
+// this: r19
+void ERoom::ProcDiagonalWalls(int & wallcount /* r20 */, int & tilecount /* r21 */, unsigned char doAlloc /* r22 */) {
     // Local variables
     class cFixedWorld * gWorld; // r30
     int xSize; // r29
@@ -758,7 +796,8 @@ void ERoom::ProcDiagonalWalls(class ERoom * const this /* r19 */, int & wallcoun
 }
 
 // Range: 0x8021E4C8 -> 0x8021E7F8
-void ERoom::ProcessCell(class ERoom * const this /* r20 */, class TNodeList & curList /* r21 */, class ERoomWallPtr & curEWall /* r22 */, class CTilePt & thePt /* r23 */, enum TileWallsSegment theSeg /* r1+0x8 */, enum DiagonalSideSelector side /* r24 */, class TileWalls & walls /* r25 */, int segidx /* r26 */, int & wallcount /* r27 */, int & tilecount /* r28 */, unsigned char doAlloc /* r29 */) {
+// this: r20
+void ERoom::ProcessCell(class TNodeList & curList /* r21 */, class ERoomWallPtr & curEWall /* r22 */, class CTilePt & thePt /* r23 */, enum TileWallsSegment theSeg /* r1+0x8 */, enum DiagonalSideSelector side /* r24 */, class TileWalls & walls /* r25 */, int segidx /* r26 */, int & wallcount /* r27 */, int & tilecount /* r28 */, unsigned char doAlloc /* r29 */) {
     // Local variables
     unsigned char hasWall; // r0
     enum WallStyle style; // r30
@@ -768,7 +807,8 @@ void ERoom::ProcessCell(class ERoom * const this /* r20 */, class TNodeList & cu
 }
 
 // Range: 0x8021E7F8 -> 0x8021EAB8
-enum ERoomWallBuildReturnCode ERoom::PreviewWallBuild(class ERoom * const this /* r26 */, unsigned char testFences /* r25 */) {
+// this: r26
+enum ERoomWallBuildReturnCode ERoom::PreviewWallBuild(unsigned char testFences /* r25 */) {
     // Local variables
     int nRooms; // r31
     class RoomManager * pRoomman; // r30
@@ -798,7 +838,8 @@ int ERoomWall::CountWalls() {
 }
 
 // Range: 0x8021EB24 -> 0x8021ED08
-unsigned char ERoomWall::HasSegment(const class ERoomWall * const this /* r26 */, class CTilePt & c0 /* r27 */, class CTilePt & c1 /* r28 */) {
+// this: r26
+unsigned char ERoomWall::HasSegment(class CTilePt & c0 /* r27 */, class CTilePt & c1 /* r28 */) const {
     // Local variables
     enum eCTilePtDir tileDir; // r0
     unsigned char c0in; // r30
@@ -810,7 +851,8 @@ unsigned char ERoomWall::HasSegment(const class ERoomWall * const this /* r26 */
 }
 
 // Range: 0x8021ED08 -> 0x8021EE94
-int ERoomWall::DeleteWallAtTile(class ERoomWall * const this /* r28 */, class CTilePt & tile /* r29 */) {
+// this: r28
+int ERoomWall::DeleteWallAtTile(class CTilePt & tile /* r29 */) {
     // Local variables
     class cFixedWorld & world; // r31
     class CTilePt adjTile; // r1+0xC
@@ -820,7 +862,8 @@ int ERoomWall::DeleteWallAtTile(class ERoomWall * const this /* r28 */, class CT
 }
 
 // Range: 0x8021EE94 -> 0x8021EFA0
-void ERoomWall::RemoveWallsFromWorld(class ERoomWall * const this /* r30 */) {
+// this: r30
+void ERoomWall::RemoveWallsFromWorld() {
     // Local variables
     enum eCTilePtDir tileDir; // r0
     class CTilePt cCur; // r1+0x10
@@ -888,7 +931,7 @@ unsigned char ERoom::KillArchitecturalObject(enum TileWallsSegment seg /* r25 */
 }
 
 // Range: 0x8021F568 -> 0x8021F5CC
-void * WallFadeParms::WallFadeParms() {
+WallFadeParms::WallFadeParms() {
     // References
     // -> struct [anonymous] __vt__13WallFadeParms;
 }

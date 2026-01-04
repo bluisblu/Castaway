@@ -5,19 +5,23 @@
     Code range: 0x800868B0 -> 0x80086C60
 */
 // Range: 0x800868B0 -> 0x80086974
-void * EISpotLight::EISpotLight(class EISpotLight * const this /* r31 */) {
+// this: r31
+EISpotLight::EISpotLight() {
     // References
     // -> struct [anonymous] __vt__11EISpotLight;
 }
 
 // Range: 0x80086974 -> 0x800869E8
-void EISpotLight::Write(class EISpotLight * const this /* r30 */, class EStream & s /* r31 */) {}
+// this: r30
+void EISpotLight::Write(class EStream & s /* r31 */) {}
 
 // Range: 0x800869E8 -> 0x80086A6C
-void EISpotLight::Read(class EISpotLight * const this /* r30 */, class EStream & s /* r31 */) {}
+// this: r30
+void EISpotLight::Read(class EStream & s /* r31 */) {}
 
 // Range: 0x80086A6C -> 0x80086C60
-void EISpotLight::Setup(class EISpotLight * const this /* r30 */) {
+// this: r30
+void EISpotLight::Setup() {
     // Local variables
     class EBound3 b; // r1+0x30
     float ninety; // f0

@@ -5,7 +5,8 @@
     Code range: 0x802A8728 -> 0x802A87F0
 */
 // Range: 0x802A8728 -> 0x802A87F0
-class EResource * EMovieMan::AllocateAndLoadResource(class EMovieMan * const this /* r26 */, class EFile * pFile /* r27 */, unsigned int uLength /* r28 */, unsigned int id /* r29 */) {
+// this: r26
+class EResource * EMovieMan::AllocateAndLoadResource(class EFile * pFile /* r27 */, unsigned int uLength /* r28 */, unsigned int id /* r29 */) {
     // Local variables
     unsigned int start; // r30
     unsigned int curr; // r0

@@ -18,7 +18,8 @@ void ESimsApp::SetNghName(const char * name /* r31 */) {
 }
 
 // Range: 0x801F8508 -> 0x801F86E8
-void ESimsApp::parseCommandLine(class ESimsApp * const this /* r24 */) {
+// this: r24
+void ESimsApp::parseCommandLine() {
     // Local variables
     int argc; // r30
     const char * * argv; // r29
@@ -37,16 +38,19 @@ void ESimsApp::parseCommandLine(class ESimsApp * const this /* r24 */) {
 }
 
 // Range: 0x801F86E8 -> 0x801F8734
-void * ESimsApp::ESimsApp(class ESimsApp * const this /* r31 */) {
+// this: r31
+ESimsApp::ESimsApp() {
     // References
     // -> struct [anonymous] __vt__8ESimsApp;
 }
 
 // Range: 0x801F8734 -> 0x801F878C
-void * ESimsApp::~ESimsApp(class ESimsApp * const this /* r30 */) {}
+// this: r30
+ESimsApp::~ESimsApp() {}
 
 // Range: 0x801F878C -> 0x801F8864
-void ESimsApp::Shutdown(class ESimsApp * const this /* r31 */) {
+// this: r31
+void ESimsApp::Shutdown() {
     // References
     // -> class ELevelManager _levelman;
     // -> unsigned int _localizationShadersCount;
@@ -67,7 +71,8 @@ int ESimsApp::GetDefaultLanguage() {
 }
 
 // Range: 0x801F8874 -> 0x801F8CB4
-void ESimsApp::Init(class ESimsApp * const this /* r28 */) {
+// this: r28
+void ESimsApp::Init() {
     // Local variables
     class QTimer timer; // r1+0x10
     int nAddRefIndex; // r0
@@ -235,7 +240,8 @@ static void DrawGame(class ERC * prc /* r30 */) {
 }
 
 // Range: 0x801F9A04 -> 0x801F9D6C
-void ESimsApp::UpdateDraw(class ESimsApp * const this /* r31 */) {
+// this: r31
+void ESimsApp::UpdateDraw() {
     // Local variables
     class ERC * prc; // r27
     class ERLevel * pLevel; // r29
@@ -272,7 +278,8 @@ void ESimsApp::UpdateReset() {
 }
 
 // Range: 0x801F9E00 -> 0x801F9EB0
-void ESimsApp::Update(class ESimsApp * const this /* r30 */) {
+// this: r30
+void ESimsApp::Update() {
     // Local variables
     int mappedController; // r0
 
@@ -282,7 +289,8 @@ void ESimsApp::Update(class ESimsApp * const this /* r30 */) {
 }
 
 // Range: 0x801F9EB0 -> 0x801F9F80
-void ESimsApp::PostFrameUpdate(class ESimsApp * const this /* r28 */) {
+// this: r28
+void ESimsApp::PostFrameUpdate() {
     // Local variables
     unsigned char wasHomeButtonPressed; // r30
     unsigned char bPrev; // r29
@@ -304,7 +312,8 @@ void ESimsApp::CleanupAfterMovie() {}
 class EAHeap * ESimsApp::GetMovieHeap() {}
 
 // Range: 0x801F9F8C -> 0x801FA1D4
-unsigned char PlayerCheats::Capture(class PlayerCheats * const this /* r28 */) {
+// this: r28
+unsigned char PlayerCheats::Capture() {
     // Local variables
     unsigned char bCheatFound; // r30
     unsigned short uNewBtn; // r26
@@ -342,9 +351,10 @@ unsigned short PlayerCheats::CreateBtnMask() {
 }
 
 // Range: 0x801FA30C -> 0x801FA34C
-void * PlayerCheats::~PlayerCheats(class PlayerCheats * const this /* r31 */) {}
+// this: r31
+PlayerCheats::~PlayerCheats() {}
 
 // Range: 0x801FA34C -> 0x801FA374
-void * PlayerCheats::PlayerCheats() {}
+PlayerCheats::PlayerCheats() {}
 
 

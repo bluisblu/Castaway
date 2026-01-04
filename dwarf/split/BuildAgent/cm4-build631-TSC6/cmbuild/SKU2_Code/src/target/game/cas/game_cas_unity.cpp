@@ -5,8 +5,9 @@
     Code range: 0x800294E8 -> 0x800294E8
 */
 static signed char zodiacPersonalityValues[12][5]; // size: 0x3C, address: 0x8041A988
+// total size: 0x1C
 class StateMachineState {
-    // total size: 0x1C
+    // Members
 public:
     void * __vptr$; // offset 0x0, size 0x4
 private:
@@ -18,34 +19,51 @@ private:
 protected:
     unsigned char m_bStateChangeDoesUpdate; // offset 0x18, size 0x1
 };
+// total size: 0x10
 struct VectorBase {
-    // total size: 0x10
+    // Static members
+    static unsigned long kAlignment; // size: 0x4
+    static unsigned long kAlignmentOffset; // size: 0x4
+    static unsigned long npos; // size: 0x4
+    static unsigned long kMaxSize; // size: 0x4
+
+    // Members
 protected:
     class StateMachine * * mpBegin; // offset 0x0, size 0x4
     class StateMachine * * mpEnd; // offset 0x4, size 0x4
     class StateMachine * * mpCapacity; // offset 0x8, size 0x4
     class allocator mAllocator; // offset 0xC, size 0x1
 };
-class vector : public VectorBase {
-    // total size: 0x10
-};
+// total size: 0x10
+class vector : public VectorBase {};
+// total size: 0x10
 class StateMachineManager {
-    // total size: 0x10
+    // Static members
+    static class StateMachineManager * s_pStateMachineManager; // size: 0x4
+
+    // Members
     class vector m_machineList; // offset 0x0, size 0x10
 };
+// total size: 0x10
 struct VectorBase {
-    // total size: 0x10
+    // Static members
+    static unsigned long kAlignment; // size: 0x4
+    static unsigned long kAlignmentOffset; // size: 0x4
+    static unsigned long npos; // size: 0x4
+    static unsigned long kMaxSize; // size: 0x4
+
+    // Members
 protected:
     class StateMachineState * * mpBegin; // offset 0x0, size 0x4
     class StateMachineState * * mpEnd; // offset 0x4, size 0x4
     class StateMachineState * * mpCapacity; // offset 0x8, size 0x4
     class allocator mAllocator; // offset 0xC, size 0x1
 };
-class vector : public VectorBase {
-    // total size: 0x10
-};
+// total size: 0x10
+class vector : public VectorBase {};
+// total size: 0x18
 class StateMachineStatus {
-    // total size: 0x18
+    // Members
     class StateMachineState * m_pCurState; // offset 0x0, size 0x4
     class StateMachineState * m_pNextState; // offset 0x4, size 0x4
     class StateMachineState * m_pLastState; // offset 0x8, size 0x4
@@ -53,24 +71,32 @@ class StateMachineStatus {
     float m_fSecondsBeforeNextState; // offset 0x10, size 0x4
     float m_fSecondsInCurState; // offset 0x14, size 0x4
 };
+// total size: 0x10
 struct VectorBase {
-    // total size: 0x10
+    // Static members
+    static unsigned long kAlignment; // size: 0x4
+    static unsigned long kAlignmentOffset; // size: 0x4
+    static unsigned long npos; // size: 0x4
+    static unsigned long kMaxSize; // size: 0x4
+
+    // Members
 protected:
     class StateMachineStatus * * mpBegin; // offset 0x0, size 0x4
     class StateMachineStatus * * mpEnd; // offset 0x4, size 0x4
     class StateMachineStatus * * mpCapacity; // offset 0x8, size 0x4
     class allocator mAllocator; // offset 0xC, size 0x1
 };
-class vector : public VectorBase {
-    // total size: 0x10
-};
+// total size: 0x10
+class vector : public VectorBase {};
+// total size: 0x10
 class stack {
-    // total size: 0x10
+    // Members
 public:
     class vector c; // offset 0x0, size 0x10
 };
+// total size: 0x78
 class StateMachine : public StateMachineState {
-    // total size: 0x78
+    // Members
     int m_machineId; // offset 0x1C, size 0x4
     class StateMachineManager * m_parentStateMachineManager; // offset 0x20, size 0x4
     unsigned char m_bPauseUpdate; // offset 0x24, size 0x1
@@ -89,14 +115,16 @@ enum AmbientScoreState {
     SCORE_RUNNING = 1,
     SCORE_PAUSED = 2,
 };
+// total size: 0xC
 struct ER_Point3d {
-    // total size: 0xC
+    // Members
     float x; // offset 0x0, size 0x4
     float y; // offset 0x4, size 0x4
     float z; // offset 0x8, size 0x4
 };
+// total size: 0x34
 class ERAmbientSound {
-    // total size: 0x34
+    // Members
 public:
     struct ER_Point3d m_point1; // offset 0x0, size 0xC
     struct ER_Point3d m_point2; // offset 0xC, size 0xC
@@ -112,19 +140,29 @@ public:
     unsigned char m_velocity; // offset 0x21, size 0x1
     class vector m_samples; // offset 0x24, size 0x10
 };
+// total size: 0x10
 struct VectorBase {
-    // total size: 0x10
+    // Static members
+    static unsigned long kAlignment; // size: 0x4
+    static unsigned long kAlignmentOffset; // size: 0x4
+    static unsigned long npos; // size: 0x4
+    static unsigned long kMaxSize; // size: 0x4
+
+    // Members
 protected:
     class ERAmbientSound * mpBegin; // offset 0x0, size 0x4
     class ERAmbientSound * mpEnd; // offset 0x4, size 0x4
     class ERAmbientSound * mpCapacity; // offset 0x8, size 0x4
     class allocator mAllocator; // offset 0xC, size 0x1
 };
-class vector : public VectorBase {
-    // total size: 0x10
-};
+// total size: 0x10
+class vector : public VectorBase {};
+// total size: 0x3C
 class ERAmbientScore : public EResource {
-    // total size: 0x3C
+    // Static members
+    static class ETypeInfo m_typeInfo; // size: 0x28
+
+    // Members
 public:
     int m_version; // offset 0x14, size 0x4
     int m_sign; // offset 0x18, size 0x4
@@ -136,8 +174,9 @@ public:
     unsigned char m_volume; // offset 0x2A, size 0x1
     class vector m_sounds; // offset 0x2C, size 0x10
 };
+// total size: 0x30
 class AmbientSoundPlayer {
-    // total size: 0x30
+    // Members
     class AmbientScorePlayer * m_ambientScorePlayer; // offset 0x0, size 0x4
     const class ERAmbientSound * m_ambientSound; // offset 0x4, size 0x4
     class cIGZSnd * m_gzSnd; // offset 0x8, size 0x4
@@ -148,25 +187,36 @@ class AmbientSoundPlayer {
     unsigned int m_curPlayingSoundId; // offset 0x28, size 0x4
     int m_startRoom; // offset 0x2C, size 0x4
 };
+// total size: 0x1C
 struct ListenerInfo {
-    // total size: 0x1C
+    // Members
     class EVec3 m_pos; // offset 0x0, size 0xC
     class EVec3 m_dir; // offset 0xC, size 0xC
     int m_room; // offset 0x18, size 0x4
 };
+// total size: 0x10
 struct VectorBase {
-    // total size: 0x10
+    // Static members
+    static unsigned long kAlignment; // size: 0x4
+    static unsigned long kAlignmentOffset; // size: 0x4
+    static unsigned long npos; // size: 0x4
+    static unsigned long kMaxSize; // size: 0x4
+
+    // Members
 protected:
     struct ListenerInfo * mpBegin; // offset 0x0, size 0x4
     struct ListenerInfo * mpEnd; // offset 0x4, size 0x4
     struct ListenerInfo * mpCapacity; // offset 0x8, size 0x4
     class allocator mAllocator; // offset 0xC, size 0x1
 };
-class vector : public VectorBase {
-    // total size: 0x10
-};
+// total size: 0x10
+class vector : public VectorBase {};
+// total size: 0x38
 class AmbientScorePlayer {
-    // total size: 0x38
+    // Static members
+    static unsigned char s_duckAmbient; // size: 0x1
+
+    // Members
     enum AmbientScoreState m_state; // offset 0x0, size 0x4
     unsigned char m_isPaused; // offset 0x4, size 0x1
     const class ERAmbientScore * m_curAmbientScore; // offset 0x8, size 0x4
@@ -179,8 +229,19 @@ class AmbientScorePlayer {
     float m_curGameTime; // offset 0x30, size 0x4
     int m_lastUpdateTime; // offset 0x34, size 0x4
 };
+// total size: 0xAC
 class CasScene : public IConsoleUnknown, public CasListener {
-    // total size: 0xAC
+    // Static members
+    static struct CameraAngle m_altCameraAngles[9]; // size: 0xD8
+    static struct CameraAngle m_cameraAngles[9]; // size: 0xD8
+    static float CAMERA_DPAD_ROTATION_DELTA; // size: 0x4
+    static float NO_CAMERA_DELAY; // size: 0x4
+    static float DEFAULT_CAMERA_DELAY; // size: 0x4
+    static float NO_CAMERA_DURATION; // size: 0x4
+    static float DEFAULT_CAMERA_DURATION; // size: 0x4
+    static unsigned int kIID_CasScene; // size: 0x4
+
+    // Members
 protected:
     unsigned int mRefCount; // offset 0xC, size 0x4
     class ERLevel * m_pRoomClothing; // offset 0x10, size 0x4
@@ -210,15 +271,25 @@ private:
     class E3DWindow * m_pWin; // offset 0xA8, size 0x4
 };
 char * s_NPCEditTypeNames[3]; // size: 0xC, address: 0x80424994
+// total size: 0x8
 struct ButtonInfo {
-    // total size: 0x8
+    // Members
     const char * text; // offset 0x0, size 0x4
     unsigned int mask; // offset 0x4, size 0x4
 };
 struct ButtonInfo s_buttonInfo[7]; // size: 0x38, address: 0x8041A9C8
 const char * CAS_ICON_EDITOR_CONFIG_FILENAME; // size: 0x4, address: 0x805D8460
+// total size: 0x2A4
 class CasNpcEditor : public CasListener {
-    // total size: 0x2A4
+    // Static members
+    static const char * CAS_ICON_EDITOR_CONFIG_FILENAME; // size: 0x4
+    static struct ButtonInfo s_buttonInfo[7]; // size: 0x38
+    static unsigned int FAILURE_SOUND; // size: 0x4
+    static unsigned int SUCCESS_SOUND; // size: 0x4
+    static float LOAD_PREVIEW_TIME; // size: 0x4
+    static char * s_NPCEditTypeNames[3]; // size: 0xC
+
+    // Members
 protected:
     enum eNPCEditTypeFlag m_editType; // offset 0x8, size 0x4
     unsigned int m_guid; // offset 0xC, size 0x4
@@ -252,8 +323,9 @@ protected:
     unsigned char m_bInitialLoadDone; // offset 0x2A0, size 0x1
     unsigned char m_bUseShadowMap; // offset 0x2A1, size 0x1
 };
+// total size: 0x28
 struct _IconImageInfo {
-    // total size: 0x28
+    // Members
     class EVec3 cameraPos; // offset 0x0, size 0xC
     class EVec3 cameraTarget; // offset 0xC, size 0xC
     float fCameraFOV; // offset 0x18, size 0x4
@@ -269,52 +341,67 @@ enum eNPCEditTypeFlag {
     kEDIT_ICONS = 2,
     kEDIT_TYPES_END = 3,
 };
+// total size: 0xC
 class UserDataSaveLoad {
-    // total size: 0xC
+    // Members
 public:
     void * __vptr$; // offset 0x0, size 0x4
 private:
     int m_guid; // offset 0x4, size 0x4
     class CasSimDescription * m_pSimDesc; // offset 0x8, size 0x4
 };
+// total size: 0x18
 class CasEventInitCharacter : public CasEvent {
-    // total size: 0x18
+    // Members
     class CasSimDescription * m_pDescription; // offset 0x8, size 0x4
     unsigned char m_bRenderCharacter; // offset 0xC, size 0x1
     int m_CharId; // offset 0x10, size 0x4
     unsigned char m_bBlockOnLoad; // offset 0x14, size 0x1
 };
+// total size: 0x10
 struct VectorBase {
-    // total size: 0x10
+    // Static members
+    static unsigned long kAlignment; // size: 0x4
+    static unsigned long kAlignmentOffset; // size: 0x4
+    static unsigned long npos; // size: 0x4
+    static unsigned long kMaxSize; // size: 0x4
+
+    // Members
 protected:
     class Neighbor * * mpBegin; // offset 0x0, size 0x4
     class Neighbor * * mpEnd; // offset 0x4, size 0x4
     class Neighbor * * mpCapacity; // offset 0x8, size 0x4
     class allocator mAllocator; // offset 0xC, size 0x1
 };
-class vector : public VectorBase {
-    // total size: 0x10
-};
-class NeighborList : public vector {
-    // total size: 0x10
-};
+// total size: 0x10
+class vector : public VectorBase {};
+// total size: 0x10
+class NeighborList : public vector {};
+// total size: 0x48
 class StackString2 : public StringBuffer2 {
-    // total size: 0x48
+    // Members
     unsigned short fChars[32]; // offset 0x8, size 0x40
 };
+// total size: 0x10
 struct VectorBase {
-    // total size: 0x10
+    // Static members
+    static unsigned long kAlignment; // size: 0x4
+    static unsigned long kAlignmentOffset; // size: 0x4
+    static unsigned long npos; // size: 0x4
+    static unsigned long kMaxSize; // size: 0x4
+
+    // Members
 protected:
     class FamilyMember * mpBegin; // offset 0x0, size 0x4
     class FamilyMember * mpEnd; // offset 0x4, size 0x4
     class FamilyMember * mpCapacity; // offset 0x8, size 0x4
     class allocator mAllocator; // offset 0xC, size 0x1
 };
-class vector : public VectorBase {
-    // total size: 0x10
-};
+// total size: 0x10
+class vector : public VectorBase {};
+// total size: 0x5C
 class FamilyImpl : public Family {
-    // total size: 0x5C
+    // Members
 public:
     class BString2 fName; // offset 0x4, size 0x4
     int fNumber; // offset 0x8, size 0x4
@@ -330,52 +417,71 @@ private:
     int fFlags; // offset 0x38, size 0x4
     class InventoryItems mInventory; // offset 0x3C, size 0x20
 };
+// total size: 0x10
 struct VectorBase {
-    // total size: 0x10
+    // Static members
+    static unsigned long kAlignment; // size: 0x4
+    static unsigned long kAlignmentOffset; // size: 0x4
+    static unsigned long npos; // size: 0x4
+    static unsigned long kMaxSize; // size: 0x4
+
+    // Members
 protected:
     class FamilyImpl * * mpBegin; // offset 0x0, size 0x4
     class FamilyImpl * * mpEnd; // offset 0x4, size 0x4
     class FamilyImpl * * mpCapacity; // offset 0x8, size 0x4
     class allocator mAllocator; // offset 0xC, size 0x1
 };
-class vector : public VectorBase {
-    // total size: 0x10
-};
+// total size: 0x10
+class vector : public VectorBase {};
 enum UnlockType {
     kUnlockTypeBook = 0,
     kUnlockTypePage = 1,
     kUnlockTypeGoal = 2,
     kUnlockTypeTutorial = 4,
 };
+// total size: 0x4
 class IGoalUnlock {
-    // total size: 0x4
+    // Members
 public:
     void * __vptr$; // offset 0x0, size 0x4
 };
+// total size: 0x88
 class GoalUnlock : public IGoalUnlock {
-    // total size: 0x88
+    // Static members
+    static int kNumGoalAndUnlockVariables; // size: 0x4
+
+    // Members
     signed char m_goalAndUnlockVars[128]; // offset 0x4, size 0x80
     signed short Tuning_210_MoodLevel; // offset 0x84, size 0x2
     signed short Tuning_122_FriendLevel; // offset 0x86, size 0x2
 };
+// total size: 0x8
 class CachedSimData {
-    // total size: 0x8
+    // Members
     unsigned int m_GUID; // offset 0x0, size 0x4
     class SimModelTSC6 * m_pCachedModel; // offset 0x4, size 0x4
 };
+// total size: 0x10
 struct VectorBase {
-    // total size: 0x10
+    // Static members
+    static unsigned long kAlignment; // size: 0x4
+    static unsigned long kAlignmentOffset; // size: 0x4
+    static unsigned long npos; // size: 0x4
+    static unsigned long kMaxSize; // size: 0x4
+
+    // Members
 protected:
     class CachedSimData * mpBegin; // offset 0x0, size 0x4
     class CachedSimData * mpEnd; // offset 0x4, size 0x4
     class CachedSimData * mpCapacity; // offset 0x8, size 0x4
     class allocator mAllocator; // offset 0xC, size 0x1
 };
-class vector : public VectorBase {
-    // total size: 0x10
-};
+// total size: 0x10
+class vector : public VectorBase {};
+// total size: 0x2C
 class SimCache {
-    // total size: 0x2C
+    // Members
     class vector m_SimsCache; // offset 0x0, size 0x10
     class EMutex m_simCacheMutex; // offset 0x10, size 0x1C
 };
@@ -383,8 +489,12 @@ enum ResourceStage {
     kStageAddRef = 0,
     kStageDelRef = 1,
 };
+// total size: 0x2068
 class LotHelper {
-    // total size: 0x2068
+    // Static members
+    static float m_PulseSecondsMin; // size: 0x4
+
+    // Members
     signed short m_pNumResFileObjects; // offset 0x0, size 0x2
     unsigned int m_pResFileDatasetIds[1024]; // offset 0x4, size 0x1000
     unsigned int m_pResFileDatasetLotFlags[1024]; // offset 0x1004, size 0x1000
@@ -399,20 +509,23 @@ class LotHelper {
     char m_HousePreDataset[64]; // offset 0x2024, size 0x40
     float m_PulseClock; // offset 0x2064, size 0x4
 };
+// total size: 0x108
 class StackString2 : public StringBuffer2 {
-    // total size: 0x108
+    // Members
     unsigned short fChars[128]; // offset 0x8, size 0x100
 };
+// total size: 0x114
 class FamilyInfo {
-    // total size: 0x114
+    // Members
 public:
     class StackString2 mName; // offset 0x0, size 0x108
     int mNetWorth; // offset 0x108, size 0x4
     int mFriendCount; // offset 0x10C, size 0x4
     int mLotNumber; // offset 0x110, size 0x4
 };
+// total size: 0x124
 class HouseInfo {
-    // total size: 0x124
+    // Members
 public:
     unsigned char mMoveInAllowed; // offset 0x0, size 0x1
     unsigned char mIsTutorial; // offset 0x1, size 0x1
@@ -422,8 +535,9 @@ public:
     class FamilyInfo mOccupantInfo; // offset 0xC, size 0x114
     int mHouseNumber; // offset 0x120, size 0x4
 };
+// total size: 0x21F4
 class Neighborhood {
-    // total size: 0x21F4
+    // Members
 public:
     void * __vptr$; // offset 0x0, size 0x4
     class NeighborList fNeighbors; // offset 0x4, size 0x10
@@ -441,16 +555,18 @@ private:
     class LotHelper m_LotHelper; // offset 0x188, size 0x2068
     class GameTime m_lastTransitionSimulatorTime; // offset 0x21F0, size 0x4
 };
+// total size: 0x24
 class TGAWriter {
-    // total size: 0x24
+    // Members
     class EString m_fileName; // offset 0x0, size 0x4
     struct TGA_INFO m_info; // offset 0x4, size 0x14
     void * m_pPaletteData; // offset 0x18, size 0x4
     void * m_pPixelBuffer; // offset 0x1C, size 0x4
     class EFile * m_pTGAFile; // offset 0x20, size 0x4
 };
+// total size: 0x18
 struct TDF_INFO {
-    // total size: 0x18
+    // Members
     int width; // offset 0x0, size 0x4
     int height; // offset 0x4, size 0x4
     class EString filter; // offset 0x8, size 0x4
@@ -458,21 +574,23 @@ struct TDF_INFO {
     class EString clamp; // offset 0x10, size 0x4
     class EString sourceFile; // offset 0x14, size 0x4
 };
+// total size: 0x4
 class ReconObject {
-    // total size: 0x4
+    // Members
 public:
     void * __vptr$; // offset 0x0, size 0x4
 };
+// total size: 0xC
 class SimpleReconObject : public ReconObject {
-    // total size: 0xC
+    // Members
     class UserDataSaveLoad * fObj; // offset 0x4, size 0x4
     int fType; // offset 0x8, size 0x4
 };
-class ReconBuilder {
-    // total size: 0x1
-};
+// total size: 0x1
+class ReconBuilder {};
+// total size: 0x14
 struct TGA_INFO {
-    // total size: 0x14
+    // Members
     unsigned char identsize; // offset 0x0, size 0x1
     unsigned char colourmaptype; // offset 0x1, size 0x1
     unsigned char imagetype; // offset 0x2, size 0x1
@@ -540,8 +658,12 @@ enum SeekType {
     _ST_COUNT = 3,
     ST_UNSPECIFIED = -2147483648,
 };
+// total size: 0x2C
 class EFile {
-    // total size: 0x2C
+    // Static members
+    static unsigned char m_bSimulateError; // size: 0x1
+
+    // Members
 public:
     void * __vptr$; // offset 0x0, size 0x4
 protected:
@@ -557,8 +679,9 @@ private:
     char * m_Name; // offset 0x24, size 0x4
     char m_Ext[4]; // offset 0x28, size 0x4
 };
+// total size: 0x340
 class EThread {
-    // total size: 0x340
+    // Members
 public:
     void * __vptr$; // offset 0x0, size 0x4
     class EThread * m_pLastThread; // offset 0x4, size 0x4
@@ -584,8 +707,9 @@ enum OVERALL_GAME_STATE {
     GAME_STATE_CLIENT = 2,
     TOTAL_GAME_STATES = 3,
 };
+// total size: 0x470
 class EApp : public EThread {
-    // total size: 0x470
+    // Members
 public:
     unsigned char m_done; // offset 0x33C, size 0x1
     unsigned char m_activeApp; // offset 0x33D, size 0x1
@@ -603,8 +727,13 @@ private:
     enum OVERALL_GAME_STATE menuOwner; // offset 0x464, size 0x4
     class EString * m_pRootPath; // offset 0x468, size 0x4
 };
+// total size: 0x488
 class ESimsApp : public EApp {
-    // total size: 0x488
+    // Static members
+    static int s_startLot; // size: 0x4
+    static char m_nameOfNgh[]; // size: 0x0
+
+    // Members
 public:
     class EGameStateMan * m_pGameStateMan; // offset 0x46C, size 0x4
     class ERC * m_prc; // offset 0x470, size 0x4
@@ -615,8 +744,12 @@ protected:
     int m_screenShotTilesX; // offset 0x47C, size 0x4
     int m_screenShotTilesY; // offset 0x480, size 0x4
 };
+// total size: 0x1C
 class SkinCompositor {
-    // total size: 0x1C
+    // Static members
+    static unsigned char s_fullAlphaValue; // size: 0x1
+
+    // Members
     class ETexture * m_pBaseTexture; // offset 0x0, size 0x4
     unsigned int * m_pBaseTexturePixels; // offset 0x4, size 0x4
     unsigned char * m_pReflectionMask; // offset 0x8, size 0x4
@@ -627,53 +760,73 @@ class SkinCompositor {
     unsigned char m_isDestPalettized; // offset 0x17, size 0x1
     unsigned char m_bInGame; // offset 0x18, size 0x1
 };
+// total size: 0x1C
 class ConfigReader {
-    // total size: 0x1C
+    // Static members
+    static int MAX_LINE_LEN; // size: 0x4
+    static int INVALID_INDEX; // size: 0x4
+
+    // Members
     class vector m_lSectionList; // offset 0x0, size 0x10
     char * m_szRawData; // offset 0x10, size 0x4
     unsigned long m_nRawDataLen; // offset 0x14, size 0x4
     char * m_szNextDataLocation; // offset 0x18, size 0x4
 };
+// total size: 0x8
 struct Item {
-    // total size: 0x8
+    // Members
     char * m_szItemName; // offset 0x0, size 0x4
     char * m_szItemValue; // offset 0x4, size 0x4
 };
+// total size: 0x10
 struct VectorBase {
-    // total size: 0x10
+    // Static members
+    static unsigned long kAlignment; // size: 0x4
+    static unsigned long kAlignmentOffset; // size: 0x4
+    static unsigned long npos; // size: 0x4
+    static unsigned long kMaxSize; // size: 0x4
+
+    // Members
 protected:
     struct Item * mpBegin; // offset 0x0, size 0x4
     struct Item * mpEnd; // offset 0x4, size 0x4
     struct Item * mpCapacity; // offset 0x8, size 0x4
     class allocator mAllocator; // offset 0xC, size 0x1
 };
-class vector : public VectorBase {
-    // total size: 0x10
-};
+// total size: 0x10
+class vector : public VectorBase {};
+// total size: 0x14
 struct Section {
-    // total size: 0x14
+    // Members
     char * szSectionName; // offset 0x0, size 0x4
     class vector m_lItemList; // offset 0x4, size 0x10
 };
+// total size: 0x10
 struct VectorBase {
-    // total size: 0x10
+    // Static members
+    static unsigned long kAlignment; // size: 0x4
+    static unsigned long kAlignmentOffset; // size: 0x4
+    static unsigned long npos; // size: 0x4
+    static unsigned long kMaxSize; // size: 0x4
+
+    // Members
 protected:
     struct Section * * mpBegin; // offset 0x0, size 0x4
     struct Section * * mpEnd; // offset 0x4, size 0x4
     struct Section * * mpCapacity; // offset 0x8, size 0x4
     class allocator mAllocator; // offset 0xC, size 0x1
 };
-class vector : public VectorBase {
-    // total size: 0x10
-};
+// total size: 0x10
+class vector : public VectorBase {};
 static class EVec3 kSimPosDefault; // size: 0xC, address: 0x8048C5A8
 static class EVec3 kPosSimCAR[6]; // size: 0x48, address: 0x8048C5B8
 static float kRotationSimCAR[6]; // size: 0x18, address: 0x8041AA00
 static class EVec3 kListenerDir; // size: 0xC, address: 0x8048C600
 struct CameraAngle m_cameraAngles[9]; // size: 0xD8, address: 0x8041AA18
 struct CameraAngle m_altCameraAngles[9]; // size: 0xD8, address: 0x8041AAF0
+// total size: 0x98
 struct CreatedLightingEntry {
-    // total size: 0x98
+    // Members
     struct LightingEntry lightingEntry; // offset 0x0, size 0x50
     class EVec3 outsideAmbientColor; // offset 0x50, size 0xC
     class EVec3 sunColor; // offset 0x5C, size 0xC
@@ -682,8 +835,9 @@ struct CreatedLightingEntry {
     class EVec3 skyLightAmbientColor; // offset 0x80, size 0xC
     class EVec3 moonColor; // offset 0x8C, size 0xC
 };
+// total size: 0x48
 class EEngine : public EGlobalManagerClient {
-    // total size: 0x48
+    // Members
 protected:
     unsigned char m_initialized; // offset 0x4, size 0x1
     unsigned char m_frameRatePredictiveSmoothing; // offset 0x5, size 0x1
@@ -694,39 +848,42 @@ protected:
 public:
     class EEvent m_frameEvent; // offset 0x2C, size 0x18
 };
+// total size: 0x18
 struct CameraAngle {
-    // total size: 0x18
+    // Members
     float position[3]; // offset 0x0, size 0xC
     float target[3]; // offset 0xC, size 0xC
 };
-class CasUtils {
-    // total size: 0x1
-};
+// total size: 0x1
+class CasUtils {};
+// total size: 0x14
 struct ERQTable {
-    // total size: 0x14
+    // Members
     const char * pName; // offset 0x0, size 0x4
     const struct BodyPartTypeInfoTableTSC6 * pData; // offset 0x4, size 0x4
     const char * const * ppRowNames; // offset 0x8, size 0x4
     unsigned int uNumRows; // offset 0xC, size 0x4
     unsigned int uRowSize; // offset 0x10, size 0x4
 };
-struct ERQTable {
-    // total size: 0x0
-};
+// total size: 0x0
+struct ERQTable {};
+// total size: 0xD48
 class EQuickdataManager : public EResourceManager {
-    // total size: 0xD48
+    // Members
     int m_iLanguage; // offset 0xD44, size 0x4
 };
+// total size: 0x14
 struct ERQTable {
-    // total size: 0x14
+    // Members
     const char * pName; // offset 0x0, size 0x4
     const struct SimPartsTSC6 * pData; // offset 0x4, size 0x4
     const char * const * ppRowNames; // offset 0x8, size 0x4
     unsigned int uNumRows; // offset 0xC, size 0x4
     unsigned int uRowSize; // offset 0x10, size 0x4
 };
+// total size: 0x10
 struct CostumesTSC6 {
-    // total size: 0x10
+    // Members
     char * name; // offset 0x0, size 0x4
     class VECTOR maleClothingSets; // offset 0x4, size 0x4
     class VECTOR femaleClothingSets; // offset 0x8, size 0x4
@@ -745,18 +902,19 @@ enum eArchetype {
 };
 char s_SimPartsMapNames[4][4]; // size: 0x10, address: 0x8041ABC8
 unsigned char s_nudeTattooIndex[4][2]; // size: 0x8, address: 0x805E00E0
-class vector : public VectorBase {
-    // total size: 0x10
-};
+// total size: 0x10
+class vector : public VectorBase {};
+// total size: 0x8
 struct ClothingSetIndexInfo {
-    // total size: 0x8
+    // Members
     unsigned int m_nIconTextureID; // offset 0x0, size 0x4
     signed short m_nClothingItemInstanceID; // offset 0x4, size 0x2
     unsigned char m_nClothingSetIndex; // offset 0x6, size 0x1
     unsigned char m_nFlags; // offset 0x7, size 0x1
 };
+// total size: 0x1C
 class ClothingItem : public InventoryItem {
-    // total size: 0x1C
+    // Members
     int m_nCurrentHitPoints; // offset 0x8, size 0x4
     signed short m_nNeighborID; // offset 0xC, size 0x2
     signed short m_nID; // offset 0xE, size 0x2
@@ -772,13 +930,15 @@ static unsigned char snInitialTextureIndex; // size: 0x1, address: 0x805DB6A0
 unsigned int s_nCasFemaleSimAnimations[39]; // size: 0x9C, address: 0x8041ABD8
 unsigned int s_nCasMaleSimAnimations[39]; // size: 0x9C, address: 0x8041AC74
 volatile class CasSimRenderer * s_changingSim; // size: 0x4, address: 0x805DB6A4
+// total size: 0x10
 class stack {
-    // total size: 0x10
+    // Members
 public:
     class vector c; // offset 0x0, size 0x10
 };
+// total size: 0x208
 class StackString2 : public StringBuffer2 {
-    // total size: 0x208
+    // Members
     unsigned short fChars[256]; // offset 0x8, size 0x200
 };
 enum eCASMenuButtons {
@@ -886,8 +1046,9 @@ enum eScreenName {
     CAS_NAME_SCREEN = 14,
     CAS_ARCHETYPE_SCREEN = 15,
 };
+// total size: 0x40
 struct CASUIScreenState {
-    // total size: 0x40
+    // Members
     unsigned int numButtons; // offset 0x0, size 0x4
     char buttonStr[9]; // offset 0x4, size 0x9
     unsigned int highlightedButton; // offset 0x10, size 0x4
@@ -895,24 +1056,32 @@ struct CASUIScreenState {
     enum eCASMenuButtons fashionDesignButtons[9]; // offset 0x18, size 0x24
     enum eScreenName screenName; // offset 0x3C, size 0x4
 };
+// total size: 0x10
 struct VectorBase {
-    // total size: 0x10
+    // Static members
+    static unsigned long kAlignment; // size: 0x4
+    static unsigned long kAlignmentOffset; // size: 0x4
+    static unsigned long npos; // size: 0x4
+    static unsigned long kMaxSize; // size: 0x4
+
+    // Members
 protected:
     struct CASUIScreenState * mpBegin; // offset 0x0, size 0x4
     struct CASUIScreenState * mpEnd; // offset 0x4, size 0x4
     struct CASUIScreenState * mpCapacity; // offset 0x8, size 0x4
     class allocator mAllocator; // offset 0xC, size 0x1
 };
-class vector : public VectorBase {
-    // total size: 0x10
-};
+// total size: 0x10
+class vector : public VectorBase {};
+// total size: 0x10
 class stack {
-    // total size: 0x10
+    // Members
 public:
     class vector c; // offset 0x0, size 0x10
 };
+// total size: 0x13C
 class CASPersonalTarget : public UIObjectBase, public CasListener {
-    // total size: 0x13C
+    // Members
     unsigned char m_nSavedPersVal[5]; // offset 0xAC, size 0x5
     unsigned char m_bLoadPersonality; // offset 0xB1, size 0x1
     class WiiMoteToGridInteractor m_WiiMoteToGridInteractor; // offset 0xB4, size 0x30
@@ -927,8 +1096,28 @@ enum eCASDialogNavOptions {
     CAS_NAV_EXIT = 4,
     CAS_NAV_DELETE_CLOTHING_ITEM = 5,
 };
+// total size: 0x4D0
 class CASTargetTSC6 : public UIObjectBase, public CasListener {
-    // total size: 0x4D0
+    // Static members
+    static class ERCharacter * s_pIdleAnimCharacters; // size: 0x4
+    static class ERAnim * * s_pIdleAnimations; // size: 0x4
+    static class ERShader * s_pGridIconShaders[17]; // size: 0x44
+    static int kCAS_MAX_NUM_FASHION_FIELDS; // size: 0x4
+    static enum eSpecies kCAS_DEFAULT_GENDER; // size: 0x4
+    static char CAS_END_BUTTON_ARRAY; // size: 0x1
+    static char CAS_DYE_INVENTORY; // size: 0x1
+    static char CAS_RANDOMIZE_BUTTON; // size: 0x1
+    static char CAS_GENDERSELECT_BUTTON; // size: 0x1
+    static char CAS_TEXTURESWATCH_BUTTON; // size: 0x1
+    static char CAS_COLORSWATCH_BUTTON; // size: 0x1
+    static char CAS_MORPH_SLIDER; // size: 0x1
+    static char CAS_TEXTWITHSHADER_BUTTON; // size: 0x1
+    static char CAS_ARROW_BUTTON; // size: 0x1
+    static char CAS_PUSH_BUTTON; // size: 0x1
+    static unsigned long kCAS_UI_STRING_SIZE; // size: 0x4
+    static unsigned int kGRID_SHADERS_IDS[17]; // size: 0x44
+
+    // Members
     enum UIScreenID m_currentScreen; // offset 0xAC, size 0x4
     enum UIScreenID m_lastUnloadedScreen; // offset 0xB0, size 0x4
     enum UIScreenID m_baseScreen; // offset 0xB4, size 0x4
@@ -966,23 +1155,31 @@ class CASTargetTSC6 : public UIObjectBase, public CasListener {
     class CursorMovementTracker m_CursorTracker; // offset 0x478, size 0x50
     class EVec2 m_CursorPoint; // offset 0x4C8, size 0x8
 };
+// total size: 0x230
 class SimImageMaker : public CharacterImageMaker {
-    // total size: 0x230
+    // Static members
+    static unsigned int kSkeletonID[2]; // size: 0x8
+    static unsigned int kDefaultAnimID[2]; // size: 0x8
+
+    // Members
     class EIStaticModel * m_pModels[15]; // offset 0x1F4, size 0x3C
 };
+// total size: 0x10
 class CasEventResetCharacterDraw : public CasEvent {
-    // total size: 0x10
+    // Members
     unsigned char m_bSpeciesChanged; // offset 0x8, size 0x1
     unsigned char m_bRenderCharacter; // offset 0x9, size 0x1
     unsigned char m_bBlockOnLoad; // offset 0xA, size 0x1
     int m_CharID; // offset 0xC, size 0x4
 };
+// total size: 0xC
 class CasEventSetMorphRegion : public CasEvent {
-    // total size: 0xC
+    // Members
     enum eMorphRegion m_morphRegion; // offset 0x8, size 0x4
 };
+// total size: 0x18
 struct /* @class$26756game_cas_unity_cpp */ {
-    // total size: 0x18
+    // Members
     int x; // offset 0x0, size 0x4
     int y; // offset 0x4, size 0x4
     int row; // offset 0x8, size 0x4
@@ -992,8 +1189,9 @@ struct /* @class$26756game_cas_unity_cpp */ {
 };
 union /* @class$26755game_cas_unity_cpp */ {
     int keyData[6]; // offset 0x0, size 0x18
+    // total size: 0x18
     struct /* @class$26756game_cas_unity_cpp */ {
-        // total size: 0x18
+        // Members
         int x; // offset 0x0, size 0x4
         int y; // offset 0x4, size 0x4
         int row; // offset 0x8, size 0x4
@@ -1008,14 +1206,16 @@ union /* @class$26755game_cas_unity_cpp */ {
     int width; // offset 0x10, size 0x4
     int height; // offset 0x14, size 0x4
 };
+// total size: 0x1C
 class MenuItemPosition {
-    // total size: 0x1C
+    // Members
 public:
     union { // inferred
         union /* @class$26755game_cas_unity_cpp */ {
             int keyData[6]; // offset 0x0, size 0x18
+            // total size: 0x18
             struct /* @class$26756game_cas_unity_cpp */ {
-                // total size: 0x18
+                // Members
                 int x; // offset 0x0, size 0x4
                 int y; // offset 0x4, size 0x4
                 int row; // offset 0x8, size 0x4
@@ -1031,8 +1231,9 @@ public:
             int height; // offset 0x14, size 0x4
         } __anon$26758; // offset 0x0, size 0x18
         int keyData[6]; // offset 0x0, size 0x18
+        // total size: 0x18
         struct /* @class$26756game_cas_unity_cpp */ {
-            // total size: 0x18
+            // Members
             int x; // offset 0x0, size 0x4
             int y; // offset 0x4, size 0x4
             int row; // offset 0x8, size 0x4
@@ -1051,13 +1252,15 @@ public:
     };
     unsigned char bValid; // offset 0x18, size 0x1
 };
+// total size: 0x4
 class GridInteractorResponseHandler {
-    // total size: 0x4
+    // Members
 public:
     void * __vptr$; // offset 0x0, size 0x4
 };
+// total size: 0x30
 class WiiMoteToGridInteractor {
-    // total size: 0x30
+    // Members
 public:
     class MenuItemPosition * m_KeyPositions; // offset 0x0, size 0x4
     int m_keyAddIndex; // offset 0x4, size 0x4
@@ -1078,18 +1281,21 @@ enum ESimCommands {
     kESimCommandChangeClothing = 1,
     kCASCommandChangeClothing = 2,
 };
+// total size: 0x14
 class CasSimState : public CasListener {
-    // total size: 0x14
+    // Members
     class CasSimDescription * m_pDescription; // offset 0x8, size 0x4
     class CasSimDescription * m_pStoredDescription; // offset 0xC, size 0x4
     int m_CharId; // offset 0x10, size 0x4
 };
+// total size: 0xC
 class CasEventResetCharacter : public CasEvent {
-    // total size: 0xC
+    // Members
     enum eSpecies m_nSpecies; // offset 0x8, size 0x4
 };
+// total size: 0x3C
 class CasTweakTool {
-    // total size: 0x3C
+    // Members
 public:
     void * __vptr$; // offset 0x0, size 0x4
 private:
@@ -1111,36 +1317,53 @@ static unsigned char sInited; // size: 0x1, address: 0x805DB6A8
 enum eBodyPart s_simBodyPartRenderOrder[14]; // size: 0x38, address: 0x8041AD10
 unsigned short gSimPartsMapSizeMultiplier_CAS; // size: 0x2, address: 0x805D851E
 unsigned short gSimPartsMapSizeMultiplier_Game; // size: 0x2, address: 0x805D8520
+// total size: 0xC
 class MorphUtilities {
-    // total size: 0xC
+    // Members
     class EIStaticModel * * m_pModels; // offset 0x0, size 0x4
     enum eSpecies m_species; // offset 0x4, size 0x4
     const struct BodyPartTypeInfoTableTSC6 * m_pBodyPartTypeInfoTable; // offset 0x8, size 0x4
 };
+// total size: 0xC
 struct ResourceInfo {
-    // total size: 0xC
+    // Members
     unsigned int m_id; // offset 0x0, size 0x4
     class EResourceManager * m_manager; // offset 0x4, size 0x4
     class EResource * m_resource; // offset 0x8, size 0x4
 };
+// total size: 0x10
 struct VectorBase {
-    // total size: 0x10
+    // Static members
+    static unsigned long kAlignment; // size: 0x4
+    static unsigned long kAlignmentOffset; // size: 0x4
+    static unsigned long npos; // size: 0x4
+    static unsigned long kMaxSize; // size: 0x4
+
+    // Members
 protected:
     struct ResourceInfo * mpBegin; // offset 0x0, size 0x4
     struct ResourceInfo * mpEnd; // offset 0x4, size 0x4
     struct ResourceInfo * mpCapacity; // offset 0x8, size 0x4
     class allocator mAllocator; // offset 0xC, size 0x1
 };
-class vector : public VectorBase {
-    // total size: 0x10
-};
+// total size: 0x10
+class vector : public VectorBase {};
+// total size: 0x24
 class ERDataset : public EResource {
-    // total size: 0x24
+    // Static members
+    static class ETypeInfo m_typeInfo; // size: 0x28
+
+    // Members
 protected:
     class vector m_resourceList; // offset 0x14, size 0x10
 };
+// total size: 0xD54
 class EDatasetManager : public EResourceManager {
-    // total size: 0xD54
+    // Static members
+    static unsigned char m_loadEnabled; // size: 0x1
+    static unsigned char m_outputEnabled; // size: 0x1
+
+    // Members
 protected:
     unsigned char (* m_pFilterCheckCB)(unsigned int, unsigned int, void *, int); // offset 0xD44, size 0x4
     void * m_pFilterUserData; // offset 0xD48, size 0x4
@@ -1149,12 +1372,20 @@ protected:
 };
 class MorphTargetParam * s_pInstance; // size: 0x4, address: 0x805DB6AC
 class LatticeParam * s_pInstance; // size: 0x4, address: 0x805DB6B0
+// total size: 0x4
 class MorphTargetParam {
-    // total size: 0x4
+    // Static members
+    static class MorphTargetParam * s_pInstance; // size: 0x4
+
+    // Members
     const struct BodyPartTypeInfoTableTSC6 * m_pBodyPartTypeInfoTable; // offset 0x0, size 0x4
 };
+// total size: 0x4
 class LatticeParam {
-    // total size: 0x4
+    // Static members
+    static class LatticeParam * s_pInstance; // size: 0x4
+
+    // Members
     const struct BodyPartTypeInfoTableTSC6 * m_pBodyPartTypeInfoTable; // offset 0x0, size 0x4
 };
 enum eBodyType {
@@ -1179,8 +1410,30 @@ unsigned int kSkeletonID[2]; // size: 0x8, address: 0x805DD230
 class EVec3 kDefaultCameraPos; // size: 0xC, address: 0x8048C708
 class EVec3 kDefaultCameraTarget; // size: 0xC, address: 0x8048C714
 class EVec3 kDefaultCameraUp; // size: 0xC, address: 0x8048C720
+// total size: 0x1F4
 class CharacterImageMaker {
-    // total size: 0x1F4
+    // Static members
+    static unsigned char ONE_MINUS_FURCARD_BACKGROUND_THRESHOLD_VALUE; // size: 0x1
+    static unsigned char FURCARD_BACKGROUND_THRESHOLD_VALUE; // size: 0x1
+    static unsigned char BACKGROUND_THRESHOLD_VALUE_16; // size: 0x1
+    static unsigned char BACKGROUND_THRESHOLD_VALUE; // size: 0x1
+    static unsigned char kCatalogBackgroundColorArray[4]; // size: 0x4
+    static unsigned char kClearPinkArray[4]; // size: 0x4
+    static class EVec3 kDefaultDirLightDir[4]; // size: 0x30
+    static class EVec3 kDefaultDirLightColor[4]; // size: 0x30
+    static int kDefaultLightNumPoint; // size: 0x4
+    static int kDefaultLightNumDir; // size: 0x4
+    static float kDefaultCameraFOV; // size: 0x4
+    static class EVec3 kDefaultCameraUp; // size: 0xC
+    static class EVec3 kDefaultCameraTarget; // size: 0xC
+    static class EVec3 kDefaultCameraPos; // size: 0xC
+    static class EVec3 kDefaultLightAmbientColor; // size: 0xC
+    static class EVec4 kDefaultBackgroundColor; // size: 0x10
+    static unsigned int kDefaultImageDepth; // size: 0x4
+    static unsigned int kDefaultImageHeight; // size: 0x4
+    static unsigned int kDefaultImageWidth; // size: 0x4
+
+    // Members
 public:
     void * __vptr$; // offset 0x0, size 0x4
 protected:
@@ -1201,11 +1454,11 @@ protected:
     class ERTexture * m_pBackgroundTexture; // offset 0x1EC, size 0x4
     class SimModelTSC6 * m_pSimModel; // offset 0x1F0, size 0x4
 };
-class ETextureManager : public EResourceManager {
-    // total size: 0xD44
-};
+// total size: 0xD44
+class ETextureManager : public EResourceManager {};
+// total size: 0x20
 struct ERenderSurfaceDef {
-    // total size: 0x20
+    // Members
     int xsize; // offset 0x0, size 0x4
     int ysize; // offset 0x4, size 0x4
     unsigned int flags; // offset 0x8, size 0x4
@@ -1213,18 +1466,21 @@ struct ERenderSurfaceDef {
     int format; // offset 0x18, size 0x4
     int zformat; // offset 0x1C, size 0x4
 };
+// total size: 0x4
 class IRTQuantize {
-    // total size: 0x4
+    // Members
 public:
     void * __vptr$; // offset 0x0, size 0x4
 };
+// total size: 0x8
 struct ERTQCacheNode {
-    // total size: 0x8
+    // Members
     unsigned int color; // offset 0x0, size 0x4
     int data; // offset 0x4, size 0x4
 };
+// total size: 0x38
 struct ERTQNode {
-    // total size: 0x38
+    // Members
     class EVec3 vMidColor; // offset 0x0, size 0xC
     class EVec3 vTotalColor; // offset 0xC, size 0xC
     unsigned int number_colors; // offset 0x18, size 0x4
@@ -1236,8 +1492,9 @@ struct ERTQNode {
     unsigned char color_number; // offset 0x34, size 0x1
     unsigned char id; // offset 0x35, size 0x1
 };
+// total size: 0x1CF8
 class ERTQuantize : public IRTQuantize {
-    // total size: 0x1CF8
+    // Members
 protected:
     class EMat4 m_mTrans; // offset 0x8, size 0x40
     class EMat4 m_mInvTrans; // offset 0x48, size 0x40
@@ -1263,39 +1520,60 @@ protected:
     float m_distance; // offset 0x1CF0, size 0x4
     unsigned char m_YUVColorSpace; // offset 0x1CF4, size 0x1
 };
+// total size: 0x1
 class TextureUtils {
-    // total size: 0x1
+    // Static members
+    static unsigned char s_fullAlphaValue; // size: 0x1
 };
+// total size: 0x10
 struct VectorBase {
-    // total size: 0x10
+    // Static members
+    static unsigned long kAlignment; // size: 0x4
+    static unsigned long kAlignmentOffset; // size: 0x4
+    static unsigned long npos; // size: 0x4
+    static unsigned long kMaxSize; // size: 0x4
+
+    // Members
 protected:
     struct ClothingSetIndexInfo * mpBegin; // offset 0x0, size 0x4
     struct ClothingSetIndexInfo * mpEnd; // offset 0x4, size 0x4
     struct ClothingSetIndexInfo * mpCapacity; // offset 0x8, size 0x4
     class allocator mAllocator; // offset 0xC, size 0x1
 };
-class vector : public VectorBase {
-    // total size: 0x10
-};
+// total size: 0x10
+class vector : public VectorBase {};
+// total size: 0x10
 struct VectorBase {
-    // total size: 0x10
+    // Static members
+    static unsigned long kAlignment; // size: 0x4
+    static unsigned long kAlignmentOffset; // size: 0x4
+    static unsigned long npos; // size: 0x4
+    static unsigned long kMaxSize; // size: 0x4
+
+    // Members
 protected:
     class ClothingItem * * mpBegin; // offset 0x0, size 0x4
     class ClothingItem * * mpEnd; // offset 0x4, size 0x4
     class ClothingItem * * mpCapacity; // offset 0x8, size 0x4
     class allocator mAllocator; // offset 0xC, size 0x1
 };
+// total size: 0x10
 struct VectorBase {
-    // total size: 0x10
+    // Static members
+    static unsigned long kAlignment; // size: 0x4
+    static unsigned long kAlignmentOffset; // size: 0x4
+    static unsigned long npos; // size: 0x4
+    static unsigned long kMaxSize; // size: 0x4
+
+    // Members
 protected:
     unsigned int * mpBegin; // offset 0x0, size 0x4
     unsigned int * mpEnd; // offset 0x4, size 0x4
     unsigned int * mpCapacity; // offset 0x8, size 0x4
     class allocator mAllocator; // offset 0xC, size 0x1
 };
-class vector : public VectorBase {
-    // total size: 0x10
-};
+// total size: 0x10
+class vector : public VectorBase {};
 unsigned int CAS_DEFAULT_ROOM_ID; // size: 0x4, address: 0x805DD248
 class EVec3 kMirrorClothingCorners[4]; // size: 0x30, address: 0x8048C730
 enum eSlideShowPositions kCASToCAFPositionMap[6][6]; // size: 0x90, address: 0x8041AD48
@@ -1320,12 +1598,43 @@ enum eSlideShowProps {
     CAS_PROP_TOAL = 11,
 };
 enum eSlideShowProps kCASSnapShotProps[6][6]; // size: 0x90, address: 0x8041AE38
+// total size: 0xA8
 class CELTarget : public UIObjectBase {
-    // total size: 0xA8
+    // Members
     unsigned char m_IsLoaded; // offset 0xA4, size 0x1
 };
+// total size: 0x10C
 class CasSceneDefault : public CasScene {
-    // total size: 0x10C
+    // Static members
+    static unsigned int kRightAltPropBone; // size: 0x4
+    static unsigned int kRightPropBone; // size: 0x4
+    static unsigned int kLeftAltPropBone; // size: 0x4
+    static unsigned int kLeftPropBone; // size: 0x4
+    static float kLightingTimeOfDayBeginHours; // size: 0x4
+    static float kFadeInTime; // size: 0x4
+    static float kFadeOutTime; // size: 0x4
+    static char * kSnapShotPhoneStates[6]; // size: 0x18
+    static unsigned int kSnapShotSamples[6]; // size: 0x18
+    static unsigned int kSnapShotCameraSound; // size: 0x4
+    static unsigned int kSnapShotBoatAnimations[6]; // size: 0x18
+    static float kSnapShotIntervalDuration[6]; // size: 0x18
+    static int kSimBoatLocatorBones[6]; // size: 0x18
+    static enum eSlideShowPositions kCASToCAFPositionMap[6][6]; // size: 0x90
+    static float kMirrorFarPlaneDistance; // size: 0x4
+    static float kMirrorNearPlaneDistance; // size: 0x4
+    static float kMirrorFOV; // size: 0x4
+    static float kSceneFarPlaneDistance; // size: 0x4
+    static float kSceneNearPlaneDistance; // size: 0x4
+    static float kSceneFOV; // size: 0x4
+    static enum eSlideShowProps kCASSnapShotProps[6][6]; // size: 0x90
+    static unsigned int kSnapshotSimAnimations[6][6]; // size: 0x90
+    static float kMirrorCornerOffset; // size: 0x4
+    static unsigned int kMirrorPortalShaderID; // size: 0x4
+    static unsigned int kMirrorModelID; // size: 0x4
+    static class EVec3 kMirrorClothingCorners[4]; // size: 0x30
+    static unsigned int CAS_DEFAULT_ROOM_ID; // size: 0x4
+
+    // Members
     class ERModel * m_pMirrorModel; // offset 0xAC, size 0x4
     class EMirrorPortal * m_pMirrorPortal; // offset 0xB0, size 0x4
     class EMidLotInstance * m_pBoatObject; // offset 0xB4, size 0x4
@@ -1347,36 +1656,44 @@ class CasSceneDefault : public CasScene {
     unsigned char m_bLoadingCelPhone; // offset 0x108, size 0x1
     unsigned char m_bPauseSequence; // offset 0x109, size 0x1
 };
+// total size: 0x10
 class Fader {
-    // total size: 0x10
+    // Members
     float m_fFadeTimeMax; // offset 0x0, size 0x4
     float m_fFadeTimeMaxInv; // offset 0x4, size 0x4
     float m_fFadeTimeLeft; // offset 0x8, size 0x4
     unsigned int m_status; // offset 0xC, size 0x4
 };
-class vector : public VectorBase {
-    // total size: 0x10
-};
+// total size: 0x10
+class vector : public VectorBase {};
+// total size: 0x10
 struct VectorBase {
-    // total size: 0x10
+    // Static members
+    static unsigned long kAlignment; // size: 0x4
+    static unsigned long kAlignmentOffset; // size: 0x4
+    static unsigned long npos; // size: 0x4
+    static unsigned long kMaxSize; // size: 0x4
+
+    // Members
 protected:
     class EMidLotInstance * * mpBegin; // offset 0x0, size 0x4
     class EMidLotInstance * * mpEnd; // offset 0x4, size 0x4
     class EMidLotInstance * * mpCapacity; // offset 0x8, size 0x4
     class allocator mAllocator; // offset 0xC, size 0x1
 };
-class ELevelManager : public EResourceManager {
-    // total size: 0xD44
-};
+// total size: 0xD44
+class ELevelManager : public EResourceManager {};
+// total size: 0x24
 class ERenderSurface {
-    // total size: 0x24
+    // Members
 public:
     void * __vptr$; // offset 0x0, size 0x4
 protected:
     struct ERenderSurfaceDef m_rsd; // offset 0x4, size 0x20
 };
+// total size: 0x54
 class EMirrorPortal {
-    // total size: 0x54
+    // Members
     float m_fov; // offset 0x0, size 0x4
     class EVec3 m_corners[4]; // offset 0x4, size 0x30
     struct EGEVert * m_verts; // offset 0x34, size 0x4
@@ -1412,32 +1729,41 @@ enum SectionID {
     UIxxSection3ID = 1432975411,
     UIxxSection4ID = 1432975412,
 };
+// total size: 0x8
 class SaveRecord {
-    // total size: 0x8
+    // Members
 public:
     unsigned int size; // offset 0x0, size 0x4
     void * ptr; // offset 0x4, size 0x4
 };
+// total size: 0x10
 struct RegistryNode {
-    // total size: 0x10
+    // Members
     unsigned int id; // offset 0x0, size 0x4
     void (* saveSection)(enum SectionID, class SaveRecord &); // offset 0x4, size 0x4
     void (* loadSection)(enum SectionID, class SaveRecord &); // offset 0x8, size 0x4
     void (* saveComplete)(enum SectionID, class SaveRecord &); // offset 0xC, size 0x4
 };
+// total size: 0x10
 struct VectorBase {
-    // total size: 0x10
+    // Static members
+    static unsigned long kAlignment; // size: 0x4
+    static unsigned long kAlignmentOffset; // size: 0x4
+    static unsigned long npos; // size: 0x4
+    static unsigned long kMaxSize; // size: 0x4
+
+    // Members
 protected:
     struct RegistryNode * mpBegin; // offset 0x0, size 0x4
     struct RegistryNode * mpEnd; // offset 0x4, size 0x4
     struct RegistryNode * mpCapacity; // offset 0x8, size 0x4
     class allocator mAllocator; // offset 0xC, size 0x1
 };
-class vector : public VectorBase {
-    // total size: 0x10
-};
+// total size: 0x10
+class vector : public VectorBase {};
+// total size: 0xC
 struct NghResFileWriteInfo {
-    // total size: 0xC
+    // Members
     struct NghResFileWriteInfo * pNext; // offset 0x0, size 0x4
     struct HandleNode * handle; // offset 0x4, size 0x4
     unsigned short resIndex; // offset 0x8, size 0x2
@@ -1447,8 +1773,9 @@ enum RegistryID {
     UIDBRegistryID = 1432970322,
     UIxxRegistryID = 1432975480,
 };
+// total size: 0x18
 class NghSection {
-    // total size: 0x18
+    // Members
 public:
     unsigned int m_subSectionCnt; // offset 0x0, size 0x4
     unsigned int m_subSectionSize; // offset 0x4, size 0x4
@@ -1457,8 +1784,9 @@ public:
     enum RegistryID m_registeryId; // offset 0x10, size 0x4
     enum SectionID m_firstSubSectionId; // offset 0x14, size 0x4
 };
+// total size: 0x28
 class NghLayout {
-    // total size: 0x28
+    // Members
     unsigned int m_version; // offset 0x0, size 0x4
     class NghSection * m_section; // offset 0x4, size 0x4
     unsigned int m_sectionCnt; // offset 0x8, size 0x4
@@ -1478,8 +1806,14 @@ enum MCCError {
     SaveError = 4,
     InvalidSize = 5,
 };
+// total size: 0x18
 class MemoryCardCache {
-    // total size: 0x18
+    // Static members
+    static unsigned int s_xboxSaveConfigPosition; // size: 0x4
+    static unsigned int s_ngcSaveConfigPosition; // size: 0x4
+    static unsigned int s_configCacheSize; // size: 0x4
+
+    // Members
     char * m_configCache; // offset 0x0, size 0x4
     char * * m_cache; // offset 0x4, size 0x4
     unsigned long * m_cacheSizes; // offset 0x8, size 0x4
@@ -1490,8 +1824,9 @@ class MemoryCardCache {
     unsigned char m_systemInitialized; // offset 0x16, size 0x1
     unsigned char m_sourceIsFile; // offset 0x17, size 0x1
 };
+// total size: 0x1C
 class NghResFileSectionHeader {
-    // total size: 0x1C
+    // Members
 public:
     unsigned int m_uSectionType; // offset 0x0, size 0x4
     unsigned int m_uSize; // offset 0x4, size 0x4
@@ -1501,8 +1836,26 @@ public:
     unsigned int m_uVersion; // offset 0x14, size 0x4
     unsigned int m_uNumEntries; // offset 0x18, size 0x4
 };
+// total size: 0x450
 class NghResFile : public iResFile {
-    // total size: 0x450
+    // Static members
+    static unsigned int s_nNumSimsPerFamily; // size: 0x4
+    static unsigned int s_nNumModifiableFamilies; // size: 0x4
+    static unsigned int s_nNumHouses; // size: 0x4
+    static unsigned int s_nNumThumbnails; // size: 0x4
+    static unsigned int m_uLastBothSectionChecksum; // size: 0x4
+    static unsigned int m_uBothSectionChecksum; // size: 0x4
+    static class NghSection s_nghSectionLayout10[]; // size: 0x0
+    static class NghSection s_nghSectionLayout11[]; // size: 0x0
+    static char s_ValidationValue[]; // size: 0x0
+    static int s_userIndex[]; // size: 0x0
+    static int s_houseIndex[]; // size: 0x0
+    static int s_nghIndex[]; // size: 0x0
+    static int kRES_ENTRY_SIZE; // size: 0x4
+    static const char * s_configFileName; // size: 0x4
+    static const char * s_saveFileName; // size: 0x4
+
+    // Members
 public:
     enum SourceType m_nSourceType; // offset 0x10, size 0x4
     class StackString m_sSourceFilePath; // offset 0x14, size 0x408
@@ -1550,26 +1903,34 @@ enum eCAFMenuButtons {
     NUM_CAF_ADD_BUTTONS = 4,
     NUM_CAF_SELECT_BUTTONS = 5,
 };
+// total size: 0x10
 struct CAFUIScreenState {
-    // total size: 0x10
+    // Members
     enum eCAFMenuScreens screenName; // offset 0x0, size 0x4
     unsigned int numButtons; // offset 0x4, size 0x4
     unsigned int highlightedButton; // offset 0x8, size 0x4
     enum eCAFMenuButtons parentButtonPressed; // offset 0xC, size 0x4
 };
+// total size: 0x10
 struct VectorBase {
-    // total size: 0x10
+    // Static members
+    static unsigned long kAlignment; // size: 0x4
+    static unsigned long kAlignmentOffset; // size: 0x4
+    static unsigned long npos; // size: 0x4
+    static unsigned long kMaxSize; // size: 0x4
+
+    // Members
 protected:
     struct CAFUIScreenState * mpBegin; // offset 0x0, size 0x4
     struct CAFUIScreenState * mpEnd; // offset 0x4, size 0x4
     struct CAFUIScreenState * mpCapacity; // offset 0x8, size 0x4
     class allocator mAllocator; // offset 0xC, size 0x1
 };
-class vector : public VectorBase {
-    // total size: 0x10
-};
+// total size: 0x10
+class vector : public VectorBase {};
+// total size: 0x10
 class stack {
-    // total size: 0x10
+    // Members
 public:
     class vector c; // offset 0x0, size 0x10
 };
@@ -1600,8 +1961,9 @@ enum eCharacterTargetMode {
     ENTER_TARGET_NEW_CHARACTER = 0,
     ENTER_TARGET_EDIT_CHARACTER = 1,
 };
+// total size: 0x10
 struct TargetState {
-    // total size: 0x10
+    // Members
     enum eSpecies speciesType; // offset 0x0, size 0x4
     enum eCAFTargetState transState; // offset 0x4, size 0x4
     enum eCharacterTargetMode targetMode; // offset 0x8, size 0x4
@@ -1627,8 +1989,9 @@ enum eSlideShowSequence {
     CAS_SCENE_SLIDE_COMPLETED = 5,
     CAS_SCENE_TOTAL_SLIDES = 6,
 };
+// total size: 0x578
 class CAFTarget : public UIObjectBase, public CasListener {
-    // total size: 0x578
+    // Members
 public:
     class CasMediator m_mediator; // offset 0xAC, size 0x34
     class CasSimState * * m_pCharState; // offset 0xE0, size 0x4
@@ -1660,192 +2023,151 @@ private:
 };
 unsigned int CAS_INGAME_ROOM_ID; // size: 0x4, address: 0x805DD264
 class EVec3 kMirrorClothingCorners[4]; // size: 0x30, address: 0x8048C760
+// total size: 0xB4
 class CasSceneInGame : public CasScene {
-    // total size: 0xB4
+    // Static members
+    static float kMirrorFarPlaneDistance; // size: 0x4
+    static float kMirrorNearPlaneDistance; // size: 0x4
+    static float kMirrorFOV; // size: 0x4
+    static float kSceneFarPlaneDistance; // size: 0x4
+    static float kSceneNearPlaneDistance; // size: 0x4
+    static float kSceneFOV; // size: 0x4
+    static float kMirrorCornerOffset; // size: 0x4
+    static unsigned int kMirrorPortalShaderID; // size: 0x4
+    static unsigned int kMirrorModelID; // size: 0x4
+    static class EVec3 kMirrorClothingCorners[4]; // size: 0x30
+    static unsigned int CAS_INGAME_ROOM_ID; // size: 0x4
+
+    // Members
     class ERModel * m_pMirrorModel; // offset 0xAC, size 0x4
     class EMirrorPortal * m_pMirrorPortal; // offset 0xB0, size 0x4
 };
-struct {
-    // total size: 0xAC
-} __vt__14CasSceneInGame; // size: 0xAC, address: 0x80425DF4
-struct {
-    // total size: 0x2C
-} __vt__13SimImageMaker; // size: 0x2C, address: 0x80425EA0
-struct {
-    // total size: 0x2C
-} __vt__19CharacterImageMaker; // size: 0x2C, address: 0x80425ECC
-struct {
-    // total size: 0x10
-} __vt__26CasEventResetCharacterDraw; // size: 0x10, address: 0x80425EF8
-struct {
-    // total size: 0xAC
-} __vt__15CasSceneDefault; // size: 0xAC, address: 0x80425F08
-struct {
-    // total size: 0xC
-} __vt__12CasTweakTool; // size: 0xC, address: 0x80425FB4
-struct {
-    // total size: 0x14
-} __vt__37SimpleReconObject<16UserDataSaveLoad>; // size: 0x14, address: 0x80425FC0
-struct {
-    // total size: 0x98
-} __vt__12SimModelTSC6; // size: 0x98, address: 0x80425FD8
-struct {
-    // total size: 0x10
-} __vt__14SimTexturePart; // size: 0x10, address: 0x80426070
-struct {
-    // total size: 0x90
-} __vt__18SimModelPartUnused; // size: 0x90, address: 0x80426080
-struct {
-    // total size: 0x90
-} __vt__19SimModelPartSleeves; // size: 0x90, address: 0x80426110
-struct {
-    // total size: 0x90
-} __vt__26SimModelPartAddonLowerBody; // size: 0x90, address: 0x804261A0
-struct {
-    // total size: 0x90
-} __vt__26SimModelPartAddonUpperBody; // size: 0x90, address: 0x80426230
-struct {
-    // total size: 0x90
-} __vt__16SimModelPartBelt; // size: 0x90, address: 0x804262C0
-struct {
-    // total size: 0x90
-} __vt__24SimModelPartArmAccessory; // size: 0x90, address: 0x80426350
-struct {
-    // total size: 0x90
-} __vt__27SimModelPartNecklaceEarring; // size: 0x90, address: 0x804263E0
-struct {
-    // total size: 0x90
-} __vt__15SimModelPartHat; // size: 0x90, address: 0x80426470
-struct {
-    // total size: 0x90
-} __vt__17SimModelPartShoes; // size: 0x90, address: 0x80426500
-struct {
-    // total size: 0x90
-} __vt__21SimModelPartLowerBody; // size: 0x90, address: 0x80426590
-struct {
-    // total size: 0x90
-} __vt__17SimModelPartTorso; // size: 0x90, address: 0x80426620
-struct {
-    // total size: 0x90
-} __vt__19SimModelPartGlasses; // size: 0x90, address: 0x804266B0
-struct {
-    // total size: 0x90
-} __vt__16SimModelPartHair; // size: 0x90, address: 0x80426740
-struct {
-    // total size: 0x90
-} __vt__25SimModelPartFacialFeature; // size: 0x90, address: 0x804267D0
-struct {
-    // total size: 0x90
-} __vt__16SimModelPartHead; // size: 0x90, address: 0x80426860
-struct {
-    // total size: 0x90
-} __vt__12SimModelPart; // size: 0x90, address: 0x804268F0
-struct {
-    // total size: 0xC
-} __vt__16UserDataSaveLoad; // size: 0xC, address: 0x80426980
-struct {
-    // total size: 0x34
-} __vt__12CasNpcEditor; // size: 0x34, address: 0x8042698C
-struct {
-    // total size: 0x10
-} __vt__21CasEventInitCharacter; // size: 0x10, address: 0x804269C0
-struct {
-    // total size: 0xAC
-} __vt__8CasScene; // size: 0xAC, address: 0x804269D0
-struct {
-    // total size: 0x14
-} __vt__15IConsoleUnknown; // size: 0x14, address: 0x80426A7C
-struct {
-    // total size: 0x34
-} __vt__14CasSimRenderer; // size: 0x34, address: 0x80426A90
-struct {
-    // total size: 0x10
-} __vt__22CasEventMorphCharacter; // size: 0x10, address: 0x80426AC8
-struct {
-    // total size: 0x34
-} __vt__11CasSimState; // size: 0x34, address: 0x80426AD8
-struct {
-    // total size: 0xC
-} __vt__11CasMediator; // size: 0xC, address: 0x80426B0C
-struct {
-    // total size: 0x114
-} __vt__17CasSimDescription; // size: 0x114, address: 0x80426B18
-struct {
-    // total size: 0x10
-} __vt__23CasEventChangeCharacter; // size: 0x10, address: 0x80426C30
-struct {
-    // total size: 0x128
-} __vt__17SimBodyPartUnused; // size: 0x128, address: 0x80426C40
-struct {
-    // total size: 0x128
-} __vt__18SimBodyPartSleeves; // size: 0x128, address: 0x80426D68
-struct {
-    // total size: 0x128
-} __vt__25SimBodyPartAddonLowerBody; // size: 0x128, address: 0x80426E90
-struct {
-    // total size: 0x128
-} __vt__25SimBodyPartAddonUpperBody; // size: 0x128, address: 0x80426FB8
-struct {
-    // total size: 0x128
-} __vt__15SimBodyPartBelt; // size: 0x128, address: 0x804270E0
-struct {
-    // total size: 0x128
-} __vt__23SimBodyPartArmAccessory; // size: 0x128, address: 0x80427208
-struct {
-    // total size: 0x128
-} __vt__26SimBodyPartNecklaceEarring; // size: 0x128, address: 0x80427330
-struct {
-    // total size: 0x128
-} __vt__14SimBodyPartHat; // size: 0x128, address: 0x80427458
-struct {
-    // total size: 0x128
-} __vt__16SimBodyPartShoes; // size: 0x128, address: 0x80427580
-struct {
-    // total size: 0x128
-} __vt__20SimBodyPartLowerBody; // size: 0x128, address: 0x804276A8
-struct {
-    // total size: 0x128
-} __vt__16SimBodyPartTorso; // size: 0x128, address: 0x804277D0
-struct {
-    // total size: 0x128
-} __vt__18SimBodyPartGlasses; // size: 0x128, address: 0x804278F8
-struct {
-    // total size: 0x128
-} __vt__15SimBodyPartHair; // size: 0x128, address: 0x80427A20
-struct {
-    // total size: 0x128
-} __vt__24SimBodyPartFacialFeature; // size: 0x128, address: 0x80427B48
-struct {
-    // total size: 0x128
-} __vt__15SimBodyPartHead; // size: 0x128, address: 0x80427C70
-struct {
-    // total size: 0x128
-} __vt__11SimBodyPart; // size: 0x128, address: 0x80427D98
-struct {
-    // total size: 0x34
-} __vt__11CasListener; // size: 0x34, address: 0x80427EC0
-struct {
-    // total size: 0x10
-} __vt__8CasEvent; // size: 0x10, address: 0x80427EF8
+// total size: 0xAC
+struct {} __vt__14CasSceneInGame; // size: 0xAC, address: 0x80425DF4
+// total size: 0x2C
+struct {} __vt__13SimImageMaker; // size: 0x2C, address: 0x80425EA0
+// total size: 0x2C
+struct {} __vt__19CharacterImageMaker; // size: 0x2C, address: 0x80425ECC
+// total size: 0x10
+struct {} __vt__26CasEventResetCharacterDraw; // size: 0x10, address: 0x80425EF8
+// total size: 0xAC
+struct {} __vt__15CasSceneDefault; // size: 0xAC, address: 0x80425F08
+// total size: 0xC
+struct {} __vt__12CasTweakTool; // size: 0xC, address: 0x80425FB4
+// total size: 0x14
+struct {} __vt__37SimpleReconObject<16UserDataSaveLoad>; // size: 0x14, address: 0x80425FC0
+// total size: 0x98
+struct {} __vt__12SimModelTSC6; // size: 0x98, address: 0x80425FD8
+// total size: 0x10
+struct {} __vt__14SimTexturePart; // size: 0x10, address: 0x80426070
+// total size: 0x90
+struct {} __vt__18SimModelPartUnused; // size: 0x90, address: 0x80426080
+// total size: 0x90
+struct {} __vt__19SimModelPartSleeves; // size: 0x90, address: 0x80426110
+// total size: 0x90
+struct {} __vt__26SimModelPartAddonLowerBody; // size: 0x90, address: 0x804261A0
+// total size: 0x90
+struct {} __vt__26SimModelPartAddonUpperBody; // size: 0x90, address: 0x80426230
+// total size: 0x90
+struct {} __vt__16SimModelPartBelt; // size: 0x90, address: 0x804262C0
+// total size: 0x90
+struct {} __vt__24SimModelPartArmAccessory; // size: 0x90, address: 0x80426350
+// total size: 0x90
+struct {} __vt__27SimModelPartNecklaceEarring; // size: 0x90, address: 0x804263E0
+// total size: 0x90
+struct {} __vt__15SimModelPartHat; // size: 0x90, address: 0x80426470
+// total size: 0x90
+struct {} __vt__17SimModelPartShoes; // size: 0x90, address: 0x80426500
+// total size: 0x90
+struct {} __vt__21SimModelPartLowerBody; // size: 0x90, address: 0x80426590
+// total size: 0x90
+struct {} __vt__17SimModelPartTorso; // size: 0x90, address: 0x80426620
+// total size: 0x90
+struct {} __vt__19SimModelPartGlasses; // size: 0x90, address: 0x804266B0
+// total size: 0x90
+struct {} __vt__16SimModelPartHair; // size: 0x90, address: 0x80426740
+// total size: 0x90
+struct {} __vt__25SimModelPartFacialFeature; // size: 0x90, address: 0x804267D0
+// total size: 0x90
+struct {} __vt__16SimModelPartHead; // size: 0x90, address: 0x80426860
+// total size: 0x90
+struct {} __vt__12SimModelPart; // size: 0x90, address: 0x804268F0
+// total size: 0xC
+struct {} __vt__16UserDataSaveLoad; // size: 0xC, address: 0x80426980
+// total size: 0x34
+struct {} __vt__12CasNpcEditor; // size: 0x34, address: 0x8042698C
+// total size: 0x10
+struct {} __vt__21CasEventInitCharacter; // size: 0x10, address: 0x804269C0
+// total size: 0xAC
+struct {} __vt__8CasScene; // size: 0xAC, address: 0x804269D0
+// total size: 0x14
+struct {} __vt__15IConsoleUnknown; // size: 0x14, address: 0x80426A7C
+// total size: 0x34
+struct {} __vt__14CasSimRenderer; // size: 0x34, address: 0x80426A90
+// total size: 0x10
+struct {} __vt__22CasEventMorphCharacter; // size: 0x10, address: 0x80426AC8
+// total size: 0x34
+struct {} __vt__11CasSimState; // size: 0x34, address: 0x80426AD8
+// total size: 0xC
+struct {} __vt__11CasMediator; // size: 0xC, address: 0x80426B0C
+// total size: 0x114
+struct {} __vt__17CasSimDescription; // size: 0x114, address: 0x80426B18
+// total size: 0x10
+struct {} __vt__23CasEventChangeCharacter; // size: 0x10, address: 0x80426C30
+// total size: 0x128
+struct {} __vt__17SimBodyPartUnused; // size: 0x128, address: 0x80426C40
+// total size: 0x128
+struct {} __vt__18SimBodyPartSleeves; // size: 0x128, address: 0x80426D68
+// total size: 0x128
+struct {} __vt__25SimBodyPartAddonLowerBody; // size: 0x128, address: 0x80426E90
+// total size: 0x128
+struct {} __vt__25SimBodyPartAddonUpperBody; // size: 0x128, address: 0x80426FB8
+// total size: 0x128
+struct {} __vt__15SimBodyPartBelt; // size: 0x128, address: 0x804270E0
+// total size: 0x128
+struct {} __vt__23SimBodyPartArmAccessory; // size: 0x128, address: 0x80427208
+// total size: 0x128
+struct {} __vt__26SimBodyPartNecklaceEarring; // size: 0x128, address: 0x80427330
+// total size: 0x128
+struct {} __vt__14SimBodyPartHat; // size: 0x128, address: 0x80427458
+// total size: 0x128
+struct {} __vt__16SimBodyPartShoes; // size: 0x128, address: 0x80427580
+// total size: 0x128
+struct {} __vt__20SimBodyPartLowerBody; // size: 0x128, address: 0x804276A8
+// total size: 0x128
+struct {} __vt__16SimBodyPartTorso; // size: 0x128, address: 0x804277D0
+// total size: 0x128
+struct {} __vt__18SimBodyPartGlasses; // size: 0x128, address: 0x804278F8
+// total size: 0x128
+struct {} __vt__15SimBodyPartHair; // size: 0x128, address: 0x80427A20
+// total size: 0x128
+struct {} __vt__24SimBodyPartFacialFeature; // size: 0x128, address: 0x80427B48
+// total size: 0x128
+struct {} __vt__15SimBodyPartHead; // size: 0x128, address: 0x80427C70
+// total size: 0x128
+struct {} __vt__11SimBodyPart; // size: 0x128, address: 0x80427D98
+// total size: 0x34
+struct {} __vt__11CasListener; // size: 0x34, address: 0x80427EC0
+// total size: 0x10
+struct {} __vt__8CasEvent; // size: 0x10, address: 0x80427EF8
+// total size: 0x4
 class generic_iterator {
-    // total size: 0x4
+    // Members
 protected:
     struct ClothingSetIndexInfo * mIterator; // offset 0x0, size 0x4
 };
-struct copy_backward_impl {
-    // total size: 0x1
-};
+// total size: 0x1
+struct copy_backward_impl {};
+// total size: 0x4
 class generic_iterator {
-    // total size: 0x4
+    // Members
 protected:
     class CasListener * * mIterator; // offset 0x0, size 0x4
 };
-struct fill_n_imp {
-    // total size: 0x1
-};
-struct fill_imp {
-    // total size: 0x1
-};
+// total size: 0x1
+struct fill_n_imp {};
+// total size: 0x1
+struct fill_imp {};
 enum RoomId {
     ROOM_PREGAME = 0,
     ROOM_INGAME = 1,
@@ -1859,15 +2181,17 @@ enum GameState {
     kGameState_FreePlay = 4,
     kGameState_Max = 5,
 };
+// total size: 0x8
 class Panelstateman {
-    // total size: 0x8
+    // Members
 public:
     void * __vptr$; // offset 0x0, size 0x4
 protected:
     enum Panelstate m_state; // offset 0x4, size 0x4
 };
+// total size: 0x30
 class EMemoryMeterWin : public Panelstateman {
-    // total size: 0x30
+    // Members
 public:
     float m_curPercent; // offset 0x8, size 0x4
     float m_calcPercent; // offset 0xC, size 0x4
@@ -1881,14 +2205,31 @@ private:
     int m_totalStructures; // offset 0x28, size 0x4
     unsigned char m_skip; // offset 0x2C, size 0x1
 };
+// total size: 0xC
 class Player {
-    // total size: 0xC
+    // Members
     class Neighbor * m_neighbor; // offset 0x0, size 0x4
     class FlashPiMenu * m_pPiMenu; // offset 0x4, size 0x4
     class ESimsCam * m_pCamera; // offset 0x8, size 0x4
 };
+// total size: 0xBC
 class GameData {
-    // total size: 0xBC
+    // Static members
+    static float s_fStageTotal; // size: 0x4
+    static float s_fStageDeltaActual[64]; // size: 0x100
+    static float s_fStageDeltaRecip[64]; // size: 0x100
+    static float s_fStageDelta[64]; // size: 0x100
+    static int s_iWorstIterationStageEnd; // size: 0x4
+    static int s_iWorstIterationStageStart; // size: 0x4
+    static float s_fWorstIterationTime; // size: 0x4
+    static float s_fScaleFactor; // size: 0x4
+    static const float * s_pStageDelta; // size: 0x4
+    static int s_iStageCntMax; // size: 0x4
+    static int s_iStage; // size: 0x4
+    static class QTimer s_frameTimer; // size: 0x8
+    static class QTimer s_stageTimer; // size: 0x8
+
+    // Members
 public:
     enum GameState m_gameState; // offset 0x0, size 0x4
     class EMemoryMeterWin m_memoryMeterWin; // offset 0x4, size 0x30
@@ -1935,23 +2276,26 @@ private:
     unsigned int m_bCtrlDisableBits; // offset 0xB4, size 0x4
     int m_BuildBuyPlayer; // offset 0xB8, size 0x4
 };
+// total size: 0x10
 class SimLightingTuning {
-    // total size: 0x10
+    // Members
     float m_simBrightness; // offset 0x0, size 0x4
     float m_simContrast; // offset 0x4, size 0x4
     float m_simEdgeLightIntensity; // offset 0x8, size 0x4
     float m_simAmbientMinimum; // offset 0xC, size 0x4
 };
+// total size: 0x14
 class FileCreator {
-    // total size: 0x14
+    // Members
     class EFile * (* m_creatorCB)(class EFile *, char *, char *, enum DeviceType, enum AccessMode, unsigned int); // offset 0x0, size 0x4
     enum DeviceType m_device; // offset 0x4, size 0x4
     enum IOMode m_ioMode; // offset 0x8, size 0x4
     enum AccessMode m_accMode; // offset 0xC, size 0x4
     char m_ext[4]; // offset 0x10, size 0x4
 };
+// total size: 0xC
 class TArray {
-    // total size: 0xC
+    // Members
 protected:
     class FileCreator * m_p; // offset 0x0, size 0x4
     int m_size; // offset 0x4, size 0x4
@@ -1971,8 +2315,9 @@ enum HDDStatusFlags {
     HDD_STAT_NO_FILES = 10,
     HDD_STAT_READY = 11,
 };
+// total size: 0x28
 class EFileSystem : public EGlobalManagerClient {
-    // total size: 0x28
+    // Members
 protected:
     class TArray m_creators; // offset 0x4, size 0xC
     enum DeviceType m_eDefaultDeviceType; // offset 0x10, size 0x4
@@ -1982,22 +2327,29 @@ protected:
     enum HDDStatusFlags m_hddSaveStatus; // offset 0x20, size 0x4
     class vector * m_pFilesToCloseOnReset; // offset 0x24, size 0x4
 };
-class ENgcFileSystem : public EFileSystem {
-    // total size: 0x28
-};
+// total size: 0x28
+class ENgcFileSystem : public EFileSystem {};
+// total size: 0x8
 struct aptFilterStackEntry {
-    // total size: 0x8
+    // Members
     unsigned int filterId; // offset 0x0, size 0x4
     const char * targetName; // offset 0x4, size 0x4
 };
+// total size: 0x8
 class AddDirectionToQue {
-    // total size: 0x8
+    // Members
 public:
     unsigned char bAddVar; // offset 0x0, size 0x1
     int controllerNum; // offset 0x4, size 0x4
 };
+// total size: 0x430
 class AptViewer {
-    // total size: 0x430
+    // Static members
+    static int repeatCount[4]; // size: 0x10
+    static int repeatRate[4]; // size: 0x10
+    static float repeatSeconds; // size: 0x4
+
+    // Members
 protected:
     class E3DWindow m_win; // offset 0x0, size 0x358
     unsigned char m_bAnimLoaded; // offset 0x358, size 0x1
@@ -2023,9 +2375,8 @@ protected:
     class AddDirectionToQue m_AddLeftToQue; // offset 0x420, size 0x8
     class AddDirectionToQue m_AddRightToQue; // offset 0x428, size 0x8
 };
-class UIDBTarget : public UIObjectBase {
-    // total size: 0xA4
-};
+// total size: 0xA4
+class UIDBTarget : public UIObjectBase {};
 enum eUIDBDataType {
     eUIDBInt = 105,
     eUIDBFloat = 102,
@@ -2037,8 +2388,9 @@ union /* @class$27159game_cas_unity_cpp */ {
     float fdata; // offset 0x0, size 0x4
     unsigned short * sdata; // offset 0x0, size 0x4
 };
+// total size: 0xC
 struct UIDBData {
-    // total size: 0xC
+    // Members
     char * name; // offset 0x0, size 0x4
     enum eUIDBDataType type; // offset 0x4, size 0x4
     union { // inferred

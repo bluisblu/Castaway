@@ -5,10 +5,11 @@
     Code range: 0x801D0274 -> 0x801D2498
 */
 // Range: 0x801D0274 -> 0x801D0280
-void * ShopItem::ShopItem() {}
+ShopItem::ShopItem() {}
 
 // Range: 0x801D0280 -> 0x801D02F4
-void * ShopItem::~ShopItem(class ShopItem * const this /* r30 */) {}
+// this: r30
+ShopItem::~ShopItem() {}
 
 // Range: 0x801D02F4 -> 0x801D02FC
 void ShopItem::Initialize() {}
@@ -24,10 +25,11 @@ static int sort_shopitem_by_cost(void * pShopItemAsVoid2 /* r30 */) {
 }
 
 // Range: 0x801D0390 -> 0x801D03A0
-void * MSOItemManager::MSOItemManager() {}
+MSOItemManager::MSOItemManager() {}
 
 // Range: 0x801D03A0 -> 0x801D05EC
-void MSOItemManager::Initialize(class MSOItemManager * const this /* r29 */, class SelectorFilterFunctor * filter /* r30 */) {
+// this: r29
+void MSOItemManager::Initialize(class SelectorFilterFunctor * filter /* r30 */) {
     // Local variables
     class ObjSelector * * pSelectorArray; // r1+0x14
     unsigned int selectorCount; // r1+0x10
@@ -47,7 +49,8 @@ void MSOItemManager::Initialize(class MSOItemManager * const this /* r29 */, cla
 unsigned char MSOItemManager::TokenItemAllowable() {}
 
 // Range: 0x801D0618 -> 0x801D0688
-void * MSOItemManager::~MSOItemManager(class MSOItemManager * const this /* r30 */) {}
+// this: r30
+MSOItemManager::~MSOItemManager() {}
 
 // Range: 0x801D0688 -> 0x801D06BC
 class UICatalogItemBase * MSOItemManager::GetStoreItem() {}
@@ -56,7 +59,8 @@ class UICatalogItemBase * MSOItemManager::GetStoreItem() {}
 int MSOItemManager::GetNumItems() {}
 
 // Range: 0x801D06C4 -> 0x801D0B4C
-void * MSOTarget::MSOTarget(class MSOTarget * const this /* r29 */) {
+// this: r29
+MSOTarget::MSOTarget() {
     // References
     // -> class EGlobal _globals;
     // -> static const char * const MSOTargetName;
@@ -67,14 +71,16 @@ void * MSOTarget::MSOTarget(class MSOTarget * const this /* r29 */) {
 }
 
 // Range: 0x801D0B4C -> 0x801D0C20
-void * MSOTarget::~MSOTarget(class MSOTarget * const this /* r30 */) {
+// this: r30
+MSOTarget::~MSOTarget() {
     // References
     // -> class EGlobal _globals;
     // -> struct [anonymous] __vt__9MSOTarget;
 }
 
 // Range: 0x801D0C20 -> 0x801D0E9C
-void MSOTarget::SetVariable(class MSOTarget * const this /* r28 */, const char * zVarName /* r29 */, const char * zValue /* r30 */) {
+// this: r28
+void MSOTarget::SetVariable(const char * zVarName /* r29 */, const char * zValue /* r30 */) {
     // Local variables
     int numCellsNeeded; // r1+0x10
     int shaderIndex; // r1+0xC
@@ -83,7 +89,8 @@ void MSOTarget::SetVariable(class MSOTarget * const this /* r28 */, const char *
 }
 
 // Range: 0x801D0E9C -> 0x801D1334
-char * MSOTarget::GetVariable(class MSOTarget * const this /* r28 */, const char * zVarName /* r29 */) {
+// this: r28
+char * MSOTarget::GetVariable(const char * zVarName /* r29 */) {
     // Local variables
     char * pResultString; // r30
     int count; // r5
@@ -95,7 +102,8 @@ char * MSOTarget::GetVariable(class MSOTarget * const this /* r28 */, const char
 }
 
 // Range: 0x801D1334 -> 0x801D1654
-unsigned short * MSOTarget::GetLocalizable(class MSOTarget * const this /* r29 */, const char * zVarName /* r30 */) {
+// this: r29
+unsigned short * MSOTarget::GetLocalizable(const char * zVarName /* r30 */) {
     // Local variables
     unsigned short widestring[4096]; // r1+0x10
     const class UICatalogItemBase * pItem; // r0
@@ -110,7 +118,8 @@ unsigned short * MSOTarget::GetLocalizable(class MSOTarget * const this /* r29 *
 void MSOTarget::Update() {}
 
 // Range: 0x801D1658 -> 0x801D181C
-unsigned char MSOTarget::PurchaseSelectedItem(class MSOTarget * const this /* r28 */) {
+// this: r28
+unsigned char MSOTarget::PurchaseSelectedItem() {
     // Local variables
     int fundsBuffer; // r0
     class InventoryItems * inventory; // r30
@@ -122,7 +131,8 @@ unsigned char MSOTarget::PurchaseSelectedItem(class MSOTarget * const this /* r2
 }
 
 // Range: 0x801D181C -> 0x801D194C
-unsigned char MSOTarget::end_dialog(class MSOTarget * const this /* r29 */, unsigned char bAccepted /* r30 */) {
+// this: r29
+unsigned char MSOTarget::end_dialog(unsigned char bAccepted /* r30 */) {
     // Local variables
     class InventoryItems * inventory; // r31
 
@@ -132,7 +142,8 @@ unsigned char MSOTarget::end_dialog(class MSOTarget * const this /* r29 */, unsi
 }
 
 // Range: 0x801D194C -> 0x801D1B24
-void MSOTarget::UpdateSelectedItemInfo(class MSOTarget * const this /* r27 */) {
+// this: r27
+void MSOTarget::UpdateSelectedItemInfo() {
     // Local variables
     unsigned int resid; // r1+0x8
     class UICatalogItemBase * pShopItem; // r29
@@ -156,7 +167,8 @@ class ELocString MSOTarget::GetShopName() {}
 void MSOTarget::InitializeItemManager() {}
 
 // Range: 0x801D1B48 -> 0x801D1C18
-char * MSOTarget::GetUnavailableList(class MSOTarget * const this /* r27 */) {
+// this: r27
+char * MSOTarget::GetUnavailableList() {
     // Local variables
     int numItems; // r0
     char * retData; // r30
@@ -169,7 +181,8 @@ char * MSOTarget::GetUnavailableList(class MSOTarget * const this /* r27 */) {
 }
 
 // Range: 0x801D1C18 -> 0x801D1CE4
-char * MSOTarget::GetNewlyAvailableList(class MSOTarget * const this /* r27 */) {
+// this: r27
+char * MSOTarget::GetNewlyAvailableList() {
     // Local variables
     int numItems; // r0
     char * retData; // r30
@@ -179,13 +192,15 @@ char * MSOTarget::GetNewlyAvailableList(class MSOTarget * const this /* r27 */) 
 }
 
 // Range: 0x801D1CE4 -> 0x801D1D60
-void * PlazaStoreBakery::PlazaStoreBakery(class PlazaStoreBakery * const this /* r31 */) {
+// this: r31
+PlazaStoreBakery::PlazaStoreBakery() {
     // References
     // -> struct [anonymous] __vt__16PlazaStoreBakery;
 }
 
 // Range: 0x801D1D60 -> 0x801D1DB8
-void * PlazaStoreBakery::~PlazaStoreBakery(class PlazaStoreBakery * const this /* r30 */) {}
+// this: r30
+PlazaStoreBakery::~PlazaStoreBakery() {}
 
 // Range: 0x801D1DB8 -> 0x801D1DD0
 class ELocString PlazaStoreBakery::GetShopName() {
@@ -194,7 +209,8 @@ class ELocString PlazaStoreBakery::GetShopName() {
 }
 
 // Range: 0x801D1DD0 -> 0x801D1E24
-void PlazaStoreBakery::InitializeItemManager(class PlazaStoreBakery * const this /* r31 */) {
+// this: r31
+void PlazaStoreBakery::InitializeItemManager() {
     // Local variables
     class SelectorFilterFunctor filter; // r1+0x8
 
@@ -203,13 +219,15 @@ void PlazaStoreBakery::InitializeItemManager(class PlazaStoreBakery * const this
 }
 
 // Range: 0x801D1E24 -> 0x801D1EA0
-void * PlazaStoreToystore::PlazaStoreToystore(class PlazaStoreToystore * const this /* r31 */) {
+// this: r31
+PlazaStoreToystore::PlazaStoreToystore() {
     // References
     // -> struct [anonymous] __vt__18PlazaStoreToystore;
 }
 
 // Range: 0x801D1EA0 -> 0x801D1EF8
-void * PlazaStoreToystore::~PlazaStoreToystore(class PlazaStoreToystore * const this /* r30 */) {}
+// this: r30
+PlazaStoreToystore::~PlazaStoreToystore() {}
 
 // Range: 0x801D1EF8 -> 0x801D1F10
 class ELocString PlazaStoreToystore::GetShopName() {
@@ -218,7 +236,8 @@ class ELocString PlazaStoreToystore::GetShopName() {
 }
 
 // Range: 0x801D1F10 -> 0x801D1F64
-void PlazaStoreToystore::InitializeItemManager(class PlazaStoreToystore * const this /* r31 */) {
+// this: r31
+void PlazaStoreToystore::InitializeItemManager() {
     // Local variables
     class SelectorFilterFunctor filter; // r1+0x8
 
@@ -227,13 +246,15 @@ void PlazaStoreToystore::InitializeItemManager(class PlazaStoreToystore * const 
 }
 
 // Range: 0x801D1F64 -> 0x801D1FE8
-void * PlazaStoreEmporium::PlazaStoreEmporium(class PlazaStoreEmporium * const this /* r31 */) {
+// this: r31
+PlazaStoreEmporium::PlazaStoreEmporium() {
     // References
     // -> struct [anonymous] __vt__18PlazaStoreEmporium;
 }
 
 // Range: 0x801D1FE8 -> 0x801D2040
-void * PlazaStoreEmporium::~PlazaStoreEmporium(class PlazaStoreEmporium * const this /* r30 */) {}
+// this: r30
+PlazaStoreEmporium::~PlazaStoreEmporium() {}
 
 // Range: 0x801D2040 -> 0x801D2058
 class ELocString PlazaStoreEmporium::GetShopName() {
@@ -242,7 +263,8 @@ class ELocString PlazaStoreEmporium::GetShopName() {
 }
 
 // Range: 0x801D2058 -> 0x801D20AC
-void PlazaStoreEmporium::InitializeItemManager(class PlazaStoreEmporium * const this /* r31 */) {
+// this: r31
+void PlazaStoreEmporium::InitializeItemManager() {
     // Local variables
     class SelectorFilterFunctor filter; // r1+0x8
 
@@ -251,13 +273,15 @@ void PlazaStoreEmporium::InitializeItemManager(class PlazaStoreEmporium * const 
 }
 
 // Range: 0x801D20AC -> 0x801D2138
-void * PlazaStoreSmoothie::PlazaStoreSmoothie(class PlazaStoreSmoothie * const this /* r31 */) {
+// this: r31
+PlazaStoreSmoothie::PlazaStoreSmoothie() {
     // References
     // -> struct [anonymous] __vt__18PlazaStoreSmoothie;
 }
 
 // Range: 0x801D2138 -> 0x801D2190
-void * PlazaStoreSmoothie::~PlazaStoreSmoothie(class PlazaStoreSmoothie * const this /* r30 */) {}
+// this: r30
+PlazaStoreSmoothie::~PlazaStoreSmoothie() {}
 
 // Range: 0x801D2190 -> 0x801D21A8
 class ELocString PlazaStoreSmoothie::GetShopName() {
@@ -266,7 +290,8 @@ class ELocString PlazaStoreSmoothie::GetShopName() {
 }
 
 // Range: 0x801D21A8 -> 0x801D21F8
-void PlazaStoreSmoothie::InitializeItemManager(class PlazaStoreSmoothie * const this /* r31 */) {
+// this: r31
+void PlazaStoreSmoothie::InitializeItemManager() {
     // Local variables
     class SelectorFilterFunctor filter; // r1+0x8
 
@@ -275,13 +300,15 @@ void PlazaStoreSmoothie::InitializeItemManager(class PlazaStoreSmoothie * const 
 }
 
 // Range: 0x801D21F8 -> 0x801D2284
-void * PlazaStoreIceCream::PlazaStoreIceCream(class PlazaStoreIceCream * const this /* r31 */) {
+// this: r31
+PlazaStoreIceCream::PlazaStoreIceCream() {
     // References
     // -> struct [anonymous] __vt__18PlazaStoreIceCream;
 }
 
 // Range: 0x801D2284 -> 0x801D22DC
-void * PlazaStoreIceCream::~PlazaStoreIceCream(class PlazaStoreIceCream * const this /* r30 */) {}
+// this: r30
+PlazaStoreIceCream::~PlazaStoreIceCream() {}
 
 // Range: 0x801D22DC -> 0x801D22F4
 class ELocString PlazaStoreIceCream::GetShopName() {
@@ -290,7 +317,8 @@ class ELocString PlazaStoreIceCream::GetShopName() {
 }
 
 // Range: 0x801D22F4 -> 0x801D2348
-void PlazaStoreIceCream::InitializeItemManager(class PlazaStoreIceCream * const this /* r31 */) {
+// this: r31
+void PlazaStoreIceCream::InitializeItemManager() {
     // Local variables
     class SelectorFilterFunctor filter; // r1+0x8
 
@@ -299,13 +327,15 @@ void PlazaStoreIceCream::InitializeItemManager(class PlazaStoreIceCream * const 
 }
 
 // Range: 0x801D2348 -> 0x801D23D4
-void * PlazaStoreCoffee::PlazaStoreCoffee(class PlazaStoreCoffee * const this /* r31 */) {
+// this: r31
+PlazaStoreCoffee::PlazaStoreCoffee() {
     // References
     // -> struct [anonymous] __vt__16PlazaStoreCoffee;
 }
 
 // Range: 0x801D23D4 -> 0x801D242C
-void * PlazaStoreCoffee::~PlazaStoreCoffee(class PlazaStoreCoffee * const this /* r30 */) {}
+// this: r30
+PlazaStoreCoffee::~PlazaStoreCoffee() {}
 
 // Range: 0x801D242C -> 0x801D2444
 class ELocString PlazaStoreCoffee::GetShopName() {
@@ -314,7 +344,8 @@ class ELocString PlazaStoreCoffee::GetShopName() {
 }
 
 // Range: 0x801D2444 -> 0x801D2498
-void PlazaStoreCoffee::InitializeItemManager(class PlazaStoreCoffee * const this /* r31 */) {
+// this: r31
+void PlazaStoreCoffee::InitializeItemManager() {
     // Local variables
     class SelectorFilterFunctor filter; // r1+0x8
 

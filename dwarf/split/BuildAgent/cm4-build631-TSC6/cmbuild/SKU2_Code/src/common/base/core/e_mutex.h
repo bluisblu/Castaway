@@ -5,6 +5,7 @@
     Code range: 0x8015D8F4 -> 0x8015D97C
 */
 // Range: 0x8015D8F4 -> 0x8015D95C
-void * EThreadMutex::~EThreadMutex(class EThreadMutex * const this /* r30 */) {}
+// this: r30
+EThreadMutex::~EThreadMutex() {}
 
 

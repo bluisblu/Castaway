@@ -12,13 +12,14 @@ void ERotDecomp1Dof::Init() {
 }
 
 // Range: 0x8026D8AC -> 0x8026D8E4
-void * ERotDecomp1Dof::__nw(unsigned long size /* r31 */) {}
+void * ERotDecomp1Dof::operator new(unsigned long size /* r31 */) {}
 
 // Range: 0x8026D8E4 -> 0x8026D918
-void ERotDecomp1Dof::__dl(void * p /* r31 */) {}
+void ERotDecomp1Dof::operator delete(void * p /* r31 */) {}
 
 // Range: 0x8026D918 -> 0x8026DDC0
-class EQuat ERotDecomp1Dof::GetFrame(class ERotDecomp1Dof * const this /* r31 */, float frame /* f31 */) {
+// this: r31
+class EQuat ERotDecomp1Dof::GetFrame(float frame /* f31 */) {
     // Local variables
     float fCurrentSplineStartFrame; // f2
     float fCurrentSplineEndFrame; // f4
@@ -33,14 +34,16 @@ class EQuat ERotDecomp1Dof::GetFrame(class ERotDecomp1Dof * const this /* r31 */
 }
 
 // Range: 0x8026DDC0 -> 0x8026E07C
-void ERotDecomp1Dof::NextSegment(class ERotDecomp1Dof * const this /* r31 */) {
+// this: r31
+void ERotDecomp1Dof::NextSegment() {
     // Local variables
     int nextTimePos; // r4
     int nextFrame; // r30
 }
 
 // Range: 0x8026E07C -> 0x8026E33C
-void ERotDecomp1Dof::LastSegment(class ERotDecomp1Dof * const this /* r31 */) {
+// this: r31
+void ERotDecomp1Dof::LastSegment() {
     // Local variables
     int lastTimePos; // r4
 }
@@ -58,7 +61,8 @@ void ERotDecomp1Dof::ResetEnd() {
 }
 
 // Range: 0x8026E4F8 -> 0x8026E848
-void ERotDecomp1Dof::ReadAllAngles(class ERotDecomp1Dof * const this /* r31 */) {
+// this: r31
+void ERotDecomp1Dof::ReadAllAngles() {
     // Local variables
     int nextFrame; // r5
 }
@@ -72,7 +76,8 @@ void ERotDecomp1Dof::GetKeyframe() {
 }
 
 // Range: 0x8026ED74 -> 0x8026F0B8
-float ERotDecomp1Dof::GetAngle(class ERotDecomp1Dof * const this /* r29 */, int sel /* r30 */, int keyframe /* r31 */) {
+// this: r29
+float ERotDecomp1Dof::GetAngle(int sel /* r30 */, int keyframe /* r31 */) {
     // Local variables
     struct ERotDecomp1DofKeyframe kn_1; // r1+0x20
     struct ERotDecomp1DofKeyframe kn; // r1+0x14

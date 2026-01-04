@@ -5,10 +5,12 @@
     Code range: 0x800A1178 -> 0x800A1268
 */
 // Range: 0x800A1178 -> 0x800A11E0
-void * ObjectTypeAttrBlock::ObjectTypeAttrBlock(class ObjectTypeAttrBlock * const this /* r31 */) {}
+// this: r31
+ObjectTypeAttrBlock::ObjectTypeAttrBlock() {}
 
 // Range: 0x800A11E0 -> 0x800A1238
-void * ObjectTypeAttrBlock::~ObjectTypeAttrBlock(class ObjectTypeAttrBlock * const this /* r30 */) {}
+// this: r30
+ObjectTypeAttrBlock::~ObjectTypeAttrBlock() {}
 
 // Range: 0x800A1238 -> 0x800A1268
 void ObjectTypeAttrBlock::Clear() {

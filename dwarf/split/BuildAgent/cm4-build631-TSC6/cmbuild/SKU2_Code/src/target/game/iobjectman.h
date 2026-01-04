@@ -5,10 +5,11 @@
     Code range: 0x8023AF70 -> 0x8023B07C
 */
 // Range: 0x8023AF70 -> 0x8023AFB8
-void * ISimInstanceHandleGenerator::~ISimInstanceHandleGenerator(class ISimInstanceHandleGenerator * const this /* r31 */) {}
+// this: r31
+ISimInstanceHandleGenerator::~ISimInstanceHandleGenerator() {}
 
 // Range: 0x8023AFE8 -> 0x8023AFF4
-void * ISimInstanceHandleGenerator::ISimInstanceHandleGenerator() {}
+ISimInstanceHandleGenerator::ISimInstanceHandleGenerator() {}
 
 // Range: 0x8023AFF4 -> 0x8023B068
 unsigned int EIObjectMan::GetHandle(const class ISimInstance * pInst /* r30 */) {
@@ -18,7 +19,8 @@ unsigned int EIObjectMan::GetHandle(const class ISimInstance * pInst /* r30 */) 
 }
 
 // Range: 0x8023B068 -> 0x8023B07C
-unsigned int ISimInstanceHandleGenerator::GetNewHandle(class ISimInstanceHandleGenerator * const this /* r4 */) {
+// this: r4
+unsigned int ISimInstanceHandleGenerator::GetNewHandle() {
     // Local variables
     unsigned int ret; // r0
 }

@@ -18,7 +18,8 @@ static void SetLanguageEntries() {
 }
 
 // Range: 0x8023B990 -> 0x8023BC74
-void LanguageSel::SetupMenuPane(class LanguageSel * const this /* r27 */) {
+// this: r27
+void LanguageSel::SetupMenuPane() {
     // Local variables
     class ERFont * pFont; // r29
     float fFontSize; // f31
@@ -37,7 +38,8 @@ void LanguageSel::SetupMenuPane(class LanguageSel * const this /* r27 */) {
 }
 
 // Range: 0x8023BC74 -> 0x8023BE38
-void LanguageSel::Startup(class LanguageSel * const this /* r30 */) {
+// this: r30
+void LanguageSel::Startup() {
     // Local variables
     class IconItem * markerIcon; // r31
     class IconItem * selIcon; // r0
@@ -50,7 +52,8 @@ void LanguageSel::Startup(class LanguageSel * const this /* r30 */) {
 }
 
 // Range: 0x8023BE38 -> 0x8023BEF0
-void LanguageSel::Shutdown(class LanguageSel * const this /* r29 */) {
+// this: r29
+void LanguageSel::Shutdown() {
     // Local variables
     struct LanguageEntry * pEntry; // r31
     int i; // r30
@@ -60,10 +63,12 @@ void LanguageSel::Shutdown(class LanguageSel * const this /* r29 */) {
 }
 
 // Range: 0x8023BEF0 -> 0x8023BF3C
-void LanguageSel::Reset(class LanguageSel * const this /* r30 */) {}
+// this: r30
+void LanguageSel::Reset() {}
 
 // Range: 0x8023BF3C -> 0x8023C020
-void LanguageSel::MakeMenuSelection(class LanguageSel * const this /* r29 */) {
+// this: r29
+void LanguageSel::MakeMenuSelection() {
     // Local variables
     int selectedLanguage; // r30
 
@@ -73,7 +78,8 @@ void LanguageSel::MakeMenuSelection(class LanguageSel * const this /* r29 */) {
 }
 
 // Range: 0x8023C020 -> 0x8023C1C0
-void LanguageSel::Update(class LanguageSel * const this /* r28 */) {
+// this: r28
+void LanguageSel::Update() {
     // Local variables
     unsigned int button; // r30
     int numControllers; // r0
@@ -94,9 +100,11 @@ void LanguageSel::Update(class LanguageSel * const this /* r28 */) {
 void LanguageSel::Draw() {}
 
 // Range: 0x8023C1D4 -> 0x8023C21C
-void LanguageSel::MenuPaneShow(class LanguageSel * const this /* r31 */) {}
+// this: r31
+void LanguageSel::MenuPaneShow() {}
 
 // Range: 0x8023C21C -> 0x8023C260
-void LanguageSel::MenuPaneHide(class LanguageSel * const this /* r31 */) {}
+// this: r31
+void LanguageSel::MenuPaneHide() {}
 
 

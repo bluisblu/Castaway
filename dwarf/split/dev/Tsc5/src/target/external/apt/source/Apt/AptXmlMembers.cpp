@@ -4,15 +4,15 @@
     Language: C++
     Code range: 0x8032F9C4 -> 0x8032FAE8
 */
+// total size: 0x8
 struct XmlMembers {
-    // total size: 0x8
+    // Members
     char * szName; // offset 0x0, size 0x4
     int nIndex; // offset 0x4, size 0x4
 };
 static struct XmlMembers wordlist[77]; // size: 0x268, address: 0x8045F030
-class XmlMemberIndex {
-    // total size: 0x1
-};
+// total size: 0x1
+class XmlMemberIndex {};
 // Range: 0x8032F9C4 -> 0x8032FA64
 struct XmlMembers * XmlMemberIndex::in_word_set(const char * str /* r30 */) {
     // Local variables

@@ -5,16 +5,20 @@
     Code range: 0x8022FE98 -> 0x802311D4
 */
 // Range: 0x8022FE98 -> 0x8022FED8
-void * EFloorShdTblNode::EFloorShdTblNode(class EFloorShdTblNode * const this /* r31 */) {}
+// this: r31
+EFloorShdTblNode::EFloorShdTblNode() {}
 
 // Range: 0x8022FF30 -> 0x8022FF8C
-void * EFloorShdTblNode::~EFloorShdTblNode(class EFloorShdTblNode * const this /* r30 */) {}
+// this: r30
+EFloorShdTblNode::~EFloorShdTblNode() {}
 
 // Range: 0x8022FF8C -> 0x8022FFD4
-void EFloorShdTblNode::CleanUp(class EFloorShdTblNode * const this /* r31 */) {}
+// this: r31
+void EFloorShdTblNode::CleanUp() {}
 
 // Range: 0x8022FFD4 -> 0x80230014
-void * EFloorStripInfo::~EFloorStripInfo(class EFloorStripInfo * const this /* r31 */) {}
+// this: r31
+EFloorStripInfo::~EFloorStripInfo() {}
 
 // Range: 0x80230014 -> 0x8023001C
 unsigned char EFloorStripInfo::GetCol1() {}
@@ -26,7 +30,7 @@ unsigned char EFloorStripInfo::GetCol0() {}
 unsigned char EFloorStripInfo::GetRow() {}
 
 // Range: 0x8023002C -> 0x80230040
-void * EFloorStripInfo::EFloorStripInfo() {}
+EFloorStripInfo::EFloorStripInfo() {}
 
 // Range: 0x80230040 -> 0x80230048
 void EFloorStripInfo::SetCol1() {}
@@ -95,7 +99,8 @@ void LightVertex(const class EVec3 & xyz /* r26 */, int roomId /* r30 */, const 
 float NGCFastInvSqrt() {}
 
 // Range: 0x8023052C -> 0x80230664
-void EIFloor::DoLightingCalculation(class EIFloor * const this /* r27 */) {
+// this: r27
+void EIFloor::DoLightingCalculation() {
     // Local variables
     class EVec3 ambLight; // r1+0x2C
     class EVec3 dirLight; // r1+0x20
@@ -147,13 +152,15 @@ void EFloorShdTblNode::EmptyTable() {
 }
 
 // Range: 0x80230910 -> 0x802309AC
-void * EIFloor::EIFloor(class EIFloor * const this /* r31 */) {
+// this: r31
+EIFloor::EIFloor() {
     // References
     // -> struct [anonymous] __vt__7EIFloor;
 }
 
 // Range: 0x802309AC -> 0x80230BE4
-void EIFloor::Draw(class EIFloor * const this /* r30 */, struct ELevelDrawData & renderParam /* r31 */) {
+// this: r30
+void EIFloor::Draw(struct ELevelDrawData & renderParam /* r31 */) {
     // Local variables
     class ERC * prc; // r28
     class EFloorTileGroup * curr; // r27
@@ -168,7 +175,8 @@ void EIFloor::Draw(class EIFloor * const this /* r30 */, struct ELevelDrawData &
 }
 
 // Range: 0x80230BE4 -> 0x80230CDC
-void EIFloor::DrawStencil(class EIFloor * const this /* r28 */, struct ELevelDrawData & renderParam /* r29 */, int stencilValue /* r30 */) {
+// this: r28
+void EIFloor::DrawStencil(struct ELevelDrawData & renderParam /* r29 */, int stencilValue /* r30 */) {
     // Local variables
     class ERC * prc; // r31
     class EFloorTileGroup * curr; // r30
@@ -182,10 +190,11 @@ void EIFloor::DrawShadow() {
 }
 
 // Range: 0x80230D38 -> 0x80230D48
-unsigned int EIFloor::VisibilityTest(class EIFloor * const this /* r5 */) {}
+// this: r5
+unsigned int EIFloor::VisibilityTest() {}
 
 // Range: 0x80230D48 -> 0x80230D90
-void * EIFloor::__nw() {
+void * EIFloor::operator new() {
     // Local variables
     class EIFloor * p; // r3
 
@@ -195,7 +204,7 @@ void * EIFloor::__nw() {
 }
 
 // Range: 0x80230D90 -> 0x80230DC0
-void EIFloor::__dl() {
+void EIFloor::operator delete() {
     // References
     // -> unsigned int m_nAlloced;
     // -> class FastAllocPool * g_eIFloorAllocPool;
@@ -226,7 +235,8 @@ void EIFloor::UnloadCeilingShader() {
 }
 
 // Range: 0x80230EA8 -> 0x80230F3C
-void EIFloor::Cleanup(class EIFloor * const this /* r30 */) {
+// this: r30
+void EIFloor::Cleanup() {
     // Local variables
     class EFloorTileGroup * curr; // r3
     class EFloorTileGroup * temp; // r31
@@ -260,7 +270,8 @@ unsigned char EFloorShdTblNode::PreviewTable() {
 }
 
 // Range: 0x80231114 -> 0x802311D4
-void * EFloorTileGroup::~EFloorTileGroup(class EFloorTileGroup * const this /* r28 */) {
+// this: r28
+EFloorTileGroup::~EFloorTileGroup() {
     // Local variables
     int i; // r30
 

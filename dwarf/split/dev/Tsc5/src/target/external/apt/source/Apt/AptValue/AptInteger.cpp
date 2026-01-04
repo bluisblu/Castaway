@@ -20,7 +20,6 @@ void AptInteger::DeleteThis() {}
 // Range: 0x80333C54 -> 0x80333C58
 void AptInteger::ForceDelete() {}
 
-struct {
-    // total size: 0x44
-} __vt__10AptInteger; // size: 0x44, address: 0x8045FC20
+// total size: 0x44
+struct {} __vt__10AptInteger; // size: 0x44, address: 0x8045FC20
 

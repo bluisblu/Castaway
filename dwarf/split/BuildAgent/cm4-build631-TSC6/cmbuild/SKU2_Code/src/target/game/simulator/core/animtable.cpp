@@ -11,16 +11,19 @@ class AnimTable * AnimTable::CreateInstance() {}
 void AnimTable::DestroyInstance() {}
 
 // Range: 0x800FB550 -> 0x800FB594
-void * AnimTableImpl::AnimTableImpl(class AnimTableImpl * const this /* r31 */) {
+// this: r31
+AnimTableImpl::AnimTableImpl() {
     // References
     // -> struct [anonymous] __vt__13AnimTableImpl;
 }
 
 // Range: 0x800FB594 -> 0x800FB5EC
-void * AnimTableImpl::~AnimTableImpl(class AnimTableImpl * const this /* r30 */) {}
+// this: r30
+AnimTableImpl::~AnimTableImpl() {}
 
 // Range: 0x800FB5EC -> 0x800FB680
-int AnimTableImpl::Load(class AnimTableImpl * const this /* r28 */, unsigned int fileID /* r30 */, signed short resID /* r29 */) {
+// this: r28
+int AnimTableImpl::Load(unsigned int fileID /* r30 */, signed short resID /* r29 */) {
     // Local variables
     class iResFile * pFile; // r0
     const struct ResFile * pData; // r0
@@ -28,7 +31,8 @@ int AnimTableImpl::Load(class AnimTableImpl * const this /* r28 */, unsigned int
 }
 
 // Range: 0x800FB680 -> 0x800FB6F8
-struct AnimRef * AnimTableImpl::GetEntry(class AnimTableImpl * const this /* r30 */, int entryNum /* r31 */) {
+// this: r30
+struct AnimRef * AnimTableImpl::GetEntry(int entryNum /* r31 */) {
     // Local variables
     struct AnimRef * aref; // r0
 }

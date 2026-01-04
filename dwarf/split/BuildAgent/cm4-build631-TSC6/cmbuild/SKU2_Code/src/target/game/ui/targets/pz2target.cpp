@@ -5,7 +5,8 @@
     Code range: 0x801DA264 -> 0x801DB330
 */
 // Range: 0x801DA264 -> 0x801DA6A4
-void * PAZTarget::PAZTarget(class PAZTarget * const this /* r30 */, unsigned char launchMode /* r28 */) {
+// this: r30
+PAZTarget::PAZTarget(unsigned char launchMode /* r28 */) {
     // Local variables
     int i; // r29
     class ERShader * pSimShader; // r1+0x8
@@ -41,7 +42,8 @@ void * PAZTarget::PAZTarget(class PAZTarget * const this /* r30 */, unsigned cha
 }
 
 // Range: 0x801DA6A4 -> 0x801DA788
-void * PAZTarget::~PAZTarget(class PAZTarget * const this /* r30 */) {
+// this: r30
+PAZTarget::~PAZTarget() {
     // References
     // -> class AptViewer * _gpAptViewer;
     // -> static unsigned long sInitialSelectedItem_Root;
@@ -50,7 +52,8 @@ void * PAZTarget::~PAZTarget(class PAZTarget * const this /* r30 */) {
 }
 
 // Range: 0x801DA788 -> 0x801DACB0
-void PAZTarget::SetVariable(class PAZTarget * const this /* r28 */, const char * szCommand /* r29 */, const char * szValue /* r30 */) {
+// this: r28
+void PAZTarget::SetVariable(const char * szCommand /* r29 */, const char * szValue /* r30 */) {
     // Local variables
     int neighborId; // r4
     int neighborId; // r30
@@ -66,7 +69,8 @@ void PAZTarget::SetVariable(class PAZTarget * const this /* r28 */, const char *
 }
 
 // Range: 0x801DACB0 -> 0x801DB07C
-char * PAZTarget::GetVariable(class PAZTarget * const this /* r26 */, const char * szVar /* r25 */) {
+// this: r26
+char * PAZTarget::GetVariable(const char * szVar /* r25 */) {
     // Local variables
     char * pResultString; // r28
     unsigned char bIsEnabled; // r29
@@ -92,7 +96,8 @@ char * PAZTarget::GetVariable(class PAZTarget * const this /* r26 */, const char
 }
 
 // Range: 0x801DB07C -> 0x801DB278
-unsigned short * PAZTarget::GetLocalizable(class PAZTarget * const this /* r30 */, const char * szVar /* r31 */) {
+// this: r30
+unsigned short * PAZTarget::GetLocalizable(const char * szVar /* r31 */) {
     // Local variables
     unsigned short widestring[8192]; // r1+0x18
     class BString2 first; // r1+0x10
@@ -108,7 +113,8 @@ unsigned short * PAZTarget::GetLocalizable(class PAZTarget * const this /* r30 *
 }
 
 // Range: 0x801DB278 -> 0x801DB2F8
-void PAZTarget::Update(class PAZTarget * const this /* r31 */) {
+// this: r31
+void PAZTarget::Update() {
     // Local variables
     class EVec2 dummy; // r1+0x8
 

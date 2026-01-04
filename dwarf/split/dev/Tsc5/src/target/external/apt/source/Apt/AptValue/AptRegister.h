@@ -5,12 +5,14 @@
     Code range: 0x8030B454 -> 0x8030B55C
 */
 // Range: 0x8030B454 -> 0x8030B4A4
-void * AptRegister::AptRegister(class AptRegister * const this /* r30 */, int _nVal /* r31 */) {
+// this: r30
+AptRegister::AptRegister(int _nVal /* r31 */) {
     // References
     // -> struct [anonymous] __vt__11AptRegister;
 }
 
 // Range: 0x8030B500 -> 0x8030B55C
-void * AptRegister::~AptRegister(class AptRegister * const this /* r30 */) {}
+// this: r30
+AptRegister::~AptRegister() {}
 
 

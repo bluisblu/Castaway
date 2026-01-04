@@ -5,7 +5,8 @@
     Code range: 0x801EA0E8 -> 0x801EB1DC
 */
 // Range: 0x801EA0E8 -> 0x801EA65C
-void * GOLTarget::GOLTarget(class GOLTarget * const this /* r15 */) {
+// this: r15
+GOLTarget::GOLTarget() {
     // Local variables
     int i; // r19
     struct BookTab * pTab; // r18
@@ -41,14 +42,16 @@ void * GOLTarget::GOLTarget(class GOLTarget * const this /* r15 */) {
 }
 
 // Range: 0x801EA65C -> 0x801EA748
-void * GOLTarget::~GOLTarget(class GOLTarget * const this /* r29 */) {
+// this: r29
+GOLTarget::~GOLTarget() {
     // References
     // -> class EGlobal _globals;
     // -> struct [anonymous] __vt__9GOLTarget;
 }
 
 // Range: 0x801EA748 -> 0x801EA7C8
-void GOLTarget::Update(class GOLTarget * const this /* r31 */) {
+// this: r31
+void GOLTarget::Update() {
     // Local variables
     class EVec2 dummy; // r1+0x8
 
@@ -58,7 +61,8 @@ void GOLTarget::Update(class GOLTarget * const this /* r31 */) {
 }
 
 // Range: 0x801EA7C8 -> 0x801EAB48
-void GOLTarget::SetVariable(class GOLTarget * const this /* r31 */, const char * szCommand /* r27 */, const char * szParams /* r26 */) {
+// this: r31
+void GOLTarget::SetVariable(const char * szCommand /* r27 */, const char * szParams /* r26 */) {
     // Local variables
     int tab; // r1+0xC
     int newPage; // r1+0x8
@@ -84,7 +88,8 @@ void GOLTarget::SetVariable(class GOLTarget * const this /* r31 */, const char *
 }
 
 // Range: 0x801EAB48 -> 0x801EAD38
-char * GOLTarget::GetVariable(class GOLTarget * const this /* r29 */, const char * szVar /* r30 */) {
+// this: r29
+char * GOLTarget::GetVariable(const char * szVar /* r30 */) {
     // Local variables
     char * retStr; // r31
     int total; // r5
@@ -100,7 +105,8 @@ char * GOLTarget::GetVariable(class GOLTarget * const this /* r29 */, const char
 }
 
 // Range: 0x801EAD38 -> 0x801EAFD8
-unsigned short * GOLTarget::GetLocalizable(class GOLTarget * const this /* r27 */, const char * szVar /* r28 */) {
+// this: r27
+unsigned short * GOLTarget::GetLocalizable(const char * szVar /* r28 */) {
     // Local variables
     unsigned short * wideStr; // r31
     char dbString[256]; // r1+0x320
@@ -121,13 +127,15 @@ unsigned short * GOLTarget::GetLocalizable(class GOLTarget * const this /* r27 *
 }
 
 // Range: 0x801EAFD8 -> 0x801EB0E4
-void GOLTarget::ChangeTab(class GOLTarget * const this /* r29 */, int tabNum /* r30 */) {
+// this: r29
+void GOLTarget::ChangeTab(int tabNum /* r30 */) {
     // Local variables
     struct BookTab * pTab; // r31
 }
 
 // Range: 0x801EB0E4 -> 0x801EB1DC
-void GOLTarget::UpdateGoalShaders(class GOLTarget * const this /* r25 */) {
+// this: r25
+void GOLTarget::UpdateGoalShaders() {
     // Local variables
     struct BookTab * pTab; // r27
     int i; // r26

@@ -8,12 +8,6 @@
 unsigned char ReconBuffer::IsReading() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\target\game\simulator\core\recon.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x8002FA70 -> 0x8002FC20
-*/
 // Range: 0x8002FA70 -> 0x8002FAE8
 int ReconSaveObject(class iResFile * file /* r29 */, signed short id /* r30 */, int version /* r31 */) {
     // Local variables
@@ -22,7 +16,8 @@ int ReconSaveObject(class iResFile * file /* r29 */, signed short id /* r30 */, 
 }
 
 // Range: 0x8002FB40 -> 0x8002FB9C
-void * SimpleReconObject::SimpleReconObject(class SimpleReconObject * const this /* r29 */, class UserDataSaveLoad * obj /* r30 */, int type /* r31 */) {
+// this: r29
+SimpleReconObject::SimpleReconObject(class UserDataSaveLoad * obj /* r30 */, int type /* r31 */) {
     // References
     // -> struct [anonymous] __vt__37SimpleReconObject<16UserDataSaveLoad>;
 }
@@ -41,12 +36,6 @@ void SimpleReconObject::DoStream() {}
 int SimpleReconObject::GetType() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\target\game\simulator\core\recon.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x800A42C8 -> 0x800A45D4
-*/
 // Range: 0x800A42C8 -> 0x800A432C
 void ReconLoadObject(class ThumbnailLoader * obj /* r0 */, struct HandleNode * mem /* r30 */, int * version /* r31 */) {
     // Local variables
@@ -55,7 +44,8 @@ void ReconLoadObject(class ThumbnailLoader * obj /* r0 */, struct HandleNode * m
 }
 
 // Range: 0x800A4384 -> 0x800A43E0
-void * SimpleReconObject::SimpleReconObject(class SimpleReconObject * const this /* r29 */, class ThumbnailLoader * obj /* r30 */, int type /* r31 */) {
+// this: r29
+SimpleReconObject::SimpleReconObject(class ThumbnailLoader * obj /* r30 */, int type /* r31 */) {
     // References
     // -> struct [anonymous] __vt__36SimpleReconObject<15ThumbnailLoader>;
 }
@@ -77,7 +67,8 @@ int ReconLoadObject(class iResFile * file /* r29 */, signed short id /* r30 */, 
 }
 
 // Range: 0x800A44E0 -> 0x800A453C
-void * SimpleReconObject::SimpleReconObject(class SimpleReconObject * const this /* r29 */, class ReconStreamVector * obj /* r30 */, int type /* r31 */) {
+// this: r29
+SimpleReconObject::SimpleReconObject(class ReconStreamVector * obj /* r30 */, int type /* r31 */) {
     // References
     // -> struct [anonymous] __vt__56SimpleReconObject<35ReconStreamVector<14SlotDescriptor>>;
 }
@@ -102,12 +93,6 @@ int SimpleReconObject::GetType() {}
 void SimpleReconObject::DoStream() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\target\game\simulator\core\recon.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x8010D608 -> 0x8010E610
-*/
 // Range: 0x8010D608 -> 0x8010D680
 int ReconLoadObject(class iResFile * file /* r29 */, signed short id /* r30 */, int * version /* r31 */) {
     // Local variables
@@ -116,7 +101,8 @@ int ReconLoadObject(class iResFile * file /* r29 */, signed short id /* r30 */, 
 }
 
 // Range: 0x8010D6D8 -> 0x8010D734
-void * SimpleReconObject::SimpleReconObject(class SimpleReconObject * const this /* r29 */, class FamilyImpl * obj /* r30 */, int type /* r31 */) {
+// this: r29
+SimpleReconObject::SimpleReconObject(class FamilyImpl * obj /* r30 */, int type /* r31 */) {
     // References
     // -> struct [anonymous] __vt__31SimpleReconObject<10FamilyImpl>;
 }
@@ -136,7 +122,8 @@ int ReconLoadObject(class iResFile * file /* r29 */, signed short id /* r30 */, 
 }
 
 // Range: 0x8010D87C -> 0x8010D8D8
-void * SimpleReconObject::SimpleReconObject(class SimpleReconObject * const this /* r29 */, class cSimulator * obj /* r30 */, int type /* r31 */) {
+// this: r29
+SimpleReconObject::SimpleReconObject(class cSimulator * obj /* r30 */, int type /* r31 */) {
     // References
     // -> struct [anonymous] __vt__31SimpleReconObject<10cSimulator>;
 }
@@ -149,7 +136,8 @@ int ReconLoadObject(class iResFile * file /* r29 */, signed short id /* r30 */, 
 }
 
 // Range: 0x8010D9A8 -> 0x8010DA04
-void * SimpleReconObject::SimpleReconObject(class SimpleReconObject * const this /* r29 */, class House * obj /* r30 */, int type /* r31 */) {
+// this: r29
+SimpleReconObject::SimpleReconObject(class House * obj /* r30 */, int type /* r31 */) {
     // References
     // -> struct [anonymous] __vt__25SimpleReconObject<5House>;
 }
@@ -176,7 +164,8 @@ void ReconLoadObject(class IFFResMap * obj /* r0 */, struct HandleNode * mem /* 
 }
 
 // Range: 0x8010DBB0 -> 0x8010DC0C
-void * SimpleReconObject::SimpleReconObject(class SimpleReconObject * const this /* r29 */, class IFFResMap * obj /* r30 */, int type /* r31 */) {
+// this: r29
+SimpleReconObject::SimpleReconObject(class IFFResMap * obj /* r30 */, int type /* r31 */) {
     // References
     // -> struct [anonymous] __vt__29SimpleReconObject<9IFFResMap>;
 }
@@ -196,7 +185,8 @@ int ReconLoadObject(class iResFile * file /* r29 */, signed short id /* r30 */, 
 }
 
 // Range: 0x8010DD98 -> 0x8010DDF4
-void * SimpleReconObject::SimpleReconObject(class SimpleReconObject * const this /* r29 */, class Neighborhood * obj /* r30 */, int type /* r31 */) {
+// this: r29
+SimpleReconObject::SimpleReconObject(class Neighborhood * obj /* r30 */, int type /* r31 */) {
     // References
     // -> struct [anonymous] __vt__33SimpleReconObject<12Neighborhood>;
 }
@@ -209,7 +199,8 @@ int ReconLoadObject(class iResFile * file /* r29 */, signed short id /* r30 */, 
 }
 
 // Range: 0x8010DEC4 -> 0x8010DF20
-void * SimpleReconObject::SimpleReconObject(class SimpleReconObject * const this /* r29 */, class ReconStreamPtrVector * obj /* r30 */, int type /* r31 */) {
+// this: r29
+SimpleReconObject::SimpleReconObject(class ReconStreamPtrVector * obj /* r30 */, int type /* r31 */) {
     // References
     // -> struct [anonymous] __vt__52SimpleReconObject<31ReconStreamPtrVector<8Neighbor>>;
 }
@@ -243,7 +234,8 @@ int ReconLoadObject(class iResFile * file /* r29 */, signed short id /* r30 */, 
 }
 
 // Range: 0x8010E158 -> 0x8010E1B4
-void * SimpleReconObject::SimpleReconObject(class SimpleReconObject * const this /* r29 */, class ObjectSaveTypeTable * obj /* r30 */, int type /* r31 */) {
+// this: r29
+SimpleReconObject::SimpleReconObject(class ObjectSaveTypeTable * obj /* r30 */, int type /* r31 */) {
     // References
     // -> struct [anonymous] __vt__40SimpleReconObject<19ObjectSaveTypeTable>;
 }
@@ -263,7 +255,8 @@ int ReconSaveObject(class iResFile * file /* r29 */, signed short id /* r30 */, 
 }
 
 // Range: 0x8010E2FC -> 0x8010E358
-void * SimpleReconObject::SimpleReconObject(class SimpleReconObject * const this /* r29 */, class ObjectFolder * obj /* r30 */, int type /* r31 */) {
+// this: r29
+SimpleReconObject::SimpleReconObject(class ObjectFolder * obj /* r30 */, int type /* r31 */) {
     // References
     // -> struct [anonymous] __vt__33SimpleReconObject<12ObjectFolder>;
 }
@@ -283,7 +276,8 @@ int ReconSaveObject(class iResFile * file /* r29 */, signed short id /* r30 */, 
 }
 
 // Range: 0x8010E4A0 -> 0x8010E4FC
-void * SimpleReconObject::SimpleReconObject(class SimpleReconObject * const this /* r29 */, class ObjectModule * obj /* r30 */, int type /* r31 */) {
+// this: r29
+SimpleReconObject::SimpleReconObject(class ObjectModule * obj /* r30 */, int type /* r31 */) {
     // References
     // -> struct [anonymous] __vt__33SimpleReconObject<12ObjectModule>;
 }
@@ -350,12 +344,6 @@ int SimpleReconObject::GetType() {}
 void SimpleReconObject::DoStream() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\target\game\simulator\core\recon.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x80215F9C -> 0x802164DC
-*/
 // Range: 0x80215F9C -> 0x80216014
 int ReconLoadObject(class iResFile * file /* r29 */, signed short id /* r30 */, int * version /* r31 */) {
     // Local variables
@@ -364,7 +352,8 @@ int ReconLoadObject(class iResFile * file /* r29 */, signed short id /* r30 */, 
 }
 
 // Range: 0x8021606C -> 0x802160C8
-void * SimpleReconObject::SimpleReconObject(class SimpleReconObject * const this /* r29 */, class ObjectSaveTypeTable2 * obj /* r30 */, int type /* r31 */) {
+// this: r29
+SimpleReconObject::SimpleReconObject(class ObjectSaveTypeTable2 * obj /* r30 */, int type /* r31 */) {
     // References
     // -> struct [anonymous] __vt__41SimpleReconObject<20ObjectSaveTypeTable2>;
 }
@@ -377,7 +366,8 @@ int ReconLoadObject(class iResFile * file /* r29 */, signed short id /* r30 */, 
 }
 
 // Range: 0x80216198 -> 0x802161F4
-void * SimpleReconObject::SimpleReconObject(class SimpleReconObject * const this /* r29 */, class ObjectSaveTypeTable3 * obj /* r30 */, int type /* r31 */) {
+// this: r29
+SimpleReconObject::SimpleReconObject(class ObjectSaveTypeTable3 * obj /* r30 */, int type /* r31 */) {
     // References
     // -> struct [anonymous] __vt__41SimpleReconObject<20ObjectSaveTypeTable3>;
 }
@@ -390,7 +380,8 @@ int ReconLoadObject(class iResFile * file /* r29 */, signed short id /* r30 */, 
 }
 
 // Range: 0x802162C4 -> 0x80216320
-void * SimpleReconObject::SimpleReconObject(class SimpleReconObject * const this /* r29 */, class ObjectSaveIDTable * obj /* r30 */, int type /* r31 */) {
+// this: r29
+SimpleReconObject::SimpleReconObject(class ObjectSaveIDTable * obj /* r30 */, int type /* r31 */) {
     // References
     // -> struct [anonymous] __vt__38SimpleReconObject<17ObjectSaveIDTable>;
 }
@@ -403,7 +394,8 @@ struct HandleNode * ReconSaveObject(class OptionsRecon * obj /* r6 */, int type 
 }
 
 // Range: 0x802163DC -> 0x80216438
-void * SimpleReconObject::SimpleReconObject(class SimpleReconObject * const this /* r29 */, class OptionsRecon * obj /* r30 */, int type /* r31 */) {
+// this: r29
+SimpleReconObject::SimpleReconObject(class OptionsRecon * obj /* r30 */, int type /* r31 */) {
     // References
     // -> struct [anonymous] __vt__33SimpleReconObject<12OptionsRecon>;
 }

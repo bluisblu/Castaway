@@ -5,6 +5,7 @@
     Code range: 0x80027D98 -> 0x80027DD8
 */
 // Range: 0x80027D98 -> 0x80027DD8
-void * AngularSpring::~AngularSpring(class AngularSpring * const this /* r31 */) {}
+// this: r31
+AngularSpring::~AngularSpring() {}
 
 

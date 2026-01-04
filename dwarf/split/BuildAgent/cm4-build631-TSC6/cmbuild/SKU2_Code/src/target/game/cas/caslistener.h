@@ -32,10 +32,11 @@ void CasListener::HandleEventChangeFocus() {}
 void CasListener::SetMediator() {}
 
 // Range: 0x80029688 -> 0x800296C8
-void * CasListener::~CasListener(class CasListener * const this /* r31 */) {}
+// this: r31
+CasListener::~CasListener() {}
 
 // Range: 0x800296C8 -> 0x800296E0
-void * CasListener::CasListener() {
+CasListener::CasListener() {
     // References
     // -> struct [anonymous] __vt__11CasListener;
 }

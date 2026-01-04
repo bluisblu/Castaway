@@ -5,14 +5,16 @@
     Code range: 0x80294730 -> 0x802959DC
 */
 // Range: 0x80294730 -> 0x80294810
-void * EGraphics::EGraphics(class EGraphics * const this /* r31 */) {
+// this: r31
+EGraphics::EGraphics() {
     // References
     // -> struct [anonymous] __vt__9EGraphics;
     // -> struct [anonymous] __vt__20EGlobalManagerClient;
 }
 
 // Range: 0x80294810 -> 0x8029489C
-void * EGraphics::~EGraphics(class EGraphics * const this /* r30 */) {
+// this: r30
+EGraphics::~EGraphics() {
     // References
     // -> unsigned char m_shutdownComplete;
     // -> struct [anonymous] __vt__20EGlobalManagerClient;
@@ -23,13 +25,15 @@ void * EGraphics::~EGraphics(class EGraphics * const this /* r30 */) {
 void EGraphics::ManagedShutdown() {}
 
 // Range: 0x802948A0 -> 0x80294924
-unsigned char EGraphics::Init(class EGraphics * const this /* r31 */) {
+// this: r31
+unsigned char EGraphics::Init() {
     // References
     // -> class EScheduler * _pSched;
 }
 
 // Range: 0x80294924 -> 0x802949C0
-void EGraphics::DeselectTextures(class EGraphics * const this /* r29 */) {
+// this: r29
+void EGraphics::DeselectTextures() {
     // Local variables
     class ERC * prc; // r31
     int r; // r30
@@ -39,7 +43,8 @@ void EGraphics::DeselectTextures(class EGraphics * const this /* r29 */) {
 }
 
 // Range: 0x802949C0 -> 0x80294A10
-void EGraphics::BeginFrame(class EGraphics * const this /* r31 */) {
+// this: r31
+void EGraphics::BeginFrame() {
     // References
     // -> class EWindow * m_pCurrentWindow;
     // -> int _evenodd;
@@ -47,7 +52,8 @@ void EGraphics::BeginFrame(class EGraphics * const this /* r31 */) {
 }
 
 // Range: 0x80294A10 -> 0x80294A7C
-void EGraphics::EndFrame(class EGraphics * const this /* r31 */) {
+// this: r31
+void EGraphics::EndFrame() {
     // References
     // -> int _evenodd;
     // -> class EScheduler * _pSched;
@@ -61,7 +67,8 @@ void EGraphics::DoSwapBuffer() {}
 void EGraphics::DoSetupFrameBuffer() {}
 
 // Range: 0x80294A84 -> 0x80294AF8
-void EGraphics::Flush(class EGraphics * const this /* r31 */) {
+// this: r31
+void EGraphics::Flush() {
     // References
     // -> class EScheduler * _pSched;
     // -> class EApp * _pApp;
@@ -71,7 +78,8 @@ void EGraphics::Flush(class EGraphics * const this /* r31 */) {
 void EGraphics::GetOutputRect() {}
 
 // Range: 0x80294B50 -> 0x80294C00
-void EGraphics::SetWiiWideScreen(class EGraphics * const this /* r31 */) {
+// this: r31
+void EGraphics::SetWiiWideScreen() {
     // References
     // -> class EGraphics * _pGfx;
 }
@@ -117,13 +125,15 @@ class ERC * EGraphics::AllocRC() {}
 void EGraphics::FreeRC() {}
 
 // Range: 0x80294E50 -> 0x80294ECC
-class ERC * EGraphics::Open(class EGraphics * const this /* r29 */, enum RCMode mode /* r30 */) {
+// this: r29
+class ERC * EGraphics::Open(enum RCMode mode /* r30 */) {
     // Local variables
     class ERC * pRC; // r31
 }
 
 // Range: 0x80294ECC -> 0x80294F9C
-class EDL * EGraphics::Close(class EGraphics * const this /* r28 */, class ERC * pRC /* r29 */) {
+// this: r28
+class EDL * EGraphics::Close(class ERC * pRC /* r29 */) {
     // Local variables
     class EDL * pDL; // r30
     enum RCMode mode; // r31
@@ -142,13 +152,15 @@ void EGraphics::Destroy() {}
 void EGraphics::DeallocateDL() {}
 
 // Range: 0x80294FD4 -> 0x80295084
-class ETexture * EGraphics::CreateTexture(class EGraphics * const this /* r29 */, const struct ETextureDef & tsd /* r30 */) {
+// this: r29
+class ETexture * EGraphics::CreateTexture(const struct ETextureDef & tsd /* r30 */) {
     // Local variables
     class ETexture * pTexture; // r31
 }
 
 // Range: 0x80295084 -> 0x80295144
-void EGraphics::Destroy(class EGraphics * const this /* r29 */, class ETexture * pTexture /* r30 */) {
+// this: r29
+void EGraphics::Destroy(class ETexture * pTexture /* r30 */) {
     // Local variables
     int p; // r31
 
@@ -157,22 +169,26 @@ void EGraphics::Destroy(class EGraphics * const this /* r29 */, class ETexture *
 }
 
 // Range: 0x80295144 -> 0x802951E8
-class EShader * EGraphics::CreateShader(class EGraphics * const this /* r29 */, struct EShaderDef & sd /* r30 */) {
+// this: r29
+class EShader * EGraphics::CreateShader(struct EShaderDef & sd /* r30 */) {
     // Local variables
     class EShader * pShader; // r31
 }
 
 // Range: 0x802951E8 -> 0x80295234
-void EGraphics::Destroy(class EGraphics * const this /* r31 */) {}
+// this: r31
+void EGraphics::Destroy() {}
 
 // Range: 0x80295234 -> 0x802952E4
-class ERenderSurface * EGraphics::CreateRenderSurface(class EGraphics * const this /* r29 */, const struct ERenderSurfaceDef & rsd /* r30 */) {
+// this: r29
+class ERenderSurface * EGraphics::CreateRenderSurface(const struct ERenderSurfaceDef & rsd /* r30 */) {
     // Local variables
     class ERenderSurface * pSurf; // r31
 }
 
 // Range: 0x802952E4 -> 0x80295354
-void EGraphics::Destroy(class EGraphics * const this /* r30 */, class ERenderSurface * pSurf /* r31 */) {}
+// this: r30
+void EGraphics::Destroy(class ERenderSurface * pSurf /* r31 */) {}
 
 // Range: 0x80295354 -> 0x80295364
 class EMovie * EGraphics::CreateMovie() {
@@ -196,7 +212,8 @@ void EGraphics::FreeVertexData(void * data /* r31 */) {
 }
 
 // Range: 0x8029540C -> 0x802954E8
-void EGraphics::ComputeViewport(class EGraphics * const this /* r29 */, struct EViewport & vp /* r30 */, const class TRect & rect /* r31 */) {
+// this: r29
+void EGraphics::ComputeViewport(struct EViewport & vp /* r30 */, const class TRect & rect /* r31 */) {
     // Local variables
     float farZ; // f0
     float nearZ; // f0
@@ -206,10 +223,12 @@ void EGraphics::ComputeViewport(class EGraphics * const this /* r29 */, struct E
 }
 
 // Range: 0x802954E8 -> 0x80295550
-void EGraphics::SetUpNormalMapMatrix(class EGraphics * const this /* r31 */) {}
+// this: r31
+void EGraphics::SetUpNormalMapMatrix() {}
 
 // Range: 0x80295550 -> 0x802955E0
-void EGraphics::LoadSystemFont(class EGraphics * const this /* r29 */) {
+// this: r29
+void EGraphics::LoadSystemFont() {
     // Local variables
     const char * szName; // r0
     unsigned int nFontID; // r30
@@ -219,7 +238,8 @@ void EGraphics::LoadSystemFont(class EGraphics * const this /* r29 */) {
 }
 
 // Range: 0x802955E0 -> 0x80295894
-void EGraphics::DrawTiming(class EGraphics * const this /* r27 */) {
+// this: r27
+void EGraphics::DrawTiming() {
     // Local variables
     class ERC * prc; // r29
     class EWindow win; // r1+0x60
@@ -238,7 +258,8 @@ void EGraphics::DrawTiming(class EGraphics * const this /* r27 */) {
 }
 
 // Range: 0x80295894 -> 0x8029594C
-void EGraphics::DisplayTiming(class EGraphics * const this /* r28 */, unsigned char enable /* r29 */) {
+// this: r28
+void EGraphics::DisplayTiming(unsigned char enable /* r29 */) {
     // References
     // -> class EFontManager _fontman;
 }

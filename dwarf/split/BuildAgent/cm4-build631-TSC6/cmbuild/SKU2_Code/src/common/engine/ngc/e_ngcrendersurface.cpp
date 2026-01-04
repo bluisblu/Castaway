@@ -5,16 +5,19 @@
     Code range: 0x802CC338 -> 0x802CC8B8
 */
 // Range: 0x802CC338 -> 0x802CC380
-void * ENgcRenderSurface::ENgcRenderSurface(class ENgcRenderSurface * const this /* r31 */) {
+// this: r31
+ENgcRenderSurface::ENgcRenderSurface() {
     // References
     // -> struct [anonymous] __vt__17ENgcRenderSurface;
 }
 
 // Range: 0x802CC380 -> 0x802CC3D8
-void * ENgcRenderSurface::~ENgcRenderSurface(class ENgcRenderSurface * const this /* r30 */) {}
+// this: r30
+ENgcRenderSurface::~ENgcRenderSurface() {}
 
 // Range: 0x802CC3D8 -> 0x802CC3F4
-void ENgcRenderSurface::DestroySubtextures(class ENgcRenderSurface * const this /* r4 */) {
+// this: r4
+void ENgcRenderSurface::DestroySubtextures() {
     // References
     // -> class EGraphics * _pGfx;
 }
@@ -23,7 +26,8 @@ void ENgcRenderSurface::DestroySubtextures(class ENgcRenderSurface * const this 
 class ETexture * ENgcRenderSurface::GetTexture() {}
 
 // Range: 0x802CC3FC -> 0x802CC4B4
-unsigned char ENgcRenderSurface::Create(class ENgcRenderSurface * const this /* r30 */, const struct ERenderSurfaceDef & rsd /* r31 */) {
+// this: r30
+unsigned char ENgcRenderSurface::Create(const struct ERenderSurfaceDef & rsd /* r31 */) {
     // Local variables
     struct ETextureDef td; // r1+0x8
 
@@ -41,7 +45,8 @@ void ENgcRenderSurface::SetBackgroundColor() {}
 void ENgcRenderSurface::GetImageData() {}
 
 // Range: 0x802CC4F0 -> 0x802CC7F8
-unsigned char ENgcRenderSurface::CopyToTexture(class ENgcRenderSurface * const this /* r26 */, class ETexture * destTexture /* r27 */) {
+// this: r26
+unsigned char ENgcRenderSurface::CopyToTexture(class ETexture * destTexture /* r27 */) {
     // Local variables
     int px; // r1+0x14
     int py; // r1+0x10
@@ -63,6 +68,7 @@ unsigned char ENgcRenderSurface::CopyToTexture(class ENgcRenderSurface * const t
 void ENgcRenderSurface::Select() {}
 
 // Range: 0x802CC804 -> 0x802CC8B8
-void ENgcRenderSurface::Deselect(class ENgcRenderSurface * const this /* r29 */) {}
+// this: r29
+void ENgcRenderSurface::Deselect() {}
 
 

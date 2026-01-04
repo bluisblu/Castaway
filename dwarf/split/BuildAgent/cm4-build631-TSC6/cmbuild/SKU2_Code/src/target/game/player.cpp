@@ -5,10 +5,11 @@
     Code range: 0x8023F26C -> 0x8023F418
 */
 // Range: 0x8023F26C -> 0x8023F27C
-void * Player::Player() {}
+Player::Player() {}
 
 // Range: 0x8023F27C -> 0x8023F2FC
-void Player::Reset(class Player * const this /* r31 */) {}
+// this: r31
+void Player::Reset() {}
 
 // Range: 0x8023F2FC -> 0x8023F308
 class EVec3 & Player::GetInteractorColor() {
@@ -17,7 +18,8 @@ class EVec3 & Player::GetInteractorColor() {
 }
 
 // Range: 0x8023F308 -> 0x8023F3C4
-class Neighbor * Player::GetPrimaryNeighbor(class Player * const this /* r27 */) {
+// this: r27
+class Neighbor * Player::GetPrimaryNeighbor() {
     // Local variables
     class Neighborhood * pNeighborhood; // r31
     class Family * pFamily; // r30

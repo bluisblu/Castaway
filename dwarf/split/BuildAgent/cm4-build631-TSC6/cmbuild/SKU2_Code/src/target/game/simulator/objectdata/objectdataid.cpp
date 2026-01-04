@@ -5,19 +5,19 @@
     Code range: 0x8015FC08 -> 0x8015FCC0
 */
 // Range: 0x8015FC08 -> 0x8015FC14
-void * ObjectDataID::ObjectDataID() {}
+ObjectDataID::ObjectDataID() {}
 
 // Range: 0x8015FC14 -> 0x8015FC28
-void * ObjectDataID::ObjectDataID() {}
+ObjectDataID::ObjectDataID() {}
 
 // Range: 0x8015FC28 -> 0x8015FC3C
-class ObjectDataID & ObjectDataID::__as() {}
+class ObjectDataID & ObjectDataID::operator=() {}
 
 // Range: 0x8015FC3C -> 0x8015FC80
-unsigned char ObjectDataID::__lt() {}
+unsigned char ObjectDataID::operator<() {}
 
 // Range: 0x8015FC80 -> 0x8015FCB0
-unsigned char ObjectDataID::__eq() {}
+unsigned char ObjectDataID::operator==() {}
 
 // Range: 0x8015FCB0 -> 0x8015FCB8
 void ObjectDataID::SetNamespaceID() {}

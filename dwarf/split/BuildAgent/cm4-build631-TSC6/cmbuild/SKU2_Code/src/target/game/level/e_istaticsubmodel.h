@@ -5,7 +5,7 @@
     Code range: 0x80089FD8 -> 0x8008A180
 */
 // Range: 0x80089FD8 -> 0x8008A00C
-void EIStaticSubModel::__dl(void * p /* r31 */) {}
+void EIStaticSubModel::operator delete(void * p /* r31 */) {}
 
 // Range: 0x8008A00C -> 0x8008A01C
 unsigned short EIStaticSubModel::GetReadVersion() {
@@ -66,12 +66,12 @@ void EIStaticSubModel::Destruct() {}
 void EIStaticSubModel::Construct() {}
 
 // Range: 0x8008A108 -> 0x8008A110
-void * EIStaticSubModel::__nw() {}
+void * EIStaticSubModel::operator new() {}
 
 // Range: 0x8008A110 -> 0x8008A140
 class EIStaticSubModel * EIStaticSubModel::New() {}
 
 // Range: 0x8008A140 -> 0x8008A180
-void * EIStaticSubModel::__nw(unsigned long size /* r31 */) {}
+void * EIStaticSubModel::operator new(unsigned long size /* r31 */) {}
 
 

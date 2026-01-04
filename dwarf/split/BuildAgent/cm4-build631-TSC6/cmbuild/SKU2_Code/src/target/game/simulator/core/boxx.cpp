@@ -11,21 +11,24 @@ unsigned char BoxxGlobalGetSourceParamValue(int * plValue /* r31 */) {
 }
 
 // Range: 0x80100A38 -> 0x80100AC4
-void * cBoxX::cBoxX(class cBoxX * const this /* r30 */) {
+// this: r30
+cBoxX::cBoxX() {
     // References
     // -> class cBoxX * g_pBoxX;
     // -> struct [anonymous] __vt__5cBoxX;
 }
 
 // Range: 0x80100B1C -> 0x80100BA8
-void * cBoxX::~cBoxX(class cBoxX * const this /* r29 */) {
+// this: r29
+cBoxX::~cBoxX() {
     // References
     // -> unsigned char g_bBoxXIsInitted;
     // -> struct [anonymous] __vt__5cBoxX;
 }
 
 // Range: 0x80100BA8 -> 0x80100C64
-unsigned char cBoxX::Init(class cBoxX * const this /* r31 */) {
+// this: r31
+unsigned char cBoxX::Init() {
     // References
     // -> unsigned char g_bBoxXIsInitted;
     // -> class cHitMan * g_pHitMan;
@@ -36,14 +39,16 @@ unsigned char cBoxX::Init(class cBoxX * const this /* r31 */) {
 void cBoxX::LoadQdataTables() {}
 
 // Range: 0x80100C68 -> 0x80100D10
-unsigned char cBoxX::Shutdown(class cBoxX * const this /* r31 */) {
+// this: r31
+unsigned char cBoxX::Shutdown() {
     // References
     // -> unsigned char g_bBoxXIsInitted;
     // -> class cHitMan * g_pHitMan;
 }
 
 // Range: 0x80100D10 -> 0x80100E84
-void cBoxX::Update(class cBoxX * const this /* r30 */) {
+// this: r30
+void cBoxX::Update() {
     // Local variables
     class ESimsCam * cam; // r0
     class EVec3 listenPos; // r1+0x14
@@ -158,10 +163,12 @@ unsigned char cBoxX::GetInstanceVolNoPan(class cTrack * track /* r29 */, int & l
 void cBoxX::ConvertSurroundToVolPan() {}
 
 // Range: 0x80101CD0 -> 0x80101D50
-unsigned char cBoxX::MappedEvent(class cBoxX * const this /* r28 */, class ERSoundEvent * pEvent /* r29 */, int lSourceId /* r30 */, float time_delay /* f31 */, unsigned char isFootStep /* r31 */) {}
+// this: r28
+unsigned char cBoxX::MappedEvent(class ERSoundEvent * pEvent /* r29 */, int lSourceId /* r30 */, float time_delay /* f31 */, unsigned char isFootStep /* r31 */) {}
 
 // Range: 0x80101D50 -> 0x8010240C
-unsigned char cBoxX::Event(class cBoxX * const this /* r28 */, int lEventNum /* r27 */, int iArg1 /* r29 */, int lSourceId /* r30 */, class ERSoundEvent * sndEvent /* r1+0x8 */, float timeToPlay /* f31 */, unsigned char isFootStep /* r31 */) {
+// this: r28
+unsigned char cBoxX::Event(int lEventNum /* r27 */, int iArg1 /* r29 */, int lSourceId /* r30 */, class ERSoundEvent * sndEvent /* r1+0x8 */, float timeToPlay /* f31 */, unsigned char isFootStep /* r31 */) {
     // Local variables
     class EAutoMutex eventMutex; // r1+0x30
     int lNewSimSpeed; // r0
@@ -190,7 +197,8 @@ unsigned char cBoxX::Event(class cBoxX * const this /* r28 */, int lEventNum /* 
 }
 
 // Range: 0x8010240C -> 0x80102538
-void cBoxX::SetAmbientScore(class cBoxX * const this /* r30 */, int prevMode /* r31 */) {
+// this: r30
+void cBoxX::SetAmbientScore(int prevMode /* r31 */) {
     // Local variables
     char buffer[32]; // r1+0x8
 
@@ -205,7 +213,8 @@ void cBoxX::SetAmbientScoreVolume() {}
 int cBoxX::GetAmbientScoreVolume() {}
 
 // Range: 0x80102564 -> 0x8010262C
-struct rbtree_iterator cBoxX::FindSndobInstancePair(class cBoxX * const this /* r30 */, class ERSoundEvent * sndEvent /* r1+0x8 */, int lInstanceId /* r31 */) {
+// this: r30
+struct rbtree_iterator cBoxX::FindSndobInstancePair(class ERSoundEvent * sndEvent /* r1+0x8 */, int lInstanceId /* r31 */) {
     // Local variables
     struct rbtree_iterator itStart; // r1+0x18
     struct rbtree_iterator itEnd; // r1+0x14
@@ -214,13 +223,15 @@ struct rbtree_iterator cBoxX::FindSndobInstancePair(class cBoxX * const this /* 
 }
 
 // Range: 0x8010262C -> 0x801026BC
-void cBoxX::AddToInstanceMap(class cBoxX * const this /* r31 */, class ERSoundEvent * sndEvent /* r1+0x8 */, int lInstanceId /* r1+0xC */) {
+// this: r31
+void cBoxX::AddToInstanceMap(class ERSoundEvent * sndEvent /* r1+0x8 */, int lInstanceId /* r1+0xC */) {
     // Local variables
     struct pair p; // r1+0x28
 }
 
 // Range: 0x801026BC -> 0x801027D4
-void cBoxX::UpdateAllSndobVolPan(class cBoxX * const this /* r30 */) {
+// this: r30
+void cBoxX::UpdateAllSndobVolPan() {
     // Local variables
     struct rbtree_iterator itBegin; // r1+0x1C
     struct rbtree_iterator itEnd; // r1+0x18
@@ -245,7 +256,8 @@ void cBoxX::CheckForTooManySounds() {
 }
 
 // Range: 0x801028D4 -> 0x801029D0
-void cBoxX::KillSource(class cBoxX * const this /* r29 */, int lSourceId /* r30 */) {
+// this: r29
+void cBoxX::KillSource(int lSourceId /* r30 */) {
     // Local variables
     struct rbtree_iterator itBegin; // r1+0x24
     struct rbtree_iterator itEnd; // r1+0x20
@@ -255,7 +267,8 @@ void cBoxX::KillSource(class cBoxX * const this /* r29 */, int lSourceId /* r30 
 }
 
 // Range: 0x801029D0 -> 0x80102A64
-void cBoxX::UpdateSndobVolPan(class cBoxX * const this /* r31 */, class ERSoundEvent * sndEvent /* r1+0x8 */) {
+// this: r31
+void cBoxX::UpdateSndobVolPan(class ERSoundEvent * sndEvent /* r1+0x8 */) {
     // Local variables
     struct rbtree_iterator itBegin; // r1+0x10
     struct rbtree_iterator itEnd; // r1+0xC
@@ -266,7 +279,8 @@ void cBoxX::UpdateSndobVolPan(class cBoxX * const this /* r31 */, class ERSoundE
 }
 
 // Range: 0x80102A64 -> 0x80102B4C
-void cBoxX::UpdateSndobVolPan(class cBoxX * const this /* r29 */, const struct rbtree_iterator & itBegin /* r30 */) {
+// this: r29
+void cBoxX::UpdateSndobVolPan(const struct rbtree_iterator & itBegin /* r30 */) {
     // Local variables
     class ERSoundEvent * sndEvent; // r31
     class cTrack * track; // r30
@@ -282,7 +296,8 @@ void cBoxX::UpdateSndobVolPan(class cBoxX * const this /* r29 */, const struct r
 }
 
 // Range: 0x80102B4C -> 0x80102D14
-unsigned char cBoxX::GetSndobSurroundVols(class cBoxX * const this /* r24 */, class ERSoundEvent * sndEvent /* r1+0x8 */, int & lVol /* r25 */, int & rVol /* r26 */, int & fVol /* r27 */, int & bVol /* r28 */) {
+// this: r24
+unsigned char cBoxX::GetSndobSurroundVols(class ERSoundEvent * sndEvent /* r1+0x8 */, int & lVol /* r25 */, int & rVol /* r26 */, int & fVol /* r27 */, int & bVol /* r28 */) {
     // Local variables
     struct rbtree_iterator itBegin; // r1+0x28
     struct rbtree_iterator itEnd; // r1+0x24
@@ -299,10 +314,12 @@ unsigned char cBoxX::GetSndobSurroundVols(class cBoxX * const this /* r24 */, cl
 }
 
 // Range: 0x80102D14 -> 0x80102D50
-void cBoxX::Pause(class cBoxX * const this /* r31 */) {}
+// this: r31
+void cBoxX::Pause() {}
 
 // Range: 0x80102D50 -> 0x80102D8C
-void cBoxX::Unpause(class cBoxX * const this /* r31 */) {}
+// this: r31
+void cBoxX::Unpause() {}
 
 // Range: 0x80102D8C -> 0x80102DEC
 void cBoxX::PauseSFX() {
@@ -323,13 +340,15 @@ void cBoxX::PauseAmbient() {}
 void cBoxX::UnpauseAmbient() {}
 
 // Range: 0x80102EB8 -> 0x80102F04
-void cBoxX::PauseMusic(class cBoxX * const this /* r31 */) {
+// this: r31
+void cBoxX::PauseMusic() {
     // References
     // -> class cHitMan * g_pHitMan;
 }
 
 // Range: 0x80102F04 -> 0x80102F64
-void cBoxX::UnpauseMusic(class cBoxX * const this /* r31 */) {
+// this: r31
+void cBoxX::UnpauseMusic() {
     // References
     // -> class cHitMan * g_pHitMan;
 }
@@ -345,7 +364,7 @@ void cBoxX::GetListenerPosAndDir(const class ESimsCam * cam /* r28 */, class EVe
 }
 
 // Range: 0x80103094 -> 0x801030E0
-void * cSoundModeManager::cSoundModeManager() {}
+cSoundModeManager::cSoundModeManager() {}
 
 // Range: 0x801030E0 -> 0x80103134
 void cSoundModeManager::Pause() {
@@ -366,7 +385,8 @@ void cSoundModeManager::FadeOutMusic() {}
 void cSoundModeManager::FadeOutSFX() {}
 
 // Range: 0x8010319C -> 0x801032B8
-void cSoundModeManager::SetMode(class cSoundModeManager * const this /* r29 */, int lMode /* r30 */) {
+// this: r29
+void cSoundModeManager::SetMode(int lMode /* r30 */) {
     // Local variables
     int music_vol; // r31
     int oldMode; // r3
@@ -377,7 +397,8 @@ void cSoundModeManager::SetMode(class cSoundModeManager * const this /* r29 */, 
 }
 
 // Range: 0x801032B8 -> 0x801035F4
-void cSoundModeManager::UpdateMusicVolume(class cSoundModeManager * const this /* r31 */) {
+// this: r31
+void cSoundModeManager::UpdateMusicVolume() {
     // Local variables
     float curVol; // f31
     float delta; // f1
@@ -393,7 +414,8 @@ void cSoundModeManager::UpdateMusicVolume(class cSoundModeManager * const this /
 }
 
 // Range: 0x801035F4 -> 0x801038A0
-void cSoundModeManager::UpdateSFXVolume(class cSoundModeManager * const this /* r28 */) {
+// this: r28
+void cSoundModeManager::UpdateSFXVolume() {
     // Local variables
     int curVol; // r31
     int curVOXVol; // r30
@@ -408,7 +430,8 @@ void cSoundModeManager::UpdateSFXVolume(class cSoundModeManager * const this /* 
 }
 
 // Range: 0x801038A0 -> 0x80103B7C
-void cSoundModeManager::UpdateLoadMusic(class cSoundModeManager * const this /* r31 */) {
+// this: r31
+void cSoundModeManager::UpdateLoadMusic() {
     // Local variables
     char * sfxFileBase; // r30
     int trackNum; // r0
@@ -430,10 +453,12 @@ char * cSoundModeManager::GetFrontEndMusicTrack() {
 }
 
 // Range: 0x80103BA8 -> 0x80103BE4
-void cSoundModeManager::StartFrontEndMusic(class cSoundModeManager * const this /* r31 */) {}
+// this: r31
+void cSoundModeManager::StartFrontEndMusic() {}
 
 // Range: 0x80103BE4 -> 0x80103CA8
-void cSoundModeManager::StartMusicTrack(class cSoundModeManager * const this /* r31 */, float volumeScalar /* f31 */) {
+// this: r31
+void cSoundModeManager::StartMusicTrack(float volumeScalar /* f31 */) {
     // References
     // -> class EGlobal _globals;
     // -> class EAudio * _pActualAudio;
@@ -454,7 +479,8 @@ void cSoundModeManager::StartCASMusic() {
 }
 
 // Range: 0x80103D60 -> 0x80103EB4
-void cSoundModeManager::Update(class cSoundModeManager * const this /* r31 */) {
+// this: r31
+void cSoundModeManager::Update() {
     // References
     // -> class EGlobal _globals;
     // -> class EAudio * _pActualAudio;

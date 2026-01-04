@@ -5,6 +5,7 @@
     Code range: 0x80029528 -> 0x80029660
 */
 // Range: 0x80029528 -> 0x80029660
-void CasListener::HandleEvent(class CasListener * const this /* r30 */, const class CasEvent & event /* r31 */) {}
+// this: r30
+void CasListener::HandleEvent(const class CasEvent & event /* r31 */) {}
 
 

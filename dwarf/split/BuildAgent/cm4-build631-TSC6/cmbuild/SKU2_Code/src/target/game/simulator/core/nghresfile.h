@@ -11,12 +11,6 @@ unsigned int NghResFile::GetNumSimsPerFamily() {
 }
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\target\game\simulator\core\nghresfile.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x800D4140 -> 0x800D4148
-*/
 // Range: 0x800D4140 -> 0x800D4148
 unsigned int NghResFile::GetNumModifiableFamilies() {
     // References
@@ -24,12 +18,6 @@ unsigned int NghResFile::GetNumModifiableFamilies() {
 }
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\target\game\simulator\core\nghresfile.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x8012CDC0 -> 0x8012D0D4
-*/
 // Range: 0x8012CDC0 -> 0x8012CDC8
 unsigned int NghResFile::GetNumHouses() {
     // References
@@ -55,19 +43,21 @@ unsigned int NghLayout::GetSectionOffset() {}
 unsigned int NghLayout::GetSectionTotalSize() {}
 
 // Range: 0x8012CE28 -> 0x8012CE38
-unsigned int NghSubSectionIterator::GetCurrSubSectionSize(class NghSubSectionIterator * const this /* r4 */) {}
+// this: r4
+unsigned int NghSubSectionIterator::GetCurrSubSectionSize() {}
 
 // Range: 0x8012CE38 -> 0x8012CEC8
-void NghSubSectionIterator::Next(class NghSubSectionIterator * const this /* r31 */) {}
+// this: r31
+void NghSubSectionIterator::Next() {}
 
 // Range: 0x8012CEC8 -> 0x8012CED8
 class NghSection * NghLayout::GetSection() {}
 
 // Range: 0x8012CED8 -> 0x8012CEE8
-void * SaveRecord::SaveRecord() {}
+SaveRecord::SaveRecord() {}
 
 // Range: 0x8012CEE8 -> 0x8012CF00
-void * NghSubSectionIterator::NghSubSectionIterator() {}
+NghSubSectionIterator::NghSubSectionIterator() {}
 
 // Range: 0x8012CF00 -> 0x8012CF08
 unsigned int NghLayout::GetSectionMaxSize() {}
@@ -79,10 +69,11 @@ class NghLayout * NghResFile::GetLayout() {}
 unsigned int NghLayout::GetTotalSize() {}
 
 // Range: 0x8012CF18 -> 0x8012CF7C
-void * NghResFileWriteInfo::~NghResFileWriteInfo(struct NghResFileWriteInfo * const this /* r30 */) {}
+// this: r30
+NghResFileWriteInfo::~NghResFileWriteInfo() {}
 
 // Range: 0x8012CF7C -> 0x8012CF90
-void * NghResFileWriteInfo::NghResFileWriteInfo() {}
+NghResFileWriteInfo::NghResFileWriteInfo() {}
 
 // Range: 0x8012CF90 -> 0x8012CF98
 unsigned int NghLayout::GetNumSimsPerFamily() {}
@@ -106,19 +97,20 @@ unsigned int NghSubSectionIterator::GetCurrSubSection() {}
 unsigned int NghSubSectionIterator::GetCurrSection() {}
 
 // Range: 0x8012CFC8 -> 0x8012CFE0
-void * RegistryNode::RegistryNode() {}
+RegistryNode::RegistryNode() {}
 
 // Range: 0x8012CFE0 -> 0x8012CFF4
-void * RegistryNode::RegistryNode() {}
+RegistryNode::RegistryNode() {}
 
 // Range: 0x8012CFF4 -> 0x8012CFFC
 unsigned int NghSubSectionIterator::GetCurrOffset() {}
 
 // Range: 0x8012CFFC -> 0x8012D044
-void * NghLayout::~NghLayout(class NghLayout * const this /* r31 */) {}
+// this: r31
+NghLayout::~NghLayout() {}
 
 // Range: 0x8012D044 -> 0x8012D0D4
-void * NghLayout::NghLayout() {
+NghLayout::NghLayout() {
     // Local variables
     unsigned int sectionCnt; // r4
     unsigned int subSectionCnt; // r10

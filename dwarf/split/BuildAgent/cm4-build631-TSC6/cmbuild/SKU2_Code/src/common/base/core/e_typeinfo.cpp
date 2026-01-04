@@ -5,7 +5,8 @@
     Code range: 0x80271718 -> 0x802718B0
 */
 // Range: 0x80271718 -> 0x802717D4
-class ETypeInfo * ETypeInfo::Register(class ETypeInfo * const this /* r31 */) {
+// this: r31
+class ETypeInfo * ETypeInfo::Register() {
     // References
     // -> int m_count;
     // -> unsigned int m_table[256];

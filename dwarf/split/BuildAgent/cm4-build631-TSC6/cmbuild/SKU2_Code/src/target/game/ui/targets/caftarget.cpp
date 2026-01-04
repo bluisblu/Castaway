@@ -5,7 +5,8 @@
     Code range: 0x80188694 -> 0x8018C448
 */
 // Range: 0x80188694 -> 0x80188B84
-void * CAFTarget::CAFTarget(class CAFTarget * const this /* r29 */, unsigned char bSkipUI /* r30 */) {
+// this: r29
+CAFTarget::CAFTarget(unsigned char bSkipUI /* r30 */) {
     // Local variables
     unsigned int nClockCycleCount; // r0
 
@@ -17,7 +18,8 @@ void * CAFTarget::CAFTarget(class CAFTarget * const this /* r29 */, unsigned cha
 }
 
 // Range: 0x80188B84 -> 0x80188E30
-void * CAFTarget::~CAFTarget(class CAFTarget * const this /* r30 */) {
+// this: r30
+CAFTarget::~CAFTarget() {
     // Local variables
     unsigned int i; // r26
     class SimModelTSC6 * pSimModel; // r25
@@ -32,7 +34,8 @@ void * CAFTarget::~CAFTarget(class CAFTarget * const this /* r30 */) {
 }
 
 // Range: 0x80188E30 -> 0x80188F98
-void CAFTarget::Init(class CAFTarget * const this /* r28 */) {
+// this: r28
+void CAFTarget::Init() {
     // Local variables
     unsigned int i; // r29
     int i; // r29
@@ -42,13 +45,15 @@ void CAFTarget::Init(class CAFTarget * const this /* r28 */) {
 }
 
 // Range: 0x80188F98 -> 0x80189090
-void CAFTarget::StartupMediator(class CAFTarget * const this /* r31 */) {
+// this: r31
+void CAFTarget::StartupMediator() {
     // References
     // -> class EGlobal _globals;
 }
 
 // Range: 0x80189090 -> 0x80189128
-void CAFTarget::AddFamilyMember(class CAFTarget * const this /* r30 */, int nCharNum /* r31 */) {
+// this: r30
+void CAFTarget::AddFamilyMember(int nCharNum /* r31 */) {
     // Local variables
     class CasSimDescription & simDesc; // r4
 
@@ -57,13 +62,15 @@ void CAFTarget::AddFamilyMember(class CAFTarget * const this /* r30 */, int nCha
 }
 
 // Range: 0x80189128 -> 0x801891E8
-void CAFTarget::ShutdownMediator(class CAFTarget * const this /* r29 */) {
+// this: r29
+void CAFTarget::ShutdownMediator() {
     // Local variables
     unsigned int i; // r30
 }
 
 // Range: 0x801891E8 -> 0x80189344
-unsigned char CAFTarget::IsShutdown(class CAFTarget * const this /* r30 */) {
+// this: r30
+unsigned char CAFTarget::IsShutdown() {
     // Local variables
     unsigned char rc; // r31
     class UIScreenManager * pUISM; // r3
@@ -73,7 +80,8 @@ unsigned char CAFTarget::IsShutdown(class CAFTarget * const this /* r30 */) {
 }
 
 // Range: 0x80189344 -> 0x801893E0
-void CAFTarget::Shutdown(class CAFTarget * const this /* r30 */) {}
+// this: r30
+void CAFTarget::Shutdown() {}
 
 // Range: 0x801893E0 -> 0x80189400
 void CAFTarget::PlayClosingSequence() {}
@@ -88,7 +96,8 @@ void CAFTarget::PauseClosingSequence() {}
 void CAFTarget::UnpauseClosingSequence() {}
 
 // Range: 0x80189464 -> 0x80189560
-void CAFTarget::UpdateSimAnimationTracksForNewSlide(class CAFTarget * const this /* r26 */) {
+// this: r26
+void CAFTarget::UpdateSimAnimationTracksForNewSlide() {
     // Local variables
     unsigned int i; // r27
     unsigned int index; // r0
@@ -99,7 +108,8 @@ void CAFTarget::UpdateSimAnimationTracksForNewSlide(class CAFTarget * const this
 }
 
 // Range: 0x80189560 -> 0x801895D0
-void CAFTarget::UpdateSimAnimations(class CAFTarget * const this /* r29 */) {
+// this: r29
+void CAFTarget::UpdateSimAnimations() {
     // Local variables
     unsigned int i; // r30
 
@@ -108,13 +118,15 @@ void CAFTarget::UpdateSimAnimations(class CAFTarget * const this /* r29 */) {
 }
 
 // Range: 0x801895D0 -> 0x8018963C
-void CAFTarget::FreezeSimAnimations(class CAFTarget * const this /* r29 */) {
+// this: r29
+void CAFTarget::FreezeSimAnimations() {
     // Local variables
     unsigned int i; // r30
 }
 
 // Range: 0x8018963C -> 0x80189768
-void CAFTarget::SetupSimsForCAF(class CAFTarget * const this /* r26 */) {
+// this: r26
+void CAFTarget::SetupSimsForCAF() {
     // Local variables
     unsigned int i; // r27
     unsigned int index; // r0
@@ -125,25 +137,29 @@ void CAFTarget::SetupSimsForCAF(class CAFTarget * const this /* r26 */) {
 }
 
 // Range: 0x80189768 -> 0x80189AFC
-void CAFTarget::SetVariable(class CAFTarget * const this /* r28 */, const char * szVar /* r29 */, const char * szValue /* r30 */) {
+// this: r28
+void CAFTarget::SetVariable(const char * szVar /* r29 */, const char * szValue /* r30 */) {
     // References
     // -> class EGlobal _globals;
 }
 
 // Range: 0x80189AFC -> 0x80189C9C
-void CAFTarget::SaveNewCharacter(class CAFTarget * const this /* r29 */, class CasSimDescription & simDesc /* r31 */, int charSlot /* r30 */, unsigned char newSimInSlot /* r28 */) {
+// this: r29
+void CAFTarget::SaveNewCharacter(class CasSimDescription & simDesc /* r31 */, int charSlot /* r30 */, unsigned char newSimInSlot /* r28 */) {
     // References
     // -> class GameData _gd;
 }
 
 // Range: 0x80189C9C -> 0x80189E90
-char * CAFTarget::GetVariable(class CAFTarget * const this /* r27 */, const char * szVar /* r28 */) {
+// this: r27
+char * CAFTarget::GetVariable(const char * szVar /* r28 */) {
     // Local variables
     char * retStr; // r29
 }
 
 // Range: 0x80189E90 -> 0x8018A058
-unsigned short * CAFTarget::GetLocalizable(class CAFTarget * const this /* r28 */, const char * szVar /* r29 */) {
+// this: r28
+unsigned short * CAFTarget::GetLocalizable(const char * szVar /* r29 */) {
     // Local variables
     unsigned short * wideStr; // r30
     unsigned short * outString; // r31
@@ -159,7 +175,8 @@ void CAFTarget::ResetToCAFMainMode() {}
 void CAFTarget::LoadInitialScreen() {}
 
 // Range: 0x8018A064 -> 0x8018A1D4
-void CAFTarget::Update(class CAFTarget * const this /* r31 */) {
+// this: r31
+void CAFTarget::Update() {
     // Local variables
     class EVec2 dummy; // r1+0x8
 
@@ -170,7 +187,8 @@ void CAFTarget::Update(class CAFTarget * const this /* r31 */) {
 }
 
 // Range: 0x8018A1D4 -> 0x8018A250
-void CAFTarget::UpdateRenderer(class CAFTarget * const this /* r29 */) {
+// this: r29
+void CAFTarget::UpdateRenderer() {
     // Local variables
     unsigned int i; // r30
 
@@ -179,7 +197,8 @@ void CAFTarget::UpdateRenderer(class CAFTarget * const this /* r29 */) {
 }
 
 // Range: 0x8018A250 -> 0x8018A520
-void CAFTarget::UpdateSelectorMode(class CAFTarget * const this /* r31 */) {
+// this: r31
+void CAFTarget::UpdateSelectorMode() {
     // Local variables
     class EController * pCtrl; // r30
     int lastMember; // r0
@@ -192,10 +211,12 @@ void CAFTarget::UpdateSelectorMode(class CAFTarget * const this /* r31 */) {
 }
 
 // Range: 0x8018A520 -> 0x8018A5A4
-void CAFTarget::Draw(class CAFTarget * const this /* r30 */, class ERC * prc /* r31 */) {}
+// this: r30
+void CAFTarget::Draw(class ERC * prc /* r31 */) {}
 
 // Range: 0x8018A5A4 -> 0x8018A794
-void CAFTarget::DrawRenderer(class CAFTarget * const this /* r30 */, class ERC * prc /* r27 */) {
+// this: r30
+void CAFTarget::DrawRenderer(class ERC * prc /* r27 */) {
     // Local variables
     unsigned int i; // r29
     class EMat4 orient; // r1+0x38
@@ -206,13 +227,15 @@ void CAFTarget::DrawRenderer(class CAFTarget * const this /* r30 */, class ERC *
 }
 
 // Range: 0x8018A794 -> 0x8018A8B8
-void CAFTarget::DrawTarget(class CAFTarget * const this /* r28 */, class ERC * prc /* r29 */) {
+// this: r28
+void CAFTarget::DrawTarget(class ERC * prc /* r29 */) {
     // Local variables
     int i; // r30
 }
 
 // Range: 0x8018A8B8 -> 0x8018AA30
-void CAFTarget::DrawPlumbBob(class CAFTarget * const this /* r28 */, class ERC * prc /* r29 */) {
+// this: r28
+void CAFTarget::DrawPlumbBob(class ERC * prc /* r29 */) {
     // Local variables
     class CasSimRenderer * pSimRenderer; // r31
     class EVec3 vHead; // r1+0x14
@@ -224,19 +247,22 @@ void CAFTarget::DrawPlumbBob(class CAFTarget * const this /* r28 */, class ERC *
 }
 
 // Range: 0x8018AA30 -> 0x8018AB7C
-void CAFTarget::onButtonSelect(class CAFTarget * const this /* r31 */) {
+// this: r31
+void CAFTarget::onButtonSelect() {
     // References
     // -> class EGlobal _globals;
 }
 
 // Range: 0x8018AB7C -> 0x8018ABE4
-unsigned char CAFTarget::IsFreeFamilySlot(class CAFTarget * const this /* r30 */) {
+// this: r30
+unsigned char CAFTarget::IsFreeFamilySlot() {
     // Local variables
     unsigned int i; // r31
 }
 
 // Range: 0x8018ABE4 -> 0x8018AC6C
-int CAFTarget::GetFirstFreeFamilySlot(class CAFTarget * const this /* r28 */) {
+// this: r28
+int CAFTarget::GetFirstFreeFamilySlot() {
     // Local variables
     int returnVal; // r31
     unsigned char bDone; // r30
@@ -244,7 +270,8 @@ int CAFTarget::GetFirstFreeFamilySlot(class CAFTarget * const this /* r28 */) {
 }
 
 // Range: 0x8018AC6C -> 0x8018ACDC
-int CAFTarget::CountFamilyMembers(class CAFTarget * const this /* r29 */) {
+// this: r29
+int CAFTarget::CountFamilyMembers() {
     // Local variables
     int cnt; // r31
     int i; // r30
@@ -257,13 +284,15 @@ unsigned char CAFTarget::FamilyMembersMax() {
 }
 
 // Range: 0x8018AD18 -> 0x8018AD80
-int CAFTarget::LastFilledFamilyMemberSlot(class CAFTarget * const this /* r30 */) {
+// this: r30
+int CAFTarget::LastFilledFamilyMemberSlot() {
     // Local variables
     int i; // r31
 }
 
 // Range: 0x8018AD80 -> 0x8018B284
-void CAFTarget::HandleCAS(class CAFTarget * const this /* r31 */) {
+// this: r31
+void CAFTarget::HandleCAS() {
     // Local variables
     class ERDataset * pRes; // r3
     class CasSimDescription * pTempDesc; // r30
@@ -278,20 +307,24 @@ void CAFTarget::HandleCAS(class CAFTarget * const this /* r31 */) {
 }
 
 // Range: 0x8018B284 -> 0x8018B35C
-void CAFTarget::EnterCAS(class CAFTarget * const this /* r31 */) {}
+// this: r31
+void CAFTarget::EnterCAS() {}
 
 // Range: 0x8018B35C -> 0x8018B444
-void CAFTarget::EnterCASForEdit(class CAFTarget * const this /* r31 */) {}
+// this: r31
+void CAFTarget::EnterCASForEdit() {}
 
 // Range: 0x8018B444 -> 0x8018B4D4
-unsigned char CAFTarget::FamilyHasOneSim(class CAFTarget * const this /* r28 */) {
+// this: r28
+unsigned char CAFTarget::FamilyHasOneSim() {
     // Local variables
     unsigned char bGotoGame; // r30
     unsigned int i; // r29
 }
 
 // Range: 0x8018B4D4 -> 0x8018B550
-void CAFTarget::ResetCharacterRotations(class CAFTarget * const this /* r29 */) {
+// this: r29
+void CAFTarget::ResetCharacterRotations() {
     // Local variables
     int i; // r30
 }
@@ -315,7 +348,8 @@ void CAFTarget::UnLoadCAFUIScreen() {
 }
 
 // Range: 0x8018B604 -> 0x8018B778
-unsigned char CAFTarget::SaveCASDataToNeighborhood(class CAFTarget * const this /* r26 */) {
+// this: r26
+unsigned char CAFTarget::SaveCASDataToNeighborhood() {
     // Local variables
     unsigned char bResult; // r29
     int source; // r0
@@ -329,7 +363,8 @@ unsigned char CAFTarget::SaveCASDataToNeighborhood(class CAFTarget * const this 
 }
 
 // Range: 0x8018B778 -> 0x8018B98C
-void CAFTarget::SaveCharToFamilySlot(class CAFTarget * const this /* r30 */, int nCharNum /* r27 */) {
+// this: r30
+void CAFTarget::SaveCharToFamilySlot(int nCharNum /* r27 */) {
     // Local variables
     class ENeighborhoodCustomChar & simCustomData; // r28
     class CasSimDescription * pSimDesc; // r27
@@ -339,28 +374,33 @@ void CAFTarget::SaveCharToFamilySlot(class CAFTarget * const this /* r30 */, int
 }
 
 // Range: 0x8018B98C -> 0x8018B9DC
-void CAFTarget::GotoGame(class CAFTarget * const this /* r31 */) {
+// this: r31
+void CAFTarget::GotoGame() {
     // References
     // -> class EGlobal _globals;
 }
 
 // Range: 0x8018B9DC -> 0x8018BA14
-void CAFTarget::EnterSimSelectorMode(class CAFTarget * const this /* r31 */) {}
+// this: r31
+void CAFTarget::EnterSimSelectorMode() {}
 
 // Range: 0x8018BA14 -> 0x8018BA18
 void CAFTarget::ExitSimSelectorMode() {}
 
 // Range: 0x8018BA18 -> 0x8018BA7C
-void CAFTarget::HideFlashUIScreen(class CAFTarget * const this /* r31 */) {}
+// this: r31
+void CAFTarget::HideFlashUIScreen() {}
 
 // Range: 0x8018BA7C -> 0x8018BAE4
-void CAFTarget::RefreshFlashUIScreen(class CAFTarget * const this /* r31 */) {}
+// this: r31
+void CAFTarget::RefreshFlashUIScreen() {}
 
 // Range: 0x8018BAE4 -> 0x8018BB04
 void CAFTarget::SetCAFMode() {}
 
 // Range: 0x8018BB04 -> 0x8018BB80
-void CAFTarget::SetFidgetModeForAllSims(class CAFTarget * const this /* r28 */, unsigned char bFidgeting /* r29 */) {
+// this: r28
+void CAFTarget::SetFidgetModeForAllSims(unsigned char bFidgeting /* r29 */) {
     // Local variables
     unsigned int i; // r30
 }
@@ -379,13 +419,15 @@ void CAFTarget::DeleteAllClothingItemsInInventoryForAllSims() {
 }
 
 // Range: 0x8018BCE0 -> 0x8018BE28
-void CAFTarget::SpawnYesNoDialog(class CAFTarget * const this /* r24 */, enum eCAFDialogNavOptions navOption /* r25 */, const unsigned short * msg /* r26 */, const unsigned short * title /* r27 */, int preselected /* r28 */) {
+// this: r24
+void CAFTarget::SpawnYesNoDialog(enum eCAFDialogNavOptions navOption /* r25 */, const unsigned short * msg /* r26 */, const unsigned short * title /* r27 */, int preselected /* r28 */) {
     // References
     // -> class EGlobal _globals;
 }
 
 // Range: 0x8018BE28 -> 0x8018C05C
-void CAFTarget::DialogYesNoSelectionCallback(class CAFTarget * const this /* r31 */) {
+// this: r31
+void CAFTarget::DialogYesNoSelectionCallback() {
     // Local variables
     int selectedFamily; // r30
     class Family * pFamily; // r30
@@ -395,22 +437,26 @@ void CAFTarget::DialogYesNoSelectionCallback(class CAFTarget * const this /* r31
 }
 
 // Range: 0x8018C05C -> 0x8018C108
-void CAFTarget::DialogNoSelectionCallback(class CAFTarget * const this /* r31 */) {}
+// this: r31
+void CAFTarget::DialogNoSelectionCallback() {}
 
 // Range: 0x8018C108 -> 0x8018C214
-void CAFTarget::SpawnOKDialog(class CAFTarget * const this /* r27 */, const unsigned short * msg /* r28 */, const unsigned short * title /* r29 */) {
+// this: r27
+void CAFTarget::SpawnOKDialog(const unsigned short * msg /* r28 */, const unsigned short * title /* r29 */) {
     // References
     // -> class EGlobal _globals;
 }
 
 // Range: 0x8018C214 -> 0x8018C24C
-void CAFTarget::DialogOKSelectionCallback(class CAFTarget * const this /* r31 */) {}
+// this: r31
+void CAFTarget::DialogOKSelectionCallback() {}
 
 // Range: 0x8018C24C -> 0x8018C260
 void CAFTarget::SetTargetState() {}
 
 // Range: 0x8018C260 -> 0x8018C320
-unsigned int CAFTarget::PickFreeSimPositionNum(class CAFTarget * const this /* r26 */, class CasSimRenderer * pCurrCharRenderer /* r27 */) {
+// this: r26
+unsigned int CAFTarget::PickFreeSimPositionNum(class CasSimRenderer * pCurrCharRenderer /* r27 */) {
     // Local variables
     unsigned int nPositionNum; // r30
     unsigned char bPositionNumIsFree; // r29
@@ -418,7 +464,8 @@ unsigned int CAFTarget::PickFreeSimPositionNum(class CAFTarget * const this /* r
 }
 
 // Range: 0x8018C320 -> 0x8018C408
-void CAFTarget::DeallocateMorphResources(class CAFTarget * const this /* r29 */, int iSimSlot /* r30 */) {
+// this: r29
+void CAFTarget::DeallocateMorphResources(int iSimSlot /* r30 */) {
     // Local variables
     int iCurrentSim; // r30
 }

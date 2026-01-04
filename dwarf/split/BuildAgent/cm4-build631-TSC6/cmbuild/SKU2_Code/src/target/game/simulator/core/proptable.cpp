@@ -11,16 +11,19 @@ class PropTable * PropTable::CreateInstance() {}
 void PropTable::DestroyInstance() {}
 
 // Range: 0x800D5534 -> 0x800D5578
-void * PropTableImpl::PropTableImpl(class PropTableImpl * const this /* r31 */) {
+// this: r31
+PropTableImpl::PropTableImpl() {
     // References
     // -> struct [anonymous] __vt__13PropTableImpl;
 }
 
 // Range: 0x800D5578 -> 0x800D55D0
-void * PropTableImpl::~PropTableImpl(class PropTableImpl * const this /* r30 */) {}
+// this: r30
+PropTableImpl::~PropTableImpl() {}
 
 // Range: 0x800D55D0 -> 0x800D5664
-int PropTableImpl::Load(class PropTableImpl * const this /* r28 */, unsigned int fileID /* r30 */, signed short resID /* r29 */) {
+// this: r28
+int PropTableImpl::Load(unsigned int fileID /* r30 */, signed short resID /* r29 */) {
     // Local variables
     class iResFile * pFile; // r0
     const struct ResFile * pData; // r0
@@ -28,7 +31,8 @@ int PropTableImpl::Load(class PropTableImpl * const this /* r28 */, unsigned int
 }
 
 // Range: 0x800D5664 -> 0x800D56C0
-struct PropRef * PropTableImpl::GetEntry(class PropTableImpl * const this /* r30 */, int entryNum /* r31 */) {
+// this: r30
+struct PropRef * PropTableImpl::GetEntry(int entryNum /* r31 */) {
     // Local variables
     struct PropRef * aref; // r0
 }

@@ -5,15 +5,19 @@
     Code range: 0x8014207C -> 0x8014217C
 */
 // Range: 0x8014207C -> 0x801420BC
-void * CTGMicroTimer::~CTGMicroTimer(class CTGMicroTimer * const this /* r31 */) {}
+// this: r31
+CTGMicroTimer::~CTGMicroTimer() {}
 
 // Range: 0x801420BC -> 0x801420F4
-void CTGMicroTimer::Stop(class CTGMicroTimer * const this /* r31 */) {}
+// this: r31
+void CTGMicroTimer::Stop() {}
 
 // Range: 0x801420F4 -> 0x80142128
-void CTGMicroTimer::Start(class CTGMicroTimer * const this /* r31 */) {}
+// this: r31
+void CTGMicroTimer::Start() {}
 
 // Range: 0x80142128 -> 0x8014217C
-void * CTGMicroTimer::CTGMicroTimer(class CTGMicroTimer * const this /* r30 */) {}
+// this: r30
+CTGMicroTimer::CTGMicroTimer() {}
 
 

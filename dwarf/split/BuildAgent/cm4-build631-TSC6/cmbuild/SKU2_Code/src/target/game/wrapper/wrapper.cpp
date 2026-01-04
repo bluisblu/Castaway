@@ -11,20 +11,24 @@ static void DrawIcon(class ERC * prc /* r27 */, class EVec2 & rSize /* r28 */, c
 }
 
 // Range: 0x8009C20C -> 0x8009C280
-void TextBaseItem::Startup(class TextBaseItem * const this /* r31 */) {}
+// this: r31
+void TextBaseItem::Startup() {}
 
 // Range: 0x8009C280 -> 0x8009C370
-void TextBaseItem::Draw(class TextBaseItem * const this /* r29 */, class ERC * prc /* r30 */, float fAlpha /* f30 */) {
+// this: r29
+void TextBaseItem::Draw(class ERC * prc /* r30 */, float fAlpha /* f30 */) {
     // Local variables
     enum ItemStyle oldStyle; // r31
     float oldSize; // f31
 }
 
 // Range: 0x8009C370 -> 0x8009C3B4
-void TextBaseItem::SetText(class TextBaseItem * const this /* r31 */) {}
+// this: r31
+void TextBaseItem::SetText() {}
 
 // Range: 0x8009C3B4 -> 0x8009C4C4
-void TextBaseItem::SetStyle(class TextBaseItem * const this /* r27 */, enum ItemStyle itemStyle /* r28 */) {
+// this: r27
+void TextBaseItem::SetStyle(enum ItemStyle itemStyle /* r28 */) {
     // References
     // -> class EVec4 _ORANGE;
     // -> class EVec4 _YELLOW;
@@ -38,40 +42,49 @@ void TextBaseItem::SetStyle(class TextBaseItem * const this /* r27 */, enum Item
 }
 
 // Range: 0x8009C4C4 -> 0x8009C50C
-void TextItem::Startup(class TextItem * const this /* r31 */) {}
+// this: r31
+void TextItem::Startup() {}
 
 // Range: 0x8009C50C -> 0x8009C554
-void MenuItem::Startup(class MenuItem * const this /* r31 */) {}
+// this: r31
+void MenuItem::Startup() {}
 
 // Range: 0x8009C554 -> 0x8009C59C
-void ButtonItem::Startup(class ButtonItem * const this /* r31 */) {}
+// this: r31
+void ButtonItem::Startup() {}
 
 // Range: 0x8009C59C -> 0x8009C5D0
-void IconItem::Startup(class IconItem * const this /* r31 */) {}
+// this: r31
+void IconItem::Startup() {}
 
 // Range: 0x8009C5D0 -> 0x8009C5D4
 void IconItem::Shutdown() {}
 
 // Range: 0x8009C5D4 -> 0x8009C68C
-void IconItem::Draw(class IconItem * const this /* r30 */, class ERC * prc /* r31 */, float fAlpha /* f31 */) {
+// this: r30
+void IconItem::Draw(class ERC * prc /* r31 */, float fAlpha /* f31 */) {
     // Local variables
     class EVec4 tColor; // r1+0x8
 }
 
 // Range: 0x8009C68C -> 0x8009C6CC
-void IconItem::SetShader(class IconItem * const this /* r31 */) {
+// this: r31
+void IconItem::SetShader() {
     // References
     // -> class EShaderManager _shaderman;
 }
 
 // Range: 0x8009C6CC -> 0x8009C710
-void IconItem::ReleaseShader(class IconItem * const this /* r31 */) {}
+// this: r31
+void IconItem::ReleaseShader() {}
 
 // Range: 0x8009C710 -> 0x8009C760
-void WrapperPaneBase::Startup(class WrapperPaneBase * const this /* r31 */) {}
+// this: r31
+void WrapperPaneBase::Startup() {}
 
 // Range: 0x8009C760 -> 0x8009C8AC
-void WrapperPaneBase::Shutdown(class WrapperPaneBase * const this /* r24 */) {
+// this: r24
+void WrapperPaneBase::Shutdown() {
     // Local variables
     int i; // r25
 
@@ -81,7 +94,8 @@ void WrapperPaneBase::Shutdown(class WrapperPaneBase * const this /* r24 */) {
 }
 
 // Range: 0x8009C8AC -> 0x8009CAFC
-void WrapperPaneBase::DrawBackground(class WrapperPaneBase * const this /* r23 */, class ERC * prc /* r24 */) {
+// this: r23
+void WrapperPaneBase::DrawBackground(class ERC * prc /* r24 */) {
     // Local variables
     int i; // r26
     class ButtonItem * pButton; // r25
@@ -93,14 +107,16 @@ void WrapperPaneBase::DrawBackground(class WrapperPaneBase * const this /* r23 *
 }
 
 // Range: 0x8009CAFC -> 0x8009CBA8
-void WrapperPaneBase::DrawItems(class WrapperPaneBase * const this /* r27 */, class ERC * prc /* r28 */, unsigned char bDrawBeforeApt /* r29 */) {
+// this: r27
+void WrapperPaneBase::DrawItems(class ERC * prc /* r28 */, unsigned char bDrawBeforeApt /* r29 */) {
     // Local variables
     class PaneItem * * itemIter; // r31
     class PaneItem * pItem; // r30
 }
 
 // Range: 0x8009CBA8 -> 0x8009CC4C
-void WrapperPaneBase::SetSelected(class WrapperPaneBase * const this /* r26 */, enum ItemType type /* r27 */, int enabledItemIndex /* r28 */) {
+// this: r26
+void WrapperPaneBase::SetSelected(enum ItemType type /* r27 */, int enabledItemIndex /* r28 */) {
     // Local variables
     class PaneItem * * itemIter; // r31
     int iEnabledItemIndex; // r30
@@ -108,14 +124,16 @@ void WrapperPaneBase::SetSelected(class WrapperPaneBase * const this /* r26 */, 
 }
 
 // Range: 0x8009CC4C -> 0x8009CCE8
-class PaneItem * WrapperPaneBase::GetSelectedItem(class WrapperPaneBase * const this /* r28 */, enum ItemType type /* r29 */) {
+// this: r28
+class PaneItem * WrapperPaneBase::GetSelectedItem(enum ItemType type /* r29 */) {
     // Local variables
     class PaneItem * * itemIter; // r31
     class PaneItem * pItem; // r30
 }
 
 // Range: 0x8009CCE8 -> 0x8009CD78
-class PaneItem * WrapperPaneBase::GetItem(class WrapperPaneBase * const this /* r26 */, enum ItemType type /* r27 */, int index /* r28 */) {
+// this: r26
+class PaneItem * WrapperPaneBase::GetItem(enum ItemType type /* r27 */, int index /* r28 */) {
     // Local variables
     class PaneItem * * itemIter; // r31
     int iItemIndex; // r30
@@ -147,7 +165,8 @@ void WrapperPaneBase::SetItemPos(class EVec2 & vPos /* r31 */) {
 }
 
 // Range: 0x8009CE54 -> 0x8009CF44
-int WrapperPaneBase::CalculateMenuWidthPixels(class WrapperPaneBase * const this /* r29 */) {
+// this: r29
+int WrapperPaneBase::CalculateMenuWidthPixels() {
     // Local variables
     float fWidestWidthFound; // f31
     class PaneItem * * itemIter; // r31
@@ -161,16 +180,19 @@ int WrapperPaneBase::CalculateMenuWidthPixels(class WrapperPaneBase * const this
 }
 
 // Range: 0x8009CF44 -> 0x8009CF84
-void WrapperPaneBase::SetBackgroundShader(class WrapperPaneBase * const this /* r31 */) {
+// this: r31
+void WrapperPaneBase::SetBackgroundShader() {
     // References
     // -> class EShaderManager _shaderman;
 }
 
 // Range: 0x8009CF84 -> 0x8009CFC8
-void WrapperPaneBase::ReleaseBackgroundShader(class WrapperPaneBase * const this /* r31 */) {}
+// this: r31
+void WrapperPaneBase::ReleaseBackgroundShader() {}
 
 // Range: 0x8009CFC8 -> 0x8009D090
-void WrapperPaneBase::DeleteItemList(class WrapperPaneBase * const this /* r29 */) {
+// this: r29
+void WrapperPaneBase::DeleteItemList() {
     // Local variables
     class PaneItem * * itemIter; // r31
     class PaneItem * pItem; // r30
@@ -178,7 +200,8 @@ void WrapperPaneBase::DeleteItemList(class WrapperPaneBase * const this /* r29 *
 }
 
 // Range: 0x8009D090 -> 0x8009D1C8
-void WrapperPaneBase::ShowEnabledButtons(class WrapperPaneBase * const this /* r25 */) {
+// this: r25
+void WrapperPaneBase::ShowEnabledButtons() {
     // Local variables
     int i; // r26
     class ButtonItem * pButton; // r3
@@ -189,7 +212,8 @@ void WrapperPaneBase::ShowEnabledButtons(class WrapperPaneBase * const this /* r
 }
 
 // Range: 0x8009D1C8 -> 0x8009D300
-void WrapperPaneBase::HideEnabledButtons(class WrapperPaneBase * const this /* r25 */) {
+// this: r25
+void WrapperPaneBase::HideEnabledButtons() {
     // Local variables
     int i; // r26
     class ButtonItem * pButton; // r3
@@ -200,7 +224,8 @@ void WrapperPaneBase::HideEnabledButtons(class WrapperPaneBase * const this /* r
 }
 
 // Range: 0x8009D300 -> 0x8009D384
-void DialogPaneBase::Startup(class DialogPaneBase * const this /* r31 */) {}
+// this: r31
+void DialogPaneBase::Startup() {}
 
 // Range: 0x8009D384 -> 0x8009D388
 void DialogPaneBase::Shutdown() {}
@@ -215,7 +240,8 @@ int MenuPane::GetSelectedMenuItemValue() {
 void Wrapper::WrapperStartup() {}
 
 // Range: 0x8009D3C8 -> 0x8009D4AC
-void Wrapper::WrapperShutdown(class Wrapper * const this /* r29 */) {
+// this: r29
+void Wrapper::WrapperShutdown() {
     // Local variables
     class WrapperPaneBase * * paneIter; // r31
     class WrapperPaneBase * pPane; // r30
@@ -238,7 +264,8 @@ void Wrapper::WrapperReset() {}
 void Wrapper::WrapperUpdate() {}
 
 // Range: 0x8009D4BC -> 0x8009D60C
-void Wrapper::WrapperDraw(class Wrapper * const this /* r27 */, class ERC * prc /* r28 */) {
+// this: r27
+void Wrapper::WrapperDraw(class ERC * prc /* r28 */) {
     // Local variables
     class WrapperPaneBase * * paneIter; // r31
     unsigned char bAnyVisiblePanes; // r30
@@ -247,10 +274,12 @@ void Wrapper::WrapperDraw(class Wrapper * const this /* r27 */, class ERC * prc 
 }
 
 // Range: 0x8009D60C -> 0x8009D654
-class WrapperPaneBase * Wrapper::AddPane(class Wrapper * const this /* r31 */, class WrapperPaneBase * pPane /* r1+0x8 */) {}
+// this: r31
+class WrapperPaneBase * Wrapper::AddPane(class WrapperPaneBase * pPane /* r1+0x8 */) {}
 
 // Range: 0x8009D654 -> 0x8009D6C8
-class WrapperPaneBase * Wrapper::FindPane(class Wrapper * const this /* r29 */, class WrapperPaneBase * pState /* r30 */) {
+// this: r29
+class WrapperPaneBase * Wrapper::FindPane(class WrapperPaneBase * pState /* r30 */) {
     // Local variables
     class WrapperPaneBase * * paneIter; // r31
     class WrapperPaneBase * pPane; // r3

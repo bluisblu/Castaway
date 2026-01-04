@@ -5,13 +5,15 @@
     Code range: 0x801F42F8 -> 0x801F44E8
 */
 // Range: 0x801F42F8 -> 0x801F442C
-void * MMSTarget::MMSTarget(class MMSTarget * const this /* r30 */) {
+// this: r30
+MMSTarget::MMSTarget() {
     // References
     // -> struct [anonymous] __vt__9MMSTarget;
 }
 
 // Range: 0x801F442C -> 0x801F44B0
-void * MMSTarget::~MMSTarget(class MMSTarget * const this /* r30 */) {
+// this: r30
+MMSTarget::~MMSTarget() {
     // References
     // -> struct [anonymous] __vt__9MMSTarget;
 }

@@ -5,7 +5,8 @@
     Code range: 0x801C2080 -> 0x801C4A68
 */
 // Range: 0x801C2080 -> 0x801C23F4
-void * ActionMenu::ActionMenu(class ActionMenu * const this /* r28 */) {
+// this: r28
+ActionMenu::ActionMenu() {
     // Local variables
     int i; // r29
 
@@ -35,7 +36,8 @@ void * ActionMenu::ActionMenu(class ActionMenu * const this /* r28 */) {
 }
 
 // Range: 0x801C23F4 -> 0x801C24C8
-void * ActionMenu::~ActionMenu(class ActionMenu * const this /* r27 */) {
+// this: r27
+ActionMenu::~ActionMenu() {
     // Local variables
     int i; // r29
 
@@ -51,7 +53,8 @@ unsigned char ActionMenu::IsObjectInMenu() {}
 class cXObject * ActionMenu::GetSelectedObject() {}
 
 // Range: 0x801C24D8 -> 0x801C25A4
-void ActionMenu::UpdateIcon(class ActionMenu * const this /* r30 */) {
+// this: r30
+void ActionMenu::UpdateIcon() {
     // Local variables
     int iconIndex; // r31
     class MenuItem * pIconItem; // r0
@@ -61,7 +64,8 @@ void ActionMenu::UpdateIcon(class ActionMenu * const this /* r30 */) {
 }
 
 // Range: 0x801C25A4 -> 0x801C267C
-unsigned char ActionMenu::FillInMenu(class ActionMenu * const this /* r29 */) {
+// this: r29
+unsigned char ActionMenu::FillInMenu() {
     // Local variables
     class MenuItem * currentMenu; // r31
     int selectedItem; // r0
@@ -71,19 +75,22 @@ unsigned char ActionMenu::FillInMenu(class ActionMenu * const this /* r29 */) {
 }
 
 // Range: 0x801C267C -> 0x801C2770
-void ActionMenu::AddMenu(class ActionMenu * const this /* r26 */, class cXObject * pObj /* r27 */, const class BString2 & strLabel /* r28 */, unsigned int shaderID /* r29 */, class ERShader * pShader /* r30 */) {
+// this: r26
+void ActionMenu::AddMenu(class cXObject * pObj /* r27 */, const class BString2 & strLabel /* r28 */, unsigned int shaderID /* r29 */, class ERShader * pShader /* r30 */) {
     // Local variables
     class MenuItem * newMenu; // r31
 }
 
 // Range: 0x801C2770 -> 0x801C280C
-void ActionMenu::AddMenuItem(const class ActionMenu * const this /* r24 */, class cXObject * pObj /* r25 */, class Interaction * pAction /* r26 */, const class BString2 & strLabel /* r27 */, unsigned int shaderID /* r28 */, class ERShader * pShader /* r29 */, unsigned char bDisabled /* r30 */) {}
+// this: r24
+void ActionMenu::AddMenuItem(class cXObject * pObj /* r25 */, class Interaction * pAction /* r26 */, const class BString2 & strLabel /* r27 */, unsigned int shaderID /* r28 */, class ERShader * pShader /* r29 */, unsigned char bDisabled /* r30 */) const {}
 
 // Range: 0x801C280C -> 0x801C281C
 void ActionMenu::CompleteMenu() {}
 
 // Range: 0x801C281C -> 0x801C29D4
-unsigned char ActionMenu::ShowMenu(class ActionMenu * const this /* r27 */, unsigned char dcObjectChange /* r28 */) {
+// this: r27
+unsigned char ActionMenu::ShowMenu(unsigned char dcObjectChange /* r28 */) {
     // Local variables
     int launchX; // r1+0xC
     int launchY; // r1+0x8
@@ -97,7 +104,8 @@ unsigned char ActionMenu::ShowMenu(class ActionMenu * const this /* r27 */, unsi
 }
 
 // Range: 0x801C29D4 -> 0x801C2B30
-void ActionMenu::VisibilityCallfunction(class ActionMenu * const this /* r27 */, int menuItemCount /* r28 */, int launchX /* r29 */, int launchY /* r30 */, unsigned char dcObjectChange /* r31 */) {
+// this: r27
+void ActionMenu::VisibilityCallfunction(int menuItemCount /* r28 */, int launchX /* r29 */, int launchY /* r30 */, unsigned char dcObjectChange /* r31 */) {
     // Local variables
     char countStr[8]; // r1+0x18
     char xStr[8]; // r1+0x10
@@ -108,7 +116,8 @@ void ActionMenu::VisibilityCallfunction(class ActionMenu * const this /* r27 */,
 }
 
 // Range: 0x801C2B30 -> 0x801C2C84
-void ActionMenu::BackOutMenu(class ActionMenu * const this /* r31 */) {
+// this: r31
+void ActionMenu::BackOutMenu() {
     // Local variables
     class FlashPiMenu * pPiMenu; // r0
 
@@ -118,7 +127,8 @@ void ActionMenu::BackOutMenu(class ActionMenu * const this /* r31 */) {
 }
 
 // Range: 0x801C2C84 -> 0x801C2EA4
-void ActionMenu::AcceptMenu(class ActionMenu * const this /* r31 */) {
+// this: r31
+void ActionMenu::AcceptMenu() {
     // Local variables
     class MenuItem * currentSubMenu; // r30
     int selectedItem; // r0
@@ -152,7 +162,8 @@ unsigned char ActionMenu::CheckCursorOnNextPreviousIcons(class EController * pCt
 }
 
 // Range: 0x801C3030 -> 0x801C37F0
-void ActionMenu::Update(class ActionMenu * const this /* r25 */) {
+// this: r25
+void ActionMenu::Update() {
     // Local variables
     class EController * pCtrl; // r30
     unsigned int selectedItem; // r1+0x10
@@ -190,7 +201,8 @@ void ActionMenu::Update(class ActionMenu * const this /* r25 */) {
 }
 
 // Range: 0x801C37F0 -> 0x801C391C
-void ActionMenu::TerminateMenu(class ActionMenu * const this /* r29 */, unsigned char dcObjectChange /* r30 */) {
+// this: r29
+void ActionMenu::TerminateMenu(unsigned char dcObjectChange /* r30 */) {
     // Local variables
     class MenuItem * currentMenu; // r0
     class GrabManipulator * pInteractor; // r0
@@ -202,10 +214,12 @@ void ActionMenu::TerminateMenu(class ActionMenu * const this /* r29 */, unsigned
 }
 
 // Range: 0x801C391C -> 0x801C39B8
-void ActionMenu::InitMenuStack(class ActionMenu * const this /* r30 */) {}
+// this: r30
+void ActionMenu::InitMenuStack() {}
 
 // Range: 0x801C39B8 -> 0x801C3BC4
-char * ActionMenu::GetVariable(class ActionMenu * const this /* r28 */, const char * szVar /* r29 */) {
+// this: r28
+char * ActionMenu::GetVariable(const char * szVar /* r29 */) {
     // Local variables
     char * retStr; // r30
     char wsString[8]; // r1+0x8
@@ -221,7 +235,8 @@ char * ActionMenu::GetVariable(class ActionMenu * const this /* r28 */, const ch
 }
 
 // Range: 0x801C3BC4 -> 0x801C3E58
-void ActionMenu::SetVariable(class ActionMenu * const this /* r31 */, const char * szCommand /* r29 */, const char * szParams /* r30 */) {
+// this: r31
+void ActionMenu::SetVariable(const char * szCommand /* r29 */, const char * szParams /* r30 */) {
     // Local variables
     int parm; // r0
     class MenuItem * pMenu; // r30
@@ -243,7 +258,8 @@ void ActionMenu::SetVariable(class ActionMenu * const this /* r31 */, const char
 }
 
 // Range: 0x801C3E58 -> 0x801C3EEC
-void ActionMenu::InstallGetLocalizationItems(class ActionMenu * const this /* r29 */) {
+// this: r29
+void ActionMenu::InstallGetLocalizationItems() {
     // Local variables
     int firstItem; // r0
     int i; // r30
@@ -261,7 +277,8 @@ void ActionMenu::UpdateGetLocalizationItems() {
 }
 
 // Range: 0x801C3F80 -> 0x801C427C
-unsigned short * ActionMenu::GetLocalizable(class ActionMenu * const this /* r28 */, const char * szVar /* r29 */) {
+// this: r28
+unsigned short * ActionMenu::GetLocalizable(const char * szVar /* r29 */) {
     // Local variables
     unsigned short * wideStr; // r30
     class BString2 objName; // r1+0x14
@@ -281,7 +298,8 @@ unsigned short * ActionMenu::GetLocalizable(class ActionMenu * const this /* r28
 }
 
 // Range: 0x801C427C -> 0x801C432C
-void ActionMenu::DoRefresh(class ActionMenu * const this /* r29 */, int selectedIndex /* r30 */, int framingIndex /* r31 */) {
+// this: r29
+void ActionMenu::DoRefresh(int selectedIndex /* r30 */, int framingIndex /* r31 */) {
     // Local variables
     char countStr[8]; // r1+0x18
     char highlightStr[8]; // r1+0x10
@@ -292,19 +310,23 @@ void ActionMenu::DoRefresh(class ActionMenu * const this /* r29 */, int selected
 }
 
 // Range: 0x801C432C -> 0x801C43A0
-void ActionMenu::DoHide(class ActionMenu * const this /* r31 */) {
+// this: r31
+void ActionMenu::DoHide() {
     // References
     // -> static const char * const IMU_icon;
 }
 
 // Range: 0x801C43A0 -> 0x801C43FC
-void * MenuItem::MenuItem(class MenuItem * const this /* r31 */) {}
+// this: r31
+MenuItem::MenuItem() {}
 
 // Range: 0x801C43FC -> 0x801C4468
-void * MenuItem::~MenuItem(class MenuItem * const this /* r30 */) {}
+// this: r30
+MenuItem::~MenuItem() {}
 
 // Range: 0x801C4468 -> 0x801C455C
-void MenuItem::Setup(class MenuItem * const this /* r27 */, const class BString2 & strLabel /* r31 */, unsigned int shaderID /* r28 */, class ERShader * pShader /* r29 */, unsigned char bDisabled /* r30 */) {
+// this: r27
+void MenuItem::Setup(const class BString2 & strLabel /* r31 */, unsigned int shaderID /* r28 */, class ERShader * pShader /* r29 */, unsigned char bDisabled /* r30 */) {
     // Local variables
     int length; // r0
     unsigned short * pSlash; // r31
@@ -326,10 +348,12 @@ class MenuItem * MenuItem::GetNthItem() {
 }
 
 // Range: 0x801C462C -> 0x801C46BC
-unsigned char MenuItem::IsObjectInMenu(class MenuItem * const this /* r30 */, class cXObject * pObj /* r31 */) {}
+// this: r30
+unsigned char MenuItem::IsObjectInMenu(class cXObject * pObj /* r31 */) {}
 
 // Range: 0x801C46BC -> 0x801C4750
-void MenuItem::ClearMenu(class MenuItem * const this /* r31 */) {}
+// this: r31
+void MenuItem::ClearMenu() {}
 
 // Range: 0x801C4750 -> 0x801C4758
 class MenuItem * MenuItem::GetNext() {}
@@ -345,7 +369,8 @@ unsigned int MenuItem::GetMenuItemCount() {
 }
 
 // Range: 0x801C47A4 -> 0x801C4860
-void ActionMenu::PushControllerButtonFilter(class ActionMenu * const this /* r29 */, unsigned char usingClassicMode /* r30 */) {
+// this: r29
+void ActionMenu::PushControllerButtonFilter(unsigned char usingClassicMode /* r30 */) {
     // Local variables
     class EController * pCtrl; // r31
 
@@ -354,7 +379,8 @@ void ActionMenu::PushControllerButtonFilter(class ActionMenu * const this /* r29
 }
 
 // Range: 0x801C4860 -> 0x801C48B4
-void ActionMenu::PopControllerButtonFilter(class ActionMenu * const this /* r31 */) {
+// this: r31
+void ActionMenu::PopControllerButtonFilter() {
     // Local variables
     class EController * pCtrl; // r0
 
@@ -363,7 +389,8 @@ void ActionMenu::PopControllerButtonFilter(class ActionMenu * const this /* r31 
 }
 
 // Range: 0x801C48B4 -> 0x801C4A20
-void ActionMenu::SortSelectedSimToBottom(class ActionMenu * const this /* r29 */, class MenuItem * in_menu /* r27 */, class MenuItem * parent_menu /* r28 */) {
+// this: r29
+void ActionMenu::SortSelectedSimToBottom(class MenuItem * in_menu /* r27 */, class MenuItem * parent_menu /* r28 */) {
     // Local variables
     class cXObject * ourSim; // r0
     class MenuItem * submenu; // r0

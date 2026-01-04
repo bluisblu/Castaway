@@ -5,27 +5,30 @@
     Code range: 0x80019FC0 -> 0x8001A140
 */
 // Range: 0x80019FC0 -> 0x80019FC8
-class ERAnim * TRPtr::__rf() {}
+class ERAnim * TRPtr::operator->() {}
 
 // Range: 0x80019FC8 -> 0x8001A01C
-void * TRPtr::~TRPtr(class TRPtr * const this /* r30 */) {}
+// this: r30
+TRPtr::~TRPtr() {}
 
 // Range: 0x8001A01C -> 0x8001A060
-void TRPtr::Release(class TRPtr * const this /* r31 */) {}
+// this: r31
+void TRPtr::Release() {}
 
 // Range: 0x8001A0D4 -> 0x8001A114
-class TRPtr & TRPtr::__as(class TRPtr * const this /* r30 */, class ERAnim * p /* r31 */) {}
+// this: r30
+class TRPtr & TRPtr::operator=(class ERAnim * p /* r31 */) {}
 
 // Range: 0x8001A114 -> 0x8001A11C
 class ERAnim * TRPtr::Ptr() {}
 
 // Range: 0x8001A11C -> 0x8001A124
-class ERCharacter * TRPtr::__rf() {}
+class ERCharacter * TRPtr::operator->() {}
 
 // Range: 0x8001A124 -> 0x8001A12C
 class ERCharacter * TRPtr::Ptr() {}
 
 // Range: 0x8001A12C -> 0x8001A140
-unsigned char TRPtr::__opb() {}
+unsigned char TRPtr::operator bool() {}
 
 

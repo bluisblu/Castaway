@@ -5,19 +5,22 @@
     Code range: 0x80124064 -> 0x801257A4
 */
 // Range: 0x80124064 -> 0x801240E4
-void * cXMTObject::cXMTObject(class cXMTObject * const this /* r30 */, class cXMTObject * leader /* r31 */) {
+// this: r30
+cXMTObject::cXMTObject(class cXMTObject * leader /* r31 */) {
     // References
     // -> struct [anonymous] __vt__10cXMTObject;
 }
 
 // Range: 0x801240E4 -> 0x80124150
-void * cXMTObject::~cXMTObject(class cXMTObject * const this /* r30 */) {
+// this: r30
+cXMTObject::~cXMTObject() {
     // References
     // -> struct [anonymous] __vt__10cXMTObject;
 }
 
 // Range: 0x80124150 -> 0x801241A0
-void cXMTObject::Initialize(class cXMTObject * const this /* r31 */) {}
+// this: r31
+void cXMTObject::Initialize() {}
 
 // Range: 0x801241A0 -> 0x801241D4
 void cXMTObject::SetLeader() {
@@ -26,7 +29,8 @@ void cXMTObject::SetLeader() {
 }
 
 // Range: 0x801241D4 -> 0x80124378
-class ISimInstance * cXMTObject::GetISimInstance(class cXMTObject * const this /* r27 */) {
+// this: r27
+class ISimInstance * cXMTObject::GetISimInstance() {
     // Local variables
     class cXMTObject * mtobj; // r30
     struct ObjDefinition * pDef; // r0
@@ -39,7 +43,8 @@ class ISimInstance * cXMTObject::GetISimInstance(class cXMTObject * const this /
 }
 
 // Range: 0x80124378 -> 0x8012441C
-void cXMTObject::RemoveFromChain(class cXMTObject * const this /* r30 */) {
+// this: r30
+void cXMTObject::RemoveFromChain() {
     // Local variables
     class cXMTObject * newLeader; // r31
     class cXMTObject * scan; // r3
@@ -47,7 +52,8 @@ void cXMTObject::RemoveFromChain(class cXMTObject * const this /* r30 */) {
 }
 
 // Range: 0x8012441C -> 0x80124614
-void cXMTObject::Turn(class cXMTObject * const this /* r27 */, int notches /* r28 */) {
+// this: r27
+void cXMTObject::Turn(int notches /* r28 */) {
     // Local variables
     class FTilePt oldLoc; // r1+0x10
     int level; // r29
@@ -69,7 +75,8 @@ void cXMTObject::AssignOffsets() {
 }
 
 // Range: 0x801246BC -> 0x801248D0
-unsigned char cXMTObject::CanPlace(class cXMTObject * const this /* r24 */, const class FTilePt & newLoc0 /* r28 */, int inLevel /* r25 */, class cXObject * ontop /* r26 */, int slotNum /* r27 */) {
+// this: r24
+unsigned char cXMTObject::CanPlace(const class FTilePt & newLoc0 /* r28 */, int inLevel /* r25 */, class cXObject * ontop /* r26 */, int slotNum /* r27 */) {
     // Local variables
     class FTilePt curLoc; // r1+0x28
     class FTilePt newLoc; // r1+0x20
@@ -85,7 +92,8 @@ unsigned char cXMTObject::CanPlace(class cXMTObject * const this /* r24 */, cons
 }
 
 // Range: 0x801248D0 -> 0x80124A4C
-void cXMTObject::Place(class cXMTObject * const this /* r24 */, const class FTilePt & loc /* r28 */, int inLevel /* r25 */, class cXObject * ontop /* r26 */, int slotNum /* r27 */) {
+// this: r24
+void cXMTObject::Place(const class FTilePt & loc /* r28 */, int inLevel /* r25 */, class cXObject * ontop /* r26 */, int slotNum /* r27 */) {
     // Local variables
     class FTilePt curLoc; // r1+0x28
     class FTilePt newLoc; // r1+0x20
@@ -94,13 +102,15 @@ void cXMTObject::Place(class cXMTObject * const this /* r24 */, const class FTil
 }
 
 // Range: 0x80124A4C -> 0x80124AE8
-void cXMTObject::Pickup(class cXMTObject * const this /* r30 */) {
+// this: r30
+void cXMTObject::Pickup() {
     // Local variables
     class cXMTObject * curObj; // r30
 }
 
 // Range: 0x80124AE8 -> 0x80124BD4
-unsigned char cXMTObject::UserCanPlace(class cXMTObject * const this /* r31 */, int inLevel /* r30 */) {
+// this: r31
+unsigned char cXMTObject::UserCanPlace(int inLevel /* r30 */) {
     // Local variables
     class FTilePt firstLoc; // r1+0x20
     int firstLevel; // [invalid]
@@ -111,7 +121,8 @@ unsigned char cXMTObject::UserCanPlace(class cXMTObject * const this /* r31 */, 
 }
 
 // Range: 0x80124BD4 -> 0x80124CB8
-void cXMTObject::UserPlace(class cXMTObject * const this /* r28 */) {
+// this: r28
+void cXMTObject::UserPlace() {
     // Local variables
     class cXMTObject * mtObj; // r30
     int N; // r0
@@ -125,7 +136,8 @@ unsigned char cXMTObject::UserCanPickup() {
 }
 
 // Range: 0x80124D18 -> 0x80124E08
-void cXMTObject::UserPickup(class cXMTObject * const this /* r28 */) {
+// this: r28
+void cXMTObject::UserPickup() {
     // Local variables
     class cXMTObject * mtObj; // r30
     int N; // r0
@@ -145,7 +157,8 @@ unsigned char cXMTObject::IsPartOfMe() {
 }
 
 // Range: 0x80124EA4 -> 0x80124F98
-void cXMTObject::Reset(class cXMTObject * const this /* r29 */, unsigned char simonce /* r30 */) {
+// this: r29
+void cXMTObject::Reset(unsigned char simonce /* r30 */) {
     // Local variables
     class cXMTObject * curObj; // r31
 
@@ -157,14 +170,16 @@ void cXMTObject::Reset(class cXMTObject * const this /* r29 */, unsigned char si
 int cXMTObject::ReconType() {}
 
 // Range: 0x80124FA4 -> 0x801250C8
-void cXMTObject::ReconStream(class cXMTObject * const this /* r29 */, class ReconBuffer * r /* r30 */, int version /* r31 */) {
+// this: r29
+void cXMTObject::ReconStream(class ReconBuffer * r /* r30 */, int version /* r31 */) {
     // Local variables
     signed short leadid; // r1+0x8
     class cXMTObject * leader; // r0
 }
 
 // Range: 0x801250C8 -> 0x80125134
-void cXMTObject::PostLoad(class cXMTObject * const this /* r30 */, int version /* r31 */) {}
+// this: r30
+void cXMTObject::PostLoad(int version /* r31 */) {}
 
 // Range: 0x80125134 -> 0x80125180
 static class ObjectIterator ObjectsAtTile(class ObjectIterator * oi /* r31 */) {
@@ -173,7 +188,8 @@ static class ObjectIterator ObjectsAtTile(class ObjectIterator * oi /* r31 */) {
 }
 
 // Range: 0x80125180 -> 0x801252C0
-void cXMTObject::MergeDynamic(class cXMTObject * const this /* r28 */, class cXMTObject * mtObject /* r27 */) {
+// this: r28
+void cXMTObject::MergeDynamic(class cXMTObject * mtObject /* r27 */) {
     // Local variables
     class cXMTObject * myFirst; // r0
     class cXMTObject * otherFirst; // r29
@@ -189,19 +205,22 @@ void cXMTObject::MergeDynamic(class cXMTObject * const this /* r28 */, class cXM
 unsigned char cXMTObject::IsDynamic() {}
 
 // Range: 0x801252F4 -> 0x80125374
-void cXMTObject::RemoveFromDynamic(class cXMTObject * const this /* r30 */) {
+// this: r30
+void cXMTObject::RemoveFromDynamic() {
     // Local variables
     class cXMTObject * oldLead; // r31
 }
 
 // Range: 0x80125374 -> 0x801253D4
-void cXMTObject::UpdateAllAdjacecy(class cXMTObject * const this /* r31 */) {
+// this: r31
+void cXMTObject::UpdateAllAdjacecy() {
     // Local variables
     class cXMTObject * part; // r31
 }
 
 // Range: 0x801253D4 -> 0x801254F8
-void cXMTObject::UpdateDynAdjacency(class cXMTObject * const this /* r27 */) {
+// this: r27
+void cXMTObject::UpdateDynAdjacency() {
     // Local variables
     signed short adjFlags; // r29
     int dir; // r28
@@ -212,7 +231,8 @@ void cXMTObject::UpdateDynAdjacency(class cXMTObject * const this /* r27 */) {
 }
 
 // Range: 0x801254F8 -> 0x801255F4
-void cXMTObject::MergeInPlace(class cXMTObject * const this /* r28 */) {
+// this: r28
+void cXMTObject::MergeInPlace() {
     // Local variables
     class FTilePt location; // r1+0x18
     int level; // r31
@@ -224,7 +244,8 @@ void cXMTObject::MergeInPlace(class cXMTObject * const this /* r28 */) {
 }
 
 // Range: 0x801255F4 -> 0x801256A0
-class FTilePt cXMTObject::GetAverageLocation(const class cXMTObject * const this /* r30 */) {
+// this: r30
+class FTilePt cXMTObject::GetAverageLocation() const {
     // Local variables
     class FTilePt loc; // r1+0x10
     class cXMTObject * mtobj; // r31

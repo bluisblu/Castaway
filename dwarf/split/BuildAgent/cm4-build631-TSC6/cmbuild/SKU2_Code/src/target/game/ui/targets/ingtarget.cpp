@@ -5,7 +5,7 @@
     Code range: 0x801AB0CC -> 0x801AE410
 */
 // Range: 0x801AB0CC -> 0x801AB0E4
-void * RefrigeratorIngredient::RefrigeratorIngredient() {}
+RefrigeratorIngredient::RefrigeratorIngredient() {}
 
 // Range: 0x801AB0E4 -> 0x801AB148
 void RefrigeratorIngredient::GetName(unsigned short * output /* r31 */) {
@@ -20,7 +20,8 @@ void RefrigeratorIngredient::GetDescription(unsigned short * output /* r31 */) {
 }
 
 // Range: 0x801AB1AC -> 0x801AB268
-void RefrigeratorIngredient::GetCostString(class RefrigeratorIngredient * const this /* r28 */, unsigned short * output /* r29 */) {
+// this: r28
+void RefrigeratorIngredient::GetCostString(unsigned short * output /* r29 */) {
     // Local variables
     unsigned long len; // r30
 
@@ -35,29 +36,35 @@ void RefrigeratorIngredient::GetMotValue(unsigned short * output /* r31 */) {}
 int RefrigeratorIngredient::GetMotValueInt() {}
 
 // Range: 0x801AB2F8 -> 0x801AB350
-unsigned int RefrigeratorIngredient::GetShader(class RefrigeratorIngredient * const this /* r31 */) {}
+// this: r31
+unsigned int RefrigeratorIngredient::GetShader() {}
 
 // Range: 0x801AB350 -> 0x801AB3A8
-unsigned int RefrigeratorIngredient::GetLargeShader(class RefrigeratorIngredient * const this /* r31 */) {}
+// this: r31
+unsigned int RefrigeratorIngredient::GetLargeShader() {}
 
 // Range: 0x801AB3A8 -> 0x801AB3D0
 int RefrigeratorIngredient::GetCount() {}
 
 // Range: 0x801AB3D0 -> 0x801AB450
-void RefrigeratorIngredient::ConsumeForMeal(class RefrigeratorIngredient * const this /* r31 */) {
+// this: r31
+void RefrigeratorIngredient::ConsumeForMeal() {
     // Local variables
     class InventoryItems * pInventory; // r0
     int cost; // r6
 }
 
 // Range: 0x801AB450 -> 0x801AB4F8
-unsigned char RefrigeratorIngredient::MoveToPlate(class RefrigeratorIngredient * const this /* r30 */, int & plateCost /* r31 */) {}
+// this: r30
+unsigned char RefrigeratorIngredient::MoveToPlate(int & plateCost /* r31 */) {}
 
 // Range: 0x801AB4F8 -> 0x801AB59C
-unsigned char RefrigeratorIngredient::MoveToFridge(class RefrigeratorIngredient * const this /* r30 */, int & plateCost /* r31 */) {}
+// this: r30
+unsigned char RefrigeratorIngredient::MoveToFridge(int & plateCost /* r31 */) {}
 
 // Range: 0x801AB59C -> 0x801AB618
-unsigned char RefrigeratorIngredient::AvailableForMeal(class RefrigeratorIngredient * const this /* r31 */) {}
+// this: r31
+unsigned char RefrigeratorIngredient::AvailableForMeal() {}
 
 // Range: 0x801AB618 -> 0x801AB640
 unsigned char RefrigeratorIngredient::AvailableOnPlate() {}
@@ -66,7 +73,8 @@ unsigned char RefrigeratorIngredient::AvailableOnPlate() {}
 struct IngredientToken * RefrigeratorIngredient::GetIngredient() {}
 
 // Range: 0x801AB648 -> 0x801AB70C
-void RefrigeratorIngredient::Initialize(class RefrigeratorIngredient * const this /* r29 */, const struct IngredientToken * pIngredient /* r30 */) {
+// this: r29
+void RefrigeratorIngredient::Initialize(const struct IngredientToken * pIngredient /* r30 */) {
     // Local variables
     class InventoryItems * pInventory; // r31
     int index; // r4
@@ -95,7 +103,8 @@ void RefrigeratorTab::GetName(unsigned short * output /* r31 */) {}
 class RefrigeratorIngredient * RefrigeratorManager::GetItem() {}
 
 // Range: 0x801AB818 -> 0x801AB998
-void RefrigeratorManager::Initialize(class RefrigeratorManager * const this /* r25 */) {
+// this: r25
+void RefrigeratorManager::Initialize() {
     // Local variables
     class IngredientManager * pIngredientManager; // r29
     struct IngredientType * types[9]; // r1+0x8
@@ -122,16 +131,19 @@ int RefrigeratorManager::GetTabIndexFromIngID() {
 }
 
 // Range: 0x801AB9FC -> 0x801ABA18
-void * PlateManager::PlateManager() {}
+PlateManager::PlateManager() {}
 
 // Range: 0x801ABA18 -> 0x801ABAD0
-unsigned char PlateManager::AddIngredient(class PlateManager * const this /* r29 */, class RefrigeratorIngredient * pIng /* r30 */, int index /* r31 */) {}
+// this: r29
+unsigned char PlateManager::AddIngredient(class RefrigeratorIngredient * pIng /* r30 */, int index /* r31 */) {}
 
 // Range: 0x801ABAD0 -> 0x801ABB60
-unsigned char PlateManager::RemoveIngredient(class PlateManager * const this /* r29 */, class RefrigeratorIngredient * pIng /* r30 */, int index /* r31 */) {}
+// this: r29
+unsigned char PlateManager::RemoveIngredient(class RefrigeratorIngredient * pIng /* r30 */, int index /* r31 */) {}
 
 // Range: 0x801ABB60 -> 0x801ABBD4
-void PlateManager::ConsumeIngredients(class PlateManager * const this /* r28 */) {
+// this: r28
+void PlateManager::ConsumeIngredients() {
     // Local variables
     int i; // r29
 }
@@ -185,7 +197,8 @@ int INGTarget::GetMealMultiplier() {
 }
 
 // Range: 0x801AC028 -> 0x801AC83C
-void * INGTarget::INGTarget(class INGTarget * const this /* r30 */) {
+// this: r30
+INGTarget::INGTarget() {
     // Local variables
     unsigned long index; // r27
 
@@ -200,7 +213,8 @@ void * INGTarget::INGTarget(class INGTarget * const this /* r30 */) {
 }
 
 // Range: 0x801AC83C -> 0x801AC990
-void * INGTarget::~INGTarget(class INGTarget * const this /* r29 */) {
+// this: r29
+INGTarget::~INGTarget() {
     // References
     // -> class AptViewer * _gpAptViewer;
     // -> class EGlobal _globals;
@@ -208,7 +222,8 @@ void * INGTarget::~INGTarget(class INGTarget * const this /* r29 */) {
 }
 
 // Range: 0x801AC990 -> 0x801ACEA8
-void INGTarget::SetVariable(class INGTarget * const this /* r28 */, const char * szCommand /* r29 */, const char * szParams /* r30 */) {
+// this: r28
+void INGTarget::SetVariable(const char * szCommand /* r29 */, const char * szParams /* r30 */) {
     // Local variables
     class RefrigeratorIngredient * pIng; // r31
     int numCellsNeeded; // r1+0x10
@@ -224,7 +239,8 @@ void INGTarget::SetVariable(class INGTarget * const this /* r28 */, const char *
 }
 
 // Range: 0x801ACEA8 -> 0x801AD3B0
-char * INGTarget::GetVariable(class INGTarget * const this /* r28 */, const char * szVar /* r29 */) {
+// this: r28
+char * INGTarget::GetVariable(const char * szVar /* r29 */) {
     // Local variables
     char * retStr; // r30
     int numItems; // r0
@@ -236,7 +252,8 @@ char * INGTarget::GetVariable(class INGTarget * const this /* r28 */, const char
 }
 
 // Range: 0x801AD3B0 -> 0x801AD87C
-unsigned short * INGTarget::GetLocalizable(class INGTarget * const this /* r29 */, const char * szVar /* r30 */) {
+// this: r29
+unsigned short * INGTarget::GetLocalizable(const char * szVar /* r30 */) {
     // Local variables
     unsigned short widestring[4096]; // r1+0x468
     class RefrigeratorTab * tab; // r0
@@ -265,7 +282,8 @@ unsigned short * INGTarget::GetLocalizable(class INGTarget * const this /* r29 *
 }
 
 // Range: 0x801AD87C -> 0x801AD998
-void INGTarget::Update(class INGTarget * const this /* r30 */) {
+// this: r30
+void INGTarget::Update() {
     // Local variables
     class EVec2 dummy; // r1+0x8
 
@@ -276,7 +294,8 @@ void INGTarget::Update(class INGTarget * const this /* r30 */) {
 }
 
 // Range: 0x801AD998 -> 0x801ADA58
-char * INGTarget::GetCountList(class INGTarget * const this /* r27 */) {
+// this: r27
+char * INGTarget::GetCountList() {
     // Local variables
     int numItems; // r0
     char * retData; // r30
@@ -287,7 +306,8 @@ char * INGTarget::GetCountList(class INGTarget * const this /* r27 */) {
 }
 
 // Range: 0x801ADA58 -> 0x801ADB34
-char * INGTarget::GetUnavailableList(class INGTarget * const this /* r27 */) {
+// this: r27
+char * INGTarget::GetUnavailableList() {
     // Local variables
     int numItems; // r0
     char * retData; // r30
@@ -297,13 +317,15 @@ char * INGTarget::GetUnavailableList(class INGTarget * const this /* r27 */) {
 }
 
 // Range: 0x801ADB34 -> 0x801ADB98
-void INGTarget::UpdateCurrentItemInfo(class INGTarget * const this /* r31 */) {
+// this: r31
+void INGTarget::UpdateCurrentItemInfo() {
     // Local variables
     class RefrigeratorIngredient * pRefIng; // r0
 }
 
 // Range: 0x801ADB98 -> 0x801ADD00
-void INGTarget::InstallTabShaders(class INGTarget * const this /* r28 */, unsigned long tabIndex /* r29 */) {
+// this: r28
+void INGTarget::InstallTabShaders(unsigned long tabIndex /* r29 */) {
     // Local variables
     class RefrigeratorTab * tab; // r0
     unsigned long i; // r30
@@ -314,21 +336,24 @@ void INGTarget::InstallTabShaders(class INGTarget * const this /* r28 */, unsign
 }
 
 // Range: 0x801ADD00 -> 0x801ADDA0
-void INGTarget::InstallCurrentTabShaders(class INGTarget * const this /* r29 */) {
+// this: r29
+void INGTarget::InstallCurrentTabShaders() {
     // Local variables
     unsigned long i; // r30
     class RefrigeratorTab * tab; // r0
 }
 
 // Range: 0x801ADDA0 -> 0x801ADE30
-void INGTarget::UpdatePlateShaders(class INGTarget * const this /* r29 */) {
+// this: r29
+void INGTarget::UpdatePlateShaders() {
     // Local variables
     int i; // r30
     class RefrigeratorIngredient * pRefIng; // r0
 }
 
 // Range: 0x801ADE30 -> 0x801ADF24
-unsigned char INGTarget::EndDialog(class INGTarget * const this /* r28 */, unsigned char bAccepted /* r29 */) {}
+// this: r28
+unsigned char INGTarget::EndDialog(unsigned char bAccepted /* r29 */) {}
 
 // Range: 0x801ADF24 -> 0x801ADF34
 class RefrigeratorIngredient * INGTarget::GetCurrentIngredient() {}
@@ -352,7 +377,8 @@ void INGTarget::ShowHelpDialog() {
 }
 
 // Range: 0x801ADFE8 -> 0x801AE150
-void INGTarget::SetFlashVisibilityState(class INGTarget * const this /* r30 */) {
+// this: r30
+void INGTarget::SetFlashVisibilityState() {
     // Local variables
     int i; // r31
     int i; // r31
@@ -362,7 +388,8 @@ void INGTarget::SetFlashVisibilityState(class INGTarget * const this /* r30 */) 
 }
 
 // Range: 0x801AE150 -> 0x801AE410
-unsigned char AutoFood::AutonomousFoodSelection(class AutoFood * const this /* r27 */, int foodObjectId /* r28 */, int level /* r29 */) {
+// this: r27
+unsigned char AutoFood::AutonomousFoodSelection(int foodObjectId /* r28 */, int level /* r29 */) {
     // Local variables
     int useCount; // r31
     int foodTabs[9]; // r1+0x18

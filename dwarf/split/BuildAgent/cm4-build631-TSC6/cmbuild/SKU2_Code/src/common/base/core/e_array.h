@@ -5,13 +5,13 @@
     Code range: 0x8001A308 -> 0x8001A454
 */
 // Range: 0x8001A308 -> 0x8001A318
-float & TArray::__vc() {}
+float & TArray::operator[]() {}
 
 // Range: 0x8001A318 -> 0x8001A320
-class EAnimNodeDataPos * TArray::__opP16EAnimNodeDataPos() {}
+class EAnimNodeDataPos * TArray::operator EAnimNodeDataPos*() {}
 
 // Range: 0x8001A320 -> 0x8001A330
-struct EAnimNote & TArray::__vc() {}
+struct EAnimNote & TArray::operator[]() {}
 
 // Range: 0x8001A330 -> 0x8001A338
 int TArray::GetSize() {}
@@ -26,16 +26,18 @@ int TArray::GetSize() {}
 int TArray::GetSize() {}
 
 // Range: 0x8001A350 -> 0x8001A360
-class ESubModelShader & TArray::__vc() {}
+class ESubModelShader & TArray::operator[]() {}
 
 // Range: 0x8001A360 -> 0x8001A370
-class ESubModel & TArray::__vc() {}
+class ESubModel & TArray::operator[]() {}
 
 // Range: 0x8001A370 -> 0x8001A3C4
-void * TArray::~TArray(class TArray * const this /* r30 */) {}
+// this: r30
+TArray::~TArray() {}
 
 // Range: 0x8001A3C4 -> 0x8001A408
-void TArray::Deallocate(class TArray * const this /* r31 */) {}
+// this: r31
+void TArray::Deallocate() {}
 
 // Range: 0x8001A408 -> 0x8001A40C
 void TArray::Destruct() {}
@@ -47,30 +49,18 @@ void TArrayDefaultAllocator::Free(void * ptr /* r31 */) {}
 void TArray::Init() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\common\base\core\e_array.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x80075DF4 -> 0x80075E04
-*/
 // Range: 0x80075DF4 -> 0x80075E04
-class ERTexture * & TArray::__vc() {}
+class ERTexture * & TArray::operator[]() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\common\base\core\e_array.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x80082F14 -> 0x80083120
-*/
 // Range: 0x80082F14 -> 0x80082F24
-struct EShaderRenderPassDef & TArray::__vc() {}
+struct EShaderRenderPassDef & TArray::operator[]() {}
 
 // Range: 0x80082F24 -> 0x80082F34
-class ESubModel & TArray::__vc() {}
+class ESubModel & TArray::operator[]() {}
 
 // Range: 0x80082F34 -> 0x80082F44
-unsigned int & TArray::__vc() {}
+unsigned int & TArray::operator[]() {}
 
 // Range: 0x80082F44 -> 0x80082F4C
 int TArray::GetSize() {}
@@ -79,22 +69,27 @@ int TArray::GetSize() {}
 void TArray::RemoveAll() {}
 
 // Range: 0x80082F50 -> 0x80082F60
-struct EAnimNote & TArray::__vc() {}
+struct EAnimNote & TArray::operator[]() {}
 
 // Range: 0x80082F60 -> 0x80082FB4
-void * TArray::~TArray(class TArray * const this /* r30 */) {}
+// this: r30
+TArray::~TArray() {}
 
 // Range: 0x80082FB4 -> 0x80082FE4
-void * TArray::TArray(class TArray * const this /* r31 */) {}
+// this: r31
+TArray::TArray() {}
 
 // Range: 0x80082FE4 -> 0x80083028
-void TArray::Deallocate(class TArray * const this /* r31 */) {}
+// this: r31
+void TArray::Deallocate() {}
 
 // Range: 0x80083028 -> 0x8008307C
-void * TArray::~TArray(class TArray * const this /* r30 */) {}
+// this: r30
+TArray::~TArray() {}
 
 // Range: 0x8008307C -> 0x800830AC
-void * TArray::TArray(class TArray * const this /* r31 */) {}
+// this: r31
+TArray::TArray() {}
 
 // Range: 0x800830AC -> 0x800830C0
 void TArray::Init() {}
@@ -106,45 +101,35 @@ void TArray::Destruct() {}
 void TArray::Init() {}
 
 // Range: 0x800830D8 -> 0x8008311C
-void TArray::Deallocate(class TArray * const this /* r31 */) {}
+// this: r31
+void TArray::Deallocate() {}
 
 // Range: 0x8008311C -> 0x80083120
 void TArray::Destruct() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\common\base\core\e_array.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x800A4290 -> 0x800A42C0
-*/
 // Range: 0x800A4290 -> 0x800A42A0
-struct SndEvtHitPatch & TArray::__vc() {}
+struct SndEvtHitPatch & TArray::operator[]() {}
 
 // Range: 0x800A42A0 -> 0x800A42A8
 int TArray::GetSize() {}
 
 // Range: 0x800A42A8 -> 0x800A42B8
-class TArray & TArray::__vc() {}
+class TArray & TArray::operator[]() {}
 
 // Range: 0x800A42B8 -> 0x800A42C0
 int TArray::GetSize() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\common\base\core\e_array.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x8015D458 -> 0x8015D758
-*/
 // Range: 0x8015D458 -> 0x8015D468
-struct ENDummyPoint & TArray::__vc() {}
+struct ENDummyPoint & TArray::operator[]() {}
 
 // Range: 0x8015D468 -> 0x8015D478
-class ENDummy & TArray::__vc() {}
+class ENDummy & TArray::operator[]() {}
 
 // Range: 0x8015D478 -> 0x8015D59C
-void TArray::SetSize(class TArray * const this /* r26 */, int size /* r27 */, int allocSize /* r28 */) {
+// this: r26
+void TArray::SetSize(int size /* r27 */, int allocSize /* r28 */) {
     // Local variables
     int oldSize; // r30
     struct ENDummyPoint * pNew; // r29
@@ -166,33 +151,31 @@ void TArray::Construct(struct ENDummyPoint * p /* r30 */, int count /* r31 */) {
 void TArray::Init() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\common\base\core\e_array.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x801A342C -> 0x801A37D8
-*/
 // Range: 0x801A342C -> 0x801A343C
-struct EShaderRenderPassDef & TArray::__vc() {}
+struct EShaderRenderPassDef & TArray::operator[]() {}
 
 // Range: 0x801A343C -> 0x801A3560
-void TArray::SetSize(class TArray * const this /* r26 */, int size /* r27 */, int allocSize /* r28 */) {
+// this: r26
+void TArray::SetSize(int size /* r27 */, int allocSize /* r28 */) {
     // Local variables
     int oldSize; // r30
     struct EShaderRenderPassDef * pNew; // r29
 }
 
 // Range: 0x801A3560 -> 0x801A35B4
-void * TArray::~TArray(class TArray * const this /* r30 */) {}
+// this: r30
+TArray::~TArray() {}
 
 // Range: 0x801A35B4 -> 0x801A35E4
-void * TArray::TArray(class TArray * const this /* r31 */) {}
+// this: r31
+TArray::TArray() {}
 
 // Range: 0x801A35E4 -> 0x801A35F8
 void TArray::Init() {}
 
 // Range: 0x801A35F8 -> 0x801A363C
-void TArray::Deallocate(class TArray * const this /* r31 */) {}
+// this: r31
+void TArray::Deallocate() {}
 
 // Range: 0x801A363C -> 0x801A369C
 void TArray::Construct(struct EShaderRenderPassDef * p /* r30 */, int count /* r31 */) {}
@@ -204,50 +187,50 @@ void TArray::Destruct() {}
 void TArray::Copy(struct EShaderRenderPassDef * pDest /* r29 */, const struct EShaderRenderPassDef * pSrc /* r30 */, int count /* r31 */) {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\common\base\core\e_array.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x801F78E0 -> 0x801F83A4
-*/
 // Range: 0x801F78E0 -> 0x801F78F0
-class EString & TArray::__vc() {}
+class EString & TArray::operator[]() {}
 
 // Range: 0x801F78F0 -> 0x801F7900
-struct ENCameraPoint & TArray::__vc() {}
+struct ENCameraPoint & TArray::operator[]() {}
 
 // Range: 0x801F7900 -> 0x801F7910
-struct EAnimNote & TArray::__vc() {}
+struct EAnimNote & TArray::operator[]() {}
 
 // Range: 0x801F7910 -> 0x801F7920
-class EILight * & TArray::__vc() {}
+class EILight * & TArray::operator[]() {}
 
 // Range: 0x801F7920 -> 0x801F7928
 int TArray::GetSize() {}
 
 // Range: 0x801F7928 -> 0x801F7938
-class SimsLightInfo & TArray::__vc() {}
+class SimsLightInfo & TArray::operator[]() {}
 
 // Range: 0x801F7938 -> 0x801F7940
 int TArray::GetSize() {}
 
 // Range: 0x801F7940 -> 0x801F7994
-void * TArray::~TArray(class TArray * const this /* r30 */) {}
+// this: r30
+TArray::~TArray() {}
 
 // Range: 0x801F7994 -> 0x801F79C4
-void * TArray::TArray(class TArray * const this /* r31 */) {}
+// this: r31
+TArray::TArray() {}
 
 // Range: 0x801F79C4 -> 0x801F7A18
-class TArray & TArray::__as(class TArray * const this /* r30 */, const class TArray & src /* r31 */) {}
+// this: r30
+class TArray & TArray::operator=(const class TArray & src /* r31 */) {}
 
 // Range: 0x801F7A18 -> 0x801F7A6C
-void * TArray::~TArray(class TArray * const this /* r30 */) {}
+// this: r30
+TArray::~TArray() {}
 
 // Range: 0x801F7A6C -> 0x801F7A9C
-void * TArray::TArray(class TArray * const this /* r31 */) {}
+// this: r31
+TArray::TArray() {}
 
 // Range: 0x801F7A9C -> 0x801F7B18
-void TArray::DeleteAll(class TArray * const this /* r29 */) {
+// this: r29
+void TArray::DeleteAll() {
     // Local variables
     class EILight * * p; // r31
     int cn; // r30
@@ -260,13 +243,16 @@ void TArray::RemoveAll() {}
 void TArray::Add() {}
 
 // Range: 0x801F7B28 -> 0x801F7B7C
-void * TArray::~TArray(class TArray * const this /* r30 */) {}
+// this: r30
+TArray::~TArray() {}
 
 // Range: 0x801F7B7C -> 0x801F7BAC
-void * TArray::TArray(class TArray * const this /* r31 */) {}
+// this: r31
+TArray::TArray() {}
 
 // Range: 0x801F7BAC -> 0x801F7C70
-void TArray::Insert(class TArray * const this /* r27 */, class EILight * const * elements /* r28 */, int pos /* r29 */, int count /* r30 */) {
+// this: r27
+void TArray::Insert(class EILight * const * elements /* r28 */, int pos /* r29 */, int count /* r30 */) {
     // Local variables
     int newSize; // r4
     int allocSize; // r5
@@ -276,7 +262,8 @@ void TArray::Insert(class TArray * const this /* r27 */, class EILight * const *
 void TArray::Init() {}
 
 // Range: 0x801F7C84 -> 0x801F7CC8
-void TArray::Deallocate(class TArray * const this /* r31 */) {}
+// this: r31
+void TArray::Deallocate() {}
 
 // Range: 0x801F7CC8 -> 0x801F7D1C
 void TArray::Construct(class EILight * * p /* r30 */, int count /* r31 */) {}
@@ -291,7 +278,8 @@ void TArray::Copy() {}
 void TArray::CopyReverse(class EILight * * pDest /* r3 */, class EILight * const * pSrc /* r4 */) {}
 
 // Range: 0x801F7E38 -> 0x801F7F58
-void TArray::SetSize(class TArray * const this /* r26 */, int size /* r27 */, int allocSize /* r28 */) {
+// this: r26
+void TArray::SetSize(int size /* r27 */, int allocSize /* r28 */) {
     // Local variables
     int oldSize; // r30
     struct EAnimNote * pNew; // r29
@@ -301,10 +289,12 @@ void TArray::SetSize(class TArray * const this /* r26 */, int size /* r27 */, in
 void TArray::Init() {}
 
 // Range: 0x801F7F6C -> 0x801F7FB0
-void TArray::Deallocate(class TArray * const this /* r31 */) {}
+// this: r31
+void TArray::Deallocate() {}
 
 // Range: 0x801F7FB0 -> 0x801F7FF4
-void TArray::Deallocate(class TArray * const this /* r31 */) {}
+// this: r31
+void TArray::Deallocate() {}
 
 // Range: 0x801F7FF4 -> 0x801F8008
 void TArray::Init() {}
@@ -322,7 +312,8 @@ void TArray::Construct(struct EAnimNote * p /* r30 */, int count /* r31 */) {}
 void TArray::Destruct(class EString * p /* r30 */, int count /* r31 */) {}
 
 // Range: 0x801F824C -> 0x801F836C
-void TArray::SetSize(class TArray * const this /* r26 */, int size /* r27 */, int allocSize /* r28 */) {
+// this: r26
+void TArray::SetSize(int size /* r27 */, int allocSize /* r28 */) {
     // Local variables
     int oldSize; // r30
     class EILight * * pNew; // r29
@@ -332,29 +323,27 @@ void TArray::SetSize(class TArray * const this /* r26 */, int size /* r27 */, in
 void * TArrayDefaultAllocator::Alloc(unsigned long n /* r31 */) {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\common\base\core\e_array.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x802779EC -> 0x8027968C
-*/
 // Range: 0x802779EC -> 0x802779F8
 void TArray::Add() {}
 
 // Range: 0x802779F8 -> 0x80277A40
-void TArray::Deallocate(class TArray * const this /* r31 */) {}
+// this: r31
+void TArray::Deallocate() {}
 
 // Range: 0x80277A40 -> 0x80277A4C
 void TArray::Add() {}
 
 // Range: 0x80277A4C -> 0x80277ABC
-void * TArray::~TArray(class TArray * const this /* r30 */) {}
+// this: r30
+TArray::~TArray() {}
 
 // Range: 0x80277ABC -> 0x80277AEC
-void * TArray::TArray(class TArray * const this /* r31 */) {}
+// this: r31
+TArray::TArray() {}
 
 // Range: 0x80277AEC -> 0x80277B54
-void TArray::FreeAll(class TArray * const this /* r29 */) {
+// this: r29
+void TArray::FreeAll() {
     // Local variables
     unsigned char * * p; // r31
     int cn; // r30
@@ -364,61 +353,75 @@ void TArray::FreeAll(class TArray * const this /* r29 */) {
 void TArray::Add() {}
 
 // Range: 0x80277B60 -> 0x80277BB4
-void * TArray::~TArray(class TArray * const this /* r30 */) {}
+// this: r30
+TArray::~TArray() {}
 
 // Range: 0x80277BB4 -> 0x80277BE4
-void * TArray::TArray(class TArray * const this /* r31 */) {}
+// this: r31
+TArray::TArray() {}
 
 // Range: 0x80277BE4 -> 0x80277D1C
-void TArray::SetSize(class TArray * const this /* r26 */, int size /* r27 */, int allocSize /* r28 */) {
+// this: r26
+void TArray::SetSize(int size /* r27 */, int allocSize /* r28 */) {
     // Local variables
     int oldSize; // r30
     struct ENCameraPoint * pNew; // r29
 }
 
 // Range: 0x80277D1C -> 0x80277D70
-void * TArray::~TArray(class TArray * const this /* r30 */) {}
+// this: r30
+TArray::~TArray() {}
 
 // Range: 0x80277D70 -> 0x80277DA0
-void * TArray::TArray(class TArray * const this /* r31 */) {}
+// this: r31
+TArray::TArray() {}
 
 // Range: 0x80277DA0 -> 0x80277DF4
-void * TArray::~TArray(class TArray * const this /* r30 */) {}
+// this: r30
+TArray::~TArray() {}
 
 // Range: 0x80277DF4 -> 0x80277E24
-void * TArray::TArray(class TArray * const this /* r31 */) {}
+// this: r31
+TArray::TArray() {}
 
 // Range: 0x80277E24 -> 0x80277F54
-void TArray::SetSize(class TArray * const this /* r26 */, int size /* r27 */, int allocSize /* r28 */) {
+// this: r26
+void TArray::SetSize(int size /* r27 */, int allocSize /* r28 */) {
     // Local variables
     int oldSize; // r30
     class EVec3 * pNew; // r29
 }
 
 // Range: 0x80277F54 -> 0x80277F9C
-void TArray::Deallocate(class TArray * const this /* r31 */) {}
+// this: r31
+void TArray::Deallocate() {}
 
 // Range: 0x80277F9C -> 0x802780CC
-void TArray::SetSize(class TArray * const this /* r26 */, int size /* r27 */, int allocSize /* r28 */) {
+// this: r26
+void TArray::SetSize(int size /* r27 */, int allocSize /* r28 */) {
     // Local variables
     int oldSize; // r30
     struct ENLatticePoints * pNew; // r29
 }
 
 // Range: 0x802780CC -> 0x8027813C
-void * TArray::~TArray(class TArray * const this /* r30 */) {}
+// this: r30
+TArray::~TArray() {}
 
 // Range: 0x8027813C -> 0x80278148
 void TArray::Add() {}
 
 // Range: 0x80278148 -> 0x8027819C
-void * TArray::~TArray(class TArray * const this /* r30 */) {}
+// this: r30
+TArray::~TArray() {}
 
 // Range: 0x8027819C -> 0x802781CC
-void * TArray::TArray(class TArray * const this /* r31 */) {}
+// this: r31
+TArray::TArray() {}
 
 // Range: 0x802781CC -> 0x80278290
-void TArray::Insert(class TArray * const this /* r27 */, const int * elements /* r28 */, int pos /* r29 */, int count /* r30 */) {
+// this: r27
+void TArray::Insert(const int * elements /* r28 */, int pos /* r29 */, int count /* r30 */) {
     // Local variables
     int newSize; // r4
     int allocSize; // r5
@@ -428,7 +431,8 @@ void TArray::Insert(class TArray * const this /* r27 */, const int * elements /*
 void TArray::Init() {}
 
 // Range: 0x802782A4 -> 0x802782F4
-void TArray::Deallocate(class TArray * const this /* r31 */) {}
+// this: r31
+void TArray::Deallocate() {}
 
 // Range: 0x802782F4 -> 0x802782F8
 void TArray::Construct() {}
@@ -446,7 +450,8 @@ void TArray::CopyReverse(int * pDest /* r3 */, const int * pSrc /* r4 */) {}
 void TArray::Init() {}
 
 // Range: 0x80278428 -> 0x802784EC
-void TArray::Insert(class TArray * const this /* r27 */, const class EString * elements /* r28 */, int pos /* r29 */, int count /* r30 */) {
+// this: r27
+void TArray::Insert(const class EString * elements /* r28 */, int pos /* r29 */, int count /* r30 */) {
     // Local variables
     int newSize; // r4
     int allocSize; // r5
@@ -459,20 +464,23 @@ void TArray::Destruct() {}
 void TArray::Init() {}
 
 // Range: 0x80278504 -> 0x802785C8
-void TArray::Insert(class TArray * const this /* r27 */, const class FileCreator * elements /* r28 */, int pos /* r29 */, int count /* r30 */) {
+// this: r27
+void TArray::Insert(const class FileCreator * elements /* r28 */, int pos /* r29 */, int count /* r30 */) {
     // Local variables
     int newSize; // r4
     int allocSize; // r5
 }
 
 // Range: 0x802785C8 -> 0x80278618
-void TArray::Deallocate(class TArray * const this /* r31 */) {}
+// this: r31
+void TArray::Deallocate() {}
 
 // Range: 0x80278618 -> 0x8027862C
 void TArray::Init() {}
 
 // Range: 0x8027862C -> 0x802786F0
-void TArray::Insert(class TArray * const this /* r27 */, unsigned char * const * elements /* r28 */, int pos /* r29 */, int count /* r30 */) {
+// this: r27
+void TArray::Insert(unsigned char * const * elements /* r28 */, int pos /* r29 */, int count /* r30 */) {
     // Local variables
     int newSize; // r4
     int allocSize; // r5
@@ -488,13 +496,15 @@ void TArray::Destruct() {}
 void TArray::Construct() {}
 
 // Range: 0x802787DC -> 0x80278820
-void TArray::Deallocate(class TArray * const this /* r31 */) {}
+// this: r31
+void TArray::Deallocate() {}
 
 // Range: 0x80278820 -> 0x80278834
 void TArray::Init() {}
 
 // Range: 0x80278834 -> 0x80278878
-void TArray::Deallocate(class TArray * const this /* r31 */) {}
+// this: r31
+void TArray::Deallocate() {}
 
 // Range: 0x80278878 -> 0x8027892C
 void TArray::Copy() {}
@@ -512,13 +522,15 @@ void TArray::Destruct(struct ENLatticePoints * p /* r30 */, int count /* r31 */)
 void TArray::Construct(struct ENLatticePoints * p /* r30 */, int count /* r31 */) {}
 
 // Range: 0x80278B08 -> 0x80278C74
-void TArray::SetSize(class TArray * const this /* r28 */, int size /* r29 */, int allocSize /* r30 */) {
+// this: r28
+void TArray::SetSize(int size /* r29 */, int allocSize /* r30 */) {
     // Local variables
     int * pNew; // r31
 }
 
 // Range: 0x80278C74 -> 0x80278DAC
-void TArray::SetSize(class TArray * const this /* r26 */, int size /* r27 */, int allocSize /* r28 */) {
+// this: r26
+void TArray::SetSize(int size /* r27 */, int allocSize /* r28 */) {
     // Local variables
     int oldSize; // r30
     unsigned char * * pNew; // r29
@@ -537,7 +549,8 @@ void TArray::Copy() {}
 void TArray::CopyReverse(unsigned char * * pDest /* r3 */, unsigned char * const * pSrc /* r4 */) {}
 
 // Range: 0x80278ECC -> 0x80278FE4
-void TArray::SetSize(class TArray * const this /* r26 */, int size /* r27 */, int allocSize /* r28 */) {
+// this: r26
+void TArray::SetSize(int size /* r27 */, int allocSize /* r28 */) {
     // Local variables
     int oldSize; // r30
     class FileCreator * pNew; // r29
@@ -565,7 +578,8 @@ void TArray::Construct() {
 }
 
 // Range: 0x80279210 -> 0x80279484
-void TArray::SetSize(class TArray * const this /* r27 */, int size /* r28 */, int allocSize /* r29 */) {
+// this: r27
+void TArray::SetSize(int size /* r28 */, int allocSize /* r29 */) {
     // Local variables
     int oldSize; // r31
     class EString * pNew; // r30
@@ -581,17 +595,12 @@ void TArray::CopyReverse(class FileCreator * pDest /* r6 */, const class FileCre
 void TArray::Copy() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\common\base\core\e_array.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x80290DE0 -> 0x80292504
-*/
 // Range: 0x80290DE0 -> 0x80290DEC
 void TArray::Add() {}
 
 // Range: 0x80290DEC -> 0x80290F28
-void TArray::SetSize(class TArray * const this /* r26 */, int size /* r27 */, int allocSize /* r28 */) {
+// this: r26
+void TArray::SetSize(int size /* r27 */, int allocSize /* r28 */) {
     // Local variables
     int oldSize; // r30
     class ESubModelShader * pNew; // r29
@@ -601,19 +610,23 @@ void TArray::SetSize(class TArray * const this /* r26 */, int size /* r27 */, in
 }
 
 // Range: 0x80290F28 -> 0x80290F7C
-void * TArray::~TArray(class TArray * const this /* r30 */) {}
+// this: r30
+TArray::~TArray() {}
 
 // Range: 0x80290F7C -> 0x80290FAC
-void * TArray::TArray(class TArray * const this /* r31 */) {}
+// this: r31
+TArray::TArray() {}
 
 // Range: 0x80290FAC -> 0x80290FF8
-void TArray::Deallocate(class TArray * const this /* r31 */) {
+// this: r31
+void TArray::Deallocate() {
     // References
     // -> class EModelManager _modelman;
 }
 
 // Range: 0x80290FF8 -> 0x80291134
-void TArray::SetSize(class TArray * const this /* r26 */, int size /* r27 */, int allocSize /* r28 */) {
+// this: r26
+void TArray::SetSize(int size /* r27 */, int allocSize /* r28 */) {
     // Local variables
     int oldSize; // r30
     struct ESMSStrip * pNew; // r29
@@ -623,16 +636,19 @@ void TArray::SetSize(class TArray * const this /* r26 */, int size /* r27 */, in
 }
 
 // Range: 0x80291134 -> 0x802911A8
-void * TArray::~TArray(class TArray * const this /* r30 */) {
+// this: r30
+TArray::~TArray() {
     // References
     // -> class EModelManager _modelman;
 }
 
 // Range: 0x802911A8 -> 0x802911D8
-void * TArray::TArray(class TArray * const this /* r31 */) {}
+// this: r31
+TArray::TArray() {}
 
 // Range: 0x802911D8 -> 0x8029122C
-class TArray & TArray::__as(class TArray * const this /* r30 */, const class TArray & src /* r31 */) {}
+// this: r30
+class TArray & TArray::operator=(const class TArray & src /* r31 */) {}
 
 // Range: 0x8029122C -> 0x80291238
 void TArray::Add() {}
@@ -647,43 +663,51 @@ int TArray::Search() {
 void TArray::Add() {}
 
 // Range: 0x8029128C -> 0x802912E0
-void * TArray::~TArray(class TArray * const this /* r30 */) {}
+// this: r30
+TArray::~TArray() {}
 
 // Range: 0x802912E0 -> 0x80291310
-void * TArray::TArray(class TArray * const this /* r31 */) {}
+// this: r31
+TArray::TArray() {}
 
 // Range: 0x80291310 -> 0x80291440
-void TArray::SetSize(class TArray * const this /* r26 */, int size /* r27 */, int allocSize /* r28 */) {
+// this: r26
+void TArray::SetSize(int size /* r27 */, int allocSize /* r28 */) {
     // Local variables
     int oldSize; // r30
     struct EACTrackMorphWeightChannelStreams * pNew; // r29
 }
 
 // Range: 0x80291440 -> 0x80291470
-void * TArray::TArray(class TArray * const this /* r31 */) {}
+// this: r31
+TArray::TArray() {}
 
 // Range: 0x80291470 -> 0x802914E0
-void TArray::SafeDeleteAll(class TArray * const this /* r29 */) {
+// this: r29
+void TArray::SafeDeleteAll() {
     // Local variables
     class EFontPage * * p; // r31
     int cn; // r30
 }
 
 // Range: 0x802914E0 -> 0x80291610
-void TArray::SetSize(class TArray * const this /* r26 */, int size /* r27 */, int allocSize /* r28 */) {
+// this: r26
+void TArray::SetSize(int size /* r27 */, int allocSize /* r28 */) {
     // Local variables
     int oldSize; // r30
     class EFontPage * * pNew; // r29
 }
 
 // Range: 0x80291610 -> 0x80291664
-void * TArray::~TArray(class TArray * const this /* r30 */) {}
+// this: r30
+TArray::~TArray() {}
 
 // Range: 0x80291664 -> 0x80291678
 void TArray::Init() {}
 
 // Range: 0x80291678 -> 0x802916C8
-void TArray::Deallocate(class TArray * const this /* r31 */) {}
+// this: r31
+void TArray::Deallocate() {}
 
 // Range: 0x802916C8 -> 0x802916CC
 void TArray::Construct() {}
@@ -698,7 +722,8 @@ void TArray::Copy() {}
 void TArray::Construct() {}
 
 // Range: 0x80291758 -> 0x8029181C
-void TArray::Insert(class TArray * const this /* r27 */, const class EVec3 * elements /* r28 */, int pos /* r29 */, int count /* r30 */) {
+// this: r27
+void TArray::Insert(const class EVec3 * elements /* r28 */, int pos /* r29 */, int count /* r30 */) {
     // Local variables
     int newSize; // r4
     int allocSize; // r5
@@ -714,7 +739,8 @@ void TArray::Destruct(class ESubModelShader * p /* r30 */, int count /* r31 */) 
 void TArray::Construct(class ESubModelShader * p /* r30 */, int count /* r31 */) {}
 
 // Range: 0x80291A10 -> 0x80291A64
-void TArray::Deallocate(class TArray * const this /* r31 */) {
+// this: r31
+void TArray::Deallocate() {
     // References
     // -> class EModelManager _modelman;
 }
@@ -735,20 +761,23 @@ void TArray::Construct() {}
 void TArray::Init() {}
 
 // Range: 0x80291BFC -> 0x80291CC0
-void TArray::Insert(class TArray * const this /* r27 */, const unsigned int * elements /* r28 */, int pos /* r29 */, int count /* r30 */) {
+// this: r27
+void TArray::Insert(const unsigned int * elements /* r28 */, int pos /* r29 */, int count /* r30 */) {
     // Local variables
     int newSize; // r4
     int allocSize; // r5
 }
 
 // Range: 0x80291CC0 -> 0x80291D10
-void TArray::Deallocate(class TArray * const this /* r31 */) {}
+// this: r31
+void TArray::Deallocate() {}
 
 // Range: 0x80291D10 -> 0x80291D24
 void TArray::Init() {}
 
 // Range: 0x80291D24 -> 0x80291DE8
-void TArray::Insert(class TArray * const this /* r27 */, class ESubModelShader * const * elements /* r28 */, int pos /* r29 */, int count /* r30 */) {
+// this: r27
+void TArray::Insert(class ESubModelShader * const * elements /* r28 */, int pos /* r29 */, int count /* r30 */) {
     // Local variables
     int newSize; // r4
     int allocSize; // r5
@@ -758,7 +787,8 @@ void TArray::Insert(class TArray * const this /* r27 */, class ESubModelShader *
 void TArray::Copy() {}
 
 // Range: 0x80291E6C -> 0x80291FA4
-void TArray::SetSize(class TArray * const this /* r26 */, int size /* r27 */, int allocSize /* r28 */) {
+// this: r26
+void TArray::SetSize(int size /* r27 */, int allocSize /* r28 */) {
     // Local variables
     int oldSize; // r30
     class ESubModelShader * * pNew; // r29
@@ -777,7 +807,8 @@ void TArray::Copy() {}
 void TArray::CopyReverse(class ESubModelShader * * pDest /* r3 */, class ESubModelShader * const * pSrc /* r4 */) {}
 
 // Range: 0x802920C4 -> 0x802921F4
-void TArray::SetSize(class TArray * const this /* r26 */, int size /* r27 */, int allocSize /* r28 */) {
+// this: r26
+void TArray::SetSize(int size /* r27 */, int allocSize /* r28 */) {
     // Local variables
     int oldSize; // r30
     unsigned int * pNew; // r29
@@ -793,20 +824,16 @@ void TArray::Copy() {}
 void TArray::CopyReverse(unsigned int * pDest /* r3 */, const unsigned int * pSrc /* r4 */) {}
 
 // Range: 0x80292310 -> 0x80292440
-class TArray & TArray::__as(class TArray * const this /* r31 */, const class TArray & src /* r30 */) {}
+// this: r31
+class TArray & TArray::operator=(const class TArray & src /* r30 */) {}
 
 // Range: 0x80292440 -> 0x80292504
 void TArray::CopyReverse(class EVec3 * pDest /* r7 */, const class EVec3 * pSrc /* r6 */) {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\common\base\core\e_array.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x802EBD9C -> 0x802EFB8C
-*/
 // Range: 0x802EBD9C -> 0x802EBED8
-void TArray::SetSize(class TArray * const this /* r26 */, int size /* r27 */, int allocSize /* r28 */) {
+// this: r26
+void TArray::SetSize(int size /* r27 */, int allocSize /* r28 */) {
     // Local variables
     int oldSize; // r30
     class ESubModel * pNew; // r29
@@ -816,13 +843,16 @@ void TArray::SetSize(class TArray * const this /* r26 */, int size /* r27 */, in
 }
 
 // Range: 0x802EBED8 -> 0x802EBF2C
-void * TArray::~TArray(class TArray * const this /* r30 */) {}
+// this: r30
+TArray::~TArray() {}
 
 // Range: 0x802EBF2C -> 0x802EBF5C
-void * TArray::TArray(class TArray * const this /* r31 */) {}
+// this: r31
+TArray::TArray() {}
 
 // Range: 0x802EBF5C -> 0x802EC098
-void TArray::SetSize(class TArray * const this /* r26 */, int size /* r27 */, int allocSize /* r28 */) {
+// this: r26
+void TArray::SetSize(int size /* r27 */, int allocSize /* r28 */) {
     // Local variables
     int oldSize; // r30
     class SimsLightInfo * pNew; // r29
@@ -832,19 +862,23 @@ void TArray::SetSize(class TArray * const this /* r26 */, int size /* r27 */, in
 }
 
 // Range: 0x802EC098 -> 0x802EC0EC
-void * TArray::~TArray(class TArray * const this /* r30 */) {}
+// this: r30
+TArray::~TArray() {}
 
 // Range: 0x802EC0EC -> 0x802EC11C
-void * TArray::TArray(class TArray * const this /* r31 */) {}
+// this: r31
+TArray::TArray() {}
 
 // Range: 0x802EC11C -> 0x802EC168
-void TArray::Deallocate(class TArray * const this /* r31 */) {
+// this: r31
+void TArray::Deallocate() {
     // References
     // -> class EModelManager _modelman;
 }
 
 // Range: 0x802EC168 -> 0x802EC2A4
-void TArray::SetSize(class TArray * const this /* r26 */, int size /* r27 */, int allocSize /* r28 */) {
+// this: r26
+void TArray::SetSize(int size /* r27 */, int allocSize /* r28 */) {
     // Local variables
     int oldSize; // r30
     class BSplineVolume * pNew; // r29
@@ -854,22 +888,27 @@ void TArray::SetSize(class TArray * const this /* r26 */, int size /* r27 */, in
 }
 
 // Range: 0x802EC2A4 -> 0x802EC318
-void * TArray::~TArray(class TArray * const this /* r30 */) {
+// this: r30
+TArray::~TArray() {
     // References
     // -> class EModelManager _modelman;
 }
 
 // Range: 0x802EC318 -> 0x802EC348
-void * TArray::TArray(class TArray * const this /* r31 */) {}
+// this: r31
+TArray::TArray() {}
 
 // Range: 0x802EC348 -> 0x802EC39C
-void * TArray::~TArray(class TArray * const this /* r30 */) {}
+// this: r30
+TArray::~TArray() {}
 
 // Range: 0x802EC39C -> 0x802EC3CC
-void * TArray::TArray(class TArray * const this /* r31 */) {}
+// this: r31
+TArray::TArray() {}
 
 // Range: 0x802EC3CC -> 0x802EC508
-void TArray::SetSize(class TArray * const this /* r26 */, int size /* r27 */, int allocSize /* r28 */) {
+// this: r26
+void TArray::SetSize(int size /* r27 */, int allocSize /* r28 */) {
     // Local variables
     int oldSize; // r30
     class ENDummy * pNew; // r29
@@ -879,13 +918,16 @@ void TArray::SetSize(class TArray * const this /* r26 */, int size /* r27 */, in
 }
 
 // Range: 0x802EC508 -> 0x802EC55C
-void * TArray::~TArray(class TArray * const this /* r30 */) {}
+// this: r30
+TArray::~TArray() {}
 
 // Range: 0x802EC55C -> 0x802EC58C
-void * TArray::TArray(class TArray * const this /* r31 */) {}
+// this: r31
+TArray::TArray() {}
 
 // Range: 0x802EC58C -> 0x802EC6C8
-void TArray::SetSize(class TArray * const this /* r26 */, int size /* r27 */, int allocSize /* r28 */) {
+// this: r26
+void TArray::SetSize(int size /* r27 */, int allocSize /* r28 */) {
     // Local variables
     int oldSize; // r30
     class ENCamera * pNew; // r29
@@ -895,52 +937,64 @@ void TArray::SetSize(class TArray * const this /* r26 */, int size /* r27 */, in
 }
 
 // Range: 0x802EC6C8 -> 0x802EC71C
-void * TArray::~TArray(class TArray * const this /* r30 */) {}
+// this: r30
+TArray::~TArray() {}
 
 // Range: 0x802EC71C -> 0x802EC74C
-void * TArray::TArray(class TArray * const this /* r31 */) {}
+// this: r31
+TArray::TArray() {}
 
 // Range: 0x802EC74C -> 0x802EC87C
-void TArray::SetSize(class TArray * const this /* r26 */, int size /* r27 */, int allocSize /* r28 */) {
+// this: r26
+void TArray::SetSize(int size /* r27 */, int allocSize /* r28 */) {
     // Local variables
     int oldSize; // r30
     float * pNew; // r29
 }
 
 // Range: 0x802EC87C -> 0x802EC8D0
-void * TArray::~TArray(class TArray * const this /* r30 */) {}
+// this: r30
+TArray::~TArray() {}
 
 // Range: 0x802EC8D0 -> 0x802EC900
-void * TArray::TArray(class TArray * const this /* r31 */) {}
+// this: r31
+TArray::TArray() {}
 
 // Range: 0x802EC900 -> 0x802ECA28
-void TArray::SetSize(class TArray * const this /* r26 */, int size /* r27 */, int allocSize /* r28 */) {
+// this: r26
+void TArray::SetSize(int size /* r27 */, int allocSize /* r28 */) {
     // Local variables
     int oldSize; // r30
     unsigned char * pNew; // r29
 }
 
 // Range: 0x802ECA28 -> 0x802ECA7C
-void * TArray::~TArray(class TArray * const this /* r30 */) {}
+// this: r30
+TArray::~TArray() {}
 
 // Range: 0x802ECA7C -> 0x802ECAAC
-void * TArray::TArray(class TArray * const this /* r31 */) {}
+// this: r31
+TArray::TArray() {}
 
 // Range: 0x802ECAAC -> 0x802ECBDC
-void TArray::SetSize(class TArray * const this /* r26 */, int size /* r27 */, int allocSize /* r28 */) {
+// this: r26
+void TArray::SetSize(int size /* r27 */, int allocSize /* r28 */) {
     // Local variables
     int oldSize; // r30
     class ERTexture * * pNew; // r29
 }
 
 // Range: 0x802ECBDC -> 0x802ECC30
-void * TArray::~TArray(class TArray * const this /* r30 */) {}
+// this: r30
+TArray::~TArray() {}
 
 // Range: 0x802ECC30 -> 0x802ECC60
-void * TArray::TArray(class TArray * const this /* r31 */) {}
+// this: r31
+TArray::TArray() {}
 
 // Range: 0x802ECC60 -> 0x802ECD9C
-void TArray::SetSize(class TArray * const this /* r26 */, int size /* r27 */, int allocSize /* r28 */) {
+// this: r26
+void TArray::SetSize(int size /* r27 */, int allocSize /* r28 */) {
     // Local variables
     int oldSize; // r30
     int * pNew; // r29
@@ -950,7 +1004,8 @@ void TArray::SetSize(class TArray * const this /* r26 */, int size /* r27 */, in
 }
 
 // Range: 0x802ECD9C -> 0x802ECED8
-void TArray::SetSize(class TArray * const this /* r26 */, int size /* r27 */, int allocSize /* r28 */) {
+// this: r26
+void TArray::SetSize(int size /* r27 */, int allocSize /* r28 */) {
     // Local variables
     int oldSize; // r30
     class ECharacterNode * pNew; // r29
@@ -960,13 +1015,16 @@ void TArray::SetSize(class TArray * const this /* r26 */, int size /* r27 */, in
 }
 
 // Range: 0x802ECED8 -> 0x802ECF2C
-void * TArray::~TArray(class TArray * const this /* r30 */) {}
+// this: r30
+TArray::~TArray() {}
 
 // Range: 0x802ECF2C -> 0x802ECF5C
-void * TArray::TArray(class TArray * const this /* r31 */) {}
+// this: r31
+TArray::TArray() {}
 
 // Range: 0x802ECF5C -> 0x802ED098
-void TArray::SetSize(class TArray * const this /* r26 */, int size /* r27 */, int allocSize /* r28 */) {
+// this: r26
+void TArray::SetSize(int size /* r27 */, int allocSize /* r28 */) {
     // Local variables
     int oldSize; // r30
     class EAnimNodeDataPos * pNew; // r29
@@ -976,13 +1034,16 @@ void TArray::SetSize(class TArray * const this /* r26 */, int size /* r27 */, in
 }
 
 // Range: 0x802ED098 -> 0x802ED0EC
-void * TArray::~TArray(class TArray * const this /* r30 */) {}
+// this: r30
+TArray::~TArray() {}
 
 // Range: 0x802ED0EC -> 0x802ED11C
-void * TArray::TArray(class TArray * const this /* r31 */) {}
+// this: r31
+TArray::TArray() {}
 
 // Range: 0x802ED11C -> 0x802ED258
-void TArray::SetSize(class TArray * const this /* r26 */, int size /* r27 */, int allocSize /* r28 */) {
+// this: r26
+void TArray::SetSize(int size /* r27 */, int allocSize /* r28 */) {
     // Local variables
     int oldSize; // r30
     class EMorphWeightChannelNodeDataPos * pNew; // r29
@@ -992,13 +1053,16 @@ void TArray::SetSize(class TArray * const this /* r26 */, int size /* r27 */, in
 }
 
 // Range: 0x802ED258 -> 0x802ED2AC
-void * TArray::~TArray(class TArray * const this /* r30 */) {}
+// this: r30
+TArray::~TArray() {}
 
 // Range: 0x802ED2AC -> 0x802ED2DC
-void * TArray::TArray(class TArray * const this /* r31 */) {}
+// this: r31
+TArray::TArray() {}
 
 // Range: 0x802ED2DC -> 0x802ED418
-void TArray::SetSize(class TArray * const this /* r26 */, int size /* r27 */, int allocSize /* r28 */) {
+// this: r26
+void TArray::SetSize(int size /* r27 */, int allocSize /* r28 */) {
     // Local variables
     int oldSize; // r30
     float * pNew; // r29
@@ -1008,13 +1072,16 @@ void TArray::SetSize(class TArray * const this /* r26 */, int size /* r27 */, in
 }
 
 // Range: 0x802ED418 -> 0x802ED46C
-void * TArray::~TArray(class TArray * const this /* r30 */) {}
+// this: r30
+TArray::~TArray() {}
 
 // Range: 0x802ED46C -> 0x802ED49C
-void * TArray::TArray(class TArray * const this /* r31 */) {}
+// this: r31
+TArray::TArray() {}
 
 // Range: 0x802ED49C -> 0x802ED5D8
-void TArray::SetSize(class TArray * const this /* r26 */, int size /* r27 */, int allocSize /* r28 */) {
+// this: r26
+void TArray::SetSize(int size /* r27 */, int allocSize /* r28 */) {
     // Local variables
     int oldSize; // r30
     struct EAnimEvent * pNew; // r29
@@ -1024,13 +1091,16 @@ void TArray::SetSize(class TArray * const this /* r26 */, int size /* r27 */, in
 }
 
 // Range: 0x802ED5D8 -> 0x802ED62C
-void * TArray::~TArray(class TArray * const this /* r30 */) {}
+// this: r30
+TArray::~TArray() {}
 
 // Range: 0x802ED62C -> 0x802ED65C
-void * TArray::TArray(class TArray * const this /* r31 */) {}
+// this: r31
+TArray::TArray() {}
 
 // Range: 0x802ED65C -> 0x802ED798
-void TArray::SetSize(class TArray * const this /* r26 */, int size /* r27 */, int allocSize /* r28 */) {
+// this: r26
+void TArray::SetSize(int size /* r27 */, int allocSize /* r28 */) {
     // Local variables
     int oldSize; // r30
     struct SndEvtHitPatch * pNew; // r29
@@ -1040,7 +1110,8 @@ void TArray::SetSize(class TArray * const this /* r26 */, int size /* r27 */, in
 }
 
 // Range: 0x802ED798 -> 0x802ED8D4
-void TArray::SetSize(class TArray * const this /* r26 */, int size /* r27 */, int allocSize /* r28 */) {
+// this: r26
+void TArray::SetSize(int size /* r27 */, int allocSize /* r28 */) {
     // Local variables
     int oldSize; // r30
     class TArray * pNew; // r29
@@ -1050,10 +1121,12 @@ void TArray::SetSize(class TArray * const this /* r26 */, int size /* r27 */, in
 }
 
 // Range: 0x802ED8D4 -> 0x802ED928
-void * TArray::~TArray(class TArray * const this /* r30 */) {}
+// this: r30
+TArray::~TArray() {}
 
 // Range: 0x802ED928 -> 0x802ED958
-void * TArray::TArray(class TArray * const this /* r31 */) {}
+// this: r31
+TArray::TArray() {}
 
 // Range: 0x802ED958 -> 0x802ED9D8
 void TArray::Copy(class ESubModel * pDest /* r27 */, const class ESubModel * pSrc /* r28 */, int count /* r29 */) {}
@@ -1065,7 +1138,8 @@ void TArray::Destruct(class ESubModel * p /* r30 */, int count /* r31 */) {}
 void TArray::Construct(class ESubModel * p /* r30 */, int count /* r31 */) {}
 
 // Range: 0x802EDA84 -> 0x802EDB04
-void TArray::Deallocate(class TArray * const this /* r29 */) {
+// this: r29
+void TArray::Deallocate() {
     // References
     // -> class EModelManager _modelman;
 }
@@ -1083,7 +1157,8 @@ void TArray::Destruct() {}
 void TArray::Construct() {}
 
 // Range: 0x802EDC38 -> 0x802EDC80
-void TArray::Deallocate(class TArray * const this /* r31 */) {
+// this: r31
+void TArray::Deallocate() {
     // References
     // -> class EModelManager _modelman;
 }
@@ -1107,7 +1182,8 @@ void TArray::Construct(class BSplineVolume * p /* r26 */, int count /* r27 */) {
 void TArray::Init() {}
 
 // Range: 0x802EDED4 -> 0x802EDF28
-void TArray::Deallocate(class TArray * const this /* r31 */) {
+// this: r31
+void TArray::Deallocate() {
     // References
     // -> class EModelManager _modelman;
 }
@@ -1125,7 +1201,8 @@ void TArray::Destruct(class ENDummy * p /* r30 */, int count /* r31 */) {}
 void TArray::Construct(class ENDummy * p /* r30 */, int count /* r31 */) {}
 
 // Range: 0x802EE270 -> 0x802EE2FC
-void TArray::Deallocate(class TArray * const this /* r29 */) {
+// this: r29
+void TArray::Deallocate() {
     // References
     // -> class EModelManager _modelman;
 }
@@ -1143,7 +1220,8 @@ void TArray::Destruct(class ENCamera * p /* r30 */, int count /* r31 */) {}
 void TArray::Construct(class ENCamera * p /* r30 */, int count /* r31 */) {}
 
 // Range: 0x802EE644 -> 0x802EE6D0
-void TArray::Deallocate(class TArray * const this /* r29 */) {
+// this: r29
+void TArray::Deallocate() {
     // References
     // -> class EModelManager _modelman;
 }
@@ -1161,7 +1239,8 @@ void TArray::Destruct() {}
 void TArray::Construct() {}
 
 // Range: 0x802EE798 -> 0x802EE814
-void TArray::Deallocate(class TArray * const this /* r30 */) {}
+// this: r30
+void TArray::Deallocate() {}
 
 // Range: 0x802EE814 -> 0x802EE828
 void TArray::Init() {}
@@ -1176,7 +1255,8 @@ void TArray::Destruct() {}
 void TArray::Construct() {}
 
 // Range: 0x802EE8B4 -> 0x802EE8F8
-void TArray::Deallocate(class TArray * const this /* r31 */) {}
+// this: r31
+void TArray::Deallocate() {}
 
 // Range: 0x802EE8F8 -> 0x802EE90C
 void TArray::Init() {}
@@ -1191,7 +1271,8 @@ void TArray::Destruct() {}
 void TArray::Construct() {}
 
 // Range: 0x802EE998 -> 0x802EE9DC
-void TArray::Deallocate(class TArray * const this /* r31 */) {}
+// this: r31
+void TArray::Deallocate() {}
 
 // Range: 0x802EE9DC -> 0x802EE9F0
 void TArray::Init() {}
@@ -1218,7 +1299,8 @@ void TArray::Destruct(class ECharacterNode * p /* r29 */, int count /* r30 */) {
 void TArray::Construct(class ECharacterNode * p /* r29 */, int count /* r30 */) {}
 
 // Range: 0x802EED2C -> 0x802EEDD0
-void TArray::Deallocate(class TArray * const this /* r28 */) {
+// this: r28
+void TArray::Deallocate() {
     // References
     // -> class ECharacterManager _characterman;
 }
@@ -1239,7 +1321,8 @@ void TArray::Construct() {
 }
 
 // Range: 0x802EEF78 -> 0x802EF004
-void TArray::Deallocate(class TArray * const this /* r29 */) {
+// this: r29
+void TArray::Deallocate() {
     // References
     // -> class EAnimManager _animman;
 }
@@ -1260,7 +1343,8 @@ void TArray::Construct() {
 }
 
 // Range: 0x802EF134 -> 0x802EF1C0
-void TArray::Deallocate(class TArray * const this /* r29 */) {
+// this: r29
+void TArray::Deallocate() {
     // References
     // -> class EAnimManager _animman;
 }
@@ -1278,7 +1362,8 @@ void TArray::Destruct() {}
 void TArray::Construct() {}
 
 // Range: 0x802EF288 -> 0x802EF2FC
-void TArray::Deallocate(class TArray * const this /* r31 */) {
+// this: r31
+void TArray::Deallocate() {
     // References
     // -> class EAnimManager _animman;
 }
@@ -1296,7 +1381,8 @@ void TArray::Destruct() {}
 void TArray::Construct() {}
 
 // Range: 0x802EF3D4 -> 0x802EF41C
-void TArray::Deallocate(class TArray * const this /* r31 */) {
+// this: r31
+void TArray::Deallocate() {
     // References
     // -> class EAnimManager _animman;
 }
@@ -1326,7 +1412,8 @@ void TArray::Destruct(class TArray * p /* r30 */, int count /* r31 */) {}
 void TArray::Construct(class TArray * p /* r30 */, int count /* r31 */) {}
 
 // Range: 0x802EF654 -> 0x802EF6D4
-void TArray::Deallocate(class TArray * const this /* r29 */) {
+// this: r29
+void TArray::Deallocate() {
     // References
     // -> class ESoundEventManager g_soundeventman;
 }
@@ -1335,43 +1422,52 @@ void TArray::Deallocate(class TArray * const this /* r29 */) {
 void TArray::Init() {}
 
 // Range: 0x802EF6E8 -> 0x802EF73C
-class TArray & TArray::__as(class TArray * const this /* r30 */, const class TArray & src /* r31 */) {}
+// this: r30
+class TArray & TArray::operator=(const class TArray & src /* r31 */) {}
 
 // Range: 0x802EF73C -> 0x802EF790
-class TArray & TArray::__as(class TArray * const this /* r30 */, const class TArray & src /* r31 */) {}
+// this: r30
+class TArray & TArray::operator=(const class TArray & src /* r31 */) {}
 
 // Range: 0x802EF790 -> 0x802EF7F0
 void TArray::Destruct(class ENLattice * p /* r30 */, int count /* r31 */) {}
 
 // Range: 0x802EF7F0 -> 0x802EF844
-class TArray & TArray::__as(class TArray * const this /* r30 */, const class TArray & src /* r31 */) {}
+// this: r30
+class TArray & TArray::operator=(const class TArray & src /* r31 */) {}
 
 // Range: 0x802EF844 -> 0x802EF914
-class TArray & TArray::__as(class TArray * const this /* r30 */, const class TArray & src /* r31 */) {}
+// this: r30
+class TArray & TArray::operator=(const class TArray & src /* r31 */) {}
 
 // Range: 0x802EF914 -> 0x802EF968
-void * TArray::~TArray(class TArray * const this /* r30 */) {}
+// this: r30
+TArray::~TArray() {}
 
 // Range: 0x802EF968 -> 0x802EF97C
-void * TArray::TArray() {}
+TArray::TArray() {}
 
 // Range: 0x802EF97C -> 0x802EFA94
-class TArray & TArray::__as(class TArray * const this /* r30 */, const class TArray & src /* r31 */) {}
+// this: r30
+class TArray & TArray::operator=(const class TArray & src /* r31 */) {}
 
 // Range: 0x802EFA94 -> 0x802EFAE8
-void * TArray::~TArray(class TArray * const this /* r30 */) {}
+// this: r30
+TArray::~TArray() {}
 
 // Range: 0x802EFAE8 -> 0x802EFAFC
-void * TArray::TArray() {}
+TArray::TArray() {}
 
 // Range: 0x802EFAFC -> 0x802EFB44
-void TArray::Deallocate(class TArray * const this /* r31 */) {
+// this: r31
+void TArray::Deallocate() {
     // References
     // -> class ESoundEventManager g_soundeventman;
 }
 
 // Range: 0x802EFB44 -> 0x802EFB8C
-void TArray::Deallocate(class TArray * const this /* r31 */) {
+// this: r31
+void TArray::Deallocate() {
     // References
     // -> class ECharacterManager _characterman;
 }

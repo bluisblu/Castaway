@@ -5,25 +5,30 @@
     Code range: 0x800D3F40 -> 0x800D4140
 */
 // Range: 0x800D3F40 -> 0x800D3F7C
-void * PlayerFamilyImpl::PlayerFamilyImpl(class PlayerFamilyImpl * const this /* r31 */) {
+// this: r31
+PlayerFamilyImpl::PlayerFamilyImpl() {
     // References
     // -> struct [anonymous] __vt__16PlayerFamilyImpl;
 }
 
 // Range: 0x800D3F7C -> 0x800D3FB8
-void * PlayerFamilyImpl::PlayerFamilyImpl(class PlayerFamilyImpl * const this /* r31 */) {
+// this: r31
+PlayerFamilyImpl::PlayerFamilyImpl() {
     // References
     // -> struct [anonymous] __vt__16PlayerFamilyImpl;
 }
 
 // Range: 0x800D3FB8 -> 0x800D4010
-void * PlayerFamilyImpl::~PlayerFamilyImpl(class PlayerFamilyImpl * const this /* r30 */) {}
+// this: r30
+PlayerFamilyImpl::~PlayerFamilyImpl() {}
 
 // Range: 0x800D4010 -> 0x800D404C
-void PlayerFamilyImpl::ClearFamily(class PlayerFamilyImpl * const this /* r31 */) {}
+// this: r31
+void PlayerFamilyImpl::ClearFamily() {}
 
 // Range: 0x800D404C -> 0x800D40A4
-void PlayerFamilyImpl::DoStream(class PlayerFamilyImpl * const this /* r30 */, class ReconBuffer * rb /* r31 */) {}
+// this: r30
+void PlayerFamilyImpl::DoStream(class ReconBuffer * rb /* r31 */) {}
 
 // Range: 0x800D40A4 -> 0x800D40CC
 signed short PlayerFamilyImpl::GetStatValue() {}

@@ -5,13 +5,15 @@
     Code range: 0x802CF2E8 -> 0x802CF7FC
 */
 // Range: 0x802CF2E8 -> 0x802CF32C
-void * ENgcTexture::ENgcTexture(class ENgcTexture * const this /* r31 */) {
+// this: r31
+ENgcTexture::ENgcTexture() {
     // References
     // -> struct [anonymous] __vt__11ENgcTexture;
 }
 
 // Range: 0x802CF32C -> 0x802CF3CC
-void * ENgcTexture::~ENgcTexture(class ENgcTexture * const this /* r30 */) {
+// this: r30
+ENgcTexture::~ENgcTexture() {
     // References
     // -> class ETextureManager _textureman;
     // -> struct [anonymous] __vt__11ENgcTexture;
@@ -42,7 +44,8 @@ void * ENgcTexture::UpdatePaletteDeswizzled() {}
 void ENgcTexture::UpdateEnd() {}
 
 // Range: 0x802CF46C -> 0x802CF6E4
-unsigned char ENgcTexture::Create(class ENgcTexture * const this /* r30 */, const struct ETextureDef & td /* r31 */) {
+// this: r30
+unsigned char ENgcTexture::Create(const struct ETextureDef & td /* r31 */) {
     // References
     // -> class ETextureManager _textureman;
 }
@@ -72,6 +75,7 @@ void ENgcTexture::ClearSwizzleFlag() {}
 void ENgcTexture::SetSwizzleFlag() {}
 
 // Range: 0x802CF794 -> 0x802CF7FC
-void ENgcTexture::CopyFrameBufferIntoTexture(class ENgcTexture * const this /* r31 */) {}
+// this: r31
+void ENgcTexture::CopyFrameBufferIntoTexture() {}
 
 

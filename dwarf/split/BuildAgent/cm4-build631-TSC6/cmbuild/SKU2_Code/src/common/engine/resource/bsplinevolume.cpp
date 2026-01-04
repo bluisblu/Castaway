@@ -5,13 +5,15 @@
     Code range: 0x802D2590 -> 0x802D4294
 */
 // Range: 0x802D2590 -> 0x802D25F0
-void * BSplineVolume::~BSplineVolume(class BSplineVolume * const this /* r30 */) {
+// this: r30
+BSplineVolume::~BSplineVolume() {
     // References
     // -> struct [anonymous] __vt__13BSplineVolume;
 }
 
 // Range: 0x802D25F0 -> 0x802D27E4
-void BSplineVolume::Free(class BSplineVolume * const this /* r25 */) {
+// this: r25
+void BSplineVolume::Free() {
     // Local variables
     int i; // r27
     int i0; // r26
@@ -24,7 +26,8 @@ void BSplineVolume::Free(class BSplineVolume * const this /* r25 */) {
 }
 
 // Range: 0x802D27E4 -> 0x802D2ADC
-void BSplineVolume::Read(class BSplineVolume * const this /* r22 */, class EStream & s /* r23 */) {
+// this: r22
+void BSplineVolume::Read(class EStream & s /* r23 */) {
     // Local variables
     int nVersion; // r1+0x8
     int i; // r25
@@ -39,7 +42,8 @@ void BSplineVolume::Read(class BSplineVolume * const this /* r22 */, class EStre
 }
 
 // Range: 0x802D2ADC -> 0x802D2DE4
-void BSplineVolume::Read(class BSplineVolume * const this /* r22 */, class EFile * s /* r23 */) {
+// this: r22
+void BSplineVolume::Read(class EFile * s /* r23 */) {
     // Local variables
     int nVersion; // r1+0x8
     int i; // r25
@@ -54,7 +58,8 @@ void BSplineVolume::Read(class BSplineVolume * const this /* r22 */, class EFile
 }
 
 // Range: 0x802D2DE4 -> 0x802D30A4
-unsigned int BSplineVolume::Read(class BSplineVolume * const this /* r21 */, unsigned char * buff /* r22 */) {
+// this: r21
+unsigned int BSplineVolume::Read(unsigned char * buff /* r22 */) {
     // Local variables
     unsigned char * start; // r27
     int nVersion; // r1+0x8

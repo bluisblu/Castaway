@@ -5,7 +5,8 @@
     Code range: 0x80097954 -> 0x8009AD6C
 */
 // Range: 0x80097954 -> 0x80097ADC
-void * SequenceManager::SequenceManager(class SequenceManager * const this /* r28 */) {
+// this: r28
+SequenceManager::SequenceManager() {
     // Local variables
     unsigned int i; // r0
     unsigned int i; // r7
@@ -18,7 +19,8 @@ class SequenceManager * SequenceManager::GetSingleton() {
 }
 
 // Range: 0x80097B20 -> 0x80097C48
-void SequenceManager::StartSequence(class SequenceManager * const this /* r30 */, enum eSequenceType sequenceType /* r31 */) {
+// this: r30
+void SequenceManager::StartSequence(enum eSequenceType sequenceType /* r31 */) {
     // Local variables
     class UIScreenManager * pUISM; // r3
 
@@ -41,34 +43,40 @@ void SequenceManager::PauseSequence() {}
 void SequenceManager::UnpauseSequence() {}
 
 // Range: 0x80097C8C -> 0x80097E04
-void SequenceManager::UpdateSequenceManager(class SequenceManager * const this /* r30 */, float fDeltaSeconds /* f30 */) {
+// this: r30
+void SequenceManager::UpdateSequenceManager(float fDeltaSeconds /* f30 */) {
     // Local variables
     class cSimulator * pSimulator; // r31
     float fTimeMultiplier; // f31
 }
 
 // Range: 0x80097E04 -> 0x80097E98
-void SequenceManager::UpdateSequence(class SequenceManager * const this /* r30 */, enum eSequenceType sequenceType /* r31 */) {}
+// this: r30
+void SequenceManager::UpdateSequence(enum eSequenceType sequenceType /* r31 */) {}
 
 // Range: 0x80097E98 -> 0x80097F60
-void SequenceManager::AdvanceSequence(class SequenceManager * const this /* r30 */, enum eSequenceType sequenceType /* r31 */) {}
+// this: r30
+void SequenceManager::AdvanceSequence(enum eSequenceType sequenceType /* r31 */) {}
 
 // Range: 0x80097F60 -> 0x80098214
-void SequenceManager::AdvanceCatamaranSequence(class SequenceManager * const this /* r31 */) {
+// this: r31
+void SequenceManager::AdvanceCatamaranSequence() {
     // References
     // -> class EGlobal _globals;
     // -> unsigned int kCatSamples[7];
 }
 
 // Range: 0x80098214 -> 0x80098404
-void SequenceManager::AdvanceRadioRescueSequence(class SequenceManager * const this /* r31 */) {
+// this: r31
+void SequenceManager::AdvanceRadioRescueSequence() {
     // References
     // -> class EGlobal _globals;
     // -> unsigned int kRadioSamples[7];
 }
 
 // Range: 0x80098404 -> 0x800984B8
-void SequenceManager::SetUpCameraForCurrentStage(class SequenceManager * const this /* r30 */) {
+// this: r30
+void SequenceManager::SetUpCameraForCurrentStage() {
     // Local variables
     class ESimsCam * pCam; // r31
 }
@@ -88,7 +96,8 @@ float SequenceManager::GetCurrentSlideDuration() {
 }
 
 // Range: 0x8009853C -> 0x800985F8
-class EVec3 SequenceManager::GetCurrentSlideCameraPos(class SequenceManager * const this /* r30 */) {
+// this: r30
+class EVec3 SequenceManager::GetCurrentSlideCameraPos() {
     // References
     // -> class EVec3 kDefaultStageCameraPos;
     // -> class EVec3 kRadioCameraPos[7];
@@ -96,7 +105,8 @@ class EVec3 SequenceManager::GetCurrentSlideCameraPos(class SequenceManager * co
 }
 
 // Range: 0x800985F8 -> 0x800986B4
-class EVec3 SequenceManager::GetCurrentSlideCameraLookAt(class SequenceManager * const this /* r30 */) {
+// this: r30
+class EVec3 SequenceManager::GetCurrentSlideCameraLookAt() {
     // References
     // -> class EVec3 kDefaultStageCameraLookAt;
     // -> class EVec3 kRadioCameraLookAt[7];
@@ -111,7 +121,8 @@ unsigned int SequenceManager::GetNextSlideBackground() {
 }
 
 // Range: 0x8009871C -> 0x80098938
-void SequenceManager::RenderSequence(class SequenceManager * const this /* r30 */, class ERC * prc /* r31 */) {
+// this: r30
+void SequenceManager::RenderSequence(class ERC * prc /* r31 */) {
     // References
     // -> class EGlobal _globals;
 }
@@ -120,10 +131,12 @@ void SequenceManager::RenderSequence(class SequenceManager * const this /* r30 *
 void SequenceManager::PositionsSimsForCurrent() {}
 
 // Range: 0x80098960 -> 0x800989C0
-void SequenceManager::GetSimOrientationForBoneRendering(class SequenceManager * const this /* r30 */, class EMat4 & mOrient /* r31 */) {}
+// this: r30
+void SequenceManager::GetSimOrientationForBoneRendering(class EMat4 & mOrient /* r31 */) {}
 
 // Range: 0x800989C0 -> 0x80098A74
-void SequenceManager::PositionsSimsForCatamaranSequence(class SequenceManager * const this /* r28 */) {
+// this: r28
+void SequenceManager::PositionsSimsForCatamaranSequence() {
     // Local variables
     unsigned int i; // r29
 
@@ -132,7 +145,8 @@ void SequenceManager::PositionsSimsForCatamaranSequence(class SequenceManager * 
 }
 
 // Range: 0x80098A74 -> 0x80098B10
-void SequenceManager::PositionsSimsForRadioSequence(class SequenceManager * const this /* r28 */) {
+// this: r28
+void SequenceManager::PositionsSimsForRadioSequence() {
     // Local variables
     unsigned int i; // r29
 
@@ -144,7 +158,8 @@ void SequenceManager::PositionsSimsForRadioSequence(class SequenceManager * cons
 void SequenceManager::AnimateSimsForCurrent() {}
 
 // Range: 0x80098B38 -> 0x80098BB4
-void SequenceManager::AnimateSimsForCatamaranSequence(class SequenceManager * const this /* r28 */) {
+// this: r28
+void SequenceManager::AnimateSimsForCatamaranSequence() {
     // Local variables
     unsigned int i; // r29
 
@@ -153,7 +168,8 @@ void SequenceManager::AnimateSimsForCatamaranSequence(class SequenceManager * co
 }
 
 // Range: 0x80098BB4 -> 0x80098C30
-void SequenceManager::AnimateSimsForRadioSequence(class SequenceManager * const this /* r28 */) {
+// this: r28
+void SequenceManager::AnimateSimsForRadioSequence() {
     // Local variables
     unsigned int i; // r29
 
@@ -162,13 +178,15 @@ void SequenceManager::AnimateSimsForRadioSequence(class SequenceManager * const 
 }
 
 // Range: 0x80098C30 -> 0x80098D88
-void SequenceManager::SpawnYesNoDialog(class SequenceManager * const this /* r23 */, enum eDialogNavOptions navOption /* r24 */, const unsigned short * msg /* r25 */, const unsigned short * title /* r26 */, int preselected /* r27 */, class CBFunctor1 * pCallback /* r28 */) {
+// this: r23
+void SequenceManager::SpawnYesNoDialog(enum eDialogNavOptions navOption /* r24 */, const unsigned short * msg /* r25 */, const unsigned short * title /* r26 */, int preselected /* r27 */, class CBFunctor1 * pCallback /* r28 */) {
     // References
     // -> class EGlobal _globals;
 }
 
 // Range: 0x80098DF0 -> 0x80098ECC
-void SequenceManager::DialogYesNoSelectionCallback(class SequenceManager * const this /* r30 */) {
+// this: r30
+void SequenceManager::DialogYesNoSelectionCallback() {
     // Local variables
     class UIScreenManager * pUISM; // r3
 
@@ -178,7 +196,8 @@ void SequenceManager::DialogYesNoSelectionCallback(class SequenceManager * const
 }
 
 // Range: 0x80098ECC -> 0x80098F50
-void SequenceManager::EndCredits(class SequenceManager * const this /* r31 */) {
+// this: r31
+void SequenceManager::EndCredits() {
     // Local variables
     class UIScreenManager * pUISM; // r3
 
@@ -188,7 +207,8 @@ void SequenceManager::EndCredits(class SequenceManager * const this /* r31 */) {
 }
 
 // Range: 0x80098F50 -> 0x800990C0
-unsigned char SequenceManager::IsBackgroundModelLoaded(class SequenceManager * const this /* r24 */, unsigned int iModelIndex /* r25 */) {
+// this: r24
+unsigned char SequenceManager::IsBackgroundModelLoaded(unsigned int iModelIndex /* r25 */) {
     // Local variables
     int iCharID; // r4
     int iAnimID; // r26
@@ -203,7 +223,8 @@ unsigned char SequenceManager::IsBackgroundModelLoaded(class SequenceManager * c
 }
 
 // Range: 0x800990C0 -> 0x80099230
-void SequenceManager::LoadBackgroundModel(class SequenceManager * const this /* r26 */, unsigned int iModelIndex /* r31 */) {
+// this: r26
+void SequenceManager::LoadBackgroundModel(unsigned int iModelIndex /* r31 */) {
     // Local variables
     unsigned int iCharID; // r0
     unsigned int iModelID; // r0
@@ -216,10 +237,12 @@ void SequenceManager::LoadBackgroundModel(class SequenceManager * const this /* 
 }
 
 // Range: 0x80099230 -> 0x8009931C
-void SequenceManager::ReleaseBackgroundModel(class SequenceManager * const this /* r31 */, unsigned int iModelIndex /* r29 */) {}
+// this: r31
+void SequenceManager::ReleaseBackgroundModel(unsigned int iModelIndex /* r29 */) {}
 
 // Range: 0x8009931C -> 0x80099378
-void SequenceManager::ReleaseAllBackgroundModels(class SequenceManager * const this /* r30 */) {
+// this: r30
+void SequenceManager::ReleaseAllBackgroundModels() {
     // Local variables
     unsigned int i; // r31
 }
@@ -228,10 +251,12 @@ void SequenceManager::ReleaseAllBackgroundModels(class SequenceManager * const t
 void SequenceManager::SetBackgroundShaderState() {}
 
 // Range: 0x800993A0 -> 0x80099400
-void SequenceManager::UpdateBackgroundObjectForCurrentSlide(class SequenceManager * const this /* r31 */) {}
+// this: r31
+void SequenceManager::UpdateBackgroundObjectForCurrentSlide() {}
 
 // Range: 0x80099400 -> 0x80099484
-void SequenceManager::PositionBackgroundModel(class SequenceManager * const this /* r30 */) {
+// this: r30
+void SequenceManager::PositionBackgroundModel() {
     // Local variables
     class EMat4 * mOrient; // r31
 }
@@ -264,10 +289,12 @@ unsigned int SequenceManager::GetRadioBackgroundResourceID() {
 void SequenceManager::SwapBackgroundCache() {}
 
 // Range: 0x80099608 -> 0x80099670
-void SequenceManager::CheckStartFade(class SequenceManager * const this /* r31 */, float fDeltaSeconds /* f31 */) {}
+// this: r31
+void SequenceManager::CheckStartFade(float fDeltaSeconds /* f31 */) {}
 
 // Range: 0x80099670 -> 0x800997C8
-unsigned char SequenceManager::IsCatamaranModelLoaded(class SequenceManager * const this /* r29 */) {
+// this: r29
+unsigned char SequenceManager::IsCatamaranModelLoaded() {
     // Local variables
     int iCharID; // r4
     int iAnimID; // r31
@@ -282,7 +309,8 @@ unsigned char SequenceManager::IsCatamaranModelLoaded(class SequenceManager * co
 }
 
 // Range: 0x800997C8 -> 0x800998D0
-void SequenceManager::LoadCatamaranModel(class SequenceManager * const this /* r31 */) {
+// this: r31
+void SequenceManager::LoadCatamaranModel() {
     // References
     // -> class EAnimManager _animman;
     // -> class EModelManager _modelman;
@@ -290,13 +318,15 @@ void SequenceManager::LoadCatamaranModel(class SequenceManager * const this /* r
 }
 
 // Range: 0x800998D0 -> 0x8009997C
-void SequenceManager::ReleaseCatamaranModel(class SequenceManager * const this /* r31 */) {}
+// this: r31
+void SequenceManager::ReleaseCatamaranModel() {}
 
 // Range: 0x8009997C -> 0x8009999C
 void SequenceManager::SetCatmaranShaderState() {}
 
 // Range: 0x8009999C -> 0x80099A44
-void SequenceManager::PositionCatamaranForNewSlide(class SequenceManager * const this /* r30 */) {
+// this: r30
+void SequenceManager::PositionCatamaranForNewSlide() {
     // Local variables
     class EMat4 * mOrient; // r31
 
@@ -305,7 +335,8 @@ void SequenceManager::PositionCatamaranForNewSlide(class SequenceManager * const
 }
 
 // Range: 0x80099A44 -> 0x80099B9C
-unsigned char SequenceManager::IsCommonModelLoaded(class SequenceManager * const this /* r25 */, enum eCommonModels eType /* r26 */) {
+// this: r25
+unsigned char SequenceManager::IsCommonModelLoaded(enum eCommonModels eType /* r26 */) {
     // Local variables
     int iCharID; // r4
     int iAnimID; // r27
@@ -320,14 +351,16 @@ unsigned char SequenceManager::IsCommonModelLoaded(class SequenceManager * const
 }
 
 // Range: 0x80099B9C -> 0x80099C1C
-unsigned char SequenceManager::AreCommonModelsLoaded(class SequenceManager * const this /* r29 */) {
+// this: r29
+unsigned char SequenceManager::AreCommonModelsLoaded() {
     // Local variables
     unsigned char retval; // r31
     unsigned int i; // r30
 }
 
 // Range: 0x80099C1C -> 0x80099D80
-void SequenceManager::LoadCommonModel(class SequenceManager * const this /* r26 */, enum eCommonModels eType /* r31 */) {
+// this: r26
+void SequenceManager::LoadCommonModel(enum eCommonModels eType /* r31 */) {
     // Local variables
     unsigned int iCharID; // r0
     unsigned int iModelID; // r0
@@ -340,33 +373,38 @@ void SequenceManager::LoadCommonModel(class SequenceManager * const this /* r26 
 }
 
 // Range: 0x80099D80 -> 0x80099DE0
-void SequenceManager::LoadAllCommonModels(class SequenceManager * const this /* r30 */) {
+// this: r30
+void SequenceManager::LoadAllCommonModels() {
     // Local variables
     unsigned int i; // r31
 }
 
 // Range: 0x80099DE0 -> 0x80099ECC
-void SequenceManager::ReleaseCommonModel(class SequenceManager * const this /* r31 */, enum eCommonModels eType /* r29 */) {}
+// this: r31
+void SequenceManager::ReleaseCommonModel(enum eCommonModels eType /* r29 */) {}
 
 // Range: 0x80099ECC -> 0x80099EF4
 void SequenceManager::SetCommonModelShaderState() {}
 
 // Range: 0x80099EF4 -> 0x80099FA0
-void SequenceManager::PositionCommonModelsForNewSlide(class SequenceManager * const this /* r28 */) {
+// this: r28
+void SequenceManager::PositionCommonModelsForNewSlide() {
     // Local variables
     unsigned int i; // r30
     class EMat4 * mOrient; // r29
 }
 
 // Range: 0x80099FA0 -> 0x8009A078
-void SequenceManager::UpdateCommonModels(class SequenceManager * const this /* r29 */) {
+// this: r29
+void SequenceManager::UpdateCommonModels() {
     // Local variables
     unsigned int i; // r30
     class EMat4 mOrient; // r1+0x8
 }
 
 // Range: 0x8009A078 -> 0x8009A114
-void SequenceManager::RenderCommonModels(class SequenceManager * const this /* r28 */, class ERC * prc /* r29 */) {
+// this: r28
+void SequenceManager::RenderCommonModels(class ERC * prc /* r29 */) {
     // Local variables
     unsigned int i; // r30
 }
@@ -384,7 +422,8 @@ unsigned int SequenceManager::GetCommonModelResourceID() {
 }
 
 // Range: 0x8009A1CC -> 0x8009A2A4
-void SequenceManager::SetupInitialSequenceStage(class SequenceManager * const this /* r31 */) {
+// this: r31
+void SequenceManager::SetupInitialSequenceStage() {
     // Local variables
     class GameTime nGameTime; // r1+0x18
     signed short nCurrentYear; // r1+0x12

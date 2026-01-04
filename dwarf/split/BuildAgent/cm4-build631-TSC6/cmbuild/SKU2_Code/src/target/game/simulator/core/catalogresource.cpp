@@ -8,7 +8,8 @@
 class CatalogResource * CatalogResource::CreateInstance() {}
 
 // Range: 0x801082A4 -> 0x80108304
-void * CatalogResourceImpl::CatalogResourceImpl(class CatalogResourceImpl * const this /* r31 */) {
+// this: r31
+CatalogResourceImpl::CatalogResourceImpl() {
     // References
     // -> unsigned short * pDefault;
     // -> struct [anonymous] __vt__19CatalogResourceImpl;
@@ -18,7 +19,8 @@ void * CatalogResourceImpl::CatalogResourceImpl(class CatalogResourceImpl * cons
 void CatalogResource::DestroyInstance() {}
 
 // Range: 0x8010837C -> 0x80108428
-int CatalogResourceImpl::Load(class CatalogResourceImpl * const this /* r28 */, signed short id /* r29 */) {
+// this: r28
+int CatalogResourceImpl::Load(signed short id /* r29 */) {
     // Local variables
     const struct ResFile * pData; // r0
     const struct CatalogData * pCatalogData; // r0

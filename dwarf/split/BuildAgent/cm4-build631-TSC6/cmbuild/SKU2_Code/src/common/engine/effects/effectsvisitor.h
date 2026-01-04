@@ -5,10 +5,11 @@
     Code range: 0x8022A514 -> 0x8022A564
 */
 // Range: 0x8022A514 -> 0x8022A554
-void * EffectsVisitor::~EffectsVisitor(class EffectsVisitor * const this /* r31 */) {}
+// this: r31
+EffectsVisitor::~EffectsVisitor() {}
 
 // Range: 0x8022A554 -> 0x8022A564
-void * EffectsVisitor::EffectsVisitor() {
+EffectsVisitor::EffectsVisitor() {
     // References
     // -> struct [anonymous] __vt__Q27Effects14EffectsVisitor;
 }

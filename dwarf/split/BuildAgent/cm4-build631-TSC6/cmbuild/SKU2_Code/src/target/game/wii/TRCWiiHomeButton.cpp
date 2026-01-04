@@ -15,13 +15,15 @@ class TRCHomeButton * TRCHomeButton::Create() {
 void TRCHomeButton::Destroy() {}
 
 // Range: 0x8024700C -> 0x80247108
-void * TRCHomeButton::TRCHomeButton(class TRCHomeButton * const this /* r31 */) {
+// this: r31
+TRCHomeButton::TRCHomeButton() {
     // References
     // -> class TRCHomeButton * m_pInstance;
 }
 
 // Range: 0x80247108 -> 0x80247168
-void * TRCHomeButton::~TRCHomeButton(class TRCHomeButton * const this /* r30 */) {
+// this: r30
+TRCHomeButton::~TRCHomeButton() {
     // References
     // -> class TRCHomeButton * m_pInstance;
 }
@@ -38,34 +40,40 @@ void * TRCHomeButton::LoadData(const char * pAllocName /* r26 */, int alignment 
 }
 
 // Range: 0x80247230 -> 0x802472F0
-unsigned char TRCHomeButton::Init(class TRCHomeButton * const this /* r30 */, enum HomeInputType inputType /* r31 */) {}
+// this: r30
+unsigned char TRCHomeButton::Init(enum HomeInputType inputType /* r31 */) {}
 
 // Range: 0x802472F0 -> 0x802473F4
-void TRCHomeButton::LoadBanIcon(class TRCHomeButton * const this /* r29 */, const char * homeMenuRoot /* r30 */) {
+// this: r29
+void TRCHomeButton::LoadBanIcon(const char * homeMenuRoot /* r30 */) {
     // Local variables
     char nameBuf[64]; // r1+0x8
 }
 
 // Range: 0x802473F4 -> 0x80247544
-void TRCHomeButton::Restore(class TRCHomeButton * const this /* r31 */) {
+// this: r31
+void TRCHomeButton::Restore() {
     // References
     // -> struct TRCWiiInit msInitParams;
 }
 
 // Range: 0x80247544 -> 0x802477B8
-unsigned char TRCHomeButton::InitInfo(class TRCHomeButton * const this /* r30 */) {
+// this: r30
+unsigned char TRCHomeButton::InitInfo() {
     // Local variables
     char nameBuf[64]; // r1+0x8
 }
 
 // Range: 0x802477B8 -> 0x80247824
-unsigned char TRCHomeButton::InitHBMLibrary(class TRCHomeButton * const this /* r31 */) {
+// this: r31
+unsigned char TRCHomeButton::InitHBMLibrary() {
     // References
     // -> struct TRCWiiInit msInitParams;
 }
 
 // Range: 0x80247824 -> 0x802478E4
-unsigned char TRCHomeButton::InitSound(class TRCHomeButton * const this /* r31 */) {
+// this: r31
+unsigned char TRCHomeButton::InitSound() {
     // Local variables
     char nameBuf[64]; // r1+0x8
 
@@ -74,13 +82,15 @@ unsigned char TRCHomeButton::InitSound(class TRCHomeButton * const this /* r31 *
 }
 
 // Range: 0x802478E4 -> 0x8024795C
-void TRCHomeButton::InitHomeMenu(class TRCHomeButton * const this /* r31 */) {}
+// this: r31
+void TRCHomeButton::InitHomeMenu() {}
 
 // Range: 0x8024795C -> 0x80247964
 int TRCHomeButton::SoundCallback() {}
 
 // Range: 0x80247964 -> 0x802479E8
-unsigned char TRCHomeButton::WasHomeButtonPressedThisFrame(class TRCHomeButton * const this /* r31 */) {
+// this: r31
+unsigned char TRCHomeButton::WasHomeButtonPressedThisFrame() {
     // Local variables
     unsigned int i; // r0
 }
@@ -95,13 +105,15 @@ void TRCHomeButton::RestoreHomeMenu() {}
 void TRCHomeButton::ShutDownHomeMenu() {}
 
 // Range: 0x80247A50 -> 0x80247AB8
-void TRCHomeButton::Update(class TRCHomeButton * const this /* r31 */) {}
+// this: r31
+void TRCHomeButton::Update() {}
 
 // Range: 0x80247AB8 -> 0x80247B28
 void TRCHomeButton::ClearInputHistory() {}
 
 // Range: 0x80247B28 -> 0x80247CC8
-void TRCHomeButton::UpdateControllersKPAD(class TRCHomeButton * const this /* r31 */) {
+// this: r31
+void TRCHomeButton::UpdateControllersKPAD() {
     // Local variables
     unsigned int i; // r24
     unsigned long dev_type; // r23
@@ -110,10 +122,12 @@ void TRCHomeButton::UpdateControllersKPAD(class TRCHomeButton * const this /* r3
 }
 
 // Range: 0x80247CC8 -> 0x80247D1C
-void TRCHomeButton::ProcessController(class TRCHomeButton * const this /* r31 */) {}
+// this: r31
+void TRCHomeButton::ProcessController() {}
 
 // Range: 0x80247D1C -> 0x80247E70
-void TRCHomeButton::PreRender(class TRCHomeButton * const this /* r30 */) {
+// this: r30
+void TRCHomeButton::PreRender() {
     // Local variables
     float mv[3][4]; // r1+0x58
     float projMtx[4][4]; // r1+0x18
@@ -121,19 +135,23 @@ void TRCHomeButton::PreRender(class TRCHomeButton * const this /* r30 */) {
 }
 
 // Range: 0x80247E70 -> 0x80247F0C
-void TRCHomeButton::PostRender(class TRCHomeButton * const this /* r29 */) {
+// this: r29
+void TRCHomeButton::PostRender() {
     // Local variables
     int i; // r30
 }
 
 // Range: 0x80247F0C -> 0x80247F44
-void TRCHomeButton::RenderHomeMenu(class TRCHomeButton * const this /* r31 */) {}
+// this: r31
+void TRCHomeButton::RenderHomeMenu() {}
 
 // Range: 0x80247F44 -> 0x80247FAC
-void TRCHomeButton::TriggerHomeMenuBanIcon(class TRCHomeButton * const this /* r31 */) {}
+// this: r31
+void TRCHomeButton::TriggerHomeMenuBanIcon() {}
 
 // Range: 0x80247FAC -> 0x8024810C
-float TRCHomeButton::UpdateBanIconAlpha(class TRCHomeButton * const this /* r31 */) {
+// this: r31
+float TRCHomeButton::UpdateBanIconAlpha() {
     // Local variables
     float elapse; // f3
 }
@@ -142,7 +160,8 @@ float TRCHomeButton::UpdateBanIconAlpha(class TRCHomeButton * const this /* r31 
 void TRCHomeButton::DisableHomeMenu() {}
 
 // Range: 0x80248124 -> 0x802483A4
-void TRCHomeButton::RenderBanIcon(class TRCHomeButton * const this /* r31 */) {
+// this: r31
+void TRCHomeButton::RenderBanIcon() {
     // Local variables
     struct _GXTexObj texObj; // r1+0x10
 }

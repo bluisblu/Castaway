@@ -5,12 +5,14 @@
     Code range: 0x8001B3D4 -> 0x8001B468
 */
 // Range: 0x8001B3D4 -> 0x8001B410
-void * AdultFemaleSimAnimator::AdultFemaleSimAnimator(class AdultFemaleSimAnimator * const this /* r31 */) {
+// this: r31
+AdultFemaleSimAnimator::AdultFemaleSimAnimator() {
     // References
     // -> struct [anonymous] __vt__22AdultFemaleSimAnimator;
 }
 
 // Range: 0x8001B410 -> 0x8001B468
-void * AdultFemaleSimAnimator::~AdultFemaleSimAnimator(class AdultFemaleSimAnimator * const this /* r30 */) {}
+// this: r30
+AdultFemaleSimAnimator::~AdultFemaleSimAnimator() {}
 
 

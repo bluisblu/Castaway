@@ -11,7 +11,8 @@ class PlanManager * PlanManager::GetInstance() {
 }
 
 // Range: 0x800D0560 -> 0x800D0618
-unsigned char Plan::GetName(const struct Plan * const this /* r30 */, class ELocString & name /* r31 */) {
+// this: r30
+unsigned char Plan::GetName(class ELocString & name /* r31 */) const {
     // Local variables
     class ObjSelector * sel; // r0
 
@@ -20,7 +21,8 @@ unsigned char Plan::GetName(const struct Plan * const this /* r30 */, class ELoc
 }
 
 // Range: 0x800D0618 -> 0x800D06D0
-unsigned char Plan::GetDescription(const struct Plan * const this /* r30 */, class ELocString & desc /* r31 */) {
+// this: r30
+unsigned char Plan::GetDescription(class ELocString & desc /* r31 */) const {
     // Local variables
     class ObjSelector * sel; // r0
 
@@ -29,7 +31,8 @@ unsigned char Plan::GetDescription(const struct Plan * const this /* r30 */, cla
 }
 
 // Range: 0x800D06D0 -> 0x800D0878
-unsigned int Plan::GetLargeShaderSymbol(const struct Plan * const this /* r30 */) {
+// this: r30
+unsigned int Plan::GetLargeShaderSymbol() const {
     // Local variables
     class InventoryItems * pInventory; // r0
     const struct InventoryTokens * token; // r31
@@ -44,7 +47,8 @@ unsigned int Plan::GetLargeShaderSymbol(const struct Plan * const this /* r30 */
 }
 
 // Range: 0x800D0878 -> 0x800D0A20
-unsigned int Plan::GetSmallShaderSymbol(const struct Plan * const this /* r30 */) {
+// this: r30
+unsigned int Plan::GetSmallShaderSymbol() const {
     // Local variables
     class InventoryItems * pInventory; // r0
     const struct InventoryTokens * token; // r31
@@ -59,16 +63,19 @@ unsigned int Plan::GetSmallShaderSymbol(const struct Plan * const this /* r30 */
 }
 
 // Range: 0x800D0A20 -> 0x800D0AC0
-struct InventoryTokens * Plan::GetResource(const struct Plan * const this /* r30 */, int index /* r31 */) {
+// this: r30
+struct InventoryTokens * Plan::GetResource(int index /* r31 */) const {
     // Local variables
     struct InventoryTokens * token; // r3
 }
 
 // Range: 0x800D0AC0 -> 0x800D0B1C
-int Plan::GetResourceCount(const struct Plan * const this /* r30 */, int index /* r31 */) {}
+// this: r30
+int Plan::GetResourceCount(int index /* r31 */) const {}
 
 // Range: 0x800D0B1C -> 0x800D0C30
-unsigned char Plan::ChargeTheSimForThePlan(const struct Plan * const this /* r27 */) {
+// this: r27
+unsigned char Plan::ChargeTheSimForThePlan() const {
     // Local variables
     class InventoryItems * inventory; // r29
     int i; // r28
@@ -78,13 +85,16 @@ unsigned char Plan::ChargeTheSimForThePlan(const struct Plan * const this /* r27
 }
 
 // Range: 0x800D0C30 -> 0x800D0CBC
-int Plan::GetRequirementType(const struct Plan * const this /* r30 */, int index /* r31 */) {}
+// this: r30
+int Plan::GetRequirementType(int index /* r31 */) const {}
 
 // Range: 0x800D0CBC -> 0x800D0D18
-int Plan::GetRequirementLevel(const struct Plan * const this /* r30 */, int index /* r31 */) {}
+// this: r30
+int Plan::GetRequirementLevel(int index /* r31 */) const {}
 
 // Range: 0x800D0D18 -> 0x800D0E98
-unsigned char Plan::DoesSimFillRequirement(const struct Plan * const this /* r28 */, int index /* r29 */, int crafting_object /* r30 */) {
+// this: r28
+unsigned char Plan::DoesSimFillRequirement(int index /* r29 */, int crafting_object /* r30 */) const {
     // Local variables
     class InventoryItems * pInventory; // r30
     signed short tokenID; // r1+0x8
@@ -95,10 +105,12 @@ unsigned char Plan::DoesSimFillRequirement(const struct Plan * const this /* r28
 }
 
 // Range: 0x800D0E98 -> 0x800D1128
-unsigned int Plan::GetRequirementShader(const struct Plan * const this /* r30 */, int index /* r31 */) {}
+// this: r30
+unsigned int Plan::GetRequirementShader(int index /* r31 */) const {}
 
 // Range: 0x800D1128 -> 0x800D1644
-unsigned char Plan::GetRequirementName(const struct Plan * const this /* r28 */, int index /* r29 */, class ELocString & name /* r30 */) {
+// this: r28
+unsigned char Plan::GetRequirementName(int index /* r29 */, class ELocString & name /* r30 */) const {
     // Local variables
     class ObjSelector * pSel; // r0
     class ObjSelector * pSel; // r0
@@ -110,29 +122,34 @@ unsigned char Plan::GetRequirementName(const struct Plan * const this /* r28 */,
 }
 
 // Range: 0x800D1644 -> 0x800D1700
-int Plan::GetCatalogMotive(const struct Plan * const this /* r30 */, int index /* r31 */) {}
+// this: r30
+int Plan::GetCatalogMotive(int index /* r31 */) const {}
 
 // Range: 0x800D1700 -> 0x800D175C
-int Plan::GetCatalogValue(const struct Plan * const this /* r30 */, int index /* r31 */) {}
+// this: r30
+int Plan::GetCatalogValue(int index /* r31 */) const {}
 
 // Range: 0x800D175C -> 0x800D17BC
 signed short Plan::GetSkillToImprove() {}
 
 // Range: 0x800D17BC -> 0x800D182C
-unsigned char Plan::UnlockedToStart(const struct Plan * const this /* r30 */) {
+// this: r30
+unsigned char Plan::UnlockedToStart() const {
     // Local variables
     int i; // r31
 }
 
 // Range: 0x800D182C -> 0x800D18B0
-unsigned char Plan::PutItemInHand(const struct Plan * const this /* r31 */) {
+// this: r31
+unsigned char Plan::PutItemInHand() const {
     // Local variables
     class InventoryItems * pInventory; // r0
     const struct InventoryTokens * token; // r0
 }
 
 // Range: 0x800D18B0 -> 0x800D1920
-unsigned char Plan::PutItemOnGround(const struct Plan * const this /* r30 */) {
+// this: r30
+unsigned char Plan::PutItemOnGround() const {
     // Local variables
     int i; // r31
 }
@@ -144,7 +161,8 @@ unsigned char Plan::PutItemInInventory() {}
 unsigned char Plan::AddTokenToInventory() {}
 
 // Range: 0x800D19C0 -> 0x800D1A70
-signed short Plan::GetConstructionMotion(const struct Plan * const this /* r31 */) {
+// this: r31
+signed short Plan::GetConstructionMotion() const {
     // Local variables
     signed short prop; // r0
 }
@@ -153,7 +171,8 @@ signed short Plan::GetConstructionMotion(const struct Plan * const this /* r31 *
 signed short Plan::GetResourcePile() {}
 
 // Range: 0x800D1A78 -> 0x800D1BE4
-signed short Plan::GetToolUsed(const struct Plan * const this /* r29 */) {
+// this: r29
+signed short Plan::GetToolUsed() const {
     // Local variables
     signed short propTool; // r31
     int i; // r30
@@ -169,7 +188,8 @@ signed short Plan::ResolveToolEnumToExistingToken(signed short toolEnum /* r31 *
 }
 
 // Range: 0x800D1CD0 -> 0x800D1D50
-unsigned char Plan::ClayOrSandRequired(const struct Plan * const this /* r30 */) {
+// this: r30
+unsigned char Plan::ClayOrSandRequired() const {
     // Local variables
     int i; // r31
     struct InventoryTokens * resource; // r0
@@ -179,7 +199,8 @@ unsigned char Plan::ClayOrSandRequired(const struct Plan * const this /* r30 */)
 signed short Plan::GetTimeToMake() {}
 
 // Range: 0x800D1D58 -> 0x800D1FB8
-unsigned char Plan::TryToUnlockPlan(const struct Plan * const this /* r26 */, signed short event /* r22 */, int value /* r27 */, class cXPerson * person /* r28 */) {
+// this: r26
+unsigned char Plan::TryToUnlockPlan(signed short event /* r22 */, int value /* r27 */, class cXPerson * person /* r28 */) const {
     // Local variables
     int i; // [invalid]
     int unlockCount; // r0
@@ -193,7 +214,8 @@ unsigned char Plan::TryToUnlockPlan(const struct Plan * const this /* r26 */, si
 }
 
 // Range: 0x800D1FB8 -> 0x800D20D8
-unsigned char Plan::IsMadeAtObject(const struct Plan * const this /* r28 */) {
+// this: r28
+unsigned char Plan::IsMadeAtObject() const {
     // Local variables
     int object; // r31
     int level; // r30
@@ -201,10 +223,12 @@ unsigned char Plan::IsMadeAtObject(const struct Plan * const this /* r28 */) {
 }
 
 // Range: 0x800D20D8 -> 0x800D2160
-void * PlanManager::PlanManager(class PlanManager * const this /* r30 */) {}
+// this: r30
+PlanManager::PlanManager() {}
 
 // Range: 0x800D2160 -> 0x800D2254
-void PlanManager::LoadPlans(class PlanManager * const this /* r27 */) {
+// this: r27
+void PlanManager::LoadPlans() {
     // Local variables
     const struct ERQTable * pPlanData; // r1+0xC
     unsigned long i; // r28
@@ -212,10 +236,12 @@ void PlanManager::LoadPlans(class PlanManager * const this /* r27 */) {
 }
 
 // Range: 0x800D2254 -> 0x800D2294
-void PlanManager::UnloadPlans(class PlanManager * const this /* r31 */) {}
+// this: r31
+void PlanManager::UnloadPlans() {}
 
 // Range: 0x800D2294 -> 0x800D2420
-struct Plan * PlanManager::GetPlan(class PlanManager * const this /* r28 */, int filter /* r29 */, const struct Plan * lastPlan /* r30 */, int crafting_object /* r31 */) {
+// this: r28
+struct Plan * PlanManager::GetPlan(int filter /* r29 */, const struct Plan * lastPlan /* r30 */, int crafting_object /* r31 */) {
     // Local variables
     struct ListIterator planItr; // r1+0x24
 
@@ -224,13 +250,15 @@ struct Plan * PlanManager::GetPlan(class PlanManager * const this /* r28 */, int
 }
 
 // Range: 0x800D2420 -> 0x800D274C
-struct Plan * PlanManager::GetAnyPlan(class PlanManager * const this /* r28 */, int filter /* r29 */, const struct Plan * lastPlan /* r30 */, int crafting_object /* r31 */) {
+// this: r28
+struct Plan * PlanManager::GetAnyPlan(int filter /* r29 */, const struct Plan * lastPlan /* r30 */, int crafting_object /* r31 */) {
     // Local variables
     struct ListIterator planItr; // r1+0x4C
 }
 
 // Range: 0x800D274C -> 0x800D2AD4
-void PlanManager::SendNotification(class PlanManager * const this /* r26 */, signed char notification /* r29 */, signed short data /* r27 */, class cXPerson * person /* r28 */) {
+// this: r26
+void PlanManager::SendNotification(signed char notification /* r29 */, signed short data /* r27 */, class cXPerson * person /* r28 */) {
     // Local variables
     signed short unlockEvent; // r31
     int unlockValue; // [invalid]
@@ -248,7 +276,8 @@ void PlanManager::SendNotification(class PlanManager * const this /* r26 */, sig
 }
 
 // Range: 0x800D2AD4 -> 0x800D2B44
-unsigned char PlanManager::IsPlanUnlocked(class PlanManager * const this /* r31 */, signed short planID /* r1+0x8 */) {
+// this: r31
+unsigned char PlanManager::IsPlanUnlocked(signed short planID /* r1+0x8 */) {
     // Local variables
     struct rbtree_iterator sit; // r1+0x10
 
@@ -257,25 +286,29 @@ unsigned char PlanManager::IsPlanUnlocked(class PlanManager * const this /* r31 
 }
 
 // Range: 0x800D2B44 -> 0x800D2C88
-struct Plan * PlanManager::GetPlanByID(class PlanManager * const this /* r31 */, signed short planID /* r1+0x8 */) {
+// this: r31
+struct Plan * PlanManager::GetPlanByID(signed short planID /* r1+0x8 */) {
     // Local variables
     struct ListIterator itr; // r1+0x24
 }
 
 // Range: 0x800D2C88 -> 0x800D2DB0
-struct Plan * PlanManager::GetPlanByGUID(class PlanManager * const this /* r30 */, int guid /* r31 */) {
+// this: r30
+struct Plan * PlanManager::GetPlanByGUID(int guid /* r31 */) {
     // Local variables
     struct ListIterator itr; // r1+0x20
 }
 
 // Range: 0x800D2DB0 -> 0x800D2F08
-struct Plan * PlanManager::GetPlanByTokenID(class PlanManager * const this /* r30 */, signed short tokenID /* r31 */) {
+// this: r30
+struct Plan * PlanManager::GetPlanByTokenID(signed short tokenID /* r31 */) {
     // Local variables
     struct ListIterator itr; // r1+0x20
 }
 
 // Range: 0x800D2F08 -> 0x800D3058
-void PlanManager::DoStream(class PlanManager * const this /* r28 */, class ReconBuffer * rb /* r30 */) {
+// this: r28
+void PlanManager::DoStream(class ReconBuffer * rb /* r30 */) {
     // Local variables
     signed short i; // r30
     signed short unlockedPlanCount; // r1+0xA
@@ -285,35 +318,41 @@ void PlanManager::DoStream(class PlanManager * const this /* r28 */, class Recon
 }
 
 // Range: 0x800D3058 -> 0x800D308C
-void PlanManager::Reset(class PlanManager * const this /* r31 */) {}
+// this: r31
+void PlanManager::Reset() {}
 
 // Range: 0x800D308C -> 0x800D3118
-void PlanManager::LockEverything(class PlanManager * const this /* r30 */) {
+// this: r30
+void PlanManager::LockEverything() {
     // Local variables
     struct ListIterator itr; // r1+0x8
 }
 
 // Range: 0x800D3118 -> 0x800D3230
-unsigned char PlanManager::UnlockPlan(class PlanManager * const this /* r31 */, signed short id /* r1+0x8 */, unsigned char silent /* r30 */) {
+// this: r31
+unsigned char PlanManager::UnlockPlan(signed short id /* r1+0x8 */, unsigned char silent /* r30 */) {
     // Local variables
     struct ListIterator itr; // r1+0x1C
 }
 
 // Range: 0x800D3230 -> 0x800D3354
-unsigned char PlanManager::UnlockGroupPlan(class PlanManager * const this /* r27 */, signed short groupID /* r28 */, unsigned char silent /* r29 */) {
+// this: r27
+unsigned char PlanManager::UnlockGroupPlan(signed short groupID /* r28 */, unsigned char silent /* r29 */) {
     // Local variables
     unsigned char unlockedSomething; // r30
     struct ListIterator itr; // r1+0x18
 }
 
 // Range: 0x800D3354 -> 0x800D3434
-void PlanManager::RelockPlan(class PlanManager * const this /* r30 */, signed short planID /* r31 */) {
+// this: r30
+void PlanManager::RelockPlan(signed short planID /* r31 */) {
     // Local variables
     struct ListIterator itr; // r1+0x18
 }
 
 // Range: 0x800D3434 -> 0x800D34F4
-void PlanManager::Update(class PlanManager * const this /* r30 */) {
+// this: r30
+void PlanManager::Update() {
     // Local variables
     int shaderID; // r31
 
@@ -354,14 +393,16 @@ unsigned char PlanManager::IgnoringRequirements() {
 }
 
 // Range: 0x800D39E4 -> 0x800D3A78
-void PlanManager::ForceAllPlansToUnlock(class PlanManager * const this /* r30 */) {
+// this: r30
+void PlanManager::ForceAllPlansToUnlock() {
     // Local variables
     struct ListIterator planItr; // r1+0x10
     signed short planID; // r31
 }
 
 // Range: 0x800D3A78 -> 0x800D3B18
-void PlanManager::ObjectPlanPlaced(class PlanManager * const this /* r30 */, int guid /* r31 */) {
+// this: r30
+void PlanManager::ObjectPlanPlaced(int guid /* r31 */) {
     // Local variables
     class ObjSelector * sel; // r0
     signed short type; // r0

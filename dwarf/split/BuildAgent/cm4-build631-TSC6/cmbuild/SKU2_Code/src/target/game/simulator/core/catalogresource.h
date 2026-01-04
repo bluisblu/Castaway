@@ -5,10 +5,11 @@
     Code range: 0x80108440 -> 0x80108490
 */
 // Range: 0x80108440 -> 0x80108480
-void * CatalogResource::~CatalogResource(class CatalogResource * const this /* r31 */) {}
+// this: r31
+CatalogResource::~CatalogResource() {}
 
 // Range: 0x80108480 -> 0x80108490
-void * CatalogResource::CatalogResource() {
+CatalogResource::CatalogResource() {
     // References
     // -> struct [anonymous] __vt__15CatalogResource;
 }

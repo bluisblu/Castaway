@@ -11,7 +11,7 @@ int MotiveCurveSet::size() {}
 void MotiveCurve::SetMotive() {}
 
 // Range: 0x800CDC88 -> 0x800CDC98
-class MotiveCurve & MotiveCurveSet::__vc() {}
+class MotiveCurve & MotiveCurveSet::operator[]() {}
 
 // Range: 0x800CDC98 -> 0x800CDCAC
 class MotiveCurve * MotiveCurveSet::end() {}
@@ -23,36 +23,29 @@ int MotiveCurve::GetMotive() {}
 class MotiveCurve * MotiveCurveSet::begin() {}
 
 // Range: 0x800CDCBC -> 0x800CDD14
-void * MotiveCurveArray::MotiveCurveArray(class MotiveCurveArray * const this /* r31 */) {}
+// this: r31
+MotiveCurveArray::MotiveCurveArray() {}
 
 // Range: 0x800CDD14 -> 0x800CDD4C
-void * MotiveCurve::MotiveCurve(class MotiveCurve * const this /* r31 */) {}
+// this: r31
+MotiveCurve::MotiveCurve() {}
 
 // Range: 0x800CDD4C -> 0x800CDD58
-void * MotiveCurveSet::MotiveCurveSet() {}
+MotiveCurveSet::MotiveCurveSet() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\target\game\simulator\core\motivecurve.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x801239F4 -> 0x80123A4C
-*/
 // Range: 0x801239F4 -> 0x80123A4C
-void * MotiveCurveArray::MotiveCurveArray(class MotiveCurveArray * const this /* r31 */) {}
+// this: r31
+MotiveCurveArray::MotiveCurveArray() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\target\game\simulator\core\motivecurve.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x801CC788 -> 0x801CC8A0
-*/
 // Range: 0x801CC788 -> 0x801CC7F0
-void * MotiveCurveTable::~MotiveCurveTable(class MotiveCurveTable * const this /* r30 */) {}
+// this: r30
+MotiveCurveTable::~MotiveCurveTable() {}
 
 // Range: 0x801CC7F0 -> 0x801CC8A0
-void * MotiveCurveTable::MotiveCurveTable(class MotiveCurveTable * const this /* r27 */, int numCurves /* r28 */, int maxPoints /* r29 */) {
+// this: r27
+MotiveCurveTable::MotiveCurveTable(int numCurves /* r28 */, int maxPoints /* r29 */) {
     // Local variables
     int i; // r30
 }

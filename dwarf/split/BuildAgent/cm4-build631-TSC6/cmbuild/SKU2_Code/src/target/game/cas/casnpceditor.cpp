@@ -5,22 +5,26 @@
     Code range: 0x8002ADDC -> 0x8002E674
 */
 // Range: 0x8002ADDC -> 0x8002AEE8
-void * CasNpcEditor::CasNpcEditor(class CasNpcEditor * const this /* r29 */) {
+// this: r29
+CasNpcEditor::CasNpcEditor() {
     // References
     // -> struct [anonymous] __vt__12CasNpcEditor;
 }
 
 // Range: 0x8002AEE8 -> 0x8002AFA0
-void * CasNpcEditor::~CasNpcEditor(class CasNpcEditor * const this /* r30 */) {
+// this: r30
+CasNpcEditor::~CasNpcEditor() {
     // References
     // -> struct [anonymous] __vt__12CasNpcEditor;
 }
 
 // Range: 0x8002AFA0 -> 0x8002B024
-void CasNpcEditor::Enable(class CasNpcEditor * const this /* r30 */, enum eNPCEditTypeFlag nEditType /* r31 */) {}
+// this: r30
+void CasNpcEditor::Enable(enum eNPCEditTypeFlag nEditType /* r31 */) {}
 
 // Range: 0x8002B024 -> 0x8002B508
-void CasNpcEditor::Update(class CasNpcEditor * const this /* r31 */, float fDeltaSeconds /* f31 */) {
+// this: r31
+void CasNpcEditor::Update(float fDeltaSeconds /* f31 */) {
     // Local variables
     unsigned char bLoadButtonPressed; // r0
     unsigned char bAdvanceLoadButtonPressed; // r25
@@ -39,7 +43,8 @@ void CasNpcEditor::Update(class CasNpcEditor * const this /* r31 */, float fDelt
 }
 
 // Range: 0x8002B508 -> 0x8002BE90
-void CasNpcEditor::Draw(class CasNpcEditor * const this /* r28 */, class ERC * prc /* r29 */) {
+// this: r28
+void CasNpcEditor::Draw(class ERC * prc /* r29 */) {
     // Local variables
     float fBGX1; // f31
     char szLine[64]; // r1+0xB8
@@ -55,7 +60,8 @@ void CasNpcEditor::Draw(class CasNpcEditor * const this /* r28 */, class ERC * p
 }
 
 // Range: 0x8002BE90 -> 0x8002C1A4
-unsigned char CasNpcEditor::LoadCurrentCharacter(class CasNpcEditor * const this /* r28 */) {
+// this: r28
+unsigned char CasNpcEditor::LoadCurrentCharacter() {
     // Local variables
     class UserDataSaveLoad npcData; // r1+0x10
     enum tSimType simType; // r0
@@ -72,7 +78,8 @@ unsigned char CasNpcEditor::LoadCurrentCharacter(class CasNpcEditor * const this
 unsigned char CasNpcEditor::SaveSim() {}
 
 // Range: 0x8002C1D0 -> 0x8002C834
-unsigned char CasNpcEditor::SaveNpc(class CasNpcEditor * const this /* r30 */) {
+// this: r30
+unsigned char CasNpcEditor::SaveNpc() {
     // Local variables
     int err; // r0
     unsigned char bResult; // r28
@@ -107,7 +114,8 @@ unsigned char CasNpcEditor::SaveNpc(class CasNpcEditor * const this /* r30 */) {
 void CasNpcEditor::MakeDataset() {}
 
 // Range: 0x8002C838 -> 0x8002CC04
-unsigned char CasNpcEditor::SaveAllNpcs(class CasNpcEditor * const this /* r31 */) {
+// this: r31
+unsigned char CasNpcEditor::SaveAllNpcs() {
     // Local variables
     signed short i; // r23
     signed short npcCount; // r0
@@ -127,13 +135,15 @@ unsigned char CasNpcEditor::SaveAllNpcs(class CasNpcEditor * const this /* r31 *
 }
 
 // Range: 0x8002CC04 -> 0x8002CCA4
-class EString CasNpcEditor::GetNPCCompositeTextureName(class CasNpcEditor * const this /* r29 */, class CasSimDescription & simDesc /* r30 */, unsigned char quadrant /* r31 */) {
+// this: r29
+class EString CasNpcEditor::GetNPCCompositeTextureName(class CasSimDescription & simDesc /* r30 */, unsigned char quadrant /* r31 */) {
     // Local variables
     class EString strBaseName; // r1+0x8
 }
 
 // Range: 0x8002CCA4 -> 0x8002CEA8
-unsigned char CasNpcEditor::WriteCompositedTextures(class CasNpcEditor * const this /* r26 */, class CasSimDescription & simDesc /* r27 */) {
+// this: r26
+unsigned char CasNpcEditor::WriteCompositedTextures(class CasSimDescription & simDesc /* r27 */) {
     // Local variables
     unsigned char bRet; // r29
     struct ETextureDef td; // r1+0x30
@@ -149,7 +159,8 @@ unsigned char CasNpcEditor::WriteCompositedTextures(class CasNpcEditor * const t
 }
 
 // Range: 0x8002CEA8 -> 0x8002D0F0
-unsigned char CasNpcEditor::SaveAllIcons(class CasNpcEditor * const this /* r31 */) {
+// this: r31
+unsigned char CasNpcEditor::SaveAllIcons() {
     // Local variables
     unsigned char i; // r30
     class CasSimDescription * pSimDesc; // r29
@@ -159,7 +170,8 @@ unsigned char CasNpcEditor::SaveAllIcons(class CasNpcEditor * const this /* r31 
 }
 
 // Range: 0x8002D0F0 -> 0x8002D500
-unsigned char CasNpcEditor::SaveIcon(class CasNpcEditor * const this /* r30 */) {
+// this: r30
+unsigned char CasNpcEditor::SaveIcon() {
     // Local variables
     class CasSimDescription * pSimDesc; // r0
     unsigned char bodyPartDBIndex; // r0
@@ -186,14 +198,16 @@ unsigned char CasNpcEditor::GetNpcData(unsigned int npcIndex /* r29 */, class Us
 unsigned char CasNpcEditor::IsLoadInProgress() {}
 
 // Range: 0x8002D5E4 -> 0x8002D794
-void CasNpcEditor::DoInitialLoad(class CasNpcEditor * const this /* r30 */) {
+// this: r30
+void CasNpcEditor::DoInitialLoad() {
     // Local variables
     unsigned char bCurrentlyIsMale; // r0
     class CasSimDescription * pSimDesc; // r31
 }
 
 // Range: 0x8002D794 -> 0x8002DCC0
-unsigned char CasNpcEditor::ReadIconConfig(class CasNpcEditor * const this /* r25 */) {
+// this: r25
+unsigned char CasNpcEditor::ReadIconConfig() {
     // Local variables
     int i; // r31
     class ConfigReader cr; // r1+0x20
@@ -215,18 +229,21 @@ unsigned char CasNpcEditor::ReadIconConfig(class CasNpcEditor * const this /* r2
 }
 
 // Range: 0x8002DCC0 -> 0x8002DD3C
-void CasNpcEditor::SetBodyPartData(class CasNpcEditor * const this /* r31 */) {
+// this: r31
+void CasNpcEditor::SetBodyPartData() {
     // Local variables
     class CasSimDescription * pSimDesc; // r0
 }
 
 // Range: 0x8002DD3C -> 0x8002E230
-unsigned char CasNpcEditor::IncrementIcon(class CasNpcEditor * const this /* r31 */) {
+// this: r31
+unsigned char CasNpcEditor::IncrementIcon() {
     // Local variables
     unsigned char nMaxTattooTextures; // r0
 }
 
 // Range: 0x8002E230 -> 0x8002E674
-unsigned char CasNpcEditor::DecrementIcon(class CasNpcEditor * const this /* r31 */) {}
+// this: r31
+unsigned char CasNpcEditor::DecrementIcon() {}
 
 

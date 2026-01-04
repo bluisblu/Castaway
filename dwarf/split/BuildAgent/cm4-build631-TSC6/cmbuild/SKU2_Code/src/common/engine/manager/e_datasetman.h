@@ -11,12 +11,6 @@ class ERDataset * EDatasetManager::AddRef() {}
 void EDatasetManager::DelRef() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\common\engine\manager\e_datasetman.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x80120914 -> 0x8012091C
-*/
 // Range: 0x80120914 -> 0x80120918
 class EResource * EDatasetManager::AddRefAsync() {}
 
@@ -24,12 +18,6 @@ class EResource * EDatasetManager::AddRefAsync() {}
 void EDatasetManager::DelRef() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\common\engine\manager\e_datasetman.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x802AEA8C -> 0x802AEA94
-*/
 // Range: 0x802AEA8C -> 0x802AEA94
 unsigned char EDatasetManager::CanCache() {}
 

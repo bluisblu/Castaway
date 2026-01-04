@@ -5,7 +5,8 @@
     Code range: 0x8023C500 -> 0x8023D270
 */
 // Range: 0x8023C500 -> 0x8023C694
-void * CLoadingScreen::CLoadingScreen(class CLoadingScreen * const this /* r29 */, enum eLoadingScreenMode mode /* r31 */) {
+// this: r29
+CLoadingScreen::CLoadingScreen(enum eLoadingScreenMode mode /* r31 */) {
     // References
     // -> int m_messageNumber;
     // -> static unsigned char s_bDrawPressStart;
@@ -14,7 +15,8 @@ void * CLoadingScreen::CLoadingScreen(class CLoadingScreen * const this /* r29 *
 }
 
 // Range: 0x8023C694 -> 0x8023C7B4
-void * CLoadingScreen::~CLoadingScreen(class CLoadingScreen * const this /* r29 */) {
+// this: r29
+CLoadingScreen::~CLoadingScreen() {
     // Local variables
     class FrameEffectsManager * feMgr; // r0
     class DepthOfField * dofObj; // r31
@@ -39,7 +41,8 @@ void CLoadingScreen::InitAsync() {
 }
 
 // Range: 0x8023C8BC -> 0x8023CA38
-void CLoadingScreen::Update(class CLoadingScreen * const this /* r31 */) {
+// this: r31
+void CLoadingScreen::Update() {
     // Local variables
     float fadeOutFactor; // f2
     float walkSpeed; // f3
@@ -47,7 +50,8 @@ void CLoadingScreen::Update(class CLoadingScreen * const this /* r31 */) {
 }
 
 // Range: 0x8023CA38 -> 0x8023D230
-void CLoadingScreen::DrawTopmost(class CLoadingScreen * const this /* r29 */, class ERC * prc /* r30 */, float alpha /* f23 */) {
+// this: r29
+void CLoadingScreen::DrawTopmost(class ERC * prc /* r30 */, float alpha /* f23 */) {
     // Local variables
     class E3DWindow * win; // r31
     float fNear; // f19

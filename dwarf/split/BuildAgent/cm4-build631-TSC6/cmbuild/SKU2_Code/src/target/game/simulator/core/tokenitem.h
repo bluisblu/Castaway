@@ -5,7 +5,8 @@
     Code range: 0x8011E190 -> 0x8011E2DC
 */
 // Range: 0x8011E190 -> 0x8011E1CC
-void * TokenItem::TokenItem(class TokenItem * const this /* r31 */) {
+// this: r31
+TokenItem::TokenItem() {
     // References
     // -> struct [anonymous] __vt__9TokenItem;
 }
@@ -17,7 +18,8 @@ void TokenItem::IncrementCount() {}
 signed short TokenItem::GetCount() {}
 
 // Range: 0x8011E1F8 -> 0x8011E250
-void * TokenItem::~TokenItem(class TokenItem * const this /* r30 */) {}
+// this: r30
+TokenItem::~TokenItem() {}
 
 // Range: 0x8011E250 -> 0x8011E258
 signed short TokenItem::GetID() {}

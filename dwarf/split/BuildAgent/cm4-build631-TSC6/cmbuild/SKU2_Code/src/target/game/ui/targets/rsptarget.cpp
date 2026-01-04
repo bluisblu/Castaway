@@ -5,7 +5,8 @@
     Code range: 0x801DB330 -> 0x801DC1E0
 */
 // Range: 0x801DB330 -> 0x801DB5A8
-void * RSPTarget::RSPTarget(class RSPTarget * const this /* r28 */) {
+// this: r28
+RSPTarget::RSPTarget() {
     // Local variables
     int i; // r29
 
@@ -34,14 +35,16 @@ void * RSPTarget::RSPTarget(class RSPTarget * const this /* r28 */) {
 }
 
 // Range: 0x801DB5A8 -> 0x801DB650
-void * RSPTarget::~RSPTarget(class RSPTarget * const this /* r30 */) {
+// this: r30
+RSPTarget::~RSPTarget() {
     // References
     // -> class EGlobal _globals;
     // -> struct [anonymous] __vt__9RSPTarget;
 }
 
 // Range: 0x801DB6B8 -> 0x801DB768
-char * RSPTarget::GetVariable(class RSPTarget * const this /* r29 */, const char * szVar /* r30 */) {
+// this: r29
+char * RSPTarget::GetVariable(const char * szVar /* r30 */) {
     // Local variables
     char * retStr; // r31
 
@@ -51,7 +54,8 @@ char * RSPTarget::GetVariable(class RSPTarget * const this /* r29 */, const char
 }
 
 // Range: 0x801DB768 -> 0x801DB93C
-unsigned short * RSPTarget::GetLocalizable(class RSPTarget * const this /* r28 */, const char * szVar /* r29 */) {
+// this: r28
+unsigned short * RSPTarget::GetLocalizable(const char * szVar /* r29 */) {
     // Local variables
     unsigned short * wideStr; // r30
     int num; // r1+0xC
@@ -62,7 +66,8 @@ unsigned short * RSPTarget::GetLocalizable(class RSPTarget * const this /* r28 *
 }
 
 // Range: 0x801DB93C -> 0x801DBAA4
-void RSPTarget::Update(class RSPTarget * const this /* r31 */) {
+// this: r31
+void RSPTarget::Update() {
     // Local variables
     char pStr[8]; // r1+0x8
 
@@ -72,7 +77,8 @@ void RSPTarget::Update(class RSPTarget * const this /* r31 */) {
 }
 
 // Range: 0x801DBAA4 -> 0x801DBBD4
-void RSPTarget::UpdateRelationshipSidePanel(class RSPTarget * const this /* r30 */) {
+// this: r30
+void RSPTarget::UpdateRelationshipSidePanel() {
     // Local variables
     char pStr[8]; // r1+0x8
 
@@ -85,7 +91,8 @@ void RSPTarget::UpdateRelationshipSidePanel(class RSPTarget * const this /* r30 
 void RSPTarget::ShowRelationshipSidePanel() {}
 
 // Range: 0x801DBBEC -> 0x801DBC04
-unsigned char RSPTarget::HideRelationshipSidePanel(class RSPTarget * const this /* r4 */) {
+// this: r4
+unsigned char RSPTarget::HideRelationshipSidePanel() {
     // Local variables
     unsigned char ret; // r0
 }
@@ -115,7 +122,8 @@ int sort_records_by_distance(void * recordAsVoid1 /* r27 */, void * recordAsVoid
 int sort_records_by_relationship() {}
 
 // Range: 0x801DBDFC -> 0x801DC1D4
-void RSPTarget::RefreshRelationships(class RSPTarget * const this /* r24 */) {
+// this: r24
+void RSPTarget::RefreshRelationships() {
     // Local variables
     int i; // r27
     class cXPerson * pPerson; // r28

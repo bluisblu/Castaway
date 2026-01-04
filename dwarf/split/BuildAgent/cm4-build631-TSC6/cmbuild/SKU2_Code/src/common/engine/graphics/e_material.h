@@ -5,6 +5,7 @@
     Code range: 0x8007710C -> 0x8007715C
 */
 // Range: 0x8007710C -> 0x8007715C
-void * EMaterial::EMaterial(struct EMaterial * const this /* r31 */) {}
+// this: r31
+EMaterial::EMaterial() {}
 
 

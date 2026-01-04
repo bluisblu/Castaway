@@ -25,22 +25,27 @@ int RaycastLastHit::CoincidenceTest(class EVec3 * shared /* r30 */) {
 }
 
 // Range: 0x8029C7A4 -> 0x8029C880
-void * ESubModelShader::ESubModelShader(class ESubModelShader * const this /* r31 */) {}
+// this: r31
+ESubModelShader::ESubModelShader() {}
 
 // Range: 0x8029C880 -> 0x8029C8EC
-void * ESubModelShader::~ESubModelShader(class ESubModelShader * const this /* r30 */) {}
+// this: r30
+ESubModelShader::~ESubModelShader() {}
 
 // Range: 0x8029C8EC -> 0x8029C930
-void ESubModelShader::DelRefSubResources(class ESubModelShader * const this /* r31 */) {}
+// this: r31
+void ESubModelShader::DelRefSubResources() {}
 
 // Range: 0x8029C930 -> 0x8029C97C
-void ESubModelShader::AddRefSubResources(class ESubModelShader * const this /* r31 */) {
+// this: r31
+void ESubModelShader::AddRefSubResources() {
     // References
     // -> class EShaderManager _shaderman;
 }
 
 // Range: 0x8029C97C -> 0x8029C9CC
-unsigned char ESubModelShader::TryIncrementSubResources(class ESubModelShader * const this /* r5 */) {
+// this: r5
+unsigned char ESubModelShader::TryIncrementSubResources() {
     // References
     // -> class EShaderManager _shaderman;
 }
@@ -55,28 +60,33 @@ void ESubModelShader::DeallocateStripData(struct ESMSStrip * pStrip /* r28 */, u
 }
 
 // Range: 0x8029CBA0 -> 0x8029CC04
-void ESubModelShader::Deallocate(class ESubModelShader * const this /* r31 */) {}
+// this: r31
+void ESubModelShader::Deallocate() {}
 
 // Range: 0x8029CC04 -> 0x8029CC94
-void ESubModelShader::DeallocateDisplayList(class ESubModelShader * const this /* r31 */) {
+// this: r31
+void ESubModelShader::DeallocateDisplayList() {
     // References
     // -> class EGraphics * _pGfx;
 }
 
 // Range: 0x8029CC94 -> 0x8029CD1C
-void ESubModelShader::FreeStripResource(class ESubModelShader * const this /* r28 */, unsigned char bNotPositions /* r29 */) {
+// this: r28
+void ESubModelShader::FreeStripResource(unsigned char bNotPositions /* r29 */) {
     // Local variables
     int i; // r30
 }
 
 // Range: 0x8029CD1C -> 0x8029CDEC
-void ESubModelShader::FreeMorphStripResource(class ESubModelShader * const this /* r28 */) {
+// this: r28
+void ESubModelShader::FreeMorphStripResource() {
     // Local variables
     int i; // r29
 }
 
 // Range: 0x8029CDEC -> 0x8029CE98
-void ESubModelShader::FreeLatticeResource(class ESubModelShader * const this /* r27 */) {
+// this: r27
+void ESubModelShader::FreeLatticeResource() {
     // Local variables
     int i; // r28
 
@@ -85,7 +95,8 @@ void ESubModelShader::FreeLatticeResource(class ESubModelShader * const this /* 
 }
 
 // Range: 0x8029CE98 -> 0x8029CFF8
-unsigned int ESubModelShader::CreateRCPrimitive(class ESubModelShader * const this /* r9 */, struct ESMSStrip * pStrip /* r31 */) {}
+// this: r9
+unsigned int ESubModelShader::CreateRCPrimitive(struct ESMSStrip * pStrip /* r31 */) {}
 
 // Range: 0x8029CFF8 -> 0x8029D070
 void ESubModelShader::CreateVertexMorphRCPrimitive() {}
@@ -181,7 +192,8 @@ void ESubModelShader::OptimizeStripsForMemory(struct ESMSStrip * pStrip /* r28 *
 }
 
 // Range: 0x8029DEF0 -> 0x8029E290
-void ESubModelShader::RebuildGXDisplayList(class ESubModelShader * const this /* r25 */, struct ESMSStrip * pStrip /* r26 */, unsigned int dlIndexOffset /* r27 */) {
+// this: r25
+void ESubModelShader::RebuildGXDisplayList(struct ESMSStrip * pStrip /* r26 */, unsigned int dlIndexOffset /* r27 */) {
     // Local variables
     int newdlsize; // r28
     unsigned char * buffer; // r29
@@ -198,7 +210,8 @@ void ESubModelShader::RebuildGXDisplayList(class ESubModelShader * const this /*
 }
 
 // Range: 0x8029E290 -> 0x8029E45C
-unsigned int ESubModelShader::ReadIndices(class ESubModelShader * const this /* r28 */, class EFile * s /* r29 */, struct ESMSStrip * pStrip /* r30 */, int modelVersion /* r31 */) {
+// this: r28
+unsigned int ESubModelShader::ReadIndices(class EFile * s /* r29 */, struct ESMSStrip * pStrip /* r30 */, int modelVersion /* r31 */) {
     // Local variables
     unsigned int stripLength; // r1+0x14
     unsigned char indexStride; // r1+0x8
@@ -210,7 +223,8 @@ unsigned int ESubModelShader::ReadIndices(class ESubModelShader * const this /* 
 }
 
 // Range: 0x8029E45C -> 0x8029EA58
-void ESubModelShader::Read(class ESubModelShader * const this /* r20 */, class EFile * s /* r21 */, int modelVersion /* r22 */) {
+// this: r20
+void ESubModelShader::Read(class EFile * s /* r21 */, int modelVersion /* r22 */) {
     // Local variables
     unsigned int shaderId; // r1+0x14
     unsigned int nStrips; // r1+0x10
@@ -236,7 +250,8 @@ void ESubModelShader::Read(class ESubModelShader * const this /* r20 */, class E
 void ESubModelShader::DrawWireFrame() {}
 
 // Range: 0x8029EA5C -> 0x8029EB3C
-void ESubModelShader::AllocateStripsMorph(class ESubModelShader * const this /* r27 */) {
+// this: r27
+void ESubModelShader::AllocateStripsMorph() {
     // Local variables
     int numVerts; // r4
     int numStrips; // r0
@@ -247,13 +262,15 @@ void ESubModelShader::AllocateStripsMorph(class ESubModelShader * const this /* 
 }
 
 // Range: 0x8029EB3C -> 0x8029EC58
-void ESubModelShader::AllocateMorphTargetArray(class ESubModelShader * const this /* r31 */, unsigned int numCurrentBrowseMorphTargets /* r28 */, unsigned int numMorphRegions /* r29 */) {
+// this: r31
+void ESubModelShader::AllocateMorphTargetArray(unsigned int numCurrentBrowseMorphTargets /* r28 */, unsigned int numMorphRegions /* r29 */) {
     // Local variables
     int i; // r6
 }
 
 // Range: 0x8029EC58 -> 0x8029ED1C
-unsigned char ESubModelShader::RegisterCurrentBrowseMorphTarget(class ESubModelShader * const this /* r29 */, class ESubModelShader * pMorphTarget /* r30 */, int currentBrowseMorphTargetIndex /* r31 */) {
+// this: r29
+unsigned char ESubModelShader::RegisterCurrentBrowseMorphTarget(class ESubModelShader * pMorphTarget /* r30 */, int currentBrowseMorphTargetIndex /* r31 */) {
     // Local variables
     int i; // r0
 }
@@ -272,7 +289,8 @@ void ESubModelShader::PromoteCurrentBrowseMorphTarget() {
 }
 
 // Range: 0x8029EDD8 -> 0x8029EE7C
-void ESubModelShader::ResetStripsMorph(class ESubModelShader * const this /* r28 */) {
+// this: r28
+void ESubModelShader::ResetStripsMorph() {
     // Local variables
     int numVerts; // r0
     int numStrips; // r0
@@ -280,7 +298,8 @@ void ESubModelShader::ResetStripsMorph(class ESubModelShader * const this /* r28
 }
 
 // Range: 0x8029EE7C -> 0x8029F2EC
-unsigned char ESubModelShader::BuildDisplayListStripsMorph(class ESubModelShader * const this /* r31 */) {
+// this: r31
+unsigned char ESubModelShader::BuildDisplayListStripsMorph() {
     // Local variables
     class EVec3 vertSrc; // r1+0x80
     class EVec3 vertDelta; // r1+0x74
@@ -317,7 +336,8 @@ unsigned char ESubModelShader::ApplyMorphTargetsToStripsMorph() {
 }
 
 // Range: 0x8029F834 -> 0x8029FA70
-unsigned char ESubModelShader::CreateLatticeList(class ESubModelShader * const this /* r29 */, class TArray * volumeList /* r30 */) {
+// this: r29
+unsigned char ESubModelShader::CreateLatticeList(class TArray * volumeList /* r30 */) {
     // Local variables
     int * idList; // r31
     int i; // r25
@@ -332,7 +352,8 @@ unsigned char ESubModelShader::CreateLatticeList(class ESubModelShader * const t
 }
 
 // Range: 0x8029FA70 -> 0x8029FC0C
-void ESubModelShader::AllocateLatticeParameterVerts(class ESubModelShader * const this /* r29 */) {
+// this: r29
+void ESubModelShader::AllocateLatticeParameterVerts() {
     // Local variables
     int i; // r9
     int j; // r10
@@ -344,7 +365,8 @@ void ESubModelShader::AllocateLatticeParameterVerts(class ESubModelShader * cons
 }
 
 // Range: 0x8029FC0C -> 0x8029FF78
-void ESubModelShader::CreateLatticeParameterVerts(class ESubModelShader * const this /* r24 */) {
+// this: r24
+void ESubModelShader::CreateLatticeParameterVerts() {
     // Local variables
     class EVec3 vert; // r1+0x38
     int i; // r26
@@ -356,7 +378,8 @@ void ESubModelShader::CreateLatticeParameterVerts(class ESubModelShader * const 
 }
 
 // Range: 0x8029FF78 -> 0x802A0344
-void ESubModelShader::ApplyLatticesToStripsMorph(class ESubModelShader * const this /* r27 */) {
+// this: r27
+void ESubModelShader::ApplyLatticesToStripsMorph() {
     // Local variables
     int vertIdx; // r6
     int stripIdx; // r5
@@ -372,7 +395,8 @@ void ESubModelShader::ApplyLatticesToStripsMorph(class ESubModelShader * const t
 }
 
 // Range: 0x802A0344 -> 0x802A082C
-void ESubModelShader::BuildDisplayList(class ESubModelShader * const this /* r24 */, struct ESMBuildDisplayListData * pD /* r25 */) {
+// this: r24
+void ESubModelShader::BuildDisplayList(struct ESMBuildDisplayListData * pD /* r25 */) {
     // Local variables
     unsigned char wallMode; // r28
     float minX; // f27
@@ -393,7 +417,8 @@ void ESubModelShader::BuildDisplayList(class ESubModelShader * const this /* r24
 }
 
 // Range: 0x802A082C -> 0x802A0C14
-void ESubModelShader::BuildDisplayList(class ESubModelShader * const this /* r26 */, const char * owner /* r24 */, unsigned char wallMode /* r27 */, float minX /* f26 */, float maxX /* f27 */) {
+// this: r26
+void ESubModelShader::BuildDisplayList(const char * owner /* r24 */, unsigned char wallMode /* r27 */, float minX /* f26 */, float maxX /* f27 */) {
     // Local variables
     int nTris; // r30
     class ERC * prc; // r29
@@ -496,7 +521,8 @@ unsigned char ESubModelShader::RaycastIntersectionStrip(const class EVec3 & ray_
 }
 
 // Range: 0x802A1954 -> 0x802A1AC4
-unsigned char ESubModelShader::RaycastIntersection(class ESubModelShader * const this /* r23 */, const class EVec3 & ray_pos /* r24 */, const class EVec3 & ray_dir /* r25 */, class EVec3 & hit_pos /* r26 */, float & hit_dist /* r27 */, unsigned char bFirst /* r28 */, unsigned char bIgnoreLast /* r29 */, class RaycastLastHit * lastHit /* r30 */) {
+// this: r23
+unsigned char ESubModelShader::RaycastIntersection(const class EVec3 & ray_pos /* r24 */, const class EVec3 & ray_dir /* r25 */, class EVec3 & hit_pos /* r26 */, float & hit_dist /* r27 */, unsigned char bFirst /* r28 */, unsigned char bIgnoreLast /* r29 */, class RaycastLastHit * lastHit /* r30 */) {
     // Local variables
     unsigned char bHit; // r31
     int iStrip; // r21

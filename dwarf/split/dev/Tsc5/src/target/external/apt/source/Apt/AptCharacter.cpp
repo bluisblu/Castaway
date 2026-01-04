@@ -4,27 +4,30 @@
     Language: C++
     Code range: 0x803123DC -> 0x8031738C
 */
+// total size: 0x8
 struct TextMembers {
-    // total size: 0x8
+    // Members
     char * szName; // offset 0x0, size 0x4
     int nIndex; // offset 0x4, size 0x4
 };
 static struct TextMembers wordlist[30]; // size: 0xF0, address: 0x8045A9A8
-class TextMembersIndex {
-    // total size: 0x1
-};
+// total size: 0x1
+class TextMembersIndex {};
 static int aSpriteGperfToActionFlag[19]; // size: 0x4C, address: 0x8041F5B0
 // Range: 0x803123DC -> 0x8031248C
-void AptCharacter::render(struct AptCharacter * const this /* r28 */, struct AptRenderingContext * pRenderingContext /* r29 */, enum AptMaskRenderOperation eMaskOperation /* r30 */, struct AptMatrix * pMatrix /* r31 */) {
+// this: r28
+void AptCharacter::render(struct AptRenderingContext * pRenderingContext /* r29 */, enum AptMaskRenderOperation eMaskOperation /* r30 */, struct AptMatrix * pMatrix /* r31 */) {
     // References
     // -> struct AptUserFunctions gAptFuncs;
 }
 
 // Range: 0x8031248C -> 0x80312548
-void AptCharacter::_getBoundingRect(struct AptCharacter * const this /* r28 */, struct AptRenderingContext * pRenderingContext /* r29 */, struct AptRect * pRect /* r30 */, struct AptMatrix * pMatrix /* r31 */) {}
+// this: r28
+void AptCharacter::_getBoundingRect(struct AptRenderingContext * pRenderingContext /* r29 */, struct AptRect * pRect /* r30 */, struct AptMatrix * pMatrix /* r31 */) {}
 
 // Range: 0x80312548 -> 0x8031262C
-void * AptCharacterSpriteInstBase::AptCharacterSpriteInstBase(struct AptCharacterSpriteInstBase * const this /* r30 */) {
+// this: r30
+AptCharacterSpriteInstBase::AptCharacterSpriteInstBase() {
     // Local variables
     class AptValue * pMovieClip; // r0
     class AptValue * pPrototypeMovieClip; // r31
@@ -35,7 +38,8 @@ void * AptCharacterSpriteInstBase::AptCharacterSpriteInstBase(struct AptCharacte
 }
 
 // Range: 0x8031262C -> 0x803126BC
-void * AptCharacterSpriteInstBase::~AptCharacterSpriteInstBase(struct AptCharacterSpriteInstBase * const this /* r30 */) {
+// this: r30
+AptCharacterSpriteInstBase::~AptCharacterSpriteInstBase() {
     // References
     // -> class DOGMA_PoolManager * gpNonGCPoolManager;
     // -> struct [anonymous] __vt__26AptCharacterSpriteInstBase;
@@ -45,7 +49,8 @@ void * AptCharacterSpriteInstBase::~AptCharacterSpriteInstBase(struct AptCharact
 void AptCharacterSpriteInstBase::PreDestroy() {}
 
 // Range: 0x803126C4 -> 0x8031283C
-void AptCharacterTextInst::SetText(struct AptCharacterTextInst * const this /* r29 */, class AptCIH * const pParent /* r30 */) {
+// this: r29
+void AptCharacterTextInst::SetText(class AptCIH * const pParent /* r30 */) {
     // Local variables
     class AptCIH * pLocalParent; // [invalid]
     class AptValue * pValue; // r31
@@ -56,7 +61,8 @@ void AptCharacterTextInst::SetText(struct AptCharacterTextInst * const this /* r
 }
 
 // Range: 0x8031283C -> 0x803129A4
-void AptCharacterTextInst::UpdateText(struct AptCharacterTextInst * const this /* r30 */, class AptCIH * const pParent /* r31 */) {
+// this: r30
+void AptCharacterTextInst::UpdateText(class AptCIH * const pParent /* r31 */) {
     // Local variables
     class EAStringC strNewText; // r1+0x10
     class AptCIH * pLocalParent; // [invalid]
@@ -67,14 +73,16 @@ void AptCharacterTextInst::UpdateText(struct AptCharacterTextInst * const this /
 }
 
 // Range: 0x803129A4 -> 0x80312A4C
-void * AptCharacterTextInst::AptCharacterTextInst(struct AptCharacterTextInst * const this /* r31 */) {
+// this: r31
+AptCharacterTextInst::AptCharacterTextInst() {
     // References
     // -> unsigned char bDefaultMouseWheel;
     // -> struct [anonymous] __vt__20AptCharacterTextInst;
 }
 
 // Range: 0x80312A4C -> 0x80312B64
-void * AptCharacterTextInst::~AptCharacterTextInst(struct AptCharacterTextInst * const this /* r29 */) {
+// this: r29
+AptCharacterTextInst::~AptCharacterTextInst() {
     // References
     // -> class DOGMA_PoolManager * gpNonGCPoolManager;
     // -> struct AptUserFunctions gAptFuncs;
@@ -428,8 +436,9 @@ class AptValue * AptCharacterInst::sMethod_getBytesLoaded(class AptValue * pThis
 }
 
 static char __PRETTY_FUNCTION__[37]; // size: 0x25, address: 0x8045AB48
+// total size: 0x8
 struct SpriteMembers {
-    // total size: 0x8
+    // Members
     char * szName; // offset 0x0, size 0x4
     int nIndex; // offset 0x4, size 0x4
 };
@@ -594,10 +603,8 @@ class AptValue * AptCharacterInst::sMethod_localToGlobal(class AptValue * pThis 
     // -> class AptNone * gpUndefinedValue;
 }
 
-struct {
-    // total size: 0x14
-} __vt__20AptCharacterTextInst; // size: 0x14, address: 0x8045AE70
-struct {
-    // total size: 0x14
-} __vt__26AptCharacterSpriteInstBase; // size: 0x14, address: 0x8045AE84
+// total size: 0x14
+struct {} __vt__20AptCharacterTextInst; // size: 0x14, address: 0x8045AE70
+// total size: 0x14
+struct {} __vt__26AptCharacterSpriteInstBase; // size: 0x14, address: 0x8045AE84
 

@@ -5,7 +5,8 @@
     Code range: 0x80205E1C -> 0x80206250
 */
 // Range: 0x80205E1C -> 0x80205F10
-void * EBoneParticle::EBoneParticle(class EBoneParticle * const this /* r27 */, class cXPerson * pPerson /* r28 */, const struct AnimParticleData * pParticleData /* r29 */, unsigned char bShouldContinueOnSkillStart /* r30 */) {
+// this: r27
+EBoneParticle::EBoneParticle(class cXPerson * pPerson /* r28 */, const struct AnimParticleData * pParticleData /* r29 */, unsigned char bShouldContinueOnSkillStart /* r30 */) {
     // References
     // -> class EffectsEmitterManager g_effectsEmitterMan;
     // -> unsigned char kSendEmitterPosToForeground;
@@ -13,28 +14,33 @@ void * EBoneParticle::EBoneParticle(class EBoneParticle * const this /* r27 */, 
 }
 
 // Range: 0x80205F10 -> 0x80205FB0
-unsigned char EBoneParticle::UpdateParticleLoad(class EBoneParticle * const this /* r30 */) {
+// this: r30
+unsigned char EBoneParticle::UpdateParticleLoad() {
     // References
     // -> class EffectsEmitterManager g_effectsEmitterMan;
 }
 
 // Range: 0x80205FB0 -> 0x80206014
-void EBoneParticle::RestartEffect(class EBoneParticle * const this /* r31 */) {}
+// this: r31
+void EBoneParticle::RestartEffect() {}
 
 // Range: 0x80206014 -> 0x80206070
-void EBoneParticle::Refresh(class EBoneParticle * const this /* r30 */) {
+// this: r30
+void EBoneParticle::Refresh() {
     // Local variables
     class FastParticleEmitter * temp; // r31
 }
 
 // Range: 0x80206070 -> 0x8020615C
-void * EBoneParticle::~EBoneParticle(class EBoneParticle * const this /* r29 */) {
+// this: r29
+EBoneParticle::~EBoneParticle() {
     // References
     // -> class EffectsEmitterManager g_effectsEmitterMan;
 }
 
 // Range: 0x8020615C -> 0x80206250
-void EBoneParticle::Update(class EBoneParticle * const this /* r31 */) {
+// this: r31
+void EBoneParticle::Update() {
     // Local variables
     class EMat4 mMat; // r1+0x8
 }

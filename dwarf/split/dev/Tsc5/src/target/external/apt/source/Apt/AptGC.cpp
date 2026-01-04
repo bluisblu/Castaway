@@ -4,9 +4,8 @@
     Language: C++
     Code range: 0x803205FC -> 0x80320900
 */
-class AptGC {
-    // total size: 0x1
-};
+// total size: 0x1
+class AptGC {};
 // Range: 0x803205FC -> 0x80320600
 void AptGC::Initialize() {}
 

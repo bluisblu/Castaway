@@ -5,6 +5,6 @@
     Code range: 0x80037E10 -> 0x80037E28
 */
 // Range: 0x80037E10 -> 0x80037E28
-void * ClothingSetIndexInfo::ClothingSetIndexInfo() {}
+ClothingSetIndexInfo::ClothingSetIndexInfo() {}
 
 

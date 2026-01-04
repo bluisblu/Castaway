@@ -5,7 +5,7 @@
     Code range: 0x802A806C -> 0x802A8358
 */
 // Range: 0x802A806C -> 0x802A8084
-void * EControllerManager::EControllerManager() {
+EControllerManager::EControllerManager() {
     // References
     // -> struct [anonymous] __vt__18EControllerManager;
 }
@@ -85,7 +85,8 @@ unsigned char EControllerManager::GetCmdResultAllCtrl(unsigned int nCommandId /*
 }
 
 // Range: 0x802A831C -> 0x802A8358
-void EControllerManager::MapControllerCommands(class EControllerManager * const this /* r31 */) {
+// this: r31
+void EControllerManager::MapControllerCommands() {
     // References
     // -> class EController * _ctrlPads[4];
 }

@@ -47,22 +47,10 @@ float ESimsCam::GetTilt() {}
 void ESimsCam::SetUp() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\target\game\camera.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x80096050 -> 0x80096058
-*/
 // Range: 0x80096050 -> 0x80096058
 class E3DWindow * ESimsCam::GetWin() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\target\game\camera.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x80107C10 -> 0x80107C64
-*/
 // Range: 0x80107C10 -> 0x80107C24
 unsigned char CameraDirector::IsLockedState() {}
 
@@ -79,12 +67,6 @@ void CameraDirector::CancelEnable() {}
 unsigned char CameraDirector::IsHoldState() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\target\game\camera.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x801744A4 -> 0x801744E0
-*/
 // Range: 0x801744A4 -> 0x801744AC
 void CameraDirector::SetIsIntroPlaying() {}
 
@@ -101,14 +83,8 @@ void CameraDirector::Disable() {}
 void CameraDirector::SetLockState() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\target\game\camera.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x801CB1A0 -> 0x801CB204
-*/
 // Range: 0x801CB1A0 -> 0x801CB1FC
-void * ESimsCam::__nw(unsigned long size /* r30 */) {
+void * ESimsCam::operator new(unsigned long size /* r30 */) {
     // Local variables
     void * result; // r31
 }
@@ -117,17 +93,11 @@ void * ESimsCam::__nw(unsigned long size /* r30 */) {
 class EAnimController * CameraDirector::GetAnimController() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\target\game\camera.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x801FBBF8 -> 0x801FBD14
-*/
 // Range: 0x801FBBF8 -> 0x801FBC2C
-void ESimsCam::__dl(void * p /* r31 */) {}
+void ESimsCam::operator delete(void * p /* r31 */) {}
 
 // Range: 0x801FBC2C -> 0x801FBC60
-void CameraDirector::__dl(void * p /* r31 */) {}
+void CameraDirector::operator delete(void * p /* r31 */) {}
 
 // Range: 0x801FBC60 -> 0x801FBC68
 void ESimsCam::SetInterpolatingFromLotIntroCameraFlag() {}
@@ -145,18 +115,13 @@ void ESimsCam::SetCenterNew() {}
 class EMat4 * CameraDirector::GetOffsetMatrix() {}
 
 // Range: 0x801FBC94 -> 0x801FBCD4
-void * CameraDirector::__nw(unsigned long size /* r31 */) {}
+void * CameraDirector::operator new(unsigned long size /* r31 */) {}
 
 // Range: 0x801FBCD4 -> 0x801FBD14
-void * NewControlParms::~NewControlParms(class NewControlParms * const this /* r31 */) {}
+// this: r31
+NewControlParms::~NewControlParms() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\target\game\camera.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x80249110 -> 0x80249118
-*/
 // Range: 0x80249110 -> 0x80249118
 float ESimsCam::GetCameraTerrainOffset() {}
 

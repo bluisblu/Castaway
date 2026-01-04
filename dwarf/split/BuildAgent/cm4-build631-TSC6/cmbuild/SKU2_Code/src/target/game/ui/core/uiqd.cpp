@@ -5,13 +5,15 @@
     Code range: 0x8018272C -> 0x801835D4
 */
 // Range: 0x8018272C -> 0x80182834
-void * UIQDTarget::UIQDTarget(class UIQDTarget * const this /* r30 */) {
+// this: r30
+UIQDTarget::UIQDTarget() {
     // References
     // -> struct [anonymous] __vt__10UIQDTarget;
 }
 
 // Range: 0x80182834 -> 0x801828A0
-void * UIQDTarget::~UIQDTarget(class UIQDTarget * const this /* r30 */) {
+// this: r30
+UIQDTarget::~UIQDTarget() {
     // References
     // -> struct [anonymous] __vt__10UIQDTarget;
 }

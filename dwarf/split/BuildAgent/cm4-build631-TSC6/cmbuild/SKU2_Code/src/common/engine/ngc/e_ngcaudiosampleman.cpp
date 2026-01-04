@@ -5,13 +5,16 @@
     Code range: 0x802B2988 -> 0x802B2DB0
 */
 // Range: 0x802B2988 -> 0x802B29E0
-void * EAudioSampleManager::~EAudioSampleManager(class EAudioSampleManager * const this /* r30 */) {}
+// this: r30
+EAudioSampleManager::~EAudioSampleManager() {}
 
 // Range: 0x802B29E0 -> 0x802B2A3C
-void * ENgcAudioSampleManager::~ENgcAudioSampleManager(class ENgcAudioSampleManager * const this /* r30 */) {}
+// this: r30
+ENgcAudioSampleManager::~ENgcAudioSampleManager() {}
 
 // Range: 0x802B2A3C -> 0x802B2AC8
-void ENgcAudioSampleManager::Init(class ENgcAudioSampleManager * const this /* r29 */, const char * szDataType /* r30 */) {
+// this: r29
+void ENgcAudioSampleManager::Init(const char * szDataType /* r30 */) {
     // Local variables
     void * mem; // r31
 
@@ -29,7 +32,8 @@ void ENgcAudioSampleManager::Shutdown() {
 unsigned char ENgcAudioSampleManager::CanCache() {}
 
 // Range: 0x802B2B34 -> 0x802B2D58
-class EResource * ENgcAudioSampleManager::AllocateAndLoadResource(class ENgcAudioSampleManager * const this /* r31 */, class EFile * pFile /* r25 */, unsigned int uLength /* r26 */, unsigned int id /* r27 */) {
+// this: r31
+class EResource * ENgcAudioSampleManager::AllocateAndLoadResource(class EFile * pFile /* r25 */, unsigned int uLength /* r26 */, unsigned int id /* r27 */) {
     // Local variables
     class ERSampledata * result; // r28
     unsigned int tell; // r0

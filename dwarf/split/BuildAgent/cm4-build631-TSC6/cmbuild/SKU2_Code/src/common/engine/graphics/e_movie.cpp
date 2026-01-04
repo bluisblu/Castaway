@@ -5,7 +5,8 @@
     Code range: 0x80296784 -> 0x80296814
 */
 // Range: 0x80296784 -> 0x80296814
-void EMovie::Update(class EMovie * const this /* r30 */) {
+// this: r30
+void EMovie::Update() {
     // Local variables
     class ERC * pRC; // r31
 

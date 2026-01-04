@@ -5,7 +5,8 @@
     Code range: 0x802CC8B8 -> 0x802CD5C0
 */
 // Range: 0x802CC8B8 -> 0x802CC968
-void * ENgcSFXStreamer::ENgcSFXStreamer(class ENgcSFXStreamer * const this /* r27 */) {
+// this: r27
+ENgcSFXStreamer::ENgcSFXStreamer() {
     // Local variables
     unsigned int i; // r28
 

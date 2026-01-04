@@ -19,7 +19,7 @@ void EControllerData::Reset() {
 }
 
 // Range: 0x802F2CD0 -> 0x802F2EC8
-void EControllerData::__as() {
+void EControllerData::operator=() {
     // Local variables
     int i; // r0
     int i1; // r5

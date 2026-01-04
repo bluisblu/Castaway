@@ -14,7 +14,8 @@ unsigned char AptActionInterpreter::doUnwindStack() {}
 unsigned char AptActionInterpreter::hasThrownValue() {}
 
 // Range: 0x8030B34C -> 0x8030B3A4
-void AptActionInterpreter::clearThrownValue(struct AptActionInterpreter * const this /* r31 */) {
+// this: r31
+void AptActionInterpreter::clearThrownValue() {
     // References
     // -> static char __PRETTY_FUNCTION__[41];
 }
@@ -23,7 +24,8 @@ void AptActionInterpreter::clearThrownValue(struct AptActionInterpreter * const 
 class AptValue * AptActionInterpreter::getThrownValue() {}
 
 // Range: 0x8030B3AC -> 0x8030B40C
-void AptActionInterpreter::throwValue(struct AptActionInterpreter * const this /* r30 */, class AptValue * pThrown /* r31 */) {
+// this: r30
+void AptActionInterpreter::throwValue(class AptValue * pThrown /* r31 */) {
     // References
     // -> static char __PRETTY_FUNCTION__[45];
 }
@@ -44,12 +46,6 @@ unsigned char AptAction_TryCatchFinallyBlock::hasCatchBlock() {}
 unsigned char * AptAction_TryCatchFinallyBlock::getTryBlockBase() {}
 
 
-/*
-    Compile unit: C:\dev\TSC5\src\target\external\apt\source\Apt\_AptActions.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x80332280 -> 0x80332294
-*/
 // Range: 0x80332280 -> 0x80332294
 int AptAction_DefineFunction2::getDF2Flag() {}
 

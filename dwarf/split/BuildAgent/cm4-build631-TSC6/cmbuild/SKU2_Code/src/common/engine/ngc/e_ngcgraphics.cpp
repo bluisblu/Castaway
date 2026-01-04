@@ -5,13 +5,15 @@
     Code range: 0x802B51C0 -> 0x802B5BA8
 */
 // Range: 0x802B51C0 -> 0x802B5220
-void * ENgcGraphics::~ENgcGraphics(class ENgcGraphics * const this /* r30 */) {
+// this: r30
+ENgcGraphics::~ENgcGraphics() {
     // References
     // -> class EGraphics * _pGfx;
 }
 
 // Range: 0x802B5220 -> 0x802B535C
-unsigned char ENgcGraphics::Init(class ENgcGraphics * const this /* r29 */) {
+// this: r29
+unsigned char ENgcGraphics::Init() {
     // Local variables
     struct EShaderDef sd; // r1+0x8
 
@@ -20,7 +22,8 @@ unsigned char ENgcGraphics::Init(class ENgcGraphics * const this /* r29 */) {
 }
 
 // Range: 0x802B535C -> 0x802B53EC
-void ENgcGraphics::InitShadowSurface(class ENgcGraphics * const this /* r31 */) {
+// this: r31
+void ENgcGraphics::InitShadowSurface() {
     // Local variables
     struct ETextureDef td; // r1+0x8
 }
@@ -44,7 +47,8 @@ void ENgcGraphics::SetBackgroundColor(const class EVec3 & color /* r29 */, int a
 void ENgcGraphics::GetScreenShot() {}
 
 // Range: 0x802B5540 -> 0x802B5588
-void ENgcGraphics::Destroy(class ENgcGraphics * const this /* r30 */, class ERenderSurface * pSurf /* r31 */) {}
+// this: r30
+void ENgcGraphics::Destroy(class ERenderSurface * pSurf /* r31 */) {}
 
 // Range: 0x802B5588 -> 0x802B55D8
 class EDL * ENgcGraphics::AllocDL() {
@@ -95,7 +99,8 @@ class EMovie * ENgcGraphics::AllocMovie() {}
 void ENgcGraphics::FreeMovie() {}
 
 // Range: 0x802B5814 -> 0x802B5AF8
-void ENgcGraphics::EndFrame(class ENgcGraphics * const this /* r25 */) {
+// this: r25
+void ENgcGraphics::EndFrame() {
     // Local variables
     class ERC * prc; // r28
     char szBuffer[32]; // r1+0x30
@@ -117,7 +122,8 @@ void ENgcGraphics::EndFrame(class ENgcGraphics * const this /* r25 */) {
 }
 
 // Range: 0x802B5AF8 -> 0x802B5BA4
-void ENgcGraphics::DrawCensorRects(class ENgcGraphics * const this /* r28 */, class ERC * prc /* r29 */) {
+// this: r28
+void ENgcGraphics::DrawCensorRects(class ERC * prc /* r29 */) {
     // Local variables
     int c; // r30
     class EVec2 screenUL; // r1+0x10

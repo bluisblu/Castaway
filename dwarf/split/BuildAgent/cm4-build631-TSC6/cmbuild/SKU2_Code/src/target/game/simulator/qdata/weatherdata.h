@@ -5,9 +5,11 @@
     Code range: 0x800D00A0 -> 0x800D0110
 */
 // Range: 0x800D00A0 -> 0x800D00D8
-void * DamageEvent::DamageEvent(struct DamageEvent * const this /* r31 */) {}
+// this: r31
+DamageEvent::DamageEvent() {}
 
 // Range: 0x800D00D8 -> 0x800D0110
-void * Armor::Armor(struct Armor * const this /* r31 */) {}
+// this: r31
+Armor::Armor() {}
 
 

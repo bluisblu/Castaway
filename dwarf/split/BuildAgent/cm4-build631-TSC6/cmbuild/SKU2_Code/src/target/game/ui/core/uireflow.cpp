@@ -5,10 +5,11 @@
     Code range: 0x801835D4 -> 0x80184624
 */
 // Range: 0x801835D4 -> 0x801835F4
-void * UIReflow::UIReflow() {}
+UIReflow::UIReflow() {}
 
 // Range: 0x801835F4 -> 0x8018366C
-void * UIReflow::~UIReflow(class UIReflow * const this /* r29 */) {}
+// this: r29
+UIReflow::~UIReflow() {}
 
 // Range: 0x8018366C -> 0x80183788
 void UIReflow::ResetSize(const char * pWID /* r29 */, int h /* r30 */, int w /* r31 */) {
@@ -69,95 +70,111 @@ void UIReflow::ResetSwfFileName(const char * pWID /* r30 */, const char * swfFil
 }
 
 // Range: 0x80183BDC -> 0x80183C74
-void UIReflow::AddToBlock(class UIReflow * const this /* r29 */, const char * pItem /* r30 */) {
+// this: r29
+void UIReflow::AddToBlock(const char * pItem /* r30 */) {
     // Local variables
     int len; // r0
 }
 
 // Range: 0x80183C74 -> 0x80183D04
-void UIReflow::ReallocateBlock(class UIReflow * const this /* r30 */) {
+// this: r30
+void UIReflow::ReallocateBlock() {
     // Local variables
     char * pTemp; // r31
     int len; // r0
 }
 
 // Range: 0x80183D04 -> 0x80183E4C
-void UIReflow::OpenTweenBlock(class UIReflow * const this /* r27 */, const char * id /* r28 */, unsigned int duration /* r29 */, unsigned int method /* r30 */, const char * setVariableCallback /* r31 */) {
+// this: r27
+void UIReflow::OpenTweenBlock(const char * id /* r28 */, unsigned int duration /* r29 */, unsigned int method /* r30 */, const char * setVariableCallback /* r31 */) {
     // Local variables
     char pChar[128]; // r1+0x8
 }
 
 // Range: 0x80183E4C -> 0x80183EC4
-void UIReflow::SubmitTweenBlock(class UIReflow * const this /* r31 */) {
+// this: r31
+void UIReflow::SubmitTweenBlock() {
     // References
     // -> class AptViewer * _gpAptViewer;
 }
 
 // Range: 0x80183EC4 -> 0x80183F2C
-void UIReflow::Tween_X(class UIReflow * const this /* r30 */, int x /* r31 */) {
+// this: r30
+void UIReflow::Tween_X(int x /* r31 */) {
     // Local variables
     char pChar[128]; // r1+0x8
 }
 
 // Range: 0x80183F2C -> 0x80183F94
-void UIReflow::Tween_Y(class UIReflow * const this /* r30 */, int y /* r31 */) {
+// this: r30
+void UIReflow::Tween_Y(int y /* r31 */) {
     // Local variables
     char pChar[128]; // r1+0x8
 }
 
 // Range: 0x80183F94 -> 0x80183FFC
-void UIReflow::Tween_H(class UIReflow * const this /* r30 */, unsigned int h /* r31 */) {
+// this: r30
+void UIReflow::Tween_H(unsigned int h /* r31 */) {
     // Local variables
     char pChar[128]; // r1+0x8
 }
 
 // Range: 0x80183FFC -> 0x80184064
-void UIReflow::Tween_W(class UIReflow * const this /* r30 */, unsigned int w /* r31 */) {
+// this: r30
+void UIReflow::Tween_W(unsigned int w /* r31 */) {
     // Local variables
     char pChar[128]; // r1+0x8
 }
 
 // Range: 0x80184064 -> 0x801840CC
-void UIReflow::Tween_Rotation(class UIReflow * const this /* r31 */, float degrees /* f31 */) {
+// this: r31
+void UIReflow::Tween_Rotation(float degrees /* f31 */) {
     // Local variables
     char pChar[128]; // r1+0x8
 }
 
 // Range: 0x801840CC -> 0x80184144
-void UIReflow::Tween_Alpha(class UIReflow * const this /* r30 */, unsigned int alpha /* r31 */) {
+// this: r30
+void UIReflow::Tween_Alpha(unsigned int alpha /* r31 */) {
     // Local variables
     char pChar[128]; // r1+0x8
 }
 
 // Range: 0x80184144 -> 0x801841C4
-void UIReflow::Tween_ColorOverride(class UIReflow * const this /* r30 */, unsigned int color /* r31 */) {
+// this: r30
+void UIReflow::Tween_ColorOverride(unsigned int color /* r31 */) {
     // Local variables
     char pChar[128]; // r1+0x8
 }
 
 // Range: 0x801841C4 -> 0x80184238
-void UIReflow::Tween_ColorOnlyOverride(class UIReflow * const this /* r30 */, unsigned int color /* r31 */) {
+// this: r30
+void UIReflow::Tween_ColorOnlyOverride(unsigned int color /* r31 */) {
     // Local variables
     char pChar[128]; // r1+0x8
 }
 
 // Range: 0x80184238 -> 0x801842A0
-void UIReflow::Tween_FontSizeOverride(class UIReflow * const this /* r30 */, unsigned int size /* r31 */) {
+// this: r30
+void UIReflow::Tween_FontSizeOverride(unsigned int size /* r31 */) {
     // Local variables
     char pChar[128]; // r1+0x8
 }
 
 // Range: 0x801842A0 -> 0x80184318
-void UIReflow::OpenReflowBlock(class UIReflow * const this /* r31 */) {}
+// this: r31
+void UIReflow::OpenReflowBlock() {}
 
 // Range: 0x80184318 -> 0x801843A8
-void UIReflow::SubmitReflowBlock(class UIReflow * const this /* r31 */) {
+// this: r31
+void UIReflow::SubmitReflowBlock() {
     // References
     // -> class AptViewer * _gpAptViewer;
 }
 
 // Range: 0x801843A8 -> 0x801843FC
-void UIReflow::Reflow_Id(class UIReflow * const this /* r30 */, const char * id /* r31 */) {}
+// this: r30
+void UIReflow::Reflow_Id(const char * id /* r31 */) {}
 
 // Range: 0x801843FC -> 0x80184400
 void UIReflow::Reflow_X() {}
@@ -175,7 +192,8 @@ void UIReflow::Reflow_W() {}
 void UIReflow::Reflow_Rotation() {}
 
 // Range: 0x80184410 -> 0x80184478
-void UIReflow::Reflow_Visibility(class UIReflow * const this /* r30 */, unsigned char on /* r31 */) {
+// this: r30
+void UIReflow::Reflow_Visibility(unsigned char on /* r31 */) {
     // Local variables
     char pChar[128]; // r1+0x8
 }
@@ -184,7 +202,8 @@ void UIReflow::Reflow_Visibility(class UIReflow * const this /* r30 */, unsigned
 void UIReflow::Reflow_Alpha() {}
 
 // Range: 0x8018447C -> 0x801844D0
-void UIReflow::Reflow_Action(class UIReflow * const this /* r30 */, const char * strVar /* r31 */) {}
+// this: r30
+void UIReflow::Reflow_Action(const char * strVar /* r31 */) {}
 
 // Range: 0x801844D0 -> 0x801844D4
 void UIReflow::Reflow_ColorOverride() {}
@@ -196,7 +215,8 @@ void UIReflow::Reflow_ColorOnlyOverride() {}
 void UIReflow::Reflow_FontSizeOverride() {}
 
 // Range: 0x801844DC -> 0x80184530
-void UIReflow::Reflow_SwfAnimation(class UIReflow * const this /* r30 */, const char * animation /* r31 */) {}
+// this: r30
+void UIReflow::Reflow_SwfAnimation(const char * animation /* r31 */) {}
 
 // Range: 0x80184530 -> 0x80184624
 void UIReflow::Debug_PrintBlock() {

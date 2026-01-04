@@ -8,12 +8,6 @@
 unsigned char ELiveMode::IsRunningIntroCamera() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\target\game\statemachine\livemode.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x801743DC -> 0x8017449C
-*/
 // Range: 0x801743DC -> 0x801743E4
 void ELiveMode::SetInitialized() {}
 
@@ -33,13 +27,15 @@ void ELiveMode::SetGoingToNeighborhoodMode() {}
 unsigned char ELiveMode::IsInitialized() {}
 
 // Range: 0x80174418 -> 0x80174454
-void * LiveModeChangeHouseStateMachine::LiveModeChangeHouseStateMachine(class LiveModeChangeHouseStateMachine * const this /* r31 */) {
+// this: r31
+LiveModeChangeHouseStateMachine::LiveModeChangeHouseStateMachine() {
     // References
     // -> struct [anonymous] __vt__31LiveModeChangeHouseStateMachine;
 }
 
 // Range: 0x80174454 -> 0x8017449C
-void * LiveModeInitState::LiveModeInitState(class LiveModeInitState * const this /* r31 */) {
+// this: r31
+LiveModeInitState::LiveModeInitState() {
     // References
     // -> struct [anonymous] __vt__17LiveModeInitState;
 }

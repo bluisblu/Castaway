@@ -5,10 +5,10 @@
     Code range: 0x801FF804 -> 0x801FF88C
 */
 // Range: 0x801FF804 -> 0x801FF810
-void * AptAuxIDToChar::AptAuxIDToChar() {}
+AptAuxIDToChar::AptAuxIDToChar() {}
 
 // Range: 0x801FF810 -> 0x801FF820
-void * AptAuxIDToChar::AptAuxIDToChar() {}
+AptAuxIDToChar::AptAuxIDToChar() {}
 
 // Range: 0x801FF820 -> 0x801FF828
 void * AptAuxIDToChar::GetData() {}
@@ -17,6 +17,7 @@ void * AptAuxIDToChar::GetData() {}
 enum AptAuxCharacterType AptAuxIDToChar::GetType() {}
 
 // Range: 0x801FF830 -> 0x801FF88C
-void * AptAuxLayerInfo::AptAuxLayerInfo(struct AptAuxLayerInfo * const this /* r31 */) {}
+// this: r31
+AptAuxLayerInfo::AptAuxLayerInfo() {}
 
 

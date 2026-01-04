@@ -5,10 +5,12 @@
     Code range: 0x800A176C -> 0x800A1824
 */
 // Range: 0x800A176C -> 0x800A17AC
-void * ObjFnTable::~ObjFnTable(class ObjFnTable * const this /* r31 */) {}
+// this: r31
+ObjFnTable::~ObjFnTable() {}
 
 // Range: 0x800A17AC -> 0x800A17E8
-void * ObjFnTable::ObjFnTable(class ObjFnTable * const this /* r31 */) {
+// this: r31
+ObjFnTable::ObjFnTable() {
     // References
     // -> struct [anonymous] __vt__10ObjFnTable;
 }

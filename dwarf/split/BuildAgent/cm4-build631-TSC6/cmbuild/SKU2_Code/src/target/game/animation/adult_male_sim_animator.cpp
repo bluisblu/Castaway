@@ -5,16 +5,19 @@
     Code range: 0x8001B468 -> 0x8001B6F0
 */
 // Range: 0x8001B468 -> 0x8001B4A4
-void * AdultMaleSimAnimator::AdultMaleSimAnimator(class AdultMaleSimAnimator * const this /* r31 */) {
+// this: r31
+AdultMaleSimAnimator::AdultMaleSimAnimator() {
     // References
     // -> struct [anonymous] __vt__20AdultMaleSimAnimator;
 }
 
 // Range: 0x8001B4A4 -> 0x8001B4FC
-void * AdultMaleSimAnimator::~AdultMaleSimAnimator(class AdultMaleSimAnimator * const this /* r30 */) {}
+// this: r30
+AdultMaleSimAnimator::~AdultMaleSimAnimator() {}
 
 // Range: 0x8001B4FC -> 0x8001B53C
-unsigned char AdultMaleSimAnimator::Initialize(class AdultMaleSimAnimator * const this /* r31 */) {}
+// this: r31
+unsigned char AdultMaleSimAnimator::Initialize() {}
 
 // Range: 0x8001B53C -> 0x8001B660
 void AdultMaleSimAnimator::CreateBoneTranslationTable() {

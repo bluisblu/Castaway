@@ -217,10 +217,11 @@ void CreateObjectFolderSelectorArray(class ObjSelector * * * output /* r25 */, u
 }
 
 // Range: 0x801E2750 -> 0x801E2774
-void * SelectorFilterFunctor::SelectorFilterFunctor() {}
+SelectorFilterFunctor::SelectorFilterFunctor() {}
 
 // Range: 0x801E2774 -> 0x801E2858
-unsigned char SelectorFilterFunctor::ObjectAllowed(class SelectorFilterFunctor * const this /* r30 */, class ObjSelector * pObjSelector /* r31 */) {
+// this: r30
+unsigned char SelectorFilterFunctor::ObjectAllowed(class ObjSelector * pObjSelector /* r31 */) {
     // Local variables
     const struct ObjDefinition * pObjDefinition; // r0
 }
@@ -306,10 +307,11 @@ class IGoalUnlock * GetUnlockManagerFromFamily() {
 }
 
 // Range: 0x801E2D60 -> 0x801E2D6C
-void * NumericalInputSpinner::NumericalInputSpinner() {}
+NumericalInputSpinner::NumericalInputSpinner() {}
 
 // Range: 0x801E2D6C -> 0x801E2DF4
-void NumericalInputSpinner::Update(class NumericalInputSpinner * const this /* r29 */, unsigned int filterID /* r30 */) {
+// this: r29
+void NumericalInputSpinner::Update(unsigned int filterID /* r30 */) {
     // Local variables
     class EController * pCtrl; // r31
 
@@ -324,7 +326,8 @@ void NumericalInputSpinner::NotifyInputHappened() {}
 int NumericalInputSpinner::GetFramesPressed() {}
 
 // Range: 0x801E2E0C -> 0x801E2E98
-void * FireMarshall::FireMarshall(class FireMarshall * const this /* r31 */) {
+// this: r31
+FireMarshall::FireMarshall() {
     // Local variables
     float firevalue; // f0
 
@@ -343,7 +346,8 @@ void FireMarshall::EnforceFireCode() {
 }
 
 // Range: 0x801E2EFC -> 0x801E2FB4
-void FireMarshall::LaunchWarnings(class FireMarshall * const this /* r31 */) {}
+// this: r31
+void FireMarshall::LaunchWarnings() {}
 
 // Range: 0x801E2FB4 -> 0x801E3020
 float FireMarshall::GetObjectFireValue() {
@@ -364,16 +368,19 @@ float FireMarshall::GetCompositeFireValue(unsigned char recalculate /* r31 */) {
 }
 
 // Range: 0x801E30AC -> 0x801E3100
-unsigned char FireMarshall::AllowPlacement(class FireMarshall * const this /* r31 */) {}
+// this: r31
+unsigned char FireMarshall::AllowPlacement() {}
 
 // Range: 0x801E3100 -> 0x801E3250
-void FireMarshall::SpawnFirecodeDialog(class FireMarshall * const this /* r27 */, char * bodyText /* r31 */) {
+// this: r27
+void FireMarshall::SpawnFirecodeDialog(char * bodyText /* r31 */) {
     // References
     // -> class EGlobal _globals;
 }
 
 // Range: 0x801E3250 -> 0x801E32D8
-void FireMarshall::UpdateFireCode(class FireMarshall * const this /* r31 */) {
+// this: r31
+void FireMarshall::UpdateFireCode() {
     // Local variables
     float firevalue; // f0
 }
@@ -385,13 +392,15 @@ void FireMarshall::DialogSelectionCallback() {}
 void FireMarshall::DialogClosedCallback() {}
 
 // Range: 0x801E32F0 -> 0x801E340C
-void * TutorialGUIManager::TutorialGUIManager(class TutorialGUIManager * const this /* r30 */) {
+// this: r30
+TutorialGUIManager::TutorialGUIManager() {
     // References
     // -> struct [anonymous] __vt__Q218UISimulatorSupport18TutorialGUIManager;
 }
 
 // Range: 0x801E340C -> 0x801E3484
-void * TutorialGUIManager::~TutorialGUIManager(class TutorialGUIManager * const this /* r30 */) {
+// this: r30
+TutorialGUIManager::~TutorialGUIManager() {
     // References
     // -> struct [anonymous] __vt__Q218UISimulatorSupport18TutorialGUIManager;
 }
@@ -403,7 +412,8 @@ char * TutorialGUIManager::GetVariable(const char * szVar /* r30 */) {
 }
 
 // Range: 0x801E34F8 -> 0x801E3768
-void TutorialGUIManager::TryCreateTutorialDialog(class TutorialGUIManager * const this /* r22 */, enum TutorialUnlockIndex index /* r23 */, char * titleid /* r24 */, char * bodyid /* r25 */, unsigned char bUseNewUIStrings /* r26 */, unsigned char bMarkDialogAsViewed /* r27 */, void (* pTutorialDialogCallback)(int) /* r28 */) {
+// this: r22
+void TutorialGUIManager::TryCreateTutorialDialog(enum TutorialUnlockIndex index /* r23 */, char * titleid /* r24 */, char * bodyid /* r25 */, unsigned char bUseNewUIStrings /* r26 */, unsigned char bMarkDialogAsViewed /* r27 */, void (* pTutorialDialogCallback)(int) /* r28 */) {
     // Local variables
     class IGoalUnlock * goalUnlock; // r29
     unsigned char prompted; // r0
@@ -414,25 +424,29 @@ void TutorialGUIManager::TryCreateTutorialDialog(class TutorialGUIManager * cons
 }
 
 // Range: 0x801E3768 -> 0x801E37C4
-void TutorialGUIManager::DialogSelectionCallback(class TutorialGUIManager * const this /* r31 */) {
+// this: r31
+void TutorialGUIManager::DialogSelectionCallback() {
     // References
     // -> class EGlobal _globals;
 }
 
 // Range: 0x801E37C4 -> 0x801E3820
-void TutorialGUIManager::DialogClosedCallback(class TutorialGUIManager * const this /* r31 */) {
+// this: r31
+void TutorialGUIManager::DialogClosedCallback() {
     // References
     // -> class EGlobal _globals;
 }
 
 // Range: 0x801E3820 -> 0x801E3864
-void * UICatalogItemObject::UICatalogItemObject(class UICatalogItemObject * const this /* r31 */) {
+// this: r31
+UICatalogItemObject::UICatalogItemObject() {
     // References
     // -> struct [anonymous] __vt__Q218UISimulatorSupport19UICatalogItemObject;
 }
 
 // Range: 0x801E3864 -> 0x801E38BC
-void UICatalogItemObject::Initialize(class UICatalogItemObject * const this /* r31 */) {
+// this: r31
+void UICatalogItemObject::Initialize() {
     // Local variables
     const struct ResData * pResData; // r0
 }
@@ -465,7 +479,8 @@ unsigned char UICatalogItemObject::IsPutInHand() {}
 unsigned char UICatalogItemObject::CanAddToInventory() {}
 
 // Range: 0x801E3988 -> 0x801E3A10
-void UICatalogItemObject::AddToInventory(const class UICatalogItemObject * const this /* r30 */, class InventoryItems * pInventory /* r31 */) {}
+// this: r30
+void UICatalogItemObject::AddToInventory(class InventoryItems * pInventory /* r31 */) const {}
 
 // Range: 0x801E3A10 -> 0x801E3A18
 unsigned char UICatalogItemObject::Get3DShader() {}
@@ -477,13 +492,15 @@ unsigned char UICatalogItemObject::IsRecentlyUnlocked() {}
 void UICatalogItemObject::SetRecentlyUnlockedStatus() {}
 
 // Range: 0x801E3A24 -> 0x801E3A68
-void * UICatalogItemIngredient::UICatalogItemIngredient(class UICatalogItemIngredient * const this /* r31 */) {
+// this: r31
+UICatalogItemIngredient::UICatalogItemIngredient() {
     // References
     // -> struct [anonymous] __vt__Q218UISimulatorSupport23UICatalogItemIngredient;
 }
 
 // Range: 0x801E3A68 -> 0x801E3AA0
-void UICatalogItemIngredient::Initialize(class UICatalogItemIngredient * const this /* r31 */) {}
+// this: r31
+void UICatalogItemIngredient::Initialize() {}
 
 // Range: 0x801E3AA0 -> 0x801E3AF0
 void UICatalogItemIngredient::GetName(unsigned short * dest /* r31 */) {
@@ -510,10 +527,12 @@ unsigned char UICatalogItemIngredient::GetMotives() {}
 unsigned char UICatalogItemIngredient::CanAddToInventory() {}
 
 // Range: 0x801E3BC8 -> 0x801E3BE0
-void UICatalogItemIngredient::AddToInventory(const class UICatalogItemIngredient * const this /* r5 */) {}
+// this: r5
+void UICatalogItemIngredient::AddToInventory() const {}
 
 // Range: 0x801E3BE0 -> 0x801E3BF8
-void UICatalogItemIngredient::AddToInventory(const class UICatalogItemIngredient * const this /* r6 */) {}
+// this: r6
+void UICatalogItemIngredient::AddToInventory() const {}
 
 // Range: 0x801E3BF8 -> 0x801E3C30
 unsigned char UICatalogItemIngredient::GetBigShader(unsigned int * output /* r31 */) {}
@@ -525,13 +544,15 @@ unsigned char UICatalogItemIngredient::IsRecentlyUnlocked() {}
 void UICatalogItemIngredient::SetRecentlyUnlockedStatus() {}
 
 // Range: 0x801E3C3C -> 0x801E3C80
-void * UICatalogItemInventoryToken::UICatalogItemInventoryToken(class UICatalogItemInventoryToken * const this /* r31 */) {
+// this: r31
+UICatalogItemInventoryToken::UICatalogItemInventoryToken() {
     // References
     // -> struct [anonymous] __vt__Q218UISimulatorSupport27UICatalogItemInventoryToken;
 }
 
 // Range: 0x801E3C80 -> 0x801E3CC0
-void UICatalogItemInventoryToken::Initialize(class UICatalogItemInventoryToken * const this /* r31 */, const struct InventoryTokens * invToken /* r0 */) {}
+// this: r31
+void UICatalogItemInventoryToken::Initialize(const struct InventoryTokens * invToken /* r0 */) {}
 
 // Range: 0x801E3CC0 -> 0x801E3D24
 void UICatalogItemInventoryToken::GetName(unsigned short * dest /* r31 */) {
@@ -552,7 +573,8 @@ int UICatalogItemInventoryToken::GetPrice() {}
 int UICatalogItemInventoryToken::GetUnlockLevel() {}
 
 // Range: 0x801E3D98 -> 0x801E3E40
-unsigned char UICatalogItemInventoryToken::GetMotives(const class UICatalogItemInventoryToken * const this /* r29 */, int * motiveValuesOut /* r30 */, int * motiveIDsOut /* r31 */) {
+// this: r29
+unsigned char UICatalogItemInventoryToken::GetMotives(int * motiveValuesOut /* r30 */, int * motiveIDsOut /* r31 */) const {
     // Local variables
     class IngredientManager * pIngredientManager; // r0
     const struct IngredientToken * pIngredientToken; // r0
@@ -562,13 +584,16 @@ unsigned char UICatalogItemInventoryToken::GetMotives(const class UICatalogItemI
 unsigned char UICatalogItemInventoryToken::CanAddToInventory() {}
 
 // Range: 0x801E3E48 -> 0x801E3E60
-void UICatalogItemInventoryToken::AddToInventory(const class UICatalogItemInventoryToken * const this /* r5 */) {}
+// this: r5
+void UICatalogItemInventoryToken::AddToInventory() const {}
 
 // Range: 0x801E3E60 -> 0x801E3E78
-void UICatalogItemInventoryToken::AddToInventory(const class UICatalogItemInventoryToken * const this /* r6 */) {}
+// this: r6
+void UICatalogItemInventoryToken::AddToInventory() const {}
 
 // Range: 0x801E3E78 -> 0x801E3EDC
-unsigned char UICatalogItemInventoryToken::GetBigShader(class UICatalogItemInventoryToken * const this /* r30 */, unsigned int * output /* r31 */) {}
+// this: r30
+unsigned char UICatalogItemInventoryToken::GetBigShader(unsigned int * output /* r31 */) {}
 
 // Range: 0x801E3EDC -> 0x801E3EEC
 unsigned char UICatalogItemInventoryToken::IsEatFromInventory() {}
@@ -586,19 +611,23 @@ unsigned char UICatalogItemInventoryToken::IsRecentlyUnlocked() {}
 void UICatalogItemInventoryToken::SetRecentlyUnlockedStatus() {}
 
 // Range: 0x801E3F18 -> 0x801E3F60
-void * UICatalogItemClothing::UICatalogItemClothing(class UICatalogItemClothing * const this /* r31 */) {
+// this: r31
+UICatalogItemClothing::UICatalogItemClothing() {
     // References
     // -> struct [anonymous] __vt__Q218UISimulatorSupport21UICatalogItemClothing;
 }
 
 // Range: 0x801E3F60 -> 0x801E3FDC
-void UICatalogItemClothing::Initialize(class UICatalogItemClothing * const this /* r30 */, class InventoryItem * pInventoryItem /* r31 */) {}
+// this: r30
+void UICatalogItemClothing::Initialize(class InventoryItem * pInventoryItem /* r31 */) {}
 
 // Range: 0x801E3FDC -> 0x801E4094
-void UICatalogItemClothing::GetName(const class UICatalogItemClothing * const this /* r30 */, unsigned short * dest /* r31 */) {}
+// this: r30
+void UICatalogItemClothing::GetName(unsigned short * dest /* r31 */) const {}
 
 // Range: 0x801E4094 -> 0x801E414C
-void UICatalogItemClothing::GetDesc(const class UICatalogItemClothing * const this /* r30 */, unsigned short * dest /* r31 */) {}
+// this: r30
+void UICatalogItemClothing::GetDesc(unsigned short * dest /* r31 */) const {}
 
 // Range: 0x801E414C -> 0x801E4154
 int UICatalogItemClothing::GetPrice() {}
@@ -613,13 +642,16 @@ unsigned char UICatalogItemClothing::GetMotives() {}
 unsigned char UICatalogItemClothing::CanAddToInventory() {}
 
 // Range: 0x801E416C -> 0x801E417C
-void UICatalogItemClothing::AddToInventory(const class UICatalogItemClothing * const this /* r5 */) {}
+// this: r5
+void UICatalogItemClothing::AddToInventory() const {}
 
 // Range: 0x801E417C -> 0x801E418C
-void UICatalogItemClothing::AddToInventory(const class UICatalogItemClothing * const this /* r5 */) {}
+// this: r5
+void UICatalogItemClothing::AddToInventory() const {}
 
 // Range: 0x801E418C -> 0x801E4224
-unsigned char UICatalogItemClothing::GetBigShader(class UICatalogItemClothing * const this /* r30 */, unsigned int * output /* r31 */) {}
+// this: r30
+unsigned char UICatalogItemClothing::GetBigShader(unsigned int * output /* r31 */) {}
 
 // Range: 0x801E4224 -> 0x801E422C
 unsigned char UICatalogItemClothing::IsRecentlyUnlocked() {}

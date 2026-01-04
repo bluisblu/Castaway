@@ -12,7 +12,8 @@ static void ConvertToBackslash(class StringBuffer & str /* r28 */) {
 }
 
 // Range: 0x8013D9A0 -> 0x8013D9EC
-void * GlobalConstantsClient::GlobalConstantsClient(class GlobalConstantsClient * const this /* r30 */, signed short id /* r31 */) {
+// this: r30
+GlobalConstantsClient::GlobalConstantsClient(signed short id /* r31 */) {
     // References
     // -> struct [anonymous] __vt__21GlobalConstantsClient;
 }
@@ -24,7 +25,8 @@ unsigned int GlobalConstantsClient::GetFileID() {}
 signed short GlobalConstantsClient::GetID() {}
 
 // Range: 0x8013DA08 -> 0x8013DD3C
-void ObjectSaveTypeTable::DoStream(class ObjectSaveTypeTable * const this /* r26 */, class ReconBuffer * r /* r31 */, int version /* r27 */) {
+// this: r26
+void ObjectSaveTypeTable::DoStream(class ReconBuffer * r /* r31 */, int version /* r27 */) {
     // Local variables
     signed short type; // r1+0xA
     signed short objectType; // r1+0x8
@@ -42,13 +44,15 @@ void ObjectSaveTypeTable::DoStream(class ObjectSaveTypeTable * const this /* r26
 }
 
 // Range: 0x8013DD3C -> 0x8013DEA4
-void * ObjectFolder::ObjectFolder(class ObjectFolder * const this /* r29 */) {
+// this: r29
+ObjectFolder::ObjectFolder() {
     // References
     // -> struct [anonymous] __vt__12ObjectFolder;
 }
 
 // Range: 0x8013DEFC -> 0x8013DFE8
-void * ObjectFolder::~ObjectFolder(class ObjectFolder * const this /* r30 */) {
+// this: r30
+ObjectFolder::~ObjectFolder() {
     // References
     // -> struct [anonymous] __vt__12ObjectFolder;
 }
@@ -60,13 +64,15 @@ int ObjectFolder::CountSelectors() {}
 class ObjSelector * ObjectFolder::GetSelectorByGUID(int guid /* r1+0x8 */) {}
 
 // Range: 0x8013E01C -> 0x8013E09C
-class ObjSelector * ObjectFolder::GetNextSelector(class ObjectFolder * const this /* r31 */) {
+// this: r31
+class ObjSelector * ObjectFolder::GetNextSelector() {
     // Local variables
     struct HashIterator it; // r1+0x18
 }
 
 // Range: 0x8013E09C -> 0x8013E18C
-class ObjSelector * ObjectFolder::GetSubTileSelector(class ObjectFolder * const this /* r26 */, class ObjSelector * original /* r27 */, int levelOff /* r28 */) {
+// this: r26
+class ObjSelector * ObjectFolder::GetSubTileSelector(class ObjSelector * original /* r27 */, int levelOff /* r28 */) {
     // Local variables
     class ObjSelector * subsel; // r30
     const struct ObjDefinition * header; // r0
@@ -75,7 +81,8 @@ class ObjSelector * ObjectFolder::GetSubTileSelector(class ObjectFolder * const 
 }
 
 // Range: 0x8013E18C -> 0x8013E268
-class ObjSelector * ObjectFolder::GetLeadSelector(class ObjectFolder * const this /* r28 */, class ObjSelector * original /* r29 */) {
+// this: r28
+class ObjSelector * ObjectFolder::GetLeadSelector(class ObjSelector * original /* r29 */) {
     // Local variables
     const struct ObjDefinition * header; // r31
     signed short masterID; // r31
@@ -83,7 +90,8 @@ class ObjSelector * ObjectFolder::GetLeadSelector(class ObjectFolder * const thi
 }
 
 // Range: 0x8013E268 -> 0x8013E32C
-class ObjSelector * ObjectFolder::GetNthSubSelector(class ObjectFolder * const this /* r27 */, class ObjSelector * original /* r28 */, int n /* r29 */) {
+// this: r27
+class ObjSelector * ObjectFolder::GetNthSubSelector(class ObjSelector * original /* r28 */, int n /* r29 */) {
     // Local variables
     class ObjSelector * subsel; // r31
     const struct ObjDefinition * header; // r0
@@ -91,7 +99,8 @@ class ObjSelector * ObjectFolder::GetNthSubSelector(class ObjectFolder * const t
 }
 
 // Range: 0x8013E32C -> 0x8013E3F0
-class ObjSelector * ObjectFolder::GetMasterSelector(class ObjectFolder * const this /* r28 */, class ObjSelector * original /* r29 */) {
+// this: r28
+class ObjSelector * ObjectFolder::GetMasterSelector(class ObjSelector * original /* r29 */) {
     // Local variables
     class ObjSelector * masterSel; // r31
     const struct ObjDefinition * header; // r0
@@ -99,7 +108,8 @@ class ObjSelector * ObjectFolder::GetMasterSelector(class ObjectFolder * const t
 }
 
 // Range: 0x8013E3F0 -> 0x8013E4FC
-void ObjectFolder::Init(class ObjectFolder * const this /* r29 */, const char * scenPath /* r30 */, unsigned char skipDisabled /* r31 */) {
+// this: r29
+void ObjectFolder::Init(const char * scenPath /* r30 */, unsigned char skipDisabled /* r31 */) {
     // Local variables
     struct HashIterator i; // r1+0x14
     class ObjSelector * cur; // r0
@@ -107,7 +117,8 @@ void ObjectFolder::Init(class ObjectFolder * const this /* r29 */, const char * 
 }
 
 // Range: 0x8013E634 -> 0x8013E834
-void ObjectFolder::Destroy(class ObjectFolder * const this /* r30 */) {
+// this: r30
+void ObjectFolder::Destroy() {
     // Local variables
     struct HashIterator it; // r1+0x2C
     struct HashIterator end; // r1+0x20
@@ -119,13 +130,15 @@ void ObjectFolder::Destroy(class ObjectFolder * const this /* r30 */) {
 }
 
 // Range: 0x8013E834 -> 0x8013EA38
-void ObjectFolder::DestroySelector(class ObjectFolder * const this /* r27 */, class ObjSelector * sel /* r31 */) {
+// this: r27
+void ObjectFolder::DestroySelector(class ObjSelector * sel /* r31 */) {
     // Local variables
     int i; // r28
 }
 
 // Range: 0x8013EA38 -> 0x8013EC8C
-class ObjSelector * ObjectFolder::AddUserSelector(class ObjectFolder * const this /* r26 */, int guid /* r27 */, signed short resID /* r30 */, unsigned char bIsPet /* r28 */) {
+// this: r26
+class ObjSelector * ObjectFolder::AddUserSelector(int guid /* r27 */, signed short resID /* r30 */, unsigned char bIsPet /* r28 */) {
     // Local variables
     struct ObjDefinition * def; // r29
     class iResFile * pResFile; // r0
@@ -133,14 +146,16 @@ class ObjSelector * ObjectFolder::AddUserSelector(class ObjectFolder * const thi
 }
 
 // Range: 0x8013EC8C -> 0x8013ED30
-unsigned int ObjectFolder::GetSemiGlobalID(class ObjectFolder * const this /* r30 */) {
+// this: r30
+unsigned int ObjectFolder::GetSemiGlobalID() {
     // Local variables
     class iResFile * pResFile; // r31
     unsigned int semiFileID; // r1+0x8
 }
 
 // Range: 0x8013ED30 -> 0x8013EF80
-unsigned char ObjectFolder::AddSelector(class ObjectFolder * const this /* r30 */, const struct ObjDefinition * pObjDefinition /* r31 */, const char * pObjName /* r24 */, const char * pModuleName /* r25 */, const struct ResFile * pResFileData /* r26 */, signed short defID /* r27 */, const struct NPC * pNPCBody /* r29 */) {
+// this: r30
+unsigned char ObjectFolder::AddSelector(const struct ObjDefinition * pObjDefinition /* r31 */, const char * pObjName /* r24 */, const char * pModuleName /* r25 */, const struct ResFile * pResFileData /* r26 */, signed short defID /* r27 */, const struct NPC * pNPCBody /* r29 */) {
     // Local variables
     struct ObjDefinition * def; // [invalid]
     unsigned int fileID; // r1+0x10
@@ -152,7 +167,8 @@ unsigned char ObjectFolder::AddSelector(class ObjectFolder * const this /* r30 *
 void ObjectFolder::OpenResFile(class ObjSelector * sel /* r31 */) {}
 
 // Range: 0x8013EFB8 -> 0x8013F2C4
-void ObjectFolder::LoadDatabase(class ObjectFolder * const this /* r28 */) {
+// this: r28
+void ObjectFolder::LoadDatabase() {
     // Local variables
     const struct ERQTable * pTable; // r1+0x28
     const struct ERQTable * pGlobTable; // r1+0x24
@@ -183,7 +199,8 @@ void ObjectFolder::LoadDatabase(class ObjectFolder * const this /* r28 */) {
 }
 
 // Range: 0x8013F2C4 -> 0x8013F474
-void ObjectFolder::ReconSelector(class ObjectFolder * const this /* r29 */, class ObjSelector * * selector /* r30 */, class ReconBuffer * r /* r31 */) {
+// this: r29
+void ObjectFolder::ReconSelector(class ObjSelector * * selector /* r30 */, class ReconBuffer * r /* r31 */) {
     // Local variables
     int guid; // r1+0xC
     signed short type; // r1+0x8
@@ -195,19 +212,22 @@ void ObjectFolder::ReconSelector(class ObjectFolder * const this /* r29 */, clas
 signed short ObjectFolder::GetGuid16FromGuid() {}
 
 // Range: 0x8013F4A4 -> 0x8013F4FC
-unsigned char ObjectFolder::GuidAlreadyExists(class ObjectFolder * const this /* r31 */) {
+// this: r31
+unsigned char ObjectFolder::GuidAlreadyExists() {
     // Local variables
     signed short guid16; // r1+0x8
 }
 
 // Range: 0x8013F4FC -> 0x8013F570
-void ObjectFolder::AddNewGuid(class ObjectFolder * const this /* r30 */, int guid /* r31 */) {
+// this: r30
+void ObjectFolder::AddNewGuid(int guid /* r31 */) {
     // Local variables
     signed short guid16; // r1+0x8
 }
 
 // Range: 0x8013F570 -> 0x8013F6AC
-void ObjectFolder::ReconBehavior(class ObjectFolder * const this /* r28 */, class Behavior * * behavior /* r29 */, class ReconBuffer * r /* r30 */) {
+// this: r28
+void ObjectFolder::ReconBehavior(class Behavior * * behavior /* r29 */, class ReconBuffer * r /* r30 */) {
     // Local variables
     signed short type; // r1+0x8
     class ObjSelector * sel; // r31
@@ -218,7 +238,8 @@ void ObjectFolder::ReconBehavior(class ObjectFolder * const this /* r28 */, clas
 }
 
 // Range: 0x8013F6AC -> 0x8013F730
-class iResFile * ObjectFolder::GetFileByID(class ObjectFolder * const this /* r30 */, unsigned int fileID /* r31 */) {
+// this: r30
+class iResFile * ObjectFolder::GetFileByID(unsigned int fileID /* r31 */) {
     // Local variables
     const struct ERQTable * pTable; // r1+0x8
     class QuickResFile * pQuickResFile; // r0
@@ -228,7 +249,8 @@ class iResFile * ObjectFolder::GetFileByID(class ObjectFolder * const this /* r3
 }
 
 // Range: 0x8013F730 -> 0x8013F97C
-void ObjectFolder::LoadUserData(class ObjectFolder * const this /* r24 */, class iResFile * file /* r25 */) {
+// this: r24
+void ObjectFolder::LoadUserData(class iResFile * file /* r25 */) {
     // Local variables
     int iCount; // r28
     int i; // r27
@@ -244,7 +266,8 @@ void ObjectFolder::LoadUserData(class ObjectFolder * const this /* r24 */, class
 }
 
 // Range: 0x8013F97C -> 0x8013FB9C
-void ObjectFolder::SaveUserData(class ObjectFolder * const this /* r25 */, class iResFile * file /* r24 */) {
+// this: r25
+void ObjectFolder::SaveUserData(class iResFile * file /* r24 */) {
     // Local variables
     struct HashIterator iter; // r1+0x48
     class vector userList; // r1+0x38
@@ -267,7 +290,8 @@ void ObjectFolder::SaveUserData(class ObjectFolder * const this /* r25 */, class
 unsigned char ObjSelResIDLessThan(class ObjSelector * a /* r30 */) {}
 
 // Range: 0x8013FBF8 -> 0x8013FC74
-class ObjSelector * ObjectFolder::CreateNewUserSelector(class ObjectFolder * const this /* r30 */, unsigned char bIsPet /* r31 */) {
+// this: r30
+class ObjSelector * ObjectFolder::CreateNewUserSelector(unsigned char bIsPet /* r31 */) {
     // Local variables
     int guid; // r0
     signed short resID; // r0
@@ -275,14 +299,16 @@ class ObjSelector * ObjectFolder::CreateNewUserSelector(class ObjectFolder * con
 }
 
 // Range: 0x8013FC74 -> 0x8013FCFC
-unsigned char ObjectFolder::RemoveSelector(class ObjectFolder * const this /* r30 */, class ObjSelector * sel /* r31 */) {
+// this: r30
+unsigned char ObjectFolder::RemoveSelector(class ObjSelector * sel /* r31 */) {
     // Local variables
     int guid; // r1+0x8
     class ObjSelector * guidEntry; // r0
 }
 
 // Range: 0x8013FCFC -> 0x8013FE10
-unsigned char ObjectFolder::ForceDataPreload(class ObjectFolder * const this /* r26 */, class ObjSelector * objSel /* r27 */, unsigned char bWait /* r28 */) {
+// this: r26
+unsigned char ObjectFolder::ForceDataPreload(class ObjSelector * objSel /* r27 */, unsigned char bWait /* r28 */) {
     // Local variables
     unsigned char result; // r31
     signed short masterID; // r30
@@ -290,10 +316,12 @@ unsigned char ObjectFolder::ForceDataPreload(class ObjectFolder * const this /* 
 }
 
 // Range: 0x8013FE10 -> 0x8013FE84
-void ObjectFolder::forceDataPreload(class ObjectFolder * const this /* r29 */, class ObjSelector * sel /* r30 */, unsigned char bWait /* r31 */) {}
+// this: r29
+void ObjectFolder::forceDataPreload(class ObjSelector * sel /* r30 */, unsigned char bWait /* r31 */) {}
 
 // Range: 0x8013FE84 -> 0x8013FEF4
-void ObjectFolder::CreatingInstance(class ObjectFolder * const this /* r30 */, class ObjSelector * sel /* r31 */) {}
+// this: r30
+void ObjectFolder::CreatingInstance(class ObjSelector * sel /* r31 */) {}
 
 // Range: 0x8013FEF4 -> 0x8013FF0C
 void ObjectFolder::DeletingInstance() {}
@@ -305,17 +333,19 @@ void ObjectFolder::CreatingResFile() {}
 void ObjectFolder::DeletingResFile() {}
 
 // Range: 0x8013FF14 -> 0x8014009C
-void ObjectFolder::PrepareForModuleLoad(class ObjectFolder * const this /* r29 */, class iResFile * file /* r30 */) {
+// this: r29
+void ObjectFolder::PrepareForModuleLoad(class iResFile * file /* r30 */) {
     // Local variables
     struct HashIterator i; // r1+0x3C
     class ObjectSaveTypeTable ott; // r1+0x8
 }
 
 // Range: 0x8014009C -> 0x801400A4
-void * ObjectSaveTypeTable::ObjectSaveTypeTable() {}
+ObjectSaveTypeTable::ObjectSaveTypeTable() {}
 
 // Range: 0x801400A4 -> 0x801401CC
-void ObjectFolder::PrepareForModuleSave(class ObjectFolder * const this /* r27 */, class iResFile * file /* r28 */) {
+// this: r27
+void ObjectFolder::PrepareForModuleSave(class iResFile * file /* r28 */) {
     // Local variables
     signed short type; // r29
     struct HashIterator i; // r1+0x28
@@ -326,7 +356,8 @@ void ObjectFolder::PrepareForModuleSave(class ObjectFolder * const this /* r27 *
 class ObjSelector * ObjectFolder::GetPlaceholder() {}
 
 // Range: 0x801401D8 -> 0x801402AC
-void ObjectFolder::FreeUnusedData(class ObjectFolder * const this /* r30 */) {
+// this: r30
+void ObjectFolder::FreeUnusedData() {
     // Local variables
     class CTGMicroTimer timer; // r1+0x30
     struct HashIterator i; // r1+0x20
@@ -334,7 +365,8 @@ void ObjectFolder::FreeUnusedData(class ObjectFolder * const this /* r30 */) {
 }
 
 // Range: 0x801402AC -> 0x801403D8
-void ObjectFolder::DeleteUserSelectors(class ObjectFolder * const this /* r29 */) {
+// this: r29
+void ObjectFolder::DeleteUserSelectors() {
     // Local variables
     struct HashIterator i; // r1+0x38
     class vector killList; // r1+0x28
@@ -344,7 +376,8 @@ void ObjectFolder::DeleteUserSelectors(class ObjectFolder * const this /* r29 */
 }
 
 // Range: 0x801403D8 -> 0x8014049C
-void ObjectFolder::DeleteSelectorAnimLists(class ObjectFolder * const this /* r28 */) {
+// this: r28
+void ObjectFolder::DeleteSelectorAnimLists() {
     // Local variables
     struct HashIterator i; // r1+0x20
     class ObjSelector * sel; // r0
@@ -352,10 +385,12 @@ void ObjectFolder::DeleteSelectorAnimLists(class ObjectFolder * const this /* r2
 }
 
 // Range: 0x8014049C -> 0x8014054C
-void ObjectFolder::UnloadData(class ObjectFolder * const this /* r30 */, class ObjSelector * sel /* r31 */) {}
+// this: r30
+void ObjectFolder::UnloadData(class ObjSelector * sel /* r31 */) {}
 
 // Range: 0x8014054C -> 0x801405C8
-class ObjectTypeAttrBlock * ObjectFolder::GetTypeAttrBlock(class ObjectFolder * const this /* r29 */, int guid /* r30 */) {
+// this: r29
+class ObjectTypeAttrBlock * ObjectFolder::GetTypeAttrBlock(int guid /* r30 */) {
     // Local variables
     class ObjectTypeAttrBlock * * i; // r31
 }
@@ -367,7 +402,8 @@ int ObjectFolder::Save() {}
 int ObjectFolder::Load() {}
 
 // Range: 0x801405F0 -> 0x801408FC
-void ObjectFolder::DoStream(class ObjectFolder * const this /* r25 */, class ReconBuffer * rb /* r26 */) {
+// this: r25
+void ObjectFolder::DoStream(class ReconBuffer * rb /* r26 */) {
     // Local variables
     unsigned char compress; // r1+0x8
     int count; // r0
@@ -402,14 +438,16 @@ void ObjectFolder::GetTreeTable(class ObjSelector * sel /* r26 */) {
 }
 
 // Range: 0x80140B48 -> 0x80140BF4
-void ObjectFolder::ClearAllCaches(class ObjectFolder * const this /* r30 */) {
+// this: r30
+void ObjectFolder::ClearAllCaches() {
     // Local variables
     struct HashIterator it; // r1+0x20
     class ObjSelector * pSelector; // r31
 }
 
 // Range: 0x80140BF4 -> 0x80140D44
-void UserDataSaveLoad::DoStream(class UserDataSaveLoad * const this /* r29 */, class ReconBuffer * r /* r30 */, int version /* r31 */) {
+// this: r29
+void UserDataSaveLoad::DoStream(class ReconBuffer * r /* r30 */, int version /* r31 */) {
     // Local variables
     signed short tempDescId; // r0
     const struct RelationshipTable * pRelTab; // r0
@@ -419,7 +457,8 @@ void UserDataSaveLoad::DoStream(class UserDataSaveLoad * const this /* r29 */, c
 }
 
 // Range: 0x80140D44 -> 0x80140E10
-class NamespaceSelector * ObjectFolder::GetNamespaceSelector(class ObjectFolder * const this /* r31 */, unsigned int id /* r1+0x8 */) {
+// this: r31
+class NamespaceSelector * ObjectFolder::GetNamespaceSelector(unsigned int id /* r1+0x8 */) {
     // Local variables
     struct rbtree_iterator it; // r1+0x14
 }

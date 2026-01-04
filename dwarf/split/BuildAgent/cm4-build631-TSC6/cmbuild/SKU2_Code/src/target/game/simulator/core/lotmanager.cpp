@@ -11,10 +11,12 @@ class LotManager * LotManager::Instance() {
 }
 
 // Range: 0x80120960 -> 0x801209A4
-void * LotManager::LotManager(class LotManager * const this /* r31 */) {}
+// this: r31
+LotManager::LotManager() {}
 
 // Range: 0x801209A4 -> 0x80120B38
-void LotManager::Reset(class LotManager * const this /* r30 */) {
+// this: r30
+void LotManager::Reset() {
     // Local variables
     class ObjectFolder * objFolder; // r31
     class ObjSelector * os; // r0
@@ -46,7 +48,8 @@ unsigned char LotManager::HasTransitionBeenUsed() {}
 void LotManager::TransitionUsed() {}
 
 // Range: 0x80120C70 -> 0x80120F44
-void LotManager::EventHappened(class LotManager * const this /* r31 */) {
+// this: r31
+void LotManager::EventHappened() {
     // Local variables
     int currentLot; // r0
     int currentLot; // r0
@@ -58,7 +61,8 @@ void LotManager::EventHappened(class LotManager * const this /* r31 */) {
 }
 
 // Range: 0x80120F44 -> 0x801210DC
-void LotManager::LotEntered(class LotManager * const this /* r29 */, signed short lotID /* r30 */) {
+// this: r29
+void LotManager::LotEntered(signed short lotID /* r30 */) {
     // Local variables
     int index; // r0
     class GameTime lotNowTime; // r1+0x8
@@ -67,7 +71,8 @@ void LotManager::LotEntered(class LotManager * const this /* r29 */, signed shor
 }
 
 // Range: 0x801210DC -> 0x80121154
-void LotManager::SetLotExitTimeNow(class LotManager * const this /* r30 */) {
+// this: r30
+void LotManager::SetLotExitTimeNow() {
     // Local variables
     int lotID; // r0
     class GameTime lotExitTime; // r1+0x8
@@ -77,7 +82,8 @@ void LotManager::SetLotExitTimeNow(class LotManager * const this /* r30 */) {
 }
 
 // Range: 0x80121154 -> 0x8012127C
-void LotManager::SetTimeSinceLastLotExit(class LotManager * const this /* r30 */) {
+// this: r30
+void LotManager::SetTimeSinceLastLotExit() {
     // Local variables
     int minutes; // r31
     int hours; // r30
@@ -92,19 +98,22 @@ void LotManager::SetTimeSinceLastLotExit(class LotManager * const this /* r30 */
 }
 
 // Range: 0x8012127C -> 0x8012130C
-int LotManager::GetEpochSecondsAtLastExit(class LotManager * const this /* r30 */) {
+// this: r30
+int LotManager::GetEpochSecondsAtLastExit() {
     // Local variables
     class GameTime lotNowTime; // r1+0x8
 }
 
 // Range: 0x8012130C -> 0x801213AC
-unsigned char LotManager::CanSimGetToLot(class LotManager * const this /* r25 */, signed short neighborID /* r26 */, signed char sourceLot /* r27 */, signed char destLot /* r28 */, signed short & energyCost /* r29 */, float & timeCost /* r30 */, unsigned char * pTransitions /* r31 */) {
+// this: r25
+unsigned char LotManager::CanSimGetToLot(signed short neighborID /* r26 */, signed char sourceLot /* r27 */, signed char destLot /* r28 */, signed short & energyCost /* r29 */, float & timeCost /* r30 */, unsigned char * pTransitions /* r31 */) {
     // Local variables
     signed short hygieneCost; // r1+0x8
 }
 
 // Range: 0x801213AC -> 0x801214C8
-void LotManager::DoStream(class LotManager * const this /* r28 */, class ReconBuffer * rb /* r29 */) {
+// this: r28
+void LotManager::DoStream(class ReconBuffer * rb /* r29 */) {
     // Local variables
     signed short count; // r1+0x8
     int i; // r30
@@ -117,7 +126,8 @@ void LotManager::UnlockEverything() {
 }
 
 // Range: 0x801215EC -> 0x80121824
-void LotManager::PerformLotToLotTransition(class LotManager * const this /* r30 */, signed short nNeighborID /* r8 */, signed char nDestLot /* r31 */) {
+// this: r30
+void LotManager::PerformLotToLotTransition(signed short nNeighborID /* r8 */, signed char nDestLot /* r31 */) {
     // Local variables
     signed short nEnergyCost; // r1+0xA
     float timeCost; // r1+0x1C

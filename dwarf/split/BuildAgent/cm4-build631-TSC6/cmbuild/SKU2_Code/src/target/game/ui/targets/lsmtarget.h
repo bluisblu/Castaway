@@ -5,6 +5,6 @@
     Code range: 0x801F22A8 -> 0x801F22C8
 */
 // Range: 0x801F22A8 -> 0x801F22C8
-void * LotRecord::LotRecord() {}
+LotRecord::LotRecord() {}
 
 

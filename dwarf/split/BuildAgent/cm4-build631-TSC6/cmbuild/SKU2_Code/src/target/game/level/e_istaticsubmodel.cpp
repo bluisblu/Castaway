@@ -5,28 +5,30 @@
     Code range: 0x80088E20 -> 0x80089FD8
 */
 // Range: 0x80088E20 -> 0x80088E24
-class EStream & __ls() {}
+class EStream & operator<<() {}
 
 // Range: 0x80088E24 -> 0x80088E6C
-class EStream & __rs(class EStream & s /* r30 */, class EIStaticSubModel * & pD /* r31 */) {
+class EStream & operator>>(class EStream & s /* r30 */, class EIStaticSubModel * & pD /* r31 */) {
     // Local variables
     class EStorable * pStorable; // r1+0x8
 }
 
 // Range: 0x80088E6C -> 0x80088EB4
-class EFile & __rs(class EFile & s /* r30 */, class EIStaticSubModel * & pD /* r31 */) {
+class EFile & operator>>(class EFile & s /* r30 */, class EIStaticSubModel * & pD /* r31 */) {
     // Local variables
     class EStorable * pStorable; // r1+0x8
 }
 
 // Range: 0x80088EB4 -> 0x80088F3C
-void * EIStaticSubModel::EIStaticSubModel(class EIStaticSubModel * const this /* r30 */) {
+// this: r30
+EIStaticSubModel::EIStaticSubModel() {
     // References
     // -> struct [anonymous] __vt__16EIStaticSubModel;
 }
 
 // Range: 0x80088F3C -> 0x80088FC4
-void * EIStaticSubModel::~EIStaticSubModel(class EIStaticSubModel * const this /* r30 */) {
+// this: r30
+EIStaticSubModel::~EIStaticSubModel() {
     // References
     // -> struct [anonymous] __vt__16EIStaticSubModel;
 }
@@ -35,31 +37,38 @@ void * EIStaticSubModel::~EIStaticSubModel(class EIStaticSubModel * const this /
 void EIStaticSubModel::Deallocate() {}
 
 // Range: 0x80088FC8 -> 0x8008901C
-void EIStaticSubModel::Write(class EIStaticSubModel * const this /* r30 */, class EStream & s /* r31 */) {}
+// this: r30
+void EIStaticSubModel::Write(class EStream & s /* r31 */) {}
 
 // Range: 0x8008901C -> 0x80089094
-void EIStaticSubModel::Read(class EIStaticSubModel * const this /* r30 */, class EStream & s /* r31 */) {}
+// this: r30
+void EIStaticSubModel::Read(class EStream & s /* r31 */) {}
 
 // Range: 0x80089094 -> 0x8008910C
-void EIStaticSubModel::Load(class EIStaticSubModel * const this /* r30 */, class EFile & s /* r31 */) {}
+// this: r30
+void EIStaticSubModel::Load(class EFile & s /* r31 */) {}
 
 // Range: 0x8008910C -> 0x8008911C
-void EIStaticSubModel::GetBoundSphere(class EIStaticSubModel * const this /* r5 */) {}
+// this: r5
+void EIStaticSubModel::GetBoundSphere() {}
 
 // Range: 0x8008911C -> 0x800891BC
-void EIStaticSubModel::DeallocateModel(class EIStaticSubModel * const this /* r29 */) {
+// this: r29
+void EIStaticSubModel::DeallocateModel() {
     // Local variables
     int i; // r30
 }
 
 // Range: 0x800891BC -> 0x8008920C
-void EIStaticSubModel::SetupModel(class EIStaticSubModel * const this /* r31 */) {
+// this: r31
+void EIStaticSubModel::SetupModel() {
     // References
     // -> class EModelManager _modelman;
 }
 
 // Range: 0x8008920C -> 0x8008932C
-void EIStaticSubModel::BuildDigests(class EIStaticSubModel * const this /* r25 */) {
+// this: r25
+void EIStaticSubModel::BuildDigests() {
     // Local variables
     class ESubModel * pSubModel; // r29
     class DigestGeomShaderPtr * pDigest; // r28
@@ -71,10 +80,12 @@ void EIStaticSubModel::BuildDigests(class EIStaticSubModel * const this /* r25 *
 }
 
 // Range: 0x8008932C -> 0x8008933C
-unsigned int EIStaticSubModel::VisibilityTest(class EIStaticSubModel * const this /* r5 */) {}
+// this: r5
+unsigned int EIStaticSubModel::VisibilityTest() {}
 
 // Range: 0x8008933C -> 0x80089508
-void EIStaticSubModel::DrawWithShadow(class EIStaticSubModel * const this /* r28 */, struct ELevelDrawData & renderParam /* r29 */, class EMat4 & shadowMatrix /* r31 */, class E3DWindow * pShadowWin /* r30 */, float shadowAlpha /* f31 */) {
+// this: r28
+void EIStaticSubModel::DrawWithShadow(struct ELevelDrawData & renderParam /* r29 */, class EMat4 & shadowMatrix /* r31 */, class E3DWindow * pShadowWin /* r30 */, float shadowAlpha /* f31 */) {
     // Local variables
     unsigned char bIsSubModelLevel; // r0
     class TArray smsIdArr; // r1+0x14
@@ -90,7 +101,8 @@ void EIStaticSubModel::DrawWithShadow(class EIStaticSubModel * const this /* r28
 }
 
 // Range: 0x80089508 -> 0x80089808
-void EIStaticSubModel::Draw(class EIStaticSubModel * const this /* r28 */, struct ELevelDrawData & renderParam /* r29 */) {
+// this: r28
+void EIStaticSubModel::Draw(struct ELevelDrawData & renderParam /* r29 */) {
     // Local variables
     unsigned char isAlphaFadeOn; // r30
     class EOrderTableData otd; // r1+0x8
@@ -110,7 +122,8 @@ void EIStaticSubModel::Draw(class EIStaticSubModel * const this /* r28 */, struc
 }
 
 // Range: 0x80089808 -> 0x80089868
-void EIStaticSubModel::DrawWireFrame(class EIStaticSubModel * const this /* r30 */, class ERC * prc /* r31 */) {}
+// this: r30
+void EIStaticSubModel::DrawWireFrame(class ERC * prc /* r31 */) {}
 
 // Range: 0x80089868 -> 0x800898E4
 void EIStaticSubModel::SkyOrderTableCallback(struct ELevelDrawData & renderParam /* r29 */) {
@@ -149,7 +162,8 @@ void EIStaticSubModel::ModifyColor() {}
 unsigned int EIStaticSubModel::GetModifiableColor() {}
 
 // Range: 0x80089AEC -> 0x80089B94
-void EIStaticSubModel::RebuildShaders(class EIStaticSubModel * const this /* r29 */) {
+// this: r29
+void EIStaticSubModel::RebuildShaders() {
     // Local variables
     int i; // r30
 }
@@ -158,7 +172,8 @@ void EIStaticSubModel::RebuildShaders(class EIStaticSubModel * const this /* r29
 void EIStaticSubModel::RealizeShaderTuning() {}
 
 // Range: 0x80089BA4 -> 0x80089C3C
-unsigned char EIStaticSubModel::IsLevel(class EIStaticSubModel * const this /* r30 */) {
+// this: r30
+unsigned char EIStaticSubModel::IsLevel() {
     // Local variables
     class InstanceData * pInstanceData; // r0
     unsigned int iSubModel; // r0
@@ -166,7 +181,8 @@ unsigned char EIStaticSubModel::IsLevel(class EIStaticSubModel * const this /* r
 }
 
 // Range: 0x80089C3C -> 0x80089D00
-void EIStaticSubModel::GetSubModelShaderIndexList(class EIStaticSubModel * const this /* r28 */, class TArray & smsIdArr /* r29 */, class E3DWindow * pWin /* r30 */) {
+// this: r28
+void EIStaticSubModel::GetSubModelShaderIndexList(class TArray & smsIdArr /* r29 */, class E3DWindow * pWin /* r30 */) {
     // Local variables
     unsigned int iSubModel; // r31
     class InstanceData * pInstanceData; // r0
@@ -176,7 +192,8 @@ void EIStaticSubModel::GetSubModelShaderIndexList(class EIStaticSubModel * const
 }
 
 // Range: 0x80089D00 -> 0x80089DC4
-void EIStaticSubModel::GetSubModelShaderIndexList(class EIStaticSubModel * const this /* r26 */, class TArray & smsIdArr /* r27 */, class TArray & smsCheckArr /* r28 */, class E3DWindow * pWin /* r29 */, class TArray & smsCenters /* r30 */) {
+// this: r26
+void EIStaticSubModel::GetSubModelShaderIndexList(class TArray & smsIdArr /* r27 */, class TArray & smsCheckArr /* r28 */, class E3DWindow * pWin /* r29 */, class TArray & smsCenters /* r30 */) {
     // Local variables
     unsigned int iSubModel; // r31
     class InstanceData * pInstanceData; // r0
@@ -192,10 +209,12 @@ char * EIStaticSubModel::GetInstName() {
 }
 
 // Range: 0x80089DE8 -> 0x80089EBC
-void EIStaticSubModel::DrawBeforeLevel(class EIStaticSubModel * const this /* r28 */, struct ELevelDrawData & renderParam /* r29 */, class EOrderTableData & otd /* r30 */, const class DigestGeomShaderPtr * pDigest /* r31 */) {}
+// this: r28
+void EIStaticSubModel::DrawBeforeLevel(struct ELevelDrawData & renderParam /* r29 */, class EOrderTableData & otd /* r30 */, const class DigestGeomShaderPtr * pDigest /* r31 */) {}
 
 // Range: 0x80089EBC -> 0x80089FD8
-void EIStaticSubModel::DrawNormal(class EIStaticSubModel * const this /* r26 */, struct ELevelDrawData & renderParam /* r27 */, class EOrderTableData & otd /* r28 */, const class DigestGeomShaderPtr * pDigest /* r29 */, unsigned char isAlphaFadeOn /* r30 */) {
+// this: r26
+void EIStaticSubModel::DrawNormal(struct ELevelDrawData & renderParam /* r27 */, class EOrderTableData & otd /* r28 */, const class DigestGeomShaderPtr * pDigest /* r29 */, unsigned char isAlphaFadeOn /* r30 */) {
     // Local variables
     class ERShader * pShader; // r31
     unsigned char bSort; // r31

@@ -5,7 +5,8 @@
     Code range: 0x801114C8 -> 0x80113EC4
 */
 // Range: 0x801114C8 -> 0x80111BE0
-signed short GoalUnlock::CheckBook1(class GoalUnlock * const this /* r26 */) {
+// this: r26
+signed short GoalUnlock::CheckBook1() {
     // Local variables
     unsigned char bookCompleted; // r27
     unsigned char pageCompleted; // r28
@@ -27,7 +28,8 @@ signed short GoalUnlock::CheckBook1(class GoalUnlock * const this /* r26 */) {
 }
 
 // Range: 0x80111BE0 -> 0x8011220C
-signed short GoalUnlock::CheckBook2(class GoalUnlock * const this /* r27 */) {
+// this: r27
+signed short GoalUnlock::CheckBook2() {
     // Local variables
     unsigned char bookCompleted; // r28
     unsigned char pageCompleted; // r29
@@ -47,7 +49,8 @@ signed short GoalUnlock::CheckBook2(class GoalUnlock * const this /* r27 */) {
 }
 
 // Range: 0x8011220C -> 0x8011270C
-signed short GoalUnlock::CheckBook3(class GoalUnlock * const this /* r25 */) {
+// this: r25
+signed short GoalUnlock::CheckBook3() {
     // Local variables
     unsigned char bookCompleted; // r27
     unsigned char pageCompleted; // r26
@@ -62,7 +65,8 @@ signed short GoalUnlock::CheckBook3(class GoalUnlock * const this /* r25 */) {
 }
 
 // Range: 0x8011270C -> 0x80112AC4
-signed short GoalUnlock::CheckBook4(class GoalUnlock * const this /* r28 */) {
+// this: r28
+signed short GoalUnlock::CheckBook4() {
     // Local variables
     unsigned char bookCompleted; // r29
     unsigned char pageCompleted; // r30
@@ -76,7 +80,8 @@ signed short GoalUnlock::CheckBook4(class GoalUnlock * const this /* r28 */) {
 }
 
 // Range: 0x80112AC4 -> 0x801132B4
-signed short GoalUnlock::CheckBook5(class GoalUnlock * const this /* r26 */) {
+// this: r26
+signed short GoalUnlock::CheckBook5() {
     // Local variables
     unsigned char bookCompleted; // r28
     unsigned char pageCompleted; // r27
@@ -91,7 +96,8 @@ signed short GoalUnlock::CheckBook5(class GoalUnlock * const this /* r26 */) {
 }
 
 // Range: 0x801132B4 -> 0x8011385C
-signed short GoalUnlock::CheckBook6(class GoalUnlock * const this /* r26 */) {
+// this: r26
+signed short GoalUnlock::CheckBook6() {
     // Local variables
     unsigned char bookCompleted; // r27
     unsigned char pageCompleted; // r28
@@ -113,7 +119,8 @@ signed short GoalUnlock::CheckBook6(class GoalUnlock * const this /* r26 */) {
 }
 
 // Range: 0x8011385C -> 0x80113EC4
-signed short GoalUnlock::CheckMiscGoals(class GoalUnlock * const this /* r30 */) {
+// this: r30
+signed short GoalUnlock::CheckMiscGoals() {
     // Local variables
     int bookIndex; // r0
     int goalIndex; // r0

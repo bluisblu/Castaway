@@ -74,12 +74,6 @@ unsigned char FamilyImpl::GetHasFinishedCaf() {}
 class InventoryItems * FamilyImpl::GetInventory() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\target\game\simulator\core\familyimpl.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x8010CF28 -> 0x8010CF48
-*/
 // Range: 0x8010CF28 -> 0x8010CF30
 signed short FamilyImpl::GetResfileStorageId() {}
 

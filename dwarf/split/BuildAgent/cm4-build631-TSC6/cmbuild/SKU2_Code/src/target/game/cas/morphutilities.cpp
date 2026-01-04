@@ -5,7 +5,8 @@
     Code range: 0x8003F42C -> 0x80040A30
 */
 // Range: 0x8003F42C -> 0x8003F460
-void * MorphTargetParam::MorphTargetParam(class MorphTargetParam * const this /* r31 */) {}
+// this: r31
+MorphTargetParam::MorphTargetParam() {}
 
 // Range: 0x8003F460 -> 0x8003F4A4
 class MorphTargetParam * MorphTargetParam::Instance() {
@@ -26,16 +27,19 @@ float MorphTargetParam::GetMorphValNormal() {}
 float MorphTargetParam::GetMorphValEnd() {}
 
 // Range: 0x8003F58C -> 0x8003F5F8
-float MorphTargetParam::GetMorphValRange(const class MorphTargetParam * const this /* r29 */, enum eSpecies species /* r30 */, enum eMorphTargetRegion morphRegion /* r31 */) {}
+// this: r29
+float MorphTargetParam::GetMorphValRange(enum eSpecies species /* r30 */, enum eMorphTargetRegion morphRegion /* r31 */) const {}
 
 // Range: 0x8003F5F8 -> 0x8003F6DC
-float MorphTargetParam::ConvertScaleToMorphVal(const class MorphTargetParam * const this /* r29 */, float fScale /* f30 */, enum eSpecies species /* r30 */, enum eMorphTargetRegion morphRegion /* r31 */) {
+// this: r29
+float MorphTargetParam::ConvertScaleToMorphVal(float fScale /* f30 */, enum eSpecies species /* r30 */, enum eMorphTargetRegion morphRegion /* r31 */) const {
     // Local variables
     float fMorphVal; // f31
 }
 
 // Range: 0x8003F6DC -> 0x8003F784
-float MorphTargetParam::ConvertMorphValToScale(const class MorphTargetParam * const this /* r29 */, float fMorphVal /* f30 */, enum eSpecies species /* r30 */, enum eMorphTargetRegion morphRegion /* r31 */) {
+// this: r29
+float MorphTargetParam::ConvertMorphValToScale(float fMorphVal /* f30 */, enum eSpecies species /* r30 */, enum eMorphTargetRegion morphRegion /* r31 */) const {
     // Local variables
     float fScale; // f1
 }
@@ -47,7 +51,8 @@ enum eMorphTargetRegion MorphTargetParam::ConvertEventRegionToMorphTargetParamRe
 }
 
 // Range: 0x8003F7D0 -> 0x8003F804
-void * LatticeParam::LatticeParam(class LatticeParam * const this /* r31 */) {}
+// this: r31
+LatticeParam::LatticeParam() {}
 
 // Range: 0x8003F804 -> 0x8003F848
 class LatticeParam * LatticeParam::Instance() {
@@ -68,16 +73,19 @@ float LatticeParam::GetMorphValForBodyType(enum eBodyType bodyType /* r31 */) {}
 float LatticeParam::GetMorphValEnd() {}
 
 // Range: 0x8003FA0C -> 0x8003FA78
-float LatticeParam::GetMorphValRange(const class LatticeParam * const this /* r29 */, enum eSpecies species /* r30 */, enum eLatticeMorphRegion morphRegion /* r31 */) {}
+// this: r29
+float LatticeParam::GetMorphValRange(enum eSpecies species /* r30 */, enum eLatticeMorphRegion morphRegion /* r31 */) const {}
 
 // Range: 0x8003FA78 -> 0x8003FB5C
-float LatticeParam::ConvertScaleToMorphVal(const class LatticeParam * const this /* r29 */, float fScale /* f30 */, enum eSpecies species /* r30 */, enum eLatticeMorphRegion morphRegion /* r31 */) {
+// this: r29
+float LatticeParam::ConvertScaleToMorphVal(float fScale /* f30 */, enum eSpecies species /* r30 */, enum eLatticeMorphRegion morphRegion /* r31 */) const {
     // Local variables
     float fMorphVal; // f31
 }
 
 // Range: 0x8003FB5C -> 0x8003FC58
-float LatticeParam::ConvertMorphValToScale(const class LatticeParam * const this /* r29 */, float fMorphVal /* f30 */, enum eSpecies species /* r30 */, enum eLatticeMorphRegion morphRegion /* r31 */) {
+// this: r29
+float LatticeParam::ConvertMorphValToScale(float fMorphVal /* f30 */, enum eSpecies species /* r30 */, enum eLatticeMorphRegion morphRegion /* r31 */) const {
     // Local variables
     float fScale; // f0
 }
@@ -89,22 +97,27 @@ enum eLatticeMorphRegion LatticeParam::ConvertEventRegionToLatticeParamRegion() 
 }
 
 // Range: 0x8003FCA8 -> 0x8003FCEC
-void * MorphUtilities::MorphUtilities(class MorphUtilities * const this /* r31 */) {}
+// this: r31
+MorphUtilities::MorphUtilities() {}
 
 // Range: 0x8003FCEC -> 0x8003FD34
-void * MorphUtilities::~MorphUtilities(class MorphUtilities * const this /* r31 */) {}
+// this: r31
+MorphUtilities::~MorphUtilities() {}
 
 // Range: 0x8003FD34 -> 0x8003FE00
-void MorphUtilities::ApplyAllLatticeMorphs(class MorphUtilities * const this /* r30 */, class CasSimDescription * pSimDesc /* r31 */) {}
+// this: r30
+void MorphUtilities::ApplyAllLatticeMorphs(class CasSimDescription * pSimDesc /* r31 */) {}
 
 // Range: 0x8003FE00 -> 0x8003FEE8
 unsigned int MorphUtilities::GetLatticeIndex() {}
 
 // Range: 0x8003FEE8 -> 0x800400DC
-void MorphUtilities::ApplyLattice(class MorphUtilities * const this /* r31 */, float fMorphValue /* f31 */) {}
+// this: r31
+void MorphUtilities::ApplyLattice(float fMorphValue /* f31 */) {}
 
 // Range: 0x800400DC -> 0x80040370
-void MorphUtilities::ApplySimHeadLatticeToBodyPart(class MorphUtilities * const this /* r28 */, enum eBodyPart bodyPart /* r29 */, float morphValue /* f31 */) {
+// this: r28
+void MorphUtilities::ApplySimHeadLatticeToBodyPart(enum eBodyPart bodyPart /* r29 */, float morphValue /* f31 */) {
     // Local variables
     unsigned int latticeIndex; // r31
     unsigned int bodyPartIndex; // r0
@@ -117,7 +130,8 @@ void MorphUtilities::ApplySimHeadLatticeToBodyPart(class MorphUtilities * const 
 }
 
 // Range: 0x80040370 -> 0x80040550
-unsigned char MorphUtilities::ApplySimBodyLatticeToBodyPart(class MorphUtilities * const this /* r30 */, enum eBodyPart bodyPart /* r26 */, enum eLatticeMorphRegion morphRegion /* r31 */, float morphValue /* f31 */) {
+// this: r30
+unsigned char MorphUtilities::ApplySimBodyLatticeToBodyPart(enum eBodyPart bodyPart /* r26 */, enum eLatticeMorphRegion morphRegion /* r31 */, float morphValue /* f31 */) {
     // Local variables
     unsigned int latticeIndex; // r28
     int latticeKeyframeIndexPrimary; // r1+0x14
@@ -131,12 +145,15 @@ unsigned char MorphUtilities::ApplySimBodyLatticeToBodyPart(class MorphUtilities
 }
 
 // Range: 0x80040550 -> 0x800406D8
-void MorphUtilities::GetSimFacialMorphTargetIndicesAndWeights(class MorphUtilities * const this /* r27 */, float morphValue /* f31 */, float & morphTargetWeightPrimary /* r28 */, int & morphTargetIndexPrimary /* r29 */, float & morphTargetWeightSecondary /* r30 */, int & morphTargetIndexSecondary /* r31 */) {}
+// this: r27
+void MorphUtilities::GetSimFacialMorphTargetIndicesAndWeights(float morphValue /* f31 */, float & morphTargetWeightPrimary /* r28 */, int & morphTargetIndexPrimary /* r29 */, float & morphTargetWeightSecondary /* r30 */, int & morphTargetIndexSecondary /* r31 */) {}
 
 // Range: 0x800406D8 -> 0x80040848
-void MorphUtilities::GetSimBodyLatticeKeyframeIndicesAndWeights(class MorphUtilities * const this /* r28 */, float morphValue /* f31 */, enum eLatticeMorphRegion morphRegion /* r29 */, float & latticeWeightPrimary /* r30 */, int & latticeKeyframeIndexPrimary /* r31 */) {}
+// this: r28
+void MorphUtilities::GetSimBodyLatticeKeyframeIndicesAndWeights(float morphValue /* f31 */, enum eLatticeMorphRegion morphRegion /* r29 */, float & latticeWeightPrimary /* r30 */, int & latticeKeyframeIndexPrimary /* r31 */) {}
 
 // Range: 0x80040848 -> 0x80040A30
-void MorphUtilities::GetSimHeadLatticeKeyframeIndicesAndWeights(class MorphUtilities * const this /* r29 */, float morphValue /* f31 */, float & latticeWeightPrimary /* r26 */, int & latticeKeyframeIndexPrimary /* r30 */, float & latticeWeightSecondary /* r27 */, int & latticeKeyframeIndexSecondary /* r31 */) {}
+// this: r29
+void MorphUtilities::GetSimHeadLatticeKeyframeIndicesAndWeights(float morphValue /* f31 */, float & latticeWeightPrimary /* r26 */, int & latticeKeyframeIndexPrimary /* r30 */, float & latticeWeightSecondary /* r27 */, int & latticeKeyframeIndexSecondary /* r31 */) {}
 
 

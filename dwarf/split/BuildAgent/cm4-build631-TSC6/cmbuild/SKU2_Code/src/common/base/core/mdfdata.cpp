@@ -5,6 +5,6 @@
     Code range: 0x802739D8 -> 0x80273A18
 */
 // Range: 0x802739D8 -> 0x80273A18
-void * MdfData::MdfData() {}
+MdfData::MdfData() {}
 
 

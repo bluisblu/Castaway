@@ -5,28 +5,35 @@
     Code range: 0x8004337C -> 0x80048BD0
 */
 // Range: 0x8004337C -> 0x80043404
-void * SimBodyPart::SimBodyPart(class SimBodyPart * const this /* r30 */) {
+// this: r30
+SimBodyPart::SimBodyPart() {
     // References
     // -> struct [anonymous] __vt__11SimBodyPart;
 }
 
 // Range: 0x80043404 -> 0x8004346C
-void * SimBodyPart::~SimBodyPart(class SimBodyPart * const this /* r30 */) {}
+// this: r30
+SimBodyPart::~SimBodyPart() {}
 
 // Range: 0x8004346C -> 0x8004355C
-void SimBodyPart::Init(class SimBodyPart * const this /* r30 */) {}
+// this: r30
+void SimBodyPart::Init() {}
 
 // Range: 0x8004355C -> 0x80043634
-void SimBodyPart::Init(class SimBodyPart * const this /* r29 */, unsigned char bMale /* r30 */) {}
+// this: r29
+void SimBodyPart::Init(unsigned char bMale /* r30 */) {}
 
 // Range: 0x80043634 -> 0x80043714
-void SimBodyPart::DoStream(class SimBodyPart * const this /* r30 */, class ReconBuffer * r /* r31 */) {}
+// this: r30
+void SimBodyPart::DoStream(class ReconBuffer * r /* r31 */) {}
 
 // Range: 0x80043714 -> 0x800437B0
-void SimBodyPart::CopyFrom(class SimBodyPart * const this /* r30 */, const class SimBodyPart * pBodyPart /* r31 */) {}
+// this: r30
+void SimBodyPart::CopyFrom(const class SimBodyPart * pBodyPart /* r31 */) {}
 
 // Range: 0x800437B0 -> 0x800438B8
-void SimBodyPart::CopyFromClothingItem(class SimBodyPart * const this /* r30 */, class ClothingItem * pClothingItem /* r31 */) {}
+// this: r30
+void SimBodyPart::CopyFromClothingItem(class ClothingItem * pClothingItem /* r31 */) {}
 
 // Range: 0x800438B8 -> 0x80043AD8
 class SimBodyPart * SimBodyPart::CreateInstance(unsigned char bMale /* r30 */) {
@@ -41,7 +48,8 @@ unsigned char SimBodyPart::GetCharacterFlag() {}
 void SimBodyPart::SetCharacterFlag() {}
 
 // Range: 0x80043B10 -> 0x80043BB4
-char * SimBodyPart::GetCharacterType(const class SimBodyPart * const this /* r30 */) {
+// this: r30
+char * SimBodyPart::GetCharacterType() const {
     // Local variables
     const struct BodyPartTypeInfoTableTSC6 * pBodyPartTypeInfoTable; // r0
 }
@@ -50,40 +58,47 @@ char * SimBodyPart::GetCharacterType(const class SimBodyPart * const this /* r30
 void SimBodyPart::AssertWithInfo() {}
 
 // Range: 0x80043BC8 -> 0x80043D00
-unsigned char SimBodyPart::IsValid(class SimBodyPart * const this /* r28 */, unsigned char bAutoFix /* r29 */, unsigned char bThrowBombs /* r30 */) {}
+// this: r28
+unsigned char SimBodyPart::IsValid(unsigned char bAutoFix /* r29 */, unsigned char bThrowBombs /* r30 */) {}
 
 // Range: 0x80043D00 -> 0x80043E08
-unsigned char SimBodyPart::IsValidClothingSetIndex(class SimBodyPart * const this /* r29 */, unsigned char bAutoFix /* r30 */, unsigned char bThrowBombs /* r31 */) {
+// this: r29
+unsigned char SimBodyPart::IsValidClothingSetIndex(unsigned char bAutoFix /* r30 */, unsigned char bThrowBombs /* r31 */) {
     // Local variables
     char szErr[512]; // r1+0x8
 }
 
 // Range: 0x80043E08 -> 0x80043F48
-unsigned char SimBodyPart::IsValidModelIndex(class SimBodyPart * const this /* r29 */, unsigned char bAutoFix /* r30 */, unsigned char bThrowBombs /* r31 */) {
+// this: r29
+unsigned char SimBodyPart::IsValidModelIndex(unsigned char bAutoFix /* r30 */, unsigned char bThrowBombs /* r31 */) {
     // Local variables
     char szErr[512]; // r1+0x8
 }
 
 // Range: 0x80043F48 -> 0x80044024
-unsigned char SimBodyPart::IsValidModelCodeIndex(class SimBodyPart * const this /* r28 */, unsigned char bAutoFix /* r29 */, unsigned char bThrowBombs /* r30 */) {
+// this: r28
+unsigned char SimBodyPart::IsValidModelCodeIndex(unsigned char bAutoFix /* r29 */, unsigned char bThrowBombs /* r30 */) {
     // Local variables
     char szErr[512]; // r1+0x8
 }
 
 // Range: 0x80044024 -> 0x80044124
-unsigned char SimBodyPart::IsValidStyleIndex(class SimBodyPart * const this /* r28 */, unsigned char bAutoFix /* r29 */, unsigned char bThrowBombs /* r30 */) {
+// this: r28
+unsigned char SimBodyPart::IsValidStyleIndex(unsigned char bAutoFix /* r29 */, unsigned char bThrowBombs /* r30 */) {
     // Local variables
     char szErr[512]; // r1+0x8
 }
 
 // Range: 0x80044124 -> 0x80044224
-unsigned char SimBodyPart::IsValidTextureIndex(class SimBodyPart * const this /* r29 */, unsigned char bAutoFix /* r30 */, unsigned char bThrowBombs /* r31 */) {
+// this: r29
+unsigned char SimBodyPart::IsValidTextureIndex(unsigned char bAutoFix /* r30 */, unsigned char bThrowBombs /* r31 */) {
     // Local variables
     char szErr[512]; // r1+0x8
 }
 
 // Range: 0x80044224 -> 0x80044344
-unsigned char SimBodyPart::IsValidDegradationState(class SimBodyPart * const this /* r28 */, unsigned char bAutoFix /* r29 */, unsigned char bThrowBombs /* r30 */) {
+// this: r28
+unsigned char SimBodyPart::IsValidDegradationState(unsigned char bAutoFix /* r29 */, unsigned char bThrowBombs /* r30 */) {
     // Local variables
     char szErr[512]; // r1+0x8
 }
@@ -92,7 +107,8 @@ unsigned char SimBodyPart::IsValidDegradationState(class SimBodyPart * const thi
 void SimBodyPart::Validate() {}
 
 // Range: 0x8004435C -> 0x800443F0
-void SimBodyPart::SetClothingSetIndex(class SimBodyPart * const this /* r30 */, unsigned char nClothingSetIndex /* r31 */) {}
+// this: r30
+void SimBodyPart::SetClothingSetIndex(unsigned char nClothingSetIndex /* r31 */) {}
 
 // Range: 0x800443F0 -> 0x800443F8
 struct BodyPartGeometryTSC6 * SimBodyPart::GetClothingSetData() {}
@@ -101,7 +117,8 @@ struct BodyPartGeometryTSC6 * SimBodyPart::GetClothingSetData() {}
 struct BodyPartTypeInfoTSC6 * SimBodyPart::GetBodyPartTypeInfo() {}
 
 // Range: 0x80044400 -> 0x80044458
-unsigned char SimBodyPart::GetNumPossibleClothingSets(const class SimBodyPart * const this /* r31 */) {}
+// this: r31
+unsigned char SimBodyPart::GetNumPossibleClothingSets() const {}
 
 // Range: 0x80044458 -> 0x80044484
 unsigned char SimBodyPart::GetNumPossibleModelCodes() {}
@@ -110,7 +127,8 @@ unsigned char SimBodyPart::GetNumPossibleModelCodes() {}
 unsigned char SimBodyPart::GetNumPossibleStyles() {}
 
 // Range: 0x800444B8 -> 0x80044580
-unsigned char SimBodyPart::GetNumValidStyles(const class SimBodyPart * const this /* r26 */, unsigned char nModelCodeIndex /* r27 */) {
+// this: r26
+unsigned char SimBodyPart::GetNumValidStyles(unsigned char nModelCodeIndex /* r27 */) const {
     // Local variables
     unsigned char nNumPossibleStyles; // r0
     unsigned char nNumValidStyles; // r29
@@ -119,19 +137,23 @@ unsigned char SimBodyPart::GetNumValidStyles(const class SimBodyPart * const thi
 }
 
 // Range: 0x80044580 -> 0x800445E4
-unsigned char SimBodyPart::GetNumPossibleModels(const class SimBodyPart * const this /* r30 */) {}
+// this: r30
+unsigned char SimBodyPart::GetNumPossibleModels() const {}
 
 // Range: 0x800445E4 -> 0x80044610
 unsigned char SimBodyPart::GetNumPossibleTextureVariations() {}
 
 // Range: 0x80044610 -> 0x80044668
-unsigned char SimBodyPart::GetNumPossibleDegradationStates(const class SimBodyPart * const this /* r31 */) {}
+// this: r31
+unsigned char SimBodyPart::GetNumPossibleDegradationStates() const {}
 
 // Range: 0x80044668 -> 0x80044758
-unsigned char SimBodyPart::IsGeneric(const class SimBodyPart * const this /* r31 */) {}
+// this: r31
+unsigned char SimBodyPart::IsGeneric() const {}
 
 // Range: 0x80044758 -> 0x800447F0
-void SimBodyPart::CalculateNameBase(const class SimBodyPart * const this /* r28 */, char * szBuffer /* r29 */) {}
+// this: r28
+void SimBodyPart::CalculateNameBase(char * szBuffer /* r29 */) const {}
 
 // Range: 0x800447F0 -> 0x80044848
 void SimBodyPart::CalculateNameStyle(char * szBuffer /* r31 */) {
@@ -146,60 +168,72 @@ void SimBodyPart::CalculateNameTextureVariation(char * szBuffer /* r30 */) {
 }
 
 // Range: 0x800448D4 -> 0x800448F0
-void SimBodyPart::CalculateNameDegradationState(const class SimBodyPart * const this /* r5 */) {}
+// this: r5
+void SimBodyPart::CalculateNameDegradationState() const {}
 
 // Range: 0x800448F0 -> 0x80044900
 void SimBodyPart::CalculateNameLowRes() {}
 
 // Range: 0x80044900 -> 0x80044964
-char * SimBodyPart::GetModelCode(const class SimBodyPart * const this /* r30 */) {}
+// this: r30
+char * SimBodyPart::GetModelCode() const {}
 
 // Range: 0x80044964 -> 0x800449F8
-char * SimBodyPart::GetStyleCode(const class SimBodyPart * const this /* r30 */) {}
+// this: r30
+char * SimBodyPart::GetStyleCode() const {}
 
 // Range: 0x800449F8 -> 0x80044A68
-char * SimBodyPart::GetClothingSetName(const class SimBodyPart * const this /* r31 */) {}
+// this: r31
+char * SimBodyPart::GetClothingSetName() const {}
 
 // Range: 0x80044A68 -> 0x80044AE0
-char * SimBodyPart::GetTextureVariationName(const class SimBodyPart * const this /* r30 */) {}
+// this: r30
+char * SimBodyPart::GetTextureVariationName() const {}
 
 // Range: 0x80044AE0 -> 0x80044B60
-class EString SimBodyPart::GetModelName(class EString * strName /* r29 */, const class SimBodyPart * const this /* r30 */) {
+// this: r29
+class EString SimBodyPart::GetModelName(const class SimBodyPart * const this /* r30 */) const {
     // Local variables
     char szBuffer[256]; // r1+0x8
 }
 
 // Range: 0x80044B60 -> 0x80044CB8
-class EString SimBodyPart::GetTextureName(const class SimBodyPart * const this /* r29 */, unsigned char bLowRes /* r30 */) {
+// this: r29
+class EString SimBodyPart::GetTextureName(unsigned char bLowRes /* r30 */) const {
     // Local variables
     char szBuffer[256]; // r1+0x10
     class EString strName; // r1+0x8
 }
 
 // Range: 0x80044CB8 -> 0x80044E10
-class EString SimBodyPart::GetReflectionMaskName(const class SimBodyPart * const this /* r29 */, unsigned char bLowRes /* r30 */) {
+// this: r29
+class EString SimBodyPart::GetReflectionMaskName(unsigned char bLowRes /* r30 */) const {
     // Local variables
     char szBuffer[256]; // r1+0x10
     class EString strName; // r1+0x8
 }
 
 // Range: 0x80044E10 -> 0x80044ED8
-class EString SimBodyPart::GetIconTextureName(class EString * strName /* r29 */, const class SimBodyPart * const this /* r30 */) {
+// this: r29
+class EString SimBodyPart::GetIconTextureName(const class SimBodyPart * const this /* r30 */) const {
     // Local variables
     char szBuffer[256]; // r1+0x8
 }
 
 // Range: 0x80044ED8 -> 0x80044F58
-unsigned int SimBodyPart::GetModelID(const class SimBodyPart * const this /* r30 */) {}
+// this: r30
+unsigned int SimBodyPart::GetModelID() const {}
 
 // Range: 0x80044F58 -> 0x80044FEC
-unsigned int SimBodyPart::GetTextureID(const class SimBodyPart * const this /* r30 */, unsigned char bLowRes /* r31 */) {
+// this: r30
+unsigned int SimBodyPart::GetTextureID(unsigned char bLowRes /* r31 */) const {
     // Local variables
     class EString strTextureName; // r1+0x8
 }
 
 // Range: 0x80044FEC -> 0x80045080
-unsigned int SimBodyPart::GetReflectionMaskID(const class SimBodyPart * const this /* r30 */, unsigned char bLowRes /* r31 */) {
+// this: r30
+unsigned int SimBodyPart::GetReflectionMaskID(unsigned char bLowRes /* r31 */) const {
     // Local variables
     class EString strReflectionMaskName; // r1+0x8
 }
@@ -211,23 +245,27 @@ unsigned int SimBodyPart::GetIconTextureID() {
 }
 
 // Range: 0x800450E0 -> 0x800451D4
-unsigned char SimBodyPart::GetDefaultClothingSetIndex(const class SimBodyPart * const this /* r29 */, unsigned char bMale /* r30 */) {
+// this: r29
+unsigned char SimBodyPart::GetDefaultClothingSetIndex(unsigned char bMale /* r30 */) const {
     // Local variables
     const struct CostumesTSC6 * pCostumeData; // r0
     unsigned char nClothingSetIndex; // r0
 }
 
 // Range: 0x800451D4 -> 0x8004523C
-void SimBodyPart::SetToDefault(class SimBodyPart * const this /* r31 */) {}
+// this: r31
+void SimBodyPart::SetToDefault() {}
 
 // Range: 0x8004523C -> 0x80045270
 unsigned char SimBodyPart::GetNudeClothingSetIndex() {}
 
 // Range: 0x80045270 -> 0x800452D8
-void SimBodyPart::SetToNude(class SimBodyPart * const this /* r31 */) {}
+// this: r31
+void SimBodyPart::SetToNude() {}
 
 // Range: 0x800452D8 -> 0x800454CC
-void SimBodyPart::SetToRandom(class SimBodyPart * const this /* r31 */, int nChanceForBodyPart /* r27 */) {
+// this: r31
+void SimBodyPart::SetToRandom(int nChanceForBodyPart /* r27 */) {
     // Local variables
     int nRandom; // r0
     class vector clothingSetlist; // r1+0x10
@@ -250,29 +288,34 @@ unsigned char SimBodyPart::CalculateModelCodeIndexFromModelIndex() {}
 unsigned char SimBodyPart::CalculateStyleIndexFromModelIndex() {}
 
 // Range: 0x800454EC -> 0x8004560C
-void SimBodyPart::SwitchToFirstAvailableDegradationStage(class SimBodyPart * const this /* r30 */) {
+// this: r30
+void SimBodyPart::SwitchToFirstAvailableDegradationStage() {
     // Local variables
     unsigned char i; // r31
 }
 
 // Range: 0x8004560C -> 0x800457E4
-void SimBodyPart::SwitchToFirstAvailableStyle(class SimBodyPart * const this /* r31 */) {
+// this: r31
+void SimBodyPart::SwitchToFirstAvailableStyle() {
     // Local variables
     unsigned char i; // r30
 }
 
 // Range: 0x800457E4 -> 0x800459F8
-void SimBodyPart::AdjustToLegalStyle(class SimBodyPart * const this /* r31 */) {
+// this: r31
+void SimBodyPart::AdjustToLegalStyle() {
     // Local variables
     unsigned char bFoundLegalSyle; // r30
     unsigned char i; // r29
 }
 
 // Range: 0x800459F8 -> 0x80045A78
-unsigned char SimBodyPart::GetArmorValue(class SimBodyPart * const this /* r30 */, enum eDamageType armorType /* r31 */) {}
+// this: r30
+unsigned char SimBodyPart::GetArmorValue(enum eDamageType armorType /* r31 */) {}
 
 // Range: 0x80045A78 -> 0x80045AD0
-unsigned int SimBodyPart::GetHitPointsPerDegradationState(class SimBodyPart * const this /* r31 */) {}
+// this: r31
+unsigned int SimBodyPart::GetHitPointsPerDegradationState() {}
 
 // Range: 0x80045AD0 -> 0x80045AE8
 unsigned char SimBodyPart::GetIsDamaged() {}
@@ -287,7 +330,8 @@ int SimBodyPart::GetCurrentHitPoints() {}
 void SimBodyPart::SetCurrentHitPoints() {}
 
 // Range: 0x80045B28 -> 0x80045DB4
-class BitFlags SimBodyPart::Degrade(class BitFlags * nDegRepResult /* r30 */, class SimBodyPart * const this /* r31 */) {
+// this: r30
+class BitFlags SimBodyPart::Degrade(class SimBodyPart * const this /* r31 */) {
     // Local variables
     const struct BodyPartStyleInfoTSC6 * pBodyPartStyleInfoCurrent; // r0
     unsigned char nOriginalModelIndex; // r27
@@ -295,13 +339,15 @@ class BitFlags SimBodyPart::Degrade(class BitFlags * nDegRepResult /* r30 */, cl
 }
 
 // Range: 0x80045DB4 -> 0x80045F50
-class BitFlags SimBodyPart::Repair(class BitFlags * nDegRepResult /* r29 */, class SimBodyPart * const this /* r30 */) {
+// this: r29
+class BitFlags SimBodyPart::Repair(class SimBodyPart * const this /* r30 */) {
     // Local variables
     const struct BodyPartStyleInfoTSC6 * pBodyPartStyleInfoCurrent; // r0
 }
 
 // Range: 0x80045F50 -> 0x8004615C
-class BitFlags SimBodyPart::ApplyDamage(class BitFlags * nDegRepResult /* r30 */, class SimBodyPart * const this /* r31 */, const struct DamageEvent & damage /* r25 */, signed short nArmorMultiplier /* r26 */) {
+// this: r30
+class BitFlags SimBodyPart::ApplyDamage(class SimBodyPart * const this /* r31 */, const struct DamageEvent & damage /* r25 */, signed short nArmorMultiplier /* r26 */) {
     // Local variables
     signed short nDamageTaken; // r28
     int i; // r27
@@ -312,7 +358,8 @@ class BitFlags SimBodyPart::ApplyDamage(class BitFlags * nDegRepResult /* r30 */
 }
 
 // Range: 0x8004615C -> 0x80046340
-class ETexture * SimBodyPart::CreateIcon(class SimBodyPart * const this /* r23 */, class SimModelTSC6 * pSimModel /* r24 */, class EVec3 * pCameraPos /* r31 */, class EVec3 * pCameraTarget /* r30 */, float fCameraFOV /* f31 */, unsigned int nBackgroundImageID /* r25 */, int nIconWidth /* r26 */, int nIconHeight /* r27 */, int nIconDepth /* r28 */, unsigned char bUseShadowMap /* r29 */) {
+// this: r23
+class ETexture * SimBodyPart::CreateIcon(class SimModelTSC6 * pSimModel /* r24 */, class EVec3 * pCameraPos /* r31 */, class EVec3 * pCameraTarget /* r30 */, float fCameraFOV /* f31 */, unsigned int nBackgroundImageID /* r25 */, int nIconWidth /* r26 */, int nIconHeight /* r27 */, int nIconDepth /* r28 */, unsigned char bUseShadowMap /* r29 */) {
     // Local variables
     class EVec3 cameraPos; // r1+0x2C
     class EVec3 cameraTarget; // r1+0x20
@@ -326,14 +373,16 @@ class ETexture * SimBodyPart::CreateIcon(class SimBodyPart * const this /* r23 *
 }
 
 // Range: 0x80046340 -> 0x800464D4
-void SimBodyPart::GetRequiredDyesForTextureVariation(class SimBodyPart * const this /* r28 */, unsigned char nTextureIndex /* r29 */, signed short * nDyesRequired /* r30 */) {
+// this: r28
+void SimBodyPart::GetRequiredDyesForTextureVariation(unsigned char nTextureIndex /* r29 */, signed short * nDyesRequired /* r30 */) {
     // Local variables
     signed short color; // r0
     const char * pTextureNamePtr; // r6
 }
 
 // Range: 0x800464D4 -> 0x80046864
-unsigned int SimBodyPart::GetValidClothingSetIndexes(class SimBodyPart * const this /* r28 */, class vector & l /* r29 */) {
+// this: r28
+unsigned int SimBodyPart::GetValidClothingSetIndexes(class vector & l /* r29 */) {
     // Local variables
     unsigned int numParts; // r31
     unsigned char bIsMale; // r24
@@ -357,7 +406,8 @@ unsigned int SimBodyPart::GetValidClothingSetIndexes(class SimBodyPart * const t
 }
 
 // Range: 0x80046864 -> 0x80046ADC
-unsigned char SimBodyPart::GetClothingSetUIIndex(const class SimBodyPart * const this /* r31 */) {
+// this: r31
+unsigned char SimBodyPart::GetClothingSetUIIndex() const {
     // Local variables
     unsigned char bIsMale; // r29
     unsigned char bUseArchetype; // r0
@@ -379,7 +429,8 @@ unsigned char SimBodyPart::GetClothingSetUIIndex(const class SimBodyPart * const
 }
 
 // Range: 0x80046ADC -> 0x80046BA4
-void SimBodyPartHead::Validate(class SimBodyPartHead * const this /* r31 */) {
+// this: r31
+void SimBodyPartHead::Validate() {
     // Local variables
     char szErr[512]; // r1+0x8
 }
@@ -394,16 +445,19 @@ unsigned char SimBodyPartHead::CalculateModelCodeIndexFromModelIndex(unsigned ch
 unsigned char SimBodyPartHead::CalculateStyleIndexFromModelIndex(unsigned char nModelIndex /* r31 */) {}
 
 // Range: 0x80046CD0 -> 0x80046DE0
-void SimBodyPartFacialFeature::DoStream(class SimBodyPartFacialFeature * const this /* r29 */, class ReconBuffer * r /* r30 */, int version /* r31 */) {}
+// this: r29
+void SimBodyPartFacialFeature::DoStream(class ReconBuffer * r /* r30 */, int version /* r31 */) {}
 
 // Range: 0x80046DE0 -> 0x80046EA8
-void SimBodyPartFacialFeature::CopyFrom(class SimBodyPartFacialFeature * const this /* r30 */, const class SimBodyPart * pBodyPart /* r31 */) {
+// this: r30
+void SimBodyPartFacialFeature::CopyFrom(const class SimBodyPart * pBodyPart /* r31 */) {
     // Local variables
     const class SimBodyPartFacialFeature * pBodyPartFacialFeature; // r0
 }
 
 // Range: 0x80046EA8 -> 0x80046FE0
-class EString SimBodyPartFacialFeature::GetTextureName(const class SimBodyPartFacialFeature * const this /* r29 */, unsigned char bLowRes /* r30 */) {
+// this: r29
+class EString SimBodyPartFacialFeature::GetTextureName(unsigned char bLowRes /* r30 */) const {
     // Local variables
     char szBuffer[256]; // r1+0x10
     class EString strName; // r1+0x8
@@ -416,13 +470,16 @@ unsigned char SimBodyPartFacialFeature::CalculateModelIndexFromModelCodeIndexAnd
 unsigned char SimBodyPartFacialFeature::CalculateStyleIndexFromModelIndex() {}
 
 // Range: 0x80046FF0 -> 0x80047030
-void SimBodyPartFacialFeature::SwitchToFirstAvailableDegradationStage(class SimBodyPartFacialFeature * const this /* r31 */) {}
+// this: r31
+void SimBodyPartFacialFeature::SwitchToFirstAvailableDegradationStage() {}
 
 // Range: 0x80047030 -> 0x800470D0
-unsigned char SimBodyPartFacialFeature::GetArmorValue(class SimBodyPartFacialFeature * const this /* r30 */, enum eDamageType armorType /* r31 */) {}
+// this: r30
+unsigned char SimBodyPartFacialFeature::GetArmorValue(enum eDamageType armorType /* r31 */) {}
 
 // Range: 0x800470D0 -> 0x80047370
-unsigned int SimBodyPartFacialFeature::GetValidClothingSetIndexes(class SimBodyPartFacialFeature * const this /* r24 */, class vector & l /* r25 */) {
+// this: r24
+unsigned int SimBodyPartFacialFeature::GetValidClothingSetIndexes(class vector & l /* r25 */) {
     // Local variables
     unsigned int numParts; // r29
     unsigned char bIsMale; // r20
@@ -441,7 +498,8 @@ unsigned int SimBodyPartFacialFeature::GetValidClothingSetIndexes(class SimBodyP
 }
 
 // Range: 0x80047370 -> 0x80047564
-unsigned char SimBodyPartFacialFeature::GetClothingSetUIIndex(const class SimBodyPartFacialFeature * const this /* r26 */) {
+// this: r26
+unsigned char SimBodyPartFacialFeature::GetClothingSetUIIndex() const {
     // Local variables
     unsigned char bIsMale; // r23
     unsigned char bUseArchetype; // r0
@@ -458,41 +516,48 @@ unsigned char SimBodyPartFacialFeature::GetClothingSetUIIndex(const class SimBod
 }
 
 // Range: 0x80047564 -> 0x80047674
-void SimBodyPartHair::DoStream(class SimBodyPartHair * const this /* r29 */, class ReconBuffer * r /* r30 */, int version /* r31 */) {}
+// this: r29
+void SimBodyPartHair::DoStream(class ReconBuffer * r /* r30 */, int version /* r31 */) {}
 
 // Range: 0x80047674 -> 0x8004773C
-void SimBodyPartHair::CopyFrom(class SimBodyPartHair * const this /* r30 */, const class SimBodyPart * pBodyPart /* r31 */) {
+// this: r30
+void SimBodyPartHair::CopyFrom(const class SimBodyPart * pBodyPart /* r31 */) {
     // Local variables
     const class SimBodyPartHair * pSimBodyPartHair; // r0
 }
 
 // Range: 0x8004773C -> 0x800477FC
-void SimBodyPartHair::Validate(class SimBodyPartHair * const this /* r31 */) {
+// this: r31
+void SimBodyPartHair::Validate() {
     // Local variables
     char szErr[512]; // r1+0x8
 }
 
 // Range: 0x800477FC -> 0x80047928
-class EString SimBodyPartHair::GetTextureName(class EString * strName /* r27 */, const class SimBodyPartHair * const this /* r28 */, unsigned char bLowRes /* r29 */) {
+// this: r27
+class EString SimBodyPartHair::GetTextureName(const class SimBodyPartHair * const this /* r28 */, unsigned char bLowRes /* r29 */) const {
     // Local variables
     char szBuffer[256]; // r1+0x8
 }
 
 // Range: 0x80047928 -> 0x80047AB0
-class EString SimBodyPartHair::GetReflectionMaskName(const class SimBodyPartHair * const this /* r28 */, unsigned char bLowRes /* r29 */) {
+// this: r28
+class EString SimBodyPartHair::GetReflectionMaskName(unsigned char bLowRes /* r29 */) const {
     // Local variables
     char szBuffer[256]; // r1+0x10
     class EString strName; // r1+0x8
 }
 
 // Range: 0x80047AB0 -> 0x80047BC0
-class EString SimBodyPartHair::GetIconTextureName(class EString * strName /* r28 */, const class SimBodyPartHair * const this /* r29 */) {
+// this: r28
+class EString SimBodyPartHair::GetIconTextureName(const class SimBodyPartHair * const this /* r29 */) const {
     // Local variables
     char szBuffer[256]; // r1+0x8
 }
 
 // Range: 0x80047BC0 -> 0x80047C38
-char * SimBodyPartHair::GetModelCode(const class SimBodyPartHair * const this /* r30 */) {
+// this: r30
+char * SimBodyPartHair::GetModelCode() const {
     // Local variables
     unsigned char nModelCodeIndex; // r31
 }
@@ -501,7 +566,8 @@ char * SimBodyPartHair::GetModelCode(const class SimBodyPartHair * const this /*
 char * SimBodyPartHair::GetModelCodeForTexture() {}
 
 // Range: 0x80047C68 -> 0x80047D1C
-unsigned int SimBodyPartHair::GetModelID(const class SimBodyPartHair * const this /* r30 */) {
+// this: r30
+unsigned int SimBodyPartHair::GetModelID() const {
     // Local variables
     unsigned char nModelIndex; // r31
 }
@@ -519,19 +585,23 @@ unsigned char SimBodyPartHair::CalculateModelCodeIndexFromModelIndex(unsigned ch
 unsigned char SimBodyPartHair::CalculateStyleIndexFromModelIndex(unsigned char nModelIndex /* r31 */) {}
 
 // Range: 0x80047E04 -> 0x80047E44
-void SimBodyPartHair::SwitchToFirstAvailableDegradationStage(class SimBodyPartHair * const this /* r31 */) {}
+// this: r31
+void SimBodyPartHair::SwitchToFirstAvailableDegradationStage() {}
 
 // Range: 0x80047E44 -> 0x80047F10
-void SimBodyPartHair::UpdateRelatedData(class SimBodyPartHair * const this /* r29 */) {
+// this: r29
+void SimBodyPartHair::UpdateRelatedData() {
     // Local variables
     class SimBodyPart * pSimBodyPart; // r30
 }
 
 // Range: 0x80047F10 -> 0x80047FB0
-unsigned char SimBodyPartHair::GetArmorValue(class SimBodyPartHair * const this /* r30 */, enum eDamageType armorType /* r31 */) {}
+// this: r30
+unsigned char SimBodyPartHair::GetArmorValue(enum eDamageType armorType /* r31 */) {}
 
 // Range: 0x80047FB0 -> 0x800481B8
-unsigned int SimBodyPartHair::GetValidClothingSetIndexes(class SimBodyPartHair * const this /* r25 */, class vector & l /* r26 */) {
+// this: r25
+unsigned int SimBodyPartHair::GetValidClothingSetIndexes(class vector & l /* r26 */) {
     // Local variables
     unsigned int numParts; // r30
     unsigned char bIsMale; // r21
@@ -548,7 +618,8 @@ unsigned int SimBodyPartHair::GetValidClothingSetIndexes(class SimBodyPartHair *
 }
 
 // Range: 0x800481B8 -> 0x80048368
-unsigned char SimBodyPartHair::GetClothingSetUIIndex(const class SimBodyPartHair * const this /* r31 */) {
+// this: r31
+unsigned char SimBodyPartHair::GetClothingSetUIIndex() const {
     // Local variables
     unsigned char bIsMale; // r29
     unsigned char bUseArchetype; // r0
@@ -564,7 +635,8 @@ unsigned char SimBodyPartHair::GetClothingSetUIIndex(const class SimBodyPartHair
 }
 
 // Range: 0x80048368 -> 0x8004840C
-void SimBodyPartTorso::Validate(class SimBodyPartTorso * const this /* r31 */) {
+// this: r31
+void SimBodyPartTorso::Validate() {
     // Local variables
     unsigned char numStyles; // r0
     char szErr[512]; // r1+0x8
@@ -583,10 +655,12 @@ void SimBodyPartTorso::UpdateRelatedData() {
 }
 
 // Range: 0x8004845C -> 0x8004849C
-class BitFlags SimBodyPartTorso::Degrade(class SimBodyPartTorso * const this /* r31 */) {}
+// this: r31
+class BitFlags SimBodyPartTorso::Degrade() {}
 
 // Range: 0x8004849C -> 0x800484DC
-class BitFlags SimBodyPartTorso::Repair(class SimBodyPartTorso * const this /* r31 */) {}
+// this: r31
+class BitFlags SimBodyPartTorso::Repair() {}
 
 // Range: 0x800484DC -> 0x800484E4
 unsigned char SimBodyPartLowerBody::CalculateModelIndexFromModelCodeIndexAndStyleIndex() {}
@@ -601,7 +675,8 @@ unsigned char SimBodyPartShoes::CalculateModelIndexFromModelCodeIndexAndStyleInd
 unsigned char SimBodyPartShoes::CalculateStyleIndexFromModelIndex() {}
 
 // Range: 0x800484FC -> 0x800485F8
-void SimBodyPartHat::Validate(class SimBodyPartHat * const this /* r31 */) {
+// this: r31
+void SimBodyPartHat::Validate() {
     // Local variables
     char szErr[512]; // r1+0x208
     char szErr[512]; // r1+0x8
@@ -614,7 +689,8 @@ unsigned char SimBodyPartHat::CalculateModelIndexFromModelCodeIndexAndStyleIndex
 unsigned char SimBodyPartHat::CalculateStyleIndexFromModelIndex() {}
 
 // Range: 0x80048608 -> 0x8004866C
-void SimBodyPartHat::UpdateRelatedData(class SimBodyPartHat * const this /* r31 */) {}
+// this: r31
+void SimBodyPartHat::UpdateRelatedData() {}
 
 // Range: 0x8004866C -> 0x80048674
 unsigned char SimBodyPartArmAccessory::CalculateModelIndexFromModelCodeIndexAndStyleIndex() {}
@@ -623,13 +699,15 @@ unsigned char SimBodyPartArmAccessory::CalculateModelIndexFromModelCodeIndexAndS
 unsigned char SimBodyPartArmAccessory::CalculateStyleIndexFromModelIndex() {}
 
 // Range: 0x8004867C -> 0x800487A8
-unsigned int SimBodyPartBelt::GetModelID(const class SimBodyPartBelt * const this /* r30 */) {
+// this: r30
+unsigned int SimBodyPartBelt::GetModelID() const {
     // Local variables
     class SimBodyPart * pBodyPartTorso; // r31
 }
 
 // Range: 0x800487A8 -> 0x8004899C
-void SimBodyPartSleeves::Validate(class SimBodyPartSleeves * const this /* r30 */) {
+// this: r30
+void SimBodyPartSleeves::Validate() {
     // Local variables
     class SimBodyPart * pBodyPartTorso; // r29
     char szErr[512]; // r1+0x408
@@ -639,7 +717,8 @@ void SimBodyPartSleeves::Validate(class SimBodyPartSleeves * const this /* r30 *
 }
 
 // Range: 0x8004899C -> 0x800489FC
-void SimBodyPartSleeves::CalculateModelOffset(class SimBodyPartSleeves * const this /* r31 */) {
+// this: r31
+void SimBodyPartSleeves::CalculateModelOffset() {
     // Local variables
     const struct BodyPartTypeInfoTableTSC6 * pBodyPartTypeInfoTable; // r0
 }
@@ -648,7 +727,8 @@ void SimBodyPartSleeves::CalculateModelOffset(class SimBodyPartSleeves * const t
 void SimBodyPartSleeves::SwitchToFirstAvailableDegradationStage() {}
 
 // Range: 0x80048A00 -> 0x80048B5C
-void SimBodyPartSleeves::SwitchToMatchTorsoSettings(class SimBodyPartSleeves * const this /* r30 */) {
+// this: r30
+void SimBodyPartSleeves::SwitchToMatchTorsoSettings() {
     // Local variables
     class SimBodyPart * pBodyPartTorso; // r31
 }
@@ -657,6 +737,7 @@ void SimBodyPartSleeves::SwitchToMatchTorsoSettings(class SimBodyPartSleeves * c
 unsigned char SimBodyPartSleeves::CalculateModelIndexFromModelCodeIndexAndStyleIndex() {}
 
 // Range: 0x80048B6C -> 0x80048BD0
-unsigned char SimBodyPartSleeves::CalculateStyleIndexFromModelIndex(const class SimBodyPartSleeves * const this /* r30 */, unsigned char nModelIndex /* r31 */) {}
+// this: r30
+unsigned char SimBodyPartSleeves::CalculateStyleIndexFromModelIndex(unsigned char nModelIndex /* r31 */) const {}
 
 

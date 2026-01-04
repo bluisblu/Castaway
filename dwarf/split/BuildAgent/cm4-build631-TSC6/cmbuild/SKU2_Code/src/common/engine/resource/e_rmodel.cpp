@@ -11,13 +11,15 @@ void ERModel::InitializeWhatShouldBeMetaData() {
 }
 
 // Range: 0x802E0A54 -> 0x802E0C54
-void * ERModel::ERModel(class ERModel * const this /* r29 */) {
+// this: r29
+ERModel::ERModel() {
     // References
     // -> struct [anonymous] __vt__7ERModel;
 }
 
 // Range: 0x802E0C54 -> 0x802E0DB0
-void * ERModel::~ERModel(class ERModel * const this /* r29 */) {
+// this: r29
+ERModel::~ERModel() {
     // References
     // -> struct [anonymous] __vt__9EResource;
     // -> class EModelManager _modelman;
@@ -28,26 +30,30 @@ void * ERModel::~ERModel(class ERModel * const this /* r29 */) {
 void ERModel::Refresh() {}
 
 // Range: 0x802E0DC0 -> 0x802E0E24
-void ERModel::DelRefSubResources(class ERModel * const this /* r29 */) {
+// this: r29
+void ERModel::DelRefSubResources() {
     // Local variables
     int c; // r30
 }
 
 // Range: 0x802E0E24 -> 0x802E0E88
-void ERModel::AddRefSubResources(class ERModel * const this /* r29 */) {
+// this: r29
+void ERModel::AddRefSubResources() {
     // Local variables
     int c; // r30
 }
 
 // Range: 0x802E0E88 -> 0x802E0F28
-unsigned char ERModel::TryIncrementSubResources(class ERModel * const this /* r29 */) {
+// this: r29
+unsigned char ERModel::TryIncrementSubResources() {
     // Local variables
     int c; // r30
     int undo; // r30
 }
 
 // Range: 0x802E0F28 -> 0x802E1358
-void ERModel::LoadFromFile(class ERModel * const this /* r30 */, class EFile * s /* r31 */) {
+// this: r30
+void ERModel::LoadFromFile(class EFile * s /* r31 */) {
     // Local variables
     class EDataHeader resourceHeader; // r1+0x14
     unsigned int size; // r1+0x10
@@ -89,7 +95,8 @@ void CopyTArray(class TArray & array /* r28 */, class EFile * s /* r29 */) {
 void ERModel::LoadModel() {}
 
 // Range: 0x802E164C -> 0x802E186C
-void ERModel::FinishLoad(class ERModel * const this /* r31 */) {
+// this: r31
+void ERModel::FinishLoad() {
     // Local variables
     unsigned int id; // r0
     float minX; // r1+0xC
@@ -111,43 +118,50 @@ int ERModel::GetShaderCount() {
 }
 
 // Range: 0x802E1954 -> 0x802E19D4
-class EMat4 * ERModel::GetScaleMatrix(class ERModel * const this /* r31 */) {
+// this: r31
+class EMat4 * ERModel::GetScaleMatrix() {
     // References
     // -> class EModelManager _modelman;
 }
 
 // Range: 0x802E19D4 -> 0x802E1A1C
-void ERModel::DeallocateScaleMatrix(class ERModel * const this /* r31 */) {
+// this: r31
+void ERModel::DeallocateScaleMatrix() {
     // References
     // -> class EModelManager _modelman;
 }
 
 // Range: 0x802E1A1C -> 0x802E1B18
-void ERModel::CalcOrientedBoundSphere(class ERModel * const this /* r29 */, const class EMat4 & mOrient /* r30 */, class EBoundSphere & sphereOut /* r31 */) {
+// this: r29
+void ERModel::CalcOrientedBoundSphere(const class EMat4 & mOrient /* r30 */, class EBoundSphere & sphereOut /* r31 */) {
     // Local variables
     float maxScale; // f0
 }
 
 // Range: 0x802E1B18 -> 0x802E1B8C
-void ERModel::DrawGeometry(class ERModel * const this /* r28 */, class ERC * prc /* r29 */) {
+// this: r28
+void ERModel::DrawGeometry(class ERC * prc /* r29 */) {
     // Local variables
     int cSubModel; // r30
 }
 
 // Range: 0x802E1B8C -> 0x802E1C00
-void ERModel::DrawAsShadow(class ERModel * const this /* r28 */, class ERC * prc /* r29 */) {
+// this: r28
+void ERModel::DrawAsShadow(class ERC * prc /* r29 */) {
     // Local variables
     int cSubModel; // r30
 }
 
 // Range: 0x802E1C00 -> 0x802E1C74
-void ERModel::Draw(class ERModel * const this /* r28 */, class ERC * prc /* r29 */) {
+// this: r28
+void ERModel::Draw(class ERC * prc /* r29 */) {
     // Local variables
     int cSubModel; // r30
 }
 
 // Range: 0x802E1C74 -> 0x802E1EAC
-void ERModel::DrawHierarchical(class ERModel * const this /* r28 */, class ERC * prc /* r29 */, class EMat4 * mNodes /* r30 */, struct EACNodeState * nodeStates /* r31 */) {
+// this: r28
+void ERModel::DrawHierarchical(class ERC * prc /* r29 */, class EMat4 * mNodes /* r30 */, struct EACNodeState * nodeStates /* r31 */) {
     // Local variables
     class EVec4 vPlane; // r1+0x18
     class TFloatTree sortedSubModels; // r1+0x8
@@ -162,7 +176,8 @@ void ERModel::DrawHierarchical(class ERModel * const this /* r28 */, class ERC *
 }
 
 // Range: 0x802E1EAC -> 0x802E2C58
-void ERModel::WeldSharedVerts(class ERModel * const this /* r31 */, float weldDistance /* f26 */) {
+// this: r31
+void ERModel::WeldSharedVerts(float weldDistance /* f26 */) {
     // Local variables
     unsigned char intVerts; // r18
     float wd2; // f28
@@ -216,7 +231,8 @@ void ERModel::WeldSharedVerts(class ERModel * const this /* r31 */, float weldDi
 void ERModel::RebuildAfterWelding() {}
 
 // Range: 0x802E2C5C -> 0x802E2E24
-void ERModel::AllocateMorphTargetArray(class ERModel * const this /* r29 */, unsigned int numCurrentBrowseMorphTargets /* r30 */, unsigned int numMorphRegions /* r31 */) {
+// this: r29
+void ERModel::AllocateMorphTargetArray(unsigned int numCurrentBrowseMorphTargets /* r30 */, unsigned int numMorphRegions /* r31 */) {
     // Local variables
     int i; // r6
     int i; // r6
@@ -224,13 +240,15 @@ void ERModel::AllocateMorphTargetArray(class ERModel * const this /* r29 */, uns
 }
 
 // Range: 0x802E2E24 -> 0x802E2F28
-unsigned char ERModel::RegisterCurrentBrowseMorphTarget(class ERModel * const this /* r29 */, class ERModel * pMorphTarget /* r30 */, int currentBrowseMorphTargetIndex /* r31 */) {
+// this: r29
+unsigned char ERModel::RegisterCurrentBrowseMorphTarget(class ERModel * pMorphTarget /* r30 */, int currentBrowseMorphTargetIndex /* r31 */) {
     // Local variables
     int i; // r26
 }
 
 // Range: 0x802E2F28 -> 0x802E2FF8
-class ERModel * ERModel::RegisterCurrentBrowseMorphTarget(class ERModel * const this /* r29 */, int currentBrowseMorphTargetIndex /* r30 */) {
+// this: r29
+class ERModel * ERModel::RegisterCurrentBrowseMorphTarget(int currentBrowseMorphTargetIndex /* r30 */) {
     // Local variables
     unsigned char status; // r0
 
@@ -239,20 +257,23 @@ class ERModel * ERModel::RegisterCurrentBrowseMorphTarget(class ERModel * const 
 }
 
 // Range: 0x802E2FF8 -> 0x802E3070
-void ERModel::UnregisterAllMorphTargets(class ERModel * const this /* r30 */) {
+// this: r30
+void ERModel::UnregisterAllMorphTargets() {
     // Local variables
     int currentBrowseMorphTargetIndex; // r31
     int userSelectedMorphTargetIndex; // r31
 }
 
 // Range: 0x802E3070 -> 0x802E30F0
-void ERModel::UnregisterCurrentBrowseMorphTargets(class ERModel * const this /* r29 */) {
+// this: r29
+void ERModel::UnregisterCurrentBrowseMorphTargets() {
     // Local variables
     int morphTargetIndex; // r30
 }
 
 // Range: 0x802E30F0 -> 0x802E31DC
-void ERModel::UnregisterCurrentBrowseMorphTarget(class ERModel * const this /* r27 */, int currentBrowseMorphTargetIndex /* r28 */) {
+// this: r27
+void ERModel::UnregisterCurrentBrowseMorphTarget(int currentBrowseMorphTargetIndex /* r28 */) {
     // Local variables
     int i; // r29
 }
@@ -274,19 +295,22 @@ void ERModel::CopyWeightsFromUserSelectedToCurrentBrowse() {
 }
 
 // Range: 0x802E3314 -> 0x802E3370
-void ERModel::UnregisterUserSelectedMorphTargetInRegion(class ERModel * const this /* r29 */) {
+// this: r29
+void ERModel::UnregisterUserSelectedMorphTargetInRegion() {
     // Local variables
     int i; // r30
 }
 
 // Range: 0x802E3370 -> 0x802E345C
-void ERModel::UnregisterUserSelectedMorphTarget(class ERModel * const this /* r27 */, int userSelectedMorphTargetIndex /* r28 */) {
+// this: r27
+void ERModel::UnregisterUserSelectedMorphTarget(int userSelectedMorphTargetIndex /* r28 */) {
     // Local variables
     int i; // r29
 }
 
 // Range: 0x802E345C -> 0x802E3600
-void ERModel::PromoteCurrentBrowseMorphTarget(class ERModel * const this /* r30 */, int morphRegionIndex /* r31 */) {
+// this: r30
+void ERModel::PromoteCurrentBrowseMorphTarget(int morphRegionIndex /* r31 */) {
     // Local variables
     int i; // r0
     int currentBrowseMorphTargetIndex; // r9
@@ -304,36 +328,42 @@ void ERModel::ClearCurrentBrowseMorphTargetWeights() {
 }
 
 // Range: 0x802E36AC -> 0x802E371C
-void ERModel::ResetStripsMorph(class ERModel * const this /* r29 */) {
+// this: r29
+void ERModel::ResetStripsMorph() {
     // Local variables
     int i; // r30
 }
 
 // Range: 0x802E371C -> 0x802E37D8
-unsigned char ERModel::ApplyMorphTargetsToStripsMorph(class ERModel * const this /* r28 */) {
+// this: r28
+unsigned char ERModel::ApplyMorphTargetsToStripsMorph() {
     // Local variables
     unsigned char status; // r30
     int i; // r29
 }
 
 // Range: 0x802E37D8 -> 0x802E3874
-void ERModel::ApplyLatticesToStripsMorph(class ERModel * const this /* r29 */) {
+// this: r29
+void ERModel::ApplyLatticesToStripsMorph() {
     // Local variables
     int i; // r30
     int i; // r30
 }
 
 // Range: 0x802E3874 -> 0x802E38EC
-void ERModel::BuildDisplayListStripsMorph(class ERModel * const this /* r29 */) {
+// this: r29
+void ERModel::BuildDisplayListStripsMorph() {
     // Local variables
     int i; // r30
 }
 
 // Range: 0x802E38EC -> 0x802E39CC
-void ERModel::CleanMorphTargets(class ERModel * const this /* r29 */, unsigned char bNoReset /* r30 */) {}
+// this: r29
+void ERModel::CleanMorphTargets(unsigned char bNoReset /* r30 */) {}
 
 // Range: 0x802E39CC -> 0x802E3ABC
-void ERModel::FreeAllMorphTargetAndLatticeResource(class ERModel * const this /* r29 */, unsigned char bNoReset /* r30 */) {}
+// this: r29
+void ERModel::FreeAllMorphTargetAndLatticeResource(unsigned char bNoReset /* r30 */) {}
 
 // Range: 0x802E3ABC -> 0x802E3B08
 void ERModel::SetLatticeWeight() {}
@@ -345,25 +375,29 @@ int ERModel::GetNumLatticeKeyframes() {}
 int ERModel::GetNumLattices() {}
 
 // Range: 0x802E3B44 -> 0x802E3BAC
-void ERModel::CreateLatticeParameterVerts(class ERModel * const this /* r29 */) {
+// this: r29
+void ERModel::CreateLatticeParameterVerts() {
     // Local variables
     int i; // r30
 }
 
 // Range: 0x802E3BAC -> 0x802E3C10
-void ERModel::FreeLatticeResource(class ERModel * const this /* r29 */) {
+// this: r29
+void ERModel::FreeLatticeResource() {
     // Local variables
     int i; // r30
 }
 
 // Range: 0x802E3C10 -> 0x802E3C88
-unsigned char ERModel::HasModifiableColor(class ERModel * const this /* r29 */) {
+// this: r29
+unsigned char ERModel::HasModifiableColor() {
     // Local variables
     int i; // r30
 }
 
 // Range: 0x802E3C88 -> 0x802E3D2C
-void ERModel::TransformModelUV(class ERModel * const this /* r23 */, const class EVec2 & scale /* r24 */, const class EVec2 & translate /* r25 */, unsigned int altShaderID /* r26 */, const class EVec2 & altScale /* r27 */, const class EVec2 & altTranslate /* r28 */, unsigned char bTranslateFirstUV /* r29 */) {
+// this: r23
+void ERModel::TransformModelUV(const class EVec2 & scale /* r24 */, const class EVec2 & translate /* r25 */, unsigned int altShaderID /* r26 */, const class EVec2 & altScale /* r27 */, const class EVec2 & altTranslate /* r28 */, unsigned char bTranslateFirstUV /* r29 */) {
     // Local variables
     int i; // r30
 }

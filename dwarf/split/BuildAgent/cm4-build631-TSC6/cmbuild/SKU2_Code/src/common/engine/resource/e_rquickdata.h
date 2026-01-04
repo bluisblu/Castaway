@@ -17,12 +17,6 @@ unsigned char ERQuickdata::GetTable(const struct ERQTable * * ppTable /* r31 */)
 }
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\common\engine\resource\e_rquickdata.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x80032608 -> 0x800327A4
-*/
 // Range: 0x80032608 -> 0x80032664
 unsigned char ERQuickdata::GetTable(const struct ERQTable * * ppTable /* r31 */) {
     // Local variables
@@ -54,12 +48,6 @@ unsigned char ERQuickdata::GetTable(const struct ERQTable * * ppTable /* r31 */)
 }
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\common\engine\resource\e_rquickdata.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x800D3D80 -> 0x800D3F40
-*/
 // Range: 0x800D3D80 -> 0x800D3DDC
 unsigned char ERQuickdata::GetTable(const struct ERQTable * * ppTable /* r31 */) {
     // Local variables
@@ -86,12 +74,6 @@ unsigned char ERQuickdata::GetTable(const struct ERQTable * * ppTable /* r31 */)
 }
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\common\engine\resource\e_rquickdata.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x8010B4F8 -> 0x8010B9B4
-*/
 // Range: 0x8010B4F8 -> 0x8010B554
 unsigned char ERQuickdata::GetTable(const struct ERQTable * * ppTable /* r31 */) {
     // Local variables
@@ -172,12 +154,6 @@ unsigned char ERQuickdata::GetTable(const struct ERQTable * * ppTable /* r31 */)
 }
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\common\engine\resource\e_rquickdata.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x8017455C -> 0x801745FC
-*/
 // Range: 0x8017455C -> 0x801745A0
 unsigned char ERQuickdata::GetRow(const struct AnimRef * * ppData /* r31 */) {
     // Local variables
@@ -191,12 +167,6 @@ unsigned char ERQuickdata::GetTable(const struct ERQTable * * ppTable /* r31 */)
 }
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\common\engine\resource\e_rquickdata.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x801F6FFC -> 0x801F78E0
-*/
 // Range: 0x801F6FFC -> 0x801F7040
 unsigned char ERQuickdata::GetRow(const struct FrameEffectsBloomDataElement * * ppData /* r31 */) {
     // Local variables
@@ -363,12 +333,6 @@ unsigned char ERQuickdata::GetTable(const struct ERQTable * * ppTable /* r31 */)
 }
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\common\engine\resource\e_rquickdata.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x8024D288 -> 0x8024D6B0
-*/
 // Range: 0x8024D288 -> 0x8024D2CC
 unsigned char ERQuickdata::GetRow(const struct RainLevelRef * * ppData /* r31 */) {
     // Local variables

@@ -4,13 +4,15 @@
     Language: C++
     Code range: 0x8024DB50 -> 0x8024DB50
 */
+// total size: 0x8
 struct ERTQ4CacheNode {
-    // total size: 0x8
+    // Members
     unsigned int color; // offset 0x0, size 0x4
     int data; // offset 0x4, size 0x4
 };
+// total size: 0x48
 struct ERTQ4Node {
-    // total size: 0x48
+    // Members
     float vTotalColor[4]; // offset 0x0, size 0x10
     unsigned int number_colors; // offset 0x10, size 0x4
     unsigned int number_unique; // offset 0x14, size 0x4
@@ -22,8 +24,9 @@ struct ERTQ4Node {
     unsigned char color_number; // offset 0x45, size 0x1
     unsigned char id; // offset 0x46, size 0x1
 };
+// total size: 0x2100
 class ERTQuantize4D : public IRTQuantize {
-    // total size: 0x2100
+    // Members
 protected:
     struct ERTQ4CacheNode m_cache[511]; // offset 0x4, size 0xFF8
     void * (* m_pfnAlloc)(unsigned int); // offset 0xFFC, size 0x4
@@ -77,8 +80,9 @@ unsigned int s_WarnHeapFullLastThread; // size: 0x4, address: 0x805DBE40
 unsigned int s_poolBlocks[16]; // size: 0x40, address: 0x8041CA60
 class AllocPoolManager * s_protectedPoolManager; // size: 0x4, address: 0x805DBE44
 unsigned char s_nNextHeapID; // size: 0x1, address: 0x805DA1F0
+// total size: 0x398
 class AllocPoolManager {
-    // total size: 0x398
+    // Members
     unsigned char * m_heapPoolBuffer; // offset 0x0, size 0x4
     unsigned char * m_heapPoolBufferEnd; // offset 0x4, size 0x4
     class ProtectedAllocPool m_pools[16]; // offset 0x8, size 0x380
@@ -86,17 +90,15 @@ class AllocPoolManager {
 };
 static class AllocPoolManager protectedPoolManager; // size: 0x398, address: 0x804AB4E0
 static class EMutex warnHeapFullMutex; // size: 0x1C, address: 0x804AB884
+// total size: 0x38
 class ProtectedAllocPool : public FastAllocPool {
-    // total size: 0x38
+    // Members
     class EMutex m_poolMutex; // offset 0x1C, size 0x1C
 };
-struct {
-    // total size: 0x28
-} __vt__13ERTQuantize4D; // size: 0x28, address: 0x804528E0
-struct {
-    // total size: 0x28
-} __vt__11ERTQuantize; // size: 0x28, address: 0x80452908
-struct {
-    // total size: 0x24
-} __vt__11IRTQuantize; // size: 0x24, address: 0x80452930
+// total size: 0x28
+struct {} __vt__13ERTQuantize4D; // size: 0x28, address: 0x804528E0
+// total size: 0x28
+struct {} __vt__11ERTQuantize; // size: 0x28, address: 0x80452908
+// total size: 0x24
+struct {} __vt__11IRTQuantize; // size: 0x24, address: 0x80452930
 

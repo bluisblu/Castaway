@@ -5,16 +5,19 @@
     Code range: 0x80080378 -> 0x80080D5C
 */
 // Range: 0x80080378 -> 0x800803BC
-void * GridSegment::GridSegment(class GridSegment * const this /* r31 */) {}
+// this: r31
+GridSegment::GridSegment() {}
 
 // Range: 0x800803BC -> 0x80080430
-void * GridSegment::~GridSegment(class GridSegment * const this /* r30 */) {
+// this: r30
+GridSegment::~GridSegment() {
     // References
     // -> class EShaderManager _shaderman;
 }
 
 // Range: 0x80080430 -> 0x800805FC
-void * BluePrintGrid::BluePrintGrid(class BluePrintGrid * const this /* r31 */) {
+// this: r31
+BluePrintGrid::BluePrintGrid() {
     // Local variables
     class cFixedWorld * world; // r27
     char resourceName[24]; // r1+0x8
@@ -28,7 +31,8 @@ void * BluePrintGrid::BluePrintGrid(class BluePrintGrid * const this /* r31 */) 
 }
 
 // Range: 0x800805FC -> 0x8008067C
-void * BluePrintGrid::~BluePrintGrid(class BluePrintGrid * const this /* r30 */) {}
+// this: r30
+BluePrintGrid::~BluePrintGrid() {}
 
 // Range: 0x8008067C -> 0x80080834
 void BluePrintGrid::InitializeShader(class ERShader * pShader /* r30 */, char * resourceName /* r31 */) {
@@ -48,7 +52,8 @@ void BluePrintGrid::InitializeShader(class ERShader * pShader /* r30 */, char * 
 }
 
 // Range: 0x80080834 -> 0x80080A38
-void BluePrintGrid::BuildTextures(class BluePrintGrid * const this /* r18 */) {
+// this: r18
+void BluePrintGrid::BuildTextures() {
     // Local variables
     class cFixedWorld * world; // r26
     unsigned char isMultiTile; // r25
@@ -74,7 +79,8 @@ void BluePrintGrid::BuildTextures(class BluePrintGrid * const this /* r18 */) {
 }
 
 // Range: 0x80080A38 -> 0x80080D5C
-void BluePrintGrid::Draw(class BluePrintGrid * const this /* r27 */, class ERC * rc /* r28 */) {
+// this: r27
+void BluePrintGrid::Draw(class ERC * rc /* r28 */) {
     // Local variables
     int segmentIndex; // r30
     class GridSegment * pSeg; // r29

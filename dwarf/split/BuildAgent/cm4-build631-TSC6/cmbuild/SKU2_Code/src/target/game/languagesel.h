@@ -5,13 +5,15 @@
     Code range: 0x8017A6C4 -> 0x8017A7B0
 */
 // Range: 0x8017A6C4 -> 0x8017A730
-void * LanguageSel::LanguageSel(class LanguageSel * const this /* r31 */) {
+// this: r31
+LanguageSel::LanguageSel() {
     // References
     // -> struct [anonymous] __vt__11LanguageSel;
 }
 
 // Range: 0x8017A730 -> 0x8017A7A8
-void * LanguageSel::~LanguageSel(class LanguageSel * const this /* r30 */) {
+// this: r30
+LanguageSel::~LanguageSel() {
     // References
     // -> struct [anonymous] __vt__11LanguageSel;
 }
@@ -20,12 +22,6 @@ void * LanguageSel::~LanguageSel(class LanguageSel * const this /* r30 */) {
 unsigned char LanguageSel::IsDone() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\target\game\languagesel.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x8023C4E8 -> 0x8023C500
-*/
 // Range: 0x8023C4E8 -> 0x8023C4F0
 class ERFont * LanguageSel::GetFont() {}
 

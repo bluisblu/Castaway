@@ -5,43 +5,50 @@
     Code range: 0x802D8BDC -> 0x802D939C
 */
 // Range: 0x802D8BDC -> 0x802D8C28
-void * ERDataset::ERDataset(class ERDataset * const this /* r31 */) {
+// this: r31
+ERDataset::ERDataset() {
     // References
     // -> struct [anonymous] __vt__9ERDataset;
 }
 
 // Range: 0x802D8C28 -> 0x802D8CB4
-void * ERDataset::~ERDataset(class ERDataset * const this /* r30 */) {
+// this: r30
+ERDataset::~ERDataset() {
     // References
     // -> struct [anonymous] __vt__9ERDataset;
 }
 
 // Range: 0x802D8CB4 -> 0x802D8D2C
-void ERDataset::Deallocate(class ERDataset * const this /* r31 */) {
+// this: r31
+void ERDataset::Deallocate() {
     // Local variables
     class vector temp; // r1+0x8
 }
 
 // Range: 0x802D8D2C -> 0x802D8DD4
-void ERDataset::AddRefSubResources(class ERDataset * const this /* r27 */) {
+// this: r27
+void ERDataset::AddRefSubResources() {
     // Local variables
     unsigned int i; // r28
 }
 
 // Range: 0x802D8DD4 -> 0x802D8E9C
-void ERDataset::DelRefSubResources(class ERDataset * const this /* r31 */) {
+// this: r31
+void ERDataset::DelRefSubResources() {
     // Local variables
     unsigned int i; // r27
 }
 
 // Range: 0x802D8E9C -> 0x802D8F74
-unsigned char ERDataset::TryIncrementSubResources(class ERDataset * const this /* r28 */) {
+// this: r28
+unsigned char ERDataset::TryIncrementSubResources() {
     // Local variables
     unsigned int i; // r29
 }
 
 // Range: 0x802D8F74 -> 0x802D939C
-void ERDataset::Load(class ERDataset * const this /* r23 */, class EFile * pFile /* r24 */, unsigned int uLength /* r25 */, unsigned char (* pFilterCheckCB)(unsigned int, unsigned int, void *, int) /* r26 */, void * pFilterUserData /* r27 */, int meta /* r28 */) {
+// this: r23
+void ERDataset::Load(class EFile * pFile /* r24 */, unsigned int uLength /* r25 */, unsigned char (* pFilterCheckCB)(unsigned int, unsigned int, void *, int) /* r26 */, void * pFilterUserData /* r27 */, int meta /* r28 */) {
     // Local variables
     unsigned int uStartOffs; // r0
     class EDataHeader resourceHeader; // r1+0x68

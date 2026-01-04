@@ -5,13 +5,15 @@
     Code range: 0x80021800 -> 0x80022430
 */
 // Range: 0x80021800 -> 0x8002187C
-void * SmoothRouteInterpolator::SmoothRouteInterpolator(class SmoothRouteInterpolator * const this /* r31 */) {
+// this: r31
+SmoothRouteInterpolator::SmoothRouteInterpolator() {
     // References
     // -> struct [anonymous] __vt__23SmoothRouteInterpolator;
 }
 
 // Range: 0x8002187C -> 0x80021914
-void * SmoothRouteInterpolator::~SmoothRouteInterpolator(class SmoothRouteInterpolator * const this /* r30 */) {
+// this: r30
+SmoothRouteInterpolator::~SmoothRouteInterpolator() {
     // References
     // -> struct [anonymous] __vt__23SmoothRouteInterpolator;
 }
@@ -25,7 +27,8 @@ unsigned char SmoothRouteInterpolator::CanPlace(class EVec2 & pt /* r30 */) {
 }
 
 // Range: 0x8002197C -> 0x80021B3C
-void SmoothRouteInterpolator::TrimNearPoints(class SmoothRouteInterpolator * const this /* r20 */, int startIdx /* r21 */, class TileList * pTile /* r31 */) {
+// this: r20
+void SmoothRouteInterpolator::TrimNearPoints(int startIdx /* r21 */, class TileList * pTile /* r31 */) {
     // Local variables
     int listSize; // r25
     int curListSize; // r24
@@ -43,7 +46,8 @@ void SmoothRouteInterpolator::TrimNearPoints(class SmoothRouteInterpolator * con
 }
 
 // Range: 0x80021B3C -> 0x80021C8C
-void SmoothRouteInterpolator::TrimNearLinearSegments(class SmoothRouteInterpolator * const this /* r20 */, int startIdx /* r21 */, class TileList * pTile /* r31 */) {
+// this: r20
+void SmoothRouteInterpolator::TrimNearLinearSegments(int startIdx /* r21 */, class TileList * pTile /* r31 */) {
     // Local variables
     int listSize; // r25
     int curListSize; // r0
@@ -60,10 +64,12 @@ void SmoothRouteInterpolator::TrimNearLinearSegments(class SmoothRouteInterpolat
 }
 
 // Range: 0x80021C8C -> 0x80021CE0
-void SmoothRouteInterpolator::TrimTileList(class SmoothRouteInterpolator * const this /* r29 */, int startIdx /* r30 */, class TileList * pTile /* r31 */) {}
+// this: r29
+void SmoothRouteInterpolator::TrimTileList(int startIdx /* r30 */, class TileList * pTile /* r31 */) {}
 
 // Range: 0x80021CE0 -> 0x80021E98
-class EVec2 SmoothRouteInterpolator::MoveMiddlePoint(class SmoothRouteInterpolator * const this /* r28 */, class EVec2 & p1 /* r29 */, class EVec2 & p2 /* r30 */, class EVec2 & p3 /* r31 */) {
+// this: r28
+class EVec2 SmoothRouteInterpolator::MoveMiddlePoint(class EVec2 & p1 /* r29 */, class EVec2 & p2 /* r30 */, class EVec2 & p3 /* r31 */) {
     // Local variables
     class EVec2 v1; // r1+0x58
     class EVec2 v2; // r1+0x50
@@ -75,7 +81,8 @@ class EVec2 SmoothRouteInterpolator::MoveMiddlePoint(class SmoothRouteInterpolat
 }
 
 // Range: 0x80021E98 -> 0x80022008
-unsigned char SmoothRouteInterpolator::ShouldRemoveMiddle(class SmoothRouteInterpolator * const this /* r28 */, class EVec2 & p1 /* r29 */, class EVec2 & p2 /* r30 */, class EVec2 & p3 /* r31 */) {
+// this: r28
+unsigned char SmoothRouteInterpolator::ShouldRemoveMiddle(class EVec2 & p1 /* r29 */, class EVec2 & p2 /* r30 */, class EVec2 & p3 /* r31 */) {
     // Local variables
     class EVec2 v1; // r1+0x18
     class EVec2 v2; // r1+0x10
@@ -87,7 +94,8 @@ unsigned char SmoothRouteInterpolator::ShouldRemoveMiddle(class SmoothRouteInter
 }
 
 // Range: 0x80022008 -> 0x80022120
-unsigned char SmoothRouteInterpolator::ClearPathBetweenEndPoints(class SmoothRouteInterpolator * const this /* r28 */, class EVec2 & orig /* r29 */, float segmentRatio /* f29 */) {
+// this: r28
+unsigned char SmoothRouteInterpolator::ClearPathBetweenEndPoints(class EVec2 & orig /* r29 */, float segmentRatio /* f29 */) {
     // Local variables
     class EVec2 dir; // r1+0x18
     float startRatio; // f29
@@ -96,7 +104,8 @@ unsigned char SmoothRouteInterpolator::ClearPathBetweenEndPoints(class SmoothRou
 }
 
 // Range: 0x80022120 -> 0x80022218
-unsigned char SmoothRouteInterpolator::ClearPathBetweenEndPointsApproximateTest(class SmoothRouteInterpolator * const this /* r27 */, class EVec2 & orig /* r28 */, float tileResolution /* f30 */) {
+// this: r27
+unsigned char SmoothRouteInterpolator::ClearPathBetweenEndPointsApproximateTest(class EVec2 & orig /* r28 */, float tileResolution /* f30 */) {
     // Local variables
     class EVec2 dir; // r1+0x18
     float length; // f0
@@ -109,16 +118,19 @@ unsigned char SmoothRouteInterpolator::ClearPathBetweenEndPointsApproximateTest(
 class EVec2 SmoothRouteInterpolator::FindIntermediateUnitVector(class EVec2 * v12 /* r30 */, class EVec2 & v1 /* r31 */) {}
 
 // Range: 0x80022284 -> 0x800222FC
-void SmoothRouteInterpolator::SmoothRouteList(class SmoothRouteInterpolator * const this /* r28 */, class TileList * pTile /* r29 */, class vector & noSmoothArr /* r30 */, int beginIdx /* r31 */) {}
+// this: r28
+void SmoothRouteInterpolator::SmoothRouteList(class TileList * pTile /* r29 */, class vector & noSmoothArr /* r30 */, int beginIdx /* r31 */) {}
 
 // Range: 0x800222FC -> 0x8002234C
-void SmoothRouteInterpolator::SmoothRouteList(class SmoothRouteInterpolator * const this /* r30 */, class TileList * pTile /* r31 */) {}
+// this: r30
+void SmoothRouteInterpolator::SmoothRouteList(class TileList * pTile /* r31 */) {}
 
 // Range: 0x8002234C -> 0x800223A8
 class EVec2 SmoothRouteInterpolator::ConvertFTilePtToEVec2(class FTilePt & pt /* r31 */) {}
 
 // Range: 0x800223A8 -> 0x80022430
-unsigned char SmoothRouteInterpolator::SmoothThisSegment(class SmoothRouteInterpolator * const this /* r28 */, int i /* r29 */) {
+// this: r28
+unsigned char SmoothRouteInterpolator::SmoothThisSegment(int i /* r29 */) {
     // Local variables
     int listSize; // r0
     int j; // r30

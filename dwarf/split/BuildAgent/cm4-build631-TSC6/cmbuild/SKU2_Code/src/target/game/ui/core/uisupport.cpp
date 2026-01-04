@@ -5,19 +5,22 @@
     Code range: 0x801858F0 -> 0x8018731C
 */
 // Range: 0x801858F0 -> 0x80185A04
-void * UIAUDIOTarget::UIAUDIOTarget(class UIAUDIOTarget * const this /* r30 */) {
+// this: r30
+UIAUDIOTarget::UIAUDIOTarget() {
     // References
     // -> struct [anonymous] __vt__13UIAUDIOTarget;
 }
 
 // Range: 0x80185A04 -> 0x80185A70
-void * UIAUDIOTarget::~UIAUDIOTarget(class UIAUDIOTarget * const this /* r30 */) {
+// this: r30
+UIAUDIOTarget::~UIAUDIOTarget() {
     // References
     // -> struct [anonymous] __vt__13UIAUDIOTarget;
 }
 
 // Range: 0x80185A70 -> 0x80185B40
-void UIAUDIOTarget::SetVariable(class UIAUDIOTarget * const this /* r29 */, const char * szVar /* r30 */, const char * szValue /* r31 */) {
+// this: r29
+void UIAUDIOTarget::SetVariable(const char * szVar /* r30 */, const char * szValue /* r31 */) {
     // Local variables
     int len; // r0
     char name[128]; // r1+0x8
@@ -34,13 +37,15 @@ char * UIAUDIOTarget::GetVariable(const char * szVar /* r30 */) {
 }
 
 // Range: 0x80185BC4 -> 0x80185CFC
-void * UIAnalog::UIAnalog(class UIAnalog * const this /* r30 */) {
+// this: r30
+UIAnalog::UIAnalog() {
     // References
     // -> struct [anonymous] __vt__8UIAnalog;
 }
 
 // Range: 0x80185CFC -> 0x80185D68
-void * UIAnalog::~UIAnalog(class UIAnalog * const this /* r30 */) {
+// this: r30
+UIAnalog::~UIAnalog() {
     // References
     // -> struct [anonymous] __vt__8UIAnalog;
 }
@@ -71,7 +76,7 @@ void UIButtonImages::Shutdown() {
 }
 
 // Range: 0x80185F9C -> 0x80186050
-void * UIButtonImages::UIButtonImages() {
+UIButtonImages::UIButtonImages() {
     // Local variables
     int i; // r0
 
@@ -80,7 +85,8 @@ void * UIButtonImages::UIButtonImages() {
 }
 
 // Range: 0x80186050 -> 0x80186090
-void * UIButtonImages::~UIButtonImages(class UIButtonImages * const this /* r31 */) {}
+// this: r31
+UIButtonImages::~UIButtonImages() {}
 
 // Range: 0x80186090 -> 0x80186524
 void UIButtonImages::DefineIDs() {
@@ -91,7 +97,8 @@ void UIButtonImages::DefineIDs() {
 }
 
 // Range: 0x80186524 -> 0x801865A0
-void UIButtonImages::AddRefAll(class UIButtonImages * const this /* r28 */) {
+// this: r28
+void UIButtonImages::AddRefAll() {
     // Local variables
     int i; // r29
 
@@ -100,7 +107,8 @@ void UIButtonImages::AddRefAll(class UIButtonImages * const this /* r28 */) {
 }
 
 // Range: 0x801865A0 -> 0x80186614
-void UIButtonImages::DelRefAll(class UIButtonImages * const this /* r28 */) {
+// this: r28
+void UIButtonImages::DelRefAll() {
     // Local variables
     int i; // r29
 
@@ -138,13 +146,15 @@ void UIButtonImages::LocalizePS2Images() {
 }
 
 // Range: 0x80186A74 -> 0x80186BE0
-void * CURTarget::CURTarget(class CURTarget * const this /* r28 */) {
+// this: r28
+CURTarget::CURTarget() {
     // References
     // -> struct [anonymous] __vt__9CURTarget;
 }
 
 // Range: 0x80186BE0 -> 0x80186C38
-void * CURTarget::~CURTarget(class CURTarget * const this /* r30 */) {}
+// this: r30
+CURTarget::~CURTarget() {}
 
 // Range: 0x80186C38 -> 0x80186C7C
 class CURTarget * CURTarget::Instance() {
@@ -159,7 +169,8 @@ void CURTarget::Shutdown() {
 }
 
 // Range: 0x80186CC4 -> 0x80186D3C
-unsigned char CURTarget::SetPosition(class CURTarget * const this /* r30 */) {
+// this: r30
+unsigned char CURTarget::SetPosition() {
     // Local variables
     unsigned char clamping_occured; // r31
 }
@@ -179,13 +190,16 @@ void CURTarget::UpdateFlashWithPosition(int y /* r31 */) {
 }
 
 // Range: 0x80186EB0 -> 0x80186F1C
-void CURTarget::AddVisibilityRef(class CURTarget * const this /* r30 */, int & refID /* r31 */) {}
+// this: r30
+void CURTarget::AddVisibilityRef(int & refID /* r31 */) {}
 
 // Range: 0x80186F1C -> 0x80186F88
-void CURTarget::DelVisibilityRef(class CURTarget * const this /* r30 */, int & refID /* r31 */) {}
+// this: r30
+void CURTarget::DelVisibilityRef(int & refID /* r31 */) {}
 
 // Range: 0x80186F88 -> 0x801870B4
-int CURTarget::DoAddRemoveFromStack(class CURTarget * const this /* r31 */, unsigned char on /* r28 */, int refID /* r29 */, const char * action /* r30 */) {
+// this: r31
+int CURTarget::DoAddRemoveFromStack(unsigned char on /* r28 */, int refID /* r29 */, const char * action /* r30 */) {
     // Local variables
     int retVal; // r0
 }
@@ -219,7 +233,8 @@ void CURTarget::SetCursorAlpha_Max() {}
 void CURTarget::SetCursorHighlight() {}
 
 // Range: 0x801871C8 -> 0x8018731C
-void CURTarget::UpdateFlashCursor(class CURTarget * const this /* r30 */) {
+// this: r30
+void CURTarget::UpdateFlashCursor() {
     // Local variables
     char c_value[16]; // r1+0x10
     int value; // r5

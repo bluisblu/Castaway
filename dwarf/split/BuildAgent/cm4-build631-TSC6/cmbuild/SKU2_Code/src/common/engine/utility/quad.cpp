@@ -5,7 +5,8 @@
     Code range: 0x802F91DC -> 0x802F9498
 */
 // Range: 0x802F91DC -> 0x802F9314
-unsigned char Quad::IsInQuad(const class Quad * const this /* r27 */, const class EVec3 * pos /* r28 */) {
+// this: r27
+unsigned char Quad::IsInQuad(const class EVec3 * pos /* r28 */) const {
     // Local variables
     const class EVec3 * p0; // r31
     const class EVec3 * p1; // r30
@@ -17,7 +18,8 @@ unsigned char Quad::IsInQuad(const class Quad * const this /* r27 */, const clas
 }
 
 // Range: 0x802F9314 -> 0x802F9498
-unsigned char Quad::PinToQuad(const class Quad * const this /* r26 */, class EVec3 * pos /* r27 */) {
+// this: r26
+unsigned char Quad::PinToQuad(class EVec3 * pos /* r27 */) const {
     // Local variables
     unsigned char pinned; // r31
     const class EVec3 * p0; // r30

@@ -5,23 +5,27 @@
     Code range: 0x80262478 -> 0x80262794
 */
 // Range: 0x80262478 -> 0x802624A8
-void * EGrowPool::EGrowPool(class EGrowPool * const this /* r31 */) {}
+// this: r31
+EGrowPool::EGrowPool() {}
 
 // Range: 0x802624A8 -> 0x802624FC
-void * EGrowPool::~EGrowPool(class EGrowPool * const this /* r30 */) {}
+// this: r30
+EGrowPool::~EGrowPool() {}
 
 // Range: 0x802624FC -> 0x80262510
 void EGrowPool::Init() {}
 
 // Range: 0x80262510 -> 0x80262590
-void EGrowPool::Reset(class EGrowPool * const this /* r29 */) {
+// this: r29
+void EGrowPool::Reset() {
     // Local variables
     void * pSeg; // r31
     void * pNextSeg; // r30
 }
 
 // Range: 0x80262590 -> 0x80262794
-void EGrowPool::FreeUnusedSegments(class EGrowPool * const this /* r30 */) {
+// this: r30
+void EGrowPool::FreeUnusedSegments() {
     // Local variables
     void * pHighestUnalignedSeg; // r5
     void * pSeg; // r6

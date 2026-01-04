@@ -5,7 +5,8 @@
     Code range: 0x8023E4E4 -> 0x8023F26C
 */
 // Range: 0x8023E4E4 -> 0x8023E668
-void * EPictureInPicture::EPictureInPicture(class EPictureInPicture * const this /* r30 */) {
+// this: r30
+EPictureInPicture::EPictureInPicture() {
     // References
     // -> class EShaderManager _shaderman;
     // -> class EFontManager _fontman;
@@ -14,20 +15,23 @@ void * EPictureInPicture::EPictureInPicture(class EPictureInPicture * const this
 }
 
 // Range: 0x8023E668 -> 0x8023E6EC
-void * EPictureInPicture::~EPictureInPicture(class EPictureInPicture * const this /* r30 */) {
+// this: r30
+EPictureInPicture::~EPictureInPicture() {
     // References
     // -> struct [anonymous] __vt__17EPictureInPicture;
 }
 
 // Range: 0x8023E6EC -> 0x8023E790
-void EPictureInPicture::Update(class EPictureInPicture * const this /* r31 */) {
+// this: r31
+void EPictureInPicture::Update() {
     // References
     // -> float _dt;
     // -> class GameData _gd;
 }
 
 // Range: 0x8023E790 -> 0x8023EF04
-void EPictureInPicture::Draw(class EPictureInPicture * const this /* r30 */, class ERC * prc /* r31 */) {
+// this: r30
+void EPictureInPicture::Draw(class ERC * prc /* r31 */) {
     // Local variables
     class cXObject * ObjPtr; // r28
     class ISimInstance * ISim; // r29
@@ -52,7 +56,8 @@ void EPictureInPicture::Draw(class EPictureInPicture * const this /* r30 */, cla
 }
 
 // Range: 0x8023EF04 -> 0x8023EFB0
-class TRect EPictureInPicture::GetPIPRect(class TRect * Rect /* r30 */, class EPictureInPicture * const this /* r31 */) {
+// this: r30
+class TRect EPictureInPicture::GetPIPRect(class EPictureInPicture * const this /* r31 */) {
     // Local variables
     float Size; // f31
     float AspectRatio; // f0
@@ -79,10 +84,12 @@ float EPictureInPicture::ClampToPixelY() {
 void EPictureInPicture::resetPiP() {}
 
 // Range: 0x8023F07C -> 0x8023F1A8
-void EPictureInPicture::DoPictureInPicture(class EPictureInPicture * const this /* r23 */, unsigned char inTurnOn /* r24 */, class cXObject * inObject /* r25 */, int inMSTimeout /* r26 */, int inZoom /* r27 */, int inSize /* r28 */, unsigned char justCenter /* r31 */, const unsigned short * inText /* r29 */, unsigned char slowDownGame /* r30 */) {}
+// this: r23
+void EPictureInPicture::DoPictureInPicture(unsigned char inTurnOn /* r24 */, class cXObject * inObject /* r25 */, int inMSTimeout /* r26 */, int inZoom /* r27 */, int inSize /* r28 */, unsigned char justCenter /* r31 */, const unsigned short * inText /* r29 */, unsigned char slowDownGame /* r30 */) {}
 
 // Range: 0x8023F1A8 -> 0x8023F26C
-void EPictureInPicture::setupPortal(class EPictureInPicture * const this /* r31 */) {
+// this: r31
+void EPictureInPicture::setupPortal() {
     // Local variables
     class TRect Rect; // r1+0x8
     float Size; // f30

@@ -12,16 +12,19 @@ void DiscErrorCallback() {
 }
 
 // Range: 0x8010ECB0 -> 0x8010ED2C
-void * cSoundPlayer::cSoundPlayer(class cSoundPlayer * const this /* r31 */) {}
+// this: r31
+cSoundPlayer::cSoundPlayer() {}
 
 // Range: 0x8010ED84 -> 0x8010EE18
-void * cSoundPlayer::~cSoundPlayer(class cSoundPlayer * const this /* r30 */) {
+// this: r30
+cSoundPlayer::~cSoundPlayer() {
     // References
     // -> class cIGZSndSys * g_pSndSys;
 }
 
 // Range: 0x8010EE18 -> 0x8010EEE8
-void cSoundPlayer::Initialize(class cSoundPlayer * const this /* r31 */) {
+// this: r31
+void cSoundPlayer::Initialize() {
     // References
     // -> class ENgcAudio _ngcAudio;
     // -> class cBoxX * g_pBoxX;
@@ -36,7 +39,8 @@ void cSoundPlayer::Shutdown() {
 }
 
 // Range: 0x8010EF5C -> 0x8010F06C
-void cSoundPlayer::KillSourceEvent(class cSoundPlayer * const this /* r29 */, int sourceID /* r30 */) {
+// this: r29
+void cSoundPlayer::KillSourceEvent(int sourceID /* r30 */) {
     // Local variables
     struct ListIterator it; // r1+0x1C
     struct ListIterator next; // r1+0x18
@@ -46,7 +50,8 @@ void cSoundPlayer::KillSourceEvent(class cSoundPlayer * const this /* r29 */, in
 }
 
 // Range: 0x8010F06C -> 0x8010F164
-void cSoundPlayer::KillAllEvent(class cSoundPlayer * const this /* r30 */) {
+// this: r30
+void cSoundPlayer::KillAllEvent() {
     // Local variables
     struct ListIterator it; // r1+0x1C
     struct ListIterator next; // r1+0x18
@@ -56,7 +61,8 @@ void cSoundPlayer::KillAllEvent(class cSoundPlayer * const this /* r30 */) {
 }
 
 // Range: 0x8010F164 -> 0x8010F348
-void cSoundPlayer::Update(class cSoundPlayer * const this /* r26 */) {
+// this: r26
+void cSoundPlayer::Update() {
     // Local variables
     struct ListIterator it; // r1+0x18
     struct ListIterator next; // r1+0x14
@@ -92,13 +98,15 @@ void cSoundPlayer::EnableSound() {
 }
 
 // Range: 0x8010F408 -> 0x8010F480
-void cSoundPlayer::QuietAll(class cSoundPlayer * const this /* r31 */) {
+// this: r31
+void cSoundPlayer::QuietAll() {
     // References
     // -> class cBoxX * g_pBoxX;
 }
 
 // Range: 0x8010F480 -> 0x8010F534
-void cSoundPlayer::PlayBySource(class cSoundPlayer * const this /* r27 */, unsigned int eventID /* r28 */, signed short sourceID /* r29 */, int preLoadMod /* r30 */, unsigned char isFootStep /* r31 */) {
+// this: r27
+void cSoundPlayer::PlayBySource(unsigned int eventID /* r28 */, signed short sourceID /* r29 */, int preLoadMod /* r30 */, unsigned char isFootStep /* r31 */) {
     // Local variables
     struct SoundEventInfo new_event; // r1+0x8
 
@@ -108,13 +116,15 @@ void cSoundPlayer::PlayBySource(class cSoundPlayer * const this /* r27 */, unsig
 }
 
 // Range: 0x8010F534 -> 0x8010F5D0
-void cSoundPlayer::PlayBySource(class cSoundPlayer * const this /* r28 */, signed short sourceID /* r29 */, int preLoadMod /* r30 */, unsigned char isFootStep /* r31 */) {
+// this: r28
+void cSoundPlayer::PlayBySource(signed short sourceID /* r29 */, int preLoadMod /* r30 */, unsigned char isFootStep /* r31 */) {
     // Local variables
     unsigned int id; // r0
 }
 
 // Range: 0x8010F5D0 -> 0x8010F64C
-void cSoundPlayer::PerhapsPlayFootstep(class cSoundPlayer * const this /* r30 */, signed short sourceID /* r31 */) {
+// this: r30
+void cSoundPlayer::PerhapsPlayFootstep(signed short sourceID /* r31 */) {
     // Local variables
     unsigned int id; // r0
 }
@@ -126,25 +136,29 @@ void cSoundPlayer::QuietBySourceID() {
 }
 
 // Range: 0x8010F688 -> 0x8010F6F8
-void cSoundPlayer::PauseMusic(class cSoundPlayer * const this /* r31 */) {
+// this: r31
+void cSoundPlayer::PauseMusic() {
     // References
     // -> class cBoxX * g_pBoxX;
 }
 
 // Range: 0x8010F6F8 -> 0x8010F768
-void cSoundPlayer::ResumeMusic(class cSoundPlayer * const this /* r31 */) {
+// this: r31
+void cSoundPlayer::ResumeMusic() {
     // References
     // -> class cBoxX * g_pBoxX;
 }
 
 // Range: 0x8010F768 -> 0x8010F800
-void cSoundPlayer::PauseSounds(class cSoundPlayer * const this /* r31 */) {
+// this: r31
+void cSoundPlayer::PauseSounds() {
     // References
     // -> class cBoxX * g_pBoxX;
 }
 
 // Range: 0x8010F800 -> 0x8010F898
-void cSoundPlayer::ResumeSounds(class cSoundPlayer * const this /* r31 */) {
+// this: r31
+void cSoundPlayer::ResumeSounds() {
     // References
     // -> class cBoxX * g_pBoxX;
 }

@@ -5,7 +5,8 @@
     Code range: 0x801A1D58 -> 0x801A1EA0
 */
 // Range: 0x801A1D58 -> 0x801A1DC0
-void * AptParagraph::~AptParagraph(class AptParagraph * const this /* r30 */) {
+// this: r30
+AptParagraph::~AptParagraph() {
     // References
     // -> struct [anonymous] __vt__12AptParagraph;
 }
@@ -17,7 +18,8 @@ float AptParagraph::GetParagraphHeight() {}
 float AptParagraph::GetPrintWidth() {}
 
 // Range: 0x801A1DD0 -> 0x801A1E90
-void * AptParagraph::AptParagraph(class AptParagraph * const this /* r31 */) {
+// this: r31
+AptParagraph::AptParagraph() {
     // References
     // -> struct [anonymous] __vt__12AptParagraph;
 }
@@ -29,26 +31,23 @@ float AptParagraph::GetLineGap() {}
 int AptParagraph::GetLineCount() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\target\game\aptstring.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x80200084 -> 0x80200348
-*/
 // Range: 0x80200084 -> 0x80200150
-void * AptWord::~AptWord(class AptWord * const this /* r29 */) {
+// this: r29
+AptWord::~AptWord() {
     // References
     // -> struct [anonymous] __vt__7AptWord;
 }
 
 // Range: 0x80200150 -> 0x802001EC
-void * AptWord::AptWord(class AptWord * const this /* r31 */) {
+// this: r31
+AptWord::AptWord() {
     // References
     // -> struct [anonymous] __vt__7AptWord;
 }
 
 // Range: 0x802001EC -> 0x80200290
-void * AptLine::~AptLine(class AptLine * const this /* r29 */) {
+// this: r29
+AptLine::~AptLine() {
     // Local variables
     class AptWord * word; // r5
     class AptWord * next; // r31
@@ -58,18 +57,20 @@ void * AptLine::~AptLine(class AptLine * const this /* r29 */) {
 }
 
 // Range: 0x80200290 -> 0x802002D4
-void * AptShaderWord::AptShaderWord(class AptShaderWord * const this /* r31 */) {
+// this: r31
+AptShaderWord::AptShaderWord() {
     // References
     // -> struct [anonymous] __vt__13AptShaderWord;
 }
 
 // Range: 0x802002D4 -> 0x802002F0
-void * AptLine::AptLine() {
+AptLine::AptLine() {
     // References
     // -> struct [anonymous] __vt__7AptLine;
 }
 
 // Range: 0x802002F0 -> 0x80200348
-void * AptShaderWord::~AptShaderWord(class AptShaderWord * const this /* r30 */) {}
+// this: r30
+AptShaderWord::~AptShaderWord() {}
 
 

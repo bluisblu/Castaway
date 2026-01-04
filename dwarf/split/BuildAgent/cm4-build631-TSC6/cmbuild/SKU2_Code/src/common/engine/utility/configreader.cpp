@@ -5,17 +5,19 @@
     Code range: 0x802F18CC -> 0x802F265C
 */
 // Range: 0x802F18CC -> 0x802F18EC
-void * ConfigReader::ConfigReader() {}
+ConfigReader::ConfigReader() {}
 
 // Range: 0x802F18EC -> 0x802F19D0
-void * ConfigReader::~ConfigReader(class ConfigReader * const this /* r28 */) {
+// this: r28
+ConfigReader::~ConfigReader() {
     // Local variables
     struct Section * * iter; // r31
     struct Section * pSection; // r30
 }
 
 // Range: 0x802F19D0 -> 0x802F1C28
-unsigned char ConfigReader::Init(class ConfigReader * const this /* r26 */) {
+// this: r26
+unsigned char ConfigReader::Init() {
     // Local variables
     class EFile * pFile; // r1+0x10
     char * pszBuffer; // r27
@@ -35,7 +37,8 @@ void ConfigReader::AdvancePastWhiteSpace() {}
 void ConfigReader::AdvanceToNextLine() {}
 
 // Range: 0x802F1CD8 -> 0x802F1EA0
-unsigned char ConfigReader::AddSection(class ConfigReader * const this /* r29 */, char * & pCurPos /* r30 */) {
+// this: r29
+unsigned char ConfigReader::AddSection(char * & pCurPos /* r30 */) {
     // Local variables
     char * pStartPos; // r7
     char * szSectionName; // r31
@@ -44,7 +47,8 @@ unsigned char ConfigReader::AddSection(class ConfigReader * const this /* r29 */
 }
 
 // Range: 0x802F1EA0 -> 0x802F2254
-void ConfigReader::AddItem(class ConfigReader * const this /* r29 */, char * & pCurPos /* r30 */, int nSectionIndex /* r31 */) {
+// this: r29
+void ConfigReader::AddItem(char * & pCurPos /* r30 */, int nSectionIndex /* r31 */) {
     // Local variables
     char * pStartPos; // r7
     unsigned char quotedIdentifier; // r8
@@ -56,7 +60,8 @@ void ConfigReader::AddItem(class ConfigReader * const this /* r29 */, char * & p
 }
 
 // Range: 0x802F2254 -> 0x802F2314
-int ConfigReader::GetItemIndex(class ConfigReader * const this /* r27 */, const char * szItemName /* r28 */) {
+// this: r27
+int ConfigReader::GetItemIndex(const char * szItemName /* r28 */) {
     // Local variables
     int nItemIndex; // r30
     struct Item * iter; // r29

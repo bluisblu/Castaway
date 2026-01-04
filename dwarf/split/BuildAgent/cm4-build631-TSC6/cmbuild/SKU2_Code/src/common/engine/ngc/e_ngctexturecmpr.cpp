@@ -5,14 +5,16 @@
     Code range: 0x802D12E8 -> 0x802D13D0
 */
 // Range: 0x802D12E8 -> 0x802D136C
-void * ENgcTextureCMPR::ENgcTextureCMPR(class ENgcTextureCMPR * const this /* r31 */) {
+// this: r31
+ENgcTextureCMPR::ENgcTextureCMPR() {
     // References
     // -> struct [anonymous] __vt__15ENgcTextureCMPR;
     // -> struct [anonymous] __vt__15ENgcTextureBase;
 }
 
 // Range: 0x802D136C -> 0x802D13CC
-void * ENgcTextureCMPR::~ENgcTextureCMPR(class ENgcTextureCMPR * const this /* r30 */) {
+// this: r30
+ENgcTextureCMPR::~ENgcTextureCMPR() {
     // References
     // -> class ETextureManager _textureman;
 }

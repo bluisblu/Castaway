@@ -5,7 +5,8 @@
     Code range: 0x801D2498 -> 0x801D271C
 */
 // Range: 0x801D2498 -> 0x801D24D8
-void * UICatalogItemBase::~UICatalogItemBase(class UICatalogItemBase * const this /* r31 */) {}
+// this: r31
+UICatalogItemBase::~UICatalogItemBase() {}
 
 // Range: 0x801D24D8 -> 0x801D24E0
 unsigned int UICatalogItemBase::GetSmallShader() {}
@@ -29,7 +30,7 @@ unsigned char UICatalogItemBase::Get3DShader() {}
 class ClothingItem * UICatalogItemBase::GetClothingItem() {}
 
 // Range: 0x801D2518 -> 0x801D2530
-void * UICatalogItemBase::UICatalogItemBase() {
+UICatalogItemBase::UICatalogItemBase() {
     // References
     // -> struct [anonymous] __vt__Q218UISimulatorSupport17UICatalogItemBase;
 }
@@ -38,7 +39,8 @@ void * UICatalogItemBase::UICatalogItemBase() {
 class ClothingItem * UICatalogItemClothing::GetClothingItem() {}
 
 // Range: 0x801D2538 -> 0x801D2590
-void * UICatalogItemObject::~UICatalogItemObject(class UICatalogItemObject * const this /* r30 */) {}
+// this: r30
+UICatalogItemObject::~UICatalogItemObject() {}
 
 // Range: 0x801D2590 -> 0x801D2598
 class ObjSelector * UICatalogItemObject::GetSelector() {}
@@ -56,7 +58,8 @@ unsigned char UICatalogItemObject::IsClothing() {}
 void UICatalogItemObject::AddToInventory() {}
 
 // Range: 0x801D25B4 -> 0x801D260C
-void * UICatalogItemIngredient::~UICatalogItemIngredient(class UICatalogItemIngredient * const this /* r30 */) {}
+// this: r30
+UICatalogItemIngredient::~UICatalogItemIngredient() {}
 
 // Range: 0x801D260C -> 0x801D2614
 struct IngredientToken * UICatalogItemIngredient::GetIngredient() {}
@@ -74,7 +77,8 @@ unsigned char UICatalogItemIngredient::IsCultivatable() {}
 unsigned char UICatalogItemIngredient::IsClothing() {}
 
 // Range: 0x801D2634 -> 0x801D268C
-void * UICatalogItemInventoryToken::~UICatalogItemInventoryToken(class UICatalogItemInventoryToken * const this /* r30 */) {}
+// this: r30
+UICatalogItemInventoryToken::~UICatalogItemInventoryToken() {}
 
 // Range: 0x801D268C -> 0x801D2694
 struct InventoryTokens * UICatalogItemInventoryToken::GetInventoryToken() {}
@@ -83,7 +87,8 @@ struct InventoryTokens * UICatalogItemInventoryToken::GetInventoryToken() {}
 unsigned char UICatalogItemInventoryToken::IsClothing() {}
 
 // Range: 0x801D269C -> 0x801D26F4
-void * UICatalogItemClothing::~UICatalogItemClothing(class UICatalogItemClothing * const this /* r30 */) {}
+// this: r30
+UICatalogItemClothing::~UICatalogItemClothing() {}
 
 // Range: 0x801D26F4 -> 0x801D26FC
 unsigned char UICatalogItemClothing::IsEatFromInventory() {}

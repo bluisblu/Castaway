@@ -5,31 +5,34 @@
     Code range: 0x80180E30 -> 0x8018106C
 */
 // Range: 0x80180E30 -> 0x80180E54
-void * GetVariableCommandTableRecord::GetVariableCommandTableRecord() {
+GetVariableCommandTableRecord::GetVariableCommandTableRecord() {
     // References
     // -> struct [anonymous] __vt__Q223GetVariableCommandTable29GetVariableCommandTableRecord;
 }
 
 // Range: 0x80180E54 -> 0x80180E94
-void * GetVariableCommandTableRecord::~GetVariableCommandTableRecord(class GetVariableCommandTableRecord * const this /* r31 */) {}
+// this: r31
+GetVariableCommandTableRecord::~GetVariableCommandTableRecord() {}
 
 // Range: 0x80180E94 -> 0x80180EB8
-void * SetVariableCommandTableRecord::SetVariableCommandTableRecord() {
+SetVariableCommandTableRecord::SetVariableCommandTableRecord() {
     // References
     // -> struct [anonymous] __vt__Q223SetVariableCommandTable29SetVariableCommandTableRecord;
 }
 
 // Range: 0x80180EB8 -> 0x80180EF8
-void * SetVariableCommandTableRecord::~SetVariableCommandTableRecord(class SetVariableCommandTableRecord * const this /* r31 */) {}
+// this: r31
+SetVariableCommandTableRecord::~SetVariableCommandTableRecord() {}
 
 // Range: 0x80180EF8 -> 0x80180F1C
-void * GetLocalizableCommandTableRecord::GetLocalizableCommandTableRecord() {
+GetLocalizableCommandTableRecord::GetLocalizableCommandTableRecord() {
     // References
     // -> struct [anonymous] __vt__Q226GetLocalizableCommandTable32GetLocalizableCommandTableRecord;
 }
 
 // Range: 0x80180F1C -> 0x80180F5C
-void * GetLocalizableCommandTableRecord::~GetLocalizableCommandTableRecord(class GetLocalizableCommandTableRecord * const this /* r31 */) {}
+// this: r31
+GetLocalizableCommandTableRecord::~GetLocalizableCommandTableRecord() {}
 
 // Range: 0x80180F5C -> 0x80180FA0
 class GetLocalizableCommandTable * GetLocalizableCommandTable::Instance() {
@@ -50,12 +53,6 @@ class GetVariableCommandTable * GetVariableCommandTable::Instance() {
 }
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\target\game\ui\core\uicore.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x80200348 -> 0x802003D8
-*/
 // Range: 0x80200348 -> 0x80200390
 void GetVariableCommandTable::Shutdown() {
     // References

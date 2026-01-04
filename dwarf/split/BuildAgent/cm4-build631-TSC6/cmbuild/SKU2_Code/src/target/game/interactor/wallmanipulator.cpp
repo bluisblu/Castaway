@@ -5,7 +5,8 @@
     Code range: 0x8007908C -> 0x8007D344
 */
 // Range: 0x8007908C -> 0x800790EC
-void * WallManipulatorParams::WallManipulatorParams(struct WallManipulatorParams * const this /* r31 */) {
+// this: r31
+WallManipulatorParams::WallManipulatorParams() {
     // References
     // -> struct [anonymous] __vt__Q316InteractorModule15WallManipulator21WallManipulatorParams;
 }
@@ -21,25 +22,30 @@ int WallManipulator::CalculateAvailableItemCount(int priceperitem /* r31 */) {
 }
 
 // Range: 0x80079148 -> 0x80079254
-void * WallManipulator::WallManipulator(class WallManipulator * const this /* r30 */) {
+// this: r30
+WallManipulator::WallManipulator() {
     // References
     // -> struct [anonymous] __vt__Q216InteractorModule15WallManipulator;
 }
 
 // Range: 0x800792AC -> 0x80079374
-void * WallManipulator::~WallManipulator(class WallManipulator * const this /* r30 */) {
+// this: r30
+WallManipulator::~WallManipulator() {
     // References
     // -> struct [anonymous] __vt__Q216InteractorModule15WallManipulator;
 }
 
 // Range: 0x80079374 -> 0x800793BC
-void WallManipulator::OnCreate(class WallManipulator * const this /* r31 */) {}
+// this: r31
+void WallManipulator::OnCreate() {}
 
 // Range: 0x800793BC -> 0x800793F4
-void WallManipulator::OnDestroy(class WallManipulator * const this /* r31 */) {}
+// this: r31
+void WallManipulator::OnDestroy() {}
 
 // Range: 0x800793F4 -> 0x800796B8
-void WallManipulator::OnStart(class WallManipulator * const this /* r30 */, const struct InteractorParams * pParams /* r28 */) {
+// this: r30
+void WallManipulator::OnStart(const struct InteractorParams * pParams /* r28 */) {
     // Local variables
     struct ButtonSemantic butSems[11]; // r1+0x40
     struct StickSemantic stickSems[4]; // r1+0x20
@@ -52,7 +58,8 @@ void WallManipulator::OnStart(class WallManipulator * const this /* r30 */, cons
 }
 
 // Range: 0x80079738 -> 0x800797E0
-void WallManipulator::OnStop(class WallManipulator * const this /* r31 */) {
+// this: r31
+void WallManipulator::OnStop() {
     // Local variables
     class InteractorResourceSet * pResourceSet; // r0
 
@@ -61,7 +68,8 @@ void WallManipulator::OnStop(class WallManipulator * const this /* r31 */) {
 }
 
 // Range: 0x800797E0 -> 0x800799E4
-void WallManipulator::CommitTransaction(class WallManipulator * const this /* r31 */, enum ClientNotificationState stateMessage /* r29 */) {
+// this: r31
+void WallManipulator::CommitTransaction(enum ClientNotificationState stateMessage /* r29 */) {
     // Local variables
     struct CallbackData cbd; // r1+0x20
     int i; // r30
@@ -73,7 +81,8 @@ void WallManipulator::CommitTransaction(class WallManipulator * const this /* r3
 }
 
 // Range: 0x80079A64 -> 0x80079C34
-unsigned char WallManipulator::FinalizePlacement(class WallManipulator * const this /* r31 */) {
+// this: r31
+unsigned char WallManipulator::FinalizePlacement() {
     // Local variables
     class EVec3 v0; // r1+0x1C
     class EVec3 v1; // r1+0x10
@@ -87,7 +96,8 @@ unsigned char WallManipulator::FinalizePlacement(class WallManipulator * const t
 }
 
 // Range: 0x80079C34 -> 0x80079DEC
-unsigned char WallManipulator::FinalizeWallDel(class WallManipulator * const this /* r26 */, const class EVec3 & v0 /* r27 */, const class EVec3 & v1 /* r28 */, int & count /* r29 */) {
+// this: r26
+unsigned char WallManipulator::FinalizeWallDel(const class EVec3 & v0 /* r27 */, const class EVec3 & v1 /* r28 */, int & count /* r29 */) {
     // Local variables
     int wallsSold; // r1+0x10
     class CTilePt c0; // r1+0xC
@@ -100,7 +110,8 @@ unsigned char WallManipulator::FinalizeWallDel(class WallManipulator * const thi
 }
 
 // Range: 0x80079DEC -> 0x8007A014
-unsigned char WallManipulator::FillRoomEndpointsArray(class WallManipulator * const this /* r30 */, class EVec3 * outputArray /* r31 */) {
+// this: r30
+unsigned char WallManipulator::FillRoomEndpointsArray(class EVec3 * outputArray /* r31 */) {
     // Local variables
     float l; // f30
     float r; // f29
@@ -109,7 +120,8 @@ unsigned char WallManipulator::FillRoomEndpointsArray(class WallManipulator * co
 }
 
 // Range: 0x8007A014 -> 0x8007A0FC
-int WallManipulator::CountWallsInRoomSelection(class WallManipulator * const this /* r28 */) {
+// this: r28
+int WallManipulator::CountWallsInRoomSelection() {
     // Local variables
     int numSelectedWalls; // r30
     class EVec3 corners[4]; // r1+0x8
@@ -118,7 +130,8 @@ int WallManipulator::CountWallsInRoomSelection(class WallManipulator * const thi
 }
 
 // Range: 0x8007A0FC -> 0x8007A40C
-unsigned char WallManipulator::FinalizeRoom(class WallManipulator * const this /* r29 */) {
+// this: r29
+unsigned char WallManipulator::FinalizeRoom() {
     // Local variables
     class EVec3 corners[4]; // r1+0x18
     int total; // r28
@@ -137,23 +150,27 @@ unsigned char WallManipulator::FinalizeRoom(class WallManipulator * const this /
 }
 
 // Range: 0x8007A40C -> 0x8007A588
-void WallManipulator::HandleFinalizeRequest(class WallManipulator * const this /* r31 */) {
+// this: r31
+void WallManipulator::HandleFinalizeRequest() {
     // Local variables
     unsigned char bDidSucceed; // r30
     int segcount; // r1+0x8
 }
 
 // Range: 0x8007A588 -> 0x8007A5D0
-void WallManipulator::HandleSwapRequest(class WallManipulator * const this /* r31 */) {}
+// this: r31
+void WallManipulator::HandleSwapRequest() {}
 
 // Range: 0x8007A5D0 -> 0x8007A65C
-void WallManipulator::HandleExitRequest(class WallManipulator * const this /* r31 */) {}
+// this: r31
+void WallManipulator::HandleExitRequest() {}
 
 // Range: 0x8007A65C -> 0x8007A66C
 void WallManipulator::AdjustCursorPosition() {}
 
 // Range: 0x8007A66C -> 0x8007A8E8
-void WallManipulator::ValidateWallSegment(class WallManipulator * const this /* r31 */) {
+// this: r31
+void WallManipulator::ValidateWallSegment() {
     // Local variables
     unsigned char bIsValid; // r30
     float testDifference; // f2
@@ -166,13 +183,15 @@ void WallManipulator::ValidateWallSegment(class WallManipulator * const this /* 
 void WallManipulator::UpdateStickState() {}
 
 // Range: 0x8007A938 -> 0x8007A9A4
-void WallManipulator::ClearWallFadeOffList(class WallManipulator * const this /* r30 */) {
+// this: r30
+void WallManipulator::ClearWallFadeOffList() {
     // Local variables
     int i; // r31
 }
 
 // Range: 0x8007A9A4 -> 0x8007AE78
-void WallManipulator::Update(class WallManipulator * const this /* r31 */, float delta /* f28 */) {
+// this: r31
+void WallManipulator::Update(float delta /* f28 */) {
     // Local variables
     class EVec2 screenpt; // r1+0x10
     unsigned char enableCursor; // r30
@@ -191,7 +210,8 @@ void WallManipulator::Update(class WallManipulator * const this /* r31 */, float
 }
 
 // Range: 0x8007AE78 -> 0x8007B424
-void WallManipulator::OnCommandPressed(class WallManipulator * const this /* r31 */) {
+// this: r31
+void WallManipulator::OnCommandPressed() {
     // Local variables
     unsigned char allowanchor; // r29
     struct CallbackData cbd; // r1+0x100
@@ -236,13 +256,16 @@ void WallManipulator::OnCommandUpdate() {}
 int WallManipulator::GetTexGenMode() {}
 
 // Range: 0x8007B5B0 -> 0x8007B5C0
-void WallManipulator::PreDraw(class WallManipulator * const this /* r0 */) {}
+// this: r0
+void WallManipulator::PreDraw() {}
 
 // Range: 0x8007B5C0 -> 0x8007B5D0
-void WallManipulator::Draw(class WallManipulator * const this /* r0 */) {}
+// this: r0
+void WallManipulator::Draw() {}
 
 // Range: 0x8007B5D0 -> 0x8007B7AC
-int WallManipulator::GetWallLineCost(class WallManipulator * const this /* r23 */, const class EVec3 & v0 /* r27 */, const class EVec3 & v1 /* r26 */, unsigned char & bFoundAnAffectedWall /* r24 */, unsigned char bIsSellMode /* r25 */) {
+// this: r23
+int WallManipulator::GetWallLineCost(const class EVec3 & v0 /* r27 */, const class EVec3 & v1 /* r26 */, unsigned char & bFoundAnAffectedWall /* r24 */, unsigned char bIsSellMode /* r25 */) {
     // Local variables
     class CTilePt c0; // r1+0x14
     class CTilePt c1; // r1+0x10
@@ -260,7 +283,8 @@ int WallManipulator::GetWallLineCost(class WallManipulator * const this /* r23 *
 }
 
 // Range: 0x8007B7AC -> 0x8007B8D8
-unsigned char WallManipulator::SubmitLine(class WallManipulator * const this /* r27 */, const class EVec3 & v0 /* r28 */, const class EVec3 & v1 /* r29 */, int & changeInNumberOfWalls /* r30 */, unsigned char bDeleteWall /* r31 */) {
+// this: r27
+unsigned char WallManipulator::SubmitLine(const class EVec3 & v0 /* r28 */, const class EVec3 & v1 /* r29 */, int & changeInNumberOfWalls /* r30 */, unsigned char bDeleteWall /* r31 */) {
     // Local variables
     class CTilePt c0; // r1+0x10
     class CTilePt c1; // r1+0xC
@@ -293,7 +317,8 @@ unsigned char WallManipulator::DoesNotConflictWithExistingArchitecture(const cla
 }
 
 // Range: 0x8007BC6C -> 0x8007BD38
-unsigned char WallManipulator::CanChangeTileAdd(class WallManipulator * const this /* r29 */, const class CTilePt & inTile /* r30 */, enum TileWallsSegment inSeg /* r31 */) {
+// this: r29
+unsigned char WallManipulator::CanChangeTileAdd(const class CTilePt & inTile /* r30 */, enum TileWallsSegment inSeg /* r31 */) {
     // Local variables
     enum TileWallsSegment theSeg; // [invalid]
     class cFixedWorld * gWorld; // r0
@@ -301,7 +326,8 @@ unsigned char WallManipulator::CanChangeTileAdd(class WallManipulator * const th
 }
 
 // Range: 0x8007BD38 -> 0x8007C1A0
-unsigned char WallManipulator::CanChangeTileDelete(class WallManipulator * const this /* r25 */, const class CTilePt & inTile /* r28 */, enum TileWallsSegment inSeg /* r29 */) {
+// this: r25
+unsigned char WallManipulator::CanChangeTileDelete(const class CTilePt & inTile /* r28 */, enum TileWallsSegment inSeg /* r29 */) {
     // Local variables
     int mPlacementError; // r0
     class cFixedWorld * gWorld; // r31
@@ -333,7 +359,8 @@ unsigned char WallManipulator::CanChangeTileDelete(class WallManipulator * const
 }
 
 // Range: 0x8007C1A0 -> 0x8007C574
-int WallManipulator::HandleDeleteLine(class WallManipulator * const this /* r26 */, const class CTilePt & startTile /* r23 */, const class CTilePt & endTile /* r27 */, const enum eCTilePtDir & tileDir /* r28 */) {
+// this: r26
+int WallManipulator::HandleDeleteLine(const class CTilePt & startTile /* r23 */, const class CTilePt & endTile /* r27 */, const enum eCTilePtDir & tileDir /* r28 */) {
     // Local variables
     class cFixedWorld * gWorld; // r31
     class CTilePt curTile; // r1+0x10
@@ -357,7 +384,8 @@ int WallManipulator::HandleDeleteLine(class WallManipulator * const this /* r26 
 }
 
 // Range: 0x8007C574 -> 0x8007C7B0
-int WallManipulator::HandleAddLine(class WallManipulator * const this /* r30 */, const class CTilePt & startTile /* r31 */, const class CTilePt & endTile /* r22 */, const enum eCTilePtDir & tileDir /* r23 */) {
+// this: r30
+int WallManipulator::HandleAddLine(const class CTilePt & startTile /* r31 */, const class CTilePt & endTile /* r22 */, const enum eCTilePtDir & tileDir /* r23 */) {
     // Local variables
     class cFixedWorld * gWorld; // r27
     class CTilePt curTile; // r1+0x8
@@ -384,7 +412,8 @@ unsigned char WallManipulator::LegalWallTile(const class CTilePt & in /* r29 */,
 }
 
 // Range: 0x8007CA34 -> 0x8007CBA0
-unsigned char WallManipulator::AddWallAtTile(class WallManipulator * const this /* r27 */, const class CTilePt & inTile /* r28 */, class TileWalls & theWalls /* r29 */, enum TileWallsSegment theSeg /* r30 */) {
+// this: r27
+unsigned char WallManipulator::AddWallAtTile(const class CTilePt & inTile /* r28 */, class TileWalls & theWalls /* r29 */, enum TileWallsSegment theSeg /* r30 */) {
     // Local variables
     class cFixedWorld * gWorld; // r31
     unsigned char hasWall; // r0
@@ -404,7 +433,8 @@ unsigned char WallManipulator::PreviewNRooms() {
 }
 
 // Range: 0x8007CC8C -> 0x8007CD48
-void WallManipulator::IncrementSellCountForStyle(class WallManipulator * const this /* r28 */, enum WallStyle fenceStyle /* r29 */) {
+// this: r28
+void WallManipulator::IncrementSellCountForStyle(enum WallStyle fenceStyle /* r29 */) {
     // Local variables
     unsigned char bFoundit; // r31
     struct FenceSellCount fenceSellCount; // r1+0x8
@@ -412,7 +442,8 @@ void WallManipulator::IncrementSellCountForStyle(class WallManipulator * const t
 }
 
 // Range: 0x8007CD48 -> 0x8007D164
-int WallManipulator::CheckForAffectedWalls(class WallManipulator * const this /* r27 */, const class EVec3 & vStart /* r21 */, const class EVec3 & vEnd /* r20 */) {
+// this: r27
+int WallManipulator::CheckForAffectedWalls(const class EVec3 & vStart /* r21 */, const class EVec3 & vEnd /* r20 */) {
     // Local variables
     class CTilePt startTile; // r1+0x1C
     class CTilePt endTile; // r1+0x18
@@ -439,7 +470,8 @@ int WallManipulator::CheckForAffectedWalls(class WallManipulator * const this /*
 }
 
 // Range: 0x8007D164 -> 0x8007D204
-void WallManipulator::SendBuildItemCountChangeEvent(class WallManipulator * const this /* r30 */, int nSelectionLength /* r31 */) {
+// this: r30
+void WallManipulator::SendBuildItemCountChangeEvent(int nSelectionLength /* r31 */) {
     // Local variables
     struct CallbackData cbd; // r1+0x8
 }
@@ -460,7 +492,8 @@ float WallManipulator::GetWallHeight() {}
 float WallManipulator::GetAffectedWallHeight() {}
 
 // Range: 0x8007D22C -> 0x8007D344
-unsigned char WallManipulator::OnUndoButton(class WallManipulator * const this /* r31 */) {
+// this: r31
+unsigned char WallManipulator::OnUndoButton() {
     // Local variables
     struct UndoRedoCommand command; // r1+0x8
     struct CallbackData cbd; // r1+0x20

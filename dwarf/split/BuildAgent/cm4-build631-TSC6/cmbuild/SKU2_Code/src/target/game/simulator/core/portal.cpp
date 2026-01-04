@@ -5,28 +5,33 @@
     Code range: 0x800D4148 -> 0x800D5430
 */
 // Range: 0x800D4148 -> 0x800D41AC
-void * cXPortal::cXPortal(class cXPortal * const this /* r31 */) {
+// this: r31
+cXPortal::cXPortal() {
     // References
     // -> struct [anonymous] __vt__8cXPortal;
 }
 
 // Range: 0x800D41AC -> 0x800D4214
-void * cXPortal::~cXPortal(class cXPortal * const this /* r30 */) {}
+// this: r30
+cXPortal::~cXPortal() {}
 
 // Range: 0x800D4214 -> 0x800D4218
 void cXPortal::Initialize() {}
 
 // Range: 0x800D4218 -> 0x800D4288
-void cXPortal::SetRouteScore(class cXPortal * const this /* r30 */, signed short routeID /* r31 */, float score /* f31 */) {
+// this: r30
+void cXPortal::SetRouteScore(signed short routeID /* r31 */, float score /* f31 */) {
     // References
     // -> static float UNDEFINED;
 }
 
 // Range: 0x800D4288 -> 0x800D42C8
-void cXPortal::Place(class cXPortal * const this /* r31 */) {}
+// this: r31
+void cXPortal::Place() {}
 
 // Range: 0x800D42C8 -> 0x800D446C
-void cXPortal::ApplyWallStyle(class cXPortal * const this /* r26 */) {
+// this: r26
+void cXPortal::ApplyWallStyle() {
     // Local variables
     class cFixedWorld * world; // r30
     class cXMTObject * obj; // r29
@@ -38,7 +43,8 @@ void cXPortal::ApplyWallStyle(class cXPortal * const this /* r26 */) {
 }
 
 // Range: 0x800D446C -> 0x800D4668
-unsigned char cXPortal::CanPlace(class cXPortal * const this /* r30 */, const class FTilePt & newLoc /* r26 */, int inLevel /* r27 */, class cXObject * ontop /* r29 */, int slotNum /* r28 */) {
+// this: r30
+unsigned char cXPortal::CanPlace(const class FTilePt & newLoc /* r26 */, int inLevel /* r27 */, class cXObject * ontop /* r29 */, int slotNum /* r28 */) {
     // Local variables
     class FTilePt leadLoc; // r1+0x20
     class cFixedWorld * world; // r31
@@ -56,7 +62,8 @@ unsigned char cXPortal::CanPlace(class cXPortal * const this /* r30 */, const cl
 }
 
 // Range: 0x800D4668 -> 0x800D47A8
-void cXPortal::Pickup(class cXPortal * const this /* r27 */) {
+// this: r27
+void cXPortal::Pickup() {
     // Local variables
     class cFixedWorld * world; // r31
     class cXMTObject * obj; // r30
@@ -67,7 +74,8 @@ void cXPortal::Pickup(class cXPortal * const this /* r27 */) {
 }
 
 // Range: 0x800D47A8 -> 0x800D4830
-class cXPortal * cXPortal::GetOtherSide(class cXPortal * const this /* r30 */) {
+// this: r30
+class cXPortal * cXPortal::GetOtherSide() {
     // Local variables
     class cXPortal * opposite; // r31
 }
@@ -76,7 +84,8 @@ class cXPortal * cXPortal::GetOtherSide(class cXPortal * const this /* r30 */) {
 int cXPortal::ReconType() {}
 
 // Range: 0x800D483C -> 0x800D4954
-void cXPortal::ReconStream(class cXPortal * const this /* r28 */, class ReconBuffer * r /* r29 */, int version /* r30 */) {
+// this: r28
+void cXPortal::ReconStream(class ReconBuffer * r /* r29 */, int version /* r30 */) {
     // Local variables
     int size; // r1+0xC
     int i; // r30
@@ -112,7 +121,8 @@ unsigned char cXPortal::InitPortalRoute(class ObjectModule * module /* r29 */, c
 }
 
 // Range: 0x800D4B40 -> 0x800D4DEC
-float cXPortal::GetDistToPortal(class cXPortal * const this /* r1+0x8 */, class cXPortal * other /* r24 */) {
+// this: r1+0x8
+float cXPortal::GetDistToPortal(class cXPortal * other /* r24 */) {
     // Local variables
     signed short routeID; // r27
     class vector open; // r1+0x18
@@ -183,6 +193,7 @@ void cXPortal::BeginningPortalTree(class ObjectModule * module /* r25 */, class 
 }
 
 // Range: 0x800D53E4 -> 0x800D5430
-void cXPortal::PostLoad(class cXPortal * const this /* r30 */, int version /* r31 */) {}
+// this: r30
+void cXPortal::PostLoad(int version /* r31 */) {}
 
 

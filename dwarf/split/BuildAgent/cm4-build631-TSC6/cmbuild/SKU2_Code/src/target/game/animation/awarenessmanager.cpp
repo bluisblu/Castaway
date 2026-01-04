@@ -5,43 +5,50 @@
     Code range: 0x8001D060 -> 0x8001FEDC
 */
 // Range: 0x8001D060 -> 0x8001D134
-void * AwarenessManager::AwarenessManager(class AwarenessManager * const this /* r29 */) {
+// this: r29
+AwarenessManager::AwarenessManager() {
     // References
     // -> struct [anonymous] __vt__16AwarenessManager;
 }
 
 // Range: 0x8001D134 -> 0x8001D264
-void AwarenessManager::Init(class AwarenessManager * const this /* r29 */, class SAnimator2 * pSAnimator /* r30 */) {
+// this: r29
+void AwarenessManager::Init(class SAnimator2 * pSAnimator /* r30 */) {
     // References
     // -> float kAwarenessLookupDelay;
 }
 
 // Range: 0x8001D264 -> 0x8001D34C
-void AwarenessManager::Reset(class AwarenessManager * const this /* r30 */) {
+// this: r30
+void AwarenessManager::Reset() {
     // References
     // -> float kAwarenessLookupDelay;
 }
 
 // Range: 0x8001D34C -> 0x8001D3AC
-void AwarenessManager::ClearPendingCarryAnim(class AwarenessManager * const this /* r31 */) {
+// this: r31
+void AwarenessManager::ClearPendingCarryAnim() {
     // References
     // -> class EAnimManager _animman;
 }
 
 // Range: 0x8001D3AC -> 0x8001D430
-void * AwarenessManager::~AwarenessManager(class AwarenessManager * const this /* r30 */) {
+// this: r30
+AwarenessManager::~AwarenessManager() {
     // References
     // -> struct [anonymous] __vt__16AwarenessManager;
 }
 
 // Range: 0x8001D430 -> 0x8001D52C
-void AwarenessManager::AwarenessCheck(class AwarenessManager * const this /* r29 */, unsigned int animState /* r30 */) {
+// this: r29
+void AwarenessManager::AwarenessCheck(unsigned int animState /* r30 */) {
     // Local variables
     unsigned char isPaused; // r31
 }
 
 // Range: 0x8001D52C -> 0x8001D584
-void AwarenessManager::handleAwarenessAnimations(class AwarenessManager * const this /* r30 */, unsigned int animState /* r31 */) {}
+// this: r30
+void AwarenessManager::handleAwarenessAnimations(unsigned int animState /* r31 */) {}
 
 // Range: 0x8001D584 -> 0x8001D5C8
 void AwarenessManager::SetIsRaining(unsigned char newVal /* r31 */) {}
@@ -57,7 +64,8 @@ unsigned char AwarenessManager::AwarenessAutoRunCheck(float fRouteDistance /* f3
 void AwarenessManager::SetPlayerControl() {}
 
 // Range: 0x8001D67C -> 0x8001D9B0
-class EQuat AwarenessManager::GetFirstNodeRotation(class EQuat * q /* r28 */, class AwarenessManager * const this /* r29 */, float deltaTime /* f29 */, const class EVec3 & maxFirstNodeRotation /* r31 */) {
+// this: r28
+class EQuat AwarenessManager::GetFirstNodeRotation(class AwarenessManager * const this /* r29 */, float deltaTime /* f29 */, const class EVec3 & maxFirstNodeRotation /* r31 */) {
     // Local variables
     class EVec3 maxRotation; // r1+0x14
     class EVec3 faceRot; // r1+0x8
@@ -69,7 +77,8 @@ class EQuat AwarenessManager::GetFirstNodeRotation(class EQuat * q /* r28 */, cl
 }
 
 // Range: 0x8001D9B0 -> 0x8001DB3C
-class EQuat AwarenessManager::GetSecondNodeRotation(class EQuat * q /* r28 */, const class AwarenessManager * const this /* r29 */, const class EVec3 & maxFirstNodeRotation /* r31 */) {
+// this: r28
+class EQuat AwarenessManager::GetSecondNodeRotation(const class AwarenessManager * const this /* r29 */, const class EVec3 & maxFirstNodeRotation /* r31 */) const {
     // Local variables
     class EVec3 torsoRot; // r1+0x8
     int i; // r30
@@ -101,7 +110,8 @@ void AwarenessManager::AwarenessAnimateTorsoLeadsMotion(unsigned int userParam /
 }
 
 // Range: 0x8001DF0C -> 0x8001E138
-unsigned char AwarenessManager::SetAwarenessTargetAngle(class AwarenessManager * const this /* r28 */, class cXObject * awarenessTargetObject /* r29 */) {
+// this: r28
+unsigned char AwarenessManager::SetAwarenessTargetAngle(class cXObject * awarenessTargetObject /* r29 */) {
     // Local variables
     unsigned char bRetVal; // r31
     float distance; // f29
@@ -120,7 +130,8 @@ unsigned char AwarenessManager::SetAwarenessTargetAngle(class AwarenessManager *
 }
 
 // Range: 0x8001E138 -> 0x8001E24C
-void AwarenessManager::handlePassiveInfluenceAnimation(class AwarenessManager * const this /* r31 */) {
+// this: r31
+void AwarenessManager::handlePassiveInfluenceAnimation() {
     // References
     // -> float s_UpperBodyIndexArray[58];
     // -> float kAwarenessBlendTime;
@@ -130,7 +141,8 @@ void AwarenessManager::handlePassiveInfluenceAnimation(class AwarenessManager * 
 void AwarenessManager::handleMemoryAwarenessAnimation() {}
 
 // Range: 0x8001E288 -> 0x8001E33C
-void AwarenessManager::handleAwarenessTurningAnimation(class AwarenessManager * const this /* r31 */) {
+// this: r31
+void AwarenessManager::handleAwarenessTurningAnimation() {
     // Local variables
     unsigned int animatorParam; // [invalid]
 }
@@ -142,7 +154,8 @@ unsigned char AwarenessManager::SetAwareOfObject() {}
 unsigned char AwarenessManager::SetAwareOfObjectKilled() {}
 
 // Range: 0x8001E3AC -> 0x8001E428
-unsigned char AwarenessManager::ClearAwareOfObject(class AwarenessManager * const this /* r31 */) {}
+// this: r31
+unsigned char AwarenessManager::ClearAwareOfObject() {}
 
 // Range: 0x8001E428 -> 0x8001E4AC
 unsigned char AwarenessManager::IsTimeToCheckMemoryAwareness() {
@@ -156,14 +169,16 @@ unsigned char AwarenessManager::IsTimeToCheckMemoryAwareness() {
 }
 
 // Range: 0x8001E4AC -> 0x8001E570
-unsigned char AwarenessManager::ShouldAwarenessBeActive(class AwarenessManager * const this /* r30 */) {
+// this: r30
+unsigned char AwarenessManager::ShouldAwarenessBeActive() {
     // Local variables
     unsigned char bRetVal; // r31
     class EACTrack * pTrack; // r0
 }
 
 // Range: 0x8001E570 -> 0x8001E638
-int AwarenessManager::CanSeePlayer(class AwarenessManager * const this /* r28 */) {
+// this: r28
+int AwarenessManager::CanSeePlayer() {
     // Local variables
     float distance; // f0
     int playerID; // r30
@@ -178,20 +193,23 @@ int AwarenessManager::CanSeePlayer(class AwarenessManager * const this /* r28 */
 }
 
 // Range: 0x8001E638 -> 0x8001E6F8
-void AwarenessManager::GetActiveMemoryCategory(class AwarenessManager * const this /* r28 */, int & outputMemoryCategory /* r29 */, int & outputMemoryCategoryValue /* r30 */) {
+// this: r28
+void AwarenessManager::GetActiveMemoryCategory(int & outputMemoryCategory /* r29 */, int & outputMemoryCategoryValue /* r30 */) {
     // Local variables
     class cXPerson * personToTry; // r31
 }
 
 // Range: 0x8001E6F8 -> 0x8001E870
-void AwarenessManager::StartMemoryAwarenessSprite(class AwarenessManager * const this /* r29 */) {
+// this: r29
+void AwarenessManager::StartMemoryAwarenessSprite() {
     // Local variables
     class SpriteSlot & slot; // r31
     int index; // r30
 }
 
 // Range: 0x8001E870 -> 0x8001E92C
-unsigned char AwarenessManager::SetPendingMemoryAwarenessAnim(class AwarenessManager * const this /* r30 */) {
+// this: r30
+unsigned char AwarenessManager::SetPendingMemoryAwarenessAnim() {
     // Local variables
     const struct AnimRef * SkillId; // r1+0x8
     unsigned char bRetVal; // r31
@@ -201,7 +219,8 @@ unsigned char AwarenessManager::SetPendingMemoryAwarenessAnim(class AwarenessMan
 }
 
 // Range: 0x8001E92C -> 0x8001EAF4
-void AwarenessManager::StartMemoryAwarenessAnimation(class AwarenessManager * const this /* r31 */, enum eAwarenessAction awarenessAction /* r29 */) {
+// this: r31
+void AwarenessManager::StartMemoryAwarenessAnimation(enum eAwarenessAction awarenessAction /* r29 */) {
     // Local variables
     const struct AnimRef * SkillId; // r1+0x8
     class EACTrack * pTrack; // r30
@@ -214,19 +233,22 @@ void AwarenessManager::StartMemoryAwarenessAnimation(class AwarenessManager * co
 }
 
 // Range: 0x8001EAF4 -> 0x8001EC1C
-void AwarenessManager::SetMemoryAwarenessActionToTry(class AwarenessManager * const this /* r31 */) {
+// this: r31
+void AwarenessManager::SetMemoryAwarenessActionToTry() {
     // Local variables
     int activeMemoryCategoryValue; // r1+0x8
 }
 
 // Range: 0x8001EC1C -> 0x8001EC80
-void AwarenessManager::ClearPendingMemoryAwarenessAnim(class AwarenessManager * const this /* r31 */) {
+// this: r31
+void AwarenessManager::ClearPendingMemoryAwarenessAnim() {
     // References
     // -> class EAnimManager _animman;
 }
 
 // Range: 0x8001EC80 -> 0x8001EEC0
-void AwarenessManager::MemoryAwarenessClearAction(class AwarenessManager * const this /* r31 */) {
+// this: r31
+void AwarenessManager::MemoryAwarenessClearAction() {
     // Local variables
     class cXPerson * pPerson; // r0
     class SpriteSlot & slot; // r31
@@ -243,13 +265,15 @@ unsigned char AwarenessManager::IsMemoryAwarenessAnimDone() {
 }
 
 // Range: 0x8001EF28 -> 0x8001EFE8
-void AwarenessManager::UpdateAwarenessAngle(class AwarenessManager * const this /* r31 */) {}
+// this: r31
+void AwarenessManager::UpdateAwarenessAngle() {}
 
 // Range: 0x8001EFE8 -> 0x8001EFEC
 void AwarenessManager::RelationshipAwarenessCheck() {}
 
 // Range: 0x8001EFEC -> 0x8001F168
-void AwarenessManager::MemoryAwarenessCheck(class AwarenessManager * const this /* r30 */, unsigned int animState /* r31 */) {
+// this: r30
+void AwarenessManager::MemoryAwarenessCheck(unsigned int animState /* r31 */) {
     // Local variables
     int playerID; // r4
 
@@ -258,7 +282,8 @@ void AwarenessManager::MemoryAwarenessCheck(class AwarenessManager * const this 
 }
 
 // Range: 0x8001F168 -> 0x8001F27C
-void AwarenessManager::StopPassiveInfluenceAnimation(class AwarenessManager * const this /* r29 */) {
+// this: r29
+void AwarenessManager::StopPassiveInfluenceAnimation() {
     // Local variables
     const struct AnimRef * SkillId; // r30
 
@@ -268,7 +293,8 @@ void AwarenessManager::StopPassiveInfluenceAnimation(class AwarenessManager * co
 }
 
 // Range: 0x8001F27C -> 0x8001F3DC
-unsigned char AwarenessManager::StartPassiveInfluenceAnimation(class AwarenessManager * const this /* r28 */, const struct AnimRef * SkillId /* r29 */) {
+// this: r28
+unsigned char AwarenessManager::StartPassiveInfluenceAnimation(const struct AnimRef * SkillId /* r29 */) {
     // Local variables
     unsigned char bRetVal; // r30
     class EACTrack * pTrack; // r30
@@ -281,10 +307,12 @@ unsigned char AwarenessManager::StartPassiveInfluenceAnimation(class AwarenessMa
 }
 
 // Range: 0x8001F3DC -> 0x8001F478
-void AwarenessManager::RainAwarenessCheck(class AwarenessManager * const this /* r31 */) {}
+// this: r31
+void AwarenessManager::RainAwarenessCheck() {}
 
 // Range: 0x8001F478 -> 0x8001F734
-void AwarenessManager::PassiveInfluenceAwarenessCheck(class AwarenessManager * const this /* r31 */, unsigned int animState /* r27 */) {
+// this: r31
+void AwarenessManager::PassiveInfluenceAwarenessCheck(unsigned int animState /* r27 */) {
     // Local variables
     class PassiveInfluenceMap * pInfluenceMap; // r30
     int x; // r29
@@ -306,7 +334,8 @@ class cXObject * AwarenessManager::GetPlayerObject() {
 }
 
 // Range: 0x8001F744 -> 0x8001F8C8
-float AwarenessManager::GetDeltaAngleToTargetObject(class AwarenessManager * const this /* r29 */, class cXObject * awarenessTargetObject /* r30 */) {
+// this: r29
+float AwarenessManager::GetDeltaAngleToTargetObject(class cXObject * awarenessTargetObject /* r30 */) {
     // Local variables
     float testTargetAngle; // f0
     float deltaDir; // f31
@@ -334,13 +363,15 @@ void AwarenessManager::getAwarenessSkillID() {
 }
 
 // Range: 0x8001FA8C -> 0x8001FB54
-unsigned char AwarenessManager::shouldAutoCarry(class AwarenessManager * const this /* r30 */) {
+// this: r30
+unsigned char AwarenessManager::shouldAutoCarry() {
     // Local variables
     unsigned char bRetVal; // r31
 }
 
 // Range: 0x8001FB54 -> 0x8001FDE4
-void AwarenessManager::startAutoCarry(class AwarenessManager * const this /* r31 */) {
+// this: r31
+void AwarenessManager::startAutoCarry() {
     // Local variables
     class EACTrack * pTrack; // r29
     int index; // r3
@@ -358,7 +389,8 @@ void AwarenessManager::startAutoCarry(class AwarenessManager * const this /* r31
 }
 
 // Range: 0x8001FDE4 -> 0x8001FEDC
-void AwarenessManager::endAutoCarry(class AwarenessManager * const this /* r28 */) {
+// this: r28
+void AwarenessManager::endAutoCarry() {
     // Local variables
     int index; // r29
 

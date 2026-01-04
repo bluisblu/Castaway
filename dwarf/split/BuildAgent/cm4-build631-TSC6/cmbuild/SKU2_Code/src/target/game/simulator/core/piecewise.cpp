@@ -5,19 +5,22 @@
     Code range: 0x800D0110 -> 0x800D051C
 */
 // Range: 0x800D0110 -> 0x800D0128
-void * PiecewiseFn::PiecewiseFn() {}
+PiecewiseFn::PiecewiseFn() {}
 
 // Range: 0x800D0128 -> 0x800D0180
-void * PiecewiseFn::~PiecewiseFn(class PiecewiseFn * const this /* r30 */) {}
+// this: r30
+PiecewiseFn::~PiecewiseFn() {}
 
 // Range: 0x800D0180 -> 0x800D018C
 void PiecewiseFn::Reset() {}
 
 // Range: 0x800D018C -> 0x800D022C
-void PiecewiseFn::SetMaxPoints(class PiecewiseFn * const this /* r30 */, int maxPoints /* r31 */) {}
+// this: r30
+void PiecewiseFn::SetMaxPoints(int maxPoints /* r31 */) {}
 
 // Range: 0x800D022C -> 0x800D031C
-void PiecewiseFn::AddPoint(class PiecewiseFn * const this /* r30 */, const class PiecewisePt & inPt /* r31 */) {
+// this: r30
+void PiecewiseFn::AddPoint(const class PiecewisePt & inPt /* r31 */) {
     // Local variables
     int newIndex; // r27
     int i; // r7
@@ -25,7 +28,8 @@ void PiecewiseFn::AddPoint(class PiecewiseFn * const this /* r30 */, const class
 }
 
 // Range: 0x800D031C -> 0x800D051C
-void PiecewiseFn::AddPointsFromText(class PiecewiseFn * const this /* r26 */) {
+// this: r26
+void PiecewiseFn::AddPointsFromText() {
     // Local variables
     const char * scan; // r28
     int len; // r27

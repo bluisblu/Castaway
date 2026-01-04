@@ -5,7 +5,8 @@
     Code range: 0x801DE8AC -> 0x801E0984
 */
 // Range: 0x801DE8AC -> 0x801DEDB0
-void * SWSTarget::SWSTarget(class SWSTarget * const this /* r30 */) {
+// this: r30
+SWSTarget::SWSTarget() {
     // Local variables
     int c; // r5
     int r; // r0
@@ -52,14 +53,16 @@ void * SWSTarget::SWSTarget(class SWSTarget * const this /* r30 */) {
 }
 
 // Range: 0x801DEDB0 -> 0x801DEE8C
-void * SWSTarget::~SWSTarget(class SWSTarget * const this /* r29 */) {
+// this: r29
+SWSTarget::~SWSTarget() {
     // References
     // -> class EGlobal _globals;
     // -> struct [anonymous] __vt__9SWSTarget;
 }
 
 // Range: 0x801DEE8C -> 0x801DF29C
-void SWSTarget::SetVariable(class SWSTarget * const this /* r29 */, const char * szCommand /* r28 */, const char * szParams /* r27 */) {
+// this: r29
+void SWSTarget::SetVariable(const char * szCommand /* r28 */, const char * szParams /* r27 */) {
     // Local variables
     int lastHighlightedColumn; // r31
     int lastHighlightedRow; // r30
@@ -84,7 +87,8 @@ void SWSTarget::SetVariable(class SWSTarget * const this /* r29 */, const char *
 }
 
 // Range: 0x801DF29C -> 0x801DF500
-char * SWSTarget::GetVariable(class SWSTarget * const this /* r30 */, const char * szVar /* r29 */) {
+// this: r30
+char * SWSTarget::GetVariable(const char * szVar /* r29 */) {
     // Local variables
     char * retStr; // r31
     int column; // r0
@@ -101,7 +105,8 @@ char * SWSTarget::GetVariable(class SWSTarget * const this /* r30 */, const char
 }
 
 // Range: 0x801DF500 -> 0x801DF684
-unsigned short * SWSTarget::GetLocalizable(class SWSTarget * const this /* r29 */, const char * szVar /* r30 */) {
+// this: r29
+unsigned short * SWSTarget::GetLocalizable(const char * szVar /* r30 */) {
     // Local variables
     unsigned short * wideStr; // r31
     class SWSRecord * pRecord; // r3
@@ -116,7 +121,8 @@ unsigned short * SWSTarget::GetLocalizable(class SWSTarget * const this /* r29 *
 }
 
 // Range: 0x801DF684 -> 0x801DF8E0
-void SWSTarget::Update(class SWSTarget * const this /* r31 */) {
+// this: r31
+void SWSTarget::Update() {
     // Local variables
     class ObjectModule * pObjMod; // r0
     class EVec2 dummy; // r1+0x8
@@ -130,7 +136,8 @@ void SWSTarget::Update(class SWSTarget * const this /* r31 */) {
 }
 
 // Range: 0x801DF8E0 -> 0x801DF940
-void SWSTarget::ActivateSimSwitcher(class SWSTarget * const this /* r31 */) {
+// this: r31
+void SWSTarget::ActivateSimSwitcher() {
     // References
     // -> class EGlobal _globals;
 }
@@ -139,7 +146,8 @@ void SWSTarget::ActivateSimSwitcher(class SWSTarget * const this /* r31 */) {
 void SWSTarget::DeactivateSimSwitcher() {}
 
 // Range: 0x801DF94C -> 0x801DFA40
-class cXPerson * SWSTarget::GetSimSwitcherPlayer(class SWSTarget * const this /* r27 */) {
+// this: r27
+class cXPerson * SWSTarget::GetSimSwitcherPlayer() {
     // Local variables
     class ObjectModule * pObjMod; // r0
     class cXPerson * pTestPerson; // r4
@@ -154,25 +162,30 @@ class cXPerson * SWSTarget::GetSimSwitcherPlayer(class SWSTarget * const this /*
 unsigned char SWSTarget::IsSimSwitcherActive() {}
 
 // Range: 0x801DFA68 -> 0x801DFBBC
-void SWSTarget::AddAction(class SWSTarget * const this /* r31 */, const class Interaction * pAction /* r27 */, const class BString2 & strName /* r28 */, unsigned int shaderID /* r29 */, class ERShader * pShader /* r30 */) {
+// this: r31
+void SWSTarget::AddAction(const class Interaction * pAction /* r27 */, const class BString2 & strName /* r28 */, unsigned int shaderID /* r29 */, class ERShader * pShader /* r30 */) {
     // References
     // -> char * s_SWSShaderNames[6][9];
 }
 
 // Range: 0x801DFBBC -> 0x801DFD0C
-void SWSTarget::AddFakeAction(class SWSTarget * const this /* r31 */, const class BString2 & strName /* r28 */, unsigned int shaderID /* r29 */, class ERShader * pShader /* r30 */) {
+// this: r31
+void SWSTarget::AddFakeAction(const class BString2 & strName /* r28 */, unsigned int shaderID /* r29 */, class ERShader * pShader /* r30 */) {
     // References
     // -> char * s_SWSShaderNames[6][9];
 }
 
 // Range: 0x801DFD0C -> 0x801DFDC0
-void * SWSRecord::SWSRecord(class SWSRecord * const this /* r25 */, class cXPerson * in_pPerson /* r26 */, const class Interaction * in_pAction /* r27 */, const class BString2 & in_strName /* r28 */, unsigned int in_shaderID /* r29 */, class ERShader * in_pShader /* r30 */, unsigned char in_fake /* r31 */) {}
+// this: r25
+SWSRecord::SWSRecord(class cXPerson * in_pPerson /* r26 */, const class Interaction * in_pAction /* r27 */, const class BString2 & in_strName /* r28 */, unsigned int in_shaderID /* r29 */, class ERShader * in_pShader /* r30 */, unsigned char in_fake /* r31 */) {}
 
 // Range: 0x801DFDC0 -> 0x801DFE34
-void * SWSRecord::~SWSRecord(class SWSRecord * const this /* r30 */) {}
+// this: r30
+SWSRecord::~SWSRecord() {}
 
 // Range: 0x801DFE34 -> 0x801E0760
-void SWSTarget::InitSimSwitcher(class SWSTarget * const this /* r15 */) {
+// this: r15
+void SWSTarget::InitSimSwitcher() {
     // Local variables
     int c; // r7
     int r; // r0
@@ -207,13 +220,15 @@ void SWSTarget::CleanupSimSwitcherAllocations() {
 }
 
 // Range: 0x801E07D8 -> 0x801E089C
-void SWSTarget::PushControllerButtonFilter(class SWSTarget * const this /* r30 */) {
+// this: r30
+void SWSTarget::PushControllerButtonFilter() {
     // References
     // -> class EGlobal _globals;
 }
 
 // Range: 0x801E089C -> 0x801E0900
-void SWSTarget::PopControllerButtonFilter(class SWSTarget * const this /* r30 */) {
+// this: r30
+void SWSTarget::PopControllerButtonFilter() {
     // References
     // -> class EGlobal _globals;
 }

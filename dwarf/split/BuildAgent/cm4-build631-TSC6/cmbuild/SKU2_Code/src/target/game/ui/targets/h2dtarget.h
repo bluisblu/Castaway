@@ -14,32 +14,14 @@ unsigned char H2DTarget::IsCursorOverSuperHud() {}
 unsigned char H2DTarget::GetPauseMenuActive() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\target\game\ui\targets\h2dtarget.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x8015D434 -> 0x8015D440
-*/
 // Range: 0x8015D434 -> 0x8015D440
 void H2DTarget::TriggerGameOver() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\target\game\ui\targets\h2dtarget.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x80170C6C -> 0x80170C74
-*/
 // Range: 0x80170C6C -> 0x80170C74
 void H2DTarget::SetPauseMenuActive() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\target\game\ui\targets\h2dtarget.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x801D791C -> 0x801D7924
-*/
 // Range: 0x801D791C -> 0x801D7924
 void H2DTarget::SetHudReturnPending() {}
 

@@ -5,7 +5,8 @@
     Code range: 0x802F2EC8 -> 0x802F5160
 */
 // Range: 0x802F2EC8 -> 0x802F31DC
-void * EController::EController(class EController * const this /* r31 */) {
+// this: r31
+EController::EController() {
     // Local variables
     int i; // r5
 
@@ -15,13 +16,15 @@ void * EController::EController(class EController * const this /* r31 */) {
 }
 
 // Range: 0x802F31DC -> 0x802F3274
-void * EController::~EController(class EController * const this /* r30 */) {
+// this: r30
+EController::~EController() {
     // References
     // -> struct [anonymous] __vt__11EController;
 }
 
 // Range: 0x802F3274 -> 0x802F32D0
-void EController::Update(class EController * const this /* r31 */) {
+// this: r31
+void EController::Update() {
     // References
     // -> int _lastCtrlUpdate;
     // -> int _retracecount;
@@ -34,7 +37,8 @@ void EController::UpdateAutoRepeat() {
 }
 
 // Range: 0x802F33D4 -> 0x802F33E8
-void EController::ClearAllData(class EController * const this /* r4 */) {}
+// this: r4
+void EController::ClearAllData() {}
 
 // Range: 0x802F33E8 -> 0x802F3414
 int EBtnToCmdAssoc::CompareControllerCommands() {}
@@ -43,7 +47,8 @@ int EBtnToCmdAssoc::CompareControllerCommands() {}
 void EController::SetCommandMap(struct EBtnToCmdAssoc * commands /* r0 */) {}
 
 // Range: 0x802F3438 -> 0x802F3590
-unsigned char EController::IsInUse(class EController * const this /* r29 */) {}
+// this: r29
+unsigned char EController::IsInUse() {}
 
 // Range: 0x802F3590 -> 0x802F35B8
 void EController::Flush() {}
@@ -58,22 +63,26 @@ unsigned char EController::IsMotorOneActive() {}
 unsigned char EController::IsMotorTwoActive() {}
 
 // Range: 0x802F35F0 -> 0x802F3658
-unsigned char EController::VibrateMotorOne(class EController * const this /* r31 */, float Intensity /* f31 */) {}
+// this: r31
+unsigned char EController::VibrateMotorOne(float Intensity /* f31 */) {}
 
 // Range: 0x802F3658 -> 0x802F3684
 unsigned char EController::VibrateMotorOne() {}
 
 // Range: 0x802F3684 -> 0x802F36EC
-unsigned char EController::VibrateMotorTwo(class EController * const this /* r31 */, float Intensity /* f31 */) {}
+// this: r31
+unsigned char EController::VibrateMotorTwo(float Intensity /* f31 */) {}
 
 // Range: 0x802F36EC -> 0x802F3718
 unsigned char EController::VibrateMotorTwo() {}
 
 // Range: 0x802F3718 -> 0x802F3798
-unsigned char EController::VibrateAll(class EController * const this /* r30 */, float I2 /* f31 */) {}
+// this: r30
+unsigned char EController::VibrateAll(float I2 /* f31 */) {}
 
 // Range: 0x802F3798 -> 0x802F382C
-unsigned char EController::VibrateAll(class EController * const this /* r30 */, float I2 /* f30 */, float D2 /* f31 */) {}
+// this: r30
+unsigned char EController::VibrateAll(float I2 /* f30 */, float D2 /* f31 */) {}
 
 // Range: 0x802F382C -> 0x802F3840
 unsigned char EController::StopMotorOne() {}
@@ -88,10 +97,12 @@ unsigned char EController::StopMotorTwo() {}
 unsigned char EController::StopMotorTwo() {}
 
 // Range: 0x802F386C -> 0x802F38DC
-unsigned char EController::StopVibration(class EController * const this /* r30 */) {}
+// this: r30
+unsigned char EController::StopVibration() {}
 
 // Range: 0x802F38DC -> 0x802F3984
-unsigned char EController::UpdateVibration(class EController * const this /* r31 */) {
+// this: r31
+unsigned char EController::UpdateVibration() {
     // References
     // -> float _dt;
 }
@@ -130,20 +141,23 @@ void EController::UpdateCursorData() {}
 void EController::UpdateNunchukTiltData() {}
 
 // Range: 0x802F3C30 -> 0x802F3D04
-float EController::GetStick(class EController * const this /* r29 */, int stickIndex /* r30 */, int axisIndexIn /* r31 */) {
+// this: r29
+float EController::GetStick(int stickIndex /* r30 */, int axisIndexIn /* r31 */) {
     // Local variables
     unsigned int mask; // r0
     int axisIndex; // [invalid]
 }
 
 // Range: 0x802F3D04 -> 0x802F3DF4
-unsigned char EController::StickMoved(class EController * const this /* r29 */, int index /* r30 */, float minDelta /* f30 */, unsigned int filterId /* r31 */) {
+// this: r29
+unsigned char EController::StickMoved(int index /* r30 */, float minDelta /* f30 */, unsigned int filterId /* r31 */) {
     // Local variables
     float tmp; // f0
 }
 
 // Range: 0x802F3DF4 -> 0x802F3EC8
-float EController::GetLastStick(class EController * const this /* r29 */, int stickIndex /* r30 */, int axisIndexIn /* r31 */) {
+// this: r29
+float EController::GetLastStick(int stickIndex /* r30 */, int axisIndexIn /* r31 */) {
     // Local variables
     unsigned int mask; // r0
     int axisIndex; // [invalid]
@@ -159,13 +173,15 @@ unsigned char EController::GetBtnResultAny() {}
 int EBtnToCmdAssoc::CompareControllerCommandToKey() {}
 
 // Range: 0x802F3F78 -> 0x802F4088
-unsigned char EController::GetCmdResult(class EController * const this /* r27 */, unsigned int nCommandId /* r28 */, unsigned int state1 /* r29 */, unsigned int state2 /* r30 */, unsigned char excl /* r31 */) {
+// this: r27
+unsigned char EController::GetCmdResult(unsigned int nCommandId /* r28 */, unsigned int state1 /* r29 */, unsigned int state2 /* r30 */, unsigned char excl /* r31 */) {
     // Local variables
     struct EBtnToCmdAssoc * firstCommand; // r3
 }
 
 // Range: 0x802F4088 -> 0x802F4160
-unsigned int EController::AddFilter(class EController * const this /* r31 */, unsigned int buttonMask /* r29 */, int priority /* r30 */) {
+// this: r31
+unsigned int EController::AddFilter(unsigned int buttonMask /* r29 */, int priority /* r30 */) {
     // Local variables
     unsigned int filterId; // r3
     int cur; // r5
@@ -175,31 +191,37 @@ unsigned int EController::AddFilter(class EController * const this /* r31 */, un
 }
 
 // Range: 0x802F4160 -> 0x802F4214
-void EController::RemoveFilter(class EController * const this /* r30 */, unsigned int filterId /* r31 */) {
+// this: r30
+void EController::RemoveFilter(unsigned int filterId /* r31 */) {
     // Local variables
     int index; // r3
 }
 
 // Range: 0x802F4214 -> 0x802F4260
-void EController::AddCmdToFilter(class EController * const this /* r30 */, unsigned int filterId /* r31 */) {}
+// this: r30
+void EController::AddCmdToFilter(unsigned int filterId /* r31 */) {}
 
 // Range: 0x802F4260 -> 0x802F42AC
-void EController::RemoveCmdFromFilter(class EController * const this /* r30 */, unsigned int filterId /* r31 */) {}
+// this: r30
+void EController::RemoveCmdFromFilter(unsigned int filterId /* r31 */) {}
 
 // Range: 0x802F42AC -> 0x802F4300
-void EController::AddBtnToFilter(class EController * const this /* r30 */, unsigned int buttons /* r31 */) {
+// this: r30
+void EController::AddBtnToFilter(unsigned int buttons /* r31 */) {
     // Local variables
     int filter; // r0
 }
 
 // Range: 0x802F4300 -> 0x802F4354
-void EController::RemoveBtnFromFilter(class EController * const this /* r30 */, unsigned int buttons /* r31 */) {
+// this: r30
+void EController::RemoveBtnFromFilter(unsigned int buttons /* r31 */) {
     // Local variables
     int filter; // r0
 }
 
 // Range: 0x802F4354 -> 0x802F4418
-unsigned int EController::GetCmdButtonMask(class EController * const this /* r29 */, unsigned int nCommandId /* r30 */) {
+// this: r29
+unsigned int EController::GetCmdButtonMask(unsigned int nCommandId /* r30 */) {
     // Local variables
     struct EBtnToCmdAssoc * firstCommand; // r3
     unsigned int buttonMask; // r31

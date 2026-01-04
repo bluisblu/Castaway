@@ -47,12 +47,6 @@ class TreeTableEntry * FindRes() {
 }
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\target\game\simulator\core\tfindres.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x800FB774 -> 0x800FB8C4
-*/
 // Range: 0x800FB774 -> 0x800FB7E4
 struct AnimRefTable * FindRes() {
     // Local variables
@@ -75,12 +69,6 @@ struct FloatConstantsData * FindRes() {
 }
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\target\game\simulator\core\tfindres.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x8015E6F8 -> 0x8015E864
-*/
 // Range: 0x8015E6F8 -> 0x8015E768
 struct BehaviorConstants * FindRes() {
     // Local variables
@@ -103,12 +91,6 @@ class TreeTable * FindRes() {
 }
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\target\game\simulator\core\tfindres.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x8016A5A8 -> 0x8016A62C
-*/
 // Range: 0x8016A5A8 -> 0x8016A62C
 struct WStringSet * FindRes() {
     // Local variables
@@ -117,12 +99,6 @@ struct WStringSet * FindRes() {
 }
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\target\game\simulator\core\tfindres.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x8022E1E8 -> 0x8022E26C
-*/
 // Range: 0x8022E1E8 -> 0x8022E26C
 struct SpriteIdToResIdNode * FindRes() {
     // Local variables

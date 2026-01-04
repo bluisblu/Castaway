@@ -11,7 +11,8 @@ class ConstantsClient * GetMotiveConstantsClient() {
 }
 
 // Range: 0x80122AC4 -> 0x80123014
-void MotiveConstantsClient::UpdateConstants(class MotiveConstantsClient * const this /* r31 */) {
+// this: r31
+void MotiveConstantsClient::UpdateConstants() {
     // Local variables
     unsigned int fileID; // r29
     signed short id; // r0
@@ -53,7 +54,8 @@ void MotiveConstantsClient::UpdateConstants(class MotiveConstantsClient * const 
 }
 
 // Range: 0x80123014 -> 0x801230E8
-void Motives::Init(class Motives * const this /* r31 */) {
+// this: r31
+void Motives::Init() {
     // Local variables
     int count; // r0
     class ConstantsClient * cc; // r0
@@ -66,7 +68,8 @@ void Motives::Init(class Motives * const this /* r31 */) {
 void Motives::SetPerson() {}
 
 // Range: 0x801230F0 -> 0x801234C0
-void Motives::Sim(class Motives * const this /* r31 */) {
+// this: r31
+void Motives::Sim() {
     // Local variables
     int sleepOffset; // r30
     float decayRate; // f0
@@ -94,7 +97,8 @@ void Motives::Cleanup() {
 }
 
 // Range: 0x80123584 -> 0x801237A4
-void Motives::InitDecayRates(class Motives * const this /* r30 */) {
+// this: r30
+void Motives::InitDecayRates() {
     // Local variables
     enum tDecaySimType simType; // r25
     class Neighbor * n; // r31
@@ -109,7 +113,8 @@ void Motives::InitDecayRates(class Motives * const this /* r30 */) {
 }
 
 // Range: 0x801237A4 -> 0x801237E4
-void * MotiveConstantsClient::MotiveConstantsClient(class MotiveConstantsClient * const this /* r31 */) {
+// this: r31
+MotiveConstantsClient::MotiveConstantsClient() {
     // References
     // -> struct [anonymous] __vt__21MotiveConstantsClient;
 }

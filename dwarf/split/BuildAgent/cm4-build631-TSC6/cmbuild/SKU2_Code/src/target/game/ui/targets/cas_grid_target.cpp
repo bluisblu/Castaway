@@ -5,14 +5,16 @@
     Code range: 0x801987D4 -> 0x80199C80
 */
 // Range: 0x801987D4 -> 0x80198BC0
-void * CASGridTarget::CASGridTarget(class CASGridTarget * const this /* r28 */, class CasMediator & mediator /* r29 */) {
+// this: r28
+CASGridTarget::CASGridTarget(class CasMediator & mediator /* r29 */) {
     // References
     // -> class EGlobal _globals;
     // -> struct [anonymous] __vt__13CASGridTarget;
 }
 
 // Range: 0x80198BC0 -> 0x80198CF0
-void * CASGridTarget::~CASGridTarget(class CASGridTarget * const this /* r27 */) {
+// this: r27
+CASGridTarget::~CASGridTarget() {
     // Local variables
     int i; // r29
 
@@ -23,7 +25,8 @@ void * CASGridTarget::~CASGridTarget(class CASGridTarget * const this /* r27 */)
 }
 
 // Range: 0x80198CF0 -> 0x80198E80
-void CASGridTarget::Initialize(class CASGridTarget * const this /* r29 */) {
+// this: r29
+void CASGridTarget::Initialize() {
     // Local variables
     class CASTargetTSC6 * pNavTarget; // r30
     enum eTattooLocation bodyTexture; // r1+0xC
@@ -36,7 +39,8 @@ void CASGridTarget::Initialize(class CASGridTarget * const this /* r29 */) {
 }
 
 // Range: 0x80198E80 -> 0x8019918C
-void CASGridTarget::SetVariable(class CASGridTarget * const this /* r31 */, const char * szVar /* r28 */, const char * szValue /* r29 */) {
+// this: r31
+void CASGridTarget::SetVariable(const char * szVar /* r28 */, const char * szValue /* r29 */) {
     // Local variables
     int scanresult; // r0
     int gridindex; // r1+0xC
@@ -50,7 +54,8 @@ void CASGridTarget::SetVariable(class CASGridTarget * const this /* r31 */, cons
 }
 
 // Range: 0x8019918C -> 0x801992B4
-char * CASGridTarget::GetVariable(class CASGridTarget * const this /* r28 */, const char * szVar /* r29 */) {
+// this: r28
+char * CASGridTarget::GetVariable(const char * szVar /* r29 */) {
     // Local variables
     char * retStr; // r30
 }
@@ -59,13 +64,15 @@ char * CASGridTarget::GetVariable(class CASGridTarget * const this /* r28 */, co
 unsigned short * CASGridTarget::GetLocalizable() {}
 
 // Range: 0x801992BC -> 0x80199748
-void CASGridTarget::SubGetLocalizable(class CASGridTarget * const this /* r29 */, const char * szVar /* r28 */, unsigned short * wideStr /* r30 */) {
+// this: r29
+void CASGridTarget::SubGetLocalizable(const char * szVar /* r28 */, unsigned short * wideStr /* r30 */) {
     // References
     // -> class EGlobal _globals;
 }
 
 // Range: 0x80199748 -> 0x801997C8
-void CASGridTarget::Update(class CASGridTarget * const this /* r31 */) {
+// this: r31
+void CASGridTarget::Update() {
     // Local variables
     class EVec2 dummy; // r1+0x8
 
@@ -93,7 +100,8 @@ unsigned char CASGridTarget::ConvertCurUIFocusToChangeEvent(int & changeEvent /*
 }
 
 // Range: 0x801999CC -> 0x80199A70
-int CASGridTarget::ConvertCurUIFocusToCharDescriptionField(class CASGridTarget * const this /* r30 */, class CasSimDescription * pSimDesc /* r31 */) {
+// this: r30
+int CASGridTarget::ConvertCurUIFocusToCharDescriptionField(class CasSimDescription * pSimDesc /* r31 */) {
     // Local variables
     int currSelection; // r3
     enum eBodyPart bodyPart; // r1+0xC
@@ -101,7 +109,8 @@ int CASGridTarget::ConvertCurUIFocusToCharDescriptionField(class CASGridTarget *
 }
 
 // Range: 0x80199A70 -> 0x80199C80
-void CASGridTarget::CreateSelectionShaders(class CASGridTarget * const this /* r30 */) {
+// this: r30
+void CASGridTarget::CreateSelectionShaders() {
     // References
     // -> class EShaderManager _shaderman;
 }

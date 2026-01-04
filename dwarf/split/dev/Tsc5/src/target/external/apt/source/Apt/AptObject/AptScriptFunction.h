@@ -11,7 +11,8 @@ void AptScriptFunctionBase::SetInLocalScope(class EAStringC * pVarName /* r30 */
 }
 
 // Range: 0x8030C0B8 -> 0x8030C150
-void AptScriptFunctionBase::CreateFrameStack(class AptScriptFunctionBase * const this /* r31 */) {
+// this: r31
+void AptScriptFunctionBase::CreateFrameStack() {
     // References
     // -> static char __PRETTY_FUNCTION__[42];
     // -> class AptFrameStack * spFrameStack;
@@ -36,12 +37,6 @@ unsigned char AptScriptFunctionBase::ExistsInLocalScope() {
 }
 
 
-/*
-    Compile unit: C:\dev\Tsc5\src\target\external\apt\source\Apt\AptObject\AptScriptFunction.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x80331F8C -> 0x80332280
-*/
 // Range: 0x80331F8C -> 0x80331FA0
 void AptScriptFunctionBase::CreatingNestedFunction() {
     // References
@@ -64,7 +59,8 @@ unsigned int AptScriptFunction1::GetByteCodeSize() {}
 struct AptConstantPool AptScriptFunction1::GetConstantPool() {}
 
 // Range: 0x80331FE0 -> 0x80332064
-void AptScriptFunction1::SetArgument(class AptScriptFunction1 * const this /* r29 */, class AptValue * pValue /* r30 */, int nIndex /* r31 */) {
+// this: r29
+void AptScriptFunction1::SetArgument(class AptValue * pValue /* r30 */, int nIndex /* r31 */) {
     // Local variables
     class EAStringC strParam; // r1+0x8
 
@@ -73,7 +69,8 @@ void AptScriptFunction1::SetArgument(class AptScriptFunction1 * const this /* r2
 }
 
 // Range: 0x80332064 -> 0x803320B4
-class AptScriptFunctionBase * AptScriptFunction1::Duplicate(class AptScriptFunction1 * const this /* r30 */, class AptCIH * pCurCIH /* r31 */) {}
+// this: r30
+class AptScriptFunctionBase * AptScriptFunction1::Duplicate(class AptCIH * pCurCIH /* r31 */) {}
 
 // Range: 0x803320B4 -> 0x803320C0
 char * AptScriptFunction2::GetName() {}
@@ -91,7 +88,8 @@ unsigned int AptScriptFunction2::GetByteCodeSize() {}
 struct AptConstantPool AptScriptFunction2::GetConstantPool() {}
 
 // Range: 0x803320F4 -> 0x80332198
-void AptScriptFunction2::SetArgument(class AptScriptFunction2 * const this /* r29 */, class AptValue * pValue /* r30 */) {
+// this: r29
+void AptScriptFunction2::SetArgument(class AptValue * pValue /* r30 */) {
     // Local variables
     class EAStringC sName; // r1+0x8
 
@@ -100,7 +98,8 @@ void AptScriptFunction2::SetArgument(class AptScriptFunction2 * const this /* r2
 }
 
 // Range: 0x80332198 -> 0x803321E8
-class AptScriptFunctionBase * AptScriptFunction2::Duplicate(class AptScriptFunction2 * const this /* r30 */, class AptCIH * pCurCIH /* r31 */) {}
+// this: r30
+class AptScriptFunctionBase * AptScriptFunction2::Duplicate(class AptCIH * pCurCIH /* r31 */) {}
 
 // Range: 0x803321E8 -> 0x803321F0
 char * AptScriptFunctionByteCodeBlock::GetName() {}
@@ -115,7 +114,8 @@ unsigned char * AptScriptFunctionByteCodeBlock::GetByteCodeBase() {}
 unsigned int AptScriptFunctionByteCodeBlock::GetByteCodeSize() {}
 
 // Range: 0x80332208 -> 0x80332218
-struct AptConstantPool AptScriptFunctionByteCodeBlock::GetConstantPool(class AptScriptFunctionByteCodeBlock * const this /* r4 */) {}
+// this: r4
+struct AptConstantPool AptScriptFunctionByteCodeBlock::GetConstantPool() {}
 
 // Range: 0x80332218 -> 0x8033221C
 void AptScriptFunctionByteCodeBlock::SetArgument() {}
@@ -124,6 +124,7 @@ void AptScriptFunctionByteCodeBlock::SetArgument() {}
 class AptScriptFunctionBase * AptScriptFunctionByteCodeBlock::Duplicate() {}
 
 // Range: 0x80332224 -> 0x80332280
-void * AptScriptFunctionByteCodeBlock::~AptScriptFunctionByteCodeBlock(class AptScriptFunctionByteCodeBlock * const this /* r30 */) {}
+// this: r30
+AptScriptFunctionByteCodeBlock::~AptScriptFunctionByteCodeBlock() {}
 
 

@@ -5,7 +5,8 @@
     Code range: 0x801F3EB4 -> 0x801F42F8
 */
 // Range: 0x801F3EB4 -> 0x801F4020
-void * TIRTarget::TIRTarget(class TIRTarget * const this /* r30 */) {
+// this: r30
+TIRTarget::TIRTarget() {
     // References
     // -> class EGlobal _globals;
     // -> static const char * const TIR_TransInProgress;
@@ -17,7 +18,8 @@ void * TIRTarget::TIRTarget(class TIRTarget * const this /* r30 */) {
 }
 
 // Range: 0x801F4020 -> 0x801F40E4
-void * TIRTarget::~TIRTarget(class TIRTarget * const this /* r29 */) {
+// this: r29
+TIRTarget::~TIRTarget() {
     // Local variables
     class UIScreenManager * pUISM; // r31
 
@@ -30,7 +32,8 @@ void * TIRTarget::~TIRTarget(class TIRTarget * const this /* r29 */) {
 unsigned char TIRTarget::IsLoaded() {}
 
 // Range: 0x801F40EC -> 0x801F41B0
-void TIRTarget::SetVariable(class TIRTarget * const this /* r30 */, const char * szCommand /* r31 */) {
+// this: r30
+void TIRTarget::SetVariable(const char * szCommand /* r31 */) {
     // References
     // -> static const char * const TIR_Loaded;
     // -> static const char * const TIR_TransInProgress;
@@ -48,13 +51,15 @@ char * TIRTarget::GetVariable(const char * szVar /* r30 */) {
 }
 
 // Range: 0x801F4220 -> 0x801F428C
-void TIRTarget::TransitionIn(class TIRTarget * const this /* r31 */) {
+// this: r31
+void TIRTarget::TransitionIn() {
     // References
     // -> class EGlobal _globals;
 }
 
 // Range: 0x801F428C -> 0x801F42F8
-void TIRTarget::TransitionOut(class TIRTarget * const this /* r31 */) {
+// this: r31
+void TIRTarget::TransitionOut() {
     // References
     // -> class EGlobal _globals;
 }

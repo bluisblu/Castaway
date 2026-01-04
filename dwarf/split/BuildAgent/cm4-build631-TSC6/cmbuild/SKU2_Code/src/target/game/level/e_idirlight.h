@@ -60,12 +60,6 @@ void EIDirLight::Construct() {}
 class EIDirLight * EIDirLight::New() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\target\game\level\e_idirlight.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x8023A028 -> 0x8023A030
-*/
 // Range: 0x8023A028 -> 0x8023A030
 class EVec3 & EIDirLight::GetDir() {}
 

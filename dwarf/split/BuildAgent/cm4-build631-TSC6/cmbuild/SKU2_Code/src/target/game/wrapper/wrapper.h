@@ -14,7 +14,8 @@ class ERFont * Wrapper::GetDefaultFont() {
 void PaneItem::Startup() {}
 
 // Range: 0x8009D8F4 -> 0x8009D930
-void TextBaseItem::SetFontSize(class TextBaseItem * const this /* r31 */) {}
+// this: r31
+void TextBaseItem::SetFontSize() {}
 
 // Range: 0x8009D930 -> 0x8009D958
 void PaneItem::SetDirtySize() {}
@@ -104,7 +105,8 @@ unsigned char PaneItem::IsType() {}
 int PaneItem::GetValue() {}
 
 // Range: 0x8009DA58 -> 0x8009DA94
-void TextBaseItem::SetFont(class TextBaseItem * const this /* r31 */) {}
+// this: r31
+void TextBaseItem::SetFont() {}
 
 // Range: 0x8009DA94 -> 0x8009DA9C
 void PaneItem::SetPos() {}
@@ -116,7 +118,8 @@ void PaneItem::SetPosX() {}
 void PaneItem::SetPosY() {}
 
 // Range: 0x8009DAAC -> 0x8009DAE8
-void PaneItem::SetSize(class PaneItem * const this /* r31 */) {}
+// this: r31
+void PaneItem::SetSize() {}
 
 // Range: 0x8009DAE8 -> 0x8009DAFC
 void PaneItem::SetSizeX() {}
@@ -134,19 +137,23 @@ float PaneItem::GetPosX() {}
 float PaneItem::GetPosY() {}
 
 // Range: 0x8009DB28 -> 0x8009DB64
-class EVec2 & PaneItem::GetSize(class PaneItem * const this /* r31 */) {}
+// this: r31
+class EVec2 & PaneItem::GetSize() {}
 
 // Range: 0x8009DB64 -> 0x8009DBA0
-float PaneItem::GetSizeX(class PaneItem * const this /* r31 */) {}
+// this: r31
+float PaneItem::GetSizeX() {}
 
 // Range: 0x8009DBA0 -> 0x8009DBDC
-float PaneItem::GetSizeY(class PaneItem * const this /* r31 */) {}
+// this: r31
+float PaneItem::GetSizeY() {}
 
 // Range: 0x8009DBDC -> 0x8009DBE4
 class vector & WrapperPaneBase::GetItemList() {}
 
 // Range: 0x8009DBE4 -> 0x8009DC60
-void * PaneItem::~PaneItem(class PaneItem * const this /* r30 */) {
+// this: r30
+PaneItem::~PaneItem() {
     // References
     // -> struct [anonymous] __vt__8PaneItem;
 }
@@ -173,25 +180,29 @@ void TextBaseItem::SetPosX() {}
 class PaneItem * WrapperPaneBase::AddItem(class PaneItem * pItem /* r1+0x8 */) {}
 
 // Range: 0x8009DD00 -> 0x8009DD68
-void * ButtonItem::ButtonItem(class ButtonItem * const this /* r31 */) {
+// this: r31
+ButtonItem::ButtonItem() {
     // References
     // -> struct [anonymous] __vt__10ButtonItem;
 }
 
 // Range: 0x8009DD68 -> 0x8009DDD0
-void * TextBaseItem::~TextBaseItem(class TextBaseItem * const this /* r30 */) {}
+// this: r30
+TextBaseItem::~TextBaseItem() {}
 
 // Range: 0x8009DDD0 -> 0x8009DDD4
 void TextBaseItem::Reset() {}
 
 // Range: 0x8009DDD4 -> 0x8009DE48
-void * TextBaseItem::TextBaseItem(class TextBaseItem * const this /* r31 */) {
+// this: r31
+TextBaseItem::TextBaseItem() {
     // References
     // -> struct [anonymous] __vt__12TextBaseItem;
 }
 
 // Range: 0x8009DE48 -> 0x8009DEB4
-void * PaneItem::PaneItem(class PaneItem * const this /* r31 */) {
+// this: r31
+PaneItem::PaneItem() {
     // References
     // -> struct [anonymous] __vt__8PaneItem;
 }
@@ -200,13 +211,15 @@ void * PaneItem::PaneItem(class PaneItem * const this /* r31 */) {
 void PaneItem::Enable() {}
 
 // Range: 0x8009DEDC -> 0x8009DF44
-void * TextItem::TextItem(class TextItem * const this /* r31 */) {
+// this: r31
+TextItem::TextItem() {
     // References
     // -> struct [anonymous] __vt__8TextItem;
 }
 
 // Range: 0x8009DF44 -> 0x8009DFB8
-void * WrapperPaneBase::~WrapperPaneBase(class WrapperPaneBase * const this /* r30 */) {
+// this: r30
+WrapperPaneBase::~WrapperPaneBase() {
     // References
     // -> struct [anonymous] __vt__15WrapperPaneBase;
 }
@@ -218,16 +231,20 @@ unsigned char Wrapper::IsDrawOverApt() {}
 float WrapperPaneBase::GetAlpha() {}
 
 // Range: 0x8009DFC8 -> 0x8009E020
-void * TextItem::~TextItem(class TextItem * const this /* r30 */) {}
+// this: r30
+TextItem::~TextItem() {}
 
 // Range: 0x8009E020 -> 0x8009E078
-void * MenuItem::~MenuItem(class MenuItem * const this /* r30 */) {}
+// this: r30
+MenuItem::~MenuItem() {}
 
 // Range: 0x8009E078 -> 0x8009E0D0
-void * ButtonItem::~ButtonItem(class ButtonItem * const this /* r30 */) {}
+// this: r30
+ButtonItem::~ButtonItem() {}
 
 // Range: 0x8009E0D0 -> 0x8009E118
-void TextBaseItem::CalculateSize(class TextBaseItem * const this /* r31 */) {}
+// this: r31
+void TextBaseItem::CalculateSize() {}
 
 // Range: 0x8009E118 -> 0x8009E120
 void TextBaseItem::SetColor() {}
@@ -260,29 +277,28 @@ void TextBaseItem::SetPos() {}
 class EVec2 & TextBaseItem::GetPos() {}
 
 // Range: 0x8009E168 -> 0x8009E1C0
-void * IconItem::~IconItem(class IconItem * const this /* r30 */) {}
+// this: r30
+IconItem::~IconItem() {}
 
 // Range: 0x8009E1C0 -> 0x8009E210
-void IconItem::SetColor(class IconItem * const this /* r30 */, class EVec4 & vColor /* r31 */) {}
+// this: r30
+void IconItem::SetColor(class EVec4 & vColor /* r31 */) {}
 
 // Range: 0x8009E210 -> 0x8009E254
-class EVec4 IconItem::GetColor(class EVec4 * tcolor /* r30 */, class IconItem * const this /* r31 */) {}
+// this: r30
+class EVec4 IconItem::GetColor(class IconItem * const this /* r31 */) {}
 
 // Range: 0x8009E254 -> 0x8009E2AC
-void * DialogPaneBase::~DialogPaneBase(class DialogPaneBase * const this /* r30 */) {}
+// this: r30
+DialogPaneBase::~DialogPaneBase() {}
 
 // Range: 0x8009E2AC -> 0x8009E2B0
 void WrapperPaneBase::Reset() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\target\game\wrapper\wrapper.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x8017A144 -> 0x8017A514
-*/
 // Range: 0x8017A144 -> 0x8017A218
-void * BackgroundPane::BackgroundPane(class BackgroundPane * const this /* r28 */, int iIconItems /* r29 */, int iTextItems /* r30 */) {
+// this: r28
+BackgroundPane::BackgroundPane(int iIconItems /* r29 */, int iTextItems /* r30 */) {
     // Local variables
     int i; // r31
     int i; // r31
@@ -292,13 +308,15 @@ void * BackgroundPane::BackgroundPane(class BackgroundPane * const this /* r28 *
 }
 
 // Range: 0x8017A218 -> 0x8017A2A4
-void * IconItem::IconItem(class IconItem * const this /* r31 */) {
+// this: r31
+IconItem::IconItem() {
     // References
     // -> struct [anonymous] __vt__8IconItem;
 }
 
 // Range: 0x8017A2A4 -> 0x8017A36C
-void * WrapperPaneBase::WrapperPaneBase(class WrapperPaneBase * const this /* r29 */, int iItemCntMax /* r30 */) {
+// this: r29
+WrapperPaneBase::WrapperPaneBase(int iItemCntMax /* r30 */) {
     // References
     // -> struct [anonymous] __vt__15WrapperPaneBase;
 }
@@ -310,13 +328,15 @@ void Wrapper::SetDefaultFont() {
 }
 
 // Range: 0x8017A374 -> 0x8017A3F0
-void * Wrapper::Wrapper(class Wrapper * const this /* r30 */, const char * pAssetName /* r31 */) {
+// this: r30
+Wrapper::Wrapper(const char * pAssetName /* r31 */) {
     // References
     // -> struct [anonymous] __vt__7Wrapper;
 }
 
 // Range: 0x8017A3F0 -> 0x8017A468
-void * Wrapper::~Wrapper(class Wrapper * const this /* r30 */) {
+// this: r30
+Wrapper::~Wrapper() {
     // References
     // -> struct [anonymous] __vt__7Wrapper;
 }
@@ -340,20 +360,16 @@ void WrapperPaneBase::SetTextItemFontSize() {}
 void WrapperPaneBase::SetTextItemText() {}
 
 // Range: 0x8017A4BC -> 0x8017A514
-void * BackgroundPane::~BackgroundPane(class BackgroundPane * const this /* r30 */) {}
+// this: r30
+BackgroundPane::~BackgroundPane() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\target\game\wrapper\wrapper.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x8023C260 -> 0x8023C4E8
-*/
 // Range: 0x8023C260 -> 0x8023C268
 void Wrapper::SetUsesApt() {}
 
 // Range: 0x8023C268 -> 0x8023C2D0
-void * MenuItem::MenuItem(class MenuItem * const this /* r31 */) {
+// this: r31
+MenuItem::MenuItem() {
     // References
     // -> struct [anonymous] __vt__8MenuItem;
 }
@@ -377,10 +393,12 @@ void MenuPane::SetSelectedMenuItem() {}
 void MenuPane::SetMenuWidth() {}
 
 // Range: 0x8023C328 -> 0x8023C374
-void WrapperPaneBase::SetButtonContext(class WrapperPaneBase * const this /* r31 */) {}
+// this: r31
+void WrapperPaneBase::SetButtonContext() {}
 
 // Range: 0x8023C374 -> 0x8023C450
-void * MenuPane::MenuPane(class MenuPane * const this /* r28 */, int iMenuItems /* r29 */, int iButtonItems /* r30 */) {
+// this: r28
+MenuPane::MenuPane(int iMenuItems /* r29 */, int iButtonItems /* r30 */) {
     // Local variables
     int i; // r31
     int i; // r31
@@ -429,6 +447,7 @@ void Wrapper::SetDefaultTextFontSize() {
 void WrapperPaneBase::DisableDraw() {}
 
 // Range: 0x8023C490 -> 0x8023C4E8
-void * MenuPane::~MenuPane(class MenuPane * const this /* r30 */) {}
+// this: r30
+MenuPane::~MenuPane() {}
 
 

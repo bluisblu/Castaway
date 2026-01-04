@@ -5,6 +5,7 @@
     Code range: 0x800D3CF8 -> 0x800D3D3C
 */
 // Range: 0x800D3CF8 -> 0x800D3D3C
-void * fixed_list::fixed_list(class fixed_list * const this /* r31 */) {}
+// this: r31
+fixed_list::fixed_list() {}
 
 

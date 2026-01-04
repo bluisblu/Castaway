@@ -5,7 +5,7 @@
     Code range: 0x802F54E0 -> 0x802F5528
 */
 // Range: 0x802F54E0 -> 0x802F54F8
-void * EKeyboard::EKeyboard() {
+EKeyboard::EKeyboard() {
     // References
     // -> struct [anonymous] __vt__9EKeyboard;
 }

@@ -4,17 +4,18 @@
     Language: C++
     Code range: 0x8032A010 -> 0x8032A4A4
 */
+// total size: 0x8
 struct SoundMembers {
-    // total size: 0x8
+    // Members
     char * szName; // offset 0x0, size 0x4
     int nIndex; // offset 0x4, size 0x4
 };
 static struct SoundMembers wordlist[12]; // size: 0x60, address: 0x8045D370
-class SoundMembersIndex {
-    // total size: 0x1
-};
+// total size: 0x1
+class SoundMembersIndex {};
 // Range: 0x8032A010 -> 0x8032A088
-void * AptSound::AptSound(class AptSound * const this /* r29 */, class AptCIH * pParent /* r30 */) {
+// this: r29
+AptSound::AptSound(class AptCIH * pParent /* r30 */) {
     // References
     // -> struct [anonymous] __vt__8AptSound;
 }
@@ -72,7 +73,6 @@ class AptValue * AptSound::objectMemberLookup(const class EAStringC * const pNam
     // -> class AptNativeFunction * psMethod_attachSound;
 }
 
-struct {
-    // total size: 0x44
-} __vt__8AptSound; // size: 0x44, address: 0x8045D454
+// total size: 0x44
+struct {} __vt__8AptSound; // size: 0x44, address: 0x8045D454
 

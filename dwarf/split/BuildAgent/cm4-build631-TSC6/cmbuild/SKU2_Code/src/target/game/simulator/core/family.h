@@ -5,7 +5,7 @@
     Code range: 0x8010CEFC -> 0x8010CF28
 */
 // Range: 0x8010CEFC -> 0x8010CF0C
-void * Family::Family() {
+Family::Family() {
     // References
     // -> struct [anonymous] __vt__6Family;
 }
@@ -14,9 +14,9 @@ void * Family::Family() {
 int FamilyMember::GetGUID() {}
 
 // Range: 0x8010CF14 -> 0x8010CF20
-void * FamilyMember::FamilyMember() {}
+FamilyMember::FamilyMember() {}
 
 // Range: 0x8010CF20 -> 0x8010CF28
-void * FamilyMember::FamilyMember() {}
+FamilyMember::FamilyMember() {}
 
 

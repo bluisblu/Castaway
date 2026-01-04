@@ -32,32 +32,14 @@ float atanf() {}
 float asinf() {}
 
 
-/*
-    Compile unit: C:\Wii\CW_RVL\PowerPC_EABI_Support\Msl\MSL_C\PPC_EABI\Include\math_ppc.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x800514D4 -> 0x800514F8
-*/
 // Range: 0x800514D4 -> 0x800514F8
 float ceilf() {}
 
 
-/*
-    Compile unit: C:\Wii\CW_RVL\PowerPC_EABI_Support\Msl\MSL_C\PPC_EABI\Include\math_ppc.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x800BB64C -> 0x800BB6FC
-*/
 // Range: 0x800BB64C -> 0x800BB670
 float powf() {}
 
 
-/*
-    Compile unit: C:\Wii\CW_RVL\PowerPC_EABI_Support\Msl\MSL_C\PPC_EABI\Include\math_ppc.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x80203D48 -> 0x80203D6C
-*/
 // Range: 0x80203D48 -> 0x80203D6C
 float fmodf() {}
 

@@ -17,12 +17,6 @@ void ESim::UpdateSimModel() {}
 class cXPerson * ESim::GetPerson() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\target\game\esim.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x80075E04 -> 0x80075E34
-*/
 // Range: 0x80075E04 -> 0x80075E2C
 unsigned char ESim::GetIsChangingOutfit() {}
 
@@ -30,43 +24,27 @@ unsigned char ESim::GetIsChangingOutfit() {}
 class SimModelTSC6 * ESim::GetSimModel() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\target\game\esim.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x8011EC50 -> 0x8011EC64
-*/
 // Range: 0x8011EC50 -> 0x8011EC64
 class EIStaticModel * ESim::GetModelPart() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\target\game\esim.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x801F303C -> 0x801F3044
-*/
 // Range: 0x801F303C -> 0x801F3044
 class ESims3DHead * ESim::GetSimHead() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\target\game\esim.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x80222F04 -> 0x802231C0
-*/
 // Range: 0x80222F04 -> 0x80222F58
-void * ESimShadow::ESimShadow(class ESimShadow * const this /* r30 */, class cXPerson * person /* r31 */) {
+// this: r30
+ESimShadow::ESimShadow(class cXPerson * person /* r31 */) {
     // References
     // -> struct [anonymous] __vt__10ESimShadow;
 }
 
 // Range: 0x80222F58 -> 0x80222F8C
-void ESim::__dl(void * p /* r31 */) {}
+void ESim::operator delete(void * p /* r31 */) {}
 
 // Range: 0x80222F8C -> 0x80222FEC
-void * ESimShadow::~ESimShadow(class ESimShadow * const this /* r30 */) {}
+// this: r30
+ESimShadow::~ESimShadow() {}
 
 // Range: 0x80222FEC -> 0x80222FF4
 unsigned int ESim::GetPlumbBobState() {}
@@ -75,7 +53,7 @@ unsigned int ESim::GetPlumbBobState() {}
 void ESim::SetSkillMeterRenderer() {}
 
 // Range: 0x80222FFC -> 0x8022303C
-void * ESim::__nw(unsigned long size /* r31 */) {}
+void * ESim::operator new(unsigned long size /* r31 */) {}
 
 // Range: 0x8022303C -> 0x8022305C
 void ESim::SafeDelete() {}
@@ -121,13 +99,14 @@ void ESim::Destruct() {}
 void ESim::Construct() {}
 
 // Range: 0x8022310C -> 0x80223188
-void * ESim::ESim(class ESim * const this /* r31 */) {
+// this: r31
+ESim::ESim() {
     // References
     // -> struct [anonymous] __vt__4ESim;
 }
 
 // Range: 0x80223188 -> 0x80223190
-void * ESim::__nw() {}
+void * ESim::operator new() {}
 
 // Range: 0x80223190 -> 0x802231C0
 class ESim * ESim::New() {}

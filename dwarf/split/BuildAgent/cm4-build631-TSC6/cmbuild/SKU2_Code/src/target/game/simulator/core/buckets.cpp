@@ -5,27 +5,31 @@
     Code range: 0x80107C98 -> 0x80108274
 */
 // Range: 0x80107C98 -> 0x80107CC0
-void * CCollisionGrid::CCollisionGrid() {
+CCollisionGrid::CCollisionGrid() {
     // References
     // -> int g_CollisionGridSize;
     // -> int g_CollisionBucketSize;
 }
 
 // Range: 0x80107CC0 -> 0x80107D30
-void * CCollisionGrid::~CCollisionGrid(class CCollisionGrid * const this /* r30 */) {}
+// this: r30
+CCollisionGrid::~CCollisionGrid() {}
 
 // Range: 0x80107D88 -> 0x80107E30
-void CCollisionGrid::Initialize(class CCollisionGrid * const this /* r30 */) {}
+// this: r30
+void CCollisionGrid::Initialize() {}
 
 // Range: 0x80107E78 -> 0x80107F04
-void CCollisionGrid::ClearAllBuckets(class CCollisionGrid * const this /* r29 */) {
+// this: r29
+void CCollisionGrid::ClearAllBuckets() {
     // Local variables
     int x; // r31
     int y; // r30
 }
 
 // Range: 0x80107F04 -> 0x80108010
-void CCollisionGrid::AddRectsToBuckets(class CCollisionGrid * const this /* r30 */, const class vector & rects /* r31 */) {
+// this: r30
+void CCollisionGrid::AddRectsToBuckets(const class vector & rects /* r31 */) {
     // Local variables
     const class PenaltyRect * i; // r29
     class PenaltyRect * current; // r1+0x8
@@ -40,7 +44,8 @@ void CCollisionGrid::AddRectsToBuckets(class CCollisionGrid * const this /* r30 
 }
 
 // Range: 0x80108010 -> 0x8010816C
-class PenaltyRect * CCollisionGrid::GetIntersectingRect(class CCollisionGrid * const this /* r22 */, const class IRect * rect /* r23 */) {
+// this: r22
+class PenaltyRect * CCollisionGrid::GetIntersectingRect(const class IRect * rect /* r23 */) {
     // Local variables
     int x_start; // [invalid]
     int x_end; // r31

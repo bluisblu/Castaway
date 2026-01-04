@@ -50,13 +50,16 @@ void TextBlock::SetPosY() {}
 void TextBlock::SetPosX() {}
 
 // Range: 0x8009BE2C -> 0x8009BE8C
-void * TextBlock::~TextBlock(class TextBlock * const this /* r30 */) {}
+// this: r30
+TextBlock::~TextBlock() {}
 
 // Range: 0x8009BE8C -> 0x8009BEE8
-void * TextBlock::TextBlock(class TextBlock * const this /* r31 */) {}
+// this: r31
+TextBlock::TextBlock() {}
 
 // Range: 0x8009BEE8 -> 0x8009BF24
-class EVec2 & TextBlock::GetActualSize(class TextBlock * const this /* r31 */) {}
+// this: r31
+class EVec2 & TextBlock::GetActualSize() {}
 
 // Range: 0x8009BF24 -> 0x8009BF2C
 class EVec4 & TextBlock::GetColor() {}

@@ -17,12 +17,6 @@ unsigned char Neighbor::IsInvisible() {}
 unsigned char Neighbor::IsInMotiveFailure() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\target\game\simulator\core\neighbor.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x800CE1D8 -> 0x800CE25C
-*/
 // Range: 0x800CE1D8 -> 0x800CE1E0
 void Neighbor::SetPerson() {}
 
@@ -33,20 +27,15 @@ class cXPerson * Neighbor::GetPerson() {}
 signed short Neighbor::GetID() {}
 
 // Range: 0x800CE1F0 -> 0x800CE25C
-void Neighbor::SetIsGhost(class Neighbor * const this /* r31 */) {}
+// this: r31
+void Neighbor::SetIsGhost() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\target\game\simulator\core\neighbor.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x800FC1B0 -> 0x800FC2B4
-*/
 // Range: 0x800FC1B0 -> 0x800FC1B8
 class ObjSelector * Neighbor::GetSelector() {}
 
 // Range: 0x800FC1B8 -> 0x800FC1EC
-void Neighbor::__dl(void * ptr /* r31 */) {}
+void Neighbor::operator delete(void * ptr /* r31 */) {}
 
 // Range: 0x800FC1EC -> 0x800FC1F4
 class ETexture * ENeighborhoodCustomChar::GetThumbnailTexture() {}
@@ -58,21 +47,16 @@ signed short * Neighbor::GetNeighborPersonDataArray() {}
 void ENeighborhoodCustomChar::SetThumbnailTexture() {}
 
 // Range: 0x800FC204 -> 0x800FC270
-void Neighbor::SetJustCreated(class Neighbor * const this /* r31 */) {}
+// this: r31
+void Neighbor::SetJustCreated() {}
 
 // Range: 0x800FC270 -> 0x800FC2AC
-void * Neighbor::__nw(unsigned long size /* r31 */) {}
+void * Neighbor::operator new(unsigned long size /* r31 */) {}
 
 // Range: 0x800FC2AC -> 0x800FC2B4
 class Motives * Neighbor::GetMotives() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\target\game\simulator\core\neighbor.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x8018E1CC -> 0x8018E230
-*/
 // Range: 0x8018E1CC -> 0x8018E1D4
 int ENeighborhoodCustomChar::GetGUID() {}
 
@@ -92,12 +76,6 @@ void ENeighborhoodCustomChar::SetNeighborData(int nField /* r1+0x8 */, signed sh
 int ENeighborhoodCustomChar::GetNeighborID() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\target\game\simulator\core\neighbor.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x80223250 -> 0x802232B8
-*/
 // Range: 0x80223250 -> 0x80223278
 unsigned char Neighbor::IsGreen() {}
 

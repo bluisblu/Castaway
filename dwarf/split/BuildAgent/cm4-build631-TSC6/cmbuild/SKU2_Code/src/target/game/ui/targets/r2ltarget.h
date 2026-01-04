@@ -5,6 +5,7 @@
     Code range: 0x801C1370 -> 0x801C13D4
 */
 // Range: 0x801C1370 -> 0x801C13D4
-void * R2LRecord::R2LRecord(class R2LRecord * const this /* r30 */) {}
+// this: r30
+R2LRecord::R2LRecord() {}
 
 

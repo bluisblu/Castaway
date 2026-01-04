@@ -5,7 +5,8 @@
     Code range: 0x80240934 -> 0x802409D4
 */
 // Range: 0x80240934 -> 0x802409D4
-void * ScrollingTextBox::~ScrollingTextBox(class ScrollingTextBox * const this /* r30 */) {
+// this: r30
+ScrollingTextBox::~ScrollingTextBox() {
     // References
     // -> class EShaderManager _shaderman;
     // -> struct [anonymous] __vt__16ScrollingTextBox;

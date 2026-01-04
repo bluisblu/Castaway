@@ -117,12 +117,6 @@ void pop_heap() {
 }
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\common\EASTL\1.03.00\include\EASTL\heap.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x802159F0 -> 0x80215F9C
-*/
 // Range: 0x802159F0 -> 0x80215A74
 void make_heap(unsigned int * first /* r27 */, unsigned char (* compare)(unsigned int &) /* r28 */) {
     // Local variables
@@ -180,12 +174,6 @@ void pop_heap(class Neighbor * * first /* r29 */, class Neighbor * * last /* r30
 }
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\common\EASTL\1.03.00\include\EASTL\heap.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x802AD2DC -> 0x802ADAA0
-*/
 // Range: 0x802AD2DC -> 0x802AD4B0
 void make_heap(struct ResourceIndexRecord * first /* r24 */, unsigned char (* compare)(struct ResourceIndexRecord &) /* r25 */) {
     // Local variables

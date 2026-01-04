@@ -11,6 +11,7 @@ enum eArchetype CASArchetypeTarget::GetSelectedArchetype() {}
 class CasSimDescription & CASArchetypeTarget::GetStoredSimDescription() {}
 
 // Range: 0x80197250 -> 0x801972A4
-unsigned char CASArchetypeTarget::IsCharacterMale(class CASArchetypeTarget * const this /* r31 */) {}
+// this: r31
+unsigned char CASArchetypeTarget::IsCharacterMale() {}
 
 

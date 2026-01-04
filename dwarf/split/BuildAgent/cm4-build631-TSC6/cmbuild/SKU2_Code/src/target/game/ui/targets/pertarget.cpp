@@ -5,7 +5,8 @@
     Code range: 0x801D7924 -> 0x801D81A8
 */
 // Range: 0x801D7924 -> 0x801D7AF4
-void * PERTarget::PERTarget(class PERTarget * const this /* r30 */) {
+// this: r30
+PERTarget::PERTarget() {
     // References
     // -> class EGlobal _globals;
     // -> static const char * const PER_titleIcon;
@@ -16,7 +17,8 @@ void * PERTarget::PERTarget(class PERTarget * const this /* r30 */) {
 }
 
 // Range: 0x801D7AF4 -> 0x801D7C14
-void * PERTarget::~PERTarget(class PERTarget * const this /* r30 */) {
+// this: r30
+PERTarget::~PERTarget() {
     // References
     // -> class EGlobal _globals;
     // -> struct [anonymous] __vt__9PERTarget;
@@ -26,7 +28,8 @@ void * PERTarget::~PERTarget(class PERTarget * const this /* r30 */) {
 void PERTarget::Update() {}
 
 // Range: 0x801D7C18 -> 0x801D7D7C
-void PERTarget::SetVariable(class PERTarget * const this /* r29 */, const char * szCommand /* r30 */, const char * szParams /* r31 */) {
+// this: r29
+void PERTarget::SetVariable(const char * szCommand /* r30 */, const char * szParams /* r31 */) {
     // Local variables
     unsigned int index; // r0
     unsigned int MapSimIndex[7]; // r1+0x24
@@ -39,7 +42,8 @@ void PERTarget::SetVariable(class PERTarget * const this /* r29 */, const char *
 }
 
 // Range: 0x801D7D7C -> 0x801D7E24
-char * PERTarget::GetVariable(class PERTarget * const this /* r29 */, const char * szVar /* r30 */) {
+// this: r29
+char * PERTarget::GetVariable(const char * szVar /* r30 */) {
     // Local variables
     char * retStr; // r31
 
@@ -69,7 +73,8 @@ static unsigned char show_tutorial(enum TutorialUnlockIndex index /* r11 */, cha
 }
 
 // Range: 0x801D7F7C -> 0x801D8170
-void PERTarget::SelectTab(class PERTarget * const this /* r29 */, unsigned int whichTab /* r30 */) {
+// this: r29
+void PERTarget::SelectTab(unsigned int whichTab /* r30 */) {
     // References
     // -> enum TutorialUnlockIndex m_HelpIndex;
     // -> unsigned int m_HelpSubIndex;

@@ -5,7 +5,8 @@
     Code range: 0x80300070 -> 0x80300288
 */
 // Range: 0x80300070 -> 0x80300190
-void * AptCIH::AptCIH(class AptCIH * const this /* r29 */, struct AptCharacterInst * pInstData /* r30 */, class AptCIH * _pParent /* r31 */) {
+// this: r29
+AptCIH::AptCIH(struct AptCharacterInst * pInstData /* r30 */, class AptCIH * _pParent /* r31 */) {
     // References
     // -> static char __PRETTY_FUNCTION__[78];
     // -> struct [anonymous] __vt__6AptCIH;
@@ -15,7 +16,8 @@ void * AptCIH::AptCIH(class AptCIH * const this /* r29 */, struct AptCharacterIn
 struct AptCharacterAnimationInst * AptCIH::getAnimationInst() {}
 
 // Range: 0x803001F4 -> 0x80300260
-unsigned char AptCIH::isAnimationInst(const class AptCIH * const this /* r29 */, unsigned char bUndefOK /* r30 */) {}
+// this: r29
+unsigned char AptCIH::isAnimationInst(unsigned char bUndefOK /* r30 */) const {}
 
 // Range: 0x80300260 -> 0x80300270
 void AptCIH::setZombieSate() {}
@@ -27,17 +29,13 @@ int AptCIH::getZombieCount() {}
 int AptCIH::getZombieState() {}
 
 
-/*
-    Compile unit: C:\dev\Tsc5\src\target\external\apt\source\Apt\AptCIH.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x8030C7A8 -> 0x8030CA10
-*/
 // Range: 0x8030C7A8 -> 0x8030C814
-unsigned char AptCIH::isButtonInst(const class AptCIH * const this /* r29 */, unsigned char bUndefOK /* r30 */) {}
+// this: r29
+unsigned char AptCIH::isButtonInst(unsigned char bUndefOK /* r30 */) const {}
 
 // Range: 0x8030C814 -> 0x8030C86C
-unsigned char AptCIH::isShapeInst(const class AptCIH * const this /* r30 */) {}
+// this: r30
+unsigned char AptCIH::isShapeInst() const {}
 
 // Range: 0x8030C86C -> 0x8030C874
 struct AptCharacterInst * AptCIH::getCharacterInst() {}
@@ -49,50 +47,37 @@ struct AptCharacterSpriteInst * AptCIH::getSpriteInst() {}
 struct AptCharacterMorphInst * AptCIH::getMorphInst() {}
 
 // Range: 0x8030C884 -> 0x8030C8DC
-unsigned char AptCIH::isMorphInst(const class AptCIH * const this /* r30 */) {}
+// this: r30
+unsigned char AptCIH::isMorphInst() const {}
 
 // Range: 0x8030C8DC -> 0x8030C944
-unsigned char AptCIH::isSpriteInstBase(const class AptCIH * const this /* r29 */, unsigned char bUndefOK /* r30 */) {}
+// this: r29
+unsigned char AptCIH::isSpriteInstBase(unsigned char bUndefOK /* r30 */) const {}
 
 // Range: 0x8030C944 -> 0x8030C9B0
-unsigned char AptCIH::isSpriteInst(const class AptCIH * const this /* r29 */, unsigned char bUndefOK /* r30 */) {}
+// this: r29
+unsigned char AptCIH::isSpriteInst(unsigned char bUndefOK /* r30 */) const {}
 
 // Range: 0x8030C9B0 -> 0x8030C9B8
 struct AptCharacterSpriteInstBase * AptCIH::getSpriteInstBase() {}
 
 // Range: 0x8030C9B8 -> 0x8030CA10
-unsigned char AptCIH::isLevelInst(const class AptCIH * const this /* r30 */) {}
+// this: r30
+unsigned char AptCIH::isLevelInst() const {}
 
 
-/*
-    Compile unit: C:\dev\Tsc5\src\target\external\apt\source\Apt\AptCIH.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x803105AC -> 0x803105B4
-*/
 // Range: 0x803105AC -> 0x803105B4
 struct AptCharacterButtonInst * AptCIH::getButtonInst() {}
 
 
-/*
-    Compile unit: C:\dev\Tsc5\src\target\external\apt\source\Apt\AptCIH.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x80317760 -> 0x803177C0
-*/
 // Range: 0x80317760 -> 0x80317768
 struct AptCharacterTextInst * AptCIH::getTextInst() {}
 
 // Range: 0x80317768 -> 0x803177C0
-unsigned char AptCIH::isTextInst(const class AptCIH * const this /* r30 */) {}
+// this: r30
+unsigned char AptCIH::isTextInst() const {}
 
 
-/*
-    Compile unit: C:\dev\Tsc5\src\target\external\apt\source\Apt\AptCIH.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x8031A0B8 -> 0x8031A208
-*/
 // Range: 0x8031A0B8 -> 0x8031A0D0
 void AptCIH::setHasClass() {}
 
@@ -103,7 +88,8 @@ void AptCIH::setASChanged() {}
 struct AptCharacterStaticTextInst * AptCIH::getStaticTextInst() {}
 
 // Range: 0x8031A0F0 -> 0x8031A148
-unsigned char AptCIH::isStaticTextInst(const class AptCIH * const this /* r30 */) {}
+// this: r30
+unsigned char AptCIH::isStaticTextInst() const {}
 
 // Range: 0x8031A148 -> 0x8031A150
 struct AptCharacterShapeInst * AptCIH::getShapeInst() {}
@@ -121,32 +107,14 @@ void AptCIH::SetInCtor() {}
 int AptCIH::getHasClass() {}
 
 
-/*
-    Compile unit: C:\dev\Tsc5\src\target\external\apt\source\Apt\AptCIH.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x8031FF98 -> 0x80320024
-*/
 // Range: 0x80320018 -> 0x80320024
 int AptCIH::getASChanged() {}
 
 
-/*
-    Compile unit: C:\dev\Tsc5\src\target\external\apt\source\Apt\AptCIH.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x80321CAC -> 0x80321CC4
-*/
 // Range: 0x80321CAC -> 0x80321CC4
 void AptCIH::incZombieCount() {}
 
 
-/*
-    Compile unit: C:\dev\Tsc5\src\target\external\apt\source\Apt\AptCIH.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x8032F5DC -> 0x8032F5E8
-*/
 // Range: 0x8032F5DC -> 0x8032F5E8
 unsigned char AptCIH::IsInCtor() {}
 

@@ -5,10 +5,11 @@
     Code range: 0x8004CFA8 -> 0x8004D154
 */
 // Range: 0x8004CFA8 -> 0x8004CFE8
-void * Fader::~Fader(class Fader * const this /* r31 */) {}
+// this: r31
+Fader::~Fader() {}
 
 // Range: 0x8004CFE8 -> 0x8004D004
-void * Fader::Fader() {}
+Fader::Fader() {}
 
 // Range: 0x8004D004 -> 0x8004D010
 void Fader::FadeActivate() {}
@@ -32,32 +33,14 @@ void Fader::FadeUpdate() {}
 void Fader::FadeIn() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\target\game\fader.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x8009AD6C -> 0x8009AD78
-*/
 // Range: 0x8009AD6C -> 0x8009AD78
 unsigned char Fader::IsFadingOut() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\target\game\fader.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x80174F8C -> 0x80174F98
-*/
 // Range: 0x80174F8C -> 0x80174F98
 unsigned char Fader::IsFadedOut() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\target\game\fader.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x801CB188 -> 0x801CB1A0
-*/
 // Range: 0x801CB188 -> 0x801CB194
 void Fader::FadeDeactivate() {}
 

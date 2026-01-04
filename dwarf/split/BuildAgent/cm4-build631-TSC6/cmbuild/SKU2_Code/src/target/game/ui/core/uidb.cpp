@@ -93,13 +93,15 @@ struct UIDBData * UIDB::UIDBFindRecord(const char * nameString /* r26 */, enum e
 }
 
 // Range: 0x80181AA0 -> 0x80181BB4
-void * UIDBTarget::UIDBTarget(class UIDBTarget * const this /* r30 */) {
+// this: r30
+UIDBTarget::UIDBTarget() {
     // References
     // -> struct [anonymous] __vt__10UIDBTarget;
 }
 
 // Range: 0x80181BB4 -> 0x80181C20
-void * UIDBTarget::~UIDBTarget(class UIDBTarget * const this /* r30 */) {
+// this: r30
+UIDBTarget::~UIDBTarget() {
     // References
     // -> struct [anonymous] __vt__10UIDBTarget;
 }

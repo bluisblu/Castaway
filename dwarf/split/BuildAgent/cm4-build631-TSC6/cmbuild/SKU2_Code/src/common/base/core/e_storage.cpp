@@ -5,7 +5,8 @@
     Code range: 0x8026F2E0 -> 0x802707B4
 */
 // Range: 0x8026F2E0 -> 0x8026FDBC
-int EStream::WriteStructure(class EStream * const this /* r17 */, class EStorable & Root /* r18 */) {
+// this: r17
+int EStream::WriteStructure(class EStorable & Root /* r18 */) {
     // Local variables
     int startPos; // r0
     class TNodeList objectsToStore; // r1+0x6C
@@ -39,7 +40,8 @@ int EStream::WriteStructure(class EStream * const this /* r17 */, class EStorabl
 }
 
 // Range: 0x8026FDBC -> 0x8026FF44
-class EStorable * EStream::ReadStructure(class EStream * const this /* r27 */, unsigned int FirstWord /* r28 */) {
+// this: r27
+class EStorable * EStream::ReadStructure(unsigned int FirstWord /* r28 */) {
     // Local variables
     int nObjects; // r0
     int pos; // r29
@@ -54,26 +56,28 @@ class EStorable * EStream::ReadStructure(class EStream * const this /* r27 */, u
 }
 
 // Range: 0x8026FF44 -> 0x80270178
-class EStream & __ls(class EStream & s /* r31 */, class EStorable * pD /* r28 */) {
+class EStream & operator<<(class EStream & s /* r31 */, class EStorable * pD /* r28 */) {
     // References
     // -> struct ERedBlackTreeNode m_sentinel;
 }
 
 // Range: 0x80270178 -> 0x80270210
-class EStream & __rs(class EStream & s /* r30 */, class EStorable * & pD /* r31 */) {
+class EStream & operator>>(class EStream & s /* r30 */, class EStorable * & pD /* r31 */) {
     // Local variables
     unsigned int index; // r1+0x8
 }
 
 // Range: 0x80270210 -> 0x802702B8
-int EStream::ReadString(class EStream * const this /* r27 */, char * szBuffer /* r28 */, int bufferSize /* r29 */) {
+// this: r27
+int EStream::ReadString(char * szBuffer /* r28 */, int bufferSize /* r29 */) {
     // Local variables
     char c; // r1+0x8
     int pos; // r30
 }
 
 // Range: 0x802702B8 -> 0x80270358
-int EStream::WriteString(class EStream * const this /* r29 */) {
+// this: r29
+int EStream::WriteString() {
     // Local variables
     int pos; // r30
 }
@@ -82,21 +86,21 @@ int EStream::WriteString(class EStream * const this /* r29 */) {
 class EFile * EStream::GetFile() {}
 
 // Range: 0x80270360 -> 0x802703F4
-class EStream & __ls(class EStream & s /* r31 */) {}
+class EStream & operator<<(class EStream & s /* r31 */) {}
 
 // Range: 0x802703F4 -> 0x80270500
-class EStream & __ls(class EStream & s /* r30 */, const class EBound3 & b /* r31 */) {}
+class EStream & operator<<(class EStream & s /* r30 */, const class EBound3 & b /* r31 */) {}
 
 // Range: 0x80270500 -> 0x802705B8
-class EStream & __ls(class EStream & s /* r31 */) {}
+class EStream & operator<<(class EStream & s /* r31 */) {}
 
 // Range: 0x802705B8 -> 0x8027063C
-class EStream & __rs(class EStream & s /* r30 */, class EVec3 & v /* r31 */) {}
+class EStream & operator>>(class EStream & s /* r30 */, class EVec3 & v /* r31 */) {}
 
 // Range: 0x8027063C -> 0x80270714
-class EStream & __rs(class EStream & s /* r30 */, class EBound3 & b /* r31 */) {}
+class EStream & operator>>(class EStream & s /* r30 */, class EBound3 & b /* r31 */) {}
 
 // Range: 0x80270714 -> 0x802707B4
-class EStream & __rs(class EStream & s /* r30 */, class EBoundSphere & b /* r31 */) {}
+class EStream & operator>>(class EStream & s /* r30 */, class EBoundSphere & b /* r31 */) {}
 
 

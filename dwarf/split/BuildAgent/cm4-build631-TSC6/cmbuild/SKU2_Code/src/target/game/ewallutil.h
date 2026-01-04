@@ -5,12 +5,14 @@
     Code range: 0x8021F8E4 -> 0x8021F970
 */
 // Range: 0x8021F8E4 -> 0x8021F924
-void * EWallSetup::~EWallSetup(class EWallSetup * const this /* r31 */) {}
+// this: r31
+EWallSetup::~EWallSetup() {}
 
 // Range: 0x8021F924 -> 0x8021F958
-void * EWallSetup::EWallSetup(class EWallSetup * const this /* r31 */) {}
+// this: r31
+EWallSetup::EWallSetup() {}
 
 // Range: 0x8021F958 -> 0x8021F970
-void * EWallSetup::EWallSetup() {}
+EWallSetup::EWallSetup() {}
 
 

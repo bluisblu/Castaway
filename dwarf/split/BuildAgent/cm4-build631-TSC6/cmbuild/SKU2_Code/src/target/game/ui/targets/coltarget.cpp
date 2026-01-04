@@ -5,7 +5,8 @@
     Code range: 0x801E9458 -> 0x801EA0E8
 */
 // Range: 0x801E9458 -> 0x801E97A4
-void * COLTarget::COLTarget(class COLTarget * const this /* r29 */) {
+// this: r29
+COLTarget::COLTarget() {
     // References
     // -> class EGlobal _globals;
     // -> static const char * const COL_tabIcon1;
@@ -26,14 +27,16 @@ void * COLTarget::COLTarget(class COLTarget * const this /* r29 */) {
 }
 
 // Range: 0x801E97A4 -> 0x801E9874
-void * COLTarget::~COLTarget(class COLTarget * const this /* r29 */) {
+// this: r29
+COLTarget::~COLTarget() {
     // References
     // -> class EGlobal _globals;
     // -> struct [anonymous] __vt__9COLTarget;
 }
 
 // Range: 0x801E9874 -> 0x801E9A7C
-void COLTarget::SetVariable(class COLTarget * const this /* r28 */, const char * szCommand /* r29 */, const char * szParams /* r30 */) {
+// this: r28
+void COLTarget::SetVariable(const char * szCommand /* r29 */, const char * szParams /* r30 */) {
     // Local variables
     int tab; // r1+0xC
     int tab; // r1+0x8
@@ -45,7 +48,8 @@ void COLTarget::SetVariable(class COLTarget * const this /* r28 */, const char *
 }
 
 // Range: 0x801E9A7C -> 0x801E9BB4
-char * COLTarget::GetVariable(class COLTarget * const this /* r29 */, const char * szVar /* r30 */) {
+// this: r29
+char * COLTarget::GetVariable(const char * szVar /* r30 */) {
     // Local variables
     char * retStr; // r31
     int numPieces; // r0
@@ -60,7 +64,8 @@ char * COLTarget::GetVariable(class COLTarget * const this /* r29 */, const char
 }
 
 // Range: 0x801E9BB4 -> 0x801E9C34
-void COLTarget::Update(class COLTarget * const this /* r31 */) {
+// this: r31
+void COLTarget::Update() {
     // Local variables
     class EVec2 dummy; // r1+0x8
 
@@ -70,7 +75,8 @@ void COLTarget::Update(class COLTarget * const this /* r31 */) {
 }
 
 // Range: 0x801E9C34 -> 0x801E9E7C
-unsigned short * COLTarget::GetLocalizable(class COLTarget * const this /* r28 */, const char * szVar /* r29 */) {
+// this: r28
+unsigned short * COLTarget::GetLocalizable(const char * szVar /* r29 */) {
     // Local variables
     unsigned short * wideStr; // r30
     unsigned short * outString; // r31
@@ -84,7 +90,8 @@ unsigned short * COLTarget::GetLocalizable(class COLTarget * const this /* r28 *
 }
 
 // Range: 0x801E9E7C -> 0x801E9FC0
-void COLTarget::ChangeTab(class COLTarget * const this /* r29 */, unsigned char bChangePanels /* r30 */) {
+// this: r29
+void COLTarget::ChangeTab(unsigned char bChangePanels /* r30 */) {
     // Local variables
     int i; // r30
     int i; // r30
@@ -100,7 +107,8 @@ void COLTarget::ChangeTab(class COLTarget * const this /* r29 */, unsigned char 
 int COLTarget::GetNumberOfPiecesThisTab() {}
 
 // Range: 0x801E9FEC -> 0x801EA0E8
-char * COLTarget::GetCountsString(class COLTarget * const this /* r27 */) {
+// this: r27
+char * COLTarget::GetCountsString() {
     // Local variables
     int found; // r30
     class InventoryItems * pInventory; // r0

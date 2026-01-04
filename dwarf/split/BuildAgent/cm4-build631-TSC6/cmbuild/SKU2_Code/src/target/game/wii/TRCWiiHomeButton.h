@@ -1,14 +1,4 @@
 /*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\target\game\wii\TRCWiiHomeButton.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x80170E80 -> 0x80170E94
-*/
-// Range: 0x80170E80 -> 0x80170E94
-void TRCHomeButton::EnableHomeMenu() {}
-
-
-/*
     Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\target\game\Wii\TRCWiiHomeButton.h
     Producer: MW EABI PPC C-Compiler
     Language: C++
@@ -30,13 +20,13 @@ enum HomeMenuState TRCHomeButton::GetHomeMenuState() {}
 unsigned char * TRCHomeButton::GetBanIconData() {}
 
 // Range: 0x80246F44 -> 0x80246F64
-void * TRCHomeButton::__nw() {
+void * TRCHomeButton::operator new() {
     // References
     // -> struct TRCWiiInit msInitParams;
 }
 
 // Range: 0x80246F80 -> 0x80246F94
-void TRCHomeButton::__dl() {
+void TRCHomeButton::operator delete() {
     // References
     // -> struct TRCWiiInit msInitParams;
 }

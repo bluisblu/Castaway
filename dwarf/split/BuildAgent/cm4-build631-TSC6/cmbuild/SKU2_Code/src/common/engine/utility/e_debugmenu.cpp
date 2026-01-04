@@ -5,7 +5,7 @@
     Code range: 0x802F5160 -> 0x802F5380
 */
 // Range: 0x802F5160 -> 0x802F517C
-void * EDebugMenuItem::EDebugMenuItem() {
+EDebugMenuItem::EDebugMenuItem() {
     // References
     // -> struct [anonymous] __vt__14EDebugMenuItem;
 }

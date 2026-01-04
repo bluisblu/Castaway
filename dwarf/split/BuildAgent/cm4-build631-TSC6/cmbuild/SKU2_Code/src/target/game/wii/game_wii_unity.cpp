@@ -5,8 +5,9 @@
     Code range: 0x80246654 -> 0x80246654
 */
 class PetsHomeButton _wiiHomeButton; // size: 0x8, address: 0x805DBDC0
+// total size: 0x4C
 class EMsgQueue {
-    // total size: 0x4C
+    // Members
 protected:
     class ESemaphore m_inSema; // offset 0x0, size 0x18
     class ESemaphore m_outSema; // offset 0x18, size 0x18
@@ -18,8 +19,9 @@ protected:
     unsigned int m_totalSent; // offset 0x44, size 0x4
     unsigned int m_maxSent; // offset 0x48, size 0x4
 };
+// total size: 0xC
 class EMovie {
-    // total size: 0xC
+    // Members
 public:
     void * __vptr$; // offset 0x0, size 0x4
 protected:
@@ -32,8 +34,9 @@ enum _VITimeToDIM {
     VI_DM_15M = 2,
 };
 static unsigned char backgroundColor[3]; // size: 0x3, address: 0x805DBDC8
+// total size: 0x3
 struct texel888 {
-    // total size: 0x3
+    // Members
     unsigned char b; // offset 0x0, size 0x1
     unsigned char g; // offset 0x1, size 0x1
     unsigned char r; // offset 0x2, size 0x1

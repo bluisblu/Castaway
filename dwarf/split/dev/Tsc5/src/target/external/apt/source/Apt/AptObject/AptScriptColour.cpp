@@ -6,7 +6,8 @@
 */
 static char __PRETTY_FUNCTION__[51]; // size: 0x33, address: 0x8045F400
 // Range: 0x8033069C -> 0x80330768
-void * AptScriptColour::AptScriptColour(class AptScriptColour * const this /* r30 */, class AptValue * const pMovie /* r31 */) {
+// this: r30
+AptScriptColour::AptScriptColour(class AptValue * const pMovie /* r31 */) {
     // Local variables
     class AptCIH * pCih; // r31
 
@@ -16,7 +17,8 @@ void * AptScriptColour::AptScriptColour(class AptScriptColour * const this /* r3
 }
 
 // Range: 0x80330768 -> 0x803307C4
-void * AptScriptColour::~AptScriptColour(class AptScriptColour * const this /* r30 */) {}
+// this: r30
+AptScriptColour::~AptScriptColour() {}
 
 static char __PRETTY_FUNCTION__[40]; // size: 0x28, address: 0x8045F448
 // Range: 0x803307C4 -> 0x803308C0
@@ -109,19 +111,20 @@ class AptValue * AptScriptColour::sMethod_setTransform(class AptValue * pThis /*
 }
 
 // Range: 0x803311B4 -> 0x80331200
-void AptScriptColour::RegisterReferences(const class AptScriptColour * const this /* r31 */) {
+// this: r31
+void AptScriptColour::RegisterReferences() const {
     // References
     // -> void (* sReferenceRegistrationCb)(class AptValue *, class AptValue *, char *);
 }
 
 static char __PRETTY_FUNCTION__[37]; // size: 0x25, address: 0x8045F4C8
 // Range: 0x80331200 -> 0x8033126C
-void AptScriptColour::DestroyGCPointers(class AptScriptColour * const this /* r31 */) {
+// this: r31
+void AptScriptColour::DestroyGCPointers() {
     // References
     // -> static char __PRETTY_FUNCTION__[37];
 }
 
-struct {
-    // total size: 0x44
-} __vt__15AptScriptColour; // size: 0x44, address: 0x8045F4F0
+// total size: 0x44
+struct {} __vt__15AptScriptColour; // size: 0x44, address: 0x8045F4F0
 

@@ -14,7 +14,8 @@ static unsigned char TryCatExtension(class StackString & origPath /* r30 */, str
 }
 
 // Range: 0x800DD694 -> 0x800DD75C
-void * SeqResFile::~SeqResFile(class SeqResFile * const this /* r28 */) {
+// this: r28
+SeqResFile::~SeqResFile() {
     // Local variables
     int count; // r31
     class iResFile * del; // r30
@@ -24,7 +25,8 @@ void * SeqResFile::~SeqResFile(class SeqResFile * const this /* r28 */) {
 }
 
 // Range: 0x800DD75C -> 0x800DD85C
-int SeqResFile::CreateIResFile(class SeqResFile * const this /* r25 */, class iResFile * resFile /* r26 */, const class StringBuffer & inName /* r31 */, int ct /* r29 */, int & createCnt /* r27 */, class StackString * * createdStr /* r28 */) {
+// this: r25
+int SeqResFile::CreateIResFile(class iResFile * resFile /* r26 */, const class StringBuffer & inName /* r31 */, int ct /* r29 */, int & createCnt /* r27 */, class StackString * * createdStr /* r28 */) {
     // Local variables
     int lastErr; // r30
     class StackString name; // r1+0x8
@@ -32,7 +34,8 @@ int SeqResFile::CreateIResFile(class SeqResFile * const this /* r25 */, class iR
 }
 
 // Range: 0x800DD85C -> 0x800DD990
-int SeqResFile::OpenIResFile(class SeqResFile * const this /* r26 */, class iResFile * resFile /* r27 */, const class StringBuffer & inName /* r31 */, int ct /* r29 */, unsigned char & success /* r28 */) {
+// this: r26
+int SeqResFile::OpenIResFile(class iResFile * resFile /* r27 */, const class StringBuffer & inName /* r31 */, int ct /* r29 */, unsigned char & success /* r28 */) {
     // Local variables
     int lastErr; // r30
     class StackString name; // r1+0x8
@@ -40,7 +43,8 @@ int SeqResFile::OpenIResFile(class SeqResFile * const this /* r26 */, class iRes
 }
 
 // Range: 0x800DD990 -> 0x800DDA60
-int SeqResFile::DeleteIResFile(class SeqResFile * const this /* r27 */, class iResFile * resFile /* r28 */, const class StringBuffer & inName /* r29 */, int ct /* r30 */) {
+// this: r27
+int SeqResFile::DeleteIResFile(class iResFile * resFile /* r28 */, const class StringBuffer & inName /* r29 */, int ct /* r30 */) {
     // Local variables
     int lastErr; // r31
     class StackString name; // r1+0x8
@@ -48,7 +52,8 @@ int SeqResFile::DeleteIResFile(class SeqResFile * const this /* r27 */, class iR
 }
 
 // Range: 0x800DDA60 -> 0x800DDC10
-int SeqResFile::Create(class SeqResFile * const this /* r23 */, const class StringBuffer & inName /* r24 */) {
+// this: r23
+int SeqResFile::Create(const class StringBuffer & inName /* r24 */) {
     // Local variables
     int lastErr; // r28
     class StackString created[8]; // r1+0x38
@@ -61,7 +66,8 @@ int SeqResFile::Create(class SeqResFile * const this /* r23 */, const class Stri
 }
 
 // Range: 0x800DDC54 -> 0x800DDD44
-int SeqResFile::Delete(class SeqResFile * const this /* r28 */, const class StringBuffer & inName /* r29 */) {
+// this: r28
+int SeqResFile::Delete(const class StringBuffer & inName /* r29 */) {
     // Local variables
     int lastErr; // r3
     int ct; // r30
@@ -69,7 +75,8 @@ int SeqResFile::Delete(class SeqResFile * const this /* r28 */, const class Stri
 }
 
 // Range: 0x800DDD44 -> 0x800DDEB8
-int SeqResFile::Open(class SeqResFile * const this /* r22 */, const class StringBuffer & inName /* r23 */) {
+// this: r22
+int SeqResFile::Open(const class StringBuffer & inName /* r23 */) {
     // Local variables
     int lastErr; // r26
     unsigned char success; // r1+0x8
@@ -78,14 +85,16 @@ int SeqResFile::Open(class SeqResFile * const this /* r22 */, const class String
 }
 
 // Range: 0x800DDEB8 -> 0x800DDF4C
-int SeqResFile::Close(class SeqResFile * const this /* r29 */) {
+// this: r29
+int SeqResFile::Close() {
     // Local variables
     int err; // r31
     class iResFile * del; // r30
 }
 
 // Range: 0x800DDF4C -> 0x800DDFD8
-void SeqResFile::GetFileName(class SeqResFile * const this /* r30 */, class StringBuffer & name /* r31 */) {
+// this: r30
+void SeqResFile::GetFileName(class StringBuffer & name /* r31 */) {
     // Local variables
     class StackString fullName; // r1+0x410
     class StackString ext; // r1+0x8

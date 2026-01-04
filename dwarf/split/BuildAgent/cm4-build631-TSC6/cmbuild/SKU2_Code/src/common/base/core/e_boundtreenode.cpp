@@ -5,25 +5,27 @@
     Code range: 0x8025F6C8 -> 0x8025FB38
 */
 // Range: 0x8025F6C8 -> 0x8025F6CC
-class EStream & __ls() {}
+class EStream & operator<<() {}
 
 // Range: 0x8025F6CC -> 0x8025F714
-class EStream & __rs(class EStream & s /* r30 */, class EBoundTreeNode * & pD /* r31 */) {
+class EStream & operator>>(class EStream & s /* r30 */, class EBoundTreeNode * & pD /* r31 */) {
     // Local variables
     class EStorable * pStorable; // r1+0x8
 }
 
 // Range: 0x8025F714 -> 0x8025F75C
-class EFile & __rs(class EFile & s /* r30 */, class EBoundTreeNode * & pD /* r31 */) {
+class EFile & operator>>(class EFile & s /* r30 */, class EBoundTreeNode * & pD /* r31 */) {
     // Local variables
     class EStorable * pStorable; // r1+0x8
 }
 
 // Range: 0x8025F75C -> 0x8025F7B4
-void EBoundTreeNode::Write(class EBoundTreeNode * const this /* r30 */) {}
+// this: r30
+void EBoundTreeNode::Write() {}
 
 // Range: 0x8025F7B4 -> 0x8025F830
-void EBoundTreeNode::Read(class EBoundTreeNode * const this /* r30 */) {
+// this: r30
+void EBoundTreeNode::Read() {
     // References
     // -> class ETypeInfo m_typeInfo;
 }

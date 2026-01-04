@@ -5,6 +5,7 @@
     Code range: 0x8001FFF0 -> 0x80020030
 */
 // Range: 0x8001FFF0 -> 0x80020030
-void * MiscTweakTool::~MiscTweakTool(class MiscTweakTool * const this /* r31 */) {}
+// this: r31
+MiscTweakTool::~MiscTweakTool() {}
 
 

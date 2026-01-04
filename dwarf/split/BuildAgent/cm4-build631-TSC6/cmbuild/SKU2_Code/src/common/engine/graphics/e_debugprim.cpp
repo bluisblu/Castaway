@@ -5,7 +5,8 @@
     Code range: 0x802925EC -> 0x802928CC
 */
 // Range: 0x802925EC -> 0x802928B4
-void * EDebugPrim::EDebugPrim(class EDebugPrim * const this /* r31 */) {}
+// this: r31
+EDebugPrim::EDebugPrim() {}
 
 // Range: 0x802928B4 -> 0x802928CC
 void EDebugPrim::Update() {}

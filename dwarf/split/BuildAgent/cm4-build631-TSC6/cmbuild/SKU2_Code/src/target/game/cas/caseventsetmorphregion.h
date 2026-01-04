@@ -8,17 +8,13 @@
 enum eMorphRegion CasEventSetMorphRegion::GetMorphRegion() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\target\game\cas\caseventsetmorphregion.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x8019718C -> 0x80197240
-*/
 // Range: 0x8019718C -> 0x801971E4
-void * CasEventSetMorphRegion::~CasEventSetMorphRegion(class CasEventSetMorphRegion * const this /* r30 */) {}
+// this: r30
+CasEventSetMorphRegion::~CasEventSetMorphRegion() {}
 
 // Range: 0x801971E4 -> 0x8019723C
-void * CasEventSetMorphRegion::CasEventSetMorphRegion(class CasEventSetMorphRegion * const this /* r30 */, enum eMorphRegion morphRegion /* r31 */) {
+// this: r30
+CasEventSetMorphRegion::CasEventSetMorphRegion(enum eMorphRegion morphRegion /* r31 */) {
     // References
     // -> struct [anonymous] __vt__22CasEventSetMorphRegion;
 }

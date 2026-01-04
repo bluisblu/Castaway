@@ -5,13 +5,15 @@
     Code range: 0x802CD9BC -> 0x802CDC14
 */
 // Range: 0x802CD9BC -> 0x802CD9F8
-void * ENgcShader::ENgcShader(class ENgcShader * const this /* r31 */) {
+// this: r31
+ENgcShader::ENgcShader() {
     // References
     // -> struct [anonymous] __vt__10ENgcShader;
 }
 
 // Range: 0x802CD9F8 -> 0x802CDA58
-void * ENgcShader::~ENgcShader(class ENgcShader * const this /* r30 */) {
+// this: r30
+ENgcShader::~ENgcShader() {
     // References
     // -> class EShaderManager _shaderman;
 }
@@ -26,7 +28,8 @@ void ENgcShader::SetShadowAlpha() {
 }
 
 // Range: 0x802CDAA4 -> 0x802CDB58
-void ENgcShader::Select(class ENgcShader * const this /* r28 */, class ERC * prc /* r29 */, unsigned int overrideColor /* r30 */) {
+// this: r28
+void ENgcShader::Select(class ERC * prc /* r29 */, unsigned int overrideColor /* r30 */) {
     // Local variables
     int i; // r31
 
@@ -35,10 +38,12 @@ void ENgcShader::Select(class ENgcShader * const this /* r28 */, class ERC * prc
 }
 
 // Range: 0x802CDB58 -> 0x802CDBC4
-void ENgcShader::SelectForShadowMask(class ENgcShader * const this /* r30 */, class ERC * prc /* r31 */) {}
+// this: r30
+void ENgcShader::SelectForShadowMask(class ERC * prc /* r31 */) {}
 
 // Range: 0x802CDBC4 -> 0x802CDC10
-unsigned char ENgcShader::Create(class ENgcShader * const this /* r31 */) {}
+// this: r31
+unsigned char ENgcShader::Create() {}
 
 // Range: 0x802CDC10 -> 0x802CDC14
 void ENgcShader::ChangeMaterial() {}

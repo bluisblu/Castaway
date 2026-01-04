@@ -5,19 +5,22 @@
     Code range: 0x800E759C -> 0x800EB4BC
 */
 // Range: 0x800E759C -> 0x800E7634
-void * cFixedWorld::cFixedWorld(class cFixedWorld * const this /* r29 */, int xSize /* r30 */, int ySize /* r31 */) {
+// this: r29
+cFixedWorld::cFixedWorld(int xSize /* r30 */, int ySize /* r31 */) {
     // References
     // -> struct [anonymous] __vt__11cFixedWorld;
 }
 
 // Range: 0x800E7634 -> 0x800E76A0
-void * cFixedWorld::~cFixedWorld(class cFixedWorld * const this /* r30 */) {
+// this: r30
+cFixedWorld::~cFixedWorld() {
     // References
     // -> struct [anonymous] __vt__11cFixedWorld;
 }
 
 // Range: 0x800E76A0 -> 0x800E7AD8
-unsigned char cFixedWorld::SetSize(class cFixedWorld * const this /* r26 */, int newXSize /* r27 */, int newYSize /* r28 */, unsigned char bRetainOldData /* r21 */) {
+// this: r26
+unsigned char cFixedWorld::SetSize(int newXSize /* r27 */, int newYSize /* r28 */, unsigned char bRetainOldData /* r21 */) {
     // Local variables
     class CFloorArray * pNewFloorLayer; // r31
     class cArray * pNewFlagLayer; // r30
@@ -29,16 +32,20 @@ unsigned char cFixedWorld::SetSize(class cFixedWorld * const this /* r26 */, int
 }
 
 // Range: 0x800E7AD8 -> 0x800E7B08
-void * CWallArray::CWallArray(class CWallArray * const this /* r31 */) {}
+// this: r31
+CWallArray::CWallArray() {}
 
 // Range: 0x800E7BB8 -> 0x800E7BE8
-void * CFloorArray::CFloorArray(class CFloorArray * const this /* r31 */) {}
+// this: r31
+CFloorArray::CFloorArray() {}
 
 // Range: 0x800E7C40 -> 0x800E7CF4
-void cFixedWorld::DeleteArrays(class cFixedWorld * const this /* r30 */) {}
+// this: r30
+void cFixedWorld::DeleteArrays() {}
 
 // Range: 0x800E7DFC -> 0x800E7E9C
-int cFixedWorld::Save(class cFixedWorld * const this /* r29 */, class iResFile * file /* r30 */) {
+// this: r29
+int cFixedWorld::Save(class iResFile * file /* r30 */) {
     // Local variables
     int err; // r0
 
@@ -49,7 +56,8 @@ int cFixedWorld::Save(class cFixedWorld * const this /* r29 */, class iResFile *
 }
 
 // Range: 0x800E7E9C -> 0x800E8268
-int cFixedWorld::Load(class cFixedWorld * const this /* r25 */, class iResFile * file /* r23 */) {
+// this: r25
+int cFixedWorld::Load(class iResFile * file /* r23 */) {
     // Local variables
     int err; // r0
     int xSize; // r29
@@ -69,7 +77,8 @@ int cFixedWorld::Load(class cFixedWorld * const this /* r25 */, class iResFile *
 }
 
 // Range: 0x800E8268 -> 0x800E868C
-class TileWalls cFixedWorld::GetWall(class cFixedWorld * const this /* r29 */, const class CTilePt & inPt /* r20 */) {
+// this: r29
+class TileWalls cFixedWorld::GetWall(const class CTilePt & inPt /* r20 */) {
     // Local variables
     int x; // r31
     int y; // r30
@@ -77,7 +86,8 @@ class TileWalls cFixedWorld::GetWall(class cFixedWorld * const this /* r29 */, c
 }
 
 // Range: 0x800E868C -> 0x800E8C94
-void cFixedWorld::SetWall(class cFixedWorld * const this /* r27 */, const class CTilePt & inLocation /* r26 */, class TileWalls & inWalls /* r28 */) {
+// this: r27
+void cFixedWorld::SetWall(const class CTilePt & inLocation /* r26 */, class TileWalls & inWalls /* r28 */) {
     // Local variables
     int x; // r30
     int y; // r29
@@ -96,7 +106,8 @@ void cFixedWorld::SetWall(class cFixedWorld * const this /* r27 */, const class 
 }
 
 // Range: 0x800E8C94 -> 0x800EA1AC
-void cFixedWorld::ComputeRooms(class cFixedWorld * const this /* r15 */, int inLevel /* f1 */) {
+// this: r15
+void cFixedWorld::ComputeRooms(int inLevel /* f1 */) {
     // Local variables
     int x; // r14
     int y; // r14
@@ -165,10 +176,12 @@ void cFixedWorld::ComputeRooms(class cFixedWorld * const this /* r15 */, int inL
 int cFixedWorld::ComputeArchValue() {}
 
 // Range: 0x800EA1BC -> 0x800EA248
-unsigned char cFixedWorld::DoCommand(class cFixedWorld * const this /* r31 */, int info /* r1+0x8 */) {}
+// this: r31
+unsigned char cFixedWorld::DoCommand(int info /* r1+0x8 */) {}
 
 // Range: 0x800EA248 -> 0x800EA4CC
-void cFixedWorld::OffsetWorld(class cFixedWorld * const this /* r31 */, const class CTilePt & inOffset /* r29 */) {
+// this: r31
+void cFixedWorld::OffsetWorld(const class CTilePt & inOffset /* r29 */) {
     // Local variables
     int level; // r0
     int x; // r30
@@ -183,7 +196,8 @@ unsigned char cFixedWorld::OutOfBuildingBounds() {
 }
 
 // Range: 0x800EA51C -> 0x800EA5B8
-void cFixedWorld::ClampToGrid(const class cFixedWorld * const this /* r30 */, class CTilePt & aPt /* r31 */) {}
+// this: r30
+void cFixedWorld::ClampToGrid(class CTilePt & aPt /* r31 */) const {}
 
 // Range: 0x800EA5B8 -> 0x800EA5F8
 unsigned char cFixedWorld::OutOfGrid() {}
@@ -198,7 +212,8 @@ int cFixedWorld::GetYSize() {}
 int cFixedWorld::GetMaxSize() {}
 
 // Range: 0x800EA610 -> 0x800EA66C
-enum FloorPattern cFixedWorld::GetFloor(class cFixedWorld * const this /* r31 */) {
+// this: r31
+enum FloorPattern cFixedWorld::GetFloor() {
     // Local variables
     class CTilePt useIn; // r1+0x8
 }
@@ -214,13 +229,15 @@ unsigned char cFixedWorld::IsGrassAt() {
 }
 
 // Range: 0x800EA708 -> 0x800EA784
-enum FloorPattern cFixedWorld::SetFloor(class cFixedWorld * const this /* r28 */, const class CTilePt & in /* r29 */, enum FloorPattern newFloor /* r31 */) {
+// this: r28
+enum FloorPattern cFixedWorld::SetFloor(const class CTilePt & in /* r29 */, enum FloorPattern newFloor /* r31 */) {
     // Local variables
     enum FloorPattern pat; // r30
 }
 
 // Range: 0x800EA784 -> 0x800EA844
-unsigned short cFixedWorld::GetRoom(class cFixedWorld * const this /* r29 */, const class CTilePt & in /* r30 */) {}
+// this: r29
+unsigned short cFixedWorld::GetRoom(const class CTilePt & in /* r30 */) {}
 
 // Range: 0x800EA844 -> 0x800EA878
 void cFixedWorld::SetRoom(unsigned short inRoom /* r31 */) {}
@@ -229,14 +246,16 @@ void cFixedWorld::SetRoom(unsigned short inRoom /* r31 */) {}
 unsigned char cFixedWorld::IsOutside() {}
 
 // Range: 0x800EA8A4 -> 0x800EA93C
-void cFixedWorld::SetFlag(class cFixedWorld * const this /* r29 */, unsigned char nFlag /* r30 */, unsigned char bVal /* r31 */) {
+// this: r29
+void cFixedWorld::SetFlag(unsigned char nFlag /* r30 */, unsigned char bVal /* r31 */) {
     // Local variables
     class CTilePt pt; // r1+0x8
     unsigned char flags; // r0
 }
 
 // Range: 0x800EA93C -> 0x800EAD04
-void cFixedWorld::UpdateRoomStyles(class cFixedWorld * const this /* r30 */) {
+// this: r30
+void cFixedWorld::UpdateRoomStyles() {
     // Local variables
     unsigned char mask; // r1+0x8
     class EIObjectMan * pObjMan; // r29
@@ -267,10 +286,12 @@ unsigned char cFixedWorld::HasWalls() {}
 class TileWallStorage & cFixedWorld::GetWallStorage() {}
 
 // Range: 0x800EAD5C -> 0x800EADC0
-unsigned char cFixedWorld::MayEditTile(const class cFixedWorld * const this /* r30 */, const class CTilePt & inWhere /* r31 */) {}
+// this: r30
+unsigned char cFixedWorld::MayEditTile(const class CTilePt & inWhere /* r31 */) const {}
 
 // Range: 0x800EADC0 -> 0x800EAE98
-unsigned short cFixedWorld::GetRoomIdFromPoint(class cFixedWorld * const this /* r29 */, class CTilePt & wherePt /* r30 */) {
+// this: r29
+unsigned short cFixedWorld::GetRoomIdFromPoint(class CTilePt & wherePt /* r30 */) {
     // Local variables
     unsigned short room; // r31
     class RoomManager * room_mgr; // r0
@@ -282,7 +303,8 @@ unsigned short cFixedWorld::GetRoomIdFromPoint(class cFixedWorld * const this /*
 }
 
 // Range: 0x800EAE98 -> 0x800EB108
-unsigned short cFixedWorld::ResolveRoomID(class cFixedWorld * const this /* r28 */, const class FTilePt & inPt /* r29 */) {
+// this: r28
+unsigned short cFixedWorld::ResolveRoomID(const class FTilePt & inPt /* r29 */) {
     // Local variables
     class CTilePt cpt; // r1+0x10
     unsigned short roomID; // r30
@@ -292,13 +314,16 @@ unsigned short cFixedWorld::ResolveRoomID(class cFixedWorld * const this /* r28 
 }
 
 // Range: 0x800EB108 -> 0x800EB174
-void cFixedWorld::PrepareWallUndoBuffer(class cFixedWorld * const this /* r30 */, class CWallArray * pWallArray /* r31 */) {}
+// this: r30
+void cFixedWorld::PrepareWallUndoBuffer(class CWallArray * pWallArray /* r31 */) {}
 
 // Range: 0x800EB174 -> 0x800EB1E8
-class CWallArray * cFixedWorld::CreateWallUndoBuffer(class cFixedWorld * const this /* r30 */) {}
+// this: r30
+class CWallArray * cFixedWorld::CreateWallUndoBuffer() {}
 
 // Range: 0x800EB1E8 -> 0x800EB23C
-void cFixedWorld::DestroyWallUndoBuffer(class cFixedWorld * const this /* r31 */) {}
+// this: r31
+void cFixedWorld::DestroyWallUndoBuffer() {}
 
 // Range: 0x800EB23C -> 0x800EB278
 void cFixedWorld::CommitWallChanges() {
@@ -307,13 +332,15 @@ void cFixedWorld::CommitWallChanges() {
 }
 
 // Range: 0x800EB278 -> 0x800EB2F4
-void cFixedWorld::UndoWallChanges(class cFixedWorld * const this /* r31 */) {
+// this: r31
+void cFixedWorld::UndoWallChanges() {
     // Local variables
     class CWallArray temp; // r1+0x8
 }
 
 // Range: 0x800EB2F4 -> 0x800EB354
-void cFixedWorld::PrepareFloorUndoBuffer(class cFixedWorld * const this /* r31 */) {}
+// this: r31
+void cFixedWorld::PrepareFloorUndoBuffer() {}
 
 // Range: 0x800EB354 -> 0x800EB390
 void cFixedWorld::CommitFloorChanges() {
@@ -322,13 +349,15 @@ void cFixedWorld::CommitFloorChanges() {
 }
 
 // Range: 0x800EB390 -> 0x800EB400
-void cFixedWorld::UndoFloorChanges(class cFixedWorld * const this /* r31 */) {
+// this: r31
+void cFixedWorld::UndoFloorChanges() {
     // Local variables
     class CFloorArray temp; // r1+0x8
 }
 
 // Range: 0x800EB400 -> 0x800EB43C
-void cFixedWorld::DestroyFloorUndoBuffer(class cFixedWorld * const this /* r31 */) {}
+// this: r31
+void cFixedWorld::DestroyFloorUndoBuffer() {}
 
 // Range: 0x800EB43C -> 0x800EB478
 void cFixedWorld::CreateTheWorld() {

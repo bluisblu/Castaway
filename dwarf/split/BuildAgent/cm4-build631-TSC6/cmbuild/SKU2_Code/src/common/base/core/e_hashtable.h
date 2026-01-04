@@ -5,7 +5,8 @@
     Code range: 0x80095AB0 -> 0x80095AF4
 */
 // Range: 0x80095AB0 -> 0x80095AE0
-void * THashTable::THashTable(class THashTable * const this /* r31 */) {}
+// this: r31
+THashTable::THashTable() {}
 
 // Range: 0x80095AE0 -> 0x80095AE4
 class HTIteratorPtrType * THashTable::Insert() {}
@@ -23,21 +24,15 @@ class HTIteratorPtrType * THashTable::FindFirst() {}
 class HTIteratorPtrType * EHashTable::FindFirst() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\common\base\core\e_hashtable.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x80293FDC -> 0x80294348
-*/
 // Range: 0x80293FDC -> 0x802940AC
-class EStream & __ls(class EStream & s /* r29 */, const class THashTable & d /* r30 */) {
+class EStream & operator<<(class EStream & s /* r29 */, const class THashTable & d /* r30 */) {
     // Local variables
     int count; // r0
     class HTIteratorPtrType * i; // r30
 }
 
 // Range: 0x802940AC -> 0x80294184
-class EStream & __rs(class EStream & s /* r30 */, class THashTable & d /* r31 */) {
+class EStream & operator>>(class EStream & s /* r30 */, class THashTable & d /* r31 */) {
     // Local variables
     int tableSize; // r1+0x14
     int count; // r1+0x10
@@ -45,14 +40,14 @@ class EStream & __rs(class EStream & s /* r30 */, class THashTable & d /* r31 */
 }
 
 // Range: 0x80294184 -> 0x80294260
-class EStream & __ls(class EStream & s /* r30 */, const class THashTable & d /* r31 */) {
+class EStream & operator<<(class EStream & s /* r30 */, const class THashTable & d /* r31 */) {
     // Local variables
     int count; // r0
     class HTIteratorPtrType * i; // r31
 }
 
 // Range: 0x80294260 -> 0x80294348
-class EStream & __rs(class EStream & s /* r30 */, class THashTable & d /* r31 */) {
+class EStream & operator>>(class EStream & s /* r30 */, class THashTable & d /* r31 */) {
     // Local variables
     int tableSize; // r1+0x14
     int count; // r1+0x10

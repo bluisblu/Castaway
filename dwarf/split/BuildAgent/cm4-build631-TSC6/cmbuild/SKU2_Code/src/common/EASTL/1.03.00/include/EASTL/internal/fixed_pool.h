@@ -11,22 +11,27 @@ void fixed_node_pool::deallocate() {}
 void fixed_pool::deallocate() {}
 
 // Range: 0x800D3B44 -> 0x800D3B88
-void * fixed_node_pool::fixed_node_pool(class fixed_node_pool * const this /* r31 */) {}
+// this: r31
+fixed_node_pool::fixed_node_pool() {}
 
 // Range: 0x800D3B88 -> 0x800D3BF4
-void * fixed_pool::fixed_pool(class fixed_pool * const this /* r26 */, void * pMemory /* r27 */, unsigned long memorySize /* r28 */, unsigned long nodeSize /* r29 */, unsigned long alignment /* r30 */, unsigned long alignmentOffset /* r31 */) {}
+// this: r26
+fixed_pool::fixed_pool(void * pMemory /* r27 */, unsigned long memorySize /* r28 */, unsigned long nodeSize /* r29 */, unsigned long alignment /* r30 */, unsigned long alignmentOffset /* r31 */) {}
 
 // Range: 0x800D3BF4 -> 0x800D3BFC
-void * fixed_pool_base::fixed_pool_base() {}
+fixed_pool_base::fixed_pool_base() {}
 
 // Range: 0x800D3BFC -> 0x800D3C3C
-void * fixed_node_pool::fixed_node_pool(class fixed_node_pool * const this /* r31 */) {}
+// this: r31
+fixed_node_pool::fixed_node_pool() {}
 
 // Range: 0x800D3C3C -> 0x800D3C80
-void * fixed_node_pool::fixed_node_pool(class fixed_node_pool * const this /* r31 */) {}
+// this: r31
+fixed_node_pool::fixed_node_pool() {}
 
 // Range: 0x800D3C80 -> 0x800D3CC0
-void * fixed_node_pool::fixed_node_pool(class fixed_node_pool * const this /* r31 */) {}
+// this: r31
+fixed_node_pool::fixed_node_pool() {}
 
 // Range: 0x800D3CC0 -> 0x800D3CC4
 void * fixed_node_pool::allocate() {}

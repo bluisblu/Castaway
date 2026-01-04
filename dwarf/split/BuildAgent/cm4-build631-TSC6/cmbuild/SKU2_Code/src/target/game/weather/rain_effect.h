@@ -5,9 +5,9 @@
     Code range: 0x80248F7C -> 0x80248FF0
 */
 // Range: 0x80248F7C -> 0x80248FB0
-void RainEffect::__dl(void * p /* r31 */) {}
+void RainEffect::operator delete(void * p /* r31 */) {}
 
 // Range: 0x80248FB0 -> 0x80248FF0
-void * RainEffect::__nw(unsigned long size /* r31 */) {}
+void * RainEffect::operator new(unsigned long size /* r31 */) {}
 
 

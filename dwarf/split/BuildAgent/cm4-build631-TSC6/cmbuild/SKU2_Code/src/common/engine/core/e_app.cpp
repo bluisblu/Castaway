@@ -5,26 +5,30 @@
     Code range: 0x8027B634 -> 0x8027BD84
 */
 // Range: 0x8027B634 -> 0x8027B6B8
-void * EApp::EApp(class EApp * const this /* r31 */) {
+// this: r31
+EApp::EApp() {
     // References
     // -> class EApp * _pApp;
     // -> struct [anonymous] __vt__4EApp;
 }
 
 // Range: 0x8027B6B8 -> 0x8027B718
-void * EApp::~EApp(class EApp * const this /* r30 */) {
+// this: r30
+EApp::~EApp() {
     // References
     // -> class EApp * _pApp;
 }
 
 // Range: 0x8027B718 -> 0x8027B7A8
-void EApp::SetupPaths(class EApp * const this /* r30 */) {
+// this: r30
+void EApp::SetupPaths() {
     // Local variables
     const char * pPath; // r4
 }
 
 // Range: 0x8027B7A8 -> 0x8027B8F0
-void EApp::Main(class EApp * const this /* r30 */) {
+// this: r30
+void EApp::Main() {
     // References
     // -> class EEngine * _pEngine;
     // -> class EApp * _pApp;
@@ -40,7 +44,8 @@ void EApp::SetupForMovie() {}
 void EApp::CleanupAfterMovie() {}
 
 // Range: 0x8027B908 -> 0x8027BB28
-void EApp::SystemUpdate(class EApp * const this /* r31 */) {
+// this: r31
+void EApp::SystemUpdate() {
     // Local variables
     int status; // r0
 
@@ -68,14 +73,16 @@ unsigned char EApp::IsMoviePlaying() {}
 class EAHeap * EApp::GetMovieHeap() {}
 
 // Range: 0x8027BBA0 -> 0x8027BCA4
-void EApp::SetArgs(class EApp * const this /* r26 */, int nArgc /* r27 */, char * * ppszArgv /* r28 */) {
+// this: r26
+void EApp::SetArgs(int nArgc /* r27 */, char * * ppszArgv /* r28 */) {
     // Local variables
     int c; // r29
     class TString strArg; // r1+0x210
 }
 
 // Range: 0x8027BCA4 -> 0x8027BD84
-char * EApp::GetArg(const class EApp * const this /* r26 */, const char * pszFlag /* r27 */) {
+// this: r26
+char * EApp::GetArg(const char * pszFlag /* r27 */) const {
     // Local variables
     int iArg; // r29
     const char * pszArg; // r28

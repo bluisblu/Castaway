@@ -5,19 +5,21 @@
     Code range: 0x802E8DC0 -> 0x802E8FF8
 */
 // Range: 0x802E8DC0 -> 0x802E8E08
-void * ERSocialAnimationSet::ERSocialAnimationSet() {
+ERSocialAnimationSet::ERSocialAnimationSet() {
     // References
     // -> struct [anonymous] __vt__20ERSocialAnimationSet;
 }
 
 // Range: 0x802E8E08 -> 0x802E8EA0
-void * ERSocialAnimationSet::~ERSocialAnimationSet(class ERSocialAnimationSet * const this /* r30 */) {
+// this: r30
+ERSocialAnimationSet::~ERSocialAnimationSet() {
     // References
     // -> struct [anonymous] __vt__9EResource;
 }
 
 // Range: 0x802E8EA0 -> 0x802E8FF8
-void ERSocialAnimationSet::Load(class ERSocialAnimationSet * const this /* r29 */, class EFile * pFile /* r30 */) {
+// this: r29
+void ERSocialAnimationSet::Load(class EFile * pFile /* r30 */) {
     // Local variables
     class EDataHeader resourceHeader; // r1+0x18
     int count; // r1+0x8

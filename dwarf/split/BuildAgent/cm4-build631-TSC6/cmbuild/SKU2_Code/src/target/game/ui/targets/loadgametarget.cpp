@@ -5,14 +5,16 @@
     Code range: 0x801CC8A0 -> 0x801CECAC
 */
 // Range: 0x801CC8A0 -> 0x801CCA98
-void * LoadGameTarget::LoadGameTarget(class LoadGameTarget * const this /* r26 */, class M2MTarget * parent /* r27 */, const class MemoryDevicePort_t & port_ /* r28 */, int loadGameFlags_ /* r31 */) {
+// this: r26
+LoadGameTarget::LoadGameTarget(class M2MTarget * parent /* r27 */, const class MemoryDevicePort_t & port_ /* r28 */, int loadGameFlags_ /* r31 */) {
     // References
     // -> unsigned int gNumDiskErrors;
     // -> struct [anonymous] __vt__14LoadGameTarget;
 }
 
 // Range: 0x801CCA98 -> 0x801CCB4C
-void * LoadGameTarget::~LoadGameTarget(class LoadGameTarget * const this /* r30 */) {
+// this: r30
+LoadGameTarget::~LoadGameTarget() {
     // References
     // -> class PetsHomeButton _wiiHomeButton;
     // -> struct [anonymous] __vt__14LoadGameTarget;
@@ -25,7 +27,8 @@ void LoadGameTarget::SelectionCallback() {}
 void LoadGameTarget::ZeroInputCallback() {}
 
 // Range: 0x801CCFC4 -> 0x801CD3A0
-void LoadGameTarget::Update(class LoadGameTarget * const this /* r31 */) {
+// this: r31
+void LoadGameTarget::Update() {
     // Local variables
     unsigned char bCardInSlot; // r1+0x9
     enum EMC_OpStatus ops; // r0
@@ -42,7 +45,8 @@ void LoadGameTarget::Update(class LoadGameTarget * const this /* r31 */) {
 int LoadGameTarget::GetResult() {}
 
 // Range: 0x801CD3A8 -> 0x801CD644
-unsigned char LoadGameTarget::PerformMemoryCardChecks(class LoadGameTarget * const this /* r31 */) {
+// this: r31
+unsigned char LoadGameTarget::PerformMemoryCardChecks() {
     // Local variables
     enum EMC_OpStatus ops; // r0
     unsigned char bWrongDevice; // r1+0xD
@@ -54,7 +58,8 @@ unsigned char LoadGameTarget::PerformMemoryCardChecks(class LoadGameTarget * con
 }
 
 // Range: 0x801CD644 -> 0x801CD778
-unsigned char LoadGameTarget::PerformLoad(class LoadGameTarget * const this /* r29 */) {
+// this: r29
+unsigned char LoadGameTarget::PerformLoad() {
     // Local variables
     enum EMC_OpStatus ops; // r0
     class NghResFile * pFile; // r30
@@ -66,121 +71,139 @@ unsigned char LoadGameTarget::PerformLoad(class LoadGameTarget * const this /* r
 }
 
 // Range: 0x801CD778 -> 0x801CD8CC
-void LoadGameTarget::SpawnCheckingDialog(class LoadGameTarget * const this /* r29 */, unsigned char amDeleting /* r30 */) {
+// this: r29
+void LoadGameTarget::SpawnCheckingDialog(unsigned char amDeleting /* r30 */) {
     // References
     // -> class PetsHomeButton _wiiHomeButton;
     // -> class EGlobal _globals;
 }
 
 // Range: 0x801CD8CC -> 0x801CDA64
-void LoadGameTarget::SpawnWrongDeviceDialog(class LoadGameTarget * const this /* r30 */) {
+// this: r30
+void LoadGameTarget::SpawnWrongDeviceDialog() {
     // References
     // -> class PetsHomeButton _wiiHomeButton;
     // -> class EGlobal _globals;
 }
 
 // Range: 0x801CDA64 -> 0x801CDC30
-void LoadGameTarget::SpawnCardDamagedDialog(class LoadGameTarget * const this /* r30 */) {
+// this: r30
+void LoadGameTarget::SpawnCardDamagedDialog() {
     // References
     // -> class PetsHomeButton _wiiHomeButton;
     // -> class EGlobal _globals;
 }
 
 // Range: 0x801CDC30 -> 0x801CDD4C
-void LoadGameTarget::SpawnCardCorruptDialog(class LoadGameTarget * const this /* r31 */) {
+// this: r31
+void LoadGameTarget::SpawnCardCorruptDialog() {
     // References
     // -> class PetsHomeButton _wiiHomeButton;
     // -> class EGlobal _globals;
 }
 
 // Range: 0x801CDD4C -> 0x801CDEF0
-void LoadGameTarget::SpawnWrongSaveDialog(class LoadGameTarget * const this /* r29 */) {
+// this: r29
+void LoadGameTarget::SpawnWrongSaveDialog() {
     // References
     // -> class PetsHomeButton _wiiHomeButton;
     // -> class EGlobal _globals;
 }
 
 // Range: 0x801CDEF0 -> 0x801CE00C
-void LoadGameTarget::SpawnNoSaveDialog(class LoadGameTarget * const this /* r31 */) {
+// this: r31
+void LoadGameTarget::SpawnNoSaveDialog() {
     // References
     // -> class PetsHomeButton _wiiHomeButton;
     // -> class EGlobal _globals;
 }
 
 // Range: 0x801CE00C -> 0x801CE14C
-void LoadGameTarget::SpawnLoadConfirmDialog(class LoadGameTarget * const this /* r30 */) {
+// this: r30
+void LoadGameTarget::SpawnLoadConfirmDialog() {
     // References
     // -> class PetsHomeButton _wiiHomeButton;
     // -> class EGlobal _globals;
 }
 
 // Range: 0x801CE14C -> 0x801CE254
-void LoadGameTarget::SpawnLoadingDialog(class LoadGameTarget * const this /* r31 */) {
+// this: r31
+void LoadGameTarget::SpawnLoadingDialog() {
     // References
     // -> class PetsHomeButton _wiiHomeButton;
     // -> class EGlobal _globals;
 }
 
 // Range: 0x801CE254 -> 0x801CE328
-void LoadGameTarget::SpawnLoadSucceededDialog(class LoadGameTarget * const this /* r30 */) {
+// this: r30
+void LoadGameTarget::SpawnLoadSucceededDialog() {
     // References
     // -> class PetsHomeButton _wiiHomeButton;
     // -> class EGlobal _globals;
 }
 
 // Range: 0x801CE328 -> 0x801CE4CC
-void LoadGameTarget::SpawnLoadFailedDialog(class LoadGameTarget * const this /* r29 */) {
+// this: r29
+void LoadGameTarget::SpawnLoadFailedDialog() {
     // References
     // -> class PetsHomeButton _wiiHomeButton;
     // -> class EGlobal _globals;
 }
 
 // Range: 0x801CE4CC -> 0x801CE5D8
-void LoadGameTarget::SpawnMemCardRemovedDialog(class LoadGameTarget * const this /* r30 */) {
+// this: r30
+void LoadGameTarget::SpawnMemCardRemovedDialog() {
     // References
     // -> class PetsHomeButton _wiiHomeButton;
     // -> class EGlobal _globals;
 }
 
 // Range: 0x801CE5D8 -> 0x801CE6A8
-void LoadGameTarget::SpawnFormatDecideDialog(class LoadGameTarget * const this /* r30 */) {
+// this: r30
+void LoadGameTarget::SpawnFormatDecideDialog() {
     // References
     // -> class EGlobal _globals;
 }
 
 // Range: 0x801CE6A8 -> 0x801CE778
-void LoadGameTarget::SpawnFormatConfirmDialog(class LoadGameTarget * const this /* r30 */) {
+// this: r30
+void LoadGameTarget::SpawnFormatConfirmDialog() {
     // References
     // -> class EGlobal _globals;
 }
 
 // Range: 0x801CE778 -> 0x801CE818
-void LoadGameTarget::SpawnFormattingDialog(class LoadGameTarget * const this /* r31 */) {
+// this: r31
+void LoadGameTarget::SpawnFormattingDialog() {
     // References
     // -> class EEngine * _pEngine;
     // -> class EGlobal _globals;
 }
 
 // Range: 0x801CE818 -> 0x801CE8E8
-void LoadGameTarget::SpawnFormatCancelDialog(class LoadGameTarget * const this /* r30 */) {
+// this: r30
+void LoadGameTarget::SpawnFormatCancelDialog() {
     // References
     // -> class EGlobal _globals;
 }
 
 // Range: 0x801CE8E8 -> 0x801CEA40
-void LoadGameTarget::SpawnFormatFailDialog(class LoadGameTarget * const this /* r30 */) {
+// this: r30
+void LoadGameTarget::SpawnFormatFailDialog() {
     // References
     // -> class EGlobal _globals;
 }
 
 // Range: 0x801CEA40 -> 0x801CEAF4
-void LoadGameTarget::SpawnFormatSuccessDialog(class LoadGameTarget * const this /* r30 */) {
+// this: r30
+void LoadGameTarget::SpawnFormatSuccessDialog() {
     // References
     // -> class EGlobal _globals;
 }
 
 // Range: 0x801CEAF4 -> 0x801CEC2C
-void LoadGameTarget::BackgroundPerformLoad(class LoadGameTarget * const this /* r31 */) {
+// this: r31
+void LoadGameTarget::BackgroundPerformLoad() {
     // Local variables
     class EController * pCtrl; // r0
     class EController * pCtrl; // r0
@@ -192,7 +215,8 @@ void LoadGameTarget::BackgroundPerformLoad(class LoadGameTarget * const this /* 
 }
 
 // Range: 0x801CEC2C -> 0x801CEC7C
-void LoadGameTarget::BGCall_PerformLoad(class LoadGameTarget * const this /* r31 */) {
+// this: r31
+void LoadGameTarget::BGCall_PerformLoad() {
     // References
     // -> class Background * _pBackground;
     // -> class BG _bg;

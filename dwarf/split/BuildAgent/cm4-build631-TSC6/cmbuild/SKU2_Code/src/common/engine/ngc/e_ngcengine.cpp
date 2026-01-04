@@ -43,10 +43,12 @@ void ForceReadCallback() {
 }
 
 // Range: 0x802B3F14 -> 0x802B3F6C
-void * ENgcEngine::~ENgcEngine(class ENgcEngine * const this /* r30 */) {}
+// this: r30
+ENgcEngine::~ENgcEngine() {}
 
 // Range: 0x802B3F6C -> 0x802B4050
-unsigned char ENgcEngine::Init(class ENgcEngine * const this /* r30 */) {
+// this: r30
+unsigned char ENgcEngine::Init() {
     // Local variables
     unsigned char retval; // r0
 

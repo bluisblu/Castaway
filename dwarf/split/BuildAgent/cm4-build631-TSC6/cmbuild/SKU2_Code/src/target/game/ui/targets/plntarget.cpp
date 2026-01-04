@@ -5,7 +5,8 @@
     Code range: 0x801F3044 -> 0x801F3EB4
 */
 // Range: 0x801F3044 -> 0x801F33DC
-void * PLNTarget::PLNTarget(class PLNTarget * const this /* r31 */) {
+// this: r31
+PLNTarget::PLNTarget() {
     // Local variables
     int i; // r28
 
@@ -32,7 +33,8 @@ void * PLNTarget::PLNTarget(class PLNTarget * const this /* r31 */) {
 }
 
 // Range: 0x801F33DC -> 0x801F34AC
-void * PLNTarget::~PLNTarget(class PLNTarget * const this /* r30 */) {
+// this: r30
+PLNTarget::~PLNTarget() {
     // References
     // -> class AptViewer * _gpAptViewer;
     // -> class EGlobal _globals;
@@ -40,7 +42,8 @@ void * PLNTarget::~PLNTarget(class PLNTarget * const this /* r30 */) {
 }
 
 // Range: 0x801F34AC -> 0x801F3990
-void PLNTarget::SetVariable(class PLNTarget * const this /* r31 */, const char * szVar /* r28 */, const char * zValue /* r29 */) {
+// this: r31
+void PLNTarget::SetVariable(const char * szVar /* r28 */, const char * zValue /* r29 */) {
     // Local variables
     int group; // r1+0xC
     int item; // r1+0x8
@@ -53,7 +56,8 @@ void PLNTarget::SetVariable(class PLNTarget * const this /* r31 */, const char *
 }
 
 // Range: 0x801F3990 -> 0x801F3BD0
-char * PLNTarget::GetVariable(class PLNTarget * const this /* r29 */, const char * szVar /* r30 */) {
+// this: r29
+char * PLNTarget::GetVariable(const char * szVar /* r30 */) {
     // Local variables
     char * pResultString; // r31
     int grid; // r1+0xC
@@ -74,7 +78,8 @@ char * PLNTarget::GetVariable(class PLNTarget * const this /* r29 */, const char
 }
 
 // Range: 0x801F3BD0 -> 0x801F3D88
-unsigned short * PLNTarget::GetLocalizable(class PLNTarget * const this /* r29 */, const char * szVar /* r30 */) {
+// this: r29
+unsigned short * PLNTarget::GetLocalizable(const char * szVar /* r30 */) {
     // Local variables
     unsigned short widestring[4096]; // r1+0x18
     unsigned short * pResultString; // r31
@@ -85,7 +90,8 @@ unsigned short * PLNTarget::GetLocalizable(class PLNTarget * const this /* r29 *
 }
 
 // Range: 0x801F3D88 -> 0x801F3E7C
-void PLNTarget::Update(class PLNTarget * const this /* r31 */) {
+// this: r31
+void PLNTarget::Update() {
     // Local variables
     class EVec2 dummy; // r1+0x8
 

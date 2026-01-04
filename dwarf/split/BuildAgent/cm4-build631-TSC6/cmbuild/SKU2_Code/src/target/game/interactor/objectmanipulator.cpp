@@ -11,7 +11,8 @@ unsigned char is_object_cloneable() {
 }
 
 // Range: 0x8006DDEC -> 0x8006DE34
-void PlacementObject::ClearDrawOverride(class PlacementObject * const this /* r31 */) {}
+// this: r31
+void PlacementObject::ClearDrawOverride() {}
 
 // Range: 0x8006DE34 -> 0x8006DE3C
 unsigned char PlacementObject::GetDrawOverrideFlag() {}
@@ -29,35 +30,42 @@ unsigned char PlacementObject::ObjectIsInHand() {}
 class cXMTObject * PlacementObject::GetGridObject() {}
 
 // Range: 0x8006DE68 -> 0x8006DE78
-void PlacementObject::GetOriginalPos(const class PlacementObject * const this /* r5 */) {}
+// this: r5
+void PlacementObject::GetOriginalPos() const {}
 
 // Range: 0x8006DE78 -> 0x8006DE80
 signed short PlacementObject::GetOriginalDir() {}
 
 // Range: 0x8006DE80 -> 0x8006DEC8
-void * ObjectManipulatorParams::ObjectManipulatorParams(struct ObjectManipulatorParams * const this /* r31 */) {
+// this: r31
+ObjectManipulatorParams::ObjectManipulatorParams() {
     // References
     // -> struct [anonymous] __vt__Q316InteractorModule17ObjectManipulator23ObjectManipulatorParams;
 }
 
 // Range: 0x8006DEC8 -> 0x8006DF78
-void * ObjectManipulator::ObjectManipulator(class ObjectManipulator * const this /* r29 */) {
+// this: r29
+ObjectManipulator::ObjectManipulator() {
     // References
     // -> struct UndoRedoCommand m_UndoRedoCommand;
     // -> struct [anonymous] __vt__Q216InteractorModule17ObjectManipulator;
 }
 
 // Range: 0x8006DF78 -> 0x8006DFE0
-void * ObjectManipulator::~ObjectManipulator(class ObjectManipulator * const this /* r30 */) {}
+// this: r30
+ObjectManipulator::~ObjectManipulator() {}
 
 // Range: 0x8006DFE0 -> 0x8006E018
-void ObjectManipulator::OnCreate(class ObjectManipulator * const this /* r31 */) {}
+// this: r31
+void ObjectManipulator::OnCreate() {}
 
 // Range: 0x8006E018 -> 0x8006E050
-void ObjectManipulator::OnDestroy(class ObjectManipulator * const this /* r31 */) {}
+// this: r31
+void ObjectManipulator::OnDestroy() {}
 
 // Range: 0x8006E050 -> 0x8006E20C
-void ObjectManipulator::OnStart(class ObjectManipulator * const this /* r29 */, const struct InteractorParams * pParams /* r30 */) {
+// this: r29
+void ObjectManipulator::OnStart(const struct InteractorParams * pParams /* r30 */) {
     // Local variables
     struct ButtonSemantic butSems[8]; // r1+0x30
     struct StickSemantic stickSems[4]; // r1+0x10
@@ -68,7 +76,8 @@ void ObjectManipulator::OnStart(class ObjectManipulator * const this /* r29 */, 
 }
 
 // Range: 0x8006E20C -> 0x8006E28C
-void ObjectManipulator::OnStop(class ObjectManipulator * const this /* r31 */) {
+// this: r31
+void ObjectManipulator::OnStop() {
     // References
     // -> unsigned char m_blueprintMode;
 }
@@ -80,13 +89,16 @@ void ObjectManipulator::OnCommandUpdate() {}
 void ObjectManipulator::OnCommandReleased() {}
 
 // Range: 0x8006E36C -> 0x8006E37C
-void ObjectManipulator::PreDraw(class ObjectManipulator * const this /* r0 */) {}
+// this: r0
+void ObjectManipulator::PreDraw() {}
 
 // Range: 0x8006E37C -> 0x8006E38C
-void ObjectManipulator::Draw(class ObjectManipulator * const this /* r0 */) {}
+// this: r0
+void ObjectManipulator::Draw() {}
 
 // Range: 0x8006E38C -> 0x8006EAC8
-void ObjectManipulator::Update(class ObjectManipulator * const this /* r30 */, float deltaT /* f31 */) {
+// this: r30
+void ObjectManipulator::Update(float deltaT /* f31 */) {
     // Local variables
     unsigned char bMoveEnabled; // r31
     class cXObject * handObject; // r28
@@ -120,10 +132,12 @@ void ObjectManipulator::Update(class ObjectManipulator * const this /* r30 */, f
 }
 
 // Range: 0x8006EAC8 -> 0x8006EB1C
-void ObjectManipulator::UpdateObjectGrabOffset(class ObjectManipulator * const this /* r31 */) {}
+// this: r31
+void ObjectManipulator::UpdateObjectGrabOffset() {}
 
 // Range: 0x8006EB1C -> 0x8006EC5C
-unsigned char ObjectManipulator::ResetGrab(class ObjectManipulator * const this /* r30 */) {
+// this: r30
+unsigned char ObjectManipulator::ResetGrab() {
     // Local variables
     class cXObject * pObject; // r31
     class EVec3 objcenter; // r1+0x28
@@ -134,7 +148,8 @@ unsigned char ObjectManipulator::ResetGrab(class ObjectManipulator * const this 
 }
 
 // Range: 0x8006EC5C -> 0x8006EDA0
-unsigned char ObjectManipulator::GradualCenterToObject(class ObjectManipulator * const this /* r30 */) {
+// this: r30
+unsigned char ObjectManipulator::GradualCenterToObject() {
     // Local variables
     class cXObject * pObject; // r31
     class EVec3 newOffset; // r1+0x44
@@ -149,7 +164,8 @@ unsigned char ObjectManipulator::GradualCenterToObject(class ObjectManipulator *
 }
 
 // Range: 0x8006EDA0 -> 0x8006EE10
-unsigned char ObjectManipulator::LockCursorToObject(class ObjectManipulator * const this /* r31 */) {
+// this: r31
+unsigned char ObjectManipulator::LockCursorToObject() {
     // Local variables
     class cXObject * pObject; // r0
     class EVec3 cursorFocus; // r1+0x10
@@ -157,7 +173,8 @@ unsigned char ObjectManipulator::LockCursorToObject(class ObjectManipulator * co
 }
 
 // Range: 0x8006EE10 -> 0x8006F01C
-void ObjectManipulator::UpdateObjectHighlights(class ObjectManipulator * const this /* r26 */, class EIObjectMan * objMan /* r27 */) {
+// this: r26
+void ObjectManipulator::UpdateObjectHighlights(class EIObjectMan * objMan /* r27 */) {
     // Local variables
     class cXObject * pSelectedObject; // r31
     class ISimInstance * pSelectedInstance; // r0
@@ -176,7 +193,8 @@ void ObjectManipulator::UpdateObjectHighlights(class ObjectManipulator * const t
 }
 
 // Range: 0x8006F01C -> 0x8006F0EC
-void ObjectManipulator::UpdateOverlapIntersection(class ObjectManipulator * const this /* r30 */, struct OverlapData * pOverlapData /* r31 */) {
+// this: r30
+void ObjectManipulator::UpdateOverlapIntersection(struct OverlapData * pOverlapData /* r31 */) {
     // Local variables
     class EVec3 center; // r1+0x14
     class EVec3 delta; // r1+0x8
@@ -193,34 +211,40 @@ unsigned char ObjectManipulator::GetIsCursorModelEnabled() {}
 class PlacementObject & ObjectManipulator::GetPlacementObject() {}
 
 // Range: 0x8006F104 -> 0x8006F160
-void * GrabManipulatorParams::GrabManipulatorParams(struct GrabManipulatorParams * const this /* r31 */) {
+// this: r31
+GrabManipulatorParams::GrabManipulatorParams() {
     // References
     // -> struct [anonymous] __vt__Q316InteractorModule15GrabManipulator21GrabManipulatorParams;
 }
 
 // Range: 0x8006F1B8 -> 0x8006F210
-void * CallbackData::CallbackData(struct CallbackData * const this /* r30 */, unsigned char bIsCloneMode /* r31 */) {
+// this: r30
+CallbackData::CallbackData(unsigned char bIsCloneMode /* r31 */) {
     // References
     // -> struct [anonymous] __vt__Q316InteractorModule15GrabManipulator12CallbackData;
 }
 
 // Range: 0x8006F210 -> 0x8006F25C
-void * GrabManipulator::GrabManipulator(class GrabManipulator * const this /* r31 */) {
+// this: r31
+GrabManipulator::GrabManipulator() {
     // References
     // -> struct [anonymous] __vt__Q216InteractorModule15GrabManipulator;
 }
 
 // Range: 0x8006F2B4 -> 0x8006F31C
-void * GrabManipulator::~GrabManipulator(class GrabManipulator * const this /* r30 */) {}
+// this: r30
+GrabManipulator::~GrabManipulator() {}
 
 // Range: 0x8006F31C -> 0x8006F320
 void GrabManipulator::OnCreate() {}
 
 // Range: 0x8006F320 -> 0x8006F3A0
-void GrabManipulator::OnStart(class GrabManipulator * const this /* r30 */, const struct InteractorParams * pParams /* r31 */) {}
+// this: r30
+void GrabManipulator::OnStart(const struct InteractorParams * pParams /* r31 */) {}
 
 // Range: 0x8006F450 -> 0x8006F7A8
-void GrabManipulator::OnCommandPressed(class GrabManipulator * const this /* r31 */) {
+// this: r31
+void GrabManipulator::OnCommandPressed() {
     // Local variables
     struct CallbackData cbd; // r1+0x20
     struct CallbackData cbd; // r1+0x8
@@ -239,13 +263,15 @@ void GrabManipulator::OnCommandRepeated() {
 }
 
 // Range: 0x8006F8A8 -> 0x8006F944
-void GrabManipulator::CancelCurrentGrab(class GrabManipulator * const this /* r31 */) {
+// this: r31
+void GrabManipulator::CancelCurrentGrab() {
     // Local variables
     struct CallbackData cbd; // r1+0x8
 }
 
 // Range: 0x8006F944 -> 0x8006FB14
-void GrabManipulator::TryGrabbingWorldObject(class GrabManipulator * const this /* r27 */) {
+// this: r27
+void GrabManipulator::TryGrabbingWorldObject() {
     // Local variables
     class TNodeList objList; // r1+0x8
     class NLIteratorPtrType * iter; // r31
@@ -261,7 +287,8 @@ void GrabManipulator::TryGrabbingWorldObject(class GrabManipulator * const this 
 }
 
 // Range: 0x8006FB14 -> 0x8006FFB4
-void GrabManipulator::TryGrabbingWorldObjectFromId(class GrabManipulator * const this /* r31 */, signed short objectId /* r27 */) {
+// this: r31
+void GrabManipulator::TryGrabbingWorldObjectFromId(signed short objectId /* r27 */) {
     // Local variables
     class cXObject * pObject; // r28
     class cXMTObject * pMTObject; // r0
@@ -293,7 +320,8 @@ void GrabManipulator::TryGrabbingWorldObjectFromId(class GrabManipulator * const
 }
 
 // Range: 0x8006FFB4 -> 0x8007012C
-void GrabManipulator::DestroyObjectInHand(class GrabManipulator * const this /* r29 */, enum eDestroyObjectContext context /* r31 */) {
+// this: r29
+void GrabManipulator::DestroyObjectInHand(enum eDestroyObjectContext context /* r31 */) {
     // Local variables
     class cXObject * pObject; // r30
     class ObjSelector * pObjSelector; // r0
@@ -303,7 +331,8 @@ void GrabManipulator::DestroyObjectInHand(class GrabManipulator * const this /* 
 }
 
 // Range: 0x8007012C -> 0x800702D4
-void GrabManipulator::DropCurrentObject(class GrabManipulator * const this /* r29 */) {
+// this: r29
+void GrabManipulator::DropCurrentObject() {
     // Local variables
     class cXObject * pPlacedObject; // r30
     class FTilePt snapTileLoc; // r1+0x10
@@ -316,13 +345,15 @@ void GrabManipulator::DropCurrentObject(class GrabManipulator * const this /* r2
 }
 
 // Range: 0x800702D4 -> 0x80070378
-void GrabManipulator::TryRemoveCurrentObjectFromWorld(class GrabManipulator * const this /* r31 */) {
+// this: r31
+void GrabManipulator::TryRemoveCurrentObjectFromWorld() {
     // Local variables
     struct CallbackData cbd; // r1+0x8
 }
 
 // Range: 0x80070378 -> 0x80070900
-unsigned char GrabManipulator::OnUndoButton(class GrabManipulator * const this /* r30 */) {
+// this: r30
+unsigned char GrabManipulator::OnUndoButton() {
     // Local variables
     class InventoryItems * pInventory; // r0
     class cXObject * pObject; // r28
@@ -343,31 +374,37 @@ unsigned char GrabManipulator::CanPickupObject() {
 }
 
 // Range: 0x80070950 -> 0x8007099C
-void * CallbackData::CallbackData(struct CallbackData * const this /* r31 */) {
+// this: r31
+CallbackData::CallbackData() {
     // References
     // -> struct [anonymous] __vt__Q316InteractorModule16PlaceManipulator12CallbackData;
 }
 
 // Range: 0x8007099C -> 0x800709FC
-void * PlaceManipulatorParams::PlaceManipulatorParams(struct PlaceManipulatorParams * const this /* r31 */) {
+// this: r31
+PlaceManipulatorParams::PlaceManipulatorParams() {
     // References
     // -> struct [anonymous] __vt__Q316InteractorModule16PlaceManipulator22PlaceManipulatorParams;
 }
 
 // Range: 0x800709FC -> 0x80070A48
-void * PlaceManipulator::PlaceManipulator(class PlaceManipulator * const this /* r31 */) {
+// this: r31
+PlaceManipulator::PlaceManipulator() {
     // References
     // -> struct [anonymous] __vt__Q216InteractorModule16PlaceManipulator;
 }
 
 // Range: 0x80070AA0 -> 0x80070B08
-void * PlaceManipulator::~PlaceManipulator(class PlaceManipulator * const this /* r30 */) {}
+// this: r30
+PlaceManipulator::~PlaceManipulator() {}
 
 // Range: 0x80070B08 -> 0x80070B40
-void PlaceManipulator::OnCreate(class PlaceManipulator * const this /* r31 */) {}
+// this: r31
+void PlaceManipulator::OnCreate() {}
 
 // Range: 0x80070B40 -> 0x80070BF4
-void PlaceManipulator::OnStart(class PlaceManipulator * const this /* r30 */, const struct InteractorParams * pParams /* r31 */) {
+// this: r30
+void PlaceManipulator::OnStart(const struct InteractorParams * pParams /* r31 */) {
     // Local variables
     class ESimsCam * pSimsCam; // r0
     const struct PlaceManipulatorParams * pPlaceManipulatorParams; // [invalid]
@@ -378,7 +415,8 @@ void PlaceManipulator::OnStart(class PlaceManipulator * const this /* r30 */, co
 }
 
 // Range: 0x80070BF4 -> 0x80070DF4
-void PlaceManipulator::OnCommandPressed(class PlaceManipulator * const this /* r31 */) {
+// this: r31
+void PlaceManipulator::OnCommandPressed() {
     // Local variables
     struct CallbackData cbd; // r1+0x20
     struct CallbackData cbd; // r1+0x8
@@ -395,14 +433,16 @@ void PlaceManipulator::OnCommandRepeated() {
 }
 
 // Range: 0x80070EF4 -> 0x80070FC0
-void PlaceManipulator::StartPlacement(class PlaceManipulator * const this /* r29 */) {
+// this: r29
+void PlaceManipulator::StartPlacement() {
     // Local variables
     class cXObject * pObject; // r31
     unsigned long index; // r30
 }
 
 // Range: 0x80071024 -> 0x80071204
-void PlaceManipulator::TryPlacingCurrentObject(class PlaceManipulator * const this /* r28 */) {
+// this: r28
+void PlaceManipulator::TryPlacingCurrentObject() {
     // Local variables
     class cXObject * pSavedObject; // r29
     class FTilePt snapTileLoc; // r1+0x18
@@ -416,7 +456,8 @@ void PlaceManipulator::TryPlacingCurrentObject(class PlaceManipulator * const th
 }
 
 // Range: 0x80071204 -> 0x80071370
-void PlaceManipulator::CancelSession(class PlaceManipulator * const this /* r29 */) {
+// this: r29
+void PlaceManipulator::CancelSession() {
     // Local variables
     struct CallbackData cbd; // r1+0x28
     unsigned char bRecomputeLightingGrid; // r31
@@ -428,10 +469,12 @@ void PlaceManipulator::CancelSession(class PlaceManipulator * const this /* r29 
 }
 
 // Range: 0x80071370 -> 0x800713C4
-void * PlacementObject::PlacementObject(class PlacementObject * const this /* r30 */) {}
+// this: r30
+PlacementObject::PlacementObject() {}
 
 // Range: 0x800713C4 -> 0x80071404
-void * PlacementObject::~PlacementObject(class PlacementObject * const this /* r31 */) {}
+// this: r31
+PlacementObject::~PlacementObject() {}
 
 // Range: 0x80071404 -> 0x80071520
 unsigned char PlacementObject::SetObjectColor(class cXObject * pObject /* r31 */, unsigned char colorindex /* r30 */) {
@@ -441,19 +484,22 @@ unsigned char PlacementObject::SetObjectColor(class cXObject * pObject /* r31 */
 }
 
 // Range: 0x80071520 -> 0x800715FC
-unsigned char PlacementObject::CreateNewPlacementObjectFromGuid(class PlacementObject * const this /* r29 */, unsigned int objectGUID /* r30 */, unsigned char colorindex /* r31 */) {
+// this: r29
+unsigned char PlacementObject::CreateNewPlacementObjectFromGuid(unsigned int objectGUID /* r30 */, unsigned char colorindex /* r31 */) {
     // Local variables
     float firevalue; // f0
 }
 
 // Range: 0x800715FC -> 0x800716D0
-unsigned char PlacementObject::GrabExistingObjectInstanceFromId(class PlacementObject * const this /* r30 */) {
+// this: r30
+unsigned char PlacementObject::GrabExistingObjectInstanceFromId() {
     // Local variables
     class cXObject * pObject; // r0
 }
 
 // Range: 0x800716D0 -> 0x8007194C
-void PlacementObject::CreateGridObject(class PlacementObject * const this /* r27 */, const class FTilePt & location /* r28 */, class cXObject * pObjectInHand /* r29 */) {
+// this: r27
+void PlacementObject::CreateGridObject(const class FTilePt & location /* r28 */, class cXObject * pObjectInHand /* r29 */) {
     // Local variables
     class ObjSelector * pGridSelector; // r31
     class cXMTObject * pMTObject; // r30
@@ -463,7 +509,8 @@ void PlacementObject::CreateGridObject(class PlacementObject * const this /* r27
 }
 
 // Range: 0x8007194C -> 0x800719E0
-class cXMTObject * PlacementObject::CreateGridTile(class PlacementObject * const this /* r28 */, class ObjSelector * pGridSelector /* r29 */) {
+// this: r28
+class cXMTObject * PlacementObject::CreateGridTile(class ObjSelector * pGridSelector /* r29 */) {
     // Local variables
     class ObjectModule * pObjectModule; // r30
 }
@@ -482,16 +529,19 @@ void PlacementObject::AssignOffsetsToGridObject(class cXMTObject * pLeadGridObje
 }
 
 // Range: 0x80071B50 -> 0x80071BE4
-void PlacementObject::Pickup(class PlacementObject * const this /* r31 */) {
+// this: r31
+void PlacementObject::Pickup() {
     // References
     // -> unsigned char s_handlingPlacementObject;
 }
 
 // Range: 0x80071BE4 -> 0x80071C4C
-unsigned char PlacementObject::IsLegalToPlaceAtLocation(class PlacementObject * const this /* r29 */, class FTilePt & location /* r30 */, struct PlacementData & placeData /* r31 */) {}
+// this: r29
+unsigned char PlacementObject::IsLegalToPlaceAtLocation(class FTilePt & location /* r30 */, struct PlacementData & placeData /* r31 */) {}
 
 // Range: 0x80071C4C -> 0x80071D60
-void PlacementObject::Place(class PlacementObject * const this /* r29 */, const class FTilePt & location /* r30 */, struct PlacementData & placeData /* r31 */) {
+// this: r29
+void PlacementObject::Place(const class FTilePt & location /* r30 */, struct PlacementData & placeData /* r31 */) {
     // Local variables
     unsigned char bCanPlace; // r0
 
@@ -500,7 +550,8 @@ void PlacementObject::Place(class PlacementObject * const this /* r29 */, const 
 }
 
 // Range: 0x80071D60 -> 0x80071DD8
-unsigned char PlacementObject::Drop(class PlacementObject * const this /* r31 */) {}
+// this: r31
+unsigned char PlacementObject::Drop() {}
 
 // Range: 0x80071DD8 -> 0x80071DDC
 void PlacementObject::Initialize() {}
@@ -509,7 +560,8 @@ void PlacementObject::Initialize() {}
 unsigned char PlacementObject::CanObjectBeDestroyed() {}
 
 // Range: 0x80071DF4 -> 0x80071E78
-unsigned char PlacementObject::Destroy(class PlacementObject * const this /* r30 */) {
+// this: r30
+unsigned char PlacementObject::Destroy() {
     // Local variables
     unsigned char bWasDestroyed; // r31
 
@@ -518,7 +570,8 @@ unsigned char PlacementObject::Destroy(class PlacementObject * const this /* r30
 }
 
 // Range: 0x80071E78 -> 0x80071F78
-void PlacementObject::Reset(class PlacementObject * const this /* r30 */) {
+// this: r30
+void PlacementObject::Reset() {
     // Local variables
     class cXObject * pObject; // r31
     class cXMTObject * pMTObj; // r0
@@ -526,19 +579,22 @@ void PlacementObject::Reset(class PlacementObject * const this /* r30 */) {
 }
 
 // Range: 0x80071F78 -> 0x80071FC0
-void PlacementObject::ResetDirection(class PlacementObject * const this /* r4 */) {
+// this: r4
+void PlacementObject::ResetDirection() {
     // References
     // -> unsigned char s_handlingPlacementObject;
 }
 
 // Range: 0x80071FC0 -> 0x80072008
-void PlacementObject::SetDirection(class PlacementObject * const this /* r5 */) {
+// this: r5
+void PlacementObject::SetDirection() {
     // References
     // -> unsigned char s_handlingPlacementObject;
 }
 
 // Range: 0x80072008 -> 0x800723FC
-void PlacementObject::Rotate(class PlacementObject * const this /* r31 */, enum RotateDirection dirToRotate /* r26 */) {
+// this: r31
+void PlacementObject::Rotate(enum RotateDirection dirToRotate /* r26 */) {
     // Local variables
     int theta; // r30
     class FTilePt loc; // r1+0x10
@@ -558,7 +614,8 @@ void PlacementObject::Rotate(class PlacementObject * const this /* r31 */, enum 
 }
 
 // Range: 0x800723FC -> 0x800725A4
-void PlacementObject::ResetLocation(class PlacementObject * const this /* r30 */) {
+// this: r30
+void PlacementObject::ResetLocation() {
     // Local variables
     struct PlacementData placeData; // r1+0x8
     unsigned char bIsLegalToPlace; // r0
@@ -566,7 +623,8 @@ void PlacementObject::ResetLocation(class PlacementObject * const this /* r30 */
 }
 
 // Range: 0x800725A4 -> 0x80072790
-void PlacementObject::SetShaderToValidState(class PlacementObject * const this /* r27 */, unsigned char bIsValidState /* r26 */) {
+// this: r27
+void PlacementObject::SetShaderToValidState(unsigned char bIsValidState /* r26 */) {
     // Local variables
     class cFixedWorld * world; // r29
     class FTilePt firstLoc; // r1+0x20

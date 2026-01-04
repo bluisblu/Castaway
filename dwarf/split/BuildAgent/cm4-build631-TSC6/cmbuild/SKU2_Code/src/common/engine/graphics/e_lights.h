@@ -5,6 +5,7 @@
     Code range: 0x80027BC4 -> 0x80027C44
 */
 // Range: 0x80027BC4 -> 0x80027C44
-void * ELights::ELights(struct ELights * const this /* r29 */) {}
+// this: r29
+ELights::ELights() {}
 
 

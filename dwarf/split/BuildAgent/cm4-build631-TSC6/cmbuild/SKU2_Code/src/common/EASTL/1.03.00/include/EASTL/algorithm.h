@@ -113,12 +113,6 @@ class EIWallPart * * copy_backward_chooser() {}
 class EIWallPart * * copy_backward_impl::do_copy() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\common\EASTL\1.03.00\include\EASTL\algorithm.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x8002A938 -> 0x8002AC5C
-*/
 // Range: 0x8002A938 -> 0x8002A93C
 class CasListener * * copy() {}
 
@@ -195,12 +189,6 @@ void fill_imp::do_fill() {
 }
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\common\EASTL\1.03.00\include\EASTL\algorithm.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x8005C6FC -> 0x8005DF48
-*/
 // Range: 0x8005C6FC -> 0x8005C700
 struct InvStock * copy() {}
 
@@ -760,12 +748,6 @@ class CTilePt * copy_backward_chooser() {}
 class CTilePt * copy_backward_impl::do_copy(class CTilePt * first /* r29 */, class CTilePt * last /* r30 */, class CTilePt * result /* r31 */) {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\common\EASTL\1.03.00\include\EASTL\algorithm.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x80095CE0 -> 0x80095F28
-*/
 // Range: 0x80095CE0 -> 0x80095CE4
 class EMidLotInstance * * copy() {}
 
@@ -815,12 +797,6 @@ struct MidLotObject * copy_backward_chooser() {}
 struct MidLotObject * copy_backward_impl::do_copy(struct MidLotObject * first /* r29 */, struct MidLotObject * last /* r30 */, struct MidLotObject * result /* r31 */) {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\common\EASTL\1.03.00\include\EASTL\algorithm.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x8009F064 -> 0x8009F334
-*/
 // Range: 0x8009F064 -> 0x8009F068
 class PaneItem * * copy() {}
 
@@ -894,12 +870,6 @@ class WrapperPaneBase * * copy() {}
 class WrapperPaneBase * * copy_generic_iterator::do_copy() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\common\EASTL\1.03.00\include\EASTL\algorithm.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x800B6294 -> 0x800B7FEC
-*/
 // Range: 0x800B6294 -> 0x800B62A8
 void swap() {
     // Local variables
@@ -1561,12 +1531,6 @@ void fill() {}
 void fill_imp::do_fill(class SlotDescriptor * first /* r29 */, class SlotDescriptor * last /* r30 */, const class SlotDescriptor & value /* r31 */) {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\common\EASTL\1.03.00\include\EASTL\algorithm.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x800F7A34 -> 0x800F98DC
-*/
 // Range: 0x800F7A34 -> 0x800F7A38
 struct ListenerInfo * copy() {}
 
@@ -2210,12 +2174,6 @@ void fill_imp::do_fill() {
 }
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\common\EASTL\1.03.00\include\EASTL\algorithm.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x801636D4 -> 0x8016396C
-*/
 // Range: 0x801636D4 -> 0x801636D8
 class ConsoleAutoRefCount * copy() {}
 
@@ -2280,12 +2238,6 @@ class ConsoleAutoRefCount * copy_backward_impl::do_copy(class ConsoleAutoRefCoun
 unsigned long & max_alt() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\common\EASTL\1.03.00\include\EASTL\algorithm.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x8016D048 -> 0x8016D4CC
-*/
 // Range: 0x8016D048 -> 0x8016D04C
 class StateMachineState * * copy() {}
 
@@ -2380,12 +2332,6 @@ class StateMachine * * copy() {}
 class StateMachine * * copy_generic_iterator::do_copy() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\common\EASTL\1.03.00\include\EASTL\algorithm.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x8019AC9C -> 0x8019AD0C
-*/
 // Range: 0x8019AC9C -> 0x8019ACA0
 struct CASUIScreenState * copy_backward() {}
 
@@ -2399,12 +2345,6 @@ struct CASUIScreenState * copy_backward_chooser() {}
 struct CASUIScreenState * copy_backward_impl::do_copy(struct CASUIScreenState * first /* r29 */, struct CASUIScreenState * last /* r30 */, struct CASUIScreenState * result /* r31 */) {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\common\EASTL\1.03.00\include\EASTL\algorithm.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x801ECF20 -> 0x801ED0D4
-*/
 // Range: 0x801ECF20 -> 0x801ECF24
 struct KFTRecord * * copy() {}
 
@@ -2442,12 +2382,6 @@ void fill() {}
 void fill_imp::do_fill(class CTilePt * first /* r29 */, class CTilePt * last /* r30 */, const class CTilePt & value /* r31 */) {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\common\EASTL\1.03.00\include\EASTL\algorithm.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x801FF88C -> 0x801FFEE4
-*/
 // Range: 0x801FF88C -> 0x801FF890
 struct AptAuxIDToChar * copy() {}
 
@@ -2578,12 +2512,6 @@ class ENeighborhoodCustomChar * * copy_backward_chooser() {}
 class ENeighborhoodCustomChar * * copy_backward_impl::do_copy() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\common\EASTL\1.03.00\include\EASTL\algorithm.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x8024D124 -> 0x8024D288
-*/
 // Range: 0x8024D124 -> 0x8024D128
 struct WindyPlantInfo * copy() {}
 
@@ -2621,12 +2549,6 @@ struct WindyPlantInfo * copy_backward_chooser() {}
 struct WindyPlantInfo * copy_backward_impl::do_copy(struct WindyPlantInfo * first /* r29 */, struct WindyPlantInfo * last /* r30 */, struct WindyPlantInfo * result /* r31 */) {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\common\EASTL\1.03.00\include\EASTL\algorithm.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x802ADAA0 -> 0x802ADC2C
-*/
 // Range: 0x802ADAA0 -> 0x802ADAE8
 void iter_swap() {}
 
@@ -2637,22 +2559,10 @@ void iter_swap_impl::iter_swap() {}
 struct ResourceIndexRecord & median(const struct ResourceIndexRecord & a /* r28 */, const struct ResourceIndexRecord & b /* r29 */, const struct ResourceIndexRecord & c /* r30 */, unsigned char (* compare)(struct ResourceIndexRecord &) /* r31 */) {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\common\EASTL\1.03.00\include\EASTL\algorithm.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x802EB97C -> 0x802EB9DC
-*/
 // Range: 0x802EB97C -> 0x802EB9DC
 class generic_iterator fill_n() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\common\EASTL\1.03.00\include\EASTL\algorithm.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x802FC51C -> 0x802FC568
-*/
 // Range: 0x802FC51C -> 0x802FC568
 unsigned int * lower_bound() {
     // Local variables

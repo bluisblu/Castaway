@@ -32,23 +32,19 @@ void cXObject::SetDirectControl() {}
 struct ObjDefinition * cXObject::GetDef() {}
 
 // Range: 0x80019870 -> 0x80019880
-void cXObject::ClearIdleStatus(class cXObject * const this /* r4 */) {}
+// this: r4
+void cXObject::ClearIdleStatus() {}
 
 // Range: 0x80019880 -> 0x80019898
 unsigned char cXObject::GetMiscFlag() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\target\game\simulator\core\object.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x80051B50 -> 0x80051EC8
-*/
 // Range: 0x80051B50 -> 0x80051B58
 class Behavior * cXObject::GetBehavior() {}
 
 // Range: 0x80051B58 -> 0x80051BA8
-class cXObject * cXObject::GetContainedObject(class cXObject * const this /* r31 */) {
+// this: r31
+class cXObject * cXObject::GetContainedObject() {
     // Local variables
     class ObjectSlot * s; // r0
 }
@@ -69,7 +65,8 @@ enum ObjectLightSource cXObject::GetObjectLightSource() {}
 class ObjSelector * cXObject::GetSelector() {}
 
 // Range: 0x80051C34 -> 0x80051C94
-unsigned char cXObject::IsWindow(class cXObject * const this /* r30 */) {}
+// this: r30
+unsigned char cXObject::IsWindow() {}
 
 // Range: 0x80051C94 -> 0x80051CD4
 signed short cXObject::GetTreeID(enum ObjEntryPoint ep /* r31 */) {}
@@ -81,19 +78,22 @@ class ObjFnTable * cXObject::GetFnTable() {}
 signed short cXObject::GetType() {}
 
 // Range: 0x80051CE8 -> 0x80051CF8
-void cXObject::GetLocation(const class cXObject * const this /* r5 */) {}
+// this: r5
+void cXObject::GetLocation() const {}
 
 // Range: 0x80051CF8 -> 0x80051D18
 void cXObject::SetMiscFlag() {}
 
 // Range: 0x80051D18 -> 0x80051D8C
-unsigned char cXObject::IsGate(class cXObject * const this /* r30 */) {}
+// this: r30
+unsigned char cXObject::IsGate() {}
 
 // Range: 0x80051D8C -> 0x80051DB0
 signed short cXObject::GetHeight() {}
 
 // Range: 0x80051DB0 -> 0x80051E24
-unsigned char cXObject::IsDoor(class cXObject * const this /* r30 */) {}
+// this: r30
+unsigned char cXObject::IsDoor() {}
 
 // Range: 0x80051E24 -> 0x80051E54
 unsigned char cXObject::IsStructure() {}
@@ -102,7 +102,8 @@ unsigned char cXObject::IsStructure() {}
 int cXObject::GetHilite() {}
 
 // Range: 0x80051E60 -> 0x80051E78
-void cXObject::EnableSim(class cXObject * const this /* r7 */) {}
+// this: r7
+void cXObject::EnableSim() {}
 
 // Range: 0x80051E78 -> 0x80051E9C
 unsigned char cXObject::HasZeroExtent() {}
@@ -111,12 +112,6 @@ unsigned char cXObject::HasZeroExtent() {}
 signed short cXObject::GetFlags() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\target\game\simulator\core\object.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x80095F8C -> 0x80096048
-*/
 // Range: 0x80095F8C -> 0x80095FBC
 unsigned char cXObject::IsHutObject() {}
 
@@ -136,12 +131,6 @@ void cXObject::SetOverrideDialogReturnCode() {
 }
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\target\game\simulator\core\object.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x800A5CB0 -> 0x800A5F9C
-*/
 // Range: 0x800A5CB0 -> 0x800A5CC0
 void cXObject::SetTemp() {}
 
@@ -170,7 +159,8 @@ class RoutingSlot * cXObject::GetRoutingSlot() {}
 int cXObject::GetNumRoutingSlots() {}
 
 // Range: 0x800A5D58 -> 0x800A5DC0
-unsigned char cXObject::IsPortal(class cXObject * const this /* r30 */) {}
+// this: r30
+unsigned char cXObject::IsPortal() {}
 
 // Range: 0x800A5DC0 -> 0x800A5E04
 unsigned char cXObject::IsChair() {}
@@ -182,7 +172,8 @@ class ObjectModule * cXObject::GetModule() {}
 void cXObject::SetRoutingSlot(const class RoutingSlot & slot /* r31 */) {}
 
 // Range: 0x800A5E44 -> 0x800A5E94
-unsigned char cXObject::RunTree(class cXObject * const this /* r30 */, const char * treeName /* r31 */) {}
+// this: r30
+unsigned char cXObject::RunTree(const char * treeName /* r31 */) {}
 
 // Range: 0x800A5E94 -> 0x800A5E9C
 class cXObject * cXObject::GetNext() {}
@@ -203,7 +194,8 @@ unsigned char cXObject::GetFreeWill() {
 signed short cXObject::GetAttr() {}
 
 // Range: 0x800A5F10 -> 0x800A5F64
-unsigned char cXObject::CanIntersectPeople(class cXObject * const this /* r31 */) {}
+// this: r31
+unsigned char cXObject::CanIntersectPeople() {}
 
 // Range: 0x800A5F64 -> 0x800A5F6C
 class FTileRect & cXObject::GetRect() {}
@@ -215,12 +207,6 @@ unsigned char cXObject::HaveGraphicsBeenTagged() {}
 void cXObject::TagGraphicsField() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\target\game\simulator\core\object.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x800FAF58 -> 0x800FB218
-*/
 // Range: 0x800FAF58 -> 0x800FAF60
 float cXObject::GetElevation() {}
 
@@ -231,10 +217,12 @@ class RelMatrix & cXObject::GetRelMatrix() {}
 class ObjSelector * cXObject::GetSelector() {}
 
 // Range: 0x800FAF70 -> 0x800FAF80
-void cXObject::Kill(class cXObject * const this /* r4 */) {}
+// this: r4
+void cXObject::Kill() {}
 
 // Range: 0x800FAF80 -> 0x800FAF94
-void cXObject::SetIdleStatus(class cXObject * const this /* r6 */) {}
+// this: r6
+void cXObject::SetIdleStatus() {}
 
 // Range: 0x800FAF94 -> 0x800FAFA4
 signed short cXObject::GetSemiAttr() {}
@@ -297,7 +285,8 @@ void cXObject::ClearCachedObjectCatalogResource() {}
 class CatalogResource * cXObject::GetCachedObjectCatalogResource() {}
 
 // Range: 0x800FB1AC -> 0x800FB1BC
-int cXObject::GetIdleStatus(class cXObject * const this /* r4 */) {}
+// this: r4
+int cXObject::GetIdleStatus() {}
 
 // Range: 0x800FB1BC -> 0x800FB200
 unsigned char cXObject::GetObjAnimFlag(enum ObjAnimFlags flag /* r31 */) {}
@@ -312,12 +301,6 @@ int cXObject::GetNumSemiAttr() {}
 int cXObject::GetNumAttr() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\target\game\simulator\core\object.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x801AB020 -> 0x801AB030
-*/
 // Range: 0x801AB020 -> 0x801AB030
 void cXObject::SetAttr() {}
 

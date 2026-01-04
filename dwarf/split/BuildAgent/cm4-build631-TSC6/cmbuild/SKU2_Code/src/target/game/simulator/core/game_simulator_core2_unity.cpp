@@ -4,117 +4,141 @@
     Language: C++
     Code range: 0x800A1178 -> 0x800A1178
 */
+// total size: 0xC
 class ObjectTypeAttrBlock {
-    // total size: 0xC
+    // Members
     int fGUID; // offset 0x0, size 0x4
     int fNumAttr; // offset 0x4, size 0x4
     signed short * fAttr; // offset 0x8, size 0x4
 };
+// total size: 0x90
 struct ObjFnData {
-    // total size: 0x90
+    // Members
     int resID; // offset 0x0, size 0x4
     signed short fTreeID[35]; // offset 0x4, size 0x46
     signed short fCheckTreeID[35]; // offset 0x4A, size 0x46
 };
+// total size: 0x18
 class ObjFnTableQuickData : public ObjFnTable {
-    // total size: 0x18
+    // Members
     class ObjectDataID mDataID; // offset 0x4, size 0x8
     const struct ObjFnData * m_pFunction; // offset 0xC, size 0x4
     struct ObjFnData * m_pRTFunction; // offset 0x10, size 0x4
     unsigned int mRefCount; // offset 0x14, size 0x4
 };
+// total size: 0x4
 class VECTOR {
-    // total size: 0x4
+    // Members
     struct ObjFnData * pData; // offset 0x0, size 0x4
 };
+// total size: 0x4
 class VECTOR {
-    // total size: 0x4
+    // Members
     struct ObjDefinition * * pData; // offset 0x0, size 0x4
 };
+// total size: 0x4
 struct AnimRefName {
-    // total size: 0x4
+    // Members
     struct AnimRef * animName; // offset 0x0, size 0x4
 };
+// total size: 0x4
 class VECTOR {
-    // total size: 0x4
+    // Members
     struct AnimRefName * * pData; // offset 0x0, size 0x4
 };
+// total size: 0x8
 struct AnimRefTable {
-    // total size: 0x8
+    // Members
     class VECTOR animNames; // offset 0x0, size 0x4
     signed short resID; // offset 0x4, size 0x2
 };
+// total size: 0x4
 class VECTOR {
-    // total size: 0x4
+    // Members
     struct AnimRefTable * pData; // offset 0x0, size 0x4
 };
+// total size: 0x4
 class VECTOR {
-    // total size: 0x4
+    // Members
     class ELocString * pData; // offset 0x0, size 0x4
 };
+// total size: 0xC
 struct WStringSet : public VECTOR {
-    // total size: 0xC
+    // Members
     int resType; // offset 0x4, size 0x4
     signed short resID; // offset 0x8, size 0x2
 };
+// total size: 0x4
 class VECTOR {
-    // total size: 0x4
+    // Members
     struct WStringSet * pData; // offset 0x0, size 0x4
 };
+// total size: 0x10
 struct CatalogData {
-    // total size: 0x10
+    // Members
     int resID; // offset 0x0, size 0x4
     class ELocString name; // offset 0x4, size 0x4
     class ELocString description; // offset 0x8, size 0x4
     class ELocString shortName; // offset 0xC, size 0x4
 };
+// total size: 0x4
 class VECTOR {
-    // total size: 0x4
+    // Members
     struct CatalogData * pData; // offset 0x0, size 0x4
 };
+// total size: 0x8
 struct BehaviorConstantValue {
-    // total size: 0x8
+    // Members
     signed short value; // offset 0x0, size 0x2
     char * name; // offset 0x4, size 0x4
 };
+// total size: 0x4
 class VECTOR {
-    // total size: 0x4
+    // Members
     struct BehaviorConstantValue * pData; // offset 0x0, size 0x4
 };
+// total size: 0x10
 struct BehaviorConstants {
-    // total size: 0x10
+    // Members
     int resID; // offset 0x0, size 0x4
     class VECTOR values; // offset 0x4, size 0x4
     char * setName; // offset 0x8, size 0x4
     unsigned char isTunable; // offset 0xC, size 0x1
 };
+// total size: 0x4
 class VECTOR {
-    // total size: 0x4
+    // Members
     struct BehaviorConstants * pData; // offset 0x0, size 0x4
 };
+// total size: 0x4
 class VECTOR {
-    // total size: 0x4
+    // Members
     class TreeTable * pData; // offset 0x0, size 0x4
 };
+// total size: 0x8
 struct FloatConstantItem {
-    // total size: 0x8
+    // Members
     float fValue; // offset 0x0, size 0x4
     const char * fName; // offset 0x4, size 0x4
 };
+// total size: 0x4
 class VECTOR {
-    // total size: 0x4
+    // Members
     struct FloatConstantItem * pData; // offset 0x0, size 0x4
 };
+// total size: 0x8
 struct FloatConstantsData : public VECTOR {
-    // total size: 0x8
+    // Members
     int resID; // offset 0x4, size 0x4
 };
+// total size: 0x4
 class VECTOR {
-    // total size: 0x4
+    // Members
     struct FloatConstantsData * pData; // offset 0x0, size 0x4
 };
+// total size: 0x48
 struct ResFile {
-    // total size: 0x48
+    // Members
     class VECTOR objDefinition; // offset 0x0, size 0x4
     class VECTOR animTables; // offset 0x4, size 0x4
     class VECTOR propTables; // offset 0x8, size 0x4
@@ -134,19 +158,20 @@ struct ResFile {
     unsigned int uPropMemCost; // offset 0x40, size 0x4
     unsigned int datasetID_unused; // offset 0x44, size 0x4
 };
-class ObjResFile : public StdResFile {
-    // total size: 0x184
-};
+// total size: 0x184
+class ObjResFile : public StdResFile {};
 static int sMotiveCurveMap[11]; // size: 0x2C, address: 0x8041B4B8
+// total size: 0x4
 class CatalogResource {
-    // total size: 0x4
+    // Members
 public:
     void * __vptr$; // offset 0x0, size 0x4
 };
 static class BString2 empty; // size: 0x4, address: 0x805DB7B4
 static class BString2 empty; // size: 0x4, address: 0x805DB7BC
+// total size: 0x18
 struct RelationshipTable {
-    // total size: 0x18
+    // Members
     int simGUID; // offset 0x0, size 0x4
     unsigned int smallHead; // offset 0x4, size 0x4
     unsigned int largeHead; // offset 0x8, size 0x4
@@ -154,17 +179,20 @@ struct RelationshipTable {
     class ELocString firstName; // offset 0x10, size 0x4
     class ELocString lastName; // offset 0x14, size 0x4
 };
+// total size: 0x4
 class ThumbnailLoader {
-    // total size: 0x4
+    // Members
     class ObjSelector * const m_pSelector; // offset 0x0, size 0x4
 };
+// total size: 0xC
 class SimpleReconObject : public ReconObject {
-    // total size: 0xC
+    // Members
     class ThumbnailLoader * fObj; // offset 0x4, size 0x4
     int fType; // offset 0x8, size 0x4
 };
+// total size: 0x11C
 class TTabScratchEntry : public ITreeTableEntry {
-    // total size: 0x11C
+    // Members
     signed short fCheckTreeID; // offset 0x4, size 0x2
     signed short fActionTreeID; // offset 0x6, size 0x2
     class TreeTableAdScratch fAds[16]; // offset 0x8, size 0x100
@@ -181,12 +209,14 @@ class TTabScratchEntry * sCheckTreeModEntry; // size: 0x4, address: 0x805D86E4
 class ObjTestSim * sMenuBuilder; // size: 0x4, address: 0x805DB7C0
 class InteractionList * sMenu; // size: 0x4, address: 0x805DB7C4
 class Interaction * sInteraction; // size: 0x4, address: 0x805DB7C8
+// total size: 0xE4
 class MotiveCurveArray : public MotiveCurveSet {
-    // total size: 0xE4
+    // Members
     class MotiveCurve fCurveArray[11]; // offset 0x8, size 0xDC
 };
+// total size: 0xEC
 class MotiveEffects : public MotiveCurveArray {
-    // total size: 0xEC
+    // Members
     class cXPerson * fPerson; // offset 0xE4, size 0x4
     class Motives * fMotives; // offset 0xE8, size 0x4
 };
@@ -195,82 +225,104 @@ class PassiveInfluenceSystem * s_passiveInfluenceSystem; // size: 0x4, address: 
 class vector m_TileVector; // size: 0x10, address: 0x80491D38
 class vector m_TileVector; // size: 0x10, address: 0x80491D58
 signed short lotToDisplayTextFor; // size: 0x2, address: 0x805DB7D4
-class vector : public VectorBase {
-    // total size: 0x10
-};
+// total size: 0x10
+class vector : public VectorBase {};
+// total size: 0x10
 struct VectorBase {
-    // total size: 0x10
+    // Static members
+    static unsigned long kAlignment; // size: 0x4
+    static unsigned long kAlignmentOffset; // size: 0x4
+    static unsigned long npos; // size: 0x4
+    static unsigned long kMaxSize; // size: 0x4
+
+    // Members
 protected:
     class PassiveInfluenceItem * * mpBegin; // offset 0x0, size 0x4
     class PassiveInfluenceItem * * mpEnd; // offset 0x4, size 0x4
     class PassiveInfluenceItem * * mpCapacity; // offset 0x8, size 0x4
     class allocator mAllocator; // offset 0xC, size 0x1
 };
+// total size: 0x4
 class generic_iterator {
-    // total size: 0x4
+    // Members
 protected:
     struct TilePt * mIterator; // offset 0x0, size 0x4
 };
+// total size: 0x4
 class generic_iterator {
-    // total size: 0x4
+    // Members
 protected:
     class PassiveInfluenceItem * * mIterator; // offset 0x0, size 0x4
 };
+// total size: 0x4
 struct ListIterator {
-    // total size: 0x4
+    // Members
     struct ListNode * mpNode; // offset 0x0, size 0x4
 };
+// total size: 0x4
 struct ListIterator {
-    // total size: 0x4
+    // Members
     struct ListNode * mpNode; // offset 0x0, size 0x4
 };
+// total size: 0x4
 struct ListIterator {
-    // total size: 0x4
+    // Members
     struct ListNode * mpNode; // offset 0x0, size 0x4
 };
+// total size: 0x4
 struct ListIterator {
-    // total size: 0x4
+    // Members
     struct ListNode * mpNode; // offset 0x0, size 0x4
 };
+// total size: 0x4
 struct ListIterator {
-    // total size: 0x4
+    // Members
     struct ListNode * mpNode; // offset 0x0, size 0x4
 };
+// total size: 0xC
 struct ListNode : public ListNodeBase {
-    // total size: 0xC
+    // Members
     class PassiveInfluencePortal * mValue; // offset 0x8, size 0x4
 };
+// total size: 0xC
 struct ListNode : public ListNodeBase {
-    // total size: 0xC
+    // Members
     class PassiveInfluenceMovable * mValue; // offset 0x8, size 0x4
 };
+// total size: 0xC
 struct ListNode : public ListNodeBase {
-    // total size: 0xC
+    // Members
     class PassiveInfluenceObject * mValue; // offset 0x8, size 0x4
 };
+// total size: 0xC
 struct ListNode : public ListNodeBase {
-    // total size: 0xC
+    // Members
     class PassiveInfluencePerson * mValue; // offset 0x8, size 0x4
 };
+// total size: 0x4
 class generic_iterator {
-    // total size: 0x4
+    // Members
 protected:
     struct TypedMotiveInc * mIterator; // offset 0x0, size 0x4
 };
+// total size: 0x4
 struct ListIterator {
-    // total size: 0x4
+    // Members
     struct ListNode * mpNode; // offset 0x0, size 0x4
 };
+// total size: 0xC
 struct ListNode : public ListNodeBase {
-    // total size: 0xC
+    // Members
     class PassiveInfluenceTarget * mValue; // offset 0x8, size 0x4
 };
+// total size: 0x4
 struct ListIterator {
-    // total size: 0x4
+    // Members
     struct ListNode * mpNode; // offset 0x0, size 0x4
 };
+// total size: 0x4
 struct ListIterator {
-    // total size: 0x4
+    // Members
     struct ListNode * mpNode; // offset 0x0, size 0x4
 };
 static int s_activeDuckPri; // size: 0x4, address: 0x805DB7D8
@@ -280,20 +332,23 @@ unsigned char s_maxSfxDuckPri; // size: 0x1, address: 0x805DB7E1
 unsigned char s_maxVoxDuckPri; // size: 0x1, address: 0x805DB7E2
 unsigned char s_maxMusicDuckPri; // size: 0x1, address: 0x805DB7E3
 float g_musicMinVolume; // size: 0x4, address: 0x805D86EC
+// total size: 0x8
 class TrackDataReader {
-    // total size: 0x8
+    // Members
     class ERSoundTrackData * m_trackData; // offset 0x0, size 0x4
     unsigned int m_index; // offset 0x4, size 0x4
 };
+// total size: 0x4
 struct SndRegInst {
-    // total size: 0x4
+    // Members
     signed char m_cmd; // offset 0x0, size 0x1
     signed char m_reg1; // offset 0x1, size 0x1
     signed char m_reg2; // offset 0x2, size 0x1
     signed char m_reg3; // offset 0x3, size 0x1
 };
+// total size: 0x4
 struct SndRegValInst {
-    // total size: 0x4
+    // Members
     signed char m_cmd; // offset 0x0, size 0x1
     signed char m_reg1; // offset 0x1, size 0x1
     unsigned short m_val; // offset 0x2, size 0x2
@@ -303,24 +358,41 @@ union SndInstruction {
     struct SndRegValInst m_regVal; // offset 0x0, size 0x4
 };
 static union SndInstruction nopInst; // size: 0x4, address: 0x805DB7E4
+// total size: 0x24
 class ERSoundTrackData : public EResource {
-    // total size: 0x24
+    // Static members
+    static class ETypeInfo m_typeInfo; // size: 0x28
+
+    // Members
 protected:
     class vector m_prog; // offset 0x14, size 0x10
 };
+// total size: 0x10
 struct VectorBase {
-    // total size: 0x10
+    // Static members
+    static unsigned long kAlignment; // size: 0x4
+    static unsigned long kAlignmentOffset; // size: 0x4
+    static unsigned long npos; // size: 0x4
+    static unsigned long kMaxSize; // size: 0x4
+
+    // Members
 protected:
     union SndInstruction * mpBegin; // offset 0x0, size 0x4
     union SndInstruction * mpEnd; // offset 0x4, size 0x4
     union SndInstruction * mpCapacity; // offset 0x8, size 0x4
     class allocator mAllocator; // offset 0xC, size 0x1
 };
-class vector : public VectorBase {
-    // total size: 0x10
-};
+// total size: 0x10
+class vector : public VectorBase {};
+// total size: 0x8C
 class cTrack {
-    // total size: 0x8C
+    // Static members
+    static unsigned char s_maxMusicDuckPri; // size: 0x1
+    static unsigned char s_maxVoxDuckPri; // size: 0x1
+    static unsigned char s_maxSfxDuckPri; // size: 0x1
+    static unsigned char s_superDuckEnabled; // size: 0x1
+
+    // Members
 public:
     void * __vptr$; // offset 0x0, size 0x4
 private:
@@ -354,8 +426,9 @@ private:
     int m_fadeDest; // offset 0x84, size 0x4
     int m_fadeSpeed; // offset 0x88, size 0x4
 };
+// total size: 0x1088
 class cHitMan {
-    // total size: 0x1088
+    // Members
 protected:
     class list m_TrackUpdateList; // offset 0x0, size 0xC
     struct ListIterator m_itUpdate; // offset 0xC, size 0x4
@@ -367,113 +440,143 @@ protected:
     class cSoundCache * m_pSoundCache; // offset 0x58, size 0x4
     class ERSoundEvent * m_alSequenceGroupTrackId[1035]; // offset 0x5C, size 0x102C
 };
+// total size: 0x18
 struct rbtree_node : public rbtree_node_base {
-    // total size: 0x18
+    // Members
     struct pair mValue; // offset 0x10, size 0x8
 };
+// total size: 0x4
 struct rbtree_iterator {
-    // total size: 0x4
+    // Members
     struct rbtree_node * mpNode; // offset 0x0, size 0x4
 };
-class map : public rbtree {
-    // total size: 0x1C
-};
+// total size: 0x1C
+class map : public rbtree {};
+// total size: 0x8
 struct pair {
-    // total size: 0x8
+    // Members
     int first; // offset 0x0, size 0x4
     class cHitControlGroup * second; // offset 0x4, size 0x4
 };
+// total size: 0x1C
 class rbtree : public rb_base {
-    // total size: 0x1C
+    // Static members
+    static unsigned long kKeyAlignment; // size: 0x4
+    static unsigned long kKeyAlignmentOffset; // size: 0x4
+    static unsigned long kValueAlignment; // size: 0x4
+    static unsigned long kValueAlignmentOffset; // size: 0x4
+
+    // Members
 public:
     struct rbtree_node_base mAnchor; // offset 0x4, size 0x10
     unsigned long mnSize; // offset 0x14, size 0x4
     class allocator mAllocator; // offset 0x18, size 0x1
 };
+// total size: 0x8
 class cHitControlGroup {
-    // total size: 0x8
+    // Members
 protected:
     int m_lControlGroupId; // offset 0x0, size 0x4
     int m_lVolume; // offset 0x4, size 0x4
 };
+// total size: 0x4
 struct ListIterator {
-    // total size: 0x4
+    // Members
     struct ListNode * mpNode; // offset 0x0, size 0x4
 };
+// total size: 0x4
 struct ListIterator {
-    // total size: 0x4
+    // Members
     struct ListNode * mpNode; // offset 0x0, size 0x4
 };
-class list : public ListBase {
-    // total size: 0xC
-};
+// total size: 0xC
+class list : public ListBase {};
+// total size: 0x1C
 class rbtree : public rb_base {
-    // total size: 0x1C
+    // Static members
+    static unsigned long kKeyAlignment; // size: 0x4
+    static unsigned long kKeyAlignmentOffset; // size: 0x4
+    static unsigned long kValueAlignment; // size: 0x4
+    static unsigned long kValueAlignmentOffset; // size: 0x4
+
+    // Members
 public:
     struct rbtree_node_base mAnchor; // offset 0x4, size 0x10
     unsigned long mnSize; // offset 0x14, size 0x4
     class allocator mAllocator; // offset 0x18, size 0x1
 };
+// total size: 0xC
 class ListBase {
-    // total size: 0xC
+    // Static members
+    static unsigned long kAlignment; // size: 0x4
+    static unsigned long kAlignmentOffset; // size: 0x4
+
+    // Members
 protected:
     struct ListNodeBase mNode; // offset 0x0, size 0x8
     class allocator mAllocator; // offset 0x8, size 0x1
 };
-class map : public rbtree {
-    // total size: 0x1C
-};
+// total size: 0x1C
+class map : public rbtree {};
+// total size: 0x1
 struct rb_base {
-    // total size: 0x1
+    // Members
     struct less mCompare; // offset 0x0, size 0x1
 };
+// total size: 0x1
 struct rb_base {
-    // total size: 0x1
+    // Members
     struct less mCompare; // offset 0x0, size 0x1
 };
+// total size: 0x8
 class cHitTimer {
-    // total size: 0x8
+    // Members
 protected:
     unsigned char m_bRunning; // offset 0x0, size 0x1
     unsigned int m_lElapsed; // offset 0x4, size 0x4
 };
+// total size: 0xC
 struct ListNode : public ListNodeBase {
-    // total size: 0xC
+    // Members
     class cTrack * mValue; // offset 0x8, size 0x4
 };
+// total size: 0x18
 struct rbtree_node : public rbtree_node_base {
-    // total size: 0x18
+    // Members
     struct pair mValue; // offset 0x10, size 0x8
 };
+// total size: 0x4
 struct rbtree_iterator {
-    // total size: 0x4
+    // Members
     struct rbtree_node * mpNode; // offset 0x0, size 0x4
 };
+// total size: 0x8
 struct pair {
-    // total size: 0x8
+    // Members
     class cTrack * const first; // offset 0x0, size 0x4
     int second; // offset 0x4, size 0x4
 };
-struct binary_function {
-    // total size: 0x1
-};
-struct less : public binary_function {
-    // total size: 0x1
-};
+// total size: 0x1
+struct binary_function {};
+// total size: 0x1
+struct less : public binary_function {};
+// total size: 0x8
 struct SndEvtHitPatch {
-    // total size: 0x8
+    // Members
     unsigned int m_musicID; // offset 0x0, size 0x4
     unsigned int m_sampleID; // offset 0x4, size 0x4
 };
+// total size: 0xC
 class TArray {
-    // total size: 0xC
+    // Members
 protected:
     struct SndEvtHitPatch * m_p; // offset 0x0, size 0x4
     int m_size; // offset 0x4, size 0x4
     int m_allocSize; // offset 0x8, size 0x4
 };
+// total size: 0x1C
 class cSamplePatch {
-    // total size: 0x1C
+    // Members
 protected:
     class cSampleChannel * m_pDefaultChannel; // offset 0x0, size 0x4
     unsigned int m_sampleID; // offset 0x4, size 0x4
@@ -484,22 +587,24 @@ public:
     unsigned char m_isFootStep; // offset 0x14, size 0x1
     class cIGZSnd * m_pSnd; // offset 0x18, size 0x4
 };
+// total size: 0x8
 class cSampleChannel {
-    // total size: 0x8
+    // Members
 protected:
     class cSamplePatch * m_pPatch; // offset 0x0, size 0x4
     class cIGZSnd * m_pSnd; // offset 0x4, size 0x4
 };
+// total size: 0x104
 class cSoundCache {
-    // total size: 0x104
+    // Members
     class cTrack * m_vTracks[64]; // offset 0x0, size 0x100
     int m_iTrackHead; // offset 0x100, size 0x4
 };
-class multimap : public rbtree {
-    // total size: 0x1C
-};
+// total size: 0x1C
+class multimap : public rbtree {};
+// total size: 0x8
 struct pair {
-    // total size: 0x8
+    // Members
     struct rbtree_iterator first; // offset 0x0, size 0x4
     struct rbtree_iterator second; // offset 0x4, size 0x4
 };
@@ -519,34 +624,38 @@ unsigned char sDumpTFBA; // size: 0x1, address: 0x805DB7F4
 signed short sDumpTFBACount; // size: 0x2, address: 0x805D870E
 unsigned char sbAllowingCheckTreeAds; // size: 0x1, address: 0x805DB7F5
 unsigned char sMoodCurvesSetup; // size: 0x1, address: 0x805DB7F6
+// total size: 0xD0
 class MotiveCurveArray : public MotiveCurveSet {
-    // total size: 0xD0
+    // Members
     class MotiveCurve fCurveArray[10]; // offset 0x8, size 0xC8
 };
 class MotiveCurveArray sAdultMoodWeightCurves; // size: 0xD0, address: 0x80491E48
 class MotiveCurveArray sChimpMoodWeightCurves; // size: 0xD0, address: 0x80491F28
 class MotiveCurveArray sBoarMoodWeightCurves; // size: 0xD0, address: 0x80492008
+// total size: 0x4
 class ConstantsClient {
-    // total size: 0x4
+    // Members
 public:
     void * __vptr$; // offset 0x0, size 0x4
 };
+// total size: 0x8
 class GlobalConstantsClient : public ConstantsClient {
-    // total size: 0x8
+    // Members
     signed short fID; // offset 0x4, size 0x2
 };
-class AutonomyConstantsClient : public GlobalConstantsClient {
-    // total size: 0x8
-};
+// total size: 0x8
+class AutonomyConstantsClient : public GlobalConstantsClient {};
 static class AutonomyConstantsClient sTheAutonomyClient; // size: 0x8, address: 0x805DB7F8
 static unsigned char sAutonomyConstantsLoaded; // size: 0x1, address: 0x805DB800
+// total size: 0x4
 class ConsoleAutoRefCount {
-    // total size: 0x4
+    // Members
 public:
     class FloatConstants * mpData; // offset 0x0, size 0x4
 };
+// total size: 0x14
 struct IngredientType {
-    // total size: 0x14
+    // Members
     signed short m_ID; // offset 0x0, size 0x2
     signed short m_Dummy1; // offset 0x2, size 0x2
     class ELocString m_Name; // offset 0x4, size 0x4
@@ -554,8 +663,9 @@ struct IngredientType {
     unsigned int m_UnselectedIconID; // offset 0xC, size 0x4
     int m_Dummy2; // offset 0x10, size 0x4
 };
+// total size: 0x44
 struct IngredientToken {
-    // total size: 0x44
+    // Members
     signed short m_ID; // offset 0x0, size 0x2
     signed short m_Cost; // offset 0x2, size 0x2
     struct IngredientType * m_Type; // offset 0x4, size 0x4
@@ -575,14 +685,16 @@ struct IngredientToken {
     int m_Reserved3; // offset 0x3C, size 0x4
     int m_Reserved4; // offset 0x40, size 0x4
 };
+// total size: 0x4
 class generic_iterator {
-    // total size: 0x4
+    // Members
 protected:
     struct RouteGoal * mIterator; // offset 0x0, size 0x4
 };
 static class vector consider; // size: 0x10, address: 0x804920E8
+// total size: 0x4
 class ConsoleAutoRefCount {
-    // total size: 0x4
+    // Members
 public:
     class StringSet * mpData; // offset 0x0, size 0x4
 };
@@ -592,8 +704,9 @@ enum BalloonType {
     kBalloonSpeak = 2,
     kBalloonNone = 3,
 };
+// total size: 0xC
 class IconGroup {
-    // total size: 0xC
+    // Members
     int fGroup; // offset 0x0, size 0x4
     class ConsoleAutoRefCount fStrings; // offset 0x4, size 0x4
     struct IconIDMap * fMap; // offset 0x8, size 0x4
@@ -601,25 +714,29 @@ class IconGroup {
 static class Interaction * sImmediateAction; // size: 0x4, address: 0x805DB804
 static class cXPerson * sImmediatePerson; // size: 0x4, address: 0x805DB808
 static class Interaction s_emptyCurrentInteraction; // size: 0x40, address: 0x80492108
+// total size: 0x4
 class AUTOPTR {
-    // total size: 0x4
+    // Members
     class PropTable * m_ptr; // offset 0x0, size 0x4
 };
 static int checkTreeCount; // size: 0x4, address: 0x805DB80C
+// total size: 0xC
 class TNodeList : public ENodeList {
-    // total size: 0xC
+    // Members
 protected:
     unsigned char m_bDeleteData; // offset 0x8, size 0x1
 };
+// total size: 0x14
 class EGameStateMan {
-    // total size: 0x14
+    // Members
     class NLIteratorPtrType * m_nliCurGame; // offset 0x0, size 0x4
     class TNodeList m_gameStateList; // offset 0x4, size 0xC
 protected:
     class EGameStateId m_NextState; // offset 0x10, size 0x4
 };
+// total size: 0xC
 class EGameState {
-    // total size: 0xC
+    // Members
 public:
     void * __vptr$; // offset 0x0, size 0x4
 protected:
@@ -635,8 +752,9 @@ enum IntroCameraStartState {
     INTROCAMERA_INTERPTOGAME = 5,
     INTROCAMERA_INTOGAME = 6,
 };
+// total size: 0x24
 class ELiveMode : public EGameState {
-    // total size: 0x24
+    // Members
 public:
     enum IntroCameraStartState m_introCameraState; // offset 0xC, size 0x4
     float m_waitTimer; // offset 0x10, size 0x4
@@ -657,50 +775,63 @@ enum tCheckTreeStatus$57559game_simulator_core2_unity_cpp {
     kCheckTreePassed = 1,
     kCheckTreeFailed = 2,
 };
+// total size: 0x20
 struct ListNode : public ListNodeBase {
-    // total size: 0x20
+    // Members
     struct ScoredInteraction mValue; // offset 0x8, size 0x18
 };
-class map : public rbtree {
-    // total size: 0x1C
-};
+// total size: 0x1C
+class map : public rbtree {};
+// total size: 0x4
 struct ListIterator {
-    // total size: 0x4
+    // Members
     struct ListNode * mpNode; // offset 0x0, size 0x4
 };
+// total size: 0x14
 struct rbtree_node : public rbtree_node_base {
-    // total size: 0x14
+    // Members
     struct pair mValue; // offset 0x10, size 0x4
 };
+// total size: 0x4
 struct rbtree_iterator {
-    // total size: 0x4
+    // Members
     struct rbtree_node * mpNode; // offset 0x0, size 0x4
 };
+// total size: 0x4
 struct pair {
-    // total size: 0x4
+    // Members
     signed short first; // offset 0x0, size 0x2
     unsigned char second; // offset 0x2, size 0x1
 };
-struct less : public binary_function {
-    // total size: 0x1
-};
+// total size: 0x1
+struct less : public binary_function {};
+// total size: 0x1C
 class rbtree : public rb_base {
-    // total size: 0x1C
+    // Static members
+    static unsigned long kKeyAlignment; // size: 0x4
+    static unsigned long kKeyAlignmentOffset; // size: 0x4
+    static unsigned long kValueAlignment; // size: 0x4
+    static unsigned long kValueAlignmentOffset; // size: 0x4
+
+    // Members
 public:
     struct rbtree_node_base mAnchor; // offset 0x4, size 0x10
     unsigned long mnSize; // offset 0x14, size 0x4
     class allocator mAllocator; // offset 0x18, size 0x1
 };
+// total size: 0x1
 struct rb_base {
-    // total size: 0x1
+    // Members
     struct less mCompare; // offset 0x0, size 0x1
 };
+// total size: 0x4
 struct ListIterator {
-    // total size: 0x4
+    // Members
     struct ListNode * mpNode; // offset 0x0, size 0x4
 };
+// total size: 0x8
 class UIStringGenerator {
-    // total size: 0x8
+    // Members
 protected:
     char * * m_Strings; // offset 0x0, size 0x4
     int m_NumStrings; // offset 0x4, size 0x4
@@ -750,23 +881,26 @@ enum eKFTType {
     eKFTType_last_crafting_bench = 33,
     eKFTType_cardinal = 34,
 };
+// total size: 0x14
 struct KFTResourceRecord {
-    // total size: 0x14
+    // Members
     unsigned int shaderId; // offset 0x0, size 0x4
     class BString2 name; // offset 0x4, size 0x4
     int haveCount; // offset 0x8, size 0x4
     int needCount; // offset 0xC, size 0x4
     void * __vptr$; // offset 0x10, size 0x4
 };
+// total size: 0x10
 struct KFTPlaceToolSkillRecord {
-    // total size: 0x10
+    // Members
     unsigned int shaderId; // offset 0x0, size 0x4
     class BString2 name; // offset 0x4, size 0x4
     unsigned char satisfied; // offset 0x8, size 0x1
     void * __vptr$; // offset 0xC, size 0x4
 };
+// total size: 0x58
 struct KFTRecord {
-    // total size: 0x58
+    // Members
     void * __vptr$; // offset 0x0, size 0x4
     struct KFTResourceRecord * resources[5]; // offset 0x4, size 0x14
     struct KFTPlaceToolSkillRecord * PTSs[3]; // offset 0x18, size 0xC
@@ -781,17 +915,23 @@ struct KFTRecord {
     class BString2 motiveBenefit[3]; // offset 0x48, size 0xC
     unsigned char bNew; // offset 0x54, size 0x1
 };
+// total size: 0x10
 struct VectorBase {
-    // total size: 0x10
+    // Static members
+    static unsigned long kAlignment; // size: 0x4
+    static unsigned long kAlignmentOffset; // size: 0x4
+    static unsigned long npos; // size: 0x4
+    static unsigned long kMaxSize; // size: 0x4
+
+    // Members
 protected:
     struct KFTRecord * * mpBegin; // offset 0x0, size 0x4
     struct KFTRecord * * mpEnd; // offset 0x4, size 0x4
     struct KFTRecord * * mpCapacity; // offset 0x8, size 0x4
     class allocator mAllocator; // offset 0xC, size 0x1
 };
-class vector : public VectorBase {
-    // total size: 0x10
-};
+// total size: 0x10
+class vector : public VectorBase {};
 enum eBBHMode {
     eBBHMode_Place = 0,
     eBBHMode_HutPlace = 1,
@@ -805,15 +945,17 @@ enum eBBHMode {
     eBBHMode_Clone = 9,
     eBBHMode_COUNT = 10,
 };
+// total size: 0x10
 struct BBHPriceInfo {
-    // total size: 0x10
+    // Members
     int value; // offset 0x0, size 0x4
     int count; // offset 0x4, size 0x4
     int unitValue; // offset 0x8, size 0x4
     unsigned char toolActive; // offset 0xC, size 0x1
 };
+// total size: 0xE4
 class BBHTarget : public UIObjectBase {
-    // total size: 0xE4
+    // Members
     unsigned char m_BBHLoaded; // offset 0xA4, size 0x1
     unsigned char m_BBHActive; // offset 0xA5, size 0x1
     unsigned char m_tweenActive; // offset 0xA6, size 0x1
@@ -834,8 +976,9 @@ enum eKFTIMToolMode {
     eKFTIMToolMode_objects = 0,
     eKFTIMToolMode_huts = 1,
 };
+// total size: 0x15C
 class KFTInteractorManager {
-    // total size: 0x15C
+    // Members
     class UIDialog m_UIDialog; // offset 0x0, size 0xA0
     class HelpDialog m_HelpDialog; // offset 0xA0, size 0xA8
     unsigned char m_bUIDialogExecuting; // offset 0x148, size 0x1
@@ -844,13 +987,15 @@ class KFTInteractorManager {
     class BBHTarget * m_pBBHTarget; // offset 0x154, size 0x4
     float m_counterExitInteractionMode; // offset 0x158, size 0x4
 };
+// total size: 0x8
 struct KFTModeShader {
-    // total size: 0x8
+    // Members
     enum eKFTType mode; // offset 0x0, size 0x4
     unsigned int shader; // offset 0x4, size 0x4
 };
+// total size: 0x18
 struct HutData {
-    // total size: 0x18
+    // Members
     int planId; // offset 0x0, size 0x4
     int binaryGuid; // offset 0x4, size 0x4
     int placementObjectGuid; // offset 0x8, size 0x4
@@ -858,8 +1003,16 @@ struct HutData {
     int objectCount; // offset 0x10, size 0x4
     int nodesCount; // offset 0x14, size 0x4
 };
+// total size: 0x474
 class KFTTarget : public UIObjectBase, public HelpDialogCallback {
-    // total size: 0x474
+    // Static members
+    static int m_lastIndex; // size: 0x4
+    static int m_lastMode; // size: 0x4
+    static struct KFTModeShader ModeShaderTable[34]; // size: 0x110
+    static struct HutData HutDataTable[39]; // size: 0x3A8
+    static signed short m_planCrafted; // size: 0x2
+
+    // Members
 protected:
     class UIStringGenerator m_gridShaderTable; // offset 0xA8, size 0x8
     class UIStringGenerator m_resourceIconTable; // offset 0xB0, size 0x8
@@ -898,8 +1051,16 @@ signed char sOldPersondataIndexArray[80]; // size: 0x50, address: 0x8042B588
 const unsigned short * tempClothingName; // size: 0x4, address: 0x805D8720
 const unsigned short * tempClothingDesc; // size: 0x4, address: 0x805D8724
 class PlanManager * _pPlanManager; // size: 0x4, address: 0x805DB810
+// total size: 0x5818
 class PlanManager {
-    // total size: 0x5818
+    // Static members
+    static class PlanManager * _pPlanManager; // size: 0x4
+    static unsigned char cheatIgnoreResources; // size: 0x1
+    static unsigned char cheatIgnoreRequirements; // size: 0x1
+    static unsigned char cheatShowAllPlans; // size: 0x1
+    static int MAX_NUM_PLANS; // size: 0x4
+
+    // Members
     class fixed_map statusMap; // offset 0x0, size 0x1F70
     class fixed_list unlockedPlans; // offset 0x1F70, size 0x12D8
     class fixed_list lockedPlans; // offset 0x3248, size 0x12D8
@@ -911,12 +1072,14 @@ class PlanManager {
     int currentCraftObject; // offset 0x5810, size 0x4
     int currentList; // offset 0x5814, size 0x4
 };
+// total size: 0x4
 class VECTOR {
-    // total size: 0x4
+    // Members
     signed char * pData; // offset 0x0, size 0x4
 };
+// total size: 0x60
 struct Plan {
-    // total size: 0x60
+    // Members
     signed short ID; // offset 0x0, size 0x2
     signed short type; // offset 0x2, size 0x2
     int GUID; // offset 0x4, size 0x4
@@ -946,212 +1109,289 @@ struct Plan {
     signed short skillToImprove; // offset 0x5C, size 0x2
     signed short skillBump; // offset 0x5E, size 0x2
 };
+// total size: 0x4
 class VECTOR {
-    // total size: 0x4
+    // Members
     unsigned short * pData; // offset 0x0, size 0x4
 };
 unsigned char cheatShowAllPlans; // size: 0x1, address: 0x805DB814
 unsigned char cheatIgnoreRequirements; // size: 0x1, address: 0x805DB815
 unsigned char cheatIgnoreResources; // size: 0x1, address: 0x805DB816
+// total size: 0xC
 struct ListNode : public ListNodeBase {
-    // total size: 0xC
+    // Members
     unsigned int mValue; // offset 0x8, size 0x4
 };
+// total size: 0xC
 class ListBase {
-    // total size: 0xC
+    // Static members
+    static unsigned long kAlignment; // size: 0x4
+    static unsigned long kAlignmentOffset; // size: 0x4
+
+    // Members
 protected:
     struct ListNodeBase mNode; // offset 0x0, size 0x8
     class allocator mAllocator; // offset 0x8, size 0x1
 };
+// total size: 0xC
 class ListBase {
-    // total size: 0xC
+    // Static members
+    static unsigned long kAlignment; // size: 0x4
+    static unsigned long kAlignmentOffset; // size: 0x4
+
+    // Members
 protected:
     struct ListNodeBase mNode; // offset 0x0, size 0x8
     class fixed_node_pool mAllocator; // offset 0x8, size 0x4
 };
+// total size: 0x4
 class fixed_node_pool {
-    // total size: 0x4
+    // Static members
+    static unsigned long kNodeSize; // size: 0x4
+    static unsigned long kNodeCount; // size: 0x4
+    static unsigned long kNodesSize; // size: 0x4
+    static unsigned long kBufferSize; // size: 0x4
+    static unsigned long kNodeAlignment; // size: 0x4
+    static unsigned long kNodeAlignmentOffset; // size: 0x4
+
+    // Members
 protected:
     class fixed_pool mPool; // offset 0x0, size 0x4
 };
-class fixed_pool : public fixed_pool_base {
-    // total size: 0x4
-};
+// total size: 0x4
+class fixed_pool : public fixed_pool_base {};
+// total size: 0x1C
 class rbtree : public rb_base {
-    // total size: 0x1C
+    // Static members
+    static unsigned long kKeyAlignment; // size: 0x4
+    static unsigned long kKeyAlignmentOffset; // size: 0x4
+    static unsigned long kValueAlignment; // size: 0x4
+    static unsigned long kValueAlignmentOffset; // size: 0x4
+
+    // Members
 public:
     struct rbtree_node_base mAnchor; // offset 0x4, size 0x10
     unsigned long mnSize; // offset 0x14, size 0x4
     class fixed_node_pool mAllocator; // offset 0x18, size 0x4
 };
-class list : public ListBase {
-    // total size: 0xC
-};
+// total size: 0xC
+class list : public ListBase {};
+// total size: 0x12D8
 class fixed_list : public list {
-    // total size: 0x12D8
+    // Static members
+    static unsigned long kMaxSize; // size: 0x4
+
+    // Members
 protected:
     char mBuffer[4812]; // offset 0xC, size 0x12CC
 };
-class list : public ListBase {
-    // total size: 0xC
-};
+// total size: 0xC
+class list : public ListBase {};
+// total size: 0x4
 struct Link {
-    // total size: 0x4
+    // Members
     struct Link * mpNext; // offset 0x0, size 0x4
 };
+// total size: 0x4
 struct fixed_pool_base {
-    // total size: 0x4
+    // Members
     struct Link * mpHead; // offset 0x0, size 0x4
 };
+// total size: 0x1F70
 class fixed_map : public map {
-    // total size: 0x1F70
+    // Static members
+    static unsigned long kMaxSize; // size: 0x4
+
+    // Members
 protected:
     char mBuffer[8020]; // offset 0x1C, size 0x1F54
 };
-class map : public rbtree {
-    // total size: 0x1C
-};
+// total size: 0x1C
+class map : public rbtree {};
+// total size: 0x4
 class fixed_node_pool {
-    // total size: 0x4
+    // Static members
+    static unsigned long kNodeSize; // size: 0x4
+    static unsigned long kNodeCount; // size: 0x4
+    static unsigned long kNodesSize; // size: 0x4
+    static unsigned long kBufferSize; // size: 0x4
+    static unsigned long kNodeAlignment; // size: 0x4
+    static unsigned long kNodeAlignmentOffset; // size: 0x4
+
+    // Members
 protected:
     class fixed_pool mPool; // offset 0x0, size 0x4
 };
+// total size: 0x1
 struct rb_base {
-    // total size: 0x1
+    // Members
     struct less mCompare; // offset 0x0, size 0x1
 };
+// total size: 0x14
 struct ERQTable {
-    // total size: 0x14
+    // Members
     const char * pName; // offset 0x0, size 0x4
     const struct Plan * pData; // offset 0x4, size 0x4
     const char * const * ppRowNames; // offset 0x8, size 0x4
     unsigned int uNumRows; // offset 0xC, size 0x4
     unsigned int uRowSize; // offset 0x10, size 0x4
 };
+// total size: 0xC
 struct ListNode : public ListNodeBase {
-    // total size: 0xC
+    // Members
     const struct Plan * mValue; // offset 0x8, size 0x4
 };
+// total size: 0x4
 struct ListIterator {
-    // total size: 0x4
+    // Members
     struct ListNode * mpNode; // offset 0x0, size 0x4
 };
+// total size: 0x4
 struct ListIterator {
-    // total size: 0x4
+    // Members
     struct ListNode * mpNode; // offset 0x0, size 0x4
 };
+// total size: 0x4
 struct ListIterator {
-    // total size: 0x4
+    // Members
     struct ListNode * mpNode; // offset 0x0, size 0x4
 };
+// total size: 0x4
 struct ListIterator {
-    // total size: 0x4
+    // Members
     struct ListNode * mpNode; // offset 0x0, size 0x4
 };
+// total size: 0x90
 class PlayerFamilyImpl : public FamilyImpl {
-    // total size: 0x90
+    // Members
     signed short m_stats[25]; // offset 0x5C, size 0x32
 };
+// total size: 0x4
 class PropTable {
-    // total size: 0x4
+    // Members
 public:
     void * __vptr$; // offset 0x0, size 0x4
 };
+// total size: 0x8
 class PropTableImpl : public PropTable {
-    // total size: 0x8
+    // Members
 public:
     const struct PropRefTable * m_pPropRefTable; // offset 0x4, size 0x4
 };
+// total size: 0x8
 struct PropRefTable : public VECTOR {
-    // total size: 0x8
+    // Members
     signed short resID; // offset 0x4, size 0x2
 };
+// total size: 0x4
 class VECTOR {
-    // total size: 0x4
+    // Members
     struct PropRefTable * pData; // offset 0x0, size 0x4
 };
+// total size: 0x4
 class VECTOR {
-    // total size: 0x4
+    // Members
     struct PropRef * * pData; // offset 0x0, size 0x4
 };
-class QuickResFile : public iResFile {
-    // total size: 0x10
-};
+// total size: 0x10
+class QuickResFile : public iResFile {};
+// total size: 0x14
 struct ERQTable {
-    // total size: 0x14
+    // Members
     const char * pName; // offset 0x0, size 0x4
     const struct ResFile * pData; // offset 0x4, size 0x4
     const char * const * ppRowNames; // offset 0x8, size 0x4
     unsigned int uNumRows; // offset 0xC, size 0x4
     unsigned int uRowSize; // offset 0x10, size 0x4
 };
+// total size: 0x4
 class VECTOR {
-    // total size: 0x4
+    // Members
     const char * * pData; // offset 0x0, size 0x4
 };
+// total size: 0xC
 struct AStringSet : public VECTOR {
-    // total size: 0xC
+    // Members
     int resType; // offset 0x4, size 0x4
     signed short resID; // offset 0x8, size 0x2
 };
+// total size: 0x4
 class VECTOR {
-    // total size: 0x4
+    // Members
     struct AStringSet * pData; // offset 0x0, size 0x4
 };
 static struct _FILE * dumpFile; // size: 0x4, address: 0x805DB818
+// total size: 0x20
 class Scheme {
-    // total size: 0x20
+    // Members
     class Precision precsn[4]; // offset 0x0, size 0x20
 };
 static class Scheme scheme8; // size: 0x20, address: 0x80492148
 static class Scheme scheme16; // size: 0x20, address: 0x80492168
 static class Scheme scheme32; // size: 0x20, address: 0x80492188
 static class Scheme schemeVer1; // size: 0x20, address: 0x804921A8
+// total size: 0x8
 class Precision {
-    // total size: 0x8
+    // Members
     int fBitCount; // offset 0x0, size 0x4
     int fMask; // offset 0x4, size 0x4
 };
+// total size: 0xC
 struct Header {
-    // total size: 0xC
+    // Members
     char swizzle; // offset 0x0, size 0x1
     char _pad[3]; // offset 0x1, size 0x3
     int version; // offset 0x4, size 0x4
     int type; // offset 0x8, size 0x4
 };
+// total size: 0x14
 class RelMatrixImpl : public RelMatrix {
-    // total size: 0x14
+    // Members
     class vector m_pArray; // offset 0x4, size 0x10
 };
-class vector : public VectorBase {
-    // total size: 0x10
-};
+// total size: 0x10
+class vector : public VectorBase {};
+// total size: 0x10
 struct VectorBase {
-    // total size: 0x10
+    // Static members
+    static unsigned long kAlignment; // size: 0x4
+    static unsigned long kAlignmentOffset; // size: 0x4
+    static unsigned long npos; // size: 0x4
+    static unsigned long kMaxSize; // size: 0x4
+
+    // Members
 protected:
     class RelArray * * mpBegin; // offset 0x0, size 0x4
     class RelArray * * mpEnd; // offset 0x4, size 0x4
     class RelArray * * mpCapacity; // offset 0x8, size 0x4
     class allocator mAllocator; // offset 0xC, size 0x1
 };
+// total size: 0x4
 class RelInt {
-    // total size: 0x4
+    // Members
 public:
     int n; // offset 0x0, size 0x4
 };
-class vector : public VectorBase {
-    // total size: 0x10
-};
+// total size: 0x10
+class vector : public VectorBase {};
+// total size: 0x10
 struct VectorBase {
-    // total size: 0x10
+    // Static members
+    static unsigned long kAlignment; // size: 0x4
+    static unsigned long kAlignmentOffset; // size: 0x4
+    static unsigned long npos; // size: 0x4
+    static unsigned long kMaxSize; // size: 0x4
+
+    // Members
 protected:
     class RelInt * mpBegin; // offset 0x0, size 0x4
     class RelInt * mpEnd; // offset 0x4, size 0x4
     class RelInt * mpCapacity; // offset 0x8, size 0x4
     class allocator mAllocator; // offset 0xC, size 0x1
 };
+// total size: 0x14
 class RelArray : public vector {
-    // total size: 0x14
+    // Members
     int key; // offset 0x10, size 0x4
 };
 static int numMatricies; // size: 0x4, address: 0x805DB81C
@@ -1179,31 +1419,35 @@ static float sFloorScoreRange; // size: 0x4, address: 0x805DB868
 static float sFloorScoreLowLimit; // size: 0x4, address: 0x805DB86C
 static float sWallScoreRange; // size: 0x4, address: 0x805DB870
 static float sWallScoreLowLimit; // size: 0x4, address: 0x805DB874
-class RoomScoreConstants : public GlobalConstantsClient {
-    // total size: 0x8
-};
+// total size: 0x8
+class RoomScoreConstants : public GlobalConstantsClient {};
 static class RoomScoreConstants sTheClient; // size: 0x8, address: 0x805DB878
 static unsigned char sConstantsLoaded; // size: 0x1, address: 0x805DB880
+// total size: 0x8
 struct pair {
-    // total size: 0x8
+    // Members
     struct rbtree_iterator first; // offset 0x0, size 0x4
     unsigned char second; // offset 0x4, size 0x1
 };
+// total size: 0x24
 struct rbtree_node : public rbtree_node_base {
-    // total size: 0x24
+    // Members
     struct pair mValue; // offset 0x10, size 0x14
 };
+// total size: 0x4
 struct rbtree_iterator {
-    // total size: 0x4
+    // Members
     struct rbtree_node * mpNode; // offset 0x0, size 0x4
 };
+// total size: 0x8
 struct pair {
-    // total size: 0x8
+    // Members
     struct rbtree_iterator first; // offset 0x0, size 0x4
     unsigned char second; // offset 0x4, size 0x1
 };
+// total size: 0x3C
 class LightingParameters {
-    // total size: 0x3C
+    // Members
 public:
     float gTweeks[13]; // offset 0x0, size 0x34
     unsigned int gTimeParamsLastTweeked; // offset 0x34, size 0x4
@@ -1211,15 +1455,17 @@ public:
     unsigned char gSpriteAntialiasingEnabled; // offset 0x39, size 0x1
     unsigned char gLampLightingEnabled; // offset 0x3A, size 0x1
 };
+// total size: 0x14
 struct SegSearch {
-    // total size: 0x14
+    // Members
     enum TileWallsSegment seg; // offset 0x0, size 0x4
     enum DiagonalSideSelector ds[2]; // offset 0x4, size 0x8
     enum Sides side[2]; // offset 0xC, size 0x8
 };
 static struct SegSearch segSrch[2]; // size: 0x28, address: 0x8042BC08
+// total size: 0x60
 class SpacePartition {
-    // total size: 0x60
+    // Members
     const struct RoutingParams * fParams; // offset 0x0, size 0x4
     class vector * fPartition1; // offset 0x4, size 0x4
     class vector * fPartition2; // offset 0x8, size 0x4
@@ -1231,11 +1477,17 @@ class SpacePartition {
     class vector fNodeList; // offset 0x50, size 0x10
 };
 class SpacePartition fSpacePartition; // size: 0x60, address: 0x804921D8
-class vector : public VectorBase {
-    // total size: 0x10
-};
+// total size: 0x10
+class vector : public VectorBase {};
+// total size: 0x10
 struct VectorBase {
-    // total size: 0x10
+    // Static members
+    static unsigned long kAlignment; // size: 0x4
+    static unsigned long kAlignmentOffset; // size: 0x4
+    static unsigned long npos; // size: 0x4
+    static unsigned long kMaxSize; // size: 0x4
+
+    // Members
 protected:
     class ASTNode * mpBegin; // offset 0x0, size 0x4
     class ASTNode * mpEnd; // offset 0x4, size 0x4
@@ -1243,21 +1495,23 @@ protected:
     class allocator mAllocator; // offset 0xC, size 0x1
 };
 static unsigned char use_grid; // size: 0x1, address: 0x805D8754
-class ASTNodeRefList : public vector {
-    // total size: 0x10
-};
+// total size: 0x10
+class ASTNodeRefList : public vector {};
+// total size: 0x4
 class generic_iterator {
-    // total size: 0x4
+    // Members
 protected:
     class ASTNode * mIterator; // offset 0x0, size 0x4
 };
+// total size: 0x4
 class generic_iterator {
-    // total size: 0x4
+    // Members
 protected:
     class PenaltyRect * mIterator; // offset 0x0, size 0x4
 };
+// total size: 0x2C
 class ASTNode {
-    // total size: 0x2C
+    // Members
 public:
     int goalNumber; // offset 0x0, size 0x4
     int rectNumber; // offset 0x4, size 0x4
@@ -1270,8 +1524,12 @@ public:
     float g; // offset 0x24, size 0x4
     float h; // offset 0x28, size 0x4
 };
+// total size: 0x70
 class Path {
-    // total size: 0x70
+    // Static members
+    static class SpacePartition fSpacePartition; // size: 0x60
+
+    // Members
     const struct RoutingParams * fParams; // offset 0x0, size 0x4
     class ASTNodeRefList fReverseNodePath; // offset 0x4, size 0x10
     class ASTNodeRefList fSpatialNodePath; // offset 0x14, size 0x10
@@ -1286,34 +1544,39 @@ class Path {
     int fChosenGoal; // offset 0x68, size 0x4
     int fSmoothCount; // offset 0x6C, size 0x4
 };
-class vector : public VectorBase {
-    // total size: 0x10
-};
+// total size: 0x10
+class vector : public VectorBase {};
+// total size: 0x18
 struct ChainMemberFile {
-    // total size: 0x18
+    // Members
     class iResFile * file; // offset 0x0, size 0x4
     class vector types; // offset 0x4, size 0x10
     unsigned char prohibited; // offset 0x14, size 0x1
 };
+// total size: 0xD0
 class ChainResFile : public iResFile {
-    // total size: 0xD0
+    // Members
     struct ChainMemberFile fFiles[8]; // offset 0x10, size 0xC0
 };
+// total size: 0x14
 struct OpenSpec {
-    // total size: 0x14
+    // Members
     int fileType; // offset 0x0, size 0x4
     class StackString extension; // offset 0x4, size 0x10
 };
+// total size: 0x184
 class SeqResFile : public ChainResFile {
-    // total size: 0x184
+    // Members
     struct OpenSpec fOpenSpecs[9]; // offset 0xD0, size 0xB4
 };
+// total size: 0x10
 class StackString : public StringBuffer {
-    // total size: 0x10
+    // Members
     char fChars[8]; // offset 0x8, size 0x8
 };
+// total size: 0x28
 class StackString : public StringBuffer {
-    // total size: 0x28
+    // Members
     char fChars[32]; // offset 0x8, size 0x20
 };
 static unsigned char bSkipATimeAdvance; // size: 0x1, address: 0x805DB881
@@ -1324,8 +1587,9 @@ enum eTRCState {
     eTRCState_Loading = 2,
     eTRCState_Unloading = 3,
 };
+// total size: 0x1A4
 class TRCTarget : public UIObjectBase, public UIDialog {
-    // total size: 0x1A4
+    // Members
     enum eTRCState m_dialogState; // offset 0x144, size 0x4
     unsigned int m_aptFilterId; // offset 0x148, size 0x4
     unsigned int m_ignoreFilterId; // offset 0x14C, size 0x4
@@ -1345,12 +1609,14 @@ class TRCTarget : public UIObjectBase, public UIDialog {
     class UIReflow reflow; // offset 0x18C, size 0x18
 };
 static class GlobalSkillTables * sTables; // size: 0x4, address: 0x805DB884
+// total size: 0x4
 class AUTOPTR {
-    // total size: 0x4
+    // Members
     class AnimTable * m_ptr; // offset 0x0, size 0x4
 };
+// total size: 0x34
 class GlobalSkillTables {
-    // total size: 0x34
+    // Members
 public:
     class AUTOPTR stdBaseline; // offset 0x0, size 0x4
     class AUTOPTR stdGender[2]; // offset 0x4, size 0x8
@@ -1361,112 +1627,140 @@ public:
     class AUTOPTR misc[6]; // offset 0x1C, size 0x18
 };
 static struct AnimRef sHackedAnimRef; // size: 0x4, address: 0x805DB888
+// total size: 0x24
 class ERSocialAnimationSet : public EResource {
-    // total size: 0x24
+    // Static members
+    static class ETypeInfo m_typeInfo; // size: 0x28
+
+    // Members
 public:
     class vector m_animSetIndex; // offset 0x14, size 0x10
 };
+// total size: 0x8
 struct AnimSetIndex {
-    // total size: 0x8
+    // Members
     unsigned char m_index; // offset 0x0, size 0x1
     struct AnimRef m_animID; // offset 0x4, size 0x4
 };
+// total size: 0x10
 struct VectorBase {
-    // total size: 0x10
+    // Static members
+    static unsigned long kAlignment; // size: 0x4
+    static unsigned long kAlignmentOffset; // size: 0x4
+    static unsigned long npos; // size: 0x4
+    static unsigned long kMaxSize; // size: 0x4
+
+    // Members
 protected:
     struct AnimSetIndex * mpBegin; // offset 0x0, size 0x4
     struct AnimSetIndex * mpEnd; // offset 0x4, size 0x4
     struct AnimSetIndex * mpCapacity; // offset 0x8, size 0x4
     class allocator mAllocator; // offset 0xC, size 0x1
 };
-class vector : public VectorBase {
-    // total size: 0x10
-};
+// total size: 0x10
+class vector : public VectorBase {};
 float kStraightOffset[6]; // size: 0x18, address: 0x8041B508
 float kCornerOffset[6]; // size: 0x18, address: 0x80492238
+// total size: 0x8
 class SlotLoader {
-    // total size: 0x8
+    // Members
     unsigned int mFileID; // offset 0x0, size 0x4
     signed short fStringsID; // offset 0x4, size 0x2
 };
+// total size: 0x4
 class ConsoleAutoRefCount {
-    // total size: 0x4
+    // Members
 public:
     class ObjectDataSlotDescList * mpData; // offset 0x0, size 0x4
 };
+// total size: 0x54
 class ObjectDataSlotDescList : public IObjectDataResource {
-    // total size: 0x54
+    // Members
 protected:
     class StackString mResourceName; // offset 0x4, size 0x48
     class ObjectDataID m_objDataID; // offset 0x4C, size 0x8
 };
+// total size: 0x60
 class QuickDataSlotDescList : public ObjectDataSlotDescList {
-    // total size: 0x60
+    // Members
     struct SlotDescList m_list; // offset 0x54, size 0x8
     unsigned int mRefCount; // offset 0x5C, size 0x4
 };
+// total size: 0x8
 struct SlotDescList : public VECTOR {
-    // total size: 0x8
+    // Members
     int resID; // offset 0x4, size 0x4
 };
+// total size: 0x4
 class VECTOR {
-    // total size: 0x4
+    // Members
     struct SlotDescList * pData; // offset 0x0, size 0x4
 };
-struct SlotDescriptorList : public vector {
-    // total size: 0x10
-};
+// total size: 0x10
+struct SlotDescriptorList : public vector {};
+// total size: 0x68
 class IFFSlotDescList : public ObjectDataSlotDescList {
-    // total size: 0x68
+    // Members
     struct SlotDescriptorList m_list; // offset 0x54, size 0x10
     unsigned int mRefCount; // offset 0x64, size 0x4
 };
-class vector : public VectorBase {
-    // total size: 0x10
-};
+// total size: 0x10
+class vector : public VectorBase {};
+// total size: 0x8
 class ReconStreamVector {
-    // total size: 0x8
+    // Members
     class vector & fVec; // offset 0x0, size 0x4
     int fType; // offset 0x4, size 0x4
 };
+// total size: 0xC
 class SimpleReconObject : public ReconObject {
-    // total size: 0xC
+    // Members
     class ReconStreamVector * fObj; // offset 0x4, size 0x4
     int fType; // offset 0x8, size 0x4
 };
+// total size: 0x10
 struct VectorBase {
-    // total size: 0x10
+    // Static members
+    static unsigned long kAlignment; // size: 0x4
+    static unsigned long kAlignmentOffset; // size: 0x4
+    static unsigned long npos; // size: 0x4
+    static unsigned long kMaxSize; // size: 0x4
+
+    // Members
 protected:
     class SlotDescriptor * mpBegin; // offset 0x0, size 0x4
     class SlotDescriptor * mpEnd; // offset 0x4, size 0x4
     class SlotDescriptor * mpCapacity; // offset 0x8, size 0x4
     class allocator mAllocator; // offset 0xC, size 0x1
 };
+// total size: 0x5C
 class QuickDataSoundInfo : public SoundInfo {
-    // total size: 0x5C
+    // Members
     unsigned int mRefCount; // offset 0x58, size 0x4
 };
+// total size: 0x8
 struct SndInfo {
-    // total size: 0x8
+    // Members
     int resID; // offset 0x0, size 0x4
     int sndEventID; // offset 0x4, size 0x4
 };
+// total size: 0x4
 class VECTOR {
-    // total size: 0x4
+    // Members
     struct SndInfo * pData; // offset 0x0, size 0x4
 };
-class StdResFile : public SeqResFile {
-    // total size: 0x184
-};
+// total size: 0x184
+class StdResFile : public SeqResFile {};
+// total size: 0x10
 class StackString : public StringBuffer {
-    // total size: 0x10
+    // Members
     char fChars[5]; // offset 0x8, size 0x5
 };
-class EdithResFile : public SeqResFile {
-    // total size: 0x184
-};
+// total size: 0x184
+class EdithResFile : public SeqResFile {};
+// total size: 0x454
 class StubObject {
-    // total size: 0x454
+    // Members
 public:
     class StackString fName; // offset 0x0, size 0x48
     class StackString fNewFileName; // offset 0x48, size 0x408
@@ -1500,13 +1794,15 @@ float sTooLongInPrimTime; // size: 0x4, address: 0x805D8784
 float sTooLongInTickTime; // size: 0x4, address: 0x805D8788
 unsigned char sTraceOnlyOnPrimBreak; // size: 0x1, address: 0x805D878C
 unsigned char sBreakOnCallTreeStringFailure; // size: 0x1, address: 0x805D878D
+// total size: 0x4
 class ConsoleAutoRefCount {
-    // total size: 0x4
+    // Members
 public:
     class ObjectDataBehaviorTree * mpData; // offset 0x0, size 0x4
 };
+// total size: 0x18
 struct EdithBehaviorTree {
-    // total size: 0x18
+    // Members
     signed short structVersion; // offset 0x0, size 0x2
     signed short numNodes; // offset 0x2, size 0x2
     unsigned char type; // offset 0x4, size 0x1
@@ -1516,8 +1812,9 @@ struct EdithBehaviorTree {
     int treeVersion; // offset 0x8, size 0x4
     struct BehaviorNode nodes[1]; // offset 0xC, size 0xC
 };
+// total size: 0x5C
 class ObjectDataBehaviorTree : public IObjectDataResource {
-    // total size: 0x5C
+    // Members
 protected:
     signed short mResID; // offset 0x4, size 0x2
     unsigned char mbOwnData; // offset 0x6, size 0x1
@@ -1525,8 +1822,9 @@ protected:
     struct EdithBehaviorTree * mpData; // offset 0x50, size 0x4
     class ObjectDataID m_objDataID; // offset 0x54, size 0x8
 };
+// total size: 0x18
 class ObjectDataBehaviorConstants : public IObjectDataResource {
-    // total size: 0x18
+    // Members
 public:
     signed short flags; // offset 0x4, size 0x2
 protected:
@@ -1541,20 +1839,23 @@ float gHighAttenuation; // size: 0x4, address: 0x805D87E8
 float gVisLowAttenuation; // size: 0x4, address: 0x805D87EC
 float gVisModerateAttenuation; // size: 0x4, address: 0x805D87F0
 float gVisHighAttenuation; // size: 0x4, address: 0x805D87F4
+// total size: 0xC
 class TreeTable {
-    // total size: 0xC
+    // Members
 public:
     class VECTOR fEntries; // offset 0x0, size 0x4
     signed short fNumAds; // offset 0x4, size 0x2
     signed short resID; // offset 0x6, size 0x2
     signed short mPrefixCheckTreeID; // offset 0x8, size 0x2
 };
+// total size: 0x4
 class VECTOR {
-    // total size: 0x4
+    // Members
     class TreeTableEntry * pData; // offset 0x0, size 0x4
 };
+// total size: 0x4
 class VECTOR {
-    // total size: 0x4
+    // Members
     class TreeTableAd * pData; // offset 0x0, size 0x4
 };
 enum Attenuation {
@@ -1564,8 +1865,31 @@ enum Attenuation {
     kModerate = 3,
     kHigh = 4,
 };
+// total size: 0x24
 class TreeTableEntry {
-    // total size: 0x24
+    // Static members
+    static int kAvailableToBoars; // size: 0x4
+    static int kAvailableToChimps; // size: 0x4
+    static int kPermitDynamicAds; // size: 0x4
+    static int kAllowOnSelf; // size: 0x4
+    static int kAvailableInDemo; // size: 0x4
+    static int kAvailableToSmallDogs; // size: 0x4
+    static int kAvailableToCats; // size: 0x4
+    static int kUseCustomActivation; // size: 0x4
+    static int kMustRun; // size: 0x4
+    static int kIgnorePrefixTree; // size: 0x4
+    static int kAvailableToVisitingPlayers; // size: 0x4
+    static int kAutoFirstSelect; // size: 0x4
+    static int kDebugOnly; // size: 0x4
+    static int kAvailableToAdults; // size: 0x4
+    static int kAvailableToLargeDogs; // size: 0x4
+    static int kAvailableToGhosts; // size: 0x4
+    static int kAllowConsecutive; // size: 0x4
+    static int kImmediate; // size: 0x4
+    static int kCanJoin; // size: 0x4
+    static int kAvailableToVisitors; // size: 0x4
+
+    // Members
 public:
     signed short fCheckTreeID; // offset 0x0, size 0x2
     signed short fActionTreeID; // offset 0x2, size 0x2
@@ -1580,8 +1904,9 @@ public:
     class ELocString fName; // offset 0x1C, size 0x4
     unsigned int activationInfo; // offset 0x20, size 0x4
 };
+// total size: 0x10
 class TreeTableAdScratch : public ITreeTableAd {
-    // total size: 0x10
+    // Members
     signed short fPersonalityAd; // offset 0x4, size 0x2
     signed short fMin; // offset 0x6, size 0x2
     signed short fRange; // offset 0x8, size 0x2
@@ -1590,17 +1915,16 @@ class TreeTableAdScratch : public ITreeTableAd {
 static signed short kFlagLayrerRsrcID; // size: 0x2, address: 0x805D87F8
 static signed short kExtFloorRsrcID; // size: 0x2, address: 0x805D87FA
 static signed short kExtWallRsrcID; // size: 0x2, address: 0x805D87FC
+// total size: 0xA4
 class EdithDialogPrimitive : public UIDialog {
-    // total size: 0xA4
+    // Members
 protected:
     int m_DialogResult; // offset 0xA0, size 0x4
 };
-class cArray : public c2DArray {
-    // total size: 0x18
-};
-class c2DArray : public _c2DArray {
-    // total size: 0x18
-};
+// total size: 0x18
+class cArray : public c2DArray {};
+// total size: 0x18
+class c2DArray : public _c2DArray {};
 union /* @class$74423game_simulator_core2_unity_cpp */ {
     unsigned char mTopRightStyle; // offset 0x0, size 0x1
     unsigned char mDiagonalStyle; // offset 0x0, size 0x1
@@ -1613,8 +1937,9 @@ union /* @class$74425game_simulator_core2_unity_cpp */ {
     unsigned char mBottomRightPattern; // offset 0x0, size 0x1
     unsigned char mDiagBottomRightPattern; // offset 0x0, size 0x1
 };
+// total size: 0x8
 class TileWallStorage {
-    // total size: 0x8
+    // Members
 public:
     unsigned char mSegments; // offset 0x0, size 0x1
     unsigned char mPlacement; // offset 0x1, size 0x1
@@ -1646,53 +1971,56 @@ public:
         unsigned char mDiagBottomRightPattern; // offset 0x7, size 0x1
     };
 };
+// total size: 0x4
 class cArrayRow {
-    // total size: 0x4
+    // Members
     class TileWallStorage * mRowPtr; // offset 0x0, size 0x4
 };
-class cArray : public c2DArray {
-    // total size: 0x18
-};
+// total size: 0x18
+class cArray : public c2DArray {};
+// total size: 0x4
 class cArrayRow {
-    // total size: 0x4
+    // Members
     unsigned char * mRowPtr; // offset 0x0, size 0x4
 };
-class CWallArray : public cArray {
-    // total size: 0x18
-};
-class c2DArray : public _c2DArray {
-    // total size: 0x18
-};
-class CFloorArray : public cArray {
-    // total size: 0x18
-};
+// total size: 0x18
+class CWallArray : public cArray {};
+// total size: 0x18
+class c2DArray : public _c2DArray {};
+// total size: 0x18
+class CFloorArray : public cArray {};
+// total size: 0x4
 class cArrayRow {
-    // total size: 0x4
+    // Members
     unsigned short * mRowPtr; // offset 0x0, size 0x4
 };
+// total size: 0x8
 class XObjLang : public Language {
-    // total size: 0x8
+    // Members
     class ObjSelector * fLangSelector; // offset 0x4, size 0x4
 };
+// total size: 0x8
 struct DialogIcon {
-    // total size: 0x8
+    // Members
     unsigned int iconShader; // offset 0x0, size 0x4
     signed short iconHeight; // offset 0x4, size 0x2
     signed short iconWidth; // offset 0x6, size 0x2
 };
+// total size: 0x4
 class VECTOR {
-    // total size: 0x4
+    // Members
     struct DialogIcon * pData; // offset 0x0, size 0x4
 };
-class vector : public VectorBase {
-    // total size: 0x10
-};
+// total size: 0x10
+class vector : public VectorBase {};
+// total size: 0x4
 struct DialogIconTable {
-    // total size: 0x4
+    // Members
     class VECTOR icons; // offset 0x0, size 0x4
 };
+// total size: 0x14
 struct ERQTable {
-    // total size: 0x14
+    // Members
     const char * pName; // offset 0x0, size 0x4
     const struct DialogIconTable * pData; // offset 0x4, size 0x4
     const char * const * ppRowNames; // offset 0x8, size 0x4
@@ -1700,8 +2028,9 @@ struct ERQTable {
     unsigned int uRowSize; // offset 0x10, size 0x4
 };
 class vector s_objPartition; // size: 0x10, address: 0x804926B0
+// total size: 0x38
 struct RoutingParams {
-    // total size: 0x38
+    // Members
     class vector * goalList; // offset 0x0, size 0x4
     class vector * partition1; // offset 0x4, size 0x4
     class vector * partition2; // offset 0x8, size 0x4
@@ -1717,16 +2046,24 @@ struct RoutingParams {
     unsigned char smooth; // offset 0x30, size 0x1
     class CCollisionGrid * m_CollisionGrid; // offset 0x34, size 0x4
 };
+// total size: 0x10
 struct VectorBase {
-    // total size: 0x10
+    // Static members
+    static unsigned long kAlignment; // size: 0x4
+    static unsigned long kAlignmentOffset; // size: 0x4
+    static unsigned long npos; // size: 0x4
+    static unsigned long kMaxSize; // size: 0x4
+
+    // Members
 protected:
     class IPoint * mpBegin; // offset 0x0, size 0x4
     class IPoint * mpEnd; // offset 0x4, size 0x4
     class IPoint * mpCapacity; // offset 0x8, size 0x4
     class allocator mAllocator; // offset 0xC, size 0x1
 };
+// total size: 0x6
 struct RouteBlockers {
-    // total size: 0x6
+    // Members
     unsigned char fChairOnly; // offset 0x0, size 0x1
     unsigned char fChairOccupied; // offset 0x1, size 0x1
     unsigned char fTileGoalOffWorld; // offset 0x2, size 0x1
@@ -1734,298 +2071,284 @@ struct RouteBlockers {
     unsigned char fTileOccupiedByPerson; // offset 0x4, size 0x1
     unsigned char fWallInTheWay; // offset 0x5, size 0x1
 };
-struct {
-    // total size: 0x38
-} __vt__18QuickDataSoundInfo; // size: 0x38, address: 0x8042C2E8
-struct {
-    // total size: 0x14
-} __vt__56SimpleReconObject<35ReconStreamVector<14SlotDescriptor>>; // size: 0x14, address: 0x8042C320
-struct {
-    // total size: 0x14
-} __vt__18RoomScoreConstants; // size: 0x14, address: 0x8042C334
-struct {
-    // total size: 0x38
-} __vt__13RelMatrixImpl; // size: 0x38, address: 0x8042C348
-struct {
-    // total size: 0x20
-} __vt__13PropTableImpl; // size: 0x20, address: 0x8042C380
-struct {
-    // total size: 0xD8
-} __vt__16PlayerFamilyImpl; // size: 0xD8, address: 0x8042C3A0
-struct {
-    // total size: 0x14
-} __vt__23AutonomyConstantsClient; // size: 0x14, address: 0x8042C478
-struct {
-    // total size: 0x20
-} __vt__9PropTable; // size: 0x20, address: 0x8042C490
-struct {
-    // total size: 0x24
-} __vt__8XObjLang; // size: 0x24, address: 0x8042C4B0
-struct {
-    // total size: 0x24
-} __vt__8Language; // size: 0x24, address: 0x8042C4D4
-struct {
-    // total size: 0xF4
-} __vt__8cXPortal; // size: 0xF4, address: 0x8042C4F8
-struct {
-    // total size: 0xC
-} __vt__6cTrack; // size: 0xC, address: 0x8042C5EC
-struct {
-    // total size: 0x10
-} __vt__10cSimulator; // size: 0x10, address: 0x8042C5F8
-struct {
-    // total size: 0x18
-} __vt__22PassiveInfluencePortal; // size: 0x18, address: 0x8042C608
-struct {
-    // total size: 0x18
-} __vt__22PassiveInfluenceTarget; // size: 0x18, address: 0x8042C620
-struct {
-    // total size: 0x18
-} __vt__22PassiveInfluenceObject; // size: 0x18, address: 0x8042C638
-struct {
-    // total size: 0x18
-} __vt__22PassiveInfluencePerson; // size: 0x18, address: 0x8042C650
-struct {
-    // total size: 0x18
-} __vt__23PassiveInfluenceMovable; // size: 0x18, address: 0x8042C668
-struct {
-    // total size: 0x18
-} __vt__20PassiveInfluenceItem; // size: 0x18, address: 0x8042C680
-struct {
-    // total size: 0x10
-} __vt__11cFixedWorld; // size: 0x10, address: 0x8042C698
-struct {
-    // total size: 0x14
-} __vt__36SimpleReconObject<15ThumbnailLoader>; // size: 0x14, address: 0x8042C6A8
-struct {
-    // total size: 0x98
-} __vt__12QuickResFile; // size: 0x98, address: 0x8042C6C0
-struct {
-    // total size: 0xEC
-} __vt__8cXPerson; // size: 0xEC, address: 0x8042C758
-struct {
-    // total size: 0x14
-} __vt__11ReconObject; // size: 0x14, address: 0x8042C844
-struct {
-    // total size: 0x134
-} __vt__16TTabScratchEntry; // size: 0x134, address: 0x8042C858
-struct {
-    // total size: 0x3C
-} __vt__18TreeTableAdScratch; // size: 0x3C, address: 0x8042C98C
-struct {
-    // total size: 0x98
-} __vt__10ObjResFile; // size: 0x98, address: 0x8042C9C8
-struct {
-    // total size: 0x98
-} __vt__12EdithResFile; // size: 0x98, address: 0x8042CA60
-struct {
-    // total size: 0x98
-} __vt__10StdResFile; // size: 0x98, address: 0x8042CAF8
-struct {
-    // total size: 0x98
-} __vt__10SeqResFile; // size: 0x98, address: 0x8042CB90
-struct {
-    // total size: 0x10
-} __vt__11RoutingSlot; // size: 0x10, address: 0x8042CC28
-struct {
-    // total size: 0x10
-} __vt__10SpriteSlot; // size: 0x10, address: 0x8042CC38
-struct {
-    // total size: 0x10
-} __vt__10ObjectSlot; // size: 0x10, address: 0x8042CC48
-struct {
-    // total size: 0x10
-} __vt__4Slot; // size: 0x10, address: 0x8042CC58
-struct {
-    // total size: 0x50
-} __vt__15IFFSlotDescList; // size: 0x50, address: 0x8042CC68
-struct {
-    // total size: 0x50
-} __vt__21QuickDataSlotDescList; // size: 0x50, address: 0x8042CCB8
-struct {
-    // total size: 0x50
-} __vt__22ObjectDataSlotDescList; // size: 0x50, address: 0x8042CD08
-struct {
-    // total size: 0x38
-} __vt__9RelMatrix; // size: 0x38, address: 0x8042CD58
-struct {
-    // total size: 0x68
-} __vt__7TreeSim; // size: 0x68, address: 0x8042CD90
-struct {
-    // total size: 0x94
-} __vt__8iResFile; // size: 0x94, address: 0x8042CDF8
-struct {
-    // total size: 0x130
-} __vt__15ITreeTableEntry; // size: 0x130, address: 0x8042CE90
-struct {
-    // total size: 0x38
-} __vt__12ITreeTableAd; // size: 0x38, address: 0x8042CFC0
-struct {
-    // total size: 0x50
-} __vt__19ObjFnTableQuickData; // size: 0x50, address: 0x8042CFF8
-struct {
-    // total size: 0x50
-} __vt__10ObjFnTable; // size: 0x50, address: 0x8042D048
-struct {
-    // total size: 0x34
-} __vt__19IObjectDataResource; // size: 0x34, address: 0x8042D098
+// total size: 0x38
+struct {} __vt__18QuickDataSoundInfo; // size: 0x38, address: 0x8042C2E8
+// total size: 0x14
+struct {} __vt__56SimpleReconObject<35ReconStreamVector<14SlotDescriptor>>; // size: 0x14, address: 0x8042C320
+// total size: 0x14
+struct {} __vt__18RoomScoreConstants; // size: 0x14, address: 0x8042C334
+// total size: 0x38
+struct {} __vt__13RelMatrixImpl; // size: 0x38, address: 0x8042C348
+// total size: 0x20
+struct {} __vt__13PropTableImpl; // size: 0x20, address: 0x8042C380
+// total size: 0xD8
+struct {} __vt__16PlayerFamilyImpl; // size: 0xD8, address: 0x8042C3A0
+// total size: 0x14
+struct {} __vt__23AutonomyConstantsClient; // size: 0x14, address: 0x8042C478
+// total size: 0x20
+struct {} __vt__9PropTable; // size: 0x20, address: 0x8042C490
+// total size: 0x24
+struct {} __vt__8XObjLang; // size: 0x24, address: 0x8042C4B0
+// total size: 0x24
+struct {} __vt__8Language; // size: 0x24, address: 0x8042C4D4
+// total size: 0xF4
+struct {} __vt__8cXPortal; // size: 0xF4, address: 0x8042C4F8
+// total size: 0xC
+struct {} __vt__6cTrack; // size: 0xC, address: 0x8042C5EC
+// total size: 0x10
+struct {} __vt__10cSimulator; // size: 0x10, address: 0x8042C5F8
+// total size: 0x18
+struct {} __vt__22PassiveInfluencePortal; // size: 0x18, address: 0x8042C608
+// total size: 0x18
+struct {} __vt__22PassiveInfluenceTarget; // size: 0x18, address: 0x8042C620
+// total size: 0x18
+struct {} __vt__22PassiveInfluenceObject; // size: 0x18, address: 0x8042C638
+// total size: 0x18
+struct {} __vt__22PassiveInfluencePerson; // size: 0x18, address: 0x8042C650
+// total size: 0x18
+struct {} __vt__23PassiveInfluenceMovable; // size: 0x18, address: 0x8042C668
+// total size: 0x18
+struct {} __vt__20PassiveInfluenceItem; // size: 0x18, address: 0x8042C680
+// total size: 0x10
+struct {} __vt__11cFixedWorld; // size: 0x10, address: 0x8042C698
+// total size: 0x14
+struct {} __vt__36SimpleReconObject<15ThumbnailLoader>; // size: 0x14, address: 0x8042C6A8
+// total size: 0x98
+struct {} __vt__12QuickResFile; // size: 0x98, address: 0x8042C6C0
+// total size: 0xEC
+struct {} __vt__8cXPerson; // size: 0xEC, address: 0x8042C758
+// total size: 0x14
+struct {} __vt__11ReconObject; // size: 0x14, address: 0x8042C844
+// total size: 0x134
+struct {} __vt__16TTabScratchEntry; // size: 0x134, address: 0x8042C858
+// total size: 0x3C
+struct {} __vt__18TreeTableAdScratch; // size: 0x3C, address: 0x8042C98C
+// total size: 0x98
+struct {} __vt__10ObjResFile; // size: 0x98, address: 0x8042C9C8
+// total size: 0x98
+struct {} __vt__12EdithResFile; // size: 0x98, address: 0x8042CA60
+// total size: 0x98
+struct {} __vt__10StdResFile; // size: 0x98, address: 0x8042CAF8
+// total size: 0x98
+struct {} __vt__10SeqResFile; // size: 0x98, address: 0x8042CB90
+// total size: 0x10
+struct {} __vt__11RoutingSlot; // size: 0x10, address: 0x8042CC28
+// total size: 0x10
+struct {} __vt__10SpriteSlot; // size: 0x10, address: 0x8042CC38
+// total size: 0x10
+struct {} __vt__10ObjectSlot; // size: 0x10, address: 0x8042CC48
+// total size: 0x10
+struct {} __vt__4Slot; // size: 0x10, address: 0x8042CC58
+// total size: 0x50
+struct {} __vt__15IFFSlotDescList; // size: 0x50, address: 0x8042CC68
+// total size: 0x50
+struct {} __vt__21QuickDataSlotDescList; // size: 0x50, address: 0x8042CCB8
+// total size: 0x50
+struct {} __vt__22ObjectDataSlotDescList; // size: 0x50, address: 0x8042CD08
+// total size: 0x38
+struct {} __vt__9RelMatrix; // size: 0x38, address: 0x8042CD58
+// total size: 0x68
+struct {} __vt__7TreeSim; // size: 0x68, address: 0x8042CD90
+// total size: 0x94
+struct {} __vt__8iResFile; // size: 0x94, address: 0x8042CDF8
+// total size: 0x130
+struct {} __vt__15ITreeTableEntry; // size: 0x130, address: 0x8042CE90
+// total size: 0x38
+struct {} __vt__12ITreeTableAd; // size: 0x38, address: 0x8042CFC0
+// total size: 0x50
+struct {} __vt__19ObjFnTableQuickData; // size: 0x50, address: 0x8042CFF8
+// total size: 0x50
+struct {} __vt__10ObjFnTable; // size: 0x50, address: 0x8042D048
+// total size: 0x34
+struct {} __vt__19IObjectDataResource; // size: 0x34, address: 0x8042D098
+// total size: 0x4
 class generic_iterator {
-    // total size: 0x4
+    // Members
 protected:
     class StackElem * * mIterator; // offset 0x0, size 0x4
 };
+// total size: 0x4
 class generic_iterator {
-    // total size: 0x4
+    // Members
 protected:
     class SlotDescriptor * mIterator; // offset 0x0, size 0x4
 };
+// total size: 0x4
 class generic_iterator {
-    // total size: 0x4
+    // Members
 protected:
     class ObjectSlot * mIterator; // offset 0x0, size 0x4
 };
+// total size: 0x4
 class generic_iterator {
-    // total size: 0x4
+    // Members
 protected:
     class RoutingSlot * mIterator; // offset 0x0, size 0x4
 };
+// total size: 0x4
 class generic_iterator {
-    // total size: 0x4
+    // Members
 protected:
     class SpriteSlot * mIterator; // offset 0x0, size 0x4
 };
+// total size: 0x4
 class generic_iterator {
-    // total size: 0x4
+    // Members
 protected:
     class cXPerson * * mIterator; // offset 0x0, size 0x4
 };
+// total size: 0x4
 class generic_iterator {
-    // total size: 0x4
+    // Members
 protected:
     class cXPortal * * mIterator; // offset 0x0, size 0x4
 };
+// total size: 0x4
 class generic_iterator {
-    // total size: 0x4
+    // Members
 protected:
     class FTilePt * mIterator; // offset 0x0, size 0x4
 };
+// total size: 0x4
 class generic_iterator {
-    // total size: 0x4
+    // Members
 protected:
     struct MotiveInc * mIterator; // offset 0x0, size 0x4
 };
+// total size: 0x4
 class generic_iterator {
-    // total size: 0x4
+    // Members
 protected:
     struct ObjectRecord * mIterator; // offset 0x0, size 0x4
 };
+// total size: 0x4
 class generic_iterator {
-    // total size: 0x4
+    // Members
 protected:
     class XRoute * mIterator; // offset 0x0, size 0x4
 };
+// total size: 0x4
 class generic_iterator {
-    // total size: 0x4
+    // Members
 protected:
     struct ListenPacket * mIterator; // offset 0x0, size 0x4
 };
+// total size: 0x4
 class generic_iterator {
-    // total size: 0x4
+    // Members
 protected:
     class EVec3 * mIterator; // offset 0x0, size 0x4
 };
+// total size: 0x4
 class generic_iterator {
-    // total size: 0x4
+    // Members
 protected:
     float * mIterator; // offset 0x0, size 0x4
 };
+// total size: 0x10
 struct VectorBase {
-    // total size: 0x10
+    // Static members
+    static unsigned long kAlignment; // size: 0x4
+    static unsigned long kAlignmentOffset; // size: 0x4
+    static unsigned long npos; // size: 0x4
+    static unsigned long kMaxSize; // size: 0x4
+
+    // Members
 protected:
     class StackString * mpBegin; // offset 0x0, size 0x4
     class StackString * mpEnd; // offset 0x4, size 0x4
     class StackString * mpCapacity; // offset 0x8, size 0x4
     class allocator mAllocator; // offset 0xC, size 0x1
 };
+// total size: 0x4
 class generic_iterator {
-    // total size: 0x4
+    // Members
 protected:
     class StackString * mIterator; // offset 0x0, size 0x4
 };
+// total size: 0x4
 class generic_iterator {
-    // total size: 0x4
+    // Members
 protected:
     class RelInt * mIterator; // offset 0x0, size 0x4
 };
+// total size: 0x4
 class generic_iterator {
-    // total size: 0x4
+    // Members
 protected:
     class RelArray * * mIterator; // offset 0x0, size 0x4
 };
+// total size: 0x4
 class generic_iterator {
-    // total size: 0x4
+    // Members
 protected:
     class IPoint * mIterator; // offset 0x0, size 0x4
 };
+// total size: 0x8
 struct pair {
-    // total size: 0x8
+    // Members
     class ERSoundEvent * const first; // offset 0x0, size 0x4
     int second; // offset 0x4, size 0x4
 };
+// total size: 0x18
 struct rbtree_node : public rbtree_node_base {
-    // total size: 0x18
+    // Members
     struct pair mValue; // offset 0x10, size 0x8
 };
+// total size: 0x4
 struct rbtree_iterator {
-    // total size: 0x4
+    // Members
     struct rbtree_node * mpNode; // offset 0x0, size 0x4
 };
-struct use_first {
-    // total size: 0x1
-};
-struct use_first {
-    // total size: 0x1
-};
+// total size: 0x1
+struct use_first {};
+// total size: 0x1
+struct use_first {};
+// total size: 0x1
 struct rb_base {
-    // total size: 0x1
+    // Members
     struct less mCompare; // offset 0x0, size 0x1
 };
+// total size: 0x1C
 class rbtree : public rb_base {
-    // total size: 0x1C
+    // Static members
+    static unsigned long kKeyAlignment; // size: 0x4
+    static unsigned long kKeyAlignmentOffset; // size: 0x4
+    static unsigned long kValueAlignment; // size: 0x4
+    static unsigned long kValueAlignmentOffset; // size: 0x4
+
+    // Members
 public:
     struct rbtree_node_base mAnchor; // offset 0x4, size 0x10
     unsigned long mnSize; // offset 0x14, size 0x4
     class allocator mAllocator; // offset 0x18, size 0x1
 };
-struct use_first {
-    // total size: 0x1
-};
-struct binary_function {
-    // total size: 0x1
-};
-struct less : public binary_function {
-    // total size: 0x1
-};
-struct use_first {
-    // total size: 0x1
-};
-struct use_first {
-    // total size: 0x1
-};
-struct use_first {
-    // total size: 0x1
-};
+// total size: 0x1
+struct use_first {};
+// total size: 0x1
+struct binary_function {};
+// total size: 0x1
+struct less : public binary_function {};
+// total size: 0x1
+struct use_first {};
+// total size: 0x1
+struct use_first {};
+// total size: 0x1
+struct use_first {};
+// total size: 0x4
 class VECTOR {
-    // total size: 0x4
+    // Members
     class SlotDescriptor * pData; // offset 0x0, size 0x4
 };
+// total size: 0x4
 class Language {
-    // total size: 0x4
+    // Members
 public:
     void * __vptr$; // offset 0x0, size 0x4
 };
+// total size: 0x58
 class SoundInfo : public IObjectDataResource {
-    // total size: 0x58
+    // Members
 protected:
     class StackString soundEventName; // offset 0x4, size 0x48
     unsigned int soundEventID; // offset 0x4C, size 0x4
@@ -2035,27 +2358,30 @@ enum RBTreeSide {
     kRBTreeSideLeft = 0,
     kRBTreeSideRight = 1,
 };
+// total size: 0x8
 struct pair {
-    // total size: 0x8
+    // Members
     struct rbtree_iterator first; // offset 0x0, size 0x4
     unsigned char second; // offset 0x4, size 0x1
 };
+// total size: 0x8
 struct pair {
-    // total size: 0x8
+    // Members
     struct rbtree_iterator first; // offset 0x0, size 0x4
     unsigned char second; // offset 0x4, size 0x1
 };
+// total size: 0x8
 struct pair {
-    // total size: 0x8
+    // Members
     struct rbtree_iterator first; // offset 0x0, size 0x4
     unsigned char second; // offset 0x4, size 0x1
 };
 static float UNDEFINED; // size: 0x4, address: 0x805DD640
-class ESocialAnimationSetManager : public EResourceManager {
-    // total size: 0xD44
-};
+// total size: 0xD44
+class ESocialAnimationSetManager : public EResourceManager {};
+// total size: 0x30
 class cSoundModeManager {
-    // total size: 0x30
+    // Members
 protected:
     int m_lMode; // offset 0x0, size 0x4
     unsigned char m_fadeOutMusic; // offset 0x4, size 0x1
@@ -2072,8 +2398,9 @@ protected:
     int m_curDemoTrack; // offset 0x28, size 0x4
     int m_curCASTrack; // offset 0x2C, size 0x4
 };
+// total size: 0x6C
 class cBoxX {
-    // total size: 0x6C
+    // Members
 public:
     void * __vptr$; // offset 0x0, size 0x4
     unsigned char m_bSoundEnabled; // offset 0x4, size 0x1

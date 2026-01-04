@@ -5,12 +5,14 @@
     Code range: 0x8030BC94 -> 0x8030BD40
 */
 // Range: 0x8030BC94 -> 0x8030BCE4
-void * AptLookup::AptLookup(class AptLookup * const this /* r30 */, int _nLookup /* r31 */) {
+// this: r30
+AptLookup::AptLookup(int _nLookup /* r31 */) {
     // References
     // -> struct [anonymous] __vt__9AptLookup;
 }
 
 // Range: 0x8030BCE4 -> 0x8030BD40
-void * AptLookup::~AptLookup(class AptLookup * const this /* r30 */) {}
+// this: r30
+AptLookup::~AptLookup() {}
 
 

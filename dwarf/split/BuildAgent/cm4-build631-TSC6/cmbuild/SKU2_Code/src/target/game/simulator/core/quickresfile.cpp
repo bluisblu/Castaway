@@ -5,13 +5,15 @@
     Code range: 0x800D572C -> 0x800D5A38
 */
 // Range: 0x800D572C -> 0x800D5768
-void * QuickResFile::QuickResFile(class QuickResFile * const this /* r31 */) {
+// this: r31
+QuickResFile::QuickResFile() {
     // References
     // -> struct [anonymous] __vt__12QuickResFile;
 }
 
 // Range: 0x800D5768 -> 0x800D57DC
-void * QuickResFile::~QuickResFile(class QuickResFile * const this /* r30 */) {
+// this: r30
+QuickResFile::~QuickResFile() {
     // References
     // -> struct [anonymous] __vt__12QuickResFile;
 }
@@ -23,7 +25,8 @@ int QuickResFile::Create() {}
 int QuickResFile::Delete() {}
 
 // Range: 0x800D57EC -> 0x800D5824
-int QuickResFile::Open(class QuickResFile * const this /* r31 */) {}
+// this: r31
+int QuickResFile::Open() {}
 
 // Range: 0x800D5824 -> 0x800D582C
 int QuickResFile::CloseForReopen() {}
@@ -41,7 +44,8 @@ void QuickResFile::Update() {}
 unsigned char QuickResFile::Writable() {}
 
 // Range: 0x800D5848 -> 0x800D58BC
-void QuickResFile::GetFileName(class QuickResFile * const this /* r30 */, class StringBuffer & name /* r31 */) {
+// this: r30
+void QuickResFile::GetFileName(class StringBuffer & name /* r31 */) {
     // Local variables
     class ERQuickdata * db; // r0
     const char * rowName; // r4
@@ -120,7 +124,8 @@ void QuickResFile::Remove() {}
 void QuickResFile::SetInfo() {}
 
 // Range: 0x800D5970 -> 0x800D5A38
-void QuickResFile::GetString(class QuickResFile * const this /* r31 */, class StringBuffer & str /* r28 */, signed short resID /* r29 */, signed short index /* r30 */) {
+// this: r31
+void QuickResFile::GetString(class StringBuffer & str /* r28 */, signed short resID /* r29 */, signed short index /* r30 */) {
     // Local variables
     const struct AStringSet * pStringSet; // r31
     const char * ptr; // r4

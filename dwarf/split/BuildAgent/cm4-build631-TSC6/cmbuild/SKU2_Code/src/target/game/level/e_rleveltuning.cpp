@@ -5,12 +5,13 @@
     Code range: 0x800962A8 -> 0x800963A4
 */
 // Range: 0x800962A8 -> 0x80096384
-void * LevelLightingTuning::LevelLightingTuning(class LevelLightingTuning * const this /* r31 */) {
+// this: r31
+LevelLightingTuning::LevelLightingTuning() {
     // References
     // -> struct [anonymous] __vt__19LevelLightingTuning;
 }
 
 // Range: 0x80096384 -> 0x800963A4
-void * SimLightingTuning::SimLightingTuning() {}
+SimLightingTuning::SimLightingTuning() {}
 
 

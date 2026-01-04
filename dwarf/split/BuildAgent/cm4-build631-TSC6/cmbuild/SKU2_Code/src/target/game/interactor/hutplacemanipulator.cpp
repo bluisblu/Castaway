@@ -5,28 +5,33 @@
     Code range: 0x800727A8 -> 0x800734E0
 */
 // Range: 0x800727A8 -> 0x800727F4
-void * CallbackData::CallbackData(struct CallbackData * const this /* r31 */) {
+// this: r31
+CallbackData::CallbackData() {
     // References
     // -> struct [anonymous] __vt__Q316InteractorModule19HutPlaceManipulator12CallbackData;
 }
 
 // Range: 0x800727F4 -> 0x80072864
-void * HutPlaceManipulatorParams::HutPlaceManipulatorParams(struct HutPlaceManipulatorParams * const this /* r31 */) {
+// this: r31
+HutPlaceManipulatorParams::HutPlaceManipulatorParams() {
     // References
     // -> struct [anonymous] __vt__Q316InteractorModule19HutPlaceManipulator25HutPlaceManipulatorParams;
 }
 
 // Range: 0x80072864 -> 0x800728A8
-void * HutPlaceManipulator::HutPlaceManipulator(class HutPlaceManipulator * const this /* r31 */) {
+// this: r31
+HutPlaceManipulator::HutPlaceManipulator() {
     // References
     // -> struct [anonymous] __vt__Q216InteractorModule19HutPlaceManipulator;
 }
 
 // Range: 0x80072910 -> 0x80072978
-void * HutPlaceManipulator::~HutPlaceManipulator(class HutPlaceManipulator * const this /* r30 */) {}
+// this: r30
+HutPlaceManipulator::~HutPlaceManipulator() {}
 
 // Range: 0x80072978 -> 0x80072CF4
-void HutPlaceManipulator::Update(class HutPlaceManipulator * const this /* r30 */) {
+// this: r30
+void HutPlaceManipulator::Update() {
     // Local variables
     class cXObject * pSavedObject; // r28
     class FTilePt fTilePt; // r1+0x50
@@ -51,10 +56,12 @@ void HutPlaceManipulator::Update(class HutPlaceManipulator * const this /* r30 *
 }
 
 // Range: 0x80072CF4 -> 0x80072D2C
-void HutPlaceManipulator::OnCreate(class HutPlaceManipulator * const this /* r31 */) {}
+// this: r31
+void HutPlaceManipulator::OnCreate() {}
 
 // Range: 0x80072D2C -> 0x80072DC8
-void HutPlaceManipulator::OnStart(class HutPlaceManipulator * const this /* r30 */, const struct InteractorParams * pParams /* r31 */) {
+// this: r30
+void HutPlaceManipulator::OnStart(const struct InteractorParams * pParams /* r31 */) {
     // Local variables
     class ESimsCam * pSimsCam; // r0
 
@@ -64,7 +71,8 @@ void HutPlaceManipulator::OnStart(class HutPlaceManipulator * const this /* r30 
 }
 
 // Range: 0x80072DC8 -> 0x80072F9C
-void HutPlaceManipulator::OnCommandPressed(class HutPlaceManipulator * const this /* r31 */) {
+// this: r31
+void HutPlaceManipulator::OnCommandPressed() {
     // Local variables
     struct CallbackData cbd; // r1+0x20
     struct CallbackData cbd; // r1+0x8
@@ -81,14 +89,16 @@ void HutPlaceManipulator::OnCommandRepeated() {
 }
 
 // Range: 0x8007307C -> 0x8007318C
-void HutPlaceManipulator::StartPlacement(class HutPlaceManipulator * const this /* r29 */) {
+// this: r29
+void HutPlaceManipulator::StartPlacement() {
     // Local variables
     class cXObject * pObject; // r31
     unsigned long index; // r30
 }
 
 // Range: 0x8007318C -> 0x80073348
-void HutPlaceManipulator::TryPlacingCurrentObject(class HutPlaceManipulator * const this /* r29 */) {
+// this: r29
+void HutPlaceManipulator::TryPlacingCurrentObject() {
     // Local variables
     class cXObject * pSavedObject; // r30
     class EVec2 screenpt; // r1+0x10
@@ -101,7 +111,8 @@ void HutPlaceManipulator::TryPlacingCurrentObject(class HutPlaceManipulator * co
 }
 
 // Range: 0x80073348 -> 0x800734E0
-void HutPlaceManipulator::CancelSession(class HutPlaceManipulator * const this /* r29 */) {
+// this: r29
+void HutPlaceManipulator::CancelSession() {
     // Local variables
     struct CallbackData cbd; // r1+0x28
     unsigned char bRecomputeLightingGrid; // r31

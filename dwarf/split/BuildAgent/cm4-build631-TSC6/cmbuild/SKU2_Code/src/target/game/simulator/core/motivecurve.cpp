@@ -5,7 +5,8 @@
     Code range: 0x80123818 -> 0x80123920
 */
 // Range: 0x80123818 -> 0x80123920
-void MotiveCurveSet::LoadFromFile(class MotiveCurveSet * const this /* r29 */, unsigned int fileID /* r31 */, signed short id /* r30 */) {
+// this: r29
+void MotiveCurveSet::LoadFromFile(unsigned int fileID /* r31 */, signed short id /* r30 */) {
     // Local variables
     class AUTOPTR newPoints; // r1+0x8
     int strCnt; // r31

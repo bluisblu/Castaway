@@ -5,7 +5,8 @@
     Code range: 0x802483D4 -> 0x80248F7C
 */
 // Range: 0x802483D4 -> 0x802485A4
-void * RainEffect::RainEffect(class RainEffect * const this /* r27 */, unsigned int nModelID /* r28 */, unsigned int nCharacterID /* r29 */, unsigned int nAnimID /* r30 */) {
+// this: r27
+RainEffect::RainEffect(unsigned int nModelID /* r28 */, unsigned int nCharacterID /* r29 */, unsigned int nAnimID /* r30 */) {
     // Local variables
     float offset_x; // f31
     float offset_y; // f30
@@ -18,13 +19,15 @@ void * RainEffect::RainEffect(class RainEffect * const this /* r27 */, unsigned 
 }
 
 // Range: 0x802485A4 -> 0x802486A4
-void * RainEffect::~RainEffect(class RainEffect * const this /* r30 */) {
+// this: r30
+RainEffect::~RainEffect() {
     // References
     // -> class EAnimManager _animman;
 }
 
 // Range: 0x802486A4 -> 0x80248804
-unsigned char RainEffect::UpdateAssetLoad(class RainEffect * const this /* r31 */) {
+// this: r31
+unsigned char RainEffect::UpdateAssetLoad() {
     // References
     // -> class EModelManager _modelman;
     // -> class ECharacterManager _characterman;
@@ -32,7 +35,8 @@ unsigned char RainEffect::UpdateAssetLoad(class RainEffect * const this /* r31 *
 }
 
 // Range: 0x80248804 -> 0x802488DC
-unsigned char RainEffect::CreateRainInstance(class RainEffect * const this /* r31 */) {
+// this: r31
+unsigned char RainEffect::CreateRainInstance() {
     // Local variables
     class ERLevel * pLevel; // r4
     class EMat4 mIdent; // r1+0x18
@@ -55,7 +59,8 @@ void RainEffect::Update() {}
 void RainEffect::DoAnimation() {}
 
 // Range: 0x802489A4 -> 0x80248D60
-void RainEffect::Draw(class RainEffect * const this /* r25 */, class ERC * prc /* r26 */) {
+// this: r25
+void RainEffect::Draw(class ERC * prc /* r26 */) {
     // Local variables
     class E3DWindow * pWin; // r0
     unsigned char bForceRain; // r0
@@ -86,13 +91,15 @@ void RainEffect::Draw(class RainEffect * const this /* r25 */, class ERC * prc /
 }
 
 // Range: 0x80248D60 -> 0x80248DB4
-void RainEffect::SetRainRate(class RainEffect * const this /* r5 */) {
+// this: r5
+void RainEffect::SetRainRate() {
     // References
     // -> class EAnimManager _animman;
 }
 
 // Range: 0x80248DB4 -> 0x80248ECC
-void RainEffect::SetWindAcceleration(class RainEffect * const this /* r30 */) {
+// this: r30
+void RainEffect::SetWindAcceleration() {
     // Local variables
     float fWindSpeed; // f0
     class EVec3 v3WindDirection; // r1+0x24
@@ -104,7 +111,8 @@ void RainEffect::SetWindAcceleration(class RainEffect * const this /* r30 */) {
 }
 
 // Range: 0x80248ECC -> 0x80248F7C
-class EVec2 RainEffect::GetPositionInFrontOfCamera(class EVec2 * finalPos /* r29 */, class RainEffect * const this /* r30 */, float units_in_front /* f31 */) {
+// this: r29
+class EVec2 RainEffect::GetPositionInFrontOfCamera(class RainEffect * const this /* r30 */, float units_in_front /* f31 */) {
     // Local variables
     class E3DWindow * pWin; // r0
     class EVec2 pos; // r1+0x18

@@ -5,6 +5,6 @@
     Code range: 0x80205838 -> 0x8020589C
 */
 // Range: 0x80205838 -> 0x8020589C
-void * AptInitParmsT::AptInitParmsT() {}
+AptInitParmsT::AptInitParmsT() {}
 
 

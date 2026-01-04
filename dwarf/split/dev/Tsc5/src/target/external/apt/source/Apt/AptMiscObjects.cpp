@@ -26,35 +26,35 @@ static char __PRETTY_FUNCTION__[45]; // size: 0x2D, address: 0x8045C80C
 static char __PRETTY_FUNCTION__[40]; // size: 0x28, address: 0x8045C840
 static char __PRETTY_FUNCTION__[36]; // size: 0x24, address: 0x8045C868
 static unsigned char lengthtable[26]; // size: 0x1A, address: 0x8045C88C
+// total size: 0x8
 struct KeyMembers {
-    // total size: 0x8
+    // Members
     char * szName; // offset 0x0, size 0x4
     int nIndex; // offset 0x4, size 0x4
 };
 static struct KeyMembers wordlist[26]; // size: 0xD0, address: 0x8045C928
 static signed char lookup[50]; // size: 0x32, address: 0x8045C9F8
-class KeyMembersIndex {
-    // total size: 0x1
-};
+// total size: 0x1
+class KeyMembersIndex {};
+// total size: 0x8
 struct MathMembers {
-    // total size: 0x8
+    // Members
     char * szName; // offset 0x0, size 0x4
     int nIndex; // offset 0x4, size 0x4
 };
 static struct MathMembers wordlist[18]; // size: 0x90, address: 0x8045CA30
 static signed char lookup[50]; // size: 0x32, address: 0x8045CAC0
-class MathMembersIndex {
-    // total size: 0x1
-};
+// total size: 0x1
+class MathMembersIndex {};
+// total size: 0x8
 struct LoadVarsMembers {
-    // total size: 0x8
+    // Members
     char * szName; // offset 0x0, size 0x4
     int nIndex; // offset 0x4, size 0x4
 };
 static struct LoadVarsMembers wordlist[17]; // size: 0x88, address: 0x8045CB38
-class LoadVarsMembersIndex {
-    // total size: 0x1
-};
+// total size: 0x1
+class LoadVarsMembersIndex {};
 static char __PRETTY_FUNCTION__[44]; // size: 0x2C, address: 0x8045CBC0
 static char __PRETTY_FUNCTION__[61]; // size: 0x3D, address: 0x8045CBEC
 static char __PRETTY_FUNCTION__[33]; // size: 0x21, address: 0x8045CC2C
@@ -429,7 +429,8 @@ class AptValue * AptKey::sMethod_getAnalogStickInfo() {
 
 static char __PRETTY_FUNCTION__[81]; // size: 0x51, address: 0x8045CE60
 // Range: 0x80326748 -> 0x80326A48
-class AptValue * AptLoadVars::objectMemberLookup(const class AptLoadVars * const this /* r28 */, const class EAStringC * const pName /* r29 */) {
+// this: r28
+class AptValue * AptLoadVars::objectMemberLookup(const class EAStringC * const pName /* r29 */) const {
     // Local variables
     class AptString * pString; // r31
 
@@ -444,7 +445,8 @@ class AptValue * AptLoadVars::objectMemberLookup(const class AptLoadVars * const
 }
 
 // Range: 0x80326A48 -> 0x80326AA4
-void * AptLoadVars::~AptLoadVars(class AptLoadVars * const this /* r30 */) {}
+// this: r30
+AptLoadVars::~AptLoadVars() {}
 
 static char __PRETTY_FUNCTION__[36]; // size: 0x24, address: 0x8045CEFC
 // Range: 0x80326AA4 -> 0x80326C10
@@ -537,7 +539,8 @@ class AptValue * AptLoadVars::sMethod_toString(class AptValue * pThis /* r30 */)
 
 static char __PRETTY_FUNCTION__[78]; // size: 0x4E, address: 0x8045CF20
 // Range: 0x80327270 -> 0x80327398
-class AptValue * AptError::objectMemberLookup(const class AptError * const this /* r29 */, const class EAStringC * const pName /* r30 */) {
+// this: r29
+class AptValue * AptError::objectMemberLookup(const class EAStringC * const pName /* r30 */) const {
     // Local variables
     class AptString * t; // r31
     class AptString * t; // r31
@@ -548,14 +551,16 @@ class AptValue * AptError::objectMemberLookup(const class AptError * const this 
 }
 
 // Range: 0x80327398 -> 0x8032746C
-unsigned char AptError::objectMemberSet(class AptError * const this /* r29 */, const class EAStringC * const pName /* r30 */, class AptValue * const pValue /* r31 */) {
+// this: r29
+unsigned char AptError::objectMemberSet(const class EAStringC * const pName /* r30 */, class AptValue * const pValue /* r31 */) {
     // Local variables
     class EAStringC t; // r1+0xC
     class EAStringC t; // r1+0x8
 }
 
 // Range: 0x8032746C -> 0x803274E4
-void * AptError::~AptError(class AptError * const this /* r30 */) {}
+// this: r30
+AptError::~AptError() {}
 
 class AptNativeFunction * psMethod_toString; // size: 0x4, address: 0x805DC3E0
 // Range: 0x803274E4 -> 0x8032754C
@@ -580,19 +585,14 @@ class AptValue * AptStage::objectMemberLookup(const class EAStringC * const pNam
     // -> class AptNone * gpUndefinedValue;
 }
 
-struct {
-    // total size: 0x44
-} __vt__8AptStage; // size: 0x44, address: 0x8045CFB8
-struct {
-    // total size: 0x44
-} __vt__8AptError; // size: 0x44, address: 0x8045CFFC
-struct {
-    // total size: 0x44
-} __vt__11AptLoadVars; // size: 0x44, address: 0x8045D040
-struct {
-    // total size: 0x44
-} __vt__6AptKey; // size: 0x44, address: 0x8045D084
-struct {
-    // total size: 0x44
-} __vt__10AptMathObj; // size: 0x44, address: 0x8045D0C8
+// total size: 0x44
+struct {} __vt__8AptStage; // size: 0x44, address: 0x8045CFB8
+// total size: 0x44
+struct {} __vt__8AptError; // size: 0x44, address: 0x8045CFFC
+// total size: 0x44
+struct {} __vt__11AptLoadVars; // size: 0x44, address: 0x8045D040
+// total size: 0x44
+struct {} __vt__6AptKey; // size: 0x44, address: 0x8045D084
+// total size: 0x44
+struct {} __vt__10AptMathObj; // size: 0x44, address: 0x8045D0C8
 

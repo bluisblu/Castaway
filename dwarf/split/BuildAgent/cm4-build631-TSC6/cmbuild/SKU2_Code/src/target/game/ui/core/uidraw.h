@@ -11,21 +11,16 @@ class UIDrawTable * UIDrawTable::Instance() {
 }
 
 // Range: 0x80182280 -> 0x801822AC
-void * DrawTableRecord::DrawTableRecord() {
+DrawTableRecord::DrawTableRecord() {
     // References
     // -> struct [anonymous] __vt__Q211UIDrawTable15DrawTableRecord;
 }
 
 // Range: 0x801822AC -> 0x801822EC
-void * DrawTableRecord::~DrawTableRecord(class DrawTableRecord * const this /* r31 */) {}
+// this: r31
+DrawTableRecord::~DrawTableRecord() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\target\game\ui\core\uidraw.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x802058E4 -> 0x8020592C
-*/
 // Range: 0x802058E4 -> 0x8020592C
 void UIDrawTable::Shutdown() {
     // References

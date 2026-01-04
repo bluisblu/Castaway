@@ -5,18 +5,22 @@
     Code range: 0x802ADFB4 -> 0x802AE1A8
 */
 // Range: 0x802ADFB4 -> 0x802AE018
-void * EScratchBuffMan::~EScratchBuffMan(class EScratchBuffMan * const this /* r30 */) {}
+// this: r30
+EScratchBuffMan::~EScratchBuffMan() {}
 
 // Range: 0x802AE018 -> 0x802AE094
-void EScratchBuffMan::Init(class EScratchBuffMan * const this /* r30 */) {
+// this: r30
+void EScratchBuffMan::Init() {
     // References
     // -> class EApp * _pApp;
 }
 
 // Range: 0x802AE094 -> 0x802AE158
-void EScratchBuffMan::TryAcquireBuffer(class EScratchBuffMan * const this /* r28 */, class EScratchBuffUser * pUser /* r29 */, const char * pfile /* r30 */, int line /* r31 */) {}
+// this: r28
+void EScratchBuffMan::TryAcquireBuffer(class EScratchBuffUser * pUser /* r29 */, const char * pfile /* r30 */, int line /* r31 */) {}
 
 // Range: 0x802AE158 -> 0x802AE1A8
-unsigned char EScratchBuffMan::ReleaseBuffer(class EScratchBuffMan * const this /* r31 */) {}
+// this: r31
+unsigned char EScratchBuffMan::ReleaseBuffer() {}
 
 

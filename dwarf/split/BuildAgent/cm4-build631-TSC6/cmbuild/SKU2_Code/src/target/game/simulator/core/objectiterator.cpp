@@ -5,16 +5,18 @@
     Code range: 0x80142300 -> 0x8014244C
 */
 // Range: 0x80142300 -> 0x80142368
-void ObjectIterator::init(class ObjectIterator * const this /* r29 */, const class CTilePt & location /* r31 */, enum IterateType type /* r30 */) {
+// this: r29
+void ObjectIterator::init(const class CTilePt & location /* r31 */, enum IterateType type /* r30 */) {
     // Local variables
     signed short objectID; // r0
 }
 
 // Range: 0x80142368 -> 0x80142378
-void * ObjectIterator::ObjectIterator() {}
+ObjectIterator::ObjectIterator() {}
 
 // Range: 0x80142378 -> 0x8014244C
-class ObjectIterator & ObjectIterator::__pp(class ObjectIterator * const this /* r28 */) {
+// this: r28
+class ObjectIterator & ObjectIterator::operator++() {
     // Local variables
     class cXObject * examineObj; // r30
     int examineSlot; // r29

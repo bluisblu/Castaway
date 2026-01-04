@@ -5,19 +5,21 @@
     Code range: 0x801AEF64 -> 0x801B0388
 */
 // Range: 0x801AEF64 -> 0x801AEF78
-void * KeyboardWorkOrder::KeyboardWorkOrder() {}
+KeyboardWorkOrder::KeyboardWorkOrder() {}
 
 // Range: 0x801AEF78 -> 0x801AEF88
 void KeyboardWorkOrder::Initialize() {}
 
 // Range: 0x801AEF88 -> 0x801AEF9C
-void * KeyboardInputItem::KeyboardInputItem() {}
+KeyboardInputItem::KeyboardInputItem() {}
 
 // Range: 0x801AEF9C -> 0x801AEFDC
-void * KeyboardInputItem::~KeyboardInputItem(struct KeyboardInputItem * const this /* r31 */) {}
+// this: r31
+KeyboardInputItem::~KeyboardInputItem() {}
 
 // Range: 0x801AEFDC -> 0x801AF16C
-void * K2YTarget::K2YTarget(class K2YTarget * const this /* r29 */) {
+// this: r29
+K2YTarget::K2YTarget() {
     // References
     // -> class AptViewer * _gpAptViewer;
     // -> unsigned short * m_currentEntryPtr;
@@ -25,10 +27,12 @@ void * K2YTarget::K2YTarget(class K2YTarget * const this /* r29 */) {
 }
 
 // Range: 0x801AF16C -> 0x801AF394
-void K2YTarget::InstallCommandsAndTests(class K2YTarget * const this /* r30 */) {}
+// this: r30
+void K2YTarget::InstallCommandsAndTests() {}
 
 // Range: 0x801AF394 -> 0x801AF49C
-void * K2YTarget::~K2YTarget(class K2YTarget * const this /* r30 */) {
+// this: r30
+K2YTarget::~K2YTarget() {
     // References
     // -> class AptViewer * _gpAptViewer;
     // -> class EGlobal _globals;
@@ -36,16 +40,19 @@ void * K2YTarget::~K2YTarget(class K2YTarget * const this /* r30 */) {
 }
 
 // Range: 0x801AF49C -> 0x801AF4E8
-void K2YTarget::CleanupRouterString(class K2YTarget * const this /* r31 */) {}
+// this: r31
+void K2YTarget::CleanupRouterString() {}
 
 // Range: 0x801AF4E8 -> 0x801AF554
-void K2YTarget::CommitEntry(class K2YTarget * const this /* r29 */) {
+// this: r29
+void K2YTarget::CommitEntry() {
     // Local variables
     int i; // r30
 }
 
 // Range: 0x801AF554 -> 0x801AF63C
-void K2YTarget::CleanupEntry(class K2YTarget * const this /* r28 */) {
+// this: r28
+void K2YTarget::CleanupEntry() {
     // Local variables
     int i; // r29
 
@@ -54,7 +61,8 @@ void K2YTarget::CleanupEntry(class K2YTarget * const this /* r28 */) {
 }
 
 // Range: 0x801AF63C -> 0x801AF698
-void K2YTarget::SetRouterCompletionString(class K2YTarget * const this /* r30 */, char * routerSetVariable /* r31 */) {}
+// this: r30
+void K2YTarget::SetRouterCompletionString(char * routerSetVariable /* r31 */) {}
 
 // Range: 0x801AF698 -> 0x801AF6D0
 void K2YTarget::InvokeRouterAcceptCommand() {
@@ -69,7 +77,8 @@ void K2YTarget::InvokeRouterCancelCommand() {
 }
 
 // Range: 0x801AF708 -> 0x801AF788
-void K2YTarget::Update(class K2YTarget * const this /* r31 */) {
+// this: r31
+void K2YTarget::Update() {
     // Local variables
     class EVec2 dummy; // r1+0x8
 
@@ -79,7 +88,8 @@ void K2YTarget::Update(class K2YTarget * const this /* r31 */) {
 }
 
 // Range: 0x801AF788 -> 0x801AFA8C
-void K2YTarget::SetVariable(class K2YTarget * const this /* r28 */, const char * szCommand /* r29 */, const char * szParams /* r30 */) {
+// this: r28
+void K2YTarget::SetVariable(const char * szCommand /* r29 */, const char * szParams /* r30 */) {
     // Local variables
     int len; // r0
     const unsigned short * pChar; // r30
@@ -90,7 +100,8 @@ void K2YTarget::SetVariable(class K2YTarget * const this /* r28 */, const char *
 }
 
 // Range: 0x801AFA8C -> 0x801AFD20
-char * K2YTarget::GetVariable(class K2YTarget * const this /* r27 */, const char * szVar /* r28 */) {
+// this: r27
+char * K2YTarget::GetVariable(const char * szVar /* r28 */) {
     // Local variables
     char * retStr; // r29
     int len; // r0
@@ -107,7 +118,8 @@ char * K2YTarget::GetVariable(class K2YTarget * const this /* r27 */, const char
 }
 
 // Range: 0x801AFD20 -> 0x801AFEF4
-unsigned short * K2YTarget::GetLocalizable(class K2YTarget * const this /* r28 */, const char * szVar /* r29 */) {
+// this: r28
+unsigned short * K2YTarget::GetLocalizable(const char * szVar /* r29 */) {
     // Local variables
     unsigned short * wideStr; // r30
     unsigned short * outString; // r31
@@ -131,7 +143,8 @@ int K2YTarget::GetKeybits(int kb /* r30 */, int row /* r28 */) {
 }
 
 // Range: 0x801B00B0 -> 0x801B02A8
-void K2YTarget::StartUp(class K2YTarget * const this /* r26 */, struct KeyboardWorkOrder * workOrder /* r27 */, int numOrders /* r28 */, enum K2Y_INPUT_MAXIMUM input_max /* r29 */) {
+// this: r26
+void K2YTarget::StartUp(struct KeyboardWorkOrder * workOrder /* r27 */, int numOrders /* r28 */, enum K2Y_INPUT_MAXIMUM input_max /* r29 */) {
     // Local variables
     int i; // r30
     char * title; // r25

@@ -38,20 +38,23 @@ static void RenderPostProcessEffects(class ERC * rc /* r29 */) {
 }
 
 // Range: 0x80171120 -> 0x801711B4
-void * ELiveMode::ELiveMode(class ELiveMode * const this /* r31 */) {
+// this: r31
+ELiveMode::ELiveMode() {
     // References
     // -> class GameData _gd;
     // -> struct [anonymous] __vt__9ELiveMode;
 }
 
 // Range: 0x801711B4 -> 0x8017121C
-void * ELiveMode::~ELiveMode(class ELiveMode * const this /* r30 */) {
+// this: r30
+ELiveMode::~ELiveMode() {
     // References
     // -> class GameData _gd;
 }
 
 // Range: 0x8017121C -> 0x801712BC
-void ELiveMode::Init(class ELiveMode * const this /* r30 */) {
+// this: r30
+void ELiveMode::Init() {
     // References
     // -> class EShaderManager _shaderman;
     // -> class GameData _gd;
@@ -61,7 +64,8 @@ void ELiveMode::Init(class ELiveMode * const this /* r30 */) {
 void LiveModeInitState::Shutdown() {}
 
 // Range: 0x801712E0 -> 0x8017138C
-void LiveModeInitState::Reset(class LiveModeInitState * const this /* r31 */) {
+// this: r31
+void LiveModeInitState::Reset() {
     // References
     // -> class GameData _gd;
     // -> class EGlobal _globals;
@@ -70,7 +74,8 @@ void LiveModeInitState::Reset(class LiveModeInitState * const this /* r31 */) {
 }
 
 // Range: 0x8017138C -> 0x80171EC0
-void LiveModeInitState::Update(class LiveModeInitState * const this /* r28 */) {
+// this: r28
+void LiveModeInitState::Update() {
     // Local variables
     unsigned char bDone; // r30
     int iOldStage; // r29
@@ -98,13 +103,15 @@ void LiveModeInitState::Update(class LiveModeInitState * const this /* r28 */) {
 void LiveModeInitState::Draw() {}
 
 // Range: 0x80171EC4 -> 0x80171F08
-void LiveModeInitState::DatasetFinishAddRefAsync(class LiveModeInitState * const this /* r31 */) {
+// this: r31
+void LiveModeInitState::DatasetFinishAddRefAsync() {
     // References
     // -> class EDatasetManager _datasetman;
 }
 
 // Range: 0x80171F08 -> 0x8017203C
-void ELiveMode::Reset(class ELiveMode * const this /* r31 */) {
+// this: r31
+void ELiveMode::Reset() {
     // Local variables
     class ObjectFolder * pObjectFolder; // r31
 
@@ -120,7 +127,8 @@ void ChangeHouseDemolishHouse::Reset() {
 }
 
 // Range: 0x80172074 -> 0x801720F0
-void ChangeHouseDemolishHouse::Update(class ChangeHouseDemolishHouse * const this /* r31 */) {
+// this: r31
+void ChangeHouseDemolishHouse::Update() {
     // References
     // -> class GameData _gd;
 }
@@ -129,13 +137,15 @@ void ChangeHouseDemolishHouse::Update(class ChangeHouseDemolishHouse * const thi
 void ChangeHouseSaveHouse::Reset() {}
 
 // Range: 0x8017211C -> 0x80172190
-void ChangeHouseSaveHouse::Update(class ChangeHouseSaveHouse * const this /* r31 */) {
+// this: r31
+void ChangeHouseSaveHouse::Update() {
     // Local variables
     enum eMUResult muResult; // r0
 }
 
 // Range: 0x80172190 -> 0x80172288
-void ChangeHouseUnloadHouse::Reset(class ChangeHouseUnloadHouse * const this /* r31 */) {
+// this: r31
+void ChangeHouseUnloadHouse::Reset() {
     // References
     // -> struct psystem * g_pParticleModelSystem;
     // -> struct psystem * g_pParticleWeatherSystem;
@@ -146,23 +156,27 @@ void ChangeHouseUnloadHouse::Reset(class ChangeHouseUnloadHouse * const this /* 
 }
 
 // Range: 0x80172288 -> 0x801722C4
-void ChangeHouseUnloadHouse::Update(class ChangeHouseUnloadHouse * const this /* r31 */) {}
+// this: r31
+void ChangeHouseUnloadHouse::Update() {}
 
 // Range: 0x801722C4 -> 0x80172308
-void ChangeHouseLoadHouse::DatasetFinishAddRefAsync(class ChangeHouseLoadHouse * const this /* r31 */) {
+// this: r31
+void ChangeHouseLoadHouse::DatasetFinishAddRefAsync() {
     // References
     // -> class EDatasetManager _datasetman;
 }
 
 // Range: 0x80172308 -> 0x80172390
-void ChangeHouseLoadHouse::Reset(class ChangeHouseLoadHouse * const this /* r31 */) {
+// this: r31
+void ChangeHouseLoadHouse::Reset() {
     // References
     // -> class GameData _gd;
     // -> class cBoxX * g_pBoxX;
 }
 
 // Range: 0x80172390 -> 0x80172C30
-void ChangeHouseLoadHouse::Update(class ChangeHouseLoadHouse * const this /* r28 */) {
+// this: r28
+void ChangeHouseLoadHouse::Update() {
     // Local variables
     unsigned char bDone; // r30
     int iOldStage; // r29
@@ -186,40 +200,47 @@ void ChangeHouseLoadHouse::Update(class ChangeHouseLoadHouse * const this /* r28
 unsigned char ChangeHouseLoadHouse::DatasetPendingAddRefAsync() {}
 
 // Range: 0x80172C44 -> 0x80172D50
-void LiveModeChangeHouseStateMachine::Startup(class LiveModeChangeHouseStateMachine * const this /* r30 */) {
+// this: r30
+void LiveModeChangeHouseStateMachine::Startup() {
     // References
     // -> class EGlobal _globals;
 }
 
 // Range: 0x80172D50 -> 0x80172D98
-void * ChangeHouseLoadHouse::ChangeHouseLoadHouse(class ChangeHouseLoadHouse * const this /* r31 */) {
+// this: r31
+ChangeHouseLoadHouse::ChangeHouseLoadHouse() {
     // References
     // -> struct [anonymous] __vt__20ChangeHouseLoadHouse;
 }
 
 // Range: 0x80172D98 -> 0x80172DD8
-void * ChangeHouseUnloadHouse::ChangeHouseUnloadHouse(class ChangeHouseUnloadHouse * const this /* r31 */) {
+// this: r31
+ChangeHouseUnloadHouse::ChangeHouseUnloadHouse() {
     // References
     // -> struct [anonymous] __vt__22ChangeHouseUnloadHouse;
 }
 
 // Range: 0x80172DD8 -> 0x80172E18
-void * ChangeHouseSaveHouse::ChangeHouseSaveHouse(class ChangeHouseSaveHouse * const this /* r31 */) {
+// this: r31
+ChangeHouseSaveHouse::ChangeHouseSaveHouse() {
     // References
     // -> struct [anonymous] __vt__20ChangeHouseSaveHouse;
 }
 
 // Range: 0x80172E18 -> 0x80172E58
-void * ChangeHouseDemolishHouse::ChangeHouseDemolishHouse(class ChangeHouseDemolishHouse * const this /* r31 */) {
+// this: r31
+ChangeHouseDemolishHouse::ChangeHouseDemolishHouse() {
     // References
     // -> struct [anonymous] __vt__24ChangeHouseDemolishHouse;
 }
 
 // Range: 0x80172E58 -> 0x80172E90
-void LiveModeChangeHouseStateMachine::Shutdown(class LiveModeChangeHouseStateMachine * const this /* r31 */) {}
+// this: r31
+void LiveModeChangeHouseStateMachine::Shutdown() {}
 
 // Range: 0x80172E90 -> 0x80172EF4
-void LiveModeChangeHouseStateMachine::Reset(class LiveModeChangeHouseStateMachine * const this /* r31 */) {
+// this: r31
+void LiveModeChangeHouseStateMachine::Reset() {
     // References
     // -> class EGlobal _globals;
     // -> class GameData _gd;
@@ -241,7 +262,8 @@ void ELiveMode::GotoStartMode() {
 }
 
 // Range: 0x80172F88 -> 0x80173054
-void ELiveMode::QuitToMainMenu(class ELiveMode * const this /* r29 */) {
+// this: r29
+void ELiveMode::QuitToMainMenu() {
     // References
     // -> class ESimsApp _app;
     // -> class EGlobal _globals;
@@ -249,14 +271,16 @@ void ELiveMode::QuitToMainMenu(class ELiveMode * const this /* r29 */) {
 }
 
 // Range: 0x80173054 -> 0x801731B8
-unsigned char ELiveMode::IsReadyForUpdate(class ELiveMode * const this /* r30 */) {
+// this: r30
+unsigned char ELiveMode::IsReadyForUpdate() {
     // References
     // -> class EGlobal _globals;
     // -> class GameData _gd;
 }
 
 // Range: 0x801731B8 -> 0x80173598
-void ELiveMode::UpdateIntroCamera(class ELiveMode * const this /* r31 */) {
+// this: r31
+void ELiveMode::UpdateIntroCamera() {
     // Local variables
     unsigned char exitStage; // r29
     class EMat4 simMat; // r1+0x18
@@ -268,7 +292,8 @@ void ELiveMode::UpdateIntroCamera(class ELiveMode * const this /* r31 */) {
 }
 
 // Range: 0x80173598 -> 0x801739A4
-void ELiveMode::Update(class ELiveMode * const this /* r31 */) {
+// this: r31
+void ELiveMode::Update() {
     // Local variables
     unsigned char animpaused; // r0
     float speedMult; // f0
@@ -285,7 +310,8 @@ void ELiveMode::Update(class ELiveMode * const this /* r31 */) {
 }
 
 // Range: 0x801739A4 -> 0x80173DD8
-void ELiveMode::Draw(class ELiveMode * const this /* r26 */, class ERC * prc /* r31 */) {
+// this: r26
+void ELiveMode::Draw(class ERC * prc /* r31 */) {
     // Local variables
     const unsigned short * string; // r26
     class EVec2 Dimensions; // r1+0x48
@@ -322,10 +348,12 @@ void ELiveMode::DrawMain(class ERC * prc /* r27 */) {
 }
 
 // Range: 0x80174094 -> 0x80174100
-void ELiveMode::TriggerIntroCamera(class ELiveMode * const this /* r30 */, class CameraDirector * pCameraDirector /* r31 */) {}
+// this: r30
+void ELiveMode::TriggerIntroCamera(class CameraDirector * pCameraDirector /* r31 */) {}
 
 // Range: 0x80174100 -> 0x80174308
-unsigned char ELiveMode::StartIntroCamera(class ELiveMode * const this /* r30 */, class CameraDirector * pCameraDirector /* r28 */, class ESimsCam * pCamera /* r29 */) {
+// this: r30
+unsigned char ELiveMode::StartIntroCamera(class CameraDirector * pCameraDirector /* r28 */, class ESimsCam * pCamera /* r29 */) {
     // Local variables
     class ERQuickdata * pObjectData; // r31
     const struct ERQTable * pAnimRefTable; // r1+0x10

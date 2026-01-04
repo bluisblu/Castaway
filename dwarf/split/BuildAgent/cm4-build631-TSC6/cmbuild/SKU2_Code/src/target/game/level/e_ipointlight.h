@@ -11,7 +11,8 @@ unsigned short EIPointLight::GetReadVersion() {
 }
 
 // Range: 0x80085F6C -> 0x80085F7C
-void EIPointLight::GetPosition(class EIPointLight * const this /* r5 */) {}
+// this: r5
+void EIPointLight::GetPosition() {}
 
 // Range: 0x80085F7C -> 0x80085F84
 int EIPointLight::GetRoomId() {}

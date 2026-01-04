@@ -8,7 +8,8 @@
 void IKDataChimp::ComputeIK() {}
 
 // Range: 0x800292DC -> 0x800294A4
-void IKDataChimp::ComputeIKBoneOrient(class IKDataChimp * const this /* r28 */, class EAnimController * pAC /* r29 */, class EQuat & rootQ /* r30 */, class EQuat & midQ /* r31 */) {
+// this: r28
+void IKDataChimp::ComputeIKBoneOrient(class EAnimController * pAC /* r29 */, class EQuat & rootQ /* r30 */, class EQuat & midQ /* r31 */) {
     // Local variables
     class EMat4 parentOrient; // r1+0x2B0
     class EMat4 parentOrientInv; // r1+0x270

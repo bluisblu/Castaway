@@ -8,12 +8,6 @@
 class SimModelTSC6 * CasSimRenderer::GetSimModel() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\target\game\cas\cassimrenderer.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x8018E230 -> 0x8018E2DC
-*/
 // Range: 0x8018E230 -> 0x8018E238
 class EAnimController & CasSimRenderer::GetAnimController() {}
 
@@ -21,7 +15,8 @@ class EAnimController & CasSimRenderer::GetAnimController() {}
 unsigned int CasSimRenderer::GetPositionNum() {}
 
 // Range: 0x8018E240 -> 0x8018E2B8
-unsigned char CasSimRenderer::IsChangingClothes(const class CasSimRenderer * const this /* r30 */) {}
+// this: r30
+unsigned char CasSimRenderer::IsChangingClothes() const {}
 
 // Range: 0x8018E2B8 -> 0x8018E2C0
 void CasSimRenderer::SetCharacterRotation() {}

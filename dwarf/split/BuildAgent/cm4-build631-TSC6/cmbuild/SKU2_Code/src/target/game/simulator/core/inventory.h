@@ -11,7 +11,8 @@ void InventoryItems::SetFamily() {}
 unsigned char InventoryItems::CanHoldMoreNonTokens() {}
 
 // Range: 0x8010CE5C -> 0x8010CEB8
-class InventoryItem * InventoryItems::GetItem(class InventoryItems * const this /* r30 */, int i /* r31 */) {}
+// this: r30
+class InventoryItem * InventoryItems::GetItem(int i /* r31 */) {}
 
 // Range: 0x8010CEB8 -> 0x8010CEEC
 unsigned char InventoryItems::IsTokenItemInInventory() {}

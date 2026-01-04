@@ -11,35 +11,18 @@ class E3DWindow * EWindow::GetCurrent3DWindow() {
 }
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\common\engine\graphics\e_window.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x800316FC -> 0x80031770
-*/
 // Range: 0x800316FC -> 0x8003173C
-void * EWindow::__nw(unsigned long size /* r31 */) {}
+void * EWindow::operator new(unsigned long size /* r31 */) {}
 
 // Range: 0x8003173C -> 0x80031770
-void EWindow::__dl(void * p /* r31 */) {}
+void EWindow::operator delete(void * p /* r31 */) {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\common\engine\graphics\e_window.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x801CB364 -> 0x801CB3B4
-*/
 // Range: 0x801CB364 -> 0x801CB3B4
-void EWindow::SetRect(class EWindow * const this /* r30 */, const class TRect & rect /* r31 */) {}
+// this: r30
+void EWindow::SetRect(const class TRect & rect /* r31 */) {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\common\engine\graphics\e_window.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x801FA4AC -> 0x801FA4B4
-*/
 // Range: 0x801FA4AC -> 0x801FA4B4
 class EWindow * EWindow::GetCurrentWindow() {
     // References
@@ -47,12 +30,6 @@ class EWindow * EWindow::GetCurrentWindow() {
 }
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\common\engine\graphics\e_window.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x802A2BEC -> 0x802A2C00
-*/
 // Range: 0x802A2BEC -> 0x802A2BF4
 class E3DWindow * EWindow::Cast3DWindow() {}
 

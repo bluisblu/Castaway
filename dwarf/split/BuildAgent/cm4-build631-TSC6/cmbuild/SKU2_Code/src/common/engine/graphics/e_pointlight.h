@@ -5,6 +5,7 @@
     Code range: 0x80027C44 -> 0x80027CF4
 */
 // Range: 0x80027C44 -> 0x80027C8C
-void * EPointLight::EPointLight(struct EPointLight * const this /* r31 */) {}
+// this: r31
+EPointLight::EPointLight() {}
 
 

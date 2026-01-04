@@ -5,13 +5,15 @@
     Code range: 0x801167E0 -> 0x801169E4
 */
 // Range: 0x801167E0 -> 0x80116864
-void * IconGroup::IconGroup(class IconGroup * const this /* r30 */, int group /* r31 */) {
+// this: r30
+IconGroup::IconGroup(int group /* r31 */) {
     // References
     // -> static struct IconIDMap sIDMaps[14];
 }
 
 // Range: 0x80116864 -> 0x801168D8
-void * IconGroup::~IconGroup(class IconGroup * const this /* r30 */) {}
+// this: r30
+IconGroup::~IconGroup() {}
 
 // Range: 0x801168D8 -> 0x80116938
 signed short IconGroup::GetSpriteID() {

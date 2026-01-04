@@ -19,29 +19,34 @@ void SaveGameTarget::PauseMusic() {
 }
 
 // Range: 0x801DC330 -> 0x801DC53C
-void * SaveGameTarget::SaveGameTarget(class SaveGameTarget * const this /* r26 */, class M2MTarget * parent /* r27 */, const class MemoryDevicePort_t & port_ /* r28 */, int saveGameFlags_ /* r31 */) {
+// this: r26
+SaveGameTarget::SaveGameTarget(class M2MTarget * parent /* r27 */, const class MemoryDevicePort_t & port_ /* r28 */, int saveGameFlags_ /* r31 */) {
     // References
     // -> struct [anonymous] __vt__14SaveGameTarget;
 }
 
 // Range: 0x801DC53C -> 0x801DC5FC
-void * SaveGameTarget::~SaveGameTarget(class SaveGameTarget * const this /* r30 */) {
+// this: r30
+SaveGameTarget::~SaveGameTarget() {
     // References
     // -> class PetsHomeButton _wiiHomeButton;
     // -> struct [anonymous] __vt__14SaveGameTarget;
 }
 
 // Range: 0x801DC5FC -> 0x801DC900
-void SaveGameTarget::SelectionCallback(class SaveGameTarget * const this /* r31 */) {}
+// this: r31
+void SaveGameTarget::SelectionCallback() {}
 
 // Range: 0x801DC900 -> 0x801DC9F4
-void SaveGameTarget::ZeroInputCallback(class SaveGameTarget * const this /* r30 */) {
+// this: r30
+void SaveGameTarget::ZeroInputCallback() {
     // Local variables
     unsigned char bCardInSlot; // r1+0x8
 }
 
 // Range: 0x801DC9F4 -> 0x801DCDB8
-void SaveGameTarget::Update(class SaveGameTarget * const this /* r31 */) {
+// this: r31
+void SaveGameTarget::Update() {
     // Local variables
     unsigned char bCardInSlot; // r1+0x9
     enum EMC_OpStatus ops; // r0
@@ -61,7 +66,8 @@ void SaveGameTarget::Hide() {}
 int SaveGameTarget::GetResult() {}
 
 // Range: 0x801DCDC8 -> 0x801DD164
-unsigned char SaveGameTarget::PerformMemoryCardChecks(class SaveGameTarget * const this /* r30 */) {
+// this: r30
+unsigned char SaveGameTarget::PerformMemoryCardChecks() {
     // Local variables
     enum EMC_OpStatus ops; // r0
     unsigned char bWrongDevice; // r1+0xD
@@ -74,116 +80,134 @@ unsigned char SaveGameTarget::PerformMemoryCardChecks(class SaveGameTarget * con
 }
 
 // Range: 0x801DD164 -> 0x801DD274
-void SaveGameTarget::SpawnCheckingDialog(class SaveGameTarget * const this /* r31 */) {
+// this: r31
+void SaveGameTarget::SpawnCheckingDialog() {
     // References
     // -> class PetsHomeButton _wiiHomeButton;
     // -> class EGlobal _globals;
 }
 
 // Range: 0x801DD274 -> 0x801DD37C
-void SaveGameTarget::SpawnCardCorruptDialog(class SaveGameTarget * const this /* r31 */) {
+// this: r31
+void SaveGameTarget::SpawnCardCorruptDialog() {
     // References
     // -> class EGlobal _globals;
 }
 
 // Range: 0x801DD37C -> 0x801DD478
-void SaveGameTarget::SpawnWrongDeviceDialog(class SaveGameTarget * const this /* r30 */) {
+// this: r30
+void SaveGameTarget::SpawnWrongDeviceDialog() {
     // References
     // -> class EGlobal _globals;
 }
 
 // Range: 0x801DD478 -> 0x801DD5E4
-void SaveGameTarget::SpawnCardDamagedDialog(class SaveGameTarget * const this /* r30 */) {
+// this: r30
+void SaveGameTarget::SpawnCardDamagedDialog() {
     // References
     // -> class EGlobal _globals;
 }
 
 // Range: 0x801DD5E4 -> 0x801DD6DC
-void SaveGameTarget::SpawnFormatDecideDialog(class SaveGameTarget * const this /* r30 */) {
+// this: r30
+void SaveGameTarget::SpawnFormatDecideDialog() {
     // References
     // -> class EGlobal _globals;
 }
 
 // Range: 0x801DD6DC -> 0x801DD7C8
-void SaveGameTarget::SpawnFormatConfirmDialog(class SaveGameTarget * const this /* r30 */) {
+// this: r30
+void SaveGameTarget::SpawnFormatConfirmDialog() {
     // References
     // -> class EGlobal _globals;
 }
 
 // Range: 0x801DD7C8 -> 0x801DD884
-void SaveGameTarget::SpawnFormattingDialog(class SaveGameTarget * const this /* r31 */) {
+// this: r31
+void SaveGameTarget::SpawnFormattingDialog() {
     // References
     // -> class EEngine * _pEngine;
     // -> class EGlobal _globals;
 }
 
 // Range: 0x801DD884 -> 0x801DD970
-void SaveGameTarget::SpawnFormatCancelDialog(class SaveGameTarget * const this /* r30 */) {
+// this: r30
+void SaveGameTarget::SpawnFormatCancelDialog() {
     // References
     // -> class EGlobal _globals;
 }
 
 // Range: 0x801DD970 -> 0x801DDA60
-void SaveGameTarget::SpawnFormatFailDialog(class SaveGameTarget * const this /* r30 */) {
+// this: r30
+void SaveGameTarget::SpawnFormatFailDialog() {
     // References
     // -> class EGlobal _globals;
 }
 
 // Range: 0x801DDA60 -> 0x801DDB28
-void SaveGameTarget::SpawnFormatSuccessDialog(class SaveGameTarget * const this /* r31 */) {
+// this: r31
+void SaveGameTarget::SpawnFormatSuccessDialog() {
     // References
     // -> class EGlobal _globals;
 }
 
 // Range: 0x801DDB28 -> 0x801DDD18
-void SaveGameTarget::SpawnNoSpaceDialog(class SaveGameTarget * const this /* r29 */, enum NoSpaceType type /* r31 */) {
+// this: r29
+void SaveGameTarget::SpawnNoSpaceDialog(enum NoSpaceType type /* r31 */) {
     // References
     // -> class PetsHomeButton _wiiHomeButton;
     // -> class EGlobal _globals;
 }
 
 // Range: 0x801DDD18 -> 0x801DDE58
-void SaveGameTarget::SpawnOverwriteDialog(class SaveGameTarget * const this /* r30 */) {
+// this: r30
+void SaveGameTarget::SpawnOverwriteDialog() {
     // References
     // -> class PetsHomeButton _wiiHomeButton;
     // -> class EGlobal _globals;
 }
 
 // Range: 0x801DDE58 -> 0x801DDF88
-void SaveGameTarget::SpawnSaveConfirmDialog(class SaveGameTarget * const this /* r30 */) {
+// this: r30
+void SaveGameTarget::SpawnSaveConfirmDialog() {
     // References
     // -> class EGlobal _globals;
 }
 
 // Range: 0x801DDF88 -> 0x801DE094
-void SaveGameTarget::SpawnSavingDialog(class SaveGameTarget * const this /* r31 */) {
+// this: r31
+void SaveGameTarget::SpawnSavingDialog() {
     // References
     // -> class PetsHomeButton _wiiHomeButton;
     // -> class EGlobal _globals;
 }
 
 // Range: 0x801DE094 -> 0x801DE168
-void SaveGameTarget::SpawnSaveSucceededDialog(class SaveGameTarget * const this /* r30 */) {
+// this: r30
+void SaveGameTarget::SpawnSaveSucceededDialog() {
     // References
     // -> class PetsHomeButton _wiiHomeButton;
     // -> class EGlobal _globals;
 }
 
 // Range: 0x801DE168 -> 0x801DE28C
-void SaveGameTarget::SpawnSaveFailedDialog(class SaveGameTarget * const this /* r30 */) {
+// this: r30
+void SaveGameTarget::SpawnSaveFailedDialog() {
     // References
     // -> class PetsHomeButton _wiiHomeButton;
     // -> class EGlobal _globals;
 }
 
 // Range: 0x801DE28C -> 0x801DE38C
-void SaveGameTarget::SpawnMemCardRemovedDialog(class SaveGameTarget * const this /* r30 */) {
+// this: r30
+void SaveGameTarget::SpawnMemCardRemovedDialog() {
     // References
     // -> class EGlobal _globals;
 }
 
 // Range: 0x801DE38C -> 0x801DE788
-unsigned char SaveGameTarget::PerformSaveGame(class SaveGameTarget * const this /* r31 */) {
+// this: r31
+unsigned char SaveGameTarget::PerformSaveGame() {
     // Local variables
     class EController * pCtrl; // r0
     class EVec3 old_background_color; // r1+0x1C
@@ -205,7 +229,8 @@ unsigned char SaveGameTarget::PerformSaveGame(class SaveGameTarget * const this 
 }
 
 // Range: 0x801DE788 -> 0x801DE7D8
-void SaveGameTarget::BGCall_SaveGame(class SaveGameTarget * const this /* r31 */) {
+// this: r31
+void SaveGameTarget::BGCall_SaveGame() {
     // References
     // -> class Background * _pBackground;
     // -> class BG _bg;

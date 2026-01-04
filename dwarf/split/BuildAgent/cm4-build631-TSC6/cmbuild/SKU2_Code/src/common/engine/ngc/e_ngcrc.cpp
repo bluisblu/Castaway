@@ -5,13 +5,15 @@
     Code range: 0x802B88DC -> 0x802BB5C4
 */
 // Range: 0x802B88DC -> 0x802B8918
-void * ENgcRC::ENgcRC(class ENgcRC * const this /* r31 */) {
+// this: r31
+ENgcRC::ENgcRC() {
     // References
     // -> struct [anonymous] __vt__6ENgcRC;
 }
 
 // Range: 0x802B8918 -> 0x802B8970
-void * ENgcRC::~ENgcRC(class ENgcRC * const this /* r30 */) {}
+// this: r30
+ENgcRC::~ENgcRC() {}
 
 // Range: 0x802B8970 -> 0x802B8974
 void ENgcRC::Init() {}
@@ -26,7 +28,8 @@ void ENgcRC::TriStrip() {
 }
 
 // Range: 0x802B89F0 -> 0x802B8D0C
-void ENgcRC::TriStrip(class ENgcRC * const this /* r15 */, int nVerts /* r16 */, const float * xyzs /* r14 */, const float * texcoords /* r17 */, const unsigned char * colors /* r18 */, const signed char * normals /* r19 */, const unsigned char * weights /* r20 */, unsigned char dualTexcoords /* r21 */) {
+// this: r15
+void ENgcRC::TriStrip(int nVerts /* r16 */, const float * xyzs /* r14 */, const float * texcoords /* r17 */, const unsigned char * colors /* r18 */, const signed char * normals /* r19 */, const unsigned char * weights /* r20 */, unsigned char dualTexcoords /* r21 */) {
     // Local variables
     int xyzsSize; // r31
     int texcoordsSize; // r30
@@ -51,7 +54,8 @@ void ENgcRC::TriStrip(class ENgcRC * const this /* r15 */, int nVerts /* r16 */,
 }
 
 // Range: 0x802B8D0C -> 0x802B8EEC
-void ENgcRC::TriStripRef(class ENgcRC * const this /* r23 */, int nVerts /* r24 */, const float * xyzs /* r25 */, const float * texcoords /* r26 */, const unsigned char * colors /* r27 */, const signed char * normals /* r28 */, const unsigned char * weights /* r29 */, unsigned char dualTexcoords /* r30 */) {
+// this: r23
+void ENgcRC::TriStripRef(int nVerts /* r24 */, const float * xyzs /* r25 */, const float * texcoords /* r26 */, const unsigned char * colors /* r27 */, const signed char * normals /* r28 */, const unsigned char * weights /* r29 */, unsigned char dualTexcoords /* r30 */) {
     // Local variables
     int xyzsSize; // r5
     int texcoordsSize; // r22
@@ -69,7 +73,8 @@ void ENgcRC::TriStripRef(class ENgcRC * const this /* r23 */, int nVerts /* r24 
 }
 
 // Range: 0x802B8EEC -> 0x802B91E8
-void ENgcRC::TriStrip(class ENgcRC * const this /* r15 */, int nIndices /* r16 */, int nVerts /* r17 */, const unsigned short * indices /* r18 */, const float * xyzs /* r19 */, const float * texcoords /* r20 */, const unsigned char * colors /* r14 */, const signed char * normals /* f7 */, const unsigned char * weights /* r21 */) {
+// this: r15
+void ENgcRC::TriStrip(int nIndices /* r16 */, int nVerts /* r17 */, const unsigned short * indices /* r18 */, const float * xyzs /* r19 */, const float * texcoords /* r20 */, const unsigned char * colors /* r14 */, const signed char * normals /* f7 */, const unsigned char * weights /* r21 */) {
     // Local variables
     int xyzsSize; // r31
     int texcoordsSize; // r30
@@ -94,7 +99,8 @@ void ENgcRC::TriStrip(class ENgcRC * const this /* r15 */, int nIndices /* r16 *
 }
 
 // Range: 0x802B91E8 -> 0x802B93C8
-void ENgcRC::TriStripRef(class ENgcRC * const this /* r26 */, int nIndices /* r18 */, int nVerts /* r27 */, const unsigned short * indices /* r19 */, const float * xyzs /* r28 */, const float * texcoords /* r29 */, const unsigned char * colors /* r30 */, const signed char * normals /* r31 */, const unsigned char * weights /* r20 */) {
+// this: r26
+void ENgcRC::TriStripRef(int nIndices /* r18 */, int nVerts /* r27 */, const unsigned short * indices /* r19 */, const float * xyzs /* r28 */, const float * texcoords /* r29 */, const unsigned char * colors /* r30 */, const signed char * normals /* r31 */, const unsigned char * weights /* r20 */) {
     // Local variables
     int xyzsSize; // r4
     int texcoordsSize; // r25
@@ -112,7 +118,8 @@ void ENgcRC::TriStripRef(class ENgcRC * const this /* r26 */, int nIndices /* r1
 }
 
 // Range: 0x802B93C8 -> 0x802B95DC
-void ENgcRC::TriStripRefNumWeights(class ENgcRC * const this /* r22 */, int nVerts /* r23 */, const signed short * xyzs /* r24 */, const signed short * texcoords /* r25 */, const unsigned char * colors /* r26 */, const signed char * normals /* r27 */, unsigned char numWeightMatrices /* r28 */, const unsigned char * weights /* r29 */, unsigned char dualTexcoords /* r30 */) {
+// this: r22
+void ENgcRC::TriStripRefNumWeights(int nVerts /* r23 */, const signed short * xyzs /* r24 */, const signed short * texcoords /* r25 */, const unsigned char * colors /* r26 */, const signed char * normals /* r27 */, unsigned char numWeightMatrices /* r28 */, const unsigned char * weights /* r29 */, unsigned char dualTexcoords /* r30 */) {
     // Local variables
     int xyzsSize; // r5
     int texcoordsSize; // r21
@@ -131,7 +138,8 @@ void ENgcRC::TriStripRefNumWeights(class ENgcRC * const this /* r22 */, int nVer
 }
 
 // Range: 0x802B95DC -> 0x802B98E0
-void ENgcRC::TriStrip(class ENgcRC * const this /* r15 */, int nIndices /* r16 */, int nVerts /* r17 */, const unsigned short * indices /* r18 */, const signed short * xyzs /* f4 */, const signed short * texcoords /* r19 */, const unsigned char * colors /* r20 */, const signed char * normals /* r14 */, unsigned char numWeightMatrices /* f8 */, const unsigned char * weights /* r21 */) {
+// this: r15
+void ENgcRC::TriStrip(int nIndices /* r16 */, int nVerts /* r17 */, const unsigned short * indices /* r18 */, const signed short * xyzs /* f4 */, const signed short * texcoords /* r19 */, const unsigned char * colors /* r20 */, const signed char * normals /* r14 */, unsigned char numWeightMatrices /* f8 */, const unsigned char * weights /* r21 */) {
     // Local variables
     int xyzsSize; // r31
     int texcoordsSize; // r30
@@ -156,7 +164,8 @@ void ENgcRC::TriStrip(class ENgcRC * const this /* r15 */, int nIndices /* r16 *
 }
 
 // Range: 0x802B98E0 -> 0x802B9AD8
-void ENgcRC::TriStripRef(class ENgcRC * const this /* r21 */, int nIndices /* r22 */, int nVerts /* r23 */, const unsigned short * indices /* r24 */, const signed short * xyzs /* r25 */, const signed short * texcoords /* r26 */, const unsigned char * colors /* r27 */, const signed char * normals /* r28 */, unsigned char numWeightMatrices /* r29 */, const unsigned char * weights /* r30 */) {
+// this: r21
+void ENgcRC::TriStripRef(int nIndices /* r22 */, int nVerts /* r23 */, const unsigned short * indices /* r24 */, const signed short * xyzs /* r25 */, const signed short * texcoords /* r26 */, const unsigned char * colors /* r27 */, const signed char * normals /* r28 */, unsigned char numWeightMatrices /* r29 */, const unsigned char * weights /* r30 */) {
     // Local variables
     int xyzsSize; // r4
     int texcoordsSize; // r20
@@ -174,13 +183,15 @@ void ENgcRC::TriStripRef(class ENgcRC * const this /* r21 */, int nIndices /* r2
 }
 
 // Range: 0x802B9AD8 -> 0x802B9B34
-void ENgcRC::TextureCacheInvalidate(class ENgcRC * const this /* r31 */) {
+// this: r31
+void ENgcRC::TextureCacheInvalidate() {
     // Local variables
     struct EDLEntryCommandF32 * p; // r0
 }
 
 // Range: 0x802B9B34 -> 0x802B9D64
-void ENgcRC::TriStripDL(class ENgcRC * const this /* r16 */, const unsigned char * dl /* r17 */, int size /* r18 */, int nVerts /* r19 */, const float * xyzs /* r20 */, const float * texcoords /* r21 */, const unsigned char * colors /* r22 */, const signed char * normals /* r23 */) {
+// this: r16
+void ENgcRC::TriStripDL(const unsigned char * dl /* r17 */, int size /* r18 */, int nVerts /* r19 */, const float * xyzs /* r20 */, const float * texcoords /* r21 */, const unsigned char * colors /* r22 */, const signed char * normals /* r23 */) {
     // Local variables
     int xyzsSize; // r31
     int texcoordsSize; // r30
@@ -197,28 +208,32 @@ void ENgcRC::TriStripDL(class ENgcRC * const this /* r16 */, const unsigned char
 }
 
 // Range: 0x802B9D64 -> 0x802B9E94
-void ENgcRC::TriStripDLRef(class ENgcRC * const this /* r23 */, const unsigned char * dl /* r24 */, int size /* r25 */, int nVerts /* r26 */, const float * xyzs /* r27 */, const float * texcoords /* r28 */, const unsigned char * colors /* r29 */, const signed char * normals /* r30 */, unsigned char dualTexCoords /* r31 */) {
+// this: r23
+void ENgcRC::TriStripDLRef(const unsigned char * dl /* r24 */, int size /* r25 */, int nVerts /* r26 */, const float * xyzs /* r27 */, const float * texcoords /* r28 */, const unsigned char * colors /* r29 */, const signed char * normals /* r30 */, unsigned char dualTexCoords /* r31 */) {
     // Local variables
     struct EDLEntryCommandU16andU32 * pCommand; // r0
     unsigned int * p32; // r0
 }
 
 // Range: 0x802B9E94 -> 0x802BA00C
-void ENgcRC::TriStripDL(class ENgcRC * const this /* r23 */, const unsigned char * dl /* r24 */, int size /* r25 */, int nVerts /* r26 */, const signed short * xyzs /* r27 */, const signed short * texcoords /* r28 */, const unsigned char * colors /* r29 */, const signed char * normals /* r30 */) {
+// this: r23
+void ENgcRC::TriStripDL(const unsigned char * dl /* r24 */, int size /* r25 */, int nVerts /* r26 */, const signed short * xyzs /* r27 */, const signed short * texcoords /* r28 */, const unsigned char * colors /* r29 */, const signed char * normals /* r30 */) {
     // Local variables
     struct EDLEntryCommandU16andU32 * pCommand; // r0
     unsigned int * p32; // r0
 }
 
 // Range: 0x802BA00C -> 0x802BA16C
-void ENgcRC::TriStripDLRef(class ENgcRC * const this /* r22 */, const unsigned char * dl /* r23 */, int size /* r24 */, int nVerts /* r25 */, const signed short * xyzs /* r26 */, const signed short * texcoords /* r27 */, const unsigned char * colors /* r28 */, const signed char * normals /* r29 */, unsigned char dualTexCoords /* r30 */, unsigned char vertexIntensity /* r31 */) {
+// this: r22
+void ENgcRC::TriStripDLRef(const unsigned char * dl /* r23 */, int size /* r24 */, int nVerts /* r25 */, const signed short * xyzs /* r26 */, const signed short * texcoords /* r27 */, const unsigned char * colors /* r28 */, const signed char * normals /* r29 */, unsigned char dualTexCoords /* r30 */, unsigned char vertexIntensity /* r31 */) {
     // Local variables
     struct EDLEntryCommandU16andU32 * pCommand; // r0
     unsigned int * p32; // r0
 }
 
 // Range: 0x802BA16C -> 0x802BA388
-void ENgcRC::TriList(class ENgcRC * const this /* r24 */, int nVerts /* r25 */, const signed short * xyzs /* r26 */, const signed short * texcoords /* r27 */, const unsigned char * colors /* r28 */, const signed char * normals /* r29 */, const unsigned char * weights /* r30 */, unsigned char dualTexCoords /* r31 */) {
+// this: r24
+void ENgcRC::TriList(int nVerts /* r25 */, const signed short * xyzs /* r26 */, const signed short * texcoords /* r27 */, const unsigned char * colors /* r28 */, const signed char * normals /* r29 */, const unsigned char * weights /* r30 */, unsigned char dualTexCoords /* r31 */) {
     // Local variables
     void * gxDL; // r22
     unsigned int byteCount; // r1+0x18
@@ -237,7 +252,8 @@ void ENgcRC::TriList() {}
 void ENgcRC::ScreenTriList() {}
 
 // Range: 0x802BA390 -> 0x802BA3EC
-void ENgcRC::ReadMetrics(class ENgcRC * const this /* r31 */) {
+// this: r31
+void ENgcRC::ReadMetrics() {
     // Local variables
     struct EDLEntryCommandU32 * p; // r0
 }
@@ -273,7 +289,8 @@ void ENgcRC::ModelMatrixIndex() {
 }
 
 // Range: 0x802BA474 -> 0x802BA51C
-void ENgcRC::ModelMatrices(class ENgcRC * const this /* r28 */, int matrixCount /* r29 */) {
+// this: r28
+void ENgcRC::ModelMatrices(int matrixCount /* r29 */) {
     // Local variables
     int maxNum; // r31
     int i; // r30
@@ -523,7 +540,8 @@ void ENgcRC::ZTest() {
 }
 
 // Range: 0x802BAD08 -> 0x802BAF48
-void ENgcRC::ZClear(class ENgcRC * const this /* r31 */, float xUpperLeft /* f27 */, float yUpperLeft /* f28 */, float xLowerRight /* f29 */, float yLowerRight /* f30 */, float zval /* f31 */) {
+// this: r31
+void ENgcRC::ZClear(float xUpperLeft /* f27 */, float yUpperLeft /* f28 */, float xLowerRight /* f29 */, float yLowerRight /* f30 */, float zval /* f31 */) {
     // References
     // -> class ENgcGraphics _ngcGfx;
 }
@@ -581,7 +599,8 @@ void ENgcRC::RenderSurface() {
 }
 
 // Range: 0x802BB0F8 -> 0x802BB3B4
-void ENgcRC::QuadList(class ENgcRC * const this /* r17 */, int nVerts /* r18 */, const float * xyzs /* r23 */, const float * texcoords /* r19 */, const unsigned char * colors /* r20 */, const signed char * normals /* r21 */, unsigned char dualTexcoords /* r22 */) {
+// this: r17
+void ENgcRC::QuadList(int nVerts /* r18 */, const float * xyzs /* r23 */, const float * texcoords /* r19 */, const unsigned char * colors /* r20 */, const signed char * normals /* r21 */, unsigned char dualTexcoords /* r22 */) {
     // Local variables
     int xyzsSize; // r31
     int texcoordsSize; // r30
@@ -641,14 +660,16 @@ void ENgcRC::VertexMorphWeightsList() {
 }
 
 // Range: 0x802BB440 -> 0x802BB550
-void ENgcRC::VertexMorphAndSyncCache(class ENgcRC * const this /* r28 */, int nVerts /* r29 */, const signed short * xyzs /* r30 */, signed short * * morphDeltas /* r31 */) {
+// this: r28
+void ENgcRC::VertexMorphAndSyncCache(int nVerts /* r29 */, const signed short * xyzs /* r30 */, signed short * * morphDeltas /* r31 */) {
     // Local variables
     struct EDLEntryCommandU16andU32 * pCommand; // r0
     unsigned int * p32; // r0
 }
 
 // Range: 0x802BB550 -> 0x802BB5C4
-void ENgcRC::VertexMorphAndSyncCacheEnd(class ENgcRC * const this /* r31 */) {
+// this: r31
+void ENgcRC::VertexMorphAndSyncCacheEnd() {
     // Local variables
     struct EDLEntryCommandU32 * pCommand; // r0
 }

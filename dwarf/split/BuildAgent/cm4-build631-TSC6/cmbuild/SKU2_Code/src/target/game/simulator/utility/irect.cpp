@@ -8,7 +8,8 @@
 unsigned char IRect::IsContained() {}
 
 // Range: 0x80168590 -> 0x801686F4
-unsigned char IRect::Intersect(class IRect * const this /* r31 */, const class IRect * rect1 /* r29 */, const class IRect * rect2 /* r30 */) {
+// this: r31
+unsigned char IRect::Intersect(const class IRect * rect1 /* r29 */, const class IRect * rect2 /* r30 */) {
     // Local variables
     const class IRect * pTop; // r5
     const class IRect * pBottom; // r6

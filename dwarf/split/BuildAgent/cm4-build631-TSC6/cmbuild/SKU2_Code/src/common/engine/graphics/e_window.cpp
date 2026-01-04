@@ -5,20 +5,23 @@
     Code range: 0x802A1C0C -> 0x802A2BEC
 */
 // Range: 0x802A1C0C -> 0x802A1CB0
-void * EWindow::EWindow(class EWindow * const this /* r31 */) {
+// this: r31
+EWindow::EWindow() {
     // References
     // -> struct [anonymous] __vt__7EWindow;
 }
 
 // Range: 0x802A1CB0 -> 0x802A1D20
-void * EWindow::~EWindow(class EWindow * const this /* r31 */) {
+// this: r31
+EWindow::~EWindow() {
     // References
     // -> class E3DWindow * m_pCurrent3DWindow;
     // -> class EWindow * m_pCurrentWindow;
 }
 
 // Range: 0x802A1D20 -> 0x802A1DB8
-void EWindow::SetRenderSurface(class EWindow * const this /* r31 */) {
+// this: r31
+void EWindow::SetRenderSurface() {
     // Local variables
     class TRect rect; // r1+0x8
 
@@ -47,7 +50,8 @@ void EWindow::ScaleOutputRectForScreenshot() {
 }
 
 // Range: 0x802A1F58 -> 0x802A22B0
-void EWindow::Select(class EWindow * const this /* r30 */, class ERC * prc /* r31 */) {
+// this: r30
+void EWindow::Select(class ERC * prc /* r31 */) {
     // Local variables
     class TRect rOrigOut; // r1+0x58
     class TRect rOrigClipOutClamped; // r1+0x48
@@ -66,7 +70,8 @@ void EWindow::Select(class EWindow * const this /* r30 */, class ERC * prc /* r3
 }
 
 // Range: 0x802A22B0 -> 0x802A23D8
-void EWindow::CalcWindowMat(class EWindow * const this /* r31 */) {
+// this: r31
+void EWindow::CalcWindowMat() {
     // Local variables
     float inWidth; // f0
     float inHeight; // f0
@@ -81,10 +86,12 @@ void EWindow::CalcClip() {}
 void EWindow::SetClip() {}
 
 // Range: 0x802A2670 -> 0x802A2774
-void EWindow::SetInputCoordinates(class EWindow * const this /* r31 */) {}
+// this: r31
+void EWindow::SetInputCoordinates() {}
 
 // Range: 0x802A2774 -> 0x802A2968
-void EWindow::SetOutputCoordinates(class EWindow * const this /* r31 */) {}
+// this: r31
+void EWindow::SetOutputCoordinates() {}
 
 // Range: 0x802A2968 -> 0x802A2BEC
 static void __sinit_\engine_graphics_unity_cpp() {

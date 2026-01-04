@@ -8,19 +8,22 @@
 void WallPostCollection::Initialize() {}
 
 // Range: 0x80096D58 -> 0x80096DE4
-void WallPostCollection::Deallocate(class WallPostCollection * const this /* r28 */) {
+// this: r28
+void WallPostCollection::Deallocate() {
     // Local variables
     int i; // r29
 }
 
 // Range: 0x80096DE4 -> 0x80096E5C
-void WallPostCollection::Update(class WallPostCollection * const this /* r29 */) {
+// this: r29
+void WallPostCollection::Update() {
     // Local variables
     int i; // r30
 }
 
 // Range: 0x80096E5C -> 0x8009706C
-void WallPostCollection::SetPost(class WallPostCollection * const this /* r24 */, const class EVec3 & pos /* r25 */, enum PostHeight requestedHeight /* r26 */, enum PostStyle requestedStyle /* r27 */, class cXObject * obj /* r28 */) {
+// this: r24
+void WallPostCollection::SetPost(const class EVec3 & pos /* r25 */, enum PostHeight requestedHeight /* r26 */, enum PostStyle requestedStyle /* r27 */, class cXObject * obj /* r28 */) {
     // Local variables
     unsigned char x; // r30
     unsigned char y; // r29
@@ -45,7 +48,8 @@ void WallPostCollection::FindWallBounds(class cXObject * obj /* r29 */, class EB
 }
 
 // Range: 0x80097570 -> 0x800978B8
-void WallPostCollection::UpdateWallPosts(class WallPostCollection * const this /* r30 */, class cXObject * pDeletedObject /* r31 */) {
+// this: r30
+void WallPostCollection::UpdateWallPosts(class cXObject * pDeletedObject /* r31 */) {
     // Local variables
     class EIObjectMan * pObjMan; // r28
     class TNodeList allObjects; // r1+0x14
@@ -66,7 +70,8 @@ void WallPostCollection::UpdateWallPosts(class WallPostCollection * const this /
 }
 
 // Range: 0x800978B8 -> 0x80097954
-unsigned int WallPostInstance::VisibilityTest(class WallPostInstance * const this /* r30 */, class E3DWindow & win /* r31 */) {
+// this: r30
+unsigned int WallPostInstance::VisibilityTest(class E3DWindow & win /* r31 */) {
     // Local variables
     class EBound3 bPos; // r1+0x8
     int lotId; // r0

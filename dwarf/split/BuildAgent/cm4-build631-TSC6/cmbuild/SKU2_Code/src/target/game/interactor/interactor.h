@@ -8,20 +8,17 @@
 void WiiMoteToGridInteractor::ResetSelectedRowCol() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\target\game\interactor\interactor.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x800511D4 -> 0x80051418
-*/
 // Range: 0x800511D4 -> 0x80051214
-void * Interactor::~Interactor(class Interactor * const this /* r31 */) {}
+// this: r31
+Interactor::~Interactor() {}
 
 // Range: 0x80051214 -> 0x80051254
-void * InteractorParams::~InteractorParams(struct InteractorParams * const this /* r31 */) {}
+// this: r31
+InteractorParams::~InteractorParams() {}
 
 // Range: 0x80051264 -> 0x800512A4
-void * CallbackData::~CallbackData(struct CallbackData * const this /* r31 */) {}
+// this: r31
+CallbackData::~CallbackData() {}
 
 // Range: 0x800512A4 -> 0x800512C0
 void Interactor::NotifyClient() {}
@@ -57,7 +54,7 @@ class BluePrintGrid * Interactor::GetBluePrintGrid() {
 }
 
 // Range: 0x800513F8 -> 0x80051404
-void * OverlapData::OverlapData() {}
+OverlapData::OverlapData() {}
 
 // Range: 0x80051404 -> 0x80051408
 void Interactor::UpdateOverlapIntersection() {}
@@ -72,12 +69,6 @@ void Interactor::StopInObjectMenu() {}
 unsigned char Interactor::ChooseAction() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\target\game\interactor\interactor.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x8018E3D8 -> 0x8018E3F8
-*/
 // Range: 0x8018E3D8 -> 0x8018E3E0
 void WiiMoteToGridInteractor::SetSizeY() {}
 
@@ -91,12 +82,6 @@ void WiiMoteToGridInteractor::SetYOffset() {}
 void WiiMoteToGridInteractor::SetXOffset() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\target\game\interactor\interactor.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x801A8584 -> 0x801A85A8
-*/
 // Range: 0x801A8584 -> 0x801A858C
 void WiiMoteToMenuInteractor::SetSelectedItem() {}
 
@@ -107,12 +92,6 @@ void CursorMovementTracker::SetCutoffs() {}
 void WiiMoteToGridInteractor::SetSelectFunction() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\target\game\interactor\interactor.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x801C9324 -> 0x801C933C
-*/
 // Range: 0x801C9324 -> 0x801C933C
 void WiiMoteToMenuInteractor::ResetBoundingBox() {}
 

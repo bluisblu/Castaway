@@ -5,7 +5,8 @@
     Code range: 0x80028EC0 -> 0x800292D8
 */
 // Range: 0x80028EC0 -> 0x80029170
-void IKDataBoar::ComputeIK(class IKDataBoar * const this /* r29 */, class EAnimController * pAC /* r30 */) {
+// this: r29
+void IKDataBoar::ComputeIK(class EAnimController * pAC /* r30 */) {
     // Local variables
     class EVec3 targetFromRoot; // r1+0x70
     class EVec3 targetDiff; // r1+0x64
@@ -32,7 +33,8 @@ void IKDataBoar::ComputeIK(class IKDataBoar * const this /* r29 */, class EAnimC
 }
 
 // Range: 0x80029170 -> 0x800292D8
-void IKDataBoar::ComputeIKBoneOrient(class IKDataBoar * const this /* r28 */, class EAnimController * pAC /* r29 */, class EQuat & rootQ /* r30 */, class EQuat & midQ /* r31 */) {
+// this: r28
+void IKDataBoar::ComputeIKBoneOrient(class EAnimController * pAC /* r29 */, class EQuat & rootQ /* r30 */, class EQuat & midQ /* r31 */) {
     // Local variables
     class EMat4 parentOrient; // r1+0x208
     class EMat4 parentOrientInv; // r1+0x1C8

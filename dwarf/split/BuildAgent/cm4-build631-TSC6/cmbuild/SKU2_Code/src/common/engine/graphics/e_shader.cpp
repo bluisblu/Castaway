@@ -5,23 +5,27 @@
     Code range: 0x8029A9FC -> 0x8029B248
 */
 // Range: 0x8029A9FC -> 0x8029AAB0
-void * EShader::EShader(class EShader * const this /* r30 */) {
+// this: r30
+EShader::EShader() {
     // References
     // -> struct [anonymous] __vt__7EShader;
 }
 
 // Range: 0x8029AAB0 -> 0x8029AB38
-void * EShader::~EShader(class EShader * const this /* r30 */) {
+// this: r30
+EShader::~EShader() {
     // References
     // -> class EShaderManager _shaderman;
     // -> struct [anonymous] __vt__7EShader;
 }
 
 // Range: 0x8029AB38 -> 0x8029ABEC
-unsigned char EShader::Create(class EShader * const this /* r31 */) {}
+// this: r31
+unsigned char EShader::Create() {}
 
 // Range: 0x8029ABEC -> 0x8029AC5C
-class EShader * EShader::Clone(class EShader * const this /* r31 */) {
+// this: r31
+class EShader * EShader::Clone() {
     // Local variables
     class EShader * pClone; // r0
 
@@ -30,7 +34,8 @@ class EShader * EShader::Clone(class EShader * const this /* r31 */) {
 }
 
 // Range: 0x8029AC5C -> 0x8029AD68
-void EShader::AddToUpdateList(class EShader * const this /* r31 */) {
+// this: r31
+void EShader::AddToUpdateList() {
     // References
     // -> class TLinkedList m_updateList;
     // -> class EMutex m_updateListMutex;
@@ -38,7 +43,8 @@ void EShader::AddToUpdateList(class EShader * const this /* r31 */) {
 }
 
 // Range: 0x8029AD68 -> 0x8029AE38
-void EShader::RemoveFromUpdateList(class EShader * const this /* r31 */) {
+// this: r31
+void EShader::RemoveFromUpdateList() {
     // References
     // -> class EShaderManager _shaderman;
     // -> class TLinkedList m_updateList;
@@ -68,7 +74,8 @@ void EShader::ChangeMaterial() {}
 class ETexture * EShader::GetTexture() {}
 
 // Range: 0x8029B118 -> 0x8029B1F8
-void EShader::Validate(class EShader * const this /* r28 */) {
+// this: r28
+void EShader::Validate() {
     // Local variables
     int textureCount; // r30
     int i; // r29

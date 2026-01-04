@@ -5,7 +5,7 @@
     Code range: 0x80109EE8 -> 0x8010A01C
 */
 // Range: 0x80109EE8 -> 0x80109F1C
-void * Commander::Commander() {
+Commander::Commander() {
     // References
     // -> int sId;
     // -> class Commander * sList;
@@ -13,7 +13,8 @@ void * Commander::Commander() {
 }
 
 // Range: 0x80109F1C -> 0x80109F8C
-void * Commander::~Commander(class Commander * const this /* r31 */) {
+// this: r31
+Commander::~Commander() {
     // Local variables
     class Commander * * remove; // r6
 

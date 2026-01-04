@@ -5,7 +5,7 @@
     Code range: 0x802254A0 -> 0x80225540
 */
 // Range: 0x802254A0 -> 0x802254D4
-void ESpriteRender::__dl(void * p /* r31 */) {}
+void ESpriteRender::operator delete(void * p /* r31 */) {}
 
 // Range: 0x802254D4 -> 0x802254DC
 void ESpriteRender::SetSkillmeterValue() {}
@@ -23,7 +23,7 @@ unsigned char ESpriteRender::GetMarked() {}
 void ESpriteRender::MarkAsNew() {}
 
 // Range: 0x80225500 -> 0x80225534
-void * ESpriteRender::__nw() {}
+void * ESpriteRender::operator new() {}
 
 // Range: 0x80225534 -> 0x80225540
 void ESpriteRender::Mark() {}

@@ -5,13 +5,15 @@
     Code range: 0x802DD4C4 -> 0x802E0914
 */
 // Range: 0x802DD4C4 -> 0x802DD564
-void * ERFont::ERFont(class ERFont * const this /* r30 */) {
+// this: r30
+ERFont::ERFont() {
     // References
     // -> struct [anonymous] __vt__6ERFont;
 }
 
 // Range: 0x802DD564 -> 0x802DD5FC
-void * ERFont::~ERFont(class ERFont * const this /* r30 */) {
+// this: r30
+ERFont::~ERFont() {
     // References
     // -> struct [anonymous] __vt__9EResource;
     // -> struct [anonymous] __vt__6ERFont;
@@ -25,14 +27,16 @@ void ERFont::Deallocate() {
 }
 
 // Range: 0x802DD648 -> 0x802DD764
-void ERFont::Load(class ERFont * const this /* r29 */, class EFile & s /* r30 */) {
+// this: r29
+void ERFont::Load(class EFile & s /* r30 */) {
     // Local variables
     class EDataHeader resourceHeader; // r1+0xC
     class EString name; // r1+0x8
 }
 
 // Range: 0x802DD764 -> 0x802DD92C
-void ERFont::SetSize(class ERFont * const this /* r28 */, float ySize /* f30 */, float aspect /* f31 */) {
+// this: r28
+void ERFont::SetSize(float ySize /* f30 */, float aspect /* f31 */) {
     // Local variables
     float closestDist; // f26
     class EFontSize * pClosest; // r30
@@ -45,7 +49,8 @@ void ERFont::SetSize(class ERFont * const this /* r28 */, float ySize /* f30 */,
 }
 
 // Range: 0x802DD92C -> 0x802DE970
-void ERFont::DoDraw(class ERFont * const this /* r22 */, void * szString /* r23 */, unsigned char doubleByte /* r14 */, unsigned char snapToPixelX /* f3 */, unsigned char snapToPixelY /* f4 */, const class EVec2 & vPos /* r17 */, class ERC * prc /* r24 */, class EVec2 * pvBotRightPosOut /* f7 */, class EMat4 * mat /* r25 */, class EVec2 * pivot /* r15 */, enum EFontMatrixType matType /* f10 */, union fontFXcommand * fxData /* r26 */) {
+// this: r22
+void ERFont::DoDraw(void * szString /* r23 */, unsigned char doubleByte /* r14 */, unsigned char snapToPixelX /* f3 */, unsigned char snapToPixelY /* f4 */, const class EVec2 & vPos /* r17 */, class ERC * prc /* r24 */, class EVec2 * pvBotRightPosOut /* f7 */, class EMat4 * mat /* r25 */, class EVec2 * pivot /* r15 */, enum EFontMatrixType matType /* f10 */, union fontFXcommand * fxData /* r26 */) {
     // Local variables
     class EMat4 tmpMat; // r1+0x190
     union fontFXcommand tmpFXdata; // r1+0x1C
@@ -104,7 +109,8 @@ void ERFont::DoDraw(class ERFont * const this /* r22 */, void * szString /* r23 
 }
 
 // Range: 0x802DE970 -> 0x802DF80C
-void ERFont::DoDrawNormalize(class ERFont * const this /* r15 */, void * szString /* r16 */, unsigned char doubleByte /* r17 */, unsigned char snapToPixelX /* f3 */, unsigned char snapToPixelY /* f4 */, const class EVec2 & vPos /* r23 */, class ERC * prc /* r18 */, class EVec2 * pvBotRightPosOut /* f7 */, class EWindow * pWin /* r22 */, class EMat4 * mat /* r19 */, class EVec2 * pivot /* r14 */, enum EFontMatrixType matType /* r20 */, union fontFXcommand * fxData /* r21 */) {
+// this: r15
+void ERFont::DoDrawNormalize(void * szString /* r16 */, unsigned char doubleByte /* r17 */, unsigned char snapToPixelX /* f3 */, unsigned char snapToPixelY /* f4 */, const class EVec2 & vPos /* r23 */, class ERC * prc /* r18 */, class EVec2 * pvBotRightPosOut /* f7 */, class EWindow * pWin /* r22 */, class EMat4 * mat /* r19 */, class EVec2 * pivot /* r14 */, enum EFontMatrixType matType /* r20 */, union fontFXcommand * fxData /* r21 */) {
     // Local variables
     class EMat4 tmpMat; // r1+0xB8
     union fontFXcommand tmpFXdata; // r1+0x1C
@@ -191,7 +197,8 @@ void ERFont::SnapPosToPixelNormalize() {
 }
 
 // Range: 0x802DF9F4 -> 0x802DFDD4
-void ERFont::DoDrawAlign(class ERFont * const this /* r18 */, class ERC * prc /* r19 */, void * szString /* r20 */, unsigned char doubleByte /* r21 */, class EVec2 & vPos /* r22 */, enum EFontAlignX xAlign /* r23 */, enum EFontAlignY yAlign /* r24 */, class EVec2 * pvBotRightPosOut /* r25 */, class EMat4 * mat /* r26 */, enum EFontMatrixType matType /* r27 */, union fontFXcommand * fxData /* r28 */, unsigned char posNormalized /* r29 */) {
+// this: r18
+void ERFont::DoDrawAlign(class ERC * prc /* r19 */, void * szString /* r20 */, unsigned char doubleByte /* r21 */, class EVec2 & vPos /* r22 */, enum EFontAlignX xAlign /* r23 */, enum EFontAlignY yAlign /* r24 */, class EVec2 * pvBotRightPosOut /* r25 */, class EMat4 * mat /* r26 */, enum EFontMatrixType matType /* r27 */, union fontFXcommand * fxData /* r28 */, unsigned char posNormalized /* r29 */) {
     // Local variables
     class EVec2 vSize; // r1+0x50
     unsigned char snapPosX; // r31
@@ -208,7 +215,8 @@ void ERFont::Draw(enum EFontAlignY yAlign /* r28 */, class EVec2 * pvBotRightPos
 }
 
 // Range: 0x802DFF18 -> 0x802E0118
-void ERFont::DrawDs(class ERFont * const this /* r24 */, class ERC * prc /* r25 */, const unsigned short * szString /* r26 */, const class EVec2 & vPos /* r27 */, enum EFontAlignX xAlign /* r28 */, enum EFontAlignY yAlign /* r29 */, class EVec2 * pvBotRightPosOut /* r30 */, float fDropShadowSize /* f9 */, unsigned char posNormalized /* r31 */) {
+// this: r24
+void ERFont::DrawDs(class ERC * prc /* r25 */, const unsigned short * szString /* r26 */, const class EVec2 & vPos /* r27 */, enum EFontAlignX xAlign /* r28 */, enum EFontAlignY yAlign /* r29 */, class EVec2 * pvBotRightPosOut /* r30 */, float fDropShadowSize /* f9 */, unsigned char posNormalized /* r31 */) {
     // Local variables
     class EVec2 v; // r1+0x30
     class EVec4 c; // r1+0x48
@@ -218,7 +226,8 @@ void ERFont::DrawDs(class ERFont * const this /* r24 */, class ERC * prc /* r25 
 }
 
 // Range: 0x802E0118 -> 0x802E019C
-void ERFont::LoadFont(class ERFont * const this /* r27 */) {
+// this: r27
+void ERFont::LoadFont() {
     // Local variables
     int cp; // r29
     class EFontPage * pPage; // r28
@@ -228,13 +237,15 @@ void ERFont::LoadFont(class ERFont * const this /* r27 */) {
 }
 
 // Range: 0x802E019C -> 0x802E0228
-void ERFont::Select(class ERFont * const this /* r27 */) {
+// this: r27
+void ERFont::Select() {
     // References
     // -> class EShaderManager _shaderman;
 }
 
 // Range: 0x802E0228 -> 0x802E0358
-float ERFont::GetLineSpacing(class ERFont * const this /* r31 */) {
+// this: r31
+float ERFont::GetLineSpacing() {
     // Local variables
     class EVec2 vSize; // r1+0x30
     float height; // f3

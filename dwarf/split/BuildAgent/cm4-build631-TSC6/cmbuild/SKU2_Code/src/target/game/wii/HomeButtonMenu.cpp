@@ -5,13 +5,15 @@
     Code range: 0x80246654 -> 0x80246ED4
 */
 // Range: 0x80246654 -> 0x80246660
-void * PetsHomeButton::PetsHomeButton() {}
+PetsHomeButton::PetsHomeButton() {}
 
 // Range: 0x80246660 -> 0x802466C0
-void * PetsHomeButton::~PetsHomeButton(class PetsHomeButton * const this /* r30 */) {}
+// this: r30
+PetsHomeButton::~PetsHomeButton() {}
 
 // Range: 0x802466C0 -> 0x80246754
-unsigned char PetsHomeButton::Init(class PetsHomeButton * const this /* r31 */) {
+// this: r31
+unsigned char PetsHomeButton::Init() {
     // Local variables
     struct TRCWiiInit initParams; // r1+0x8
 }
@@ -27,7 +29,8 @@ void PauseAllSounds() {
 }
 
 // Range: 0x802468C0 -> 0x80246984
-void PetsHomeButton::UpdateDraw(class PetsHomeButton * const this /* r30 */, unsigned char bHomeButtonPressed /* r31 */) {
+// this: r30
+void PetsHomeButton::UpdateDraw(unsigned char bHomeButtonPressed /* r31 */) {
     // Local variables
     unsigned char bBanIconActive; // r0
 
@@ -37,7 +40,8 @@ void PetsHomeButton::UpdateDraw(class PetsHomeButton * const this /* r30 */, uns
 }
 
 // Range: 0x80246984 -> 0x80246B80
-void PetsHomeButton::PostFrameUpdate(class PetsHomeButton * const this /* r27 */, unsigned char bHomeButtonPressed /* r28 */) {
+// this: r27
+void PetsHomeButton::PostFrameUpdate(unsigned char bHomeButtonPressed /* r28 */) {
     // Local variables
     enum _VITimeToDIM oldDimTime; // r29
     int numOfFullScenePasses; // r0

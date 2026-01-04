@@ -5,7 +5,7 @@
     Code range: 0x8023B8E4 -> 0x8023B8F4
 */
 // Range: 0x8023B8E4 -> 0x8023B8F4
-void * IBaseSimInstance::IBaseSimInstance() {
+IBaseSimInstance::IBaseSimInstance() {
     // References
     // -> struct [anonymous] __vt__16IBaseSimInstance;
 }

@@ -5,16 +5,19 @@
     Code range: 0x80240270 -> 0x802408F0
 */
 // Range: 0x80240270 -> 0x80240304
-void * PlumbBobModel::PlumbBobModel(class PlumbBobModel * const this /* r31 */) {
+// this: r31
+PlumbBobModel::PlumbBobModel() {
     // References
     // -> class PlumbBobParms s_plumbBobParms;
 }
 
 // Range: 0x80240304 -> 0x80240384
-void * PlumbBobModel::~PlumbBobModel(class PlumbBobModel * const this /* r30 */) {}
+// this: r30
+PlumbBobModel::~PlumbBobModel() {}
 
 // Range: 0x80240384 -> 0x80240424
-unsigned int PlumbBobModel::SetModel(class PlumbBobModel * const this /* r29 */, unsigned int resId /* r30 */) {
+// this: r29
+unsigned int PlumbBobModel::SetModel(unsigned int resId /* r30 */) {
     // Local variables
     unsigned int nOldID; // r31
 
@@ -23,7 +26,8 @@ unsigned int PlumbBobModel::SetModel(class PlumbBobModel * const this /* r29 */,
 }
 
 // Range: 0x80240424 -> 0x802404C4
-unsigned int PlumbBobModel::SetShadow(class PlumbBobModel * const this /* r29 */, unsigned int resId /* r30 */) {
+// this: r29
+unsigned int PlumbBobModel::SetShadow(unsigned int resId /* r30 */) {
     // Local variables
     unsigned int nOldID; // r31
 
@@ -32,13 +36,15 @@ unsigned int PlumbBobModel::SetShadow(class PlumbBobModel * const this /* r29 */
 }
 
 // Range: 0x802404C4 -> 0x8024057C
-void PlumbBobModel::DrawShadow(class PlumbBobModel * const this /* r30 */, class ERC * prc /* r31 */) {
+// this: r30
+void PlumbBobModel::DrawShadow(class ERC * prc /* r31 */) {
     // Local variables
     class EMat4 mat; // r1+0x8
 }
 
 // Range: 0x8024057C -> 0x802407C0
-void PlumbBobModel::Update(class PlumbBobModel * const this /* r31 */) {
+// this: r31
+void PlumbBobModel::Update() {
     // Local variables
     float mu; // f1
     float additionalScale; // f30
@@ -51,10 +57,12 @@ void PlumbBobModel::Update(class PlumbBobModel * const this /* r31 */) {
 }
 
 // Range: 0x802407C0 -> 0x80240818
-void PlumbBobModel::Draw(class PlumbBobModel * const this /* r30 */, class ERC * prc /* r31 */) {}
+// this: r30
+void PlumbBobModel::Draw(class ERC * prc /* r31 */) {}
 
 // Range: 0x80240818 -> 0x802408F0
-void PlumbBobModel::GetExtents(const class PlumbBobModel * const this /* r29 */, class EVec2 & extents /* r30 */) {
+// this: r29
+void PlumbBobModel::GetExtents(class EVec2 & extents /* r30 */) const {
     // Local variables
     class EBound3 & bound; // r31
     float halfHeight; // f3

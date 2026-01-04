@@ -5,10 +5,12 @@
     Code range: 0x80170D50 -> 0x80170E58
 */
 // Range: 0x80170D50 -> 0x80170D90
-void * UIObjectBase::~UIObjectBase(class UIObjectBase * const this /* r31 */) {}
+// this: r31
+UIObjectBase::~UIObjectBase() {}
 
 // Range: 0x80170D90 -> 0x80170E3C
-void * UIObjectBase::UIObjectBase(class UIObjectBase * const this /* r30 */) {
+// this: r30
+UIObjectBase::UIObjectBase() {
     // References
     // -> struct [anonymous] __vt__12UIObjectBase;
 }
@@ -29,45 +31,40 @@ void UIObjectBase::Update() {}
 void UIObjectBase::Draw() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\target\game\ui\core\uibase.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x80181F54 -> 0x80182190
-*/
 // Range: 0x80181F54 -> 0x80181F78
-unsigned char UIObjectBase::InstallSetVariableCommand(class UIObjectBase * const this /* r5 */) {}
+// this: r5
+unsigned char UIObjectBase::InstallSetVariableCommand() {}
 
 // Range: 0x80181F78 -> 0x80181F9C
-unsigned char UIObjectBase::InstallGetVariableCommand(class UIObjectBase * const this /* r5 */) {}
+// this: r5
+unsigned char UIObjectBase::InstallGetVariableCommand() {}
 
 // Range: 0x80181F9C -> 0x80182014
-void UIObjectBase::UIObjectBaseInit(class UIObjectBase * const this /* r31 */) {}
+// this: r31
+void UIObjectBase::UIObjectBaseInit() {}
 
 // Range: 0x80182014 -> 0x801820F4
-void UIObjectBase::UIObjectBaseClean(class UIObjectBase * const this /* r31 */) {}
+// this: r31
+void UIObjectBase::UIObjectBaseClean() {}
 
 // Range: 0x801820F4 -> 0x80182160
-unsigned char UIObjectBase::InstallUpdate(class UIObjectBase * const this /* r30 */, enum UpdateTablePriority priority /* r31 */) {}
+// this: r30
+unsigned char UIObjectBase::InstallUpdate(enum UpdateTablePriority priority /* r31 */) {}
 
 // Range: 0x80182160 -> 0x80182190
 unsigned char UIObjectBase::Install2DObject() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\target\game\ui\core\uibase.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x8018CC0C -> 0x8018CD18
-*/
 // Range: 0x8018CC0C -> 0x8018CC38
 unsigned char UIObjectBase::InstallAudio() {}
 
 // Range: 0x8018CC38 -> 0x8018CC5C
-unsigned char UIObjectBase::InstallGetLocalizableCommand(class UIObjectBase * const this /* r5 */) {}
+// this: r5
+unsigned char UIObjectBase::InstallGetLocalizableCommand() {}
 
 // Range: 0x8018CC5C -> 0x8018CCC0
-unsigned char UIObjectBase::ReadControllerCursorPosition(class UIObjectBase * const this /* r30 */, class EControllerManager * pCtrlMan /* r31 */) {
+// this: r30
+unsigned char UIObjectBase::ReadControllerCursorPosition(class EControllerManager * pCtrlMan /* r31 */) {
     // Local variables
     class EController * pCtrl; // r0
 
@@ -82,17 +79,13 @@ unsigned char UIObjectBase::varcmp() {}
 unsigned char UIObjectBase::Install2DObject() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\target\game\ui\core\uibase.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x8019C1C4 -> 0x8019C324
-*/
 // Range: 0x8019C1C4 -> 0x8019C230
-unsigned char UIObjectBase::InstallDraw(class UIObjectBase * const this /* r30 */, enum DrawTablePriority priority /* r31 */) {}
+// this: r30
+unsigned char UIObjectBase::InstallDraw(enum DrawTablePriority priority /* r31 */) {}
 
 // Range: 0x8019C230 -> 0x8019C288
-unsigned char UIObjectBase::UnInstallUpdate(class UIObjectBase * const this /* r31 */) {}
+// this: r31
+unsigned char UIObjectBase::UnInstallUpdate() {}
 
 // Range: 0x8019C288 -> 0x8019C2A4
 unsigned char UIObjectBase::UnInstallSetVariableCommand() {}
@@ -113,12 +106,6 @@ unsigned char UIObjectBase::UnInstall2DObject() {}
 unsigned char UIObjectBase::Install3DObject() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\target\game\ui\core\uibase.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x801C4A68 -> 0x801C4A8C
-*/
 // Range: 0x801C4A68 -> 0x801C4A8C
 unsigned char UIObjectBase::UnInstallAudio() {}
 

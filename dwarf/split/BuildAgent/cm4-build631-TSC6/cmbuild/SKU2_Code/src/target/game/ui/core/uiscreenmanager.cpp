@@ -5,7 +5,8 @@
     Code range: 0x801848C8 -> 0x801858F0
 */
 // Range: 0x801848C8 -> 0x80184AF8
-void * UIScreenManager::UIScreenManager(class UIScreenManager * const this /* r28 */) {
+// this: r28
+UIScreenManager::UIScreenManager() {
     // Local variables
     int i; // r0
 
@@ -14,7 +15,8 @@ void * UIScreenManager::UIScreenManager(class UIScreenManager * const this /* r2
 }
 
 // Range: 0x80184AF8 -> 0x80184B64
-void * UIScreenManager::~UIScreenManager(class UIScreenManager * const this /* r30 */) {
+// this: r30
+UIScreenManager::~UIScreenManager() {
     // References
     // -> struct [anonymous] __vt__15UIScreenManager;
 }
@@ -29,7 +31,8 @@ struct UIScreenData * UIScreenManager::FindDataByID() {
 }
 
 // Range: 0x80184B9C -> 0x80184EC0
-unsigned char UIScreenManager::LoadUIScreen(class UIScreenManager * const this /* r29 */, enum UIScreenID id /* r30 */) {
+// this: r29
+unsigned char UIScreenManager::LoadUIScreen(enum UIScreenID id /* r30 */) {
     // Local variables
     unsigned char rc; // r28
     int groupSuspended; // r26
@@ -52,7 +55,8 @@ unsigned char UIScreenManager::LoadUIScreen(class UIScreenManager * const this /
 }
 
 // Range: 0x80184EC0 -> 0x80185064
-unsigned char UIScreenManager::UnloadUIScreen(class UIScreenManager * const this /* r30 */, enum UIScreenID id /* r31 */) {
+// this: r30
+unsigned char UIScreenManager::UnloadUIScreen(enum UIScreenID id /* r31 */) {
     // Local variables
     unsigned char bUnloadFailed; // r24
     int i; // r0
@@ -72,7 +76,8 @@ unsigned char UIScreenManager::IsScreenManaged() {
 }
 
 // Range: 0x801850A0 -> 0x80185150
-int UIScreenManager::SuspendAllActiveScreens(class UIScreenManager * const this /* r27 */) {
+// this: r27
+int UIScreenManager::SuspendAllActiveScreens() {
     // Local variables
     int rg; // r3
     int i; // r28
@@ -84,7 +89,8 @@ int UIScreenManager::SuspendAllActiveScreens(class UIScreenManager * const this 
 }
 
 // Range: 0x80185150 -> 0x801851B0
-unsigned char UIScreenManager::ScreenHasFocus(class UIScreenManager * const this /* r30 */) {
+// this: r30
+unsigned char UIScreenManager::ScreenHasFocus() {
     // Local variables
     unsigned char rc; // r31
     int i; // r0
@@ -98,7 +104,8 @@ void UIScreenManager::FixCurrentFocusNumber() {
 }
 
 // Range: 0x801852CC -> 0x801853D4
-int UIScreenManager::SuspendScreenList(class UIScreenManager * const this /* r25 */, const enum UIScreenID * screenlist /* r26 */) {
+// this: r25
+int UIScreenManager::SuspendScreenList(const enum UIScreenID * screenlist /* r26 */) {
     // Local variables
     int rg; // r3
     int i; // r27
@@ -143,7 +150,8 @@ unsigned char UIScreenManager::IsUIScreenUnloaded() {
 }
 
 // Range: 0x8018559C -> 0x80185600
-unsigned char UIScreenManager::IsUIScreenMarkedForUnloading(class UIScreenManager * const this /* r30 */) {
+// this: r30
+unsigned char UIScreenManager::IsUIScreenMarkedForUnloading() {
     // Local variables
     unsigned char rc; // r31
     int i; // r0
@@ -161,7 +169,8 @@ unsigned char UIScreenManager::SetHandlesInput(unsigned char value /* r31 */) {
 }
 
 // Range: 0x801856D4 -> 0x801857D0
-void UIScreenManager::SetVariable(class UIScreenManager * const this /* r25 */, const char * szParams /* r26 */) {
+// this: r25
+void UIScreenManager::SetVariable(const char * szParams /* r26 */) {
     // Local variables
     struct UIScreenData * pData; // r0
     unsigned char found; // r28
@@ -176,7 +185,8 @@ void UIScreenManager::SetVariable(class UIScreenManager * const this /* r25 */, 
 }
 
 // Range: 0x801857D0 -> 0x80185860
-void UIScreenManager::Update(class UIScreenManager * const this /* r29 */) {
+// this: r29
+void UIScreenManager::Update() {
     // Local variables
     int i; // r30
 }

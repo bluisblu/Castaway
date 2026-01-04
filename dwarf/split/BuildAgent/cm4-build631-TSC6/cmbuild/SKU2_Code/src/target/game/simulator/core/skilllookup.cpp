@@ -21,7 +21,8 @@ void InitSkillLookup() {
 }
 
 // Range: 0x800E0314 -> 0x800E0408
-void * GlobalSkillTables::GlobalSkillTables(class GlobalSkillTables * const this /* r29 */) {
+// this: r29
+GlobalSkillTables::GlobalSkillTables() {
     // Local variables
     int i; // r31
 }

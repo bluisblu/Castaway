@@ -5,10 +5,12 @@
     Code range: 0x800DAC50 -> 0x800DD0F0
 */
 // Range: 0x800DAC50 -> 0x800DACA8
-void * PenaltyRect::PenaltyRect(class PenaltyRect * const this /* r29 */, class IRect * r /* r30 */, int penalty /* r31 */) {}
+// this: r29
+PenaltyRect::PenaltyRect(class IRect * r /* r30 */, int penalty /* r31 */) {}
 
 // Range: 0x800DACA8 -> 0x800DAD08
-void * PenaltyRect::PenaltyRect(class PenaltyRect * const this /* r26 */, int l /* r27 */, int t /* r28 */, int r /* r29 */, int b /* r30 */, int penalty /* r31 */) {}
+// this: r26
+PenaltyRect::PenaltyRect(int l /* r27 */, int t /* r28 */, int r /* r29 */, int b /* r30 */, int penalty /* r31 */) {}
 
 // Range: 0x800DAD08 -> 0x800DADD4
 int FindIntersectingRect(const class IRect * r /* r29 */, const class vector * partition /* r30 */) {
@@ -17,35 +19,41 @@ int FindIntersectingRect(const class IRect * r /* r29 */, const class vector * p
 }
 
 // Range: 0x800DADD4 -> 0x800DAE70
-void SpacePartition::FindInterfaceRect(class SpacePartition * const this /* r28 */, int n2 /* r29 */, class IRect * outRect /* r30 */) {
+// this: r28
+void SpacePartition::FindInterfaceRect(int n2 /* r29 */, class IRect * outRect /* r30 */) {
     // Local variables
     class ASTNode * node1; // r31
     class ASTNode * node2; // r5
 }
 
 // Range: 0x800DAE70 -> 0x800DAF1C
-void SpacePartition::FindInterfaceRect(class SpacePartition * const this /* r29 */, const class ASTNode * n2 /* r30 */, class IRect * outRect /* r31 */) {
+// this: r29
+void SpacePartition::FindInterfaceRect(const class ASTNode * n2 /* r30 */, class IRect * outRect /* r31 */) {
     // Local variables
     class IRect tem; // r1+0x8
 }
 
 // Range: 0x800DAF1C -> 0x800DAFCC
-class IPoint SpacePartition::FindInterfacePoint(class IPoint * i /* r28 */, class SpacePartition * const this /* r29 */, const class ASTNode * n1 /* r30 */, const class ASTNode * n2 /* r31 */) {
+// this: r28
+class IPoint SpacePartition::FindInterfacePoint(class SpacePartition * const this /* r29 */, const class ASTNode * n1 /* r30 */, const class ASTNode * n2 /* r31 */) {
     // Local variables
     class IRect tem; // r1+0x8
 }
 
 // Range: 0x800DAFCC -> 0x800DB04C
-void * SpacePartition::SpacePartition(class SpacePartition * const this /* r30 */) {}
+// this: r30
+SpacePartition::SpacePartition() {}
 
 // Range: 0x800DB04C -> 0x800DB118
-int SpacePartition::GetIntersectingFreeRect(class SpacePartition * const this /* r29 */, const class IRect * r /* r30 */) {
+// this: r29
+int SpacePartition::GetIntersectingFreeRect(const class IRect * r /* r30 */) {
     // Local variables
     const class PenaltyRect * i; // r31
 }
 
 // Range: 0x800DB118 -> 0x800DB290
-class PenaltyRect * SpacePartition::GetIntersectingPartitionRect(class SpacePartition * const this /* r29 */, const class IRect * r /* r30 */) {
+// this: r29
+class PenaltyRect * SpacePartition::GetIntersectingPartitionRect(const class IRect * r /* r30 */) {
     // Local variables
     class PenaltyRect * final_rect; // r0
     const class PenaltyRect * found; // r31
@@ -56,10 +64,12 @@ class PenaltyRect * SpacePartition::GetIntersectingPartitionRect(class SpacePart
 }
 
 // Range: 0x800DB290 -> 0x800DB2F0
-class ASTNode * SpacePartition::GetNode(class SpacePartition * const this /* r30 */, int n /* r31 */) {}
+// this: r30
+class ASTNode * SpacePartition::GetNode(int n /* r31 */) {}
 
 // Range: 0x800DB2F0 -> 0x800DB42C
-float SpacePartition::EstimateDistanceToGoal(class SpacePartition * const this /* r30 */) {
+// this: r30
+float SpacePartition::EstimateDistanceToGoal() {
     // Local variables
     class ASTNode * node; // r0
     const class IRect * goalRect; // r0
@@ -68,7 +78,8 @@ float SpacePartition::EstimateDistanceToGoal(class SpacePartition * const this /
 }
 
 // Range: 0x800DB42C -> 0x800DB5EC
-float SpacePartition::MeasureDistance(class SpacePartition * const this /* r26 */, int parent /* r27 */, int child /* r28 */, class IPoint * foundEntryPoint /* r29 */) {
+// this: r26
+float SpacePartition::MeasureDistance(int parent /* r27 */, int child /* r28 */, class IPoint * foundEntryPoint /* r29 */) {
     // Local variables
     class ASTNode * n; // r30
     class ASTNode * s; // r31
@@ -82,7 +93,8 @@ float SpacePartition::MeasureDistance(class SpacePartition * const this /* r26 *
 void SpacePartition::GetTerminals() {}
 
 // Range: 0x800DB614 -> 0x800DB7BC
-int SpacePartition::CountSuccessors(class SpacePartition * const this /* r31 */, int n /* r29 */) {
+// this: r31
+int SpacePartition::CountSuccessors(int n /* r29 */) {
     // Local variables
     class ASTNode * node; // r30
     const int * i; // r29
@@ -91,7 +103,8 @@ int SpacePartition::CountSuccessors(class SpacePartition * const this /* r31 */,
 }
 
 // Range: 0x800DB7BC -> 0x800DB858
-int SpacePartition::GetNthSuccessor(class SpacePartition * const this /* r29 */, int n /* r30 */, int succIndex /* r31 */) {
+// this: r29
+int SpacePartition::GetNthSuccessor(int n /* r30 */, int succIndex /* r31 */) {
     // Local variables
     int numSucc; // r0
     class ASTNode * node; // r0
@@ -99,10 +112,12 @@ int SpacePartition::GetNthSuccessor(class SpacePartition * const this /* r29 */,
 }
 
 // Range: 0x800DB858 -> 0x800DB8A8
-void SpacePartition::Clear(class SpacePartition * const this /* r31 */) {}
+// this: r31
+void SpacePartition::Clear() {}
 
 // Range: 0x800DB8A8 -> 0x800DB9CC
-void SpacePartition::Deallocate(class SpacePartition * const this /* r30 */) {
+// this: r30
+void SpacePartition::Deallocate() {
     // Local variables
     class vector temp; // r1+0x60
     class vector temp; // r1+0x50
@@ -115,7 +130,8 @@ void SpacePartition::Deallocate(class SpacePartition * const this /* r30 */) {
 static unsigned char IsRectInside() {}
 
 // Range: 0x800DBA2C -> 0x800DBECC
-unsigned char SpacePartition::ExpandRect(class SpacePartition * const this /* r21 */, class PenaltyRect * prect /* r22 */) {
+// this: r21
+unsigned char SpacePartition::ExpandRect(class PenaltyRect * prect /* r22 */) {
     // Local variables
     int expCnt; // r28
     int empCnt; // r27
@@ -136,7 +152,8 @@ unsigned char SpacePartition::ExpandRect(class SpacePartition * const this /* r2
 }
 
 // Range: 0x800DBECC -> 0x800DC308
-void SpacePartition::BuildSpatialSuccessorList(class SpacePartition * const this /* r25 */, int parent /* r26 */) {
+// this: r25
+void SpacePartition::BuildSpatialSuccessorList(int parent /* r26 */) {
     // Local variables
     class ASTNodeRefList & succTab; // r29
     int curEdge; // r28
@@ -153,7 +170,8 @@ void SpacePartition::BuildSpatialSuccessorList(class SpacePartition * const this
 }
 
 // Range: 0x800DC308 -> 0x800DC3FC
-unsigned char Path::InitAST(class Path * const this /* r29 */) {
+// this: r29
+unsigned char Path::InitAST() {
     // Local variables
     class ASTNode * start; // r0
 
@@ -162,7 +180,8 @@ unsigned char Path::InitAST(class Path * const this /* r29 */) {
 }
 
 // Range: 0x800DC3FC -> 0x800DC7AC
-unsigned char Path::OpenANode(class Path * const this /* r31 */) {
+// this: r31
+unsigned char Path::OpenANode() {
     // Local variables
     class ASTNode * cur; // r0
     int ct; // r30
@@ -205,7 +224,8 @@ static float Distance2() {
 }
 
 // Range: 0x800DC8F0 -> 0x800DCC4C
-unsigned char Path::DoOneSmooth(class Path * const this /* r24 */) {
+// this: r24
+unsigned char Path::DoOneSmooth() {
     // Local variables
     int numNodes; // r0
     int somethingMoved; // r27
@@ -224,7 +244,8 @@ unsigned char Path::DoOneSmooth(class Path * const this /* r24 */) {
 }
 
 // Range: 0x800DCC4C -> 0x800DCF34
-void SpacePartition::Init(class SpacePartition * const this /* r29 */) {
+// this: r29
+void SpacePartition::Init() {
     // Local variables
     int startRectNumber; // r0
     class IPoint s; // r1+0x8
@@ -242,13 +263,15 @@ void SpacePartition::Init(class SpacePartition * const this /* r29 */) {
 }
 
 // Range: 0x800DCF34 -> 0x800DD010
-void Path::InitPath(class Path * const this /* r30 */) {
+// this: r30
+void Path::InitPath() {
     // References
     // -> class SpacePartition fSpacePartition;
 }
 
 // Range: 0x800DD010 -> 0x800DD0E4
-int Path::FindSmallestOpenNode(class Path * const this /* r27 */) {
+// this: r27
+int Path::FindSmallestOpenNode() {
     // Local variables
     int nodeRef; // r0
     class ASTNode * node; // r0

@@ -5,19 +5,23 @@
     Code range: 0x802B14DC -> 0x802B2988
 */
 // Range: 0x802B14DC -> 0x802B151C
-void * EAudio::~EAudio(class EAudio * const this /* r31 */) {}
+// this: r31
+EAudio::~EAudio() {}
 
 // Range: 0x802B151C -> 0x802B1584
-void * ENgcAudio::~ENgcAudio(class ENgcAudio * const this /* r30 */) {}
+// this: r30
+ENgcAudio::~ENgcAudio() {}
 
 // Range: 0x802B1584 -> 0x802B15A4
-void * EPMDesc::EPMDesc() {}
+EPMDesc::EPMDesc() {}
 
 // Range: 0x802B15A4 -> 0x802B1604
-void * EPMDesc::EPMDesc(struct EPMDesc * const this /* r30 */, unsigned char looping /* r31 */) {}
+// this: r30
+EPMDesc::EPMDesc(unsigned char looping /* r31 */) {}
 
 // Range: 0x802B1604 -> 0x802B17EC
-void ENgcAudio::InitAudio(class ENgcAudio * const this /* r31 */) {
+// this: r31
+void ENgcAudio::InitAudio() {
     // Local variables
     unsigned int soundMode; // r0
     unsigned int i; // r0
@@ -40,7 +44,8 @@ void ENgcAudio::Shutdown() {
 }
 
 // Range: 0x802B1858 -> 0x802B1C70
-void ENgcAudio::PlayMusic(class ENgcAudio * const this /* r21 */, const struct EPMDesc & desc /* r22 */) {
+// this: r21
+void ENgcAudio::PlayMusic(const struct EPMDesc & desc /* r22 */) {
     // Local variables
     unsigned int i; // r26
     unsigned int j; // r25
@@ -67,7 +72,8 @@ unsigned char ENgcAudio::GetIndexFromVoice() {}
 struct EVoice * ENgcAudio::GetVoiceFromIndex() {}
 
 // Range: 0x802B1C80 -> 0x802B1F00
-void ENgcAudio::Update(class ENgcAudio * const this /* r31 */) {
+// this: r31
+void ENgcAudio::Update() {
     // Local variables
     int status; // r0
     unsigned int i; // r24
@@ -143,7 +149,8 @@ void ENgcAudio::ResumeMusic() {
 }
 
 // Range: 0x802B220C -> 0x802B2308
-void ENgcAudio::SetMusicVolume(class ENgcAudio * const this /* r28 */) {
+// this: r28
+void ENgcAudio::SetMusicVolume() {
     // Local variables
     float v; // f0
     unsigned int i; // r29
@@ -174,7 +181,8 @@ void ENgcAudio::SetMusicPan() {
 float ENgcAudio::GetMusicPan() {}
 
 // Range: 0x802B23F8 -> 0x802B2464
-unsigned char ENgcAudio::IsPlayingMusic(class ENgcAudio * const this /* r30 */) {
+// this: r30
+unsigned char ENgcAudio::IsPlayingMusic() {
     // References
     // -> static class ENGCAudioStreamer * streamer;
     // -> unsigned int gAudioEnabled;
@@ -196,7 +204,8 @@ struct EVoice * ENgcAudio::AudioAllocVoice() {}
 void ENgcAudio::FreeVoice(struct EVoice * voice /* r31 */) {}
 
 // Range: 0x802B2548 -> 0x802B26D0
-void ENgcAudio::AudioBindVoice(class ENgcAudio * const this /* r30 */, struct EVoice * voice /* r31 */, unsigned int sampleResID /* r29 */) {
+// this: r30
+void ENgcAudio::AudioBindVoice(struct EVoice * voice /* r31 */, unsigned int sampleResID /* r29 */) {
     // Local variables
     unsigned int i; // r3
     class EAutoMutex autoMutex'67; // r30

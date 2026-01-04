@@ -5,7 +5,8 @@
     Code range: 0x801686F4 -> 0x80168FC0
 */
 // Range: 0x801686F4 -> 0x80168840
-int MemFile::WriteBlock(class MemFile * const this /* r28 */, void * src_buffer /* r29 */, int * blockSize /* r30 */) {
+// this: r28
+int MemFile::WriteBlock(void * src_buffer /* r29 */, int * blockSize /* r30 */) {
     // Local variables
     int result; // r31
     unsigned int newFilePos; // r3
@@ -13,10 +14,12 @@ int MemFile::WriteBlock(class MemFile * const this /* r28 */, void * src_buffer 
 }
 
 // Range: 0x80168840 -> 0x80168894
-int MemFile::GetFileSize(class MemFile * const this /* r30 */, int * filesize /* r31 */) {}
+// this: r30
+int MemFile::GetFileSize(int * filesize /* r31 */) {}
 
 // Range: 0x80168894 -> 0x80168918
-int MemFile::SetFileSize(class MemFile * const this /* r29 */, int filesize /* r30 */) {
+// this: r29
+int MemFile::SetFileSize(int filesize /* r30 */) {
     // Local variables
     int result; // r31
 }
@@ -28,52 +31,61 @@ int MemFile::Create(const class StringBuffer & name /* r30 */) {}
 int MemFile::Delete(const class StringBuffer & name /* r30 */) {}
 
 // Range: 0x80168A48 -> 0x80168AA0
-void * MemFile::MemFile(class MemFile * const this /* r31 */) {
+// this: r31
+MemFile::MemFile() {
     // References
     // -> struct [anonymous] __vt__7MemFile;
 }
 
 // Range: 0x80168AA0 -> 0x80168B0C
-void * MemFile::~MemFile(class MemFile * const this /* r30 */) {
+// this: r30
+MemFile::~MemFile() {
     // References
     // -> struct [anonymous] __vt__7MemFile;
 }
 
 // Range: 0x80168B0C -> 0x80168C3C
-int MemFile::Open(class MemFile * const this /* r28 */, const class StringBuffer & name /* r29 */) {
+// this: r28
+int MemFile::Open(const class StringBuffer & name /* r29 */) {
     // Local variables
     class CTGFile * file; // r30
 }
 
 // Range: 0x80168C3C -> 0x80168CC0
-int MemFile::Close(class MemFile * const this /* r30 */) {
+// this: r30
+int MemFile::Close() {
     // Local variables
     int result; // r31
 }
 
 // Range: 0x80168CC0 -> 0x80168D80
-int MemFile::ReadBlock(class MemFile * const this /* r28 */, void * dest_buffer /* r29 */, int * blockSize /* r30 */) {
+// this: r28
+int MemFile::ReadBlock(void * dest_buffer /* r29 */, int * blockSize /* r30 */) {
     // Local variables
     int result; // r31
     int maxBytes; // r3
 }
 
 // Range: 0x80168D80 -> 0x80168DE0
-int MemFile::SetPos(class MemFile * const this /* r30 */, int fromStart /* r31 */) {}
+// this: r30
+int MemFile::SetPos(int fromStart /* r31 */) {}
 
 // Range: 0x80168DE0 -> 0x80168DF4
 unsigned char MemFile::ValidFile() {}
 
 // Range: 0x80168DF4 -> 0x80168F14
-int MemFile::Flush(class MemFile * const this /* r29 */) {
+// this: r29
+int MemFile::Flush() {
     // Local variables
     class CTGFile * file; // r30
 }
 
 // Range: 0x80168F14 -> 0x80168F78
-int MemFile::GetFileName(class MemFile * const this /* r30 */, class StringBuffer & name /* r31 */) {}
+// this: r30
+int MemFile::GetFileName(class StringBuffer & name /* r31 */) {}
 
 // Range: 0x80168F78 -> 0x80168FC0
-void MemFile::SetFileName(class MemFile * const this /* r30 */, const class StringBuffer & name /* r31 */) {}
+// this: r30
+void MemFile::SetFileName(const class StringBuffer & name /* r31 */) {}
 
 

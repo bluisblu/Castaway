@@ -5,22 +5,26 @@
     Code range: 0x800A48F4 -> 0x800A5CB0
 */
 // Range: 0x800A48F4 -> 0x800A4908
-void * ObjTestSim::ObjTestSim() {}
+ObjTestSim::ObjTestSim() {}
 
 // Range: 0x800A4908 -> 0x800A494C
-void * ObjTestSim::ObjTestSim(class ObjTestSim * const this /* r31 */) {}
+// this: r31
+ObjTestSim::ObjTestSim() {}
 
 // Range: 0x800A494C -> 0x800A49E8
-void * ObjTestSim::~ObjTestSim(class ObjTestSim * const this /* r28 */) {
+// this: r28
+ObjTestSim::~ObjTestSim() {
     // Local variables
     int cnt; // r30
 }
 
 // Range: 0x800A49E8 -> 0x800A4A28
-void ObjTestSim::SetStackObject(class ObjTestSim * const this /* r31 */) {}
+// this: r31
+void ObjTestSim::SetStackObject() {}
 
 // Range: 0x800A4A28 -> 0x800A4E78
-void ObjTestSim::TestInteraction(class ObjTestSim * const this /* r24 */, class Interaction * interaction /* r25 */, unsigned char autonomous /* r22 */, unsigned char bRunPrefixTree /* r26 */, unsigned char bRunCheckTree /* r27 */, class TTabScratchEntry * * modifiedEntry /* r28 */) {
+// this: r24
+void ObjTestSim::TestInteraction(class Interaction * interaction /* r25 */, unsigned char autonomous /* r22 */, unsigned char bRunPrefixTree /* r26 */, unsigned char bRunCheckTree /* r27 */, class TTabScratchEntry * * modifiedEntry /* r28 */) {
     // Local variables
     class cXObject * stackObj; // r31
     const class ITreeTableEntry * entry; // r23
@@ -41,7 +45,8 @@ void ObjTestSim::TestInteraction(class ObjTestSim * const this /* r24 */, class 
 void ObjTestSim::SetupInteractionColors(class Interaction * pInteraction /* r30 */, signed short checkTreeResult /* r31 */) {}
 
 // Range: 0x800A4ED0 -> 0x800A51C4
-void ObjTestSim::AppendInteractionsForMenu(class ObjTestSim * const this /* r29 */, class InteractionList & interactions /* r30 */, int numToAdd /* r31 */, unsigned char bSameTileOnlyInDC /* r23 */) {
+// this: r29
+void ObjTestSim::AppendInteractionsForMenu(class InteractionList & interactions /* r30 */, int numToAdd /* r31 */, unsigned char bSameTileOnlyInDC /* r23 */) {
     // Local variables
     const class ITreeTable * treeTab; // r26
     signed short prefixTree; // r0
@@ -63,7 +68,8 @@ void ObjTestSim::AppendInteractionsForMenu(class ObjTestSim * const this /* r29 
 }
 
 // Range: 0x800A51C4 -> 0x800A5280
-int ObjTestSim::RunMenuCheckTree(class ObjTestSim * const this /* r28 */, class InteractionList & interactions /* r29 */, class Interaction & interaction /* r30 */) {
+// this: r28
+int ObjTestSim::RunMenuCheckTree(class InteractionList & interactions /* r29 */, class Interaction & interaction /* r30 */) {
     // Local variables
     unsigned long size; // r0
 
@@ -90,7 +96,8 @@ void ObjTestSim::MakeNewMenuItem(const unsigned short * name /* r28 */, const si
 }
 
 // Range: 0x800A5394 -> 0x800A56B0
-void ObjTestSim::AppendInteractionsForAuto(class ObjTestSim * const this /* r30 */, class InteractionList & intVector /* r31 */) {
+// this: r30
+void ObjTestSim::AppendInteractionsForAuto(class InteractionList & intVector /* r31 */) {
     // Local variables
     const class ITreeTable * treeTab; // r26
     int numEntries; // r0
@@ -104,10 +111,11 @@ void ObjTestSim::AppendInteractionsForAuto(class ObjTestSim * const this /* r30 
 }
 
 // Range: 0x800A56B0 -> 0x800A56C0
-void * InteractionList::InteractionList() {}
+InteractionList::InteractionList() {}
 
 // Range: 0x800A56C0 -> 0x800A5714
-void * InteractionList::~InteractionList(class InteractionList * const this /* r30 */) {}
+// this: r30
+InteractionList::~InteractionList() {}
 
 // Range: 0x800A5714 -> 0x800A5734
 unsigned long InteractionList::size() {
@@ -117,19 +125,23 @@ unsigned long InteractionList::size() {
 }
 
 // Range: 0x800A5734 -> 0x800A5790
-void InteractionList::push_back(class InteractionList * const this /* r30 */, const class Interaction & x /* r31 */) {}
+// this: r30
+void InteractionList::push_back(const class Interaction & x /* r31 */) {}
 
 // Range: 0x800A5790 -> 0x800A57BC
 void InteractionList::push_back() {}
 
 // Range: 0x800A57BC -> 0x800A5830
-void InteractionList::push_back(class InteractionList * const this /* r27 */, class cXPerson * person /* r28 */, class cXObject * obj /* r29 */, int treeTabEntryIndex /* r30 */, int priority /* r31 */) {}
+// this: r27
+void InteractionList::push_back(class cXPerson * person /* r28 */, class cXObject * obj /* r29 */, int treeTabEntryIndex /* r30 */, int priority /* r31 */) {}
 
 // Range: 0x800A5830 -> 0x800A589C
-void InteractionList::push_back(class InteractionList * const this /* r29 */, class cXPerson * person /* r30 */, class cXPerson * otherPerson /* r31 */) {}
+// this: r29
+void InteractionList::push_back(class cXPerson * person /* r30 */, class cXPerson * otherPerson /* r31 */) {}
 
 // Range: 0x800A589C -> 0x800A59B4
-void InteractionList::remove(class InteractionList * const this /* r28 */, const class iterator & removeEntry /* r29 */) {
+// this: r28
+void InteractionList::remove(const class iterator & removeEntry /* r29 */) {
     // Local variables
     class Interaction * newHead; // r31
     class Interaction * node; // r30
@@ -137,7 +149,8 @@ void InteractionList::remove(class InteractionList * const this /* r28 */, const
 }
 
 // Range: 0x800A59B4 -> 0x800A5A20
-void InteractionList::clear(class InteractionList * const this /* r30 */) {
+// this: r30
+void InteractionList::clear() {
     // Local variables
     class Interaction * node; // r31
     class Interaction * tmp; // r3
@@ -147,7 +160,7 @@ void InteractionList::clear(class InteractionList * const this /* r30 */) {
 void InteractionList::increment() {}
 
 // Range: 0x800A5A38 -> 0x800A5A68
-class Interaction * iterator::__pp() {
+class Interaction * iterator::operator++() {
     // Local variables
     class Interaction * result; // r31
 }

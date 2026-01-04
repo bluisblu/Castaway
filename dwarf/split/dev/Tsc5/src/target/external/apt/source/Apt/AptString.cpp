@@ -4,27 +4,30 @@
     Language: C++
     Code range: 0x8032A8EC -> 0x8032BE20
 */
+// total size: 0x8
 struct StringMembers {
-    // total size: 0x8
+    // Members
     char * szName; // offset 0x0, size 0x4
     int nIndex; // offset 0x4, size 0x4
 };
 static struct StringMembers wordlist[13]; // size: 0x68, address: 0x8045DEC8
 static signed char lookup[23]; // size: 0x17, address: 0x8045DF30
-class StringMembersIndex {
-    // total size: 0x1
-};
+// total size: 0x1
+class StringMembersIndex {};
 // Range: 0x8032A8EC -> 0x8032A93C
-void * AptString::AptString(class AptString * const this /* r31 */) {
+// this: r31
+AptString::AptString() {
     // References
     // -> struct [anonymous] __vt__9AptString;
 }
 
 // Range: 0x8032A93C -> 0x8032A9A8
-void * AptString::~AptString(class AptString * const this /* r30 */) {}
+// this: r30
+AptString::~AptString() {}
 
 // Range: 0x8032A9A8 -> 0x8032AA08
-void * AptString::AptString(class AptString * const this /* r30 */, const char * szValue /* r31 */) {
+// this: r30
+AptString::AptString(const char * szValue /* r31 */) {
     // References
     // -> struct [anonymous] __vt__9AptString;
 }
@@ -264,7 +267,6 @@ class AptString * AptString::Create(const char * szValue /* r30 */) {
     // -> class AptString * spFirstFree;
 }
 
-struct {
-    // total size: 0x44
-} __vt__9AptString; // size: 0x44, address: 0x8045E004
+// total size: 0x44
+struct {} __vt__9AptString; // size: 0x44, address: 0x8045E004
 

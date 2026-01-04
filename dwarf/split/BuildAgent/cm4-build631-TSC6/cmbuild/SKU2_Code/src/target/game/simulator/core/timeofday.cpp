@@ -5,13 +5,13 @@
     Code range: 0x800E416C -> 0x800E459C
 */
 // Range: 0x800E416C -> 0x800E4178
-void * GameTime::GameTime() {}
+GameTime::GameTime() {}
 
 // Range: 0x800E4178 -> 0x800E4184
-void * GameTime::GameTime() {}
+GameTime::GameTime() {}
 
 // Range: 0x800E4184 -> 0x800E4190
-void * GameTime::GameTime() {}
+GameTime::GameTime() {}
 
 // Range: 0x800E4190 -> 0x800E41FC
 void GameTime::SetTime() {}
@@ -27,7 +27,8 @@ void GameTime::GetTimeParts() {
 }
 
 // Range: 0x800E4374 -> 0x800E446C
-void GameTime::SetToCurrentTime(class GameTime * const this /* r30 */) {
+// this: r30
+void GameTime::SetToCurrentTime() {
     // Local variables
     class cSimulator * pSimulator; // r31
 }

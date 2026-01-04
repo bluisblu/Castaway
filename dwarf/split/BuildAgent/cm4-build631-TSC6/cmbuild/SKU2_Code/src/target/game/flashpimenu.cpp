@@ -5,19 +5,22 @@
     Code range: 0x80225E84 -> 0x802276F8
 */
 // Range: 0x80225E84 -> 0x80225ED0
-void * FlashPiMenu::FlashPiMenu(class FlashPiMenu * const this /* r31 */) {
+// this: r31
+FlashPiMenu::FlashPiMenu() {
     // References
     // -> struct [anonymous] __vt__11FlashPiMenu;
 }
 
 // Range: 0x80225ED0 -> 0x80225F10
-void * FlashPiMenu::~FlashPiMenu(class FlashPiMenu * const this /* r31 */) {}
+// this: r31
+FlashPiMenu::~FlashPiMenu() {}
 
 // Range: 0x80225F10 -> 0x80225F14
 void FlashPiMenu::Update() {}
 
 // Range: 0x80225F14 -> 0x80226044
-unsigned char FlashPiMenu::CreateMenuForGoHere(class FlashPiMenu * const this /* r29 */, unsigned char userRequestsGoHere /* r30 */) {
+// this: r29
+unsigned char FlashPiMenu::CreateMenuForGoHere(unsigned char userRequestsGoHere /* r30 */) {
     // Local variables
     class InteractionList interactions; // r1+0x10
     class ObjTestSim testSim; // r1+0x18
@@ -28,7 +31,8 @@ unsigned char FlashPiMenu::CreateMenuForGoHere(class FlashPiMenu * const this /*
 }
 
 // Range: 0x80226044 -> 0x802260A8
-void FlashPiMenu::SwitchToNextObject(class FlashPiMenu * const this /* r30 */) {
+// this: r30
+void FlashPiMenu::SwitchToNextObject() {
     // Local variables
     class InteractorManager * interactorManager; // r31
     unsigned char interactorInitialized; // r0
@@ -36,7 +40,8 @@ void FlashPiMenu::SwitchToNextObject(class FlashPiMenu * const this /* r30 */) {
 }
 
 // Range: 0x802260A8 -> 0x8022610C
-void FlashPiMenu::SwitchToPreviousObject(class FlashPiMenu * const this /* r30 */) {
+// this: r30
+void FlashPiMenu::SwitchToPreviousObject() {
     // Local variables
     class InteractorManager * interactorManager; // r31
     unsigned char interactorInitialized; // r0
@@ -44,7 +49,8 @@ void FlashPiMenu::SwitchToPreviousObject(class FlashPiMenu * const this /* r30 *
 }
 
 // Range: 0x8022610C -> 0x80226170
-void FlashPiMenu::SwitchToExpandedMenu(class FlashPiMenu * const this /* r30 */) {
+// this: r30
+void FlashPiMenu::SwitchToExpandedMenu() {
     // Local variables
     class InteractorManager * interactorManager; // r31
     unsigned char interactorInitialized; // r0
@@ -52,7 +58,8 @@ void FlashPiMenu::SwitchToExpandedMenu(class FlashPiMenu * const this /* r30 */)
 }
 
 // Range: 0x80226170 -> 0x80226294
-unsigned char FlashPiMenu::DirectControlCreateObjectMenuFromObjList(class FlashPiMenu * const this /* r25 */, class TNodeList & objlist /* r26 */, unsigned char bShortMenu /* r27 */, unsigned char bMoveOccured /* r28 */, unsigned char dcObjectChange /* r29 */) {
+// this: r25
+unsigned char FlashPiMenu::DirectControlCreateObjectMenuFromObjList(class TNodeList & objlist /* r26 */, unsigned char bShortMenu /* r27 */, unsigned char bMoveOccured /* r28 */, unsigned char dcObjectChange /* r29 */) {
     // Local variables
     class NLIteratorPtrType * nli; // r30
     unsigned char singleMenu; // r31
@@ -65,7 +72,8 @@ unsigned char FlashPiMenu::DirectControlCreateObjectMenuFromObjList(class FlashP
 }
 
 // Range: 0x80226294 -> 0x802263A8
-unsigned char FlashPiMenu::CreateObjectMenuFromObjList(class FlashPiMenu * const this /* r27 */, class TNodeList & objlist /* r28 */) {
+// this: r27
+unsigned char FlashPiMenu::CreateObjectMenuFromObjList(class TNodeList & objlist /* r28 */) {
     // Local variables
     unsigned char userRequestsGoHere; // r30
     unsigned char singleMenu; // r29
@@ -79,7 +87,8 @@ unsigned char FlashPiMenu::CreateObjectMenuFromObjList(class FlashPiMenu * const
 }
 
 // Range: 0x802263A8 -> 0x80226694
-void FlashPiMenu::AddObjectInteractionsToMenu(class FlashPiMenu * const this /* r29 */, class cXObject * pObj /* r30 */, unsigned char singleMenu /* r31 */, unsigned char shortMenu /* r24 */) {
+// this: r29
+void FlashPiMenu::AddObjectInteractionsToMenu(class cXObject * pObj /* r30 */, unsigned char singleMenu /* r31 */, unsigned char shortMenu /* r24 */) {
     // Local variables
     class InteractionList iList; // r1+0x28
     int useCount; // [invalid]
@@ -161,7 +170,8 @@ unsigned char FlashPiMenu::CreateInteractionMenu(class cXObject * pLeadObj /* r3
 }
 
 // Range: 0x80226FCC -> 0x80227060
-void FlashPiMenu::CleanupGoHereObject(class FlashPiMenu * const this /* r30 */) {
+// this: r30
+void FlashPiMenu::CleanupGoHereObject() {
     // Local variables
     unsigned char found; // r31
     class cXObject * srch; // r3
@@ -169,13 +179,15 @@ void FlashPiMenu::CleanupGoHereObject(class FlashPiMenu * const this /* r30 */) 
 }
 
 // Range: 0x80227060 -> 0x802270B4
-void FlashPiMenu::Die(class FlashPiMenu * const this /* r31 */) {
+// this: r31
+void FlashPiMenu::Die() {
     // References
     // -> class GameData _gd;
 }
 
 // Range: 0x802270B4 -> 0x80227314
-void FlashPiMenu::CreateGoHereObjectForMenu(class FlashPiMenu * const this /* r28 */) {
+// this: r28
+void FlashPiMenu::CreateGoHereObjectForMenu() {
     // Local variables
     signed short objectID; // r31
     class Interactor * pInteractor; // r30
@@ -195,7 +207,8 @@ void FlashPiMenu::CreateGoHereObjectForMenu(class FlashPiMenu * const this /* r2
 }
 
 // Range: 0x80227314 -> 0x802274CC
-unsigned char FlashPiMenu::ChooseAction(class FlashPiMenu * const this /* r24 */, class cXObject * pObj /* r25 */, class Interaction * pAction /* r26 */, unsigned char calledFromMenu /* r27 */) {
+// this: r24
+unsigned char FlashPiMenu::ChooseAction(class cXObject * pObj /* r25 */, class Interaction * pAction /* r26 */, unsigned char calledFromMenu /* r27 */) {
     // Local variables
     class ObjectModule * objMod; // r29
     class cXObject * pStack; // r0

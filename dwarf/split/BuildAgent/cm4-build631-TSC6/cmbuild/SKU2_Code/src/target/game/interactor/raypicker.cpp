@@ -5,10 +5,11 @@
     Code range: 0x80075E34 -> 0x80077104
 */
 // Range: 0x80075E34 -> 0x80075E74
-void * RayPicker::RayPicker() {}
+RayPicker::RayPicker() {}
 
 // Range: 0x80075E74 -> 0x80075EB4
-void * RayPicker::~RayPicker(class RayPicker * const this /* r31 */) {}
+// this: r31
+RayPicker::~RayPicker() {}
 
 // Range: 0x80075EB4 -> 0x80075F68
 void RayPicker::GetColorFromFrameBuffer(int x /* r29 */, int y /* r30 */, unsigned char * final_colors /* r31 */) {
@@ -20,7 +21,8 @@ void RayPicker::GetColorFromFrameBuffer(int x /* r29 */, int y /* r30 */, unsign
 }
 
 // Range: 0x80075F68 -> 0x8007606C
-void RayPicker::InitWindow(class RayPicker * const this /* r29 */, class E3DWindow & window /* r30 */, class ERC * prc /* r31 */) {
+// this: r29
+void RayPicker::InitWindow(class E3DWindow & window /* r30 */, class ERC * prc /* r31 */) {
     // Local variables
     struct ERenderSurfaceDef rsd; // r1+0x18
     class ERenderSurface * pRenderSurface; // r0
@@ -30,7 +32,8 @@ void RayPicker::InitWindow(class RayPicker * const this /* r29 */, class E3DWind
 }
 
 // Range: 0x8007606C -> 0x80076378
-class EInstance * RayPicker::FindClosestArchitectureHit(class RayPicker * const this /* r22 */, class ESimsCam * pCamera /* r23 */, float & dist /* r24 */, class vector & vNearestWalls /* r25 */, unsigned char increase_bbox /* r26 */) {
+// this: r22
+class EInstance * RayPicker::FindClosestArchitectureHit(class ESimsCam * pCamera /* r23 */, float & dist /* r24 */, class vector & vNearestWalls /* r25 */, unsigned char increase_bbox /* r26 */) {
     // Local variables
     class EVec2 current_screen_pos; // r1+0x10
     class EVec3 ray_dir; // r1+0x54
@@ -60,7 +63,8 @@ class EInstance * RayPicker::FindClosestArchitectureHit(class RayPicker * const 
 }
 
 // Range: 0x80076378 -> 0x80076F4C
-class vector & RayPicker::CreateImageMultiSampled(class RayPicker * const this /* r26 */, const class vector & hit_objects_vector /* r27 */, int screen_x /* r28 */, int screen_y /* r29 */, class vector & final_hit_list /* r30 */, unsigned char & out_hitFloor /* r31 */) {
+// this: r26
+class vector & RayPicker::CreateImageMultiSampled(const class vector & hit_objects_vector /* r27 */, int screen_x /* r28 */, int screen_y /* r29 */, class vector & final_hit_list /* r30 */, unsigned char & out_hitFloor /* r31 */) {
     // Local variables
     class E3DWindow * win; // r23
     class ERC * prc; // r22
@@ -113,7 +117,8 @@ class vector & RayPicker::CreateImageMultiSampled(class RayPicker * const this /
 }
 
 // Range: 0x80076F4C -> 0x80077104
-class EInstance * RayPicker::FindClosestBasedOnBBox(class RayPicker * const this /* r10 */, const class vector & vObjects /* r23 */, class ESimsCam * pCamera /* r24 */, float & dist /* r25 */, class EVec3 & hit_point /* r26 */) {
+// this: r10
+class EInstance * RayPicker::FindClosestBasedOnBBox(const class vector & vObjects /* r23 */, class ESimsCam * pCamera /* r24 */, float & dist /* r25 */, class EVec3 & hit_point /* r26 */) {
     // Local variables
     class EVec2 current_screen_pos; // r1+0x10
     class EVec3 ray_dir; // r1+0x30

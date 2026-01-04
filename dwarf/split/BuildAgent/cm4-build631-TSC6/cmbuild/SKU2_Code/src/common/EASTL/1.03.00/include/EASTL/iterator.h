@@ -89,12 +89,6 @@ long distance() {}
 long distance_impl() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\common\EASTL\1.03.00\include\EASTL\iterator.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x800BB220 -> 0x800BB64C
-*/
 // Range: 0x800BB220 -> 0x800BB264
 long distance() {}
 
@@ -150,12 +144,6 @@ long distance_impl(struct ListIterator & first /* r29 */, struct ListIterator & 
 }
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\common\EASTL\1.03.00\include\EASTL\iterator.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x80106AEC -> 0x80106C44
-*/
 // Range: 0x80106AEC -> 0x80106B30
 long distance() {}
 
@@ -175,12 +163,6 @@ long distance_impl(struct ListIterator & first /* r29 */, struct ListIterator & 
 }
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\common\EASTL\1.03.00\include\EASTL\iterator.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x801A03C8 -> 0x801A0474
-*/
 // Range: 0x801A03C8 -> 0x801A040C
 long distance() {}
 

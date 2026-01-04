@@ -5,6 +5,6 @@
     Code range: 0x80246ED4 -> 0x80246EE8
 */
 // Range: 0x80246ED4 -> 0x80246EE8
-void * TRCWiiInit::TRCWiiInit() {}
+TRCWiiInit::TRCWiiInit() {}
 
 

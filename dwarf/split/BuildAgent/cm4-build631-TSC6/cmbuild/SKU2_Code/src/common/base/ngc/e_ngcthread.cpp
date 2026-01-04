@@ -5,22 +5,25 @@
     Code range: 0x8027AB68 -> 0x8027AFC4
 */
 // Range: 0x8027AB68 -> 0x8027ABA0
-void * EThread::EThread() {
+EThread::EThread() {
     // References
     // -> struct [anonymous] __vt__7EThread;
 }
 
 // Range: 0x8027ABA0 -> 0x8027AC14
-void * EThread::~EThread(class EThread * const this /* r30 */) {
+// this: r30
+EThread::~EThread() {
     // References
     // -> struct [anonymous] __vt__7EThread;
 }
 
 // Range: 0x8027AC14 -> 0x8027AC6C
-void EThread::DeallocateStack(class EThread * const this /* r31 */) {}
+// this: r31
+void EThread::DeallocateStack() {}
 
 // Range: 0x8027AC6C -> 0x8027AD6C
-unsigned char EThread::Create(class EThread * const this /* r30 */, int priority /* r31 */) {
+// this: r30
+unsigned char EThread::Create(int priority /* r31 */) {
     // Local variables
     unsigned char success; // r0
 
@@ -32,13 +35,15 @@ unsigned char EThread::Create(class EThread * const this /* r30 */, int priority
 void * EThread::ThreadEntryPoint() {}
 
 // Range: 0x8027AD9C -> 0x8027AE88
-void EThread::Attach(class EThread * const this /* r29 */, int id /* r30 */) {
+// this: r29
+void EThread::Attach(int id /* r30 */) {
     // References
     // -> class TLinkedList _threadList;
 }
 
 // Range: 0x8027AE88 -> 0x8027AF64
-void EThread::Destroy(class EThread * const this /* r31 */) {
+// this: r31
+void EThread::Destroy() {
     // References
     // -> class TLinkedList _threadList;
 }
@@ -50,7 +55,8 @@ void EThread::Start() {}
 void EThread::SetPriority() {}
 
 // Range: 0x8027AF74 -> 0x8027AFB0
-unsigned char EThread::IsCallingThread(class EThread * const this /* r31 */) {}
+// this: r31
+unsigned char EThread::IsCallingThread() {}
 
 // Range: 0x8027AFB0 -> 0x8027AFB8
 void * EThread::GetStack() {}

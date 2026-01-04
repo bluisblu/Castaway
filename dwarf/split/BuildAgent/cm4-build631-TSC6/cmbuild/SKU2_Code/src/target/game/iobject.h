@@ -8,25 +8,13 @@
 unsigned int ISimsObjectModel::GetNumAnimationTracks() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\target\game\iobject.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x801CB308 -> 0x801CB364
-*/
 // Range: 0x801CB308 -> 0x801CB364
-void * ISimsObjectModel::__nw(unsigned long size /* r30 */) {
+void * ISimsObjectModel::operator new(unsigned long size /* r30 */) {
     // Local variables
     void * result; // r31
 }
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\target\game\iobject.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x802397C8 -> 0x8023A028
-*/
 // Range: 0x802397C8 -> 0x802397D0
 void SimsObjAnimDef::SetEffectAttachmentId() {}
 
@@ -43,7 +31,7 @@ void SimsObjAnimDef::SetModelID() {}
 void SimsObjAnimDef::SetAnimationID() {}
 
 // Range: 0x802397E0 -> 0x80239814
-void ISimsObjectModel::__dl(void * p /* r31 */) {}
+void ISimsObjectModel::operator delete(void * p /* r31 */) {}
 
 // Range: 0x80239814 -> 0x8023981C
 class EIStaticModel * ISimsObjectModel::GetShadow() {}
@@ -91,37 +79,37 @@ unsigned char ISimsObjectModel::ShouldAnimStartBlendIn(unsigned int animId /* r3
 unsigned int SimsObjAnimDef::GetAnimationID() {}
 
 // Range: 0x802398C0 -> 0x802398F4
-void ISimsWallObjectModel::__dl(void * p /* r31 */) {}
+void ISimsWallObjectModel::operator delete(void * p /* r31 */) {}
 
 // Range: 0x802398F4 -> 0x80239928
-void ISimsMultiTileObjectModel::__dl(void * p /* r31 */) {}
+void ISimsMultiTileObjectModel::operator delete(void * p /* r31 */) {}
 
 // Range: 0x80239928 -> 0x8023995C
-void ISimsCounterTopObject::__dl(void * p /* r31 */) {}
+void ISimsCounterTopObject::operator delete(void * p /* r31 */) {}
 
 // Range: 0x8023995C -> 0x80239990
-void IShrubObject::__dl(void * p /* r31 */) {}
+void IShrubObject::operator delete(void * p /* r31 */) {}
 
 // Range: 0x80239990 -> 0x802399EC
-void * ISimsMultiTileObjectModel::__nw(unsigned long size /* r30 */) {
+void * ISimsMultiTileObjectModel::operator new(unsigned long size /* r30 */) {
     // Local variables
     void * result; // r31
 }
 
 // Range: 0x802399EC -> 0x80239A48
-void * IShrubObject::__nw(unsigned long size /* r30 */) {
+void * IShrubObject::operator new(unsigned long size /* r30 */) {
     // Local variables
     void * result; // r31
 }
 
 // Range: 0x80239A48 -> 0x80239AA4
-void * ISimsCounterTopObject::__nw(unsigned long size /* r30 */) {
+void * ISimsCounterTopObject::operator new(unsigned long size /* r30 */) {
     // Local variables
     void * result; // r31
 }
 
 // Range: 0x80239AA4 -> 0x80239B00
-void * ISimsWallObjectModel::__nw(unsigned long size /* r30 */) {
+void * ISimsWallObjectModel::operator new(unsigned long size /* r30 */) {
     // Local variables
     void * result; // r31
 }
@@ -275,7 +263,7 @@ void IShrubObject::Destruct() {}
 void IShrubObject::Construct() {}
 
 // Range: 0x80239D40 -> 0x80239D48
-void * IShrubObject::__nw() {}
+void * IShrubObject::operator new() {}
 
 // Range: 0x80239D48 -> 0x80239D78
 class IShrubObject * IShrubObject::New() {}
@@ -294,7 +282,7 @@ void ISimsCounterTopObject::Destruct() {}
 void ISimsCounterTopObject::Construct() {}
 
 // Range: 0x80239DEC -> 0x80239DF4
-void * ISimsCounterTopObject::__nw() {}
+void * ISimsCounterTopObject::operator new() {}
 
 // Range: 0x80239DF4 -> 0x80239E24
 class ISimsCounterTopObject * ISimsCounterTopObject::New() {}
@@ -313,7 +301,7 @@ void ISimsMultiTileObjectModel::Destruct() {}
 void ISimsMultiTileObjectModel::Construct() {}
 
 // Range: 0x80239E98 -> 0x80239EA0
-void * ISimsMultiTileObjectModel::__nw() {}
+void * ISimsMultiTileObjectModel::operator new() {}
 
 // Range: 0x80239EA0 -> 0x80239ED0
 class ISimsMultiTileObjectModel * ISimsMultiTileObjectModel::New() {}
@@ -332,7 +320,7 @@ void ISimsWallObjectModel::Destruct() {}
 void ISimsWallObjectModel::Construct() {}
 
 // Range: 0x80239F44 -> 0x80239F4C
-void * ISimsWallObjectModel::__nw() {}
+void * ISimsWallObjectModel::operator new() {}
 
 // Range: 0x80239F4C -> 0x80239F7C
 class ISimsWallObjectModel * ISimsWallObjectModel::New() {}
@@ -351,7 +339,7 @@ void ISimsObjectModel::Destruct() {}
 void ISimsObjectModel::Construct() {}
 
 // Range: 0x80239FF0 -> 0x80239FF8
-void * ISimsObjectModel::__nw() {}
+void * ISimsObjectModel::operator new() {}
 
 // Range: 0x80239FF8 -> 0x8023A028
 class ISimsObjectModel * ISimsObjectModel::New() {}

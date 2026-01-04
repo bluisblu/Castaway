@@ -5,19 +5,22 @@
     Code range: 0x800DE32C -> 0x800E007C
 */
 // Range: 0x800DE32C -> 0x800DE400
-void * cSimulator::cSimulator(class cSimulator * const this /* r30 */) {
+// this: r30
+cSimulator::cSimulator() {
     // References
     // -> struct [anonymous] __vt__10cSimulator;
 }
 
 // Range: 0x800DE400 -> 0x800DE494
-void * cSimulator::~cSimulator(class cSimulator * const this /* r30 */) {
+// this: r30
+cSimulator::~cSimulator() {
     // References
     // -> struct [anonymous] __vt__10cSimulator;
 }
 
 // Range: 0x800DE494 -> 0x800DE650
-void cSimulator::Init(class cSimulator * const this /* r30 */) {
+// this: r30
+void cSimulator::Init() {
     // Local variables
     signed short cnt; // r0
 
@@ -33,7 +36,8 @@ void cSimulator::Init(class cSimulator * const this /* r30 */) {
 }
 
 // Range: 0x800DE650 -> 0x800DE9AC
-void cSimulator::DoStream(class cSimulator * const this /* r29 */, class ReconBuffer * r /* r30 */, int version /* r31 */) {
+// this: r29
+void cSimulator::DoStream(class ReconBuffer * r /* r30 */, int version /* r31 */) {
     // Local variables
     signed short paused; // r28
     signed short freeWillOverride; // r27
@@ -61,7 +65,8 @@ void cSimulator::DoStream(class cSimulator * const this /* r29 */, class ReconBu
 unsigned char cSimulator::DoCommand() {}
 
 // Range: 0x800DEA0C -> 0x800DEAF0
-unsigned char cSimulator::SimulateOneTick(class cSimulator * const this /* r29 */) {
+// this: r29
+unsigned char cSimulator::SimulateOneTick() {
     // Local variables
     unsigned int stashSeed; // r31
     unsigned char incTicks; // r30
@@ -70,7 +75,8 @@ unsigned char cSimulator::SimulateOneTick(class cSimulator * const this /* r29 *
 }
 
 // Range: 0x800DEAF0 -> 0x800DEC44
-void cSimulator::Simulate(class cSimulator * const this /* r31 */) {
+// this: r31
+void cSimulator::Simulate() {
     // Local variables
     float dt; // f30
     float multiplier; // f0
@@ -81,7 +87,8 @@ void cSimulator::Simulate(class cSimulator * const this /* r31 */) {
 }
 
 // Range: 0x800DEC44 -> 0x800DEF00
-unsigned char cSimulator::TickAllObjects(class cSimulator * const this /* r30 */) {
+// this: r30
+unsigned char cSimulator::TickAllObjects() {
     // Local variables
     int maxID; // r0
     class cXObject * obj; // r26
@@ -97,7 +104,8 @@ unsigned char cSimulator::TickAllObjects(class cSimulator * const this /* r30 */
 }
 
 // Range: 0x800DEF00 -> 0x800DEF74
-void cSimulator::Resume(class cSimulator * const this /* r31 */) {
+// this: r31
+void cSimulator::Resume() {
     // References
     // -> class EGlobal _globals;
 }
@@ -109,7 +117,8 @@ void cSimulator::RestoreTrueDt() {
 }
 
 // Range: 0x800DEF88 -> 0x800DF0B4
-void cSimulator::UpdateGameTime(class cSimulator * const this /* r31 */) {
+// this: r31
+void cSimulator::UpdateGameTime() {
     // References
     // -> signed short MonthsInAYear;
     // -> signed short DaysInAMonth;
@@ -120,7 +129,8 @@ void cSimulator::UpdateGameTime(class cSimulator * const this /* r31 */) {
 }
 
 // Range: 0x800DF0B4 -> 0x800DF12C
-void cSimulator::CheckForGameTimeChangeThresholds(class cSimulator * const this /* r30 */, unsigned char hourChanged /* r31 */) {
+// this: r30
+void cSimulator::CheckForGameTimeChangeThresholds(unsigned char hourChanged /* r31 */) {
     // Local variables
     enum TimeOfDay lastTimeOfDay; // r0
     enum TimeOfDay newTimeOfDay; // r0
@@ -137,7 +147,8 @@ void cSimulator::ApplyInitalObjectDepreciation() {
 }
 
 // Range: 0x800DF1E8 -> 0x800DF2B4
-void cSimulator::PreLoadLotDataset(class cSimulator * const this /* r29 */, int lot /* r31 */) {
+// this: r29
+void cSimulator::PreLoadLotDataset(int lot /* r31 */) {
     // Local variables
     char housepredataset[64]; // r1+0x8
 
@@ -146,7 +157,8 @@ void cSimulator::PreLoadLotDataset(class cSimulator * const this /* r29 */, int 
 }
 
 // Range: 0x800DF2B4 -> 0x800DF374
-void cSimulator::PostDelRefLotDataset(class cSimulator * const this /* r29 */) {
+// this: r29
+void cSimulator::PostDelRefLotDataset() {
     // Local variables
     char housepredataset[64]; // r1+0x8
 
@@ -155,7 +167,8 @@ void cSimulator::PostDelRefLotDataset(class cSimulator * const this /* r29 */) {
 }
 
 // Range: 0x800DF374 -> 0x800DF3B8
-int cSimulator::GetPlayerCheatsValue(class cSimulator * const this /* r31 */) {
+// this: r31
+int cSimulator::GetPlayerCheatsValue() {
     // Local variables
     unsigned int cheats; // r0
 
@@ -164,16 +177,19 @@ int cSimulator::GetPlayerCheatsValue(class cSimulator * const this /* r31 */) {
 }
 
 // Range: 0x800DF3B8 -> 0x800DF41C
-void cSimulator::UpdateSpeed(class cSimulator * const this /* r31 */) {}
+// this: r31
+void cSimulator::UpdateSpeed() {}
 
 // Range: 0x800DF41C -> 0x800DF468
 float cSimulator::TranslateSpeedToFloat() {}
 
 // Range: 0x800DF468 -> 0x800DF4D4
-void cSimulator::SetGameTime(class cSimulator * const this /* r31 */) {}
+// this: r31
+void cSimulator::SetGameTime() {}
 
 // Range: 0x800DF4D4 -> 0x800DF548
-void cSimulator::SetGameTime(class cSimulator * const this /* r31 */) {}
+// this: r31
+void cSimulator::SetGameTime() {}
 
 // Range: 0x800DF548 -> 0x800DF550
 int cSimulator::GetFunds() {}
@@ -182,32 +198,37 @@ int cSimulator::GetFunds() {}
 void cSimulator::SetFunds() {}
 
 // Range: 0x800DF5B0 -> 0x800DF6B0
-unsigned char cSimulator::AddListener(class cSimulator * const this /* r26 */, unsigned short listenerID /* r27 */, unsigned short simID /* r28 */, enum ECTRL_CMD command /* r29 */, unsigned short callbackParam /* r30 */) {
+// this: r26
+unsigned char cSimulator::AddListener(unsigned short listenerID /* r27 */, unsigned short simID /* r28 */, enum ECTRL_CMD command /* r29 */, unsigned short callbackParam /* r30 */) {
     // Local variables
     unsigned int i; // r31
     struct ListenPacket newPacket; // r1+0x8
 }
 
 // Range: 0x800DF6B0 -> 0x800DF7E0
-void cSimulator::RemoveListener(class cSimulator * const this /* r27 */, unsigned short listenerID /* r28 */, unsigned short simID /* r29 */, enum ECTRL_CMD command /* r30 */) {
+// this: r27
+void cSimulator::RemoveListener(unsigned short listenerID /* r28 */, unsigned short simID /* r29 */, enum ECTRL_CMD command /* r30 */) {
     // Local variables
     unsigned int i; // r31
 }
 
 // Range: 0x800DF7E0 -> 0x800DF8E8
-void cSimulator::RemoveAllForListener(class cSimulator * const this /* r28 */, unsigned short listenerID /* r29 */) {
+// this: r28
+void cSimulator::RemoveAllForListener(unsigned short listenerID /* r29 */) {
     // Local variables
     unsigned int i; // r30
 }
 
 // Range: 0x800DF8E8 -> 0x800DF97C
-void cSimulator::RemoveAllListeners(class cSimulator * const this /* r30 */) {
+// this: r30
+void cSimulator::RemoveAllListeners() {
     // Local variables
     unsigned int i; // r31
 }
 
 // Range: 0x800DF97C -> 0x800DFC68
-void cSimulator::ListenForInputs(class cSimulator * const this /* r31 */) {
+// this: r31
+void cSimulator::ListenForInputs() {
     // Local variables
     unsigned int i; // r29
     unsigned short lastSelectedSimID; // r28
@@ -217,19 +238,22 @@ void cSimulator::ListenForInputs(class cSimulator * const this /* r31 */) {
 }
 
 // Range: 0x800DFC68 -> 0x800DFD0C
-unsigned char cSimulator::TurnOnEvent(class cSimulator * const this /* r29 */, struct ListenPacket & packet /* r30 */) {
+// this: r29
+unsigned char cSimulator::TurnOnEvent(struct ListenPacket & packet /* r30 */) {
     // Local variables
     class EController * pCtrl; // r31
 }
 
 // Range: 0x800DFD0C -> 0x800DFD8C
-unsigned char cSimulator::TurnOffEvent(class cSimulator * const this /* r30 */, struct ListenPacket & packet /* r31 */) {
+// this: r30
+unsigned char cSimulator::TurnOffEvent(struct ListenPacket & packet /* r31 */) {
     // Local variables
     class EController * pCtrl; // r0
 }
 
 // Range: 0x800DFD8C -> 0x800DFE64
-void cSimulator::CheckForEvent(class cSimulator * const this /* r29 */, struct ListenPacket & packet /* r30 */) {
+// this: r29
+void cSimulator::CheckForEvent(struct ListenPacket & packet /* r30 */) {
     // Local variables
     class EController * pCtrl; // r0
     class cXObject * obj; // r31
@@ -237,13 +261,15 @@ void cSimulator::CheckForEvent(class cSimulator * const this /* r29 */, struct L
 }
 
 // Range: 0x800DFE64 -> 0x800DFEC4
-void cSimulator::StartListenerFilter(class cSimulator * const this /* r31 */) {
+// this: r31
+void cSimulator::StartListenerFilter() {
     // Local variables
     class EController * pCtrl; // r0
 }
 
 // Range: 0x800DFEC4 -> 0x800DFF20
-void cSimulator::StopListenerFilter(class cSimulator * const this /* r31 */) {
+// this: r31
+void cSimulator::StopListenerFilter() {
     // Local variables
     class EController * pCtrl; // r0
 }

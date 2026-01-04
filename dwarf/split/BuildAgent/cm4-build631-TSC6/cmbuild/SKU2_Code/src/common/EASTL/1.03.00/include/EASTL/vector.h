@@ -5,37 +5,45 @@
     Code range: 0x80016F18 -> 0x80018124
 */
 // Range: 0x80016F18 -> 0x80016F80
-void * vector::~vector(class vector * const this /* r30 */) {}
+// this: r30
+vector::~vector() {}
 
 // Range: 0x80016F80 -> 0x80016FF8
-void * VectorBase::~VectorBase(struct VectorBase * const this /* r30 */) {}
+// this: r30
+VectorBase::~VectorBase() {}
 
 // Range: 0x80016FF8 -> 0x80016FFC
 void vector::DoDestroyValues() {}
 
 // Range: 0x80016FFC -> 0x80017064
-void * vector::~vector(class vector * const this /* r30 */) {}
+// this: r30
+vector::~vector() {}
 
 // Range: 0x80017064 -> 0x800170DC
-void * VectorBase::~VectorBase(struct VectorBase * const this /* r30 */) {}
+// this: r30
+VectorBase::~VectorBase() {}
 
 // Range: 0x800170DC -> 0x800170E0
 void vector::DoDestroyValues() {}
 
 // Range: 0x800170E0 -> 0x80017110
-void * vector::vector(class vector * const this /* r31 */) {}
+// this: r31
+vector::vector() {}
 
 // Range: 0x80017110 -> 0x80017154
-void * VectorBase::VectorBase(struct VectorBase * const this /* r31 */) {}
+// this: r31
+VectorBase::VectorBase() {}
 
 // Range: 0x80017154 -> 0x80017184
-void * vector::vector(class vector * const this /* r31 */) {}
+// this: r31
+vector::vector() {}
 
 // Range: 0x80017184 -> 0x800171C8
-void * VectorBase::VectorBase(struct VectorBase * const this /* r31 */) {}
+// this: r31
+VectorBase::VectorBase() {}
 
 // Range: 0x800171C8 -> 0x800171D8
-struct AttachmentNode & vector::__vc() {}
+struct AttachmentNode & vector::operator[]() {}
 
 // Range: 0x800171D8 -> 0x800171F0
 unsigned long vector::size() {}
@@ -44,7 +52,8 @@ unsigned long vector::size() {}
 void vector::clear() {}
 
 // Range: 0x800171FC -> 0x8001727C
-class FTilePt * vector::erase(class vector * const this /* r29 */, class FTilePt * first /* r30 */, class FTilePt * last /* r31 */) {
+// this: r29
+class FTilePt * vector::erase(class FTilePt * first /* r30 */, class FTilePt * last /* r31 */) {
     // Local variables
     class FTilePt * const position; // r0
 }
@@ -56,7 +65,8 @@ void vector::DoDestroyValues() {}
 unsigned long vector::size() {}
 
 // Range: 0x80017298 -> 0x80017318
-int * vector::erase(class vector * const this /* r29 */, int * first /* r30 */, int * last /* r31 */) {
+// this: r29
+int * vector::erase(int * first /* r30 */, int * last /* r31 */) {
     // Local variables
     int * const position; // r0
 }
@@ -68,16 +78,16 @@ int * vector::end() {}
 int * vector::begin() {}
 
 // Range: 0x80017328 -> 0x80017338
-class FTilePt & vector::__vc() {}
+class FTilePt & vector::operator[]() {}
 
 // Range: 0x80017338 -> 0x80017348
-int & vector::__vc() {}
+int & vector::operator[]() {}
 
 // Range: 0x80017348 -> 0x80017360
 unsigned long vector::size() {}
 
 // Range: 0x80017360 -> 0x80017370
-struct EPropItem * & vector::__vc() {}
+struct EPropItem * & vector::operator[]() {}
 
 // Range: 0x80017370 -> 0x80017388
 unsigned long vector::size() {}
@@ -86,7 +96,8 @@ unsigned long vector::size() {}
 void vector::push_back(struct EPropItem * const & value /* r31 */) {}
 
 // Range: 0x800173F4 -> 0x80017458
-struct EPropItem * * vector::erase(class vector * const this /* r30 */, struct EPropItem * * position /* r31 */) {}
+// this: r30
+struct EPropItem * * vector::erase(struct EPropItem * * position /* r31 */) {}
 
 // Range: 0x80017458 -> 0x80017460
 struct EPropItem * * vector::begin() {}
@@ -98,10 +109,11 @@ unsigned long vector::size() {}
 void vector::push_back(const int & value /* r31 */) {}
 
 // Range: 0x800174F4 -> 0x80017504
-struct AttachmentNode & vector::__vc() {}
+struct AttachmentNode & vector::operator[]() {}
 
 // Range: 0x80017504 -> 0x80017584
-struct EPropItem * * vector::erase(class vector * const this /* r29 */, struct EPropItem * * first /* r30 */, struct EPropItem * * last /* r31 */) {
+// this: r29
+struct EPropItem * * vector::erase(struct EPropItem * * first /* r30 */, struct EPropItem * * last /* r31 */) {
     // Local variables
     struct EPropItem * * const position; // r0
 }
@@ -110,7 +122,7 @@ struct EPropItem * * vector::erase(class vector * const this /* r29 */, struct E
 struct EPropItem * * vector::end() {}
 
 // Range: 0x8001758C -> 0x8001759C
-class EIWallPart * & vector::__vc() {}
+class EIWallPart * & vector::operator[]() {}
 
 // Range: 0x8001759C -> 0x800175B4
 unsigned long vector::size() {}
@@ -122,7 +134,8 @@ void vector::push_back(class EIWallPart * const & value /* r31 */) {}
 void vector::clear() {}
 
 // Range: 0x8001762C -> 0x800176AC
-class EIWallPart * * vector::erase(class vector * const this /* r29 */, class EIWallPart * * first /* r30 */, class EIWallPart * * last /* r31 */) {
+// this: r29
+class EIWallPart * * vector::erase(class EIWallPart * * first /* r30 */, class EIWallPart * * last /* r31 */) {
     // Local variables
     class EIWallPart * * const position; // r0
 }
@@ -131,34 +144,42 @@ class EIWallPart * * vector::erase(class vector * const this /* r29 */, class EI
 void vector::DoDestroyValues() {}
 
 // Range: 0x800176B0 -> 0x80017718
-void * vector::~vector(class vector * const this /* r30 */) {}
+// this: r30
+vector::~vector() {}
 
 // Range: 0x80017718 -> 0x80017790
-void * VectorBase::~VectorBase(struct VectorBase * const this /* r30 */) {}
+// this: r30
+VectorBase::~VectorBase() {}
 
 // Range: 0x80017790 -> 0x80017830
-void vector::swap(class vector * const this /* r30 */, class vector & x /* r31 */) {
+// this: r30
+void vector::swap(class vector & x /* r31 */) {
     // Local variables
     class vector temp; // r1+0x8
 }
 
 // Range: 0x80017830 -> 0x80017894
-void * vector::vector(class vector * const this /* r30 */, const class vector & x /* r31 */) {}
+// this: r30
+vector::vector(const class vector & x /* r31 */) {}
 
 // Range: 0x80017894 -> 0x800178F8
-void * VectorBase::VectorBase(struct VectorBase * const this /* r30 */, unsigned long n /* r31 */) {}
+// this: r30
+VectorBase::VectorBase(unsigned long n /* r31 */) {}
 
 // Range: 0x800178F8 -> 0x8001791C
 class EIWallPart * * VectorBase::DoAllocate() {}
 
 // Range: 0x8001791C -> 0x8001794C
-void * vector::vector(class vector * const this /* r31 */) {}
+// this: r31
+vector::vector() {}
 
 // Range: 0x8001794C -> 0x80017990
-void * VectorBase::VectorBase(struct VectorBase * const this /* r31 */) {}
+// this: r31
+VectorBase::VectorBase() {}
 
 // Range: 0x80017990 -> 0x800179F4
-class FTilePt * vector::erase(class vector * const this /* r30 */, class FTilePt * position /* r31 */) {}
+// this: r30
+class FTilePt * vector::erase(class FTilePt * position /* r31 */) {}
 
 // Range: 0x800179F4 -> 0x800179FC
 class FTilePt * vector::begin() {}
@@ -167,7 +188,8 @@ class FTilePt * vector::begin() {}
 void vector::clear() {}
 
 // Range: 0x80017A08 -> 0x80017B58
-void vector::DoInsertValue(class vector * const this /* r31 */, int * position /* r26 */, const int & value /* r27 */) {
+// this: r31
+void vector::DoInsertValue(int * position /* r26 */, const int & value /* r27 */) {
     // Local variables
     const int * pValue; // [invalid]
     unsigned long nNewSize; // r29
@@ -185,7 +207,8 @@ int * VectorBase::DoAllocate() {}
 unsigned long VectorBase::GetNewCapacity() {}
 
 // Range: 0x80017BA8 -> 0x80017CF8
-void vector::DoInsertValue(class vector * const this /* r31 */, struct EPropItem * * position /* r26 */, struct EPropItem * const & value /* r27 */) {
+// this: r31
+void vector::DoInsertValue(struct EPropItem * * position /* r26 */, struct EPropItem * const & value /* r27 */) {
     // Local variables
     struct EPropItem * const * pValue; // [invalid]
     unsigned long nNewSize; // r29
@@ -203,7 +226,8 @@ struct EPropItem * * VectorBase::DoAllocate() {}
 unsigned long VectorBase::GetNewCapacity() {}
 
 // Range: 0x80017D48 -> 0x80017E98
-void vector::DoInsertValue(class vector * const this /* r31 */, class EIWallPart * * position /* r26 */, class EIWallPart * const & value /* r27 */) {
+// this: r31
+void vector::DoInsertValue(class EIWallPart * * position /* r26 */, class EIWallPart * const & value /* r27 */) {
     // Local variables
     class EIWallPart * const * pValue; // [invalid]
     unsigned long nNewSize; // r29
@@ -218,7 +242,8 @@ void VectorBase::DoFree() {}
 unsigned long VectorBase::GetNewCapacity() {}
 
 // Range: 0x80017EC4 -> 0x80017F84
-void vector::reserve(class vector * const this /* r31 */, unsigned long n /* r29 */) {
+// this: r31
+void vector::reserve(unsigned long n /* r29 */) {
     // Local variables
     class EIWallPart * * const pNewData; // r30
     long nPrevSize; // r0
@@ -231,7 +256,8 @@ class EIWallPart * * vector::DoRealloc(class EIWallPart * * first /* r29 */, cla
 }
 
 // Range: 0x80017FDC -> 0x80018124
-class vector & vector::__as(class vector * const this /* r30 */, const class vector & x /* r29 */) {
+// this: r30
+class vector & vector::operator=(const class vector & x /* r29 */) {
     // Local variables
     unsigned long n; // r31
     class EIWallPart * * const pNewData; // r29
@@ -239,17 +265,13 @@ class vector & vector::__as(class vector * const this /* r30 */, const class vec
 }
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\common\EASTL\1.03.00\include\EASTL\vector.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x80029B58 -> 0x8002A938
-*/
 // Range: 0x80029B58 -> 0x80029BC0
-void * vector::~vector(class vector * const this /* r30 */) {}
+// this: r30
+vector::~vector() {}
 
 // Range: 0x80029BC0 -> 0x80029C38
-void * VectorBase::~VectorBase(struct VectorBase * const this /* r30 */) {}
+// this: r30
+VectorBase::~VectorBase() {}
 
 // Range: 0x80029C38 -> 0x80029C3C
 void vector::DoDestroyValues() {}
@@ -258,7 +280,8 @@ void vector::DoDestroyValues() {}
 void vector::resize(unsigned long n /* r7 */) {}
 
 // Range: 0x80029CB0 -> 0x80029D30
-class CasListener * * vector::erase(class vector * const this /* r29 */, class CasListener * * first /* r30 */, class CasListener * * last /* r31 */) {
+// this: r29
+class CasListener * * vector::erase(class CasListener * * first /* r30 */, class CasListener * * last /* r31 */) {
     // Local variables
     class CasListener * * const position; // r0
 }
@@ -267,10 +290,12 @@ class CasListener * * vector::erase(class vector * const this /* r29 */, class C
 void vector::insert() {}
 
 // Range: 0x80029D34 -> 0x80029D64
-void * vector::vector(class vector * const this /* r31 */) {}
+// this: r31
+vector::vector() {}
 
 // Range: 0x80029D64 -> 0x80029DA8
-void * VectorBase::VectorBase(struct VectorBase * const this /* r31 */) {}
+// this: r31
+VectorBase::VectorBase() {}
 
 // Range: 0x80029DA8 -> 0x80029E14
 void vector::push_back(class CasListener * const & value /* r31 */) {}
@@ -282,7 +307,8 @@ class CasListener * * vector::end() {}
 class CasListener * * vector::begin() {}
 
 // Range: 0x80029E24 -> 0x80029E88
-class CasListener * * vector::erase(class vector * const this /* r30 */, class CasListener * * position /* r31 */) {}
+// this: r30
+class CasListener * * vector::erase(class CasListener * * position /* r31 */) {}
 
 // Range: 0x80029E88 -> 0x80029E90
 class CasListener * const * vector::end() {}
@@ -291,7 +317,7 @@ class CasListener * const * vector::end() {}
 class CasListener * const * vector::begin() {}
 
 // Range: 0x80029E98 -> 0x80029EA8
-struct Section * & vector::__vc() {}
+struct Section * & vector::operator[]() {}
 
 // Range: 0x80029EA8 -> 0x80029EC0
 unsigned long vector::size() {}
@@ -300,7 +326,8 @@ unsigned long vector::size() {}
 void vector::clear() {}
 
 // Range: 0x80029ECC -> 0x80029F4C
-struct ClothingSetIndexInfo * vector::erase(class vector * const this /* r29 */, struct ClothingSetIndexInfo * first /* r30 */, struct ClothingSetIndexInfo * last /* r31 */) {
+// this: r29
+struct ClothingSetIndexInfo * vector::erase(struct ClothingSetIndexInfo * first /* r30 */, struct ClothingSetIndexInfo * last /* r31 */) {
     // Local variables
     struct ClothingSetIndexInfo * const position; // r0
 }
@@ -312,28 +339,34 @@ void vector::DoDestroyValues() {}
 void vector::push_back(const struct ClothingSetIndexInfo & value /* r31 */) {}
 
 // Range: 0x80029FE0 -> 0x80029FF0
-struct ClothingSetIndexInfo & vector::__vc() {}
+struct ClothingSetIndexInfo & vector::operator[]() {}
 
 // Range: 0x80029FF0 -> 0x8002A058
-void * vector::~vector(class vector * const this /* r30 */) {}
+// this: r30
+vector::~vector() {}
 
 // Range: 0x8002A058 -> 0x8002A0D0
-void * VectorBase::~VectorBase(struct VectorBase * const this /* r30 */) {}
+// this: r30
+VectorBase::~VectorBase() {}
 
 // Range: 0x8002A0D0 -> 0x8002A0E8
 unsigned long vector::size() {}
 
 // Range: 0x8002A0E8 -> 0x8002A118
-void * vector::vector(class vector * const this /* r31 */) {}
+// this: r31
+vector::vector() {}
 
 // Range: 0x8002A118 -> 0x8002A15C
-void * VectorBase::VectorBase(struct VectorBase * const this /* r31 */) {}
+// this: r31
+VectorBase::VectorBase() {}
 
 // Range: 0x8002A15C -> 0x8002A1C4
-void * vector::~vector(class vector * const this /* r30 */) {}
+// this: r30
+vector::~vector() {}
 
 // Range: 0x8002A1C4 -> 0x8002A23C
-void * VectorBase::~VectorBase(struct VectorBase * const this /* r30 */) {}
+// this: r30
+VectorBase::~VectorBase() {}
 
 // Range: 0x8002A23C -> 0x8002A240
 void vector::DoDestroyValues() {}
@@ -345,16 +378,20 @@ class ClothingItem * * vector::end() {}
 class ClothingItem * * vector::begin() {}
 
 // Range: 0x8002A250 -> 0x8002A280
-void * vector::vector(class vector * const this /* r31 */) {}
+// this: r31
+vector::vector() {}
 
 // Range: 0x8002A280 -> 0x8002A2C4
-void * VectorBase::VectorBase(struct VectorBase * const this /* r31 */) {}
+// this: r31
+VectorBase::VectorBase() {}
 
 // Range: 0x8002A2C4 -> 0x8002A32C
-void * vector::~vector(class vector * const this /* r30 */) {}
+// this: r30
+vector::~vector() {}
 
 // Range: 0x8002A32C -> 0x8002A3A4
-void * VectorBase::~VectorBase(struct VectorBase * const this /* r30 */) {}
+// this: r30
+VectorBase::~VectorBase() {}
 
 // Range: 0x8002A3A4 -> 0x8002A3A8
 void vector::DoDestroyValues() {}
@@ -366,13 +403,16 @@ class EMidLotInstance * * vector::end() {}
 class EMidLotInstance * * vector::begin() {}
 
 // Range: 0x8002A3B8 -> 0x8002A3E8
-void * vector::vector(class vector * const this /* r31 */) {}
+// this: r31
+vector::vector() {}
 
 // Range: 0x8002A3E8 -> 0x8002A42C
-void * VectorBase::VectorBase(struct VectorBase * const this /* r31 */) {}
+// this: r31
+VectorBase::VectorBase() {}
 
 // Range: 0x8002A42C -> 0x8002A580
-void vector::DoInsertValue(class vector * const this /* r31 */, struct ClothingSetIndexInfo * position /* r26 */, const struct ClothingSetIndexInfo & value /* r27 */) {
+// this: r31
+void vector::DoInsertValue(struct ClothingSetIndexInfo * position /* r26 */, const struct ClothingSetIndexInfo & value /* r27 */) {
     // Local variables
     const struct ClothingSetIndexInfo * pValue; // [invalid]
     unsigned long nNewSize; // r29
@@ -390,7 +430,8 @@ struct ClothingSetIndexInfo * VectorBase::DoAllocate() {}
 unsigned long VectorBase::GetNewCapacity() {}
 
 // Range: 0x8002A5D0 -> 0x8002A720
-void vector::DoInsertValue(class vector * const this /* r31 */, class CasListener * * position /* r26 */, class CasListener * const & value /* r27 */) {
+// this: r31
+void vector::DoInsertValue(class CasListener * * position /* r26 */, class CasListener * const & value /* r27 */) {
     // Local variables
     class CasListener * const * pValue; // [invalid]
     unsigned long nNewSize; // r29
@@ -408,7 +449,8 @@ class CasListener * * VectorBase::DoAllocate() {}
 unsigned long VectorBase::GetNewCapacity() {}
 
 // Range: 0x8002A770 -> 0x8002A938
-void vector::DoInsertValues(class vector * const this /* r30 */, class CasListener * * position /* r31 */, unsigned long n /* r25 */, class CasListener * const & value /* r26 */) {
+// this: r30
+void vector::DoInsertValues(class CasListener * * position /* r31 */, unsigned long n /* r25 */, class CasListener * const & value /* r26 */) {
     // Local variables
     class CasListener * const temp; // r1+0x8
     unsigned long nExtra; // r28
@@ -420,14 +462,8 @@ void vector::DoInsertValues(class vector * const this /* r30 */, class CasListen
 }
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\common\EASTL\1.03.00\include\EASTL\vector.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x80052520 -> 0x80059AD0
-*/
 // Range: 0x80052520 -> 0x80052530
-class cXPerson * & vector::__vc() {}
+class cXPerson * & vector::operator[]() {}
 
 // Range: 0x80052530 -> 0x80052548
 unsigned long vector::size() {}
@@ -439,19 +475,23 @@ class cXObject * const * vector::end() {}
 class cXObject * const * vector::begin() {}
 
 // Range: 0x80052558 -> 0x800525C0
-void * vector::~vector(class vector * const this /* r30 */) {}
+// this: r30
+vector::~vector() {}
 
 // Range: 0x800525C0 -> 0x80052638
-void * VectorBase::~VectorBase(struct VectorBase * const this /* r30 */) {}
+// this: r30
+VectorBase::~VectorBase() {}
 
 // Range: 0x80052638 -> 0x8005263C
 void vector::DoDestroyValues() {}
 
 // Range: 0x80052694 -> 0x800526C4
-void * vector::vector(class vector * const this /* r31 */) {}
+// this: r31
+vector::vector() {}
 
 // Range: 0x800526C4 -> 0x80052708
-void * VectorBase::VectorBase(struct VectorBase * const this /* r31 */) {}
+// this: r31
+VectorBase::VectorBase() {}
 
 // Range: 0x80052708 -> 0x8005277C
 void vector::push_back(const struct InvStock & value /* r31 */) {}
@@ -472,7 +512,8 @@ void vector::insert() {}
 void vector::clear() {}
 
 // Range: 0x800527D8 -> 0x80052858
-struct InvStock * vector::erase(class vector * const this /* r29 */, struct InvStock * first /* r30 */, struct InvStock * last /* r31 */) {
+// this: r29
+struct InvStock * vector::erase(struct InvStock * first /* r30 */, struct InvStock * last /* r31 */) {
     // Local variables
     struct InvStock * const position; // r0
 }
@@ -481,25 +522,30 @@ struct InvStock * vector::erase(class vector * const this /* r29 */, struct InvS
 unsigned long vector::size() {}
 
 // Range: 0x8005287C -> 0x800528E4
-void * vector::~vector(class vector * const this /* r30 */) {}
+// this: r30
+vector::~vector() {}
 
 // Range: 0x800528E4 -> 0x8005296C
-void * VectorBase::~VectorBase(struct VectorBase * const this /* r30 */) {}
+// this: r30
+VectorBase::~VectorBase() {}
 
 // Range: 0x8005296C -> 0x80052970
 void vector::DoDestroyValues() {}
 
 // Range: 0x80052970 -> 0x800529A0
-void * vector::vector(class vector * const this /* r31 */) {}
+// this: r31
+vector::vector() {}
 
 // Range: 0x800529A0 -> 0x800529E4
-void * VectorBase::VectorBase(struct VectorBase * const this /* r31 */) {}
+// this: r31
+VectorBase::VectorBase() {}
 
 // Range: 0x800529E4 -> 0x800529EC
 struct pair * vector::end() {}
 
 // Range: 0x80052A00 -> 0x80052AB4
-struct pair * vector::insert(class vector * const this /* r29 */, const struct pair & value /* r30 */) {
+// this: r29
+struct pair * vector::insert(const struct pair & value /* r30 */) {
     // Local variables
     long n; // r31
 }
@@ -514,7 +560,8 @@ struct pair * vector::begin() {}
 void vector::clear() {}
 
 // Range: 0x80052B44 -> 0x80052BD4
-struct pair * vector::erase(class vector * const this /* r29 */, struct pair * first /* r30 */, struct pair * last /* r31 */) {
+// this: r29
+struct pair * vector::erase(struct pair * first /* r30 */, struct pair * last /* r31 */) {
     // Local variables
     struct pair * const position; // r0
 }
@@ -532,43 +579,55 @@ void vector::DoDestroyValues() {}
 void vector::DoDestroyValues(class vector * first /* r30 */, class vector * last /* r31 */) {}
 
 // Range: 0x80052C30 -> 0x80052C98
-void * vector::~vector(class vector * const this /* r30 */) {}
+// this: r30
+vector::~vector() {}
 
 // Range: 0x80052C98 -> 0x80052D10
-void * VectorBase::~VectorBase(struct VectorBase * const this /* r30 */) {}
+// this: r30
+VectorBase::~VectorBase() {}
 
 // Range: 0x80052D10 -> 0x80052D14
 void vector::DoDestroyValues() {}
 
 // Range: 0x80052D14 -> 0x80052D44
-void * vector::vector(class vector * const this /* r31 */) {}
+// this: r31
+vector::vector() {}
 
 // Range: 0x80052D44 -> 0x80052D88
-void * VectorBase::VectorBase(struct VectorBase * const this /* r31 */) {}
+// this: r31
+VectorBase::VectorBase() {}
 
 // Range: 0x80052D88 -> 0x80052DB8
-void * vector::vector(class vector * const this /* r31 */) {}
+// this: r31
+vector::vector() {}
 
 // Range: 0x80052DB8 -> 0x80052DFC
-void * VectorBase::VectorBase(struct VectorBase * const this /* r31 */) {}
+// this: r31
+VectorBase::VectorBase() {}
 
 // Range: 0x80052DFC -> 0x80052E2C
-void * vector::vector(class vector * const this /* r31 */) {}
+// this: r31
+vector::vector() {}
 
 // Range: 0x80052E2C -> 0x80052E70
-void * VectorBase::VectorBase(struct VectorBase * const this /* r31 */) {}
+// this: r31
+VectorBase::VectorBase() {}
 
 // Range: 0x80052E70 -> 0x80052EA0
-void * vector::vector(class vector * const this /* r31 */) {}
+// this: r31
+vector::vector() {}
 
 // Range: 0x80052EA0 -> 0x80052EE4
-void * VectorBase::VectorBase(struct VectorBase * const this /* r31 */) {}
+// this: r31
+VectorBase::VectorBase() {}
 
 // Range: 0x80052EE4 -> 0x80052F7C
-void vector::resize(class vector * const this /* r29 */, unsigned long n /* r30 */) {}
+// this: r29
+void vector::resize(unsigned long n /* r30 */) {}
 
 // Range: 0x80052F7C -> 0x80052FFC
-struct InteractorInfo * vector::erase(class vector * const this /* r29 */, struct InteractorInfo * first /* r30 */, struct InteractorInfo * last /* r31 */) {
+// this: r29
+struct InteractorInfo * vector::erase(struct InteractorInfo * first /* r30 */, struct InteractorInfo * last /* r31 */) {
     // Local variables
     struct InteractorInfo * const position; // r0
 }
@@ -589,16 +648,19 @@ struct pair * vector::begin() {}
 void vector::clear() {}
 
 // Range: 0x80053024 -> 0x800530A4
-struct pair * vector::erase(class vector * const this /* r29 */, struct pair * first /* r30 */, struct pair * last /* r31 */) {
+// this: r29
+struct pair * vector::erase(struct pair * first /* r30 */, struct pair * last /* r31 */) {
     // Local variables
     struct pair * const position; // r0
 }
 
 // Range: 0x800530A4 -> 0x8005313C
-void vector::resize(class vector * const this /* r29 */, unsigned long n /* r30 */) {}
+// this: r29
+void vector::resize(unsigned long n /* r30 */) {}
 
 // Range: 0x8005313C -> 0x800531BC
-struct ActiveInteractor * vector::erase(class vector * const this /* r29 */, struct ActiveInteractor * first /* r30 */, struct ActiveInteractor * last /* r31 */) {
+// this: r29
+struct ActiveInteractor * vector::erase(struct ActiveInteractor * first /* r30 */, struct ActiveInteractor * last /* r31 */) {
     // Local variables
     struct ActiveInteractor * const position; // r0
 }
@@ -610,22 +672,23 @@ void vector::insert() {}
 void vector::clear() {}
 
 // Range: 0x800531E0 -> 0x800531F0
-struct pair & vector::__vc() {}
+struct pair & vector::operator[]() {}
 
 // Range: 0x800531F0 -> 0x80053200
-struct ActiveInteractor & vector::__vc() {}
+struct ActiveInteractor & vector::operator[]() {}
 
 // Range: 0x80053200 -> 0x80053210
-struct InteractorInfo & vector::__vc() {}
+struct InteractorInfo & vector::operator[]() {}
 
 // Range: 0x80053210 -> 0x80053220
-class Interactor * & vector::__vc() {}
+class Interactor * & vector::operator[]() {}
 
 // Range: 0x80053220 -> 0x80053294
 void vector::resize(unsigned long n /* r7 */) {}
 
 // Range: 0x80053294 -> 0x80053314
-class Interactor * * vector::erase(class vector * const this /* r29 */, class Interactor * * first /* r30 */, class Interactor * * last /* r31 */) {
+// this: r29
+class Interactor * * vector::erase(class Interactor * * first /* r30 */, class Interactor * * last /* r31 */) {
     // Local variables
     class Interactor * * const position; // r0
 }
@@ -634,13 +697,15 @@ class Interactor * * vector::erase(class vector * const this /* r29 */, class In
 void vector::insert() {}
 
 // Range: 0x80053318 -> 0x80053328
-class vector & vector::__vc() {}
+class vector & vector::operator[]() {}
 
 // Range: 0x80053328 -> 0x800533D4
-void vector::resize(class vector * const this /* r30 */, unsigned long n /* r31 */) {}
+// this: r30
+void vector::resize(unsigned long n /* r31 */) {}
 
 // Range: 0x800533D4 -> 0x80053454
-class vector * vector::erase(class vector * const this /* r29 */, class vector * first /* r30 */, class vector * last /* r31 */) {
+// this: r29
+class vector * vector::erase(class vector * first /* r30 */, class vector * last /* r31 */) {
     // Local variables
     class vector * const position; // r0
 }
@@ -649,94 +714,117 @@ class vector * vector::erase(class vector * const this /* r29 */, class vector *
 void vector::insert() {}
 
 // Range: 0x80053458 -> 0x80053488
-void * vector::vector(class vector * const this /* r31 */) {}
+// this: r31
+vector::vector() {}
 
 // Range: 0x80053488 -> 0x800534CC
-void * VectorBase::VectorBase(struct VectorBase * const this /* r31 */) {}
+// this: r31
+VectorBase::VectorBase() {}
 
 // Range: 0x800534CC -> 0x800534DC
-struct InteractorInfo & vector::__vc() {}
+struct InteractorInfo & vector::operator[]() {}
 
 // Range: 0x800534DC -> 0x80053544
-void * vector::~vector(class vector * const this /* r30 */) {}
+// this: r30
+vector::~vector() {}
 
 // Range: 0x80053544 -> 0x800535D0
-void * VectorBase::~VectorBase(struct VectorBase * const this /* r30 */) {}
+// this: r30
+VectorBase::~VectorBase() {}
 
 // Range: 0x800535D0 -> 0x800535D4
 void vector::DoDestroyValues() {}
 
 // Range: 0x800535D4 -> 0x8005363C
-void * vector::~vector(class vector * const this /* r30 */) {}
+// this: r30
+vector::~vector() {}
 
 // Range: 0x8005363C -> 0x800536B4
-void * VectorBase::~VectorBase(struct VectorBase * const this /* r30 */) {}
+// this: r30
+VectorBase::~VectorBase() {}
 
 // Range: 0x800536B4 -> 0x800536B8
 void vector::DoDestroyValues() {}
 
 // Range: 0x80053710 -> 0x80053778
-void * vector::~vector(class vector * const this /* r30 */) {}
+// this: r30
+vector::~vector() {}
 
 // Range: 0x80053778 -> 0x800537F0
-void * VectorBase::~VectorBase(struct VectorBase * const this /* r30 */) {}
+// this: r30
+VectorBase::~VectorBase() {}
 
 // Range: 0x800537F0 -> 0x800537F4
 void vector::DoDestroyValues() {}
 
 // Range: 0x8005384C -> 0x800538B4
-void * vector::~vector(class vector * const this /* r30 */) {}
+// this: r30
+vector::~vector() {}
 
 // Range: 0x800538B4 -> 0x8005392C
-void * VectorBase::~VectorBase(struct VectorBase * const this /* r30 */) {}
+// this: r30
+VectorBase::~VectorBase() {}
 
 // Range: 0x8005392C -> 0x80053930
 void vector::DoDestroyValues() {}
 
 // Range: 0x80053988 -> 0x800539F0
-void * vector::~vector(class vector * const this /* r30 */) {}
+// this: r30
+vector::~vector() {}
 
 // Range: 0x800539F0 -> 0x80053A68
-void * VectorBase::~VectorBase(struct VectorBase * const this /* r30 */) {}
+// this: r30
+VectorBase::~VectorBase() {}
 
 // Range: 0x80053A68 -> 0x80053A6C
 void vector::DoDestroyValues() {}
 
 // Range: 0x80053A6C -> 0x80053A9C
-void * vector::vector(class vector * const this /* r31 */) {}
+// this: r31
+vector::vector() {}
 
 // Range: 0x80053A9C -> 0x80053AE0
-void * VectorBase::VectorBase(struct VectorBase * const this /* r31 */) {}
+// this: r31
+VectorBase::VectorBase() {}
 
 // Range: 0x80053AE0 -> 0x80053B10
-void * vector::vector(class vector * const this /* r31 */) {}
+// this: r31
+vector::vector() {}
 
 // Range: 0x80053B10 -> 0x80053B54
-void * VectorBase::VectorBase(struct VectorBase * const this /* r31 */) {}
+// this: r31
+VectorBase::VectorBase() {}
 
 // Range: 0x80053B54 -> 0x80053B84
-void * vector::vector(class vector * const this /* r31 */) {}
+// this: r31
+vector::vector() {}
 
 // Range: 0x80053B84 -> 0x80053BC8
-void * VectorBase::VectorBase(struct VectorBase * const this /* r31 */) {}
+// this: r31
+VectorBase::VectorBase() {}
 
 // Range: 0x80053BC8 -> 0x80053BF8
-void * vector::vector(class vector * const this /* r31 */) {}
+// this: r31
+vector::vector() {}
 
 // Range: 0x80053BF8 -> 0x80053C3C
-void * VectorBase::VectorBase(struct VectorBase * const this /* r31 */) {}
+// this: r31
+VectorBase::VectorBase() {}
 
 // Range: 0x80053C3C -> 0x80053C6C
-void * vector::vector(class vector * const this /* r31 */) {}
+// this: r31
+vector::vector() {}
 
 // Range: 0x80053C6C -> 0x80053CB0
-void * VectorBase::VectorBase(struct VectorBase * const this /* r31 */) {}
+// this: r31
+VectorBase::VectorBase() {}
 
 // Range: 0x80053CB0 -> 0x80053CB8
 struct pair * vector::end() {}
 
 // Range: 0x80053CB8 -> 0x80053D5C
-struct pair * vector::insert(class vector * const this /* r29 */, const struct pair & value /* r30 */) {
+// this: r29
+struct pair * vector::insert(const struct pair & value /* r30 */) {
     // Local variables
     long n; // r31
 }
@@ -757,7 +845,8 @@ struct pair * vector::end() {}
 struct pair * vector::begin() {}
 
 // Range: 0x80053E0C -> 0x80053E70
-unsigned int * vector::erase(class vector * const this /* r30 */, unsigned int * position /* r31 */) {}
+// this: r30
+unsigned int * vector::erase(unsigned int * position /* r31 */) {}
 
 // Range: 0x80053E70 -> 0x80053E78
 unsigned int * vector::end() {}
@@ -769,7 +858,8 @@ unsigned int * vector::begin() {}
 struct pair * vector::end() {}
 
 // Range: 0x80053E88 -> 0x80053F2C
-struct pair * vector::insert(class vector * const this /* r29 */, const struct pair & value /* r30 */) {
+// this: r29
+struct pair * vector::insert(const struct pair & value /* r30 */) {
     // Local variables
     long n; // r31
 }
@@ -787,7 +877,8 @@ struct pair * vector::end() {}
 struct pair * vector::begin() {}
 
 // Range: 0x80053F70 -> 0x80053FD4
-struct pair * vector::erase(class vector * const this /* r30 */, struct pair * position /* r31 */) {}
+// this: r30
+struct pair * vector::erase(struct pair * position /* r31 */) {}
 
 // Range: 0x80053FE8 -> 0x80054000
 unsigned long vector::size() {}
@@ -796,7 +887,8 @@ unsigned long vector::size() {}
 void vector::clear() {}
 
 // Range: 0x8005400C -> 0x800540A0
-class EOrderTableData * vector::erase(class vector * const this /* r29 */, class EOrderTableData * first /* r30 */, class EOrderTableData * last /* r31 */) {
+// this: r29
+class EOrderTableData * vector::erase(class EOrderTableData * first /* r30 */, class EOrderTableData * last /* r31 */) {
     // Local variables
     class EOrderTableData * const position; // r0
 }
@@ -805,7 +897,8 @@ class EOrderTableData * vector::erase(class vector * const this /* r29 */, class
 void vector::clear() {}
 
 // Range: 0x800540AC -> 0x8005412C
-struct pair * vector::erase(class vector * const this /* r29 */, struct pair * first /* r30 */, struct pair * last /* r31 */) {
+// this: r29
+struct pair * vector::erase(struct pair * first /* r30 */, struct pair * last /* r31 */) {
     // Local variables
     struct pair * const position; // r0
 }
@@ -814,7 +907,8 @@ struct pair * vector::erase(class vector * const this /* r29 */, struct pair * f
 void vector::clear() {}
 
 // Range: 0x80054138 -> 0x800541B8
-struct pair * vector::erase(class vector * const this /* r29 */, struct pair * first /* r30 */, struct pair * last /* r31 */) {
+// this: r29
+struct pair * vector::erase(struct pair * first /* r30 */, struct pair * last /* r31 */) {
     // Local variables
     struct pair * const position; // r0
 }
@@ -823,7 +917,8 @@ struct pair * vector::erase(class vector * const this /* r29 */, struct pair * f
 void vector::clear() {}
 
 // Range: 0x800541C4 -> 0x80054244
-unsigned int * vector::erase(class vector * const this /* r29 */, unsigned int * first /* r30 */, unsigned int * last /* r31 */) {
+// this: r29
+unsigned int * vector::erase(unsigned int * first /* r30 */, unsigned int * last /* r31 */) {
     // Local variables
     unsigned int * const position; // r0
 }
@@ -832,7 +927,8 @@ unsigned int * vector::erase(class vector * const this /* r29 */, unsigned int *
 void vector::clear() {}
 
 // Range: 0x80054250 -> 0x800542D0
-struct pair * vector::erase(class vector * const this /* r29 */, struct pair * first /* r30 */, struct pair * last /* r31 */) {
+// this: r29
+struct pair * vector::erase(struct pair * first /* r30 */, struct pair * last /* r31 */) {
     // Local variables
     struct pair * const position; // r0
 }
@@ -844,7 +940,7 @@ class EOrderTableData & vector::back() {}
 void vector::push_back(const class EOrderTableData & value /* r31 */) {}
 
 // Range: 0x800543E4 -> 0x800543F4
-class EOrderTableData & vector::__vc() {}
+class EOrderTableData & vector::operator[]() {}
 
 // Range: 0x800543F4 -> 0x80054420
 unsigned long vector::size() {}
@@ -856,7 +952,8 @@ void vector::push_back(const signed short & value /* r31 */) {}
 void vector::clear() {}
 
 // Range: 0x80054498 -> 0x80054518
-signed short * vector::erase(class vector * const this /* r29 */, signed short * first /* r30 */, signed short * last /* r31 */) {
+// this: r29
+signed short * vector::erase(signed short * first /* r30 */, signed short * last /* r31 */) {
     // Local variables
     signed short * const position; // r0
 }
@@ -874,34 +971,39 @@ void vector::push_back(const struct PatternSellCount & value /* r31 */) {}
 unsigned long vector::size() {}
 
 // Range: 0x800545D0 -> 0x800545E0
-struct PatternSellCount & vector::__vc() {}
+struct PatternSellCount & vector::operator[]() {}
 
 // Range: 0x800545E0 -> 0x800545F8
 unsigned long vector::size() {}
 
 // Range: 0x800545F8 -> 0x80054608
-struct InvStock & vector::__vc() {}
+struct InvStock & vector::operator[]() {}
 
 // Range: 0x80054608 -> 0x80054670
-void * vector::~vector(class vector * const this /* r30 */) {}
+// this: r30
+vector::~vector() {}
 
 // Range: 0x80054670 -> 0x800546E8
-void * VectorBase::~VectorBase(struct VectorBase * const this /* r30 */) {}
+// this: r30
+VectorBase::~VectorBase() {}
 
 // Range: 0x800546E8 -> 0x80054738
 void vector::DoDestroyValues(struct pair * first /* r30 */, struct pair * last /* r31 */) {}
 
 // Range: 0x80054794 -> 0x800547C4
-void * vector::vector(class vector * const this /* r31 */) {}
+// this: r31
+vector::vector() {}
 
 // Range: 0x800547C4 -> 0x80054808
-void * VectorBase::VectorBase(struct VectorBase * const this /* r31 */) {}
+// this: r31
+VectorBase::VectorBase() {}
 
 // Range: 0x80054808 -> 0x80054810
 struct pair * vector::end() {}
 
 // Range: 0x80054894 -> 0x80054938
-struct pair * vector::insert(class vector * const this /* r29 */, const struct pair & value /* r30 */) {
+// this: r29
+struct pair * vector::insert(const struct pair & value /* r30 */) {
     // Local variables
     long n; // r31
 }
@@ -913,19 +1015,23 @@ unsigned long vector::size() {}
 struct pair * vector::begin() {}
 
 // Range: 0x80054998 -> 0x800549FC
-void * vector::vector(class vector * const this /* r30 */, const class vector & x /* r31 */) {}
+// this: r30
+vector::vector(const class vector & x /* r31 */) {}
 
 // Range: 0x800549FC -> 0x80054A60
-void * VectorBase::VectorBase(struct VectorBase * const this /* r30 */, unsigned long n /* r31 */) {}
+// this: r30
+VectorBase::VectorBase(unsigned long n /* r31 */) {}
 
 // Range: 0x80054A60 -> 0x80054A84
 class EOrderTableData * VectorBase::DoAllocate() {}
 
 // Range: 0x80054A84 -> 0x80054AE8
-void * vector::vector(class vector * const this /* r30 */, const class vector & x /* r31 */) {}
+// this: r30
+vector::vector(const class vector & x /* r31 */) {}
 
 // Range: 0x80054AE8 -> 0x80054B4C
-void * VectorBase::VectorBase(struct VectorBase * const this /* r30 */, unsigned long n /* r31 */) {}
+// this: r30
+VectorBase::VectorBase(unsigned long n /* r31 */) {}
 
 // Range: 0x80054B4C -> 0x80054B70
 unsigned int * VectorBase::DoAllocate() {}
@@ -934,28 +1040,34 @@ unsigned int * VectorBase::DoAllocate() {}
 unsigned long vector::size() {}
 
 // Range: 0x80054B88 -> 0x80054BEC
-void * vector::vector(class vector * const this /* r30 */, const class vector & x /* r31 */) {}
+// this: r30
+vector::vector(const class vector & x /* r31 */) {}
 
 // Range: 0x80054BEC -> 0x80054C50
-void * VectorBase::VectorBase(struct VectorBase * const this /* r30 */, unsigned long n /* r31 */) {}
+// this: r30
+VectorBase::VectorBase(unsigned long n /* r31 */) {}
 
 // Range: 0x80054C50 -> 0x80054C74
 struct pair * VectorBase::DoAllocate() {}
 
 // Range: 0x80054C74 -> 0x80054CD8
-void * vector::vector(class vector * const this /* r30 */, const class vector & x /* r31 */) {}
+// this: r30
+vector::vector(const class vector & x /* r31 */) {}
 
 // Range: 0x80054CD8 -> 0x80054D3C
-void * VectorBase::VectorBase(struct VectorBase * const this /* r30 */, unsigned long n /* r31 */) {}
+// this: r30
+VectorBase::VectorBase(unsigned long n /* r31 */) {}
 
 // Range: 0x80054D3C -> 0x80054D60
 struct pair * VectorBase::DoAllocate() {}
 
 // Range: 0x80054D60 -> 0x80054DC4
-void * vector::vector(class vector * const this /* r30 */, const class vector & x /* r31 */) {}
+// this: r30
+vector::vector(const class vector & x /* r31 */) {}
 
 // Range: 0x80054DC4 -> 0x80054E28
-void * VectorBase::VectorBase(struct VectorBase * const this /* r30 */, unsigned long n /* r31 */) {}
+// this: r30
+VectorBase::VectorBase(unsigned long n /* r31 */) {}
 
 // Range: 0x80054E28 -> 0x80054E4C
 struct pair * VectorBase::DoAllocate() {}
@@ -967,67 +1079,82 @@ struct pair * vector::end() {}
 struct pair * vector::begin() {}
 
 // Range: 0x80054E5C -> 0x80054EC8
-struct pair * vector::erase(class vector * const this /* r30 */, struct pair * position /* r31 */) {}
+// this: r30
+struct pair * vector::erase(struct pair * position /* r31 */) {}
 
 // Range: 0x80054EC8 -> 0x80054F30
-void * vector::~vector(class vector * const this /* r30 */) {}
+// this: r30
+vector::~vector() {}
 
 // Range: 0x80054F30 -> 0x80054FB8
-void * VectorBase::~VectorBase(struct VectorBase * const this /* r30 */) {}
+// this: r30
+VectorBase::~VectorBase() {}
 
 // Range: 0x80054FB8 -> 0x80055008
 void vector::DoDestroyValues(class CTilePt * first /* r30 */, class CTilePt * last /* r31 */) {}
 
 // Range: 0x80055168 -> 0x80055198
-void * vector::vector(class vector * const this /* r31 */) {}
+// this: r31
+vector::vector() {}
 
 // Range: 0x80055198 -> 0x800551DC
-void * VectorBase::VectorBase(struct VectorBase * const this /* r31 */) {}
+// this: r31
+VectorBase::VectorBase() {}
 
 // Range: 0x800551DC -> 0x800551E8
 void vector::clear() {}
 
 // Range: 0x800551E8 -> 0x80055278
-class CTilePt * vector::erase(class vector * const this /* r29 */, class CTilePt * first /* r30 */, class CTilePt * last /* r31 */) {
+// this: r29
+class CTilePt * vector::erase(class CTilePt * first /* r30 */, class CTilePt * last /* r31 */) {
     // Local variables
     class CTilePt * const position; // r0
 }
 
 // Range: 0x80055278 -> 0x800552E0
-void * vector::~vector(class vector * const this /* r30 */) {}
+// this: r30
+vector::~vector() {}
 
 // Range: 0x800552E0 -> 0x80055358
-void * VectorBase::~VectorBase(struct VectorBase * const this /* r30 */) {}
+// this: r30
+VectorBase::~VectorBase() {}
 
 // Range: 0x80055358 -> 0x8005535C
 void vector::DoDestroyValues() {}
 
 // Range: 0x8005535C -> 0x800553C4
-void * vector::~vector(class vector * const this /* r30 */) {}
+// this: r30
+vector::~vector() {}
 
 // Range: 0x800553C4 -> 0x8005543C
-void * VectorBase::~VectorBase(struct VectorBase * const this /* r30 */) {}
+// this: r30
+VectorBase::~VectorBase() {}
 
 // Range: 0x8005543C -> 0x80055440
 void vector::DoDestroyValues() {}
 
 // Range: 0x80055440 -> 0x80055470
-void * vector::vector(class vector * const this /* r31 */) {}
+// this: r31
+vector::vector() {}
 
 // Range: 0x80055470 -> 0x800554B4
-void * VectorBase::VectorBase(struct VectorBase * const this /* r31 */) {}
+// this: r31
+VectorBase::VectorBase() {}
 
 // Range: 0x800554B4 -> 0x800554E4
-void * vector::vector(class vector * const this /* r31 */) {}
+// this: r31
+vector::vector() {}
 
 // Range: 0x800554E4 -> 0x80055528
-void * VectorBase::VectorBase(struct VectorBase * const this /* r31 */) {}
+// this: r31
+VectorBase::VectorBase() {}
 
 // Range: 0x80055528 -> 0x80055534
 void vector::clear() {}
 
 // Range: 0x80055534 -> 0x800555B4
-class EInstance * * vector::erase(class vector * const this /* r29 */, class EInstance * * first /* r30 */, class EInstance * * last /* r31 */) {
+// this: r29
+class EInstance * * vector::erase(class EInstance * * first /* r30 */, class EInstance * * last /* r31 */) {
     // Local variables
     class EInstance * * const position; // r0
 }
@@ -1036,7 +1163,8 @@ class EInstance * * vector::erase(class vector * const this /* r29 */, class EIn
 void vector::clear() {}
 
 // Range: 0x800555C0 -> 0x80055640
-class ISimInstance * * vector::erase(class vector * const this /* r29 */, class ISimInstance * * first /* r30 */, class ISimInstance * * last /* r31 */) {
+// this: r29
+class ISimInstance * * vector::erase(class ISimInstance * * first /* r30 */, class ISimInstance * * last /* r31 */) {
     // Local variables
     class ISimInstance * * const position; // r0
 }
@@ -1045,13 +1173,13 @@ class ISimInstance * * vector::erase(class vector * const this /* r29 */, class 
 unsigned long vector::size() {}
 
 // Range: 0x80055658 -> 0x80055668
-class ISimInstance * & vector::__vc() {}
+class ISimInstance * & vector::operator[]() {}
 
 // Range: 0x80055668 -> 0x800556D4
 void vector::push_back(class ISimInstance * const & value /* r31 */) {}
 
 // Range: 0x800556D4 -> 0x800556E4
-class ISimInstance * const & vector::__vc() {}
+class ISimInstance * const & vector::operator[]() {}
 
 // Range: 0x800556E4 -> 0x80055750
 void vector::push_back(class EInstance * const & value /* r31 */) {}
@@ -1063,46 +1191,55 @@ class ISimInstance * * vector::end() {}
 class ISimInstance * * vector::begin() {}
 
 // Range: 0x80055760 -> 0x80055770
-class EInstance * const & vector::__vc() {}
+class EInstance * const & vector::operator[]() {}
 
 // Range: 0x80055770 -> 0x80055788
 unsigned long vector::size() {}
 
 // Range: 0x80055788 -> 0x800557F0
-void * vector::~vector(class vector * const this /* r30 */) {}
+// this: r30
+vector::~vector() {}
 
 // Range: 0x800557F0 -> 0x80055868
-void * VectorBase::~VectorBase(struct VectorBase * const this /* r30 */) {}
+// this: r30
+VectorBase::~VectorBase() {}
 
 // Range: 0x80055868 -> 0x8005586C
 void vector::DoDestroyValues() {}
 
 // Range: 0x8005586C -> 0x800558D4
-void * vector::~vector(class vector * const this /* r30 */) {}
+// this: r30
+vector::~vector() {}
 
 // Range: 0x800558D4 -> 0x8005594C
-void * VectorBase::~VectorBase(struct VectorBase * const this /* r30 */) {}
+// this: r30
+VectorBase::~VectorBase() {}
 
 // Range: 0x8005594C -> 0x80055950
 void vector::DoDestroyValues() {}
 
 // Range: 0x80055950 -> 0x80055980
-void * vector::vector(class vector * const this /* r31 */) {}
+// this: r31
+vector::vector() {}
 
 // Range: 0x80055980 -> 0x800559C4
-void * VectorBase::VectorBase(struct VectorBase * const this /* r31 */) {}
+// this: r31
+VectorBase::VectorBase() {}
 
 // Range: 0x800559C4 -> 0x800559F4
-void * vector::vector(class vector * const this /* r31 */) {}
+// this: r31
+vector::vector() {}
 
 // Range: 0x800559F4 -> 0x80055A38
-void * VectorBase::VectorBase(struct VectorBase * const this /* r31 */) {}
+// this: r31
+VectorBase::VectorBase() {}
 
 // Range: 0x80055A38 -> 0x80055A44
 void vector::clear() {}
 
 // Range: 0x80055A44 -> 0x80055AC4
-struct PatternSellCount * vector::erase(class vector * const this /* r29 */, struct PatternSellCount * first /* r30 */, struct PatternSellCount * last /* r31 */) {
+// this: r29
+struct PatternSellCount * vector::erase(struct PatternSellCount * first /* r30 */, struct PatternSellCount * last /* r31 */) {
     // Local variables
     struct PatternSellCount * const position; // r0
 }
@@ -1111,7 +1248,8 @@ struct PatternSellCount * vector::erase(class vector * const this /* r29 */, str
 void vector::clear() {}
 
 // Range: 0x80055AD0 -> 0x80055B50
-struct FenceSellCount * vector::erase(class vector * const this /* r29 */, struct FenceSellCount * first /* r30 */, struct FenceSellCount * last /* r31 */) {
+// this: r29
+struct FenceSellCount * vector::erase(struct FenceSellCount * first /* r30 */, struct FenceSellCount * last /* r31 */) {
     // Local variables
     struct FenceSellCount * const position; // r0
 }
@@ -1120,7 +1258,7 @@ struct FenceSellCount * vector::erase(class vector * const this /* r29 */, struc
 void vector::push_back(const struct FenceSellCount & value /* r31 */) {}
 
 // Range: 0x80055BC4 -> 0x80055BD4
-struct FenceSellCount & vector::__vc() {}
+struct FenceSellCount & vector::operator[]() {}
 
 // Range: 0x80055BD4 -> 0x80055BEC
 unsigned long vector::size() {}
@@ -1135,7 +1273,8 @@ class CTilePt * vector::end() {}
 class CTilePt * vector::begin() {}
 
 // Range: 0x80055CF8 -> 0x80055E6C
-void vector::DoInsertValue(class vector * const this /* r31 */, struct pair * position /* r26 */, const struct pair & value /* r27 */) {
+// this: r31
+void vector::DoInsertValue(struct pair * position /* r26 */, const struct pair & value /* r27 */) {
     // Local variables
     const struct pair * pValue; // [invalid]
     unsigned long nNewSize; // r29
@@ -1153,7 +1292,8 @@ struct pair * VectorBase::DoAllocate() {}
 unsigned long VectorBase::GetNewCapacity() {}
 
 // Range: 0x80055EBC -> 0x80055FAC
-void vector::reserve(class vector * const this /* r29 */, unsigned long n /* r30 */) {
+// this: r29
+void vector::reserve(unsigned long n /* r30 */) {
     // Local variables
     struct pair * const pNewData; // r31
     long nPrevSize; // r0
@@ -1169,7 +1309,8 @@ struct pair * vector::DoRealloc(struct pair * first /* r29 */, struct pair * las
 unsigned char vector::empty() {}
 
 // Range: 0x8005601C -> 0x8005616C
-void vector::DoInsertValue(class vector * const this /* r31 */, unsigned int * position /* r26 */, const unsigned int & value /* r27 */) {
+// this: r31
+void vector::DoInsertValue(unsigned int * position /* r26 */, const unsigned int & value /* r27 */) {
     // Local variables
     const unsigned int * pValue; // [invalid]
     unsigned long nNewSize; // r29
@@ -1184,7 +1325,8 @@ void VectorBase::DoFree() {}
 unsigned long VectorBase::GetNewCapacity() {}
 
 // Range: 0x80056198 -> 0x800562E0
-class vector & vector::__as(class vector * const this /* r30 */, const class vector & x /* r29 */) {
+// this: r30
+class vector & vector::operator=(const class vector & x /* r29 */) {
     // Local variables
     unsigned long n; // r31
     unsigned int * const pNewData; // r29
@@ -1198,7 +1340,8 @@ unsigned int * vector::DoRealloc(unsigned int * first /* r29 */, unsigned int * 
 }
 
 // Range: 0x80056338 -> 0x8005649C
-void vector::DoInsertValue(class vector * const this /* r31 */, struct InvStock * position /* r26 */, const struct InvStock & value /* r27 */) {
+// this: r31
+void vector::DoInsertValue(struct InvStock * position /* r26 */, const struct InvStock & value /* r27 */) {
     // Local variables
     const struct InvStock * pValue; // [invalid]
     unsigned long nNewSize; // r29
@@ -1216,7 +1359,8 @@ struct InvStock * VectorBase::DoAllocate() {}
 unsigned long VectorBase::GetNewCapacity() {}
 
 // Range: 0x800564EC -> 0x800565AC
-void vector::reserve(class vector * const this /* r31 */, unsigned long n /* r29 */) {
+// this: r31
+void vector::reserve(unsigned long n /* r29 */) {
     // Local variables
     struct InvStock * const pNewData; // r30
     long nPrevSize; // r0
@@ -1229,7 +1373,8 @@ struct InvStock * vector::DoRealloc(struct InvStock * first /* r29 */, struct In
 }
 
 // Range: 0x80056604 -> 0x80056768
-void vector::DoInsertValue(class vector * const this /* r31 */, struct FenceSellCount * position /* r26 */, const struct FenceSellCount & value /* r27 */) {
+// this: r31
+void vector::DoInsertValue(struct FenceSellCount * position /* r26 */, const struct FenceSellCount & value /* r27 */) {
     // Local variables
     const struct FenceSellCount * pValue; // [invalid]
     unsigned long nNewSize; // r29
@@ -1247,7 +1392,8 @@ struct FenceSellCount * VectorBase::DoAllocate() {}
 unsigned long VectorBase::GetNewCapacity() {}
 
 // Range: 0x800567B8 -> 0x80056878
-void vector::reserve(class vector * const this /* r31 */, unsigned long n /* r29 */) {
+// this: r31
+void vector::reserve(unsigned long n /* r29 */) {
     // Local variables
     struct FenceSellCount * const pNewData; // r30
     long nPrevSize; // r0
@@ -1260,7 +1406,8 @@ struct FenceSellCount * vector::DoRealloc(struct FenceSellCount * first /* r29 *
 }
 
 // Range: 0x800568D0 -> 0x80056A18
-class vector & vector::__as(class vector * const this /* r30 */, const class vector & x /* r29 */) {
+// this: r30
+class vector & vector::operator=(const class vector & x /* r29 */) {
     // Local variables
     unsigned long n; // r31
     struct FenceSellCount * const pNewData; // r29
@@ -1268,7 +1415,8 @@ class vector & vector::__as(class vector * const this /* r30 */, const class vec
 }
 
 // Range: 0x80056A18 -> 0x80056B7C
-void vector::DoInsertValue(class vector * const this /* r31 */, struct PatternSellCount * position /* r26 */, const struct PatternSellCount & value /* r27 */) {
+// this: r31
+void vector::DoInsertValue(struct PatternSellCount * position /* r26 */, const struct PatternSellCount & value /* r27 */) {
     // Local variables
     const struct PatternSellCount * pValue; // [invalid]
     unsigned long nNewSize; // r29
@@ -1286,7 +1434,8 @@ struct PatternSellCount * VectorBase::DoAllocate() {}
 unsigned long VectorBase::GetNewCapacity() {}
 
 // Range: 0x80056BCC -> 0x80056C8C
-void vector::reserve(class vector * const this /* r31 */, unsigned long n /* r29 */) {
+// this: r31
+void vector::reserve(unsigned long n /* r29 */) {
     // Local variables
     struct PatternSellCount * const pNewData; // r30
     long nPrevSize; // r0
@@ -1299,7 +1448,8 @@ struct PatternSellCount * vector::DoRealloc(struct PatternSellCount * first /* r
 }
 
 // Range: 0x80056CE4 -> 0x80056E2C
-class vector & vector::__as(class vector * const this /* r30 */, const class vector & x /* r29 */) {
+// this: r30
+class vector & vector::operator=(const class vector & x /* r29 */) {
     // Local variables
     unsigned long n; // r31
     struct PatternSellCount * const pNewData; // r29
@@ -1307,7 +1457,8 @@ class vector & vector::__as(class vector * const this /* r30 */, const class vec
 }
 
 // Range: 0x80056E2C -> 0x80056FF4
-void vector::DoInsertValues(class vector * const this /* r30 */, int * position /* r31 */, unsigned long n /* r25 */, const int & value /* r26 */) {
+// this: r30
+void vector::DoInsertValues(int * position /* r31 */, unsigned long n /* r25 */, const int & value /* r26 */) {
     // Local variables
     int temp; // r1+0x8
     unsigned long nExtra; // r28
@@ -1319,7 +1470,8 @@ void vector::DoInsertValues(class vector * const this /* r30 */, int * position 
 }
 
 // Range: 0x80056FF4 -> 0x8005714C
-void vector::DoInsertValue(class vector * const this /* r31 */, signed short * position /* r26 */, const signed short & value /* r27 */) {
+// this: r31
+void vector::DoInsertValue(signed short * position /* r26 */, const signed short & value /* r27 */) {
     // Local variables
     const signed short * pValue; // [invalid]
     unsigned long nNewSize; // r29
@@ -1337,7 +1489,8 @@ signed short * VectorBase::DoAllocate() {}
 unsigned long VectorBase::GetNewCapacity() {}
 
 // Range: 0x8005719C -> 0x80057264
-void vector::reserve(class vector * const this /* r31 */, unsigned long n /* r29 */) {
+// this: r31
+void vector::reserve(unsigned long n /* r29 */) {
     // Local variables
     signed short * const pNewData; // r30
     long nPrevSize; // r0
@@ -1350,7 +1503,8 @@ signed short * vector::DoRealloc(signed short * first /* r29 */, signed short * 
 }
 
 // Range: 0x800572BC -> 0x80057484
-void vector::DoInsertValues(class vector * const this /* r30 */, class Interactor * * position /* r31 */, unsigned long n /* r25 */, class Interactor * const & value /* r26 */) {
+// this: r30
+void vector::DoInsertValues(class Interactor * * position /* r31 */, unsigned long n /* r25 */, class Interactor * const & value /* r26 */) {
     // Local variables
     class Interactor * const temp; // r1+0x8
     unsigned long nExtra; // r28
@@ -1371,7 +1525,8 @@ class Interactor * * VectorBase::DoAllocate() {}
 unsigned long VectorBase::GetNewCapacity() {}
 
 // Range: 0x800574D4 -> 0x8005761C
-class vector & vector::__as(class vector * const this /* r30 */, const class vector & x /* r29 */) {
+// this: r30
+class vector & vector::operator=(const class vector & x /* r29 */) {
     // Local variables
     unsigned long n; // r31
     class Interactor * * const pNewData; // r29
@@ -1388,7 +1543,8 @@ class Interactor * * vector::DoRealloc(class Interactor * * first /* r29 */, cla
 unsigned long vector::size() {}
 
 // Range: 0x8005768C -> 0x80057858
-void vector::DoInsertValues(class vector * const this /* r29 */, struct ActiveInteractor * position /* r30 */, unsigned long n /* r31 */, const struct ActiveInteractor & value /* r25 */) {
+// this: r29
+void vector::DoInsertValues(struct ActiveInteractor * position /* r30 */, unsigned long n /* r31 */, const struct ActiveInteractor & value /* r25 */) {
     // Local variables
     struct ActiveInteractor temp; // r1+0x8
     unsigned long nExtra; // r28
@@ -1409,7 +1565,8 @@ struct ActiveInteractor * VectorBase::DoAllocate() {}
 unsigned long VectorBase::GetNewCapacity() {}
 
 // Range: 0x800578A8 -> 0x80057968
-void vector::reserve(class vector * const this /* r31 */, unsigned long n /* r29 */) {
+// this: r31
+void vector::reserve(unsigned long n /* r29 */) {
     // Local variables
     struct ActiveInteractor * const pNewData; // r30
     long nPrevSize; // r0
@@ -1422,7 +1579,8 @@ struct ActiveInteractor * vector::DoRealloc(struct ActiveInteractor * first /* r
 }
 
 // Range: 0x800579C0 -> 0x80057B98
-void vector::DoInsertValues(class vector * const this /* r29 */, class vector * position /* r30 */, unsigned long n /* r31 */, const class vector & value /* r25 */) {
+// this: r29
+void vector::DoInsertValues(class vector * position /* r30 */, unsigned long n /* r31 */, const class vector & value /* r25 */) {
     // Local variables
     class vector temp; // r1+0x8
     unsigned long nExtra; // r28
@@ -1443,13 +1601,16 @@ class vector * VectorBase::DoAllocate() {}
 unsigned long VectorBase::GetNewCapacity() {}
 
 // Range: 0x80057BE8 -> 0x80057C4C
-void * vector::vector(class vector * const this /* r30 */, const class vector & x /* r31 */) {}
+// this: r30
+vector::vector(const class vector & x /* r31 */) {}
 
 // Range: 0x80057C4C -> 0x80057CB0
-void * VectorBase::VectorBase(struct VectorBase * const this /* r30 */, unsigned long n /* r31 */) {}
+// this: r30
+VectorBase::VectorBase(unsigned long n /* r31 */) {}
 
 // Range: 0x80057CB0 -> 0x80057D70
-void vector::reserve(class vector * const this /* r31 */, unsigned long n /* r29 */) {
+// this: r31
+void vector::reserve(unsigned long n /* r29 */) {
     // Local variables
     class vector * const pNewData; // r30
     long nPrevSize; // r0
@@ -1462,7 +1623,8 @@ class vector * vector::DoRealloc(class vector * first /* r29 */, class vector * 
 }
 
 // Range: 0x80057DC8 -> 0x80057F94
-void vector::DoInsertValues(class vector * const this /* r29 */, struct pair * position /* r30 */, unsigned long n /* r31 */, const struct pair & value /* r25 */) {
+// this: r29
+void vector::DoInsertValues(struct pair * position /* r30 */, unsigned long n /* r31 */, const struct pair & value /* r25 */) {
     // Local variables
     struct pair temp; // r1+0x8
     unsigned long nExtra; // r28
@@ -1483,7 +1645,8 @@ struct pair * VectorBase::DoAllocate() {}
 unsigned long VectorBase::GetNewCapacity() {}
 
 // Range: 0x80057FE4 -> 0x800580A4
-void vector::reserve(class vector * const this /* r31 */, unsigned long n /* r29 */) {
+// this: r31
+void vector::reserve(unsigned long n /* r29 */) {
     // Local variables
     struct pair * const pNewData; // r30
     long nPrevSize; // r0
@@ -1496,7 +1659,8 @@ struct pair * vector::DoRealloc(struct pair * first /* r29 */, struct pair * las
 }
 
 // Range: 0x800580FC -> 0x800582C8
-void vector::DoInsertValues(class vector * const this /* r29 */, struct InteractorInfo * position /* r30 */, unsigned long n /* r31 */, const struct InteractorInfo & value /* r25 */) {
+// this: r29
+void vector::DoInsertValues(struct InteractorInfo * position /* r30 */, unsigned long n /* r31 */, const struct InteractorInfo & value /* r25 */) {
     // Local variables
     struct InteractorInfo temp; // r1+0x8
     unsigned long nExtra; // r28
@@ -1517,7 +1681,8 @@ struct InteractorInfo * VectorBase::DoAllocate() {}
 unsigned long VectorBase::GetNewCapacity() {}
 
 // Range: 0x80058318 -> 0x800583D8
-void vector::reserve(class vector * const this /* r31 */, unsigned long n /* r29 */) {
+// this: r31
+void vector::reserve(unsigned long n /* r29 */) {
     // Local variables
     struct InteractorInfo * const pNewData; // r30
     long nPrevSize; // r0
@@ -1530,7 +1695,8 @@ struct InteractorInfo * vector::DoRealloc(struct InteractorInfo * first /* r29 *
 }
 
 // Range: 0x80058430 -> 0x800585AC
-void vector::DoInsertValue(class vector * const this /* r31 */, class EOrderTableData * position /* r26 */, const class EOrderTableData & value /* r27 */) {
+// this: r31
+void vector::DoInsertValue(class EOrderTableData * position /* r26 */, const class EOrderTableData & value /* r27 */) {
     // Local variables
     const class EOrderTableData * pValue; // [invalid]
     unsigned long nNewSize; // r29
@@ -1545,7 +1711,8 @@ void VectorBase::DoFree() {}
 unsigned long VectorBase::GetNewCapacity() {}
 
 // Range: 0x800585D8 -> 0x80058768
-class vector & vector::__as(class vector * const this /* r29 */, const class vector & x /* r30 */) {
+// this: r29
+class vector & vector::operator=(const class vector & x /* r30 */) {
     // Local variables
     unsigned long n; // r31
     class EOrderTableData * const pNewData; // r30
@@ -1559,7 +1726,8 @@ class EOrderTableData * vector::DoRealloc(class EOrderTableData * first /* r29 *
 }
 
 // Range: 0x800587C0 -> 0x80058914
-void vector::DoInsertValue(class vector * const this /* r31 */, struct pair * position /* r26 */, const struct pair & value /* r27 */) {
+// this: r31
+void vector::DoInsertValue(struct pair * position /* r26 */, const struct pair & value /* r27 */) {
     // Local variables
     const struct pair * pValue; // [invalid]
     unsigned long nNewSize; // r29
@@ -1574,7 +1742,8 @@ void VectorBase::DoFree() {}
 unsigned long VectorBase::GetNewCapacity() {}
 
 // Range: 0x80058940 -> 0x80058A00
-void vector::reserve(class vector * const this /* r31 */, unsigned long n /* r29 */) {
+// this: r31
+void vector::reserve(unsigned long n /* r29 */) {
     // Local variables
     struct pair * const pNewData; // r30
     long nPrevSize; // r0
@@ -1590,7 +1759,8 @@ struct pair * vector::DoRealloc(struct pair * first /* r29 */, struct pair * las
 unsigned char vector::empty() {}
 
 // Range: 0x80058A70 -> 0x80058BB8
-class vector & vector::__as(class vector * const this /* r30 */, const class vector & x /* r29 */) {
+// this: r30
+class vector & vector::operator=(const class vector & x /* r29 */) {
     // Local variables
     unsigned long n; // r31
     struct pair * const pNewData; // r29
@@ -1598,7 +1768,8 @@ class vector & vector::__as(class vector * const this /* r30 */, const class vec
 }
 
 // Range: 0x80058BB8 -> 0x80058D0C
-void vector::DoInsertValue(class vector * const this /* r31 */, struct pair * position /* r26 */, const struct pair & value /* r27 */) {
+// this: r31
+void vector::DoInsertValue(struct pair * position /* r26 */, const struct pair & value /* r27 */) {
     // Local variables
     const struct pair * pValue; // [invalid]
     unsigned long nNewSize; // r29
@@ -1613,7 +1784,8 @@ void VectorBase::DoFree() {}
 unsigned long VectorBase::GetNewCapacity() {}
 
 // Range: 0x80058D38 -> 0x80058DF8
-void vector::reserve(class vector * const this /* r31 */, unsigned long n /* r29 */) {
+// this: r31
+void vector::reserve(unsigned long n /* r29 */) {
     // Local variables
     struct pair * const pNewData; // r30
     long nPrevSize; // r0
@@ -1629,7 +1801,8 @@ struct pair * vector::DoRealloc(struct pair * first /* r29 */, struct pair * las
 unsigned char vector::empty() {}
 
 // Range: 0x80058E68 -> 0x80058FB0
-class vector & vector::__as(class vector * const this /* r30 */, const class vector & x /* r29 */) {
+// this: r30
+class vector & vector::operator=(const class vector & x /* r29 */) {
     // Local variables
     unsigned long n; // r31
     struct pair * const pNewData; // r29
@@ -1646,7 +1819,8 @@ struct pair * vector::DoRealloc(struct pair * first /* r29 */, struct pair * las
 }
 
 // Range: 0x80059020 -> 0x80059168
-class vector & vector::__as(class vector * const this /* r30 */, const class vector & x /* r29 */) {
+// this: r30
+class vector & vector::operator=(const class vector & x /* r29 */) {
     // Local variables
     unsigned long n; // r31
     struct pair * const pNewData; // r29
@@ -1654,7 +1828,8 @@ class vector & vector::__as(class vector * const this /* r30 */, const class vec
 }
 
 // Range: 0x80059168 -> 0x800592BC
-void vector::DoInsertValue(class vector * const this /* r31 */, struct pair * position /* r26 */, const struct pair & value /* r27 */) {
+// this: r31
+void vector::DoInsertValue(struct pair * position /* r26 */, const struct pair & value /* r27 */) {
     // Local variables
     const struct pair * pValue; // [invalid]
     unsigned long nNewSize; // r29
@@ -1672,7 +1847,8 @@ struct pair * VectorBase::DoAllocate() {}
 unsigned long VectorBase::GetNewCapacity() {}
 
 // Range: 0x8005930C -> 0x800593CC
-void vector::reserve(class vector * const this /* r31 */, unsigned long n /* r29 */) {
+// this: r31
+void vector::reserve(unsigned long n /* r29 */) {
     // Local variables
     struct pair * const pNewData; // r30
     long nPrevSize; // r0
@@ -1688,7 +1864,8 @@ struct pair * vector::DoRealloc(struct pair * first /* r29 */, struct pair * las
 unsigned char vector::empty() {}
 
 // Range: 0x8005943C -> 0x8005958C
-void vector::DoInsertValue(class vector * const this /* r31 */, class ISimInstance * * position /* r26 */, class ISimInstance * const & value /* r27 */) {
+// this: r31
+void vector::DoInsertValue(class ISimInstance * * position /* r26 */, class ISimInstance * const & value /* r27 */) {
     // Local variables
     class ISimInstance * const * pValue; // [invalid]
     unsigned long nNewSize; // r29
@@ -1709,7 +1886,8 @@ unsigned long VectorBase::GetNewCapacity() {}
 unsigned char vector::empty() {}
 
 // Range: 0x800595F4 -> 0x80059744
-void vector::DoInsertValue(class vector * const this /* r31 */, class EInstance * * position /* r26 */, class EInstance * const & value /* r27 */) {
+// this: r31
+void vector::DoInsertValue(class EInstance * * position /* r26 */, class EInstance * const & value /* r27 */) {
     // Local variables
     class EInstance * const * pValue; // [invalid]
     unsigned long nNewSize; // r29
@@ -1730,7 +1908,8 @@ unsigned long VectorBase::GetNewCapacity() {}
 unsigned char vector::empty() {}
 
 // Range: 0x800597AC -> 0x8005991C
-void vector::DoInsertValue(class vector * const this /* r31 */, class CTilePt * position /* r26 */, const class CTilePt & value /* r27 */) {
+// this: r31
+void vector::DoInsertValue(class CTilePt * position /* r26 */, const class CTilePt & value /* r27 */) {
     // Local variables
     const class CTilePt * pValue; // [invalid]
     unsigned long nNewSize; // r29
@@ -1748,7 +1927,8 @@ class CTilePt * VectorBase::DoAllocate() {}
 unsigned long VectorBase::GetNewCapacity() {}
 
 // Range: 0x80059974 -> 0x80059A60
-void vector::reserve(class vector * const this /* r29 */, unsigned long n /* r30 */) {
+// this: r29
+void vector::reserve(unsigned long n /* r30 */) {
     // Local variables
     class CTilePt * const pNewData; // r31
     long nPrevSize; // r3
@@ -1764,29 +1944,27 @@ class CTilePt * vector::DoRealloc(class CTilePt * first /* r29 */, class CTilePt
 unsigned char vector::empty() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\common\EASTL\1.03.00\include\EASTL\vector.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x80094CDC -> 0x800955B0
-*/
 // Range: 0x80094CDC -> 0x80094D44
-void * vector::~vector(class vector * const this /* r30 */) {}
+// this: r30
+vector::~vector() {}
 
 // Range: 0x80094D44 -> 0x80094DD0
-void * VectorBase::~VectorBase(struct VectorBase * const this /* r30 */) {}
+// this: r30
+VectorBase::~VectorBase() {}
 
 // Range: 0x80094DD0 -> 0x80094DD4
 void vector::DoDestroyValues() {}
 
 // Range: 0x80094F8C -> 0x80094FBC
-void * vector::vector(class vector * const this /* r31 */) {}
+// this: r31
+vector::vector() {}
 
 // Range: 0x80094FBC -> 0x80095000
-void * VectorBase::VectorBase(struct VectorBase * const this /* r31 */) {}
+// this: r31
+VectorBase::VectorBase() {}
 
 // Range: 0x80095000 -> 0x80095010
-struct MidLotObject & vector::__vc() {}
+struct MidLotObject & vector::operator[]() {}
 
 // Range: 0x80095010 -> 0x8009503C
 unsigned long vector::size() {}
@@ -1801,13 +1979,15 @@ void vector::push_back(class EMidLotInstance * const & value /* r31 */) {}
 void vector::clear() {}
 
 // Range: 0x80095120 -> 0x800951A0
-class EMidLotInstance * * vector::erase(class vector * const this /* r29 */, class EMidLotInstance * * first /* r30 */, class EMidLotInstance * * last /* r31 */) {
+// this: r29
+class EMidLotInstance * * vector::erase(class EMidLotInstance * * first /* r30 */, class EMidLotInstance * * last /* r31 */) {
     // Local variables
     class EMidLotInstance * * const position; // r0
 }
 
 // Range: 0x800951A0 -> 0x800952F0
-void vector::DoInsertValue(class vector * const this /* r31 */, class EMidLotInstance * * position /* r26 */, class EMidLotInstance * const & value /* r27 */) {
+// this: r31
+void vector::DoInsertValue(class EMidLotInstance * * position /* r26 */, class EMidLotInstance * const & value /* r27 */) {
     // Local variables
     class EMidLotInstance * const * pValue; // [invalid]
     unsigned long nNewSize; // r29
@@ -1825,7 +2005,8 @@ class EMidLotInstance * * VectorBase::DoAllocate() {}
 unsigned long VectorBase::GetNewCapacity() {}
 
 // Range: 0x80095340 -> 0x800954BC
-void vector::DoInsertValue(class vector * const this /* r31 */, struct MidLotObject * position /* r26 */, const struct MidLotObject & value /* r27 */) {
+// this: r31
+void vector::DoInsertValue(struct MidLotObject * position /* r26 */, const struct MidLotObject & value /* r27 */) {
     // Local variables
     const struct MidLotObject * pValue; // [invalid]
     unsigned long nNewSize; // r29
@@ -1843,17 +2024,12 @@ struct MidLotObject * VectorBase::DoAllocate() {}
 unsigned long VectorBase::GetNewCapacity() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\common\EASTL\1.03.00\include\EASTL\vector.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x8009E2B0 -> 0x8009F064
-*/
 // Range: 0x8009E2B0 -> 0x8009E2BC
 void vector::clear() {}
 
 // Range: 0x8009E2BC -> 0x8009E33C
-class PaneItem * * vector::erase(class vector * const this /* r29 */, class PaneItem * * first /* r30 */, class PaneItem * * last /* r31 */) {
+// this: r29
+class PaneItem * * vector::erase(class PaneItem * * first /* r30 */, class PaneItem * * last /* r31 */) {
     // Local variables
     class PaneItem * * const position; // r0
 }
@@ -1868,22 +2044,27 @@ class PaneItem * * vector::end() {}
 class PaneItem * * vector::begin() {}
 
 // Range: 0x8009E350 -> 0x8009E3B8
-void * vector::~vector(class vector * const this /* r30 */) {}
+// this: r30
+vector::~vector() {}
 
 // Range: 0x8009E3B8 -> 0x8009E430
-void * VectorBase::~VectorBase(struct VectorBase * const this /* r30 */) {}
+// this: r30
+VectorBase::~VectorBase() {}
 
 // Range: 0x8009E430 -> 0x8009E4D0
-void vector::swap(class vector * const this /* r30 */, class vector & x /* r31 */) {
+// this: r30
+void vector::swap(class vector & x /* r31 */) {
     // Local variables
     class vector temp; // r1+0x8
 }
 
 // Range: 0x8009E4D0 -> 0x8009E534
-void * vector::vector(class vector * const this /* r30 */, const class vector & x /* r31 */) {}
+// this: r30
+vector::vector(const class vector & x /* r31 */) {}
 
 // Range: 0x8009E534 -> 0x8009E598
-void * VectorBase::VectorBase(struct VectorBase * const this /* r30 */, unsigned long n /* r31 */) {}
+// this: r30
+VectorBase::VectorBase(unsigned long n /* r31 */) {}
 
 // Range: 0x8009E598 -> 0x8009E5BC
 class PaneItem * * VectorBase::DoAllocate() {}
@@ -1892,34 +2073,41 @@ class PaneItem * * VectorBase::DoAllocate() {}
 unsigned long vector::size() {}
 
 // Range: 0x8009E5D4 -> 0x8009E604
-void * vector::vector(class vector * const this /* r31 */) {}
+// this: r31
+vector::vector() {}
 
 // Range: 0x8009E604 -> 0x8009E648
-void * VectorBase::VectorBase(struct VectorBase * const this /* r31 */) {}
+// this: r31
+VectorBase::VectorBase() {}
 
 // Range: 0x8009E648 -> 0x8009E6B4
 void vector::push_back(class PaneItem * const & value /* r31 */) {}
 
 // Range: 0x8009E6B4 -> 0x8009E71C
-void * vector::~vector(class vector * const this /* r30 */) {}
+// this: r30
+vector::~vector() {}
 
 // Range: 0x8009E71C -> 0x8009E794
-void * VectorBase::~VectorBase(struct VectorBase * const this /* r30 */) {}
+// this: r30
+VectorBase::~VectorBase() {}
 
 // Range: 0x8009E794 -> 0x8009E798
 void vector::DoDestroyValues() {}
 
 // Range: 0x8009E798 -> 0x8009E838
-void vector::swap(class vector * const this /* r30 */, class vector & x /* r31 */) {
+// this: r30
+void vector::swap(class vector & x /* r31 */) {
     // Local variables
     class vector temp; // r1+0x8
 }
 
 // Range: 0x8009E838 -> 0x8009E89C
-void * vector::vector(class vector * const this /* r30 */, const class vector & x /* r31 */) {}
+// this: r30
+vector::vector(const class vector & x /* r31 */) {}
 
 // Range: 0x8009E89C -> 0x8009E900
-void * VectorBase::VectorBase(struct VectorBase * const this /* r30 */, unsigned long n /* r31 */) {}
+// this: r30
+VectorBase::VectorBase(unsigned long n /* r31 */) {}
 
 // Range: 0x8009E900 -> 0x8009E924
 class WrapperPaneBase * * VectorBase::DoAllocate() {}
@@ -1928,10 +2116,12 @@ class WrapperPaneBase * * VectorBase::DoAllocate() {}
 unsigned long vector::size() {}
 
 // Range: 0x8009E93C -> 0x8009E96C
-void * vector::vector(class vector * const this /* r31 */) {}
+// this: r31
+vector::vector() {}
 
 // Range: 0x8009E96C -> 0x8009E9B0
-void * VectorBase::VectorBase(struct VectorBase * const this /* r31 */) {}
+// this: r31
+VectorBase::VectorBase() {}
 
 // Range: 0x8009E9B0 -> 0x8009E9B8
 class WrapperPaneBase * * vector::end() {}
@@ -1943,7 +2133,8 @@ class WrapperPaneBase * * vector::begin() {}
 void vector::push_back(class WrapperPaneBase * const & value /* r31 */) {}
 
 // Range: 0x8009EA2C -> 0x8009EB7C
-void vector::DoInsertValue(class vector * const this /* r31 */, class PaneItem * * position /* r26 */, class PaneItem * const & value /* r27 */) {
+// this: r31
+void vector::DoInsertValue(class PaneItem * * position /* r26 */, class PaneItem * const & value /* r27 */) {
     // Local variables
     class PaneItem * const * pValue; // [invalid]
     unsigned long nNewSize; // r29
@@ -1958,7 +2149,8 @@ void VectorBase::DoFree() {}
 unsigned long VectorBase::GetNewCapacity() {}
 
 // Range: 0x8009EBA8 -> 0x8009ECF0
-class vector & vector::__as(class vector * const this /* r30 */, const class vector & x /* r29 */) {
+// this: r30
+class vector & vector::operator=(const class vector & x /* r29 */) {
     // Local variables
     unsigned long n; // r31
     class PaneItem * * const pNewData; // r29
@@ -1972,7 +2164,8 @@ class PaneItem * * vector::DoRealloc(class PaneItem * * first /* r29 */, class P
 }
 
 // Range: 0x8009ED48 -> 0x8009EE98
-void vector::DoInsertValue(class vector * const this /* r31 */, class WrapperPaneBase * * position /* r26 */, class WrapperPaneBase * const & value /* r27 */) {
+// this: r31
+void vector::DoInsertValue(class WrapperPaneBase * * position /* r26 */, class WrapperPaneBase * const & value /* r27 */) {
     // Local variables
     class WrapperPaneBase * const * pValue; // [invalid]
     unsigned long nNewSize; // r29
@@ -1987,7 +2180,8 @@ void VectorBase::DoFree() {}
 unsigned long VectorBase::GetNewCapacity() {}
 
 // Range: 0x8009EEC4 -> 0x8009F00C
-class vector & vector::__as(class vector * const this /* r30 */, const class vector & x /* r29 */) {
+// this: r30
+class vector & vector::operator=(const class vector & x /* r29 */) {
     // Local variables
     unsigned long n; // r31
     class WrapperPaneBase * * const pNewData; // r29
@@ -2001,86 +2195,95 @@ class WrapperPaneBase * * vector::DoRealloc(class WrapperPaneBase * * first /* r
 }
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\common\EASTL\1.03.00\include\EASTL\vector.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x800AA000 -> 0x800B329C
-*/
 // Range: 0x800AA000 -> 0x800AA068
-void * vector::~vector(class vector * const this /* r30 */) {}
+// this: r30
+vector::~vector() {}
 
 // Range: 0x800AA068 -> 0x800AA0E0
-void * VectorBase::~VectorBase(struct VectorBase * const this /* r30 */) {}
+// this: r30
+VectorBase::~VectorBase() {}
 
 // Range: 0x800AA0E0 -> 0x800AA0E4
 void vector::DoDestroyValues() {}
 
 // Range: 0x800AA128 -> 0x800AA158
-void * vector::vector(class vector * const this /* r31 */) {}
+// this: r31
+vector::vector() {}
 
 // Range: 0x800AA158 -> 0x800AA19C
-void * VectorBase::VectorBase(struct VectorBase * const this /* r31 */) {}
+// this: r31
+VectorBase::VectorBase() {}
 
 // Range: 0x800AA19C -> 0x800AA208
 void vector::push_back(class PassiveInfluenceItem * const & value /* r31 */) {}
 
 // Range: 0x800AA208 -> 0x800AA218
-struct TilePt & vector::__vc() {}
+struct TilePt & vector::operator[]() {}
 
 // Range: 0x800AA218 -> 0x800AA230
 unsigned long vector::size() {}
 
 // Range: 0x800AA230 -> 0x800AA298
-void * vector::~vector(class vector * const this /* r30 */) {}
+// this: r30
+vector::~vector() {}
 
 // Range: 0x800AA298 -> 0x800AA310
-void * VectorBase::~VectorBase(struct VectorBase * const this /* r30 */) {}
+// this: r30
+VectorBase::~VectorBase() {}
 
 // Range: 0x800AA310 -> 0x800AA314
 void vector::DoDestroyValues() {}
 
 // Range: 0x800AA314 -> 0x800AA3B4
-void vector::swap(class vector * const this /* r30 */, class vector & x /* r31 */) {
+// this: r30
+void vector::swap(class vector & x /* r31 */) {
     // Local variables
     class vector temp; // r1+0x8
 }
 
 // Range: 0x800AA3B4 -> 0x800AA418
-void * vector::vector(class vector * const this /* r30 */, const class vector & x /* r31 */) {}
+// this: r30
+vector::vector(const class vector & x /* r31 */) {}
 
 // Range: 0x800AA418 -> 0x800AA47C
-void * VectorBase::VectorBase(struct VectorBase * const this /* r30 */, unsigned long n /* r31 */) {}
+// this: r30
+VectorBase::VectorBase(unsigned long n /* r31 */) {}
 
 // Range: 0x800AA47C -> 0x800AA4A0
 struct TilePt * VectorBase::DoAllocate() {}
 
 // Range: 0x800AA4A0 -> 0x800AA4D0
-void * vector::vector(class vector * const this /* r31 */) {}
+// this: r31
+vector::vector() {}
 
 // Range: 0x800AA4D0 -> 0x800AA514
-void * VectorBase::VectorBase(struct VectorBase * const this /* r31 */) {}
+// this: r31
+VectorBase::VectorBase() {}
 
 // Range: 0x800AA514 -> 0x800AA51C
 class PassiveInfluenceItem * * vector::end() {}
 
 // Range: 0x800AA51C -> 0x800AA580
-class PassiveInfluenceItem * * vector::erase(class vector * const this /* r30 */, class PassiveInfluenceItem * * position /* r31 */) {}
+// this: r30
+class PassiveInfluenceItem * * vector::erase(class PassiveInfluenceItem * * position /* r31 */) {}
 
 // Range: 0x800AA580 -> 0x800AA588
 class PassiveInfluenceItem * * vector::begin() {}
 
 // Range: 0x800AA588 -> 0x800AA628
-void vector::swap(class vector * const this /* r30 */, class vector & x /* r31 */) {
+// this: r30
+void vector::swap(class vector & x /* r31 */) {
     // Local variables
     class vector temp; // r1+0x8
 }
 
 // Range: 0x800AA628 -> 0x800AA68C
-void * vector::vector(class vector * const this /* r30 */, const class vector & x /* r31 */) {}
+// this: r30
+vector::vector(const class vector & x /* r31 */) {}
 
 // Range: 0x800AA68C -> 0x800AA6F0
-void * VectorBase::VectorBase(struct VectorBase * const this /* r30 */, unsigned long n /* r31 */) {}
+// this: r30
+VectorBase::VectorBase(unsigned long n /* r31 */) {}
 
 // Range: 0x800AA6F0 -> 0x800AA714
 class PassiveInfluenceItem * * VectorBase::DoAllocate() {}
@@ -2089,34 +2292,41 @@ class PassiveInfluenceItem * * VectorBase::DoAllocate() {}
 unsigned long vector::size() {}
 
 // Range: 0x800AA72C -> 0x800AA73C
-class PassiveInfluenceItem * & vector::__vc() {}
+class PassiveInfluenceItem * & vector::operator[]() {}
 
 // Range: 0x800AA73C -> 0x800AA7A4
-void * vector::~vector(class vector * const this /* r30 */) {}
+// this: r30
+vector::~vector() {}
 
 // Range: 0x800AA7A4 -> 0x800AA81C
-void * VectorBase::~VectorBase(struct VectorBase * const this /* r30 */) {}
+// this: r30
+VectorBase::~VectorBase() {}
 
 // Range: 0x800AA81C -> 0x800AA820
 void vector::DoDestroyValues() {}
 
 // Range: 0x800AA820 -> 0x800AA850
-void * vector::vector(class vector * const this /* r31 */) {}
+// this: r31
+vector::vector() {}
 
 // Range: 0x800AA850 -> 0x800AA894
-void * VectorBase::VectorBase(struct VectorBase * const this /* r31 */) {}
+// this: r31
+VectorBase::VectorBase() {}
 
 // Range: 0x800AA894 -> 0x800AA934
-void vector::swap(class vector * const this /* r30 */, class vector & x /* r31 */) {
+// this: r30
+void vector::swap(class vector & x /* r31 */) {
     // Local variables
     class vector temp; // r1+0x8
 }
 
 // Range: 0x800AA934 -> 0x800AA998
-void * vector::vector(class vector * const this /* r30 */, const class vector & x /* r31 */) {}
+// this: r30
+vector::vector(const class vector & x /* r31 */) {}
 
 // Range: 0x800AA998 -> 0x800AA9FC
-void * VectorBase::VectorBase(struct VectorBase * const this /* r30 */, unsigned long n /* r31 */) {}
+// this: r30
+VectorBase::VectorBase(unsigned long n /* r31 */) {}
 
 // Range: 0x800AA9FC -> 0x800AAA20
 struct TypedMotiveInc * VectorBase::DoAllocate() {}
@@ -2125,10 +2335,10 @@ struct TypedMotiveInc * VectorBase::DoAllocate() {}
 unsigned long vector::size() {}
 
 // Range: 0x800AAA38 -> 0x800AAA48
-struct TypedMotiveInc & vector::__vc() {}
+struct TypedMotiveInc & vector::operator[]() {}
 
 // Range: 0x800AAA48 -> 0x800AAA58
-class PassiveInfluenceItem * const & vector::__vc() {}
+class PassiveInfluenceItem * const & vector::operator[]() {}
 
 // Range: 0x800AAA58 -> 0x800AAADC
 void vector::push_back(const struct TypedMotiveInc & value /* r31 */) {}
@@ -2137,7 +2347,8 @@ void vector::push_back(const struct TypedMotiveInc & value /* r31 */) {}
 void vector::clear() {}
 
 // Range: 0x800AAAE8 -> 0x800AAB68
-struct TypedMotiveInc * vector::erase(class vector * const this /* r29 */, struct TypedMotiveInc * first /* r30 */, struct TypedMotiveInc * last /* r31 */) {
+// this: r29
+struct TypedMotiveInc * vector::erase(struct TypedMotiveInc * first /* r30 */, struct TypedMotiveInc * last /* r31 */) {
     // Local variables
     struct TypedMotiveInc * const position; // r0
 }
@@ -2149,82 +2360,101 @@ void vector::push_back(const struct TilePt & value /* r31 */) {}
 void vector::clear() {}
 
 // Range: 0x800AABE0 -> 0x800AAC60
-struct TilePt * vector::erase(class vector * const this /* r29 */, struct TilePt * first /* r30 */, struct TilePt * last /* r31 */) {
+// this: r29
+struct TilePt * vector::erase(struct TilePt * first /* r30 */, struct TilePt * last /* r31 */) {
     // Local variables
     struct TilePt * const position; // r0
 }
 
 // Range: 0x800AAC60 -> 0x800AAC70
-union SndInstruction & vector::__vc() {}
+union SndInstruction & vector::operator[]() {}
 
 // Range: 0x800AAC70 -> 0x800AAC88
 unsigned long vector::size() {}
 
 // Range: 0x800AAC88 -> 0x800AACF0
-void * vector::~vector(class vector * const this /* r30 */) {}
+// this: r30
+vector::~vector() {}
 
 // Range: 0x800AACF0 -> 0x800AAD78
-void * VectorBase::~VectorBase(struct VectorBase * const this /* r30 */) {}
+// this: r30
+VectorBase::~VectorBase() {}
 
 // Range: 0x800AAD78 -> 0x800AADC8
 void vector::DoDestroyValues(class XRoute * first /* r30 */, class XRoute * last /* r31 */) {}
 
 // Range: 0x800AAE30 -> 0x800AAE98
-void * vector::~vector(class vector * const this /* r30 */) {}
+// this: r30
+vector::~vector() {}
 
 // Range: 0x800AAE98 -> 0x800AAF10
-void * VectorBase::~VectorBase(struct VectorBase * const this /* r30 */) {}
+// this: r30
+VectorBase::~VectorBase() {}
 
 // Range: 0x800AAF10 -> 0x800AAF14
 void vector::DoDestroyValues() {}
 
 // Range: 0x800AAF14 -> 0x800AAF7C
-void * vector::~vector(class vector * const this /* r30 */) {}
+// this: r30
+vector::~vector() {}
 
 // Range: 0x800AAF7C -> 0x800AAFF4
-void * VectorBase::~VectorBase(struct VectorBase * const this /* r30 */) {}
+// this: r30
+VectorBase::~VectorBase() {}
 
 // Range: 0x800AB04C -> 0x800AB0B4
-void * vector::~vector(class vector * const this /* r30 */) {}
+// this: r30
+vector::~vector() {}
 
 // Range: 0x800AB0B4 -> 0x800AB13C
-void * VectorBase::~VectorBase(struct VectorBase * const this /* r30 */) {}
+// this: r30
+VectorBase::~VectorBase() {}
 
 // Range: 0x800AB13C -> 0x800AB140
 void vector::DoDestroyValues() {}
 
 // Range: 0x800AB198 -> 0x800AB200
-void * vector::~vector(class vector * const this /* r30 */) {}
+// this: r30
+vector::~vector() {}
 
 // Range: 0x800AB200 -> 0x800AB288
-void * VectorBase::~VectorBase(struct VectorBase * const this /* r30 */) {}
+// this: r30
+VectorBase::~VectorBase() {}
 
 // Range: 0x800AB288 -> 0x800AB28C
 void vector::DoDestroyValues() {}
 
 // Range: 0x800AB28C -> 0x800AB2BC
-void * vector::vector(class vector * const this /* r31 */) {}
+// this: r31
+vector::vector() {}
 
 // Range: 0x800AB2BC -> 0x800AB300
-void * VectorBase::VectorBase(struct VectorBase * const this /* r31 */) {}
+// this: r31
+VectorBase::VectorBase() {}
 
 // Range: 0x800AB300 -> 0x800AB330
-void * vector::vector(class vector * const this /* r31 */) {}
+// this: r31
+vector::vector() {}
 
 // Range: 0x800AB330 -> 0x800AB374
-void * VectorBase::VectorBase(struct VectorBase * const this /* r31 */) {}
+// this: r31
+VectorBase::VectorBase() {}
 
 // Range: 0x800AB374 -> 0x800AB3A4
-void * vector::vector(class vector * const this /* r31 */) {}
+// this: r31
+vector::vector() {}
 
 // Range: 0x800AB3A4 -> 0x800AB3E8
-void * VectorBase::VectorBase(struct VectorBase * const this /* r31 */) {}
+// this: r31
+VectorBase::VectorBase() {}
 
 // Range: 0x800AB3E8 -> 0x800AB418
-void * vector::vector(class vector * const this /* r31 */) {}
+// this: r31
+vector::vector() {}
 
 // Range: 0x800AB418 -> 0x800AB45C
-void * VectorBase::VectorBase(struct VectorBase * const this /* r31 */) {}
+// this: r31
+VectorBase::VectorBase() {}
 
 // Range: 0x800AB45C -> 0x800AB4C8
 void vector::push_back(const class SpriteSlot & value /* r31 */) {}
@@ -2242,7 +2472,8 @@ unsigned long vector::size() {}
 void vector::clear() {}
 
 // Range: 0x800AB794 -> 0x800AB824
-struct MotiveInc * vector::erase(class vector * const this /* r29 */, struct MotiveInc * first /* r30 */, struct MotiveInc * last /* r31 */) {
+// this: r29
+struct MotiveInc * vector::erase(struct MotiveInc * first /* r30 */, struct MotiveInc * last /* r31 */) {
     // Local variables
     struct MotiveInc * const position; // r0
 }
@@ -2254,13 +2485,14 @@ void vector::push_back(const class FTilePt & value /* r31 */) {}
 class FTilePt * vector::end() {}
 
 // Range: 0x800AB898 -> 0x800AB8A8
-class RoutingSlot & vector::__vc() {}
+class RoutingSlot & vector::operator[]() {}
 
 // Range: 0x800AB8A8 -> 0x800AB8D4
 unsigned long vector::size() {}
 
 // Range: 0x800AB8D4 -> 0x800AB96C
-void vector::resize(class vector * const this /* r29 */, unsigned long n /* r30 */) {}
+// this: r29
+void vector::resize(unsigned long n /* r30 */) {}
 
 // Range: 0x800AB96C -> 0x800AB970
 void vector::insert() {}
@@ -2272,10 +2504,12 @@ void vector::pop_back() {}
 void vector::push_back(const class XRoute & value /* r31 */) {}
 
 // Range: 0x800ABBBC -> 0x800ABC20
-void * vector::vector(class vector * const this /* r30 */, const class vector & x /* r31 */) {}
+// this: r30
+vector::vector(const class vector & x /* r31 */) {}
 
 // Range: 0x800ABC20 -> 0x800ABC84
-void * VectorBase::VectorBase(struct VectorBase * const this /* r30 */, unsigned long n /* r31 */) {}
+// this: r30
+VectorBase::VectorBase(unsigned long n /* r31 */) {}
 
 // Range: 0x800ABC84 -> 0x800ABCA8
 struct RouteGoal * VectorBase::DoAllocate() {}
@@ -2284,7 +2518,7 @@ struct RouteGoal * VectorBase::DoAllocate() {}
 unsigned long vector::size() {}
 
 // Range: 0x800ABCC0 -> 0x800ABCD0
-class XRoute & vector::__vc() {}
+class XRoute & vector::operator[]() {}
 
 // Range: 0x800ABCD0 -> 0x800ABCD8
 class XRoute * vector::end() {}
@@ -2293,7 +2527,8 @@ class XRoute * vector::end() {}
 class XRoute * vector::begin() {}
 
 // Range: 0x800ABCE0 -> 0x800ABD4C
-class XRoute * vector::erase(class vector * const this /* r30 */, class XRoute * position /* r31 */) {}
+// this: r30
+class XRoute * vector::erase(class XRoute * position /* r31 */) {}
 
 // Range: 0x800ABD4C -> 0x800ABD54
 class cXPerson * * vector::end() {}
@@ -2308,7 +2543,8 @@ void vector::push_back(class cXPerson * const & value /* r31 */) {}
 void vector::clear() {}
 
 // Range: 0x800ABDD4 -> 0x800ABE54
-class cXPerson * * vector::erase(class vector * const this /* r29 */, class cXPerson * * first /* r30 */, class cXPerson * * last /* r31 */) {
+// this: r29
+class cXPerson * * vector::erase(class cXPerson * * first /* r30 */, class cXPerson * * last /* r31 */) {
     // Local variables
     class cXPerson * * const position; // r0
 }
@@ -2317,16 +2553,20 @@ class cXPerson * * vector::erase(class vector * const this /* r29 */, class cXPe
 void vector::DoDestroyValues() {}
 
 // Range: 0x800ABE58 -> 0x800ABEC0
-void * vector::~vector(class vector * const this /* r30 */) {}
+// this: r30
+vector::~vector() {}
 
 // Range: 0x800ABEC0 -> 0x800ABF38
-void * VectorBase::~VectorBase(struct VectorBase * const this /* r30 */) {}
+// this: r30
+VectorBase::~VectorBase() {}
 
 // Range: 0x800ABF38 -> 0x800ABF68
-void * vector::vector(class vector * const this /* r31 */) {}
+// this: r31
+vector::vector() {}
 
 // Range: 0x800ABF68 -> 0x800ABFAC
-void * VectorBase::VectorBase(struct VectorBase * const this /* r31 */) {}
+// this: r31
+VectorBase::VectorBase() {}
 
 // Range: 0x800ABFAC -> 0x800ABFB8
 class XRoute & vector::back() {}
@@ -2338,7 +2578,8 @@ struct MotiveInc * vector::end() {}
 struct MotiveInc * vector::begin() {}
 
 // Range: 0x800ABFC8 -> 0x800AC058
-class XRoute * vector::erase(class vector * const this /* r29 */, class XRoute * first /* r30 */, class XRoute * last /* r31 */) {
+// this: r29
+class XRoute * vector::erase(class XRoute * first /* r30 */, class XRoute * last /* r31 */) {
     // Local variables
     class XRoute * const position; // r0
 }
@@ -2347,7 +2588,8 @@ class XRoute * vector::erase(class vector * const this /* r29 */, class XRoute *
 void vector::insert() {}
 
 // Range: 0x800AC05C -> 0x800AC0EC
-struct ObjectRecord * vector::erase(class vector * const this /* r29 */, struct ObjectRecord * first /* r30 */, struct ObjectRecord * last /* r31 */) {
+// this: r29
+struct ObjectRecord * vector::erase(struct ObjectRecord * first /* r30 */, struct ObjectRecord * last /* r31 */) {
     // Local variables
     struct ObjectRecord * const position; // r0
 }
@@ -2368,37 +2610,42 @@ void vector::insert() {}
 struct ObjectRecord * vector::begin() {}
 
 // Range: 0x800AC12C -> 0x800AC13C
-class SpriteSlot & vector::__vc() {}
+class SpriteSlot & vector::operator[]() {}
 
 // Range: 0x800AC13C -> 0x800AC1B8
 void vector::push_back(const struct ObjectRecord & value /* r31 */) {}
 
 // Range: 0x800AC1B8 -> 0x800AC21C
-struct ObjectRecord * vector::erase(class vector * const this /* r30 */, struct ObjectRecord * position /* r31 */) {}
+// this: r30
+struct ObjectRecord * vector::erase(struct ObjectRecord * position /* r31 */) {}
 
 // Range: 0x800AC21C -> 0x800AC228
 void vector::clear() {}
 
 // Range: 0x800AC228 -> 0x800AC238
-struct ObjectRecord & vector::__vc() {}
+struct ObjectRecord & vector::operator[]() {}
 
 // Range: 0x800AC238 -> 0x800AC2A0
-void * vector::~vector(class vector * const this /* r30 */) {}
+// this: r30
+vector::~vector() {}
 
 // Range: 0x800AC2A0 -> 0x800AC318
-void * VectorBase::~VectorBase(struct VectorBase * const this /* r30 */) {}
+// this: r30
+VectorBase::~VectorBase() {}
 
 // Range: 0x800AC318 -> 0x800AC338
 void vector::DoDestroyValues() {}
 
 // Range: 0x800AC338 -> 0x800AC368
-void * vector::vector(class vector * const this /* r31 */) {}
+// this: r31
+vector::vector() {}
 
 // Range: 0x800AC368 -> 0x800AC3AC
-void * VectorBase::VectorBase(struct VectorBase * const this /* r31 */) {}
+// this: r31
+VectorBase::VectorBase() {}
 
 // Range: 0x800AC3AC -> 0x800AC3BC
-float & vector::__vc() {}
+float & vector::operator[]() {}
 
 // Range: 0x800AC3BC -> 0x800AC3D4
 unsigned long vector::size() {}
@@ -2410,61 +2657,71 @@ void vector::push_back(const float & value /* r31 */) {}
 float * vector::begin() {}
 
 // Range: 0x800AC448 -> 0x800AC4AC
-float * vector::erase(class vector * const this /* r30 */, float * position /* r31 */) {}
+// this: r30
+float * vector::erase(float * position /* r31 */) {}
 
 // Range: 0x800AC4AC -> 0x800AC4B4
 float * vector::end() {}
 
 // Range: 0x800AC4B4 -> 0x800AC4C4
-class cXPortal * const & vector::__vc() {}
+class cXPortal * const & vector::operator[]() {}
 
 // Range: 0x800AC4C4 -> 0x800AC4DC
 unsigned long vector::size() {}
 
 // Range: 0x800AC4DC -> 0x800AC544
-void * vector::~vector(class vector * const this /* r30 */) {}
+// this: r30
+vector::~vector() {}
 
 // Range: 0x800AC544 -> 0x800AC5BC
-void * VectorBase::~VectorBase(struct VectorBase * const this /* r30 */) {}
+// this: r30
+VectorBase::~VectorBase() {}
 
 // Range: 0x800AC5BC -> 0x800AC5C0
 void vector::DoDestroyValues() {}
 
 // Range: 0x800AC5C0 -> 0x800AC624
-class cXPortal * * vector::erase(class vector * const this /* r30 */, class cXPortal * * position /* r31 */) {}
+// this: r30
+class cXPortal * * vector::erase(class cXPortal * * position /* r31 */) {}
 
 // Range: 0x800AC624 -> 0x800AC634
-class cXPortal * & vector::__vc() {}
+class cXPortal * & vector::operator[]() {}
 
 // Range: 0x800AC634 -> 0x800AC6A0
 void vector::push_back(class cXPortal * const & value /* r31 */) {}
 
 // Range: 0x800AC6A0 -> 0x800AC6D0
-void * vector::vector(class vector * const this /* r31 */) {}
+// this: r31
+vector::vector() {}
 
 // Range: 0x800AC6D0 -> 0x800AC714
-void * VectorBase::VectorBase(struct VectorBase * const this /* r31 */) {}
+// this: r31
+VectorBase::VectorBase() {}
 
 // Range: 0x800AC714 -> 0x800AC77C
-void * vector::~vector(class vector * const this /* r30 */) {}
+// this: r30
+vector::~vector() {}
 
 // Range: 0x800AC77C -> 0x800AC7F4
-void * VectorBase::~VectorBase(struct VectorBase * const this /* r30 */) {}
+// this: r30
+VectorBase::~VectorBase() {}
 
 // Range: 0x800AC7F4 -> 0x800AC7F8
 void vector::DoDestroyValues() {}
 
 // Range: 0x800AC7F8 -> 0x800AC828
-void * vector::vector(class vector * const this /* r31 */) {}
+// this: r31
+vector::vector() {}
 
 // Range: 0x800AC828 -> 0x800AC86C
-void * VectorBase::VectorBase(struct VectorBase * const this /* r31 */) {}
+// this: r31
+VectorBase::VectorBase() {}
 
 // Range: 0x800AC86C -> 0x800AC874
 class RelArray * * vector::end() {}
 
 // Range: 0x800AC874 -> 0x800AC884
-class RelInt & vector::__vc() {}
+class RelInt & vector::operator[]() {}
 
 // Range: 0x800AC884 -> 0x800AC89C
 unsigned long vector::size() {}
@@ -2473,19 +2730,23 @@ unsigned long vector::size() {}
 class RelArray * * vector::begin() {}
 
 // Range: 0x800AC8A4 -> 0x800AC908
-class RelArray * * vector::erase(class vector * const this /* r30 */, class RelArray * * position /* r31 */) {}
+// this: r30
+class RelArray * * vector::erase(class RelArray * * position /* r31 */) {}
 
 // Range: 0x800AC908 -> 0x800AC970
-void * vector::~vector(class vector * const this /* r30 */) {}
+// this: r30
+vector::~vector() {}
 
 // Range: 0x800AC970 -> 0x800AC9E8
-void * VectorBase::~VectorBase(struct VectorBase * const this /* r30 */) {}
+// this: r30
+VectorBase::~VectorBase() {}
 
 // Range: 0x800AC9E8 -> 0x800AC9EC
 void vector::DoDestroyValues() {}
 
 // Range: 0x800AC9EC -> 0x800ACA6C
-class RelInt * vector::erase(class vector * const this /* r29 */, class RelInt * first /* r30 */, class RelInt * last /* r31 */) {
+// this: r29
+class RelInt * vector::erase(class RelInt * first /* r30 */, class RelInt * last /* r31 */) {
     // Local variables
     class RelInt * const position; // r0
 }
@@ -2500,13 +2761,16 @@ class RelInt * vector::end() {}
 void vector::push_back(class RelArray * const & value /* r31 */) {}
 
 // Range: 0x800ACAE4 -> 0x800ACB14
-void * vector::vector(class vector * const this /* r31 */) {}
+// this: r31
+vector::vector() {}
 
 // Range: 0x800ACB14 -> 0x800ACB58
-void * VectorBase::VectorBase(struct VectorBase * const this /* r31 */) {}
+// this: r31
+VectorBase::VectorBase() {}
 
 // Range: 0x800ACB58 -> 0x800ACBD8
-class RelArray * * vector::erase(class vector * const this /* r29 */, class RelArray * * first /* r30 */, class RelArray * * last /* r31 */) {
+// this: r29
+class RelArray * * vector::erase(class RelArray * * first /* r30 */, class RelArray * * last /* r31 */) {
     // Local variables
     class RelArray * * const position; // r0
 }
@@ -2521,10 +2785,11 @@ unsigned long vector::size() {}
 class RelInt * vector::begin() {}
 
 // Range: 0x800ACBFC -> 0x800ACC0C
-class RelArray * & vector::__vc() {}
+class RelArray * & vector::operator[]() {}
 
 // Range: 0x800ACC0C -> 0x800ACC9C
-class PenaltyRect * vector::erase(class vector * const this /* r29 */, class PenaltyRect * first /* r30 */, class PenaltyRect * last /* r31 */) {
+// this: r29
+class PenaltyRect * vector::erase(class PenaltyRect * first /* r30 */, class PenaltyRect * last /* r31 */) {
     // Local variables
     class PenaltyRect * const position; // r0
 }
@@ -2539,37 +2804,46 @@ class PenaltyRect * vector::end() {}
 class PenaltyRect * vector::begin() {}
 
 // Range: 0x800ACD54 -> 0x800ACDBC
-void * vector::~vector(class vector * const this /* r30 */) {}
+// this: r30
+vector::~vector() {}
 
 // Range: 0x800ACDBC -> 0x800ACE44
-void * VectorBase::~VectorBase(struct VectorBase * const this /* r30 */) {}
+// this: r30
+VectorBase::~VectorBase() {}
 
 // Range: 0x800ACE44 -> 0x800ACEAC
-void * vector::~vector(class vector * const this /* r30 */) {}
+// this: r30
+vector::~vector() {}
 
 // Range: 0x800ACEAC -> 0x800ACF34
-void * VectorBase::~VectorBase(struct VectorBase * const this /* r30 */) {}
+// this: r30
+VectorBase::~VectorBase() {}
 
 // Range: 0x800ACF34 -> 0x800ACF38
 void vector::DoDestroyValues() {}
 
 // Range: 0x800ACF38 -> 0x800ACF68
-void * vector::vector(class vector * const this /* r31 */) {}
+// this: r31
+vector::vector() {}
 
 // Range: 0x800ACF68 -> 0x800ACFAC
-void * VectorBase::VectorBase(struct VectorBase * const this /* r31 */) {}
+// this: r31
+VectorBase::VectorBase() {}
 
 // Range: 0x800ACFAC -> 0x800ACFDC
-void * vector::vector(class vector * const this /* r31 */) {}
+// this: r31
+vector::vector() {}
 
 // Range: 0x800ACFDC -> 0x800AD020
-void * VectorBase::VectorBase(struct VectorBase * const this /* r31 */) {}
+// this: r31
+VectorBase::VectorBase() {}
 
 // Range: 0x800AD020 -> 0x800AD02C
 void vector::clear() {}
 
 // Range: 0x800AD02C -> 0x800AD0BC
-class EVec3 * vector::erase(class vector * const this /* r29 */, class EVec3 * first /* r30 */, class EVec3 * last /* r31 */) {
+// this: r29
+class EVec3 * vector::erase(class EVec3 * first /* r30 */, class EVec3 * last /* r31 */) {
     // Local variables
     class EVec3 * const position; // r0
 }
@@ -2587,25 +2861,29 @@ class PenaltyRect * vector::end() {}
 class PenaltyRect * vector::begin() {}
 
 // Range: 0x800AD160 -> 0x800AD170
-class PenaltyRect & vector::__vc() {}
+class PenaltyRect & vector::operator[]() {}
 
 // Range: 0x800AD170 -> 0x800AD1D8
-void * vector::~vector(class vector * const this /* r30 */) {}
+// this: r30
+vector::~vector() {}
 
 // Range: 0x800AD1D8 -> 0x800AD260
-void * VectorBase::~VectorBase(struct VectorBase * const this /* r30 */) {}
+// this: r30
+VectorBase::~VectorBase() {}
 
 // Range: 0x800AD260 -> 0x800AD2B0
 void vector::DoDestroyValues(class ASTNode * first /* r30 */, class ASTNode * last /* r31 */) {}
 
 // Range: 0x800AD364 -> 0x800AD394
-void * vector::vector(class vector * const this /* r31 */) {}
+// this: r31
+vector::vector() {}
 
 // Range: 0x800AD394 -> 0x800AD3D8
-void * VectorBase::VectorBase(struct VectorBase * const this /* r31 */) {}
+// this: r31
+VectorBase::VectorBase() {}
 
 // Range: 0x800AD420 -> 0x800AD430
-class ASTNode & vector::__vc() {}
+class ASTNode & vector::operator[]() {}
 
 // Range: 0x800AD430 -> 0x800AD458
 unsigned long vector::size() {}
@@ -2620,7 +2898,8 @@ int * vector::begin() {}
 void vector::clear() {}
 
 // Range: 0x800AD474 -> 0x800AD504
-class ASTNode * vector::erase(class vector * const this /* r29 */, class ASTNode * first /* r30 */, class ASTNode * last /* r31 */) {
+// this: r29
+class ASTNode * vector::erase(class ASTNode * first /* r30 */, class ASTNode * last /* r31 */) {
     // Local variables
     class ASTNode * const position; // r0
 }
@@ -2629,43 +2908,52 @@ class ASTNode * vector::erase(class vector * const this /* r29 */, class ASTNode
 void vector::clear() {}
 
 // Range: 0x800AD510 -> 0x800AD5B0
-void vector::swap(class vector * const this /* r30 */, class vector & x /* r31 */) {
+// this: r30
+void vector::swap(class vector & x /* r31 */) {
     // Local variables
     class vector temp; // r1+0x8
 }
 
 // Range: 0x800AD5B0 -> 0x800AD614
-void * vector::vector(class vector * const this /* r30 */, const class vector & x /* r31 */) {}
+// this: r30
+vector::vector(const class vector & x /* r31 */) {}
 
 // Range: 0x800AD614 -> 0x800AD678
-void * VectorBase::VectorBase(struct VectorBase * const this /* r30 */, unsigned long n /* r31 */) {}
+// this: r30
+VectorBase::VectorBase(unsigned long n /* r31 */) {}
 
 // Range: 0x800AD678 -> 0x800AD718
-void vector::swap(class vector * const this /* r30 */, class vector & x /* r31 */) {
+// this: r30
+void vector::swap(class vector & x /* r31 */) {
     // Local variables
     class vector temp; // r1+0x8
 }
 
 // Range: 0x800AD718 -> 0x800AD77C
-void * vector::vector(class vector * const this /* r30 */, const class vector & x /* r31 */) {}
+// this: r30
+vector::vector(const class vector & x /* r31 */) {}
 
 // Range: 0x800AD77C -> 0x800AD7E0
-void * VectorBase::VectorBase(struct VectorBase * const this /* r30 */, unsigned long n /* r31 */) {}
+// this: r30
+VectorBase::VectorBase(unsigned long n /* r31 */) {}
 
 // Range: 0x800AD7E0 -> 0x800AD804
 class ASTNode * VectorBase::DoAllocate() {}
 
 // Range: 0x800AD804 -> 0x800AD8A4
-void vector::swap(class vector * const this /* r30 */, class vector & x /* r31 */) {
+// this: r30
+void vector::swap(class vector & x /* r31 */) {
     // Local variables
     class vector temp; // r1+0x8
 }
 
 // Range: 0x800AD8A4 -> 0x800AD908
-void * vector::vector(class vector * const this /* r30 */, const class vector & x /* r31 */) {}
+// this: r30
+vector::vector(const class vector & x /* r31 */) {}
 
 // Range: 0x800AD908 -> 0x800AD96C
-void * VectorBase::VectorBase(struct VectorBase * const this /* r30 */, unsigned long n /* r31 */) {}
+// this: r30
+VectorBase::VectorBase(unsigned long n /* r31 */) {}
 
 // Range: 0x800AD96C -> 0x800AD990
 class PenaltyRect * VectorBase::DoAllocate() {}
@@ -2683,19 +2971,21 @@ class ASTNode * vector::begin() {}
 void vector::push_back(const class PenaltyRect & value /* r31 */) {}
 
 // Range: 0x800ADA78 -> 0x800ADADC
-int * vector::erase(class vector * const this /* r30 */, int * position /* r31 */) {}
+// this: r30
+int * vector::erase(int * position /* r31 */) {}
 
 // Range: 0x800ADADC -> 0x800ADB48
 void vector::push_back(const class IPoint & value /* r31 */) {}
 
 // Range: 0x800ADB48 -> 0x800ADB58
-class IPoint & vector::__vc() {}
+class IPoint & vector::operator[]() {}
 
 // Range: 0x800ADB58 -> 0x800ADB70
 unsigned long vector::size() {}
 
 // Range: 0x800ADB70 -> 0x800ADBF0
-class IPoint * vector::erase(class vector * const this /* r29 */, class IPoint * first /* r30 */, class IPoint * last /* r31 */) {
+// this: r29
+class IPoint * vector::erase(class IPoint * first /* r30 */, class IPoint * last /* r31 */) {
     // Local variables
     class IPoint * const position; // r0
 }
@@ -2710,19 +3000,23 @@ class IPoint * vector::end() {}
 class IPoint * vector::begin() {}
 
 // Range: 0x800ADC50 -> 0x800ADCB8
-void * vector::~vector(class vector * const this /* r30 */) {}
+// this: r30
+vector::~vector() {}
 
 // Range: 0x800ADCB8 -> 0x800ADD40
-void * VectorBase::~VectorBase(struct VectorBase * const this /* r30 */) {}
+// this: r30
+VectorBase::~VectorBase() {}
 
 // Range: 0x800ADD40 -> 0x800ADD44
 void vector::DoDestroyValues() {}
 
 // Range: 0x800ADD44 -> 0x800ADD74
-void * vector::vector(class vector * const this /* r31 */) {}
+// this: r31
+vector::vector() {}
 
 // Range: 0x800ADD74 -> 0x800ADDB8
-void * VectorBase::VectorBase(struct VectorBase * const this /* r31 */) {}
+// this: r31
+VectorBase::VectorBase() {}
 
 // Range: 0x800ADDB8 -> 0x800ADE34
 void vector::push_back(const struct ListenPacket & value /* r31 */) {}
@@ -2731,22 +3025,24 @@ void vector::push_back(const struct ListenPacket & value /* r31 */) {}
 unsigned long vector::size() {}
 
 // Range: 0x800ADE5C -> 0x800ADE6C
-struct ListenPacket & vector::__vc() {}
+struct ListenPacket & vector::operator[]() {}
 
 // Range: 0x800ADE6C -> 0x800ADED0
-struct ListenPacket * vector::erase(class vector * const this /* r30 */, struct ListenPacket * position /* r31 */) {}
+// this: r30
+struct ListenPacket * vector::erase(struct ListenPacket * position /* r31 */) {}
 
 // Range: 0x800ADED0 -> 0x800ADEDC
 void vector::clear() {}
 
 // Range: 0x800ADEDC -> 0x800ADF6C
-struct ListenPacket * vector::erase(class vector * const this /* r29 */, struct ListenPacket * first /* r30 */, struct ListenPacket * last /* r31 */) {
+// this: r29
+struct ListenPacket * vector::erase(struct ListenPacket * first /* r30 */, struct ListenPacket * last /* r31 */) {
     // Local variables
     struct ListenPacket * const position; // r0
 }
 
 // Range: 0x800ADF6C -> 0x800ADF7C
-struct AnimSetIndex & vector::__vc() {}
+struct AnimSetIndex & vector::operator[]() {}
 
 // Range: 0x800ADF7C -> 0x800ADF94
 unsigned long vector::size() {}
@@ -2758,7 +3054,8 @@ void vector::push_back(const class RoutingSlot & value /* r31 */) {}
 void vector::push_back(const class SlotDescriptor & value /* r31 */) {}
 
 // Range: 0x800AE128 -> 0x800AE18C
-class SlotDescriptor * vector::erase(class vector * const this /* r30 */, class SlotDescriptor * position /* r31 */) {}
+// this: r30
+class SlotDescriptor * vector::erase(class SlotDescriptor * position /* r31 */) {}
 
 // Range: 0x800AE18C -> 0x800AE194
 class SlotDescriptor * vector::begin() {}
@@ -2767,28 +3064,34 @@ class SlotDescriptor * vector::begin() {}
 unsigned long vector::size() {}
 
 // Range: 0x800AE1BC -> 0x800AE224
-void * vector::~vector(class vector * const this /* r30 */) {}
+// this: r30
+vector::~vector() {}
 
 // Range: 0x800AE224 -> 0x800AE2AC
-void * VectorBase::~VectorBase(struct VectorBase * const this /* r30 */) {}
+// this: r30
+VectorBase::~VectorBase() {}
 
 // Range: 0x800AE2AC -> 0x800AE2B0
 void vector::DoDestroyValues() {}
 
 // Range: 0x800AE2B0 -> 0x800AE318
-void * vector::~vector(class vector * const this /* r30 */) {}
+// this: r30
+vector::~vector() {}
 
 // Range: 0x800AE318 -> 0x800AE390
-void * VectorBase::~VectorBase(struct VectorBase * const this /* r30 */) {}
+// this: r30
+VectorBase::~VectorBase() {}
 
 // Range: 0x800AE390 -> 0x800AE394
 void vector::DoDestroyValues() {}
 
 // Range: 0x800AE394 -> 0x800AE3C4
-void * vector::vector(class vector * const this /* r31 */) {}
+// this: r31
+vector::vector() {}
 
 // Range: 0x800AE3C4 -> 0x800AE408
-void * VectorBase::VectorBase(struct VectorBase * const this /* r31 */) {}
+// this: r31
+VectorBase::VectorBase() {}
 
 // Range: 0x800AE408 -> 0x800AE420
 unsigned long vector::size() {}
@@ -2797,7 +3100,8 @@ unsigned long vector::size() {}
 void vector::push_back(class StackElem * const & value /* r31 */) {}
 
 // Range: 0x800AE48C -> 0x800AE50C
-class StackElem * * vector::erase(class vector * const this /* r29 */, class StackElem * * first /* r30 */, class StackElem * * last /* r31 */) {
+// this: r29
+class StackElem * * vector::erase(class StackElem * * first /* r30 */, class StackElem * * last /* r31 */) {
     // Local variables
     class StackElem * * const position; // r0
 }
@@ -2809,10 +3113,11 @@ class StackElem * * vector::end() {}
 class StackElem * * vector::begin() {}
 
 // Range: 0x800AE51C -> 0x800AE52C
-class StackElem * & vector::__vc() {}
+class StackElem * & vector::operator[]() {}
 
 // Range: 0x800AE52C -> 0x800AE590
-class StackElem * * vector::erase(class vector * const this /* r30 */, class StackElem * * position /* r31 */) {}
+// this: r30
+class StackElem * * vector::erase(class StackElem * * position /* r31 */) {}
 
 // Range: 0x800AE590 -> 0x800AE5A8
 void vector::pop_back() {}
@@ -2830,13 +3135,15 @@ void vector::DoDestroyValues() {}
 void vector::pop_back() {}
 
 // Range: 0x800AE63C -> 0x800AE66C
-void * vector::vector(class vector * const this /* r31 */) {}
+// this: r31
+vector::vector() {}
 
 // Range: 0x800AE66C -> 0x800AE6B0
-void * VectorBase::VectorBase(struct VectorBase * const this /* r31 */) {}
+// this: r31
+VectorBase::VectorBase() {}
 
 // Range: 0x800AE6B0 -> 0x800AE6C0
-struct RouteGoal & vector::__vc() {}
+struct RouteGoal & vector::operator[]() {}
 
 // Range: 0x800AE6C0 -> 0x800AE6C8
 struct RouteGoal * vector::end() {}
@@ -2851,28 +3158,34 @@ void vector::push_back(const struct RouteGoal & value /* r31 */) {}
 void vector::clear() {}
 
 // Range: 0x800AE748 -> 0x800AE7C8
-struct RouteGoal * vector::erase(class vector * const this /* r29 */, struct RouteGoal * first /* r30 */, struct RouteGoal * last /* r31 */) {
+// this: r29
+struct RouteGoal * vector::erase(struct RouteGoal * first /* r30 */, struct RouteGoal * last /* r31 */) {
     // Local variables
     struct RouteGoal * const position; // r0
 }
 
 // Range: 0x800AE7C8 -> 0x800AE7D8
-class IPoint & vector::__vc() {}
+class IPoint & vector::operator[]() {}
 
 // Range: 0x800AE7D8 -> 0x800AE840
-void * vector::~vector(class vector * const this /* r30 */) {}
+// this: r30
+vector::~vector() {}
 
 // Range: 0x800AE840 -> 0x800AE8B8
-void * VectorBase::~VectorBase(struct VectorBase * const this /* r30 */) {}
+// this: r30
+VectorBase::~VectorBase() {}
 
 // Range: 0x800AE8B8 -> 0x800AE8E8
-void * vector::vector(class vector * const this /* r31 */) {}
+// this: r31
+vector::vector() {}
 
 // Range: 0x800AE8E8 -> 0x800AE92C
-void * VectorBase::VectorBase(struct VectorBase * const this /* r31 */) {}
+// this: r31
+VectorBase::VectorBase() {}
 
 // Range: 0x800AE92C -> 0x800AE9EC
-void vector::reserve(class vector * const this /* r31 */, unsigned long n /* r29 */) {
+// this: r31
+void vector::reserve(unsigned long n /* r29 */) {
     // Local variables
     int * const pNewData; // r30
     long nPrevSize; // r0
@@ -2885,7 +3198,8 @@ int * vector::DoRealloc(int * first /* r29 */, int * last /* r30 */) {
 }
 
 // Range: 0x800AEA44 -> 0x800AEB8C
-class vector & vector::__as(class vector * const this /* r30 */, const class vector & x /* r29 */) {
+// this: r30
+class vector & vector::operator=(const class vector & x /* r29 */) {
     // Local variables
     unsigned long n; // r31
     int * const pNewData; // r29
@@ -2893,7 +3207,8 @@ class vector & vector::__as(class vector * const this /* r30 */, const class vec
 }
 
 // Range: 0x800AEB8C -> 0x800AECDC
-void vector::DoInsertValue(class vector * const this /* r31 */, class StackElem * * position /* r26 */, class StackElem * const & value /* r27 */) {
+// this: r31
+void vector::DoInsertValue(class StackElem * * position /* r26 */, class StackElem * const & value /* r27 */) {
     // Local variables
     class StackElem * const * pValue; // [invalid]
     unsigned long nNewSize; // r29
@@ -2911,7 +3226,8 @@ class StackElem * * VectorBase::DoAllocate() {}
 unsigned long VectorBase::GetNewCapacity() {}
 
 // Range: 0x800AED2C -> 0x800AEDEC
-void vector::reserve(class vector * const this /* r31 */, unsigned long n /* r29 */) {
+// this: r31
+void vector::reserve(unsigned long n /* r29 */) {
     // Local variables
     class StackElem * * const pNewData; // r30
     long nPrevSize; // r0
@@ -2924,7 +3240,8 @@ class StackElem * * vector::DoRealloc(class StackElem * * first /* r29 */, class
 }
 
 // Range: 0x800AEE44 -> 0x800AEFB8
-void vector::DoInsertValue(class vector * const this /* r31 */, class SlotDescriptor * position /* r26 */, const class SlotDescriptor & value /* r27 */) {
+// this: r31
+void vector::DoInsertValue(class SlotDescriptor * position /* r26 */, const class SlotDescriptor & value /* r27 */) {
     // Local variables
     const class SlotDescriptor * pValue; // [invalid]
     unsigned long nNewSize; // r29
@@ -2942,7 +3259,8 @@ class SlotDescriptor * VectorBase::DoAllocate() {}
 unsigned long VectorBase::GetNewCapacity() {}
 
 // Range: 0x800AF008 -> 0x800AF17C
-void vector::DoInsertValue(class vector * const this /* r31 */, class ObjectSlot * position /* r26 */, const class ObjectSlot & value /* r27 */) {
+// this: r31
+void vector::DoInsertValue(class ObjectSlot * position /* r26 */, const class ObjectSlot & value /* r27 */) {
     // Local variables
     const class ObjectSlot * pValue; // [invalid]
     unsigned long nNewSize; // r29
@@ -2963,7 +3281,8 @@ class ObjectSlot * VectorBase::DoAllocate() {}
 unsigned long VectorBase::GetNewCapacity() {}
 
 // Range: 0x800AF2A4 -> 0x800AF420
-void vector::DoInsertValue(class vector * const this /* r31 */, class RoutingSlot * position /* r26 */, const class RoutingSlot & value /* r27 */) {
+// this: r31
+void vector::DoInsertValue(class RoutingSlot * position /* r26 */, const class RoutingSlot & value /* r27 */) {
     // Local variables
     const class RoutingSlot * pValue; // [invalid]
     unsigned long nNewSize; // r29
@@ -2984,7 +3303,8 @@ class RoutingSlot * VectorBase::DoAllocate() {}
 unsigned long VectorBase::GetNewCapacity() {}
 
 // Range: 0x800AF4CC -> 0x800AF640
-void vector::DoInsertValue(class vector * const this /* r31 */, class SpriteSlot * position /* r26 */, const class SpriteSlot & value /* r27 */) {
+// this: r31
+void vector::DoInsertValue(class SpriteSlot * position /* r26 */, const class SpriteSlot & value /* r27 */) {
     // Local variables
     const class SpriteSlot * pValue; // [invalid]
     unsigned long nNewSize; // r29
@@ -3005,7 +3325,8 @@ class SpriteSlot * VectorBase::DoAllocate() {}
 unsigned long VectorBase::GetNewCapacity() {}
 
 // Range: 0x800AF7F8 -> 0x800AF948
-void vector::DoInsertValue(class vector * const this /* r31 */, class cXPerson * * position /* r26 */, class cXPerson * const & value /* r27 */) {
+// this: r31
+void vector::DoInsertValue(class cXPerson * * position /* r26 */, class cXPerson * const & value /* r27 */) {
     // Local variables
     class cXPerson * const * pValue; // [invalid]
     unsigned long nNewSize; // r29
@@ -3023,7 +3344,8 @@ class cXPerson * * VectorBase::DoAllocate() {}
 unsigned long VectorBase::GetNewCapacity() {}
 
 // Range: 0x800AF998 -> 0x800AFAE8
-void vector::DoInsertValue(class vector * const this /* r31 */, class cXPortal * * position /* r26 */, class cXPortal * const & value /* r27 */) {
+// this: r31
+void vector::DoInsertValue(class cXPortal * * position /* r26 */, class cXPortal * const & value /* r27 */) {
     // Local variables
     class cXPortal * const * pValue; // [invalid]
     unsigned long nNewSize; // r29
@@ -3041,7 +3363,8 @@ class cXPortal * * VectorBase::DoAllocate() {}
 unsigned long VectorBase::GetNewCapacity() {}
 
 // Range: 0x800AFB38 -> 0x800AFC8C
-void vector::DoInsertValue(class vector * const this /* r31 */, class FTilePt * position /* r26 */, const class FTilePt & value /* r27 */) {
+// this: r31
+void vector::DoInsertValue(class FTilePt * position /* r26 */, const class FTilePt & value /* r27 */) {
     // Local variables
     const class FTilePt * pValue; // [invalid]
     unsigned long nNewSize; // r29
@@ -3059,7 +3382,8 @@ class FTilePt * VectorBase::DoAllocate() {}
 unsigned long VectorBase::GetNewCapacity() {}
 
 // Range: 0x800AFCDC -> 0x800AFEA8
-void vector::DoInsertValues(class vector * const this /* r29 */, class FTilePt * position /* r30 */, unsigned long n /* r31 */, const class FTilePt & value /* r25 */) {
+// this: r29
+void vector::DoInsertValues(class FTilePt * position /* r30 */, unsigned long n /* r31 */, const class FTilePt & value /* r25 */) {
     // Local variables
     class FTilePt temp; // r1+0x8
     unsigned long nExtra; // r28
@@ -3071,7 +3395,8 @@ void vector::DoInsertValues(class vector * const this /* r29 */, class FTilePt *
 }
 
 // Range: 0x800AFEA8 -> 0x800B001C
-void vector::DoInsertValue(class vector * const this /* r31 */, class PenaltyRect * position /* r26 */, const class PenaltyRect & value /* r27 */) {
+// this: r31
+void vector::DoInsertValue(class PenaltyRect * position /* r26 */, const class PenaltyRect & value /* r27 */) {
     // Local variables
     const class PenaltyRect * pValue; // [invalid]
     unsigned long nNewSize; // r29
@@ -3086,7 +3411,8 @@ void VectorBase::DoFree() {}
 unsigned long VectorBase::GetNewCapacity() {}
 
 // Range: 0x800B0048 -> 0x800B0138
-void vector::reserve(class vector * const this /* r29 */, unsigned long n /* r30 */) {
+// this: r29
+void vector::reserve(unsigned long n /* r30 */) {
     // Local variables
     class PenaltyRect * const pNewData; // r31
     long nPrevSize; // r0
@@ -3099,7 +3425,8 @@ class PenaltyRect * vector::DoRealloc(class PenaltyRect * first /* r29 */, class
 }
 
 // Range: 0x800B0190 -> 0x800B0310
-class vector & vector::__as(class vector * const this /* r29 */, const class vector & x /* r30 */) {
+// this: r29
+class vector & vector::operator=(const class vector & x /* r30 */) {
     // Local variables
     unsigned long n; // r31
     class PenaltyRect * const pNewData; // r30
@@ -3107,7 +3434,8 @@ class vector & vector::__as(class vector * const this /* r29 */, const class vec
 }
 
 // Range: 0x800B0310 -> 0x800B0464
-void vector::DoInsertValue(class vector * const this /* r31 */, struct RouteGoal * position /* r26 */, const struct RouteGoal & value /* r27 */) {
+// this: r31
+void vector::DoInsertValue(struct RouteGoal * position /* r26 */, const struct RouteGoal & value /* r27 */) {
     // Local variables
     const struct RouteGoal * pValue; // [invalid]
     unsigned long nNewSize; // r29
@@ -3122,7 +3450,8 @@ void VectorBase::DoFree() {}
 unsigned long VectorBase::GetNewCapacity() {}
 
 // Range: 0x800B0490 -> 0x800B05D8
-class vector & vector::__as(class vector * const this /* r30 */, const class vector & x /* r29 */) {
+// this: r30
+class vector & vector::operator=(const class vector & x /* r29 */) {
     // Local variables
     unsigned long n; // r31
     struct RouteGoal * const pNewData; // r29
@@ -3136,7 +3465,8 @@ struct RouteGoal * vector::DoRealloc(struct RouteGoal * first /* r29 */, struct 
 }
 
 // Range: 0x800B0630 -> 0x800B07C4
-void vector::DoInsertValue(class vector * const this /* r29 */, struct MotiveInc * position /* r30 */, const struct MotiveInc & value /* r31 */) {
+// this: r29
+void vector::DoInsertValue(struct MotiveInc * position /* r30 */, const struct MotiveInc & value /* r31 */) {
     // Local variables
     const struct MotiveInc * pValue; // [invalid]
     unsigned long nNewSize; // r28
@@ -3154,7 +3484,8 @@ struct MotiveInc * VectorBase::DoAllocate() {}
 unsigned long VectorBase::GetNewCapacity() {}
 
 // Range: 0x800B0814 -> 0x800B0A1C
-void vector::DoInsertValues(class vector * const this /* r28 */, struct MotiveInc * position /* r29 */, unsigned long n /* r30 */, const struct MotiveInc & value /* r31 */) {
+// this: r28
+void vector::DoInsertValues(struct MotiveInc * position /* r29 */, unsigned long n /* r30 */, const struct MotiveInc & value /* r31 */) {
     // Local variables
     struct MotiveInc temp; // r1+0x8
     unsigned long nExtra; // r27
@@ -3166,7 +3497,8 @@ void vector::DoInsertValues(class vector * const this /* r28 */, struct MotiveIn
 }
 
 // Range: 0x800B0A1C -> 0x800B0B0C
-void vector::reserve(class vector * const this /* r29 */, unsigned long n /* r30 */) {
+// this: r29
+void vector::reserve(unsigned long n /* r30 */) {
     // Local variables
     struct MotiveInc * const pNewData; // r31
     long nPrevSize; // r0
@@ -3179,7 +3511,8 @@ struct MotiveInc * vector::DoRealloc(struct MotiveInc * first /* r29 */, struct 
 }
 
 // Range: 0x800B0B64 -> 0x800B0CF8
-void vector::DoInsertValue(class vector * const this /* r29 */, struct ObjectRecord * position /* r30 */, const struct ObjectRecord & value /* r31 */) {
+// this: r29
+void vector::DoInsertValue(struct ObjectRecord * position /* r30 */, const struct ObjectRecord & value /* r31 */) {
     // Local variables
     const struct ObjectRecord * pValue; // [invalid]
     unsigned long nNewSize; // r28
@@ -3197,7 +3530,8 @@ struct ObjectRecord * VectorBase::DoAllocate() {}
 unsigned long VectorBase::GetNewCapacity() {}
 
 // Range: 0x800B0D48 -> 0x800B0F50
-void vector::DoInsertValues(class vector * const this /* r28 */, struct ObjectRecord * position /* r29 */, unsigned long n /* r30 */, const struct ObjectRecord & value /* r31 */) {
+// this: r28
+void vector::DoInsertValues(struct ObjectRecord * position /* r29 */, unsigned long n /* r30 */, const struct ObjectRecord & value /* r31 */) {
     // Local variables
     struct ObjectRecord temp; // r1+0x8
     unsigned long nExtra; // r27
@@ -3209,7 +3543,8 @@ void vector::DoInsertValues(class vector * const this /* r28 */, struct ObjectRe
 }
 
 // Range: 0x800B0F50 -> 0x800B10C4
-void vector::DoInsertValue(class vector * const this /* r31 */, class XRoute * position /* r26 */, const class XRoute & value /* r27 */) {
+// this: r31
+void vector::DoInsertValue(class XRoute * position /* r26 */, const class XRoute & value /* r27 */) {
     // Local variables
     const class XRoute * pValue; // [invalid]
     unsigned long nNewSize; // r29
@@ -3227,7 +3562,8 @@ class XRoute * VectorBase::DoAllocate() {}
 unsigned long VectorBase::GetNewCapacity() {}
 
 // Range: 0x800B1114 -> 0x800B1320
-void vector::DoInsertValues(class vector * const this /* r28 */, class XRoute * position /* r29 */, unsigned long n /* r30 */, const class XRoute & value /* r31 */) {
+// this: r28
+void vector::DoInsertValues(class XRoute * position /* r29 */, unsigned long n /* r30 */, const class XRoute & value /* r31 */) {
     // Local variables
     class XRoute temp; // r1+0x8
     unsigned long nExtra; // r26
@@ -3242,7 +3578,8 @@ void vector::DoInsertValues(class vector * const this /* r28 */, class XRoute * 
 unsigned char vector::empty() {}
 
 // Range: 0x800B1338 -> 0x800B148C
-void vector::DoInsertValue(class vector * const this /* r31 */, struct TilePt * position /* r26 */, const struct TilePt & value /* r27 */) {
+// this: r31
+void vector::DoInsertValue(struct TilePt * position /* r26 */, const struct TilePt & value /* r27 */) {
     // Local variables
     const struct TilePt * pValue; // [invalid]
     unsigned long nNewSize; // r29
@@ -3257,7 +3594,8 @@ void VectorBase::DoFree() {}
 unsigned long VectorBase::GetNewCapacity() {}
 
 // Range: 0x800B14B8 -> 0x800B1600
-class vector & vector::__as(class vector * const this /* r30 */, const class vector & x /* r29 */) {
+// this: r30
+class vector & vector::operator=(const class vector & x /* r29 */) {
     // Local variables
     unsigned long n; // r31
     struct TilePt * const pNewData; // r29
@@ -3271,7 +3609,8 @@ struct TilePt * vector::DoRealloc(struct TilePt * first /* r29 */, struct TilePt
 }
 
 // Range: 0x800B1658 -> 0x800B17DC
-void vector::DoInsertValue(class vector * const this /* r29 */, struct TypedMotiveInc * position /* r30 */, const struct TypedMotiveInc & value /* r31 */) {
+// this: r29
+void vector::DoInsertValue(struct TypedMotiveInc * position /* r30 */, const struct TypedMotiveInc & value /* r31 */) {
     // Local variables
     const struct TypedMotiveInc * pValue; // [invalid]
     unsigned long nNewSize; // r28
@@ -3286,7 +3625,8 @@ void VectorBase::DoFree() {}
 unsigned long VectorBase::GetNewCapacity() {}
 
 // Range: 0x800B1808 -> 0x800B1950
-class vector & vector::__as(class vector * const this /* r30 */, const class vector & x /* r29 */) {
+// this: r30
+class vector & vector::operator=(const class vector & x /* r29 */) {
     // Local variables
     unsigned long n; // r31
     struct TypedMotiveInc * const pNewData; // r29
@@ -3300,7 +3640,8 @@ struct TypedMotiveInc * vector::DoRealloc(struct TypedMotiveInc * first /* r29 *
 }
 
 // Range: 0x800B19A8 -> 0x800B1AF8
-void vector::DoInsertValue(class vector * const this /* r31 */, class PassiveInfluenceItem * * position /* r26 */, class PassiveInfluenceItem * const & value /* r27 */) {
+// this: r31
+void vector::DoInsertValue(class PassiveInfluenceItem * * position /* r26 */, class PassiveInfluenceItem * const & value /* r27 */) {
     // Local variables
     class PassiveInfluenceItem * const * pValue; // [invalid]
     unsigned long nNewSize; // r29
@@ -3315,7 +3656,8 @@ void VectorBase::DoFree() {}
 unsigned long VectorBase::GetNewCapacity() {}
 
 // Range: 0x800B1B24 -> 0x800B1C6C
-class vector & vector::__as(class vector * const this /* r30 */, const class vector & x /* r29 */) {
+// this: r30
+class vector & vector::operator=(const class vector & x /* r29 */) {
     // Local variables
     unsigned long n; // r31
     class PassiveInfluenceItem * * const pNewData; // r29
@@ -3329,7 +3671,8 @@ class PassiveInfluenceItem * * vector::DoRealloc(class PassiveInfluenceItem * * 
 }
 
 // Range: 0x800B1CC4 -> 0x800B1E58
-void vector::DoInsertValue(class vector * const this /* r29 */, struct ListenPacket * position /* r30 */, const struct ListenPacket & value /* r31 */) {
+// this: r29
+void vector::DoInsertValue(struct ListenPacket * position /* r30 */, const struct ListenPacket & value /* r31 */) {
     // Local variables
     const struct ListenPacket * pValue; // [invalid]
     unsigned long nNewSize; // r28
@@ -3347,7 +3690,8 @@ struct ListenPacket * VectorBase::DoAllocate() {}
 unsigned long VectorBase::GetNewCapacity() {}
 
 // Range: 0x800B1EA8 -> 0x800B2028
-class vector & vector::__as(class vector * const this /* r29 */, const class vector & x /* r30 */) {
+// this: r29
+class vector & vector::operator=(const class vector & x /* r30 */) {
     // Local variables
     unsigned long n; // r31
     class CTilePt * const pNewData; // r30
@@ -3355,7 +3699,8 @@ class vector & vector::__as(class vector * const this /* r29 */, const class vec
 }
 
 // Range: 0x800B2028 -> 0x800B219C
-void vector::DoInsertValue(class vector * const this /* r31 */, class EVec3 * position /* r26 */, const class EVec3 & value /* r27 */) {
+// this: r31
+void vector::DoInsertValue(class EVec3 * position /* r26 */, const class EVec3 & value /* r27 */) {
     // Local variables
     const class EVec3 * pValue; // [invalid]
     unsigned long nNewSize; // r29
@@ -3373,7 +3718,8 @@ class EVec3 * VectorBase::DoAllocate() {}
 unsigned long VectorBase::GetNewCapacity() {}
 
 // Range: 0x800B21EC -> 0x800B233C
-void vector::DoInsertValue(class vector * const this /* r31 */, float * position /* r26 */, const float & value /* r27 */) {
+// this: r31
+void vector::DoInsertValue(float * position /* r26 */, const float & value /* r27 */) {
     // Local variables
     const float * pValue; // [invalid]
     unsigned long nNewSize; // r29
@@ -3391,7 +3737,8 @@ float * VectorBase::DoAllocate() {}
 unsigned long VectorBase::GetNewCapacity() {}
 
 // Range: 0x800B238C -> 0x800B2500
-void vector::DoInsertValue(class vector * const this /* r31 */, class StackString * position /* r26 */, const class StackString & value /* r27 */) {
+// this: r31
+void vector::DoInsertValue(class StackString * position /* r26 */, const class StackString & value /* r27 */) {
     // Local variables
     const class StackString * pValue; // [invalid]
     unsigned long nNewSize; // r29
@@ -3409,7 +3756,8 @@ class StackString * VectorBase::DoAllocate() {}
 unsigned long VectorBase::GetNewCapacity() {}
 
 // Range: 0x800B2550 -> 0x800B271C
-void vector::DoInsertValues(class vector * const this /* r29 */, class RelInt * position /* r30 */, unsigned long n /* r31 */, const class RelInt & value /* r25 */) {
+// this: r29
+void vector::DoInsertValues(class RelInt * position /* r30 */, unsigned long n /* r31 */, const class RelInt & value /* r25 */) {
     // Local variables
     class RelInt temp; // r1+0x8
     unsigned long nExtra; // r28
@@ -3430,7 +3778,8 @@ class RelInt * VectorBase::DoAllocate() {}
 unsigned long VectorBase::GetNewCapacity() {}
 
 // Range: 0x800B276C -> 0x800B28BC
-void vector::DoInsertValue(class vector * const this /* r31 */, class RelArray * * position /* r26 */, class RelArray * const & value /* r27 */) {
+// this: r31
+void vector::DoInsertValue(class RelArray * * position /* r26 */, class RelArray * const & value /* r27 */) {
     // Local variables
     class RelArray * const * pValue; // [invalid]
     unsigned long nNewSize; // r29
@@ -3448,7 +3797,8 @@ class RelArray * * VectorBase::DoAllocate() {}
 unsigned long VectorBase::GetNewCapacity() {}
 
 // Range: 0x800B290C -> 0x800B2AD4
-void vector::DoInsertValues(class vector * const this /* r30 */, class RelArray * * position /* r31 */, unsigned long n /* r25 */, class RelArray * const & value /* r26 */) {
+// this: r30
+void vector::DoInsertValues(class RelArray * * position /* r31 */, unsigned long n /* r25 */, class RelArray * const & value /* r26 */) {
     // Local variables
     class RelArray * const temp; // r1+0x8
     unsigned long nExtra; // r28
@@ -3460,7 +3810,8 @@ void vector::DoInsertValues(class vector * const this /* r30 */, class RelArray 
 }
 
 // Range: 0x800B2AD4 -> 0x800B2C48
-void vector::DoInsertValue(class vector * const this /* r31 */, class ASTNode * position /* r26 */, const class ASTNode & value /* r27 */) {
+// this: r31
+void vector::DoInsertValue(class ASTNode * position /* r26 */, const class ASTNode & value /* r27 */) {
     // Local variables
     const class ASTNode * pValue; // [invalid]
     unsigned long nNewSize; // r29
@@ -3475,7 +3826,8 @@ void VectorBase::DoFree() {}
 unsigned long VectorBase::GetNewCapacity() {}
 
 // Range: 0x800B2C74 -> 0x800B2DF4
-class vector & vector::__as(class vector * const this /* r29 */, const class vector & x /* r30 */) {
+// this: r29
+class vector & vector::operator=(const class vector & x /* r30 */) {
     // Local variables
     unsigned long n; // r31
     class ASTNode * const pNewData; // r30
@@ -3489,7 +3841,8 @@ class ASTNode * vector::DoRealloc(class ASTNode * first /* r29 */, class ASTNode
 }
 
 // Range: 0x800B2E4C -> 0x800B2FA0
-void vector::DoInsertValue(class vector * const this /* r31 */, class IPoint * position /* r26 */, const class IPoint & value /* r27 */) {
+// this: r31
+void vector::DoInsertValue(class IPoint * position /* r26 */, const class IPoint & value /* r27 */) {
     // Local variables
     const class IPoint * pValue; // [invalid]
     unsigned long nNewSize; // r29
@@ -3507,7 +3860,8 @@ class IPoint * VectorBase::DoAllocate() {}
 unsigned long VectorBase::GetNewCapacity() {}
 
 // Range: 0x800B2FF0 -> 0x800B3080
-class SlotDescriptor * vector::erase(class vector * const this /* r29 */, class SlotDescriptor * first /* r30 */, class SlotDescriptor * last /* r31 */) {
+// this: r29
+class SlotDescriptor * vector::erase(class SlotDescriptor * first /* r30 */, class SlotDescriptor * last /* r31 */) {
     // Local variables
     class SlotDescriptor * const position; // r0
 }
@@ -3519,10 +3873,11 @@ void vector::insert() {}
 class SlotDescriptor * vector::end() {}
 
 // Range: 0x800B308C -> 0x800B309C
-class SlotDescriptor & vector::__vc() {}
+class SlotDescriptor & vector::operator[]() {}
 
 // Range: 0x800B309C -> 0x800B329C
-void vector::DoInsertValues(class vector * const this /* r28 */, class SlotDescriptor * position /* r29 */, unsigned long n /* r30 */, const class SlotDescriptor & value /* r31 */) {
+// this: r28
+void vector::DoInsertValues(class SlotDescriptor * position /* r29 */, unsigned long n /* r30 */, const class SlotDescriptor & value /* r31 */) {
     // Local variables
     class SlotDescriptor temp; // r1+0x8
     unsigned long nExtra; // r26
@@ -3534,32 +3889,32 @@ void vector::DoInsertValues(class vector * const this /* r28 */, class SlotDescr
 }
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\common\EASTL\1.03.00\include\EASTL\vector.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x800EFED8 -> 0x800F7A34
-*/
 // Range: 0x800EFED8 -> 0x800EFF40
-void * vector::~vector(class vector * const this /* r30 */) {}
+// this: r30
+vector::~vector() {}
 
 // Range: 0x800EFF40 -> 0x800EFFCC
-void * VectorBase::~VectorBase(struct VectorBase * const this /* r30 */) {}
+// this: r30
+VectorBase::~VectorBase() {}
 
 // Range: 0x800EFFCC -> 0x800EFFD0
 void vector::DoDestroyValues() {}
 
 // Range: 0x800EFFD0 -> 0x800F0000
-void * vector::vector(class vector * const this /* r31 */) {}
+// this: r31
+vector::vector() {}
 
 // Range: 0x800F0000 -> 0x800F0044
-void * VectorBase::VectorBase(struct VectorBase * const this /* r31 */) {}
+// this: r31
+VectorBase::VectorBase() {}
 
 // Range: 0x800F0044 -> 0x800F00AC
-void * vector::~vector(class vector * const this /* r30 */) {}
+// this: r30
+vector::~vector() {}
 
 // Range: 0x800F00AC -> 0x800F0124
-void * VectorBase::~VectorBase(struct VectorBase * const this /* r30 */) {}
+// this: r30
+VectorBase::~VectorBase() {}
 
 // Range: 0x800F0124 -> 0x800F0128
 void vector::DoDestroyValues() {}
@@ -3577,16 +3932,20 @@ void vector::push_back(const class ERAmbientSound * const & value /* r31 */) {}
 class ERAmbientSound * vector::begin() {}
 
 // Range: 0x800F01BC -> 0x800F01EC
-void * vector::vector(class vector * const this /* r31 */) {}
+// this: r31
+vector::vector() {}
 
 // Range: 0x800F01EC -> 0x800F0230
-void * VectorBase::VectorBase(struct VectorBase * const this /* r31 */) {}
+// this: r31
+VectorBase::VectorBase() {}
 
 // Range: 0x800F0230 -> 0x800F02F4
-void vector::resize(class vector * const this /* r28 */, unsigned long n /* r31 */) {}
+// this: r28
+void vector::resize(unsigned long n /* r31 */) {}
 
 // Range: 0x800F02F4 -> 0x800F0388
-struct ListenerInfo * vector::erase(class vector * const this /* r29 */, struct ListenerInfo * first /* r30 */, struct ListenerInfo * last /* r31 */) {
+// this: r29
+struct ListenerInfo * vector::erase(struct ListenerInfo * first /* r30 */, struct ListenerInfo * last /* r31 */) {
     // Local variables
     struct ListenerInfo * const position; // r0
 }
@@ -3595,7 +3954,7 @@ struct ListenerInfo * vector::erase(class vector * const this /* r29 */, struct 
 void vector::insert() {}
 
 // Range: 0x800F03C4 -> 0x800F03D4
-struct ListenerInfo & vector::__vc() {}
+struct ListenerInfo & vector::operator[]() {}
 
 // Range: 0x800F03D4 -> 0x800F0400
 unsigned long vector::size() {}
@@ -3613,7 +3972,7 @@ class ERAmbientSound * * vector::end() {}
 class ERAmbientSound * * vector::begin() {}
 
 // Range: 0x800F0420 -> 0x800F0430
-unsigned int & vector::__vc() {}
+unsigned int & vector::operator[]() {}
 
 // Range: 0x800F0430 -> 0x800F0438
 struct ListenerInfo * vector::end() {}
@@ -3622,46 +3981,55 @@ struct ListenerInfo * vector::end() {}
 struct ListenerInfo * vector::begin() {}
 
 // Range: 0x800F0440 -> 0x800F04A8
-void * vector::~vector(class vector * const this /* r30 */) {}
+// this: r30
+vector::~vector() {}
 
 // Range: 0x800F04A8 -> 0x800F0520
-void * VectorBase::~VectorBase(struct VectorBase * const this /* r30 */) {}
+// this: r30
+VectorBase::~VectorBase() {}
 
 // Range: 0x800F0520 -> 0x800F0524
 void vector::DoDestroyValues() {}
 
 // Range: 0x800F0524 -> 0x800F05C4
-void vector::swap(class vector * const this /* r30 */, class vector & x /* r31 */) {
+// this: r30
+void vector::swap(class vector & x /* r31 */) {
     // Local variables
     class vector temp; // r1+0x8
 }
 
 // Range: 0x800F05C4 -> 0x800F0628
-void * vector::vector(class vector * const this /* r30 */, const class vector & x /* r31 */) {}
+// this: r30
+vector::vector(const class vector & x /* r31 */) {}
 
 // Range: 0x800F0628 -> 0x800F068C
-void * VectorBase::VectorBase(struct VectorBase * const this /* r30 */, unsigned long n /* r31 */) {}
+// this: r30
+VectorBase::VectorBase(unsigned long n /* r31 */) {}
 
 // Range: 0x800F068C -> 0x800F06B0
 class ObjectDataBehaviorTree * * VectorBase::DoAllocate() {}
 
 // Range: 0x800F06B0 -> 0x800F06E0
-void * vector::vector(class vector * const this /* r31 */) {}
+// this: r31
+vector::vector() {}
 
 // Range: 0x800F06E0 -> 0x800F0724
-void * VectorBase::VectorBase(struct VectorBase * const this /* r31 */) {}
+// this: r31
+VectorBase::VectorBase() {}
 
 // Range: 0x800F0724 -> 0x800F0734
-class ObjectDataBehaviorTree * & vector::__vc() {}
+class ObjectDataBehaviorTree * & vector::operator[]() {}
 
 // Range: 0x800F0734 -> 0x800F074C
 unsigned long vector::size() {}
 
 // Range: 0x800F074C -> 0x800F07B4
-void * vector::~vector(class vector * const this /* r30 */) {}
+// this: r30
+vector::~vector() {}
 
 // Range: 0x800F07B4 -> 0x800F082C
-void * VectorBase::~VectorBase(struct VectorBase * const this /* r30 */) {}
+// this: r30
+VectorBase::~VectorBase() {}
 
 // Range: 0x800F082C -> 0x800F0834
 signed short * vector::end() {}
@@ -3673,43 +4041,50 @@ signed short * vector::begin() {}
 void vector::pop_back() {}
 
 // Range: 0x800F084C -> 0x800F085C
-signed short & vector::__vc() {}
+signed short & vector::operator[]() {}
 
 // Range: 0x800F085C -> 0x800F0878
 unsigned long vector::size() {}
 
 // Range: 0x800F0878 -> 0x800F08A8
-void * vector::vector(class vector * const this /* r31 */) {}
+// this: r31
+vector::vector() {}
 
 // Range: 0x800F08A8 -> 0x800F08EC
-void * VectorBase::VectorBase(struct VectorBase * const this /* r31 */) {}
+// this: r31
+VectorBase::VectorBase() {}
 
 // Range: 0x800F08EC -> 0x800F0958
 void vector::push_back(class ObjectDataBehaviorTree * const & value /* r31 */) {}
 
 // Range: 0x800F0958 -> 0x800F0968
-struct ListenerInfo & vector::__vc() {}
+struct ListenerInfo & vector::operator[]() {}
 
 // Range: 0x800F0968 -> 0x800F09D0
-void * vector::~vector(class vector * const this /* r30 */) {}
+// this: r30
+vector::~vector() {}
 
 // Range: 0x800F09D0 -> 0x800F0A48
-void * VectorBase::~VectorBase(struct VectorBase * const this /* r30 */) {}
+// this: r30
+VectorBase::~VectorBase() {}
 
 // Range: 0x800F0A48 -> 0x800F0A4C
 void vector::DoDestroyValues() {}
 
 // Range: 0x800F0A4C -> 0x800F0A7C
-void * vector::vector(class vector * const this /* r31 */) {}
+// this: r31
+vector::vector() {}
 
 // Range: 0x800F0A7C -> 0x800F0AC0
-void * VectorBase::VectorBase(struct VectorBase * const this /* r31 */) {}
+// this: r31
+VectorBase::VectorBase() {}
 
 // Range: 0x800F0AC0 -> 0x800F0ACC
 void vector::clear() {}
 
 // Range: 0x800F0ACC -> 0x800F0B4C
-class PenaltyRect * * vector::erase(class vector * const this /* r29 */, class PenaltyRect * * first /* r30 */, class PenaltyRect * * last /* r31 */) {
+// this: r29
+class PenaltyRect * * vector::erase(class PenaltyRect * * first /* r30 */, class PenaltyRect * * last /* r31 */) {
     // Local variables
     class PenaltyRect * * const position; // r0
 }
@@ -3724,25 +4099,31 @@ class PenaltyRect * * vector::end() {}
 class PenaltyRect * * vector::begin() {}
 
 // Range: 0x800F0BC8 -> 0x800F0C30
-void * vector::~vector(class vector * const this /* r30 */) {}
+// this: r30
+vector::~vector() {}
 
 // Range: 0x800F0C30 -> 0x800F0CA8
-void * VectorBase::~VectorBase(struct VectorBase * const this /* r30 */) {}
+// this: r30
+VectorBase::~VectorBase() {}
 
 // Range: 0x800F0CA8 -> 0x800F0CAC
 void vector::DoDestroyValues() {}
 
 // Range: 0x800F0CAC -> 0x800F0CDC
-void * vector::vector(class vector * const this /* r31 */) {}
+// this: r31
+vector::vector() {}
 
 // Range: 0x800F0CDC -> 0x800F0D20
-void * VectorBase::VectorBase(struct VectorBase * const this /* r31 */) {}
+// this: r31
+VectorBase::VectorBase() {}
 
 // Range: 0x800F0D20 -> 0x800F0D84
-void * vector::vector(class vector * const this /* r30 */, const class vector & x /* r31 */) {}
+// this: r30
+vector::vector(const class vector & x /* r31 */) {}
 
 // Range: 0x800F0D84 -> 0x800F0DE8
-void * VectorBase::VectorBase(struct VectorBase * const this /* r30 */, unsigned long n /* r31 */) {}
+// this: r30
+VectorBase::VectorBase(unsigned long n /* r31 */) {}
 
 // Range: 0x800F0DE8 -> 0x800F0E0C
 class FamilyMember * VectorBase::DoAllocate() {}
@@ -3751,7 +4132,7 @@ class FamilyMember * VectorBase::DoAllocate() {}
 unsigned long vector::size() {}
 
 // Range: 0x800F0E24 -> 0x800F0E34
-class FamilyMember & vector::__vc() {}
+class FamilyMember & vector::operator[]() {}
 
 // Range: 0x800F0E34 -> 0x800F0E3C
 class FamilyMember * vector::end() {}
@@ -3766,7 +4147,8 @@ class FamilyMember * vector::end() {}
 class FamilyMember * vector::begin() {}
 
 // Range: 0x800F0E54 -> 0x800F0ED4
-class FamilyMember * vector::erase(class vector * const this /* r29 */, class FamilyMember * first /* r30 */, class FamilyMember * last /* r31 */) {
+// this: r29
+class FamilyMember * vector::erase(class FamilyMember * first /* r30 */, class FamilyMember * last /* r31 */) {
     // Local variables
     class FamilyMember * const position; // r0
 }
@@ -3775,7 +4157,8 @@ class FamilyMember * vector::erase(class vector * const this /* r29 */, class Fa
 void vector::insert() {}
 
 // Range: 0x800F0ED8 -> 0x800F0F78
-void vector::swap(class vector * const this /* r30 */, class vector & x /* r31 */) {
+// this: r30
+void vector::swap(class vector & x /* r31 */) {
     // Local variables
     class vector temp; // r1+0x8
 }
@@ -3784,13 +4167,16 @@ void vector::swap(class vector * const this /* r30 */, class vector & x /* r31 *
 void vector::push_back(const class FamilyMember & value /* r31 */) {}
 
 // Range: 0x800F0FE4 -> 0x800F1048
-class FamilyMember * vector::erase(class vector * const this /* r30 */, class FamilyMember * position /* r31 */) {}
+// this: r30
+class FamilyMember * vector::erase(class FamilyMember * position /* r31 */) {}
 
 // Range: 0x800F1048 -> 0x800F10B0
-void * vector::~vector(class vector * const this /* r30 */) {}
+// this: r30
+vector::~vector() {}
 
 // Range: 0x800F10B0 -> 0x800F1128
-void * VectorBase::~VectorBase(struct VectorBase * const this /* r30 */) {}
+// this: r30
+VectorBase::~VectorBase() {}
 
 // Range: 0x800F1128 -> 0x800F112C
 void vector::DoDestroyValues() {}
@@ -3808,28 +4194,35 @@ unsigned long vector::size() {}
 void vector::push_back(class cGZSnd * const & value /* r31 */) {}
 
 // Range: 0x800F11C0 -> 0x800F11F0
-void * vector::vector(class vector * const this /* r31 */) {}
+// this: r31
+vector::vector() {}
 
 // Range: 0x800F11F0 -> 0x800F1234
-void * VectorBase::VectorBase(struct VectorBase * const this /* r31 */) {}
+// this: r31
+VectorBase::VectorBase() {}
 
 // Range: 0x800F1234 -> 0x800F129C
-void * vector::~vector(class vector * const this /* r30 */) {}
+// this: r30
+vector::~vector() {}
 
 // Range: 0x800F129C -> 0x800F1328
-void * VectorBase::~VectorBase(struct VectorBase * const this /* r30 */) {}
+// this: r30
+VectorBase::~VectorBase() {}
 
 // Range: 0x800F1328 -> 0x800F1390
-void * vector::~vector(class vector * const this /* r30 */) {}
+// this: r30
+vector::~vector() {}
 
 // Range: 0x800F1390 -> 0x800F1408
-void * VectorBase::~VectorBase(struct VectorBase * const this /* r30 */) {}
+// this: r30
+VectorBase::~VectorBase() {}
 
 // Range: 0x800F1408 -> 0x800F140C
 void vector::DoDestroyValues() {}
 
 // Range: 0x800F140C -> 0x800F149C
-class IFFResNode * vector::erase(class vector * const this /* r29 */, class IFFResNode * first /* r30 */, class IFFResNode * last /* r31 */) {
+// this: r29
+class IFFResNode * vector::erase(class IFFResNode * first /* r30 */, class IFFResNode * last /* r31 */) {
     // Local variables
     class IFFResNode * const position; // r0
 }
@@ -3859,43 +4252,52 @@ class IFFResList * vector::begin() {}
 unsigned long vector::size() {}
 
 // Range: 0x800F156C -> 0x800F15D4
-void * vector::~vector(class vector * const this /* r30 */) {}
+// this: r30
+vector::~vector() {}
 
 // Range: 0x800F15D4 -> 0x800F165C
-void * VectorBase::~VectorBase(struct VectorBase * const this /* r30 */) {}
+// this: r30
+VectorBase::~VectorBase() {}
 
 // Range: 0x800F165C -> 0x800F16C8
 void vector::push_back(const class IFFResList & value /* r31 */) {}
 
 // Range: 0x800F1714 -> 0x800F1778
-void * vector::vector(class vector * const this /* r30 */, const class vector & x /* r31 */) {}
+// this: r30
+vector::vector(const class vector & x /* r31 */) {}
 
 // Range: 0x800F1778 -> 0x800F17DC
-void * VectorBase::VectorBase(struct VectorBase * const this /* r30 */, unsigned long n /* r31 */) {}
+// this: r30
+VectorBase::VectorBase(unsigned long n /* r31 */) {}
 
 // Range: 0x800F17DC -> 0x800F1800
 class IFFResNode * VectorBase::DoAllocate() {}
 
 // Range: 0x800F1800 -> 0x800F1830
-void * vector::vector(class vector * const this /* r31 */) {}
+// this: r31
+vector::vector() {}
 
 // Range: 0x800F1830 -> 0x800F1874
-void * VectorBase::VectorBase(struct VectorBase * const this /* r31 */) {}
+// this: r31
+VectorBase::VectorBase() {}
 
 // Range: 0x800F1874 -> 0x800F18E0
 void vector::push_back(const class IFFResNode & value /* r31 */) {}
 
 // Range: 0x800F18E0 -> 0x800F194C
-class IFFResList * vector::erase(class vector * const this /* r30 */, class IFFResList * position /* r31 */) {}
+// this: r30
+class IFFResList * vector::erase(class IFFResList * position /* r31 */) {}
 
 // Range: 0x800F194C -> 0x800F19B0
-class IFFResNode * vector::erase(class vector * const this /* r30 */, class IFFResNode * position /* r31 */) {}
+// this: r30
+class IFFResNode * vector::erase(class IFFResNode * position /* r31 */) {}
 
 // Range: 0x800F19B0 -> 0x800F19BC
 void vector::clear() {}
 
 // Range: 0x800F19BC -> 0x800F1A4C
-class IFFResList * vector::erase(class vector * const this /* r29 */, class IFFResList * first /* r30 */, class IFFResList * last /* r31 */) {
+// this: r29
+class IFFResList * vector::erase(class IFFResList * first /* r30 */, class IFFResList * last /* r31 */) {
     // Local variables
     class IFFResList * const position; // r0
 }
@@ -3907,37 +4309,46 @@ void vector::DoDestroyValues(class IFFResList * first /* r30 */, class IFFResLis
 void vector::insert() {}
 
 // Range: 0x800F1AA0 -> 0x800F1B08
-void * vector::~vector(class vector * const this /* r30 */) {}
+// this: r30
+vector::~vector() {}
 
 // Range: 0x800F1B08 -> 0x800F1B90
-void * VectorBase::~VectorBase(struct VectorBase * const this /* r30 */) {}
+// this: r30
+VectorBase::~VectorBase() {}
 
 // Range: 0x800F1B90 -> 0x800F1BC0
-void * vector::vector(class vector * const this /* r31 */) {}
+// this: r31
+vector::vector() {}
 
 // Range: 0x800F1BC0 -> 0x800F1C04
-void * VectorBase::VectorBase(struct VectorBase * const this /* r31 */) {}
+// this: r31
+VectorBase::VectorBase() {}
 
 // Range: 0x800F1C04 -> 0x800F1C6C
-void * vector::~vector(class vector * const this /* r30 */) {}
+// this: r30
+vector::~vector() {}
 
 // Range: 0x800F1C6C -> 0x800F1CE4
-void * VectorBase::~VectorBase(struct VectorBase * const this /* r30 */) {}
+// this: r30
+VectorBase::~VectorBase() {}
 
 // Range: 0x800F1CE4 -> 0x800F1CE8
 void vector::DoDestroyValues() {}
 
 // Range: 0x800F1CE8 -> 0x800F1D18
-void * vector::vector(class vector * const this /* r31 */) {}
+// this: r31
+vector::vector() {}
 
 // Range: 0x800F1D18 -> 0x800F1D5C
-void * VectorBase::VectorBase(struct VectorBase * const this /* r31 */) {}
+// this: r31
+VectorBase::VectorBase() {}
 
 // Range: 0x800F1D5C -> 0x800F1D68
 void vector::clear() {}
 
 // Range: 0x800F1D68 -> 0x800F1DE8
-class InventoryItem * * vector::erase(class vector * const this /* r29 */, class InventoryItem * * first /* r30 */, class InventoryItem * * last /* r31 */) {
+// this: r29
+class InventoryItem * * vector::erase(class InventoryItem * * first /* r30 */, class InventoryItem * * last /* r31 */) {
     // Local variables
     class InventoryItem * * const position; // r0
 }
@@ -3952,7 +4363,7 @@ class InventoryItem * * vector::begin() {}
 void vector::push_back(class InventoryItem * const & value /* r31 */) {}
 
 // Range: 0x800F1E64 -> 0x800F1E74
-class InventoryItem * & vector::__vc() {}
+class InventoryItem * & vector::operator[]() {}
 
 // Range: 0x800F1E74 -> 0x800F1E8C
 unsigned long vector::size() {}
@@ -3964,7 +4375,8 @@ class InventoryItem * const * vector::end() {}
 class InventoryItem * const * vector::begin() {}
 
 // Range: 0x800F1E9C -> 0x800F1F00
-class InventoryItem * * vector::erase(class vector * const this /* r30 */, class InventoryItem * * position /* r31 */) {}
+// this: r30
+class InventoryItem * * vector::erase(class InventoryItem * * position /* r31 */) {}
 
 // Range: 0x800F1F00 -> 0x800F1F10
 void vector::pop_back() {}
@@ -3973,19 +4385,23 @@ void vector::pop_back() {}
 int & vector::back() {}
 
 // Range: 0x800F1F1C -> 0x800F1F84
-void * vector::~vector(class vector * const this /* r30 */) {}
+// this: r30
+vector::~vector() {}
 
 // Range: 0x800F1F84 -> 0x800F1FFC
-void * VectorBase::~VectorBase(struct VectorBase * const this /* r30 */) {}
+// this: r30
+VectorBase::~VectorBase() {}
 
 // Range: 0x800F1FFC -> 0x800F2000
 void vector::DoDestroyValues() {}
 
 // Range: 0x800F2000 -> 0x800F2030
-void * vector::vector(class vector * const this /* r31 */) {}
+// this: r31
+vector::vector() {}
 
 // Range: 0x800F2030 -> 0x800F2074
-void * VectorBase::VectorBase(struct VectorBase * const this /* r31 */) {}
+// this: r31
+VectorBase::VectorBase() {}
 
 // Range: 0x800F2074 -> 0x800F20E0
 void vector::push_back(class ClothingItem * const & value /* r31 */) {}
@@ -3994,7 +4410,8 @@ void vector::push_back(class ClothingItem * const & value /* r31 */) {}
 void vector::clear() {}
 
 // Range: 0x800F20EC -> 0x800F216C
-class ClothingItem * * vector::erase(class vector * const this /* r29 */, class ClothingItem * * first /* r30 */, class ClothingItem * * last /* r31 */) {
+// this: r29
+class ClothingItem * * vector::erase(class ClothingItem * * first /* r30 */, class ClothingItem * * last /* r31 */) {
     // Local variables
     class ClothingItem * * const position; // r0
 }
@@ -4003,7 +4420,8 @@ class ClothingItem * * vector::erase(class vector * const this /* r29 */, class 
 void vector::clear() {}
 
 // Range: 0x800F2178 -> 0x800F21F8
-struct OwnerInfo * vector::erase(class vector * const this /* r29 */, struct OwnerInfo * first /* r30 */, struct OwnerInfo * last /* r31 */) {
+// this: r29
+struct OwnerInfo * vector::erase(struct OwnerInfo * first /* r30 */, struct OwnerInfo * last /* r31 */) {
     // Local variables
     struct OwnerInfo * const position; // r0
 }
@@ -4015,7 +4433,8 @@ void vector::push_back(const struct OwnerInfo & value /* r31 */) {}
 struct OwnerInfo * vector::end() {}
 
 // Range: 0x800F2274 -> 0x800F2320
-struct OwnerInfo * vector::insert(class vector * const this /* r29 */, const struct OwnerInfo & value /* r30 */) {
+// this: r29
+struct OwnerInfo * vector::insert(const struct OwnerInfo & value /* r30 */) {
     // Local variables
     long n; // r31
 }
@@ -4024,7 +4443,7 @@ struct OwnerInfo * vector::insert(class vector * const this /* r29 */, const str
 struct OwnerInfo * vector::begin() {}
 
 // Range: 0x800F2328 -> 0x800F2338
-struct OwnerInfo & vector::__vc() {}
+struct OwnerInfo & vector::operator[]() {}
 
 // Range: 0x800F2338 -> 0x800F2340
 struct OwnerInfo * vector::end() {}
@@ -4033,7 +4452,7 @@ struct OwnerInfo * vector::end() {}
 struct OwnerInfo * vector::begin() {}
 
 // Range: 0x800F2348 -> 0x800F2358
-struct OwnerInfo & vector::__vc() {}
+struct OwnerInfo & vector::operator[]() {}
 
 // Range: 0x800F2358 -> 0x800F2370
 unsigned long vector::size() {}
@@ -4045,40 +4464,49 @@ struct DamageEvent * vector::end() {}
 struct DamageEvent * vector::begin() {}
 
 // Range: 0x800F2380 -> 0x800F23E8
-void * vector::~vector(class vector * const this /* r30 */) {}
+// this: r30
+vector::~vector() {}
 
 // Range: 0x800F23E8 -> 0x800F2460
-void * VectorBase::~VectorBase(struct VectorBase * const this /* r30 */) {}
+// this: r30
+VectorBase::~VectorBase() {}
 
 // Range: 0x800F2460 -> 0x800F2464
 void vector::DoDestroyValues() {}
 
 // Range: 0x800F2464 -> 0x800F2494
-void * vector::vector(class vector * const this /* r31 */) {}
+// this: r31
+vector::vector() {}
 
 // Range: 0x800F2494 -> 0x800F24D8
-void * VectorBase::VectorBase(struct VectorBase * const this /* r31 */) {}
+// this: r31
+VectorBase::VectorBase() {}
 
 // Range: 0x800F24D8 -> 0x800F2540
-void * vector::~vector(class vector * const this /* r30 */) {}
+// this: r30
+vector::~vector() {}
 
 // Range: 0x800F2540 -> 0x800F25B8
-void * VectorBase::~VectorBase(struct VectorBase * const this /* r30 */) {}
+// this: r30
+VectorBase::~VectorBase() {}
 
 // Range: 0x800F25B8 -> 0x800F25BC
 void vector::DoDestroyValues() {}
 
 // Range: 0x800F25BC -> 0x800F265C
-void vector::swap(class vector * const this /* r30 */, class vector & x /* r31 */) {
+// this: r30
+void vector::swap(class vector & x /* r31 */) {
     // Local variables
     class vector temp; // r1+0x8
 }
 
 // Range: 0x800F265C -> 0x800F26C0
-void * vector::vector(class vector * const this /* r30 */, const class vector & x /* r31 */) {}
+// this: r30
+vector::vector(const class vector & x /* r31 */) {}
 
 // Range: 0x800F26C0 -> 0x800F2724
-void * VectorBase::VectorBase(struct VectorBase * const this /* r30 */, unsigned long n /* r31 */) {}
+// this: r30
+VectorBase::VectorBase(unsigned long n /* r31 */) {}
 
 // Range: 0x800F2724 -> 0x800F2748
 class Neighbor * * VectorBase::DoAllocate() {}
@@ -4087,10 +4515,12 @@ class Neighbor * * VectorBase::DoAllocate() {}
 unsigned long vector::size() {}
 
 // Range: 0x800F2760 -> 0x800F2790
-void * vector::vector(class vector * const this /* r31 */) {}
+// this: r31
+vector::vector() {}
 
 // Range: 0x800F2790 -> 0x800F27D4
-void * VectorBase::VectorBase(struct VectorBase * const this /* r31 */) {}
+// this: r31
+VectorBase::VectorBase() {}
 
 // Range: 0x800F27D4 -> 0x800F27DC
 class Neighbor * * vector::end() {}
@@ -4099,25 +4529,30 @@ class Neighbor * * vector::end() {}
 class Neighbor * * vector::begin() {}
 
 // Range: 0x800F27E4 -> 0x800F284C
-void * vector::~vector(class vector * const this /* r30 */) {}
+// this: r30
+vector::~vector() {}
 
 // Range: 0x800F284C -> 0x800F28C4
-void * VectorBase::~VectorBase(struct VectorBase * const this /* r30 */) {}
+// this: r30
+VectorBase::~VectorBase() {}
 
 // Range: 0x800F28C4 -> 0x800F28C8
 void vector::DoDestroyValues() {}
 
 // Range: 0x800F28C8 -> 0x800F28F8
-void * vector::vector(class vector * const this /* r31 */) {}
+// this: r31
+vector::vector() {}
 
 // Range: 0x800F28F8 -> 0x800F293C
-void * VectorBase::VectorBase(struct VectorBase * const this /* r31 */) {}
+// this: r31
+VectorBase::VectorBase() {}
 
 // Range: 0x800F293C -> 0x800F2948
 void vector::clear() {}
 
 // Range: 0x800F2948 -> 0x800F29C8
-class FamilyImpl * * vector::erase(class vector * const this /* r29 */, class FamilyImpl * * first /* r30 */, class FamilyImpl * * last /* r31 */) {
+// this: r29
+class FamilyImpl * * vector::erase(class FamilyImpl * * first /* r30 */, class FamilyImpl * * last /* r31 */) {
     // Local variables
     class FamilyImpl * * const position; // r0
 }
@@ -4129,16 +4564,19 @@ class FamilyImpl * * vector::end() {}
 class FamilyImpl * * vector::begin() {}
 
 // Range: 0x800F29D8 -> 0x800F2A78
-void vector::swap(class vector * const this /* r30 */, class vector & x /* r31 */) {
+// this: r30
+void vector::swap(class vector & x /* r31 */) {
     // Local variables
     class vector temp; // r1+0x8
 }
 
 // Range: 0x800F2A78 -> 0x800F2ADC
-void * vector::vector(class vector * const this /* r30 */, const class vector & x /* r31 */) {}
+// this: r30
+vector::vector(const class vector & x /* r31 */) {}
 
 // Range: 0x800F2ADC -> 0x800F2B40
-void * VectorBase::VectorBase(struct VectorBase * const this /* r30 */, unsigned long n /* r31 */) {}
+// this: r30
+VectorBase::VectorBase(unsigned long n /* r31 */) {}
 
 // Range: 0x800F2B40 -> 0x800F2B64
 class FamilyImpl * * VectorBase::DoAllocate() {}
@@ -4150,37 +4588,43 @@ unsigned long vector::size() {}
 void vector::push_back(class FamilyImpl * const & value /* r31 */) {}
 
 // Range: 0x800F2BE8 -> 0x800F2BF8
-class Neighbor * & vector::__vc() {}
+class Neighbor * & vector::operator[]() {}
 
 // Range: 0x800F2BF8 -> 0x800F2C64
 void vector::push_back(class Neighbor * const & value /* r31 */) {}
 
 // Range: 0x800F2C64 -> 0x800F2C74
-class FamilyImpl * & vector::__vc() {}
+class FamilyImpl * & vector::operator[]() {}
 
 // Range: 0x800F2C74 -> 0x800F2CD8
-class FamilyImpl * * vector::erase(class vector * const this /* r30 */, class FamilyImpl * * position /* r31 */) {}
+// this: r30
+class FamilyImpl * * vector::erase(class FamilyImpl * * position /* r31 */) {}
 
 // Range: 0x800F2CD8 -> 0x800F2D40
-void * vector::~vector(class vector * const this /* r30 */) {}
+// this: r30
+vector::~vector() {}
 
 // Range: 0x800F2D40 -> 0x800F2DB8
-void * VectorBase::~VectorBase(struct VectorBase * const this /* r30 */) {}
+// this: r30
+VectorBase::~VectorBase() {}
 
 // Range: 0x800F2DB8 -> 0x800F2DBC
 void vector::DoDestroyValues() {}
 
 // Range: 0x800F2DBC -> 0x800F2DEC
-void * vector::vector(class vector * const this /* r31 */) {}
+// this: r31
+vector::vector() {}
 
 // Range: 0x800F2DEC -> 0x800F2E30
-void * VectorBase::VectorBase(struct VectorBase * const this /* r31 */) {}
+// this: r31
+VectorBase::VectorBase() {}
 
 // Range: 0x800F2E30 -> 0x800F2E3C
 void vector::clear() {}
 
 // Range: 0x800F2E3C -> 0x800F2EBC
-struct RegistryNode * vector::erase(class vector * const this /* r29 */, struct RegistryNode * first /* r30 */, struct RegistryNode * last /* r31 */) {
+// this: r29
+struct RegistryNode * vector::erase(struct RegistryNode * first /* r30 */, struct RegistryNode * last /* r31 */) {
     // Local variables
     struct RegistryNode * const position; // r0
 }
@@ -4195,58 +4639,73 @@ struct RegistryNode * vector::end() {}
 struct RegistryNode * vector::begin() {}
 
 // Range: 0x800F2F5C -> 0x800F2FC4
-void * vector::~vector(class vector * const this /* r30 */) {}
+// this: r30
+vector::~vector() {}
 
 // Range: 0x800F2FC4 -> 0x800F304C
-void * VectorBase::~VectorBase(struct VectorBase * const this /* r30 */) {}
+// this: r30
+VectorBase::~VectorBase() {}
 
 // Range: 0x800F304C -> 0x800F30B4
-void * vector::~vector(class vector * const this /* r30 */) {}
+// this: r30
+vector::~vector() {}
 
 // Range: 0x800F30B4 -> 0x800F313C
-void * VectorBase::~VectorBase(struct VectorBase * const this /* r30 */) {}
+// this: r30
+VectorBase::~VectorBase() {}
 
 // Range: 0x800F313C -> 0x800F316C
-void * vector::vector(class vector * const this /* r31 */) {}
+// this: r31
+vector::vector() {}
 
 // Range: 0x800F316C -> 0x800F31B0
-void * VectorBase::VectorBase(struct VectorBase * const this /* r31 */) {}
+// this: r31
+VectorBase::VectorBase() {}
 
 // Range: 0x800F31B0 -> 0x800F31E0
-void * vector::vector(class vector * const this /* r31 */) {}
+// this: r31
+vector::vector() {}
 
 // Range: 0x800F31E0 -> 0x800F3224
-void * VectorBase::VectorBase(struct VectorBase * const this /* r31 */) {}
+// this: r31
+VectorBase::VectorBase() {}
 
 // Range: 0x800F3224 -> 0x800F3254
-void * vector::vector(class vector * const this /* r31 */) {}
+// this: r31
+vector::vector() {}
 
 // Range: 0x800F3254 -> 0x800F3298
-void * VectorBase::VectorBase(struct VectorBase * const this /* r31 */) {}
+// this: r31
+VectorBase::VectorBase() {}
 
 // Range: 0x800F3298 -> 0x800F32A8
-class ObjectSlot & vector::__vc() {}
+class ObjectSlot & vector::operator[]() {}
 
 // Range: 0x800F32A8 -> 0x800F32B0
 class SpriteSlot * vector::begin() {}
 
 // Range: 0x800F32B0 -> 0x800F3314
-void * vector::vector(class vector * const this /* r30 */, const class vector & x /* r31 */) {}
+// this: r30
+vector::vector(const class vector & x /* r31 */) {}
 
 // Range: 0x800F3314 -> 0x800F3378
-void * VectorBase::VectorBase(struct VectorBase * const this /* r30 */, unsigned long n /* r31 */) {}
+// this: r30
+VectorBase::VectorBase(unsigned long n /* r31 */) {}
 
 // Range: 0x800F33C4 -> 0x800F346C
-signed short * vector::insert(class vector * const this /* r29 */, const signed short & value /* r30 */) {
+// this: r29
+signed short * vector::insert(const signed short & value /* r30 */) {
     // Local variables
     long n; // r31
 }
 
 // Range: 0x800F346C -> 0x800F34D0
-signed short * vector::erase(class vector * const this /* r30 */, signed short * position /* r31 */) {}
+// this: r30
+signed short * vector::erase(signed short * position /* r31 */) {}
 
 // Range: 0x800F34D0 -> 0x800F3570
-void vector::swap(class vector * const this /* r30 */, class vector & x /* r31 */) {
+// this: r30
+void vector::swap(class vector & x /* r31 */) {
     // Local variables
     class vector temp; // r1+0x8
 }
@@ -4255,7 +4714,7 @@ void vector::swap(class vector * const this /* r30 */, class vector & x /* r31 *
 unsigned long vector::capacity() {}
 
 // Range: 0x800F358C -> 0x800F359C
-class byte_key_map & vector::__vc() {}
+class byte_key_map & vector::operator[]() {}
 
 // Range: 0x800F359C -> 0x800F35C8
 unsigned long vector::size() {}
@@ -4264,7 +4723,8 @@ unsigned long vector::size() {}
 class byte_key_map * vector::end() {}
 
 // Range: 0x800F3624 -> 0x800F36DC
-class byte_key_map * vector::insert(class vector * const this /* r29 */, const class byte_key_map & value /* r30 */) {
+// this: r29
+class byte_key_map * vector::insert(const class byte_key_map & value /* r30 */) {
     // Local variables
     long n; // r31
 }
@@ -4273,25 +4733,30 @@ class byte_key_map * vector::insert(class vector * const this /* r29 */, const c
 class byte_key_map * vector::begin() {}
 
 // Range: 0x800F36E4 -> 0x800F374C
-void * vector::~vector(class vector * const this /* r30 */) {}
+// this: r30
+vector::~vector() {}
 
 // Range: 0x800F374C -> 0x800F37C4
-void * VectorBase::~VectorBase(struct VectorBase * const this /* r30 */) {}
+// this: r30
+VectorBase::~VectorBase() {}
 
 // Range: 0x800F37C4 -> 0x800F37C8
 void vector::DoDestroyValues() {}
 
 // Range: 0x800F37C8 -> 0x800F37F8
-void * vector::vector(class vector * const this /* r31 */) {}
+// this: r31
+vector::vector() {}
 
 // Range: 0x800F37F8 -> 0x800F383C
-void * VectorBase::VectorBase(struct VectorBase * const this /* r31 */) {}
+// this: r31
+VectorBase::VectorBase() {}
 
 // Range: 0x800F383C -> 0x800F3848
 void vector::clear() {}
 
 // Range: 0x800F3848 -> 0x800F38C8
-class ObjectTypeAttrBlock * * vector::erase(class vector * const this /* r29 */, class ObjectTypeAttrBlock * * first /* r30 */, class ObjectTypeAttrBlock * * last /* r31 */) {
+// this: r29
+class ObjectTypeAttrBlock * * vector::erase(class ObjectTypeAttrBlock * * first /* r30 */, class ObjectTypeAttrBlock * * last /* r31 */) {
     // Local variables
     class ObjectTypeAttrBlock * * const position; // r0
 }
@@ -4306,16 +4771,18 @@ class ObjectTypeAttrBlock * * vector::begin() {}
 void vector::push_back(class ObjectTypeAttrBlock * const & value /* r31 */) {}
 
 // Range: 0x800F399C -> 0x800F3A04
-void * vector::~vector(class vector * const this /* r30 */) {}
+// this: r30
+vector::~vector() {}
 
 // Range: 0x800F3A04 -> 0x800F3A7C
-void * VectorBase::~VectorBase(struct VectorBase * const this /* r30 */) {}
+// this: r30
+VectorBase::~VectorBase() {}
 
 // Range: 0x800F3A7C -> 0x800F3A80
 void vector::DoDestroyValues() {}
 
 // Range: 0x800F3A80 -> 0x800F3A90
-class ObjSelector * & vector::__vc() {}
+class ObjSelector * & vector::operator[]() {}
 
 // Range: 0x800F3A90 -> 0x800F3AA8
 unsigned long vector::size() {}
@@ -4330,34 +4797,39 @@ class ObjSelector * * vector::begin() {}
 void vector::push_back(class ObjSelector * const & value /* r31 */) {}
 
 // Range: 0x800F3B24 -> 0x800F3B54
-void * vector::vector(class vector * const this /* r31 */) {}
+// this: r31
+vector::vector() {}
 
 // Range: 0x800F3B54 -> 0x800F3B98
-void * VectorBase::VectorBase(struct VectorBase * const this /* r31 */) {}
+// this: r31
+VectorBase::VectorBase() {}
 
 // Range: 0x800F3B98 -> 0x800F3BA8
-class ObjectTypeAttrBlock * & vector::__vc() {}
+class ObjectTypeAttrBlock * & vector::operator[]() {}
 
 // Range: 0x800F3BA8 -> 0x800F3BC0
 unsigned long vector::size() {}
 
 // Range: 0x800F3BC0 -> 0x800F3BF0
-void * vector::vector(class vector * const this /* r31 */) {}
+// this: r31
+vector::vector() {}
 
 // Range: 0x800F3BF0 -> 0x800F3C34
-void * VectorBase::VectorBase(struct VectorBase * const this /* r31 */) {}
+// this: r31
+VectorBase::VectorBase() {}
 
 // Range: 0x800F3C34 -> 0x800F3C44
-unsigned int & vector::__vc() {}
+unsigned int & vector::operator[]() {}
 
 // Range: 0x800F3C44 -> 0x800F3C54
-class cXObject * & vector::__vc() {}
+class cXObject * & vector::operator[]() {}
 
 // Range: 0x800F3C54 -> 0x800F3CC8
 void vector::resize(unsigned long n /* r7 */) {}
 
 // Range: 0x800F3CC8 -> 0x800F3D48
-class cXObject * * vector::erase(class vector * const this /* r29 */, class cXObject * * first /* r30 */, class cXObject * * last /* r31 */) {
+// this: r29
+class cXObject * * vector::erase(class cXObject * * first /* r30 */, class cXObject * * last /* r31 */) {
     // Local variables
     class cXObject * * const position; // r0
 }
@@ -4375,22 +4847,26 @@ void vector::clear() {}
 void vector::clear() {}
 
 // Range: 0x800F3D7C -> 0x800F3E10
-class RoutingSlot * vector::erase(class vector * const this /* r29 */, class RoutingSlot * first /* r30 */, class RoutingSlot * last /* r31 */) {
+// this: r29
+class RoutingSlot * vector::erase(class RoutingSlot * first /* r30 */, class RoutingSlot * last /* r31 */) {
     // Local variables
     class RoutingSlot * const position; // r0
 }
 
 // Range: 0x800F3E10 -> 0x800F3EB0
-void vector::swap(class vector * const this /* r30 */, class vector & x /* r31 */) {
+// this: r30
+void vector::swap(class vector & x /* r31 */) {
     // Local variables
     class vector temp; // r1+0x8
 }
 
 // Range: 0x800F3EB0 -> 0x800F3F14
-void * vector::vector(class vector * const this /* r30 */, const class vector & x /* r31 */) {}
+// this: r30
+vector::vector(const class vector & x /* r31 */) {}
 
 // Range: 0x800F3F14 -> 0x800F3F78
-void * VectorBase::VectorBase(struct VectorBase * const this /* r30 */, unsigned long n /* r31 */) {}
+// this: r30
+VectorBase::VectorBase(unsigned long n /* r31 */) {}
 
 // Range: 0x800F3F78 -> 0x800F3F9C
 class cXObject * * VectorBase::DoAllocate() {}
@@ -4402,7 +4878,8 @@ class cXObject * * vector::end() {}
 class cXObject * * vector::begin() {}
 
 // Range: 0x800F3FAC -> 0x800F4010
-class cXObject * * vector::erase(class vector * const this /* r30 */, class cXObject * * position /* r31 */) {}
+// this: r30
+class cXObject * * vector::erase(class cXObject * * position /* r31 */) {}
 
 // Range: 0x800F4010 -> 0x800F407C
 void vector::push_back(class cXObject * const & value /* r31 */) {}
@@ -4414,7 +4891,8 @@ class cXPortal * * vector::end() {}
 class cXPortal * * vector::begin() {}
 
 // Range: 0x800F408C -> 0x800F40F0
-class cXPerson * * vector::erase(class vector * const this /* r30 */, class cXPerson * * position /* r31 */) {}
+// this: r30
+class cXPerson * * vector::erase(class cXPerson * * position /* r31 */) {}
 
 // Range: 0x800F40F0 -> 0x800F40F8
 class SpriteSlot * vector::end() {}
@@ -4423,20 +4901,22 @@ class SpriteSlot * vector::end() {}
 unsigned long vector::size() {}
 
 // Range: 0x800F4120 -> 0x800F4130
-class StackString & vector::__vc() {}
+class StackString & vector::operator[]() {}
 
 // Range: 0x800F4130 -> 0x800F4158
 unsigned long vector::size() {}
 
 // Range: 0x800F4158 -> 0x800F4218
-void vector::reserve(class vector * const this /* r31 */, unsigned long n /* r29 */) {
+// this: r31
+void vector::reserve(unsigned long n /* r29 */) {
     // Local variables
     unsigned int * const pNewData; // r30
     long nPrevSize; // r0
 }
 
 // Range: 0x800F4218 -> 0x800F4428
-void vector::DoInsertValues(class vector * const this /* r28 */, struct ListenerInfo * position /* r29 */, unsigned long n /* r30 */, const struct ListenerInfo & value /* r31 */) {
+// this: r28
+void vector::DoInsertValues(struct ListenerInfo * position /* r29 */, unsigned long n /* r30 */, const struct ListenerInfo & value /* r31 */) {
     // Local variables
     struct ListenerInfo temp; // r1+0x8
     unsigned long nExtra; // r26
@@ -4457,7 +4937,8 @@ struct ListenerInfo * VectorBase::DoAllocate() {}
 unsigned long VectorBase::GetNewCapacity() {}
 
 // Range: 0x800F4478 -> 0x800F45C8
-void vector::DoInsertValue(class vector * const this /* r31 */, const class ERAmbientSound * * position /* r26 */, const class ERAmbientSound * const & value /* r27 */) {
+// this: r31
+void vector::DoInsertValue(const class ERAmbientSound * * position /* r26 */, const class ERAmbientSound * const & value /* r27 */) {
     // Local variables
     const class ERAmbientSound * const * pValue; // [invalid]
     unsigned long nNewSize; // r29
@@ -4475,7 +4956,8 @@ class ERAmbientSound * * VectorBase::DoAllocate() {}
 unsigned long VectorBase::GetNewCapacity() {}
 
 // Range: 0x800F4618 -> 0x800F4768
-void vector::DoInsertValue(class vector * const this /* r31 */, class cXObject * * position /* r26 */, class cXObject * const & value /* r27 */) {
+// this: r31
+void vector::DoInsertValue(class cXObject * * position /* r26 */, class cXObject * const & value /* r27 */) {
     // Local variables
     class cXObject * const * pValue; // [invalid]
     unsigned long nNewSize; // r29
@@ -4490,7 +4972,8 @@ void VectorBase::DoFree() {}
 unsigned long VectorBase::GetNewCapacity() {}
 
 // Range: 0x800F4794 -> 0x800F495C
-void vector::DoInsertValues(class vector * const this /* r30 */, class cXObject * * position /* r31 */, unsigned long n /* r25 */, class cXObject * const & value /* r26 */) {
+// this: r30
+void vector::DoInsertValues(class cXObject * * position /* r31 */, unsigned long n /* r25 */, class cXObject * const & value /* r26 */) {
     // Local variables
     class cXObject * const temp; // r1+0x8
     unsigned long nExtra; // r28
@@ -4502,7 +4985,8 @@ void vector::DoInsertValues(class vector * const this /* r30 */, class cXObject 
 }
 
 // Range: 0x800F495C -> 0x800F4AA4
-class vector & vector::__as(class vector * const this /* r30 */, const class vector & x /* r29 */) {
+// this: r30
+class vector & vector::operator=(const class vector & x /* r29 */) {
     // Local variables
     unsigned long n; // r31
     class cXObject * * const pNewData; // r29
@@ -4522,7 +5006,8 @@ unsigned char vector::empty() {}
 unsigned char vector::empty() {}
 
 // Range: 0x800F4B2C -> 0x800F4C80
-class vector & vector::__as(class vector * const this /* r30 */, const class vector & x /* r29 */) {
+// this: r30
+class vector & vector::operator=(const class vector & x /* r29 */) {
     // Local variables
     unsigned long n; // r31
     signed short * const pNewData; // r29
@@ -4530,7 +5015,8 @@ class vector & vector::__as(class vector * const this /* r30 */, const class vec
 }
 
 // Range: 0x800F4C80 -> 0x800F4DD0
-void vector::DoInsertValue(class vector * const this /* r31 */, class ObjectDataBehaviorTree * * position /* r26 */, class ObjectDataBehaviorTree * const & value /* r27 */) {
+// this: r31
+void vector::DoInsertValue(class ObjectDataBehaviorTree * * position /* r26 */, class ObjectDataBehaviorTree * const & value /* r27 */) {
     // Local variables
     class ObjectDataBehaviorTree * const * pValue; // [invalid]
     unsigned long nNewSize; // r29
@@ -4545,7 +5031,8 @@ void VectorBase::DoFree() {}
 unsigned long VectorBase::GetNewCapacity() {}
 
 // Range: 0x800F4DFC -> 0x800F4F44
-class vector & vector::__as(class vector * const this /* r30 */, const class vector & x /* r29 */) {
+// this: r30
+class vector & vector::operator=(const class vector & x /* r29 */) {
     // Local variables
     unsigned long n; // r31
     class ObjectDataBehaviorTree * * const pNewData; // r29
@@ -4559,7 +5046,8 @@ class ObjectDataBehaviorTree * * vector::DoRealloc(class ObjectDataBehaviorTree 
 }
 
 // Range: 0x800F4F9C -> 0x800F50EC
-void vector::DoInsertValue(class vector * const this /* r31 */, class ObjectTypeAttrBlock * * position /* r26 */, class ObjectTypeAttrBlock * const & value /* r27 */) {
+// this: r31
+void vector::DoInsertValue(class ObjectTypeAttrBlock * * position /* r26 */, class ObjectTypeAttrBlock * const & value /* r27 */) {
     // Local variables
     class ObjectTypeAttrBlock * const * pValue; // [invalid]
     unsigned long nNewSize; // r29
@@ -4577,7 +5065,8 @@ class ObjectTypeAttrBlock * * VectorBase::DoAllocate() {}
 unsigned long VectorBase::GetNewCapacity() {}
 
 // Range: 0x800F513C -> 0x800F528C
-void vector::DoInsertValue(class vector * const this /* r31 */, class PenaltyRect * * position /* r26 */, class PenaltyRect * const & value /* r27 */) {
+// this: r31
+void vector::DoInsertValue(class PenaltyRect * * position /* r26 */, class PenaltyRect * const & value /* r27 */) {
     // Local variables
     class PenaltyRect * const * pValue; // [invalid]
     unsigned long nNewSize; // r29
@@ -4595,7 +5084,8 @@ class PenaltyRect * * VectorBase::DoAllocate() {}
 unsigned long VectorBase::GetNewCapacity() {}
 
 // Range: 0x800F52DC -> 0x800F5430
-void vector::DoInsertValue(class vector * const this /* r31 */, struct RegistryNode * position /* r26 */, const struct RegistryNode & value /* r27 */) {
+// this: r31
+void vector::DoInsertValue(struct RegistryNode * position /* r26 */, const struct RegistryNode & value /* r27 */) {
     // Local variables
     const struct RegistryNode * pValue; // [invalid]
     unsigned long nNewSize; // r29
@@ -4613,7 +5103,8 @@ struct RegistryNode * VectorBase::DoAllocate() {}
 unsigned long VectorBase::GetNewCapacity() {}
 
 // Range: 0x800F5480 -> 0x800F55D0
-void vector::DoInsertValue(class vector * const this /* r31 */, class FamilyImpl * * position /* r26 */, class FamilyImpl * const & value /* r27 */) {
+// this: r31
+void vector::DoInsertValue(class FamilyImpl * * position /* r26 */, class FamilyImpl * const & value /* r27 */) {
     // Local variables
     class FamilyImpl * const * pValue; // [invalid]
     unsigned long nNewSize; // r29
@@ -4628,7 +5119,8 @@ void VectorBase::DoFree() {}
 unsigned long VectorBase::GetNewCapacity() {}
 
 // Range: 0x800F55FC -> 0x800F5744
-class vector & vector::__as(class vector * const this /* r30 */, const class vector & x /* r29 */) {
+// this: r30
+class vector & vector::operator=(const class vector & x /* r29 */) {
     // Local variables
     unsigned long n; // r31
     class FamilyImpl * * const pNewData; // r29
@@ -4642,7 +5134,8 @@ class FamilyImpl * * vector::DoRealloc(class FamilyImpl * * first /* r29 */, cla
 }
 
 // Range: 0x800F579C -> 0x800F58EC
-void vector::DoInsertValue(class vector * const this /* r31 */, class Neighbor * * position /* r26 */, class Neighbor * const & value /* r27 */) {
+// this: r31
+void vector::DoInsertValue(class Neighbor * * position /* r26 */, class Neighbor * const & value /* r27 */) {
     // Local variables
     class Neighbor * const * pValue; // [invalid]
     unsigned long nNewSize; // r29
@@ -4657,7 +5150,8 @@ void VectorBase::DoFree() {}
 unsigned long VectorBase::GetNewCapacity() {}
 
 // Range: 0x800F5918 -> 0x800F5A60
-class vector & vector::__as(class vector * const this /* r30 */, const class vector & x /* r29 */) {
+// this: r30
+class vector & vector::operator=(const class vector & x /* r29 */) {
     // Local variables
     unsigned long n; // r31
     class Neighbor * * const pNewData; // r29
@@ -4671,7 +5165,8 @@ class Neighbor * * vector::DoRealloc(class Neighbor * * first /* r29 */, class N
 }
 
 // Range: 0x800F5AB8 -> 0x800F5C08
-void vector::DoInsertValue(class vector * const this /* r31 */, class ObjSelector * * position /* r26 */, class ObjSelector * const & value /* r27 */) {
+// this: r31
+void vector::DoInsertValue(class ObjSelector * * position /* r26 */, class ObjSelector * const & value /* r27 */) {
     // Local variables
     class ObjSelector * const * pValue; // [invalid]
     unsigned long nNewSize; // r29
@@ -4689,7 +5184,8 @@ class ObjSelector * * VectorBase::DoAllocate() {}
 unsigned long VectorBase::GetNewCapacity() {}
 
 // Range: 0x800F5C58 -> 0x800F5DA8
-void vector::DoInsertValue(class vector * const this /* r31 */, class InventoryItem * * position /* r26 */, class InventoryItem * const & value /* r27 */) {
+// this: r31
+void vector::DoInsertValue(class InventoryItem * * position /* r26 */, class InventoryItem * const & value /* r27 */) {
     // Local variables
     class InventoryItem * const * pValue; // [invalid]
     unsigned long nNewSize; // r29
@@ -4707,7 +5203,8 @@ class InventoryItem * * VectorBase::DoAllocate() {}
 unsigned long VectorBase::GetNewCapacity() {}
 
 // Range: 0x800F5DF8 -> 0x800F5F48
-void vector::DoInsertValue(class vector * const this /* r31 */, class ClothingItem * * position /* r26 */, class ClothingItem * const & value /* r27 */) {
+// this: r31
+void vector::DoInsertValue(class ClothingItem * * position /* r26 */, class ClothingItem * const & value /* r27 */) {
     // Local variables
     class ClothingItem * const * pValue; // [invalid]
     unsigned long nNewSize; // r29
@@ -4725,7 +5222,8 @@ class ClothingItem * * VectorBase::DoAllocate() {}
 unsigned long VectorBase::GetNewCapacity() {}
 
 // Range: 0x800F5F98 -> 0x800F60EC
-void vector::DoInsertValue(class vector * const this /* r31 */, class FamilyMember * position /* r26 */, const class FamilyMember & value /* r27 */) {
+// this: r31
+void vector::DoInsertValue(class FamilyMember * position /* r26 */, const class FamilyMember & value /* r27 */) {
     // Local variables
     const class FamilyMember * pValue; // [invalid]
     unsigned long nNewSize; // r29
@@ -4740,7 +5238,8 @@ void VectorBase::DoFree() {}
 unsigned long VectorBase::GetNewCapacity() {}
 
 // Range: 0x800F6118 -> 0x800F62E4
-void vector::DoInsertValues(class vector * const this /* r29 */, class FamilyMember * position /* r30 */, unsigned long n /* r31 */, const class FamilyMember & value /* r25 */) {
+// this: r29
+void vector::DoInsertValues(class FamilyMember * position /* r30 */, unsigned long n /* r31 */, const class FamilyMember & value /* r25 */) {
     // Local variables
     class FamilyMember temp; // r1+0x8
     unsigned long nExtra; // r28
@@ -4752,7 +5251,8 @@ void vector::DoInsertValues(class vector * const this /* r29 */, class FamilyMem
 }
 
 // Range: 0x800F62E4 -> 0x800F642C
-class vector & vector::__as(class vector * const this /* r30 */, const class vector & x /* r29 */) {
+// this: r30
+class vector & vector::operator=(const class vector & x /* r29 */) {
     // Local variables
     unsigned long n; // r31
     class FamilyMember * const pNewData; // r29
@@ -4766,7 +5266,8 @@ class FamilyMember * vector::DoRealloc(class FamilyMember * first /* r29 */, cla
 }
 
 // Range: 0x800F6484 -> 0x800F65D4
-void vector::DoInsertValue(class vector * const this /* r31 */, class cGZSnd * * position /* r26 */, class cGZSnd * const & value /* r27 */) {
+// this: r31
+void vector::DoInsertValue(class cGZSnd * * position /* r26 */, class cGZSnd * const & value /* r27 */) {
     // Local variables
     class cGZSnd * const * pValue; // [invalid]
     unsigned long nNewSize; // r29
@@ -4784,7 +5285,8 @@ class cGZSnd * * VectorBase::DoAllocate() {}
 unsigned long VectorBase::GetNewCapacity() {}
 
 // Range: 0x800F6624 -> 0x800F6798
-void vector::DoInsertValue(class vector * const this /* r31 */, class IFFResNode * position /* r26 */, const class IFFResNode & value /* r27 */) {
+// this: r31
+void vector::DoInsertValue(class IFFResNode * position /* r26 */, const class IFFResNode & value /* r27 */) {
     // Local variables
     const class IFFResNode * pValue; // [invalid]
     unsigned long nNewSize; // r29
@@ -4799,7 +5301,8 @@ void VectorBase::DoFree() {}
 unsigned long VectorBase::GetNewCapacity() {}
 
 // Range: 0x800F67C4 -> 0x800F69C4
-void vector::DoInsertValues(class vector * const this /* r28 */, class IFFResNode * position /* r29 */, unsigned long n /* r30 */, const class IFFResNode & value /* r31 */) {
+// this: r28
+void vector::DoInsertValues(class IFFResNode * position /* r29 */, unsigned long n /* r30 */, const class IFFResNode & value /* r31 */) {
     // Local variables
     class IFFResNode temp; // r1+0x8
     unsigned long nExtra; // r26
@@ -4811,7 +5314,8 @@ void vector::DoInsertValues(class vector * const this /* r28 */, class IFFResNod
 }
 
 // Range: 0x800F69C4 -> 0x800F6B44
-class vector & vector::__as(class vector * const this /* r29 */, const class vector & x /* r30 */) {
+// this: r29
+class vector & vector::operator=(const class vector & x /* r30 */) {
     // Local variables
     unsigned long n; // r31
     class IFFResNode * const pNewData; // r30
@@ -4825,7 +5329,8 @@ class IFFResNode * vector::DoRealloc(class IFFResNode * first /* r29 */, class I
 }
 
 // Range: 0x800F6B9C -> 0x800F6D10
-void vector::DoInsertValue(class vector * const this /* r31 */, class IFFResList * position /* r26 */, const class IFFResList & value /* r27 */) {
+// this: r31
+void vector::DoInsertValue(class IFFResList * position /* r26 */, const class IFFResList & value /* r27 */) {
     // Local variables
     const class IFFResList * pValue; // [invalid]
     unsigned long nNewSize; // r29
@@ -4843,7 +5348,8 @@ class IFFResList * VectorBase::DoAllocate() {}
 unsigned long VectorBase::GetNewCapacity() {}
 
 // Range: 0x800F6D60 -> 0x800F6F6C
-void vector::DoInsertValues(class vector * const this /* r28 */, class IFFResList * position /* r29 */, unsigned long n /* r30 */, const class IFFResList & value /* r31 */) {
+// this: r28
+void vector::DoInsertValues(class IFFResList * position /* r29 */, unsigned long n /* r30 */, const class IFFResList & value /* r31 */) {
     // Local variables
     class IFFResList temp; // r1+0x8
     unsigned long nExtra; // r26
@@ -4855,7 +5361,8 @@ void vector::DoInsertValues(class vector * const this /* r28 */, class IFFResLis
 }
 
 // Range: 0x800F6F6C -> 0x800F70D0
-void vector::DoInsertValue(class vector * const this /* r31 */, struct OwnerInfo * position /* r26 */, const struct OwnerInfo & value /* r27 */) {
+// this: r31
+void vector::DoInsertValue(struct OwnerInfo * position /* r26 */, const struct OwnerInfo & value /* r27 */) {
     // Local variables
     const struct OwnerInfo * pValue; // [invalid]
     unsigned long nNewSize; // r29
@@ -4876,7 +5383,8 @@ unsigned long VectorBase::GetNewCapacity() {}
 unsigned char vector::empty() {}
 
 // Range: 0x800F7138 -> 0x800F72B4
-void vector::DoInsertValue(class vector * const this /* r31 */, class byte_key_map * position /* r26 */, const class byte_key_map & value /* r27 */) {
+// this: r31
+void vector::DoInsertValue(class byte_key_map * position /* r26 */, const class byte_key_map & value /* r27 */) {
     // Local variables
     const class byte_key_map * pValue; // [invalid]
     unsigned long nNewSize; // r29
@@ -4897,7 +5405,8 @@ class byte_key_map * VectorBase::DoAllocate() {}
 unsigned long VectorBase::GetNewCapacity() {}
 
 // Range: 0x800F7354 -> 0x800F7450
-void vector::reserve(class vector * const this /* r29 */, unsigned long n /* r30 */) {
+// this: r29
+void vector::reserve(unsigned long n /* r30 */) {
     // Local variables
     class byte_key_map * const pNewData; // r31
     long nPrevSize; // r0
@@ -4913,7 +5422,8 @@ class byte_key_map * vector::DoRealloc(class byte_key_map * first /* r29 */, cla
 unsigned char vector::empty() {}
 
 // Range: 0x800F74C0 -> 0x800F7540
-class Neighbor * * vector::erase(class vector * const this /* r29 */, class Neighbor * * first /* r30 */, class Neighbor * * last /* r31 */) {
+// this: r29
+class Neighbor * * vector::erase(class Neighbor * * first /* r30 */, class Neighbor * * last /* r31 */) {
     // Local variables
     class Neighbor * * const position; // r0
 }
@@ -4922,7 +5432,8 @@ class Neighbor * * vector::erase(class vector * const this /* r29 */, class Neig
 void vector::insert() {}
 
 // Range: 0x800F7544 -> 0x800F770C
-void vector::DoInsertValues(class vector * const this /* r30 */, class Neighbor * * position /* r31 */, unsigned long n /* r25 */, class Neighbor * const & value /* r26 */) {
+// this: r30
+void vector::DoInsertValues(class Neighbor * * position /* r31 */, unsigned long n /* r25 */, class Neighbor * const & value /* r26 */) {
     // Local variables
     class Neighbor * const temp; // r1+0x8
     unsigned long nExtra; // r28
@@ -4934,56 +5445,64 @@ void vector::DoInsertValues(class vector * const this /* r30 */, class Neighbor 
 }
 
 // Range: 0x800F770C -> 0x800F7774
-void * vector::~vector(class vector * const this /* r30 */) {}
+// this: r30
+vector::~vector() {}
 
 // Range: 0x800F7774 -> 0x800F77FC
-void * VectorBase::~VectorBase(struct VectorBase * const this /* r30 */) {}
+// this: r30
+VectorBase::~VectorBase() {}
 
 // Range: 0x800F77FC -> 0x800F782C
-void * vector::vector(class vector * const this /* r31 */) {}
+// this: r31
+vector::vector() {}
 
 // Range: 0x800F782C -> 0x800F7870
-void * VectorBase::VectorBase(struct VectorBase * const this /* r31 */) {}
+// this: r31
+VectorBase::VectorBase() {}
 
 // Range: 0x800F78CC -> 0x800F7934
-void * vector::~vector(class vector * const this /* r30 */) {}
+// this: r30
+vector::~vector() {}
 
 // Range: 0x800F7934 -> 0x800F79C0
-void * VectorBase::~VectorBase(struct VectorBase * const this /* r30 */) {}
+// this: r30
+VectorBase::~VectorBase() {}
 
 // Range: 0x800F79C0 -> 0x800F79F0
-void * vector::vector(class vector * const this /* r31 */) {}
+// this: r31
+vector::vector() {}
 
 // Range: 0x800F79F0 -> 0x800F7A34
-void * VectorBase::VectorBase(struct VectorBase * const this /* r31 */) {}
+// this: r31
+VectorBase::VectorBase() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\common\EASTL\1.03.00\include\EASTL\vector.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x80161FB8 -> 0x80162AD8
-*/
 // Range: 0x80162000 -> 0x80162030
-void * vector::vector(class vector * const this /* r31 */) {}
+// this: r31
+vector::vector() {}
 
 // Range: 0x80162030 -> 0x80162074
-void * VectorBase::VectorBase(struct VectorBase * const this /* r31 */) {}
+// this: r31
+VectorBase::VectorBase() {}
 
 // Range: 0x80162074 -> 0x801620DC
-void * vector::~vector(class vector * const this /* r30 */) {}
+// this: r30
+vector::~vector() {}
 
 // Range: 0x801620DC -> 0x80162154
-void * VectorBase::~VectorBase(struct VectorBase * const this /* r30 */) {}
+// this: r30
+VectorBase::~VectorBase() {}
 
 // Range: 0x80162154 -> 0x801621A4
 void vector::DoDestroyValues(class ConsoleAutoRefCount * first /* r30 */, class ConsoleAutoRefCount * last /* r31 */) {}
 
 // Range: 0x801621A4 -> 0x80162240
-void vector::resize(class vector * const this /* r30 */, unsigned long n /* r31 */) {}
+// this: r30
+void vector::resize(unsigned long n /* r31 */) {}
 
 // Range: 0x80162240 -> 0x801622C0
-class ConsoleAutoRefCount * vector::erase(class vector * const this /* r29 */, class ConsoleAutoRefCount * first /* r30 */, class ConsoleAutoRefCount * last /* r31 */) {
+// this: r29
+class ConsoleAutoRefCount * vector::erase(class ConsoleAutoRefCount * first /* r30 */, class ConsoleAutoRefCount * last /* r31 */) {
     // Local variables
     class ConsoleAutoRefCount * const position; // r0
 }
@@ -4992,55 +5511,64 @@ class ConsoleAutoRefCount * vector::erase(class vector * const this /* r29 */, c
 void vector::insert() {}
 
 // Range: 0x801622C4 -> 0x801622F4
-void * vector::vector(class vector * const this /* r31 */) {}
+// this: r31
+vector::vector() {}
 
 // Range: 0x801622F4 -> 0x80162338
-void * VectorBase::VectorBase(struct VectorBase * const this /* r31 */) {}
+// this: r31
+VectorBase::VectorBase() {}
 
 // Range: 0x80162338 -> 0x80162344
 void vector::clear() {}
 
 // Range: 0x80162344 -> 0x80162354
-class ConsoleAutoRefCount & vector::__vc() {}
+class ConsoleAutoRefCount & vector::operator[]() {}
 
 // Range: 0x80162354 -> 0x801623BC
-void * vector::~vector(class vector * const this /* r30 */) {}
+// this: r30
+vector::~vector() {}
 
 // Range: 0x801623BC -> 0x80162434
-void * VectorBase::~VectorBase(struct VectorBase * const this /* r30 */) {}
+// this: r30
+VectorBase::~VectorBase() {}
 
 // Range: 0x80162434 -> 0x80162484
 void vector::DoDestroyValues(class ConsoleAutoRefCount * first /* r30 */, class ConsoleAutoRefCount * last /* r31 */) {}
 
 // Range: 0x80162484 -> 0x801624B4
-void * vector::vector(class vector * const this /* r31 */) {}
+// this: r31
+vector::vector() {}
 
 // Range: 0x801624B4 -> 0x801624F8
-void * VectorBase::VectorBase(struct VectorBase * const this /* r31 */) {}
+// this: r31
+VectorBase::VectorBase() {}
 
 // Range: 0x80162534 -> 0x80162540
 void vector::clear() {}
 
 // Range: 0x80162540 -> 0x801625C0
-class ConsoleAutoRefCount * vector::erase(class vector * const this /* r29 */, class ConsoleAutoRefCount * first /* r30 */, class ConsoleAutoRefCount * last /* r31 */) {
+// this: r29
+class ConsoleAutoRefCount * vector::erase(class ConsoleAutoRefCount * first /* r30 */, class ConsoleAutoRefCount * last /* r31 */) {
     // Local variables
     class ConsoleAutoRefCount * const position; // r0
 }
 
 // Range: 0x801625C0 -> 0x8016265C
-void vector::resize(class vector * const this /* r30 */, unsigned long n /* r31 */) {}
+// this: r30
+void vector::resize(unsigned long n /* r31 */) {}
 
 // Range: 0x8016265C -> 0x80162660
 void vector::insert() {}
 
 // Range: 0x80162660 -> 0x80162670
-class ConsoleAutoRefCount & vector::__vc() {}
+class ConsoleAutoRefCount & vector::operator[]() {}
 
 // Range: 0x80162670 -> 0x80162688
 unsigned long vector::size() {}
 
 // Range: 0x80162688 -> 0x80162860
-void vector::DoInsertValues(class vector * const this /* r29 */, class ConsoleAutoRefCount * position /* r30 */, unsigned long n /* r31 */, const class ConsoleAutoRefCount & value /* r25 */) {
+// this: r29
+void vector::DoInsertValues(class ConsoleAutoRefCount * position /* r30 */, unsigned long n /* r31 */, const class ConsoleAutoRefCount & value /* r25 */) {
     // Local variables
     class ConsoleAutoRefCount temp; // r1+0x8
     unsigned long nExtra; // r28
@@ -5061,7 +5589,8 @@ class ConsoleAutoRefCount * VectorBase::DoAllocate() {}
 unsigned long VectorBase::GetNewCapacity() {}
 
 // Range: 0x801628B0 -> 0x80162A88
-void vector::DoInsertValues(class vector * const this /* r29 */, class ConsoleAutoRefCount * position /* r30 */, unsigned long n /* r31 */, const class ConsoleAutoRefCount & value /* r25 */) {
+// this: r29
+void vector::DoInsertValues(class ConsoleAutoRefCount * position /* r30 */, unsigned long n /* r31 */, const class ConsoleAutoRefCount & value /* r25 */) {
     // Local variables
     class ConsoleAutoRefCount temp; // r1+0x8
     unsigned long nExtra; // r28
@@ -5082,12 +5611,6 @@ class ConsoleAutoRefCount * VectorBase::DoAllocate() {}
 unsigned long VectorBase::GetNewCapacity() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\common\EASTL\1.03.00\include\EASTL\vector.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x8016C0D8 -> 0x8016D048
-*/
 // Range: 0x8016C0D8 -> 0x8016C0DC
 void vector::DoDestroyValues() {}
 
@@ -5095,22 +5618,27 @@ void vector::DoDestroyValues() {}
 void vector::push_back(class StateMachineState * const & value /* r31 */) {}
 
 // Range: 0x8016C148 -> 0x8016C1B0
-void * vector::~vector(class vector * const this /* r30 */) {}
+// this: r30
+vector::~vector() {}
 
 // Range: 0x8016C1B0 -> 0x8016C228
-void * VectorBase::~VectorBase(struct VectorBase * const this /* r30 */) {}
+// this: r30
+VectorBase::~VectorBase() {}
 
 // Range: 0x8016C228 -> 0x8016C2C8
-void vector::swap(class vector * const this /* r30 */, class vector & x /* r31 */) {
+// this: r30
+void vector::swap(class vector & x /* r31 */) {
     // Local variables
     class vector temp; // r1+0x8
 }
 
 // Range: 0x8016C2C8 -> 0x8016C32C
-void * vector::vector(class vector * const this /* r30 */, const class vector & x /* r31 */) {}
+// this: r30
+vector::vector(const class vector & x /* r31 */) {}
 
 // Range: 0x8016C32C -> 0x8016C390
-void * VectorBase::VectorBase(struct VectorBase * const this /* r30 */, unsigned long n /* r31 */) {}
+// this: r30
+VectorBase::VectorBase(unsigned long n /* r31 */) {}
 
 // Range: 0x8016C390 -> 0x8016C3B4
 class StateMachineState * * VectorBase::DoAllocate() {}
@@ -5119,10 +5647,12 @@ class StateMachineState * * VectorBase::DoAllocate() {}
 unsigned long vector::size() {}
 
 // Range: 0x8016C3CC -> 0x8016C3FC
-void * vector::vector(class vector * const this /* r31 */) {}
+// this: r31
+vector::vector() {}
 
 // Range: 0x8016C3FC -> 0x8016C440
-void * VectorBase::VectorBase(struct VectorBase * const this /* r31 */) {}
+// this: r31
+VectorBase::VectorBase() {}
 
 // Range: 0x8016C440 -> 0x8016C448
 class StateMachineState * * vector::end() {}
@@ -5146,31 +5676,38 @@ class StateMachine * * vector::end() {}
 class StateMachine * * vector::begin() {}
 
 // Range: 0x8016C51C -> 0x8016C584
-void * vector::~vector(class vector * const this /* r30 */) {}
+// this: r30
+vector::~vector() {}
 
 // Range: 0x8016C584 -> 0x8016C5FC
-void * VectorBase::~VectorBase(struct VectorBase * const this /* r30 */) {}
+// this: r30
+VectorBase::~VectorBase() {}
 
 // Range: 0x8016C5FC -> 0x8016C600
 void vector::DoDestroyValues() {}
 
 // Range: 0x8016C600 -> 0x8016C630
-void * vector::vector(class vector * const this /* r31 */) {}
+// this: r31
+vector::vector() {}
 
 // Range: 0x8016C630 -> 0x8016C674
-void * VectorBase::VectorBase(struct VectorBase * const this /* r31 */) {}
+// this: r31
+VectorBase::VectorBase() {}
 
 // Range: 0x8016C674 -> 0x8016C714
-void vector::swap(class vector * const this /* r30 */, class vector & x /* r31 */) {
+// this: r30
+void vector::swap(class vector & x /* r31 */) {
     // Local variables
     class vector temp; // r1+0x8
 }
 
 // Range: 0x8016C714 -> 0x8016C778
-void * vector::vector(class vector * const this /* r30 */, const class vector & x /* r31 */) {}
+// this: r30
+vector::vector(const class vector & x /* r31 */) {}
 
 // Range: 0x8016C778 -> 0x8016C7DC
-void * VectorBase::VectorBase(struct VectorBase * const this /* r30 */, unsigned long n /* r31 */) {}
+// this: r30
+VectorBase::VectorBase(unsigned long n /* r31 */) {}
 
 // Range: 0x8016C7DC -> 0x8016C800
 class StateMachine * * VectorBase::DoAllocate() {}
@@ -5179,25 +5716,31 @@ class StateMachine * * VectorBase::DoAllocate() {}
 unsigned long vector::size() {}
 
 // Range: 0x8016C818 -> 0x8016C880
-void * vector::~vector(class vector * const this /* r30 */) {}
+// this: r30
+vector::~vector() {}
 
 // Range: 0x8016C880 -> 0x8016C8F8
-void * VectorBase::~VectorBase(struct VectorBase * const this /* r30 */) {}
+// this: r30
+VectorBase::~VectorBase() {}
 
 // Range: 0x8016C8F8 -> 0x8016C8FC
 void vector::DoDestroyValues() {}
 
 // Range: 0x8016C8FC -> 0x8016C92C
-void * vector::vector(class vector * const this /* r31 */) {}
+// this: r31
+vector::vector() {}
 
 // Range: 0x8016C92C -> 0x8016C970
-void * VectorBase::VectorBase(struct VectorBase * const this /* r31 */) {}
+// this: r31
+VectorBase::VectorBase() {}
 
 // Range: 0x8016C970 -> 0x8016C9D4
-void * vector::vector(class vector * const this /* r30 */, unsigned long n /* r31 */) {}
+// this: r30
+vector::vector(unsigned long n /* r31 */) {}
 
 // Range: 0x8016C9D4 -> 0x8016CB24
-void vector::DoInsertValue(class vector * const this /* r31 */, class StateMachineState * * position /* r26 */, class StateMachineState * const & value /* r27 */) {
+// this: r31
+void vector::DoInsertValue(class StateMachineState * * position /* r26 */, class StateMachineState * const & value /* r27 */) {
     // Local variables
     class StateMachineState * const * pValue; // [invalid]
     unsigned long nNewSize; // r29
@@ -5212,7 +5755,8 @@ void VectorBase::DoFree() {}
 unsigned long VectorBase::GetNewCapacity() {}
 
 // Range: 0x8016CB50 -> 0x8016CC98
-class vector & vector::__as(class vector * const this /* r30 */, const class vector & x /* r29 */) {
+// this: r30
+class vector & vector::operator=(const class vector & x /* r29 */) {
     // Local variables
     unsigned long n; // r31
     class StateMachineState * * const pNewData; // r29
@@ -5226,7 +5770,8 @@ class StateMachineState * * vector::DoRealloc(class StateMachineState * * first 
 }
 
 // Range: 0x8016CCF0 -> 0x8016CE40
-void vector::DoInsertValue(class vector * const this /* r31 */, class StateMachineStatus * * position /* r26 */, class StateMachineStatus * const & value /* r27 */) {
+// this: r31
+void vector::DoInsertValue(class StateMachineStatus * * position /* r26 */, class StateMachineStatus * const & value /* r27 */) {
     // Local variables
     class StateMachineStatus * const * pValue; // [invalid]
     unsigned long nNewSize; // r29
@@ -5244,7 +5789,8 @@ class StateMachineStatus * * VectorBase::DoAllocate() {}
 unsigned long VectorBase::GetNewCapacity() {}
 
 // Range: 0x8016CE90 -> 0x8016CFD8
-class vector & vector::__as(class vector * const this /* r30 */, const class vector & x /* r29 */) {
+// this: r30
+class vector & vector::operator=(const class vector & x /* r29 */) {
     // Local variables
     unsigned long n; // r31
     class StateMachine * * const pNewData; // r29
@@ -5261,41 +5807,43 @@ class StateMachine * * vector::DoRealloc(class StateMachine * * first /* r29 */,
 }
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\common\EASTL\1.03.00\include\EASTL\vector.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x8018C4D4 -> 0x8018CC0C
-*/
 // Range: 0x8018C4D4 -> 0x8018C53C
-void * vector::~vector(class vector * const this /* r30 */) {}
+// this: r30
+vector::~vector() {}
 
 // Range: 0x8018C53C -> 0x8018C5B4
-void * VectorBase::~VectorBase(struct VectorBase * const this /* r30 */) {}
+// this: r30
+VectorBase::~VectorBase() {}
 
 // Range: 0x8018C5B4 -> 0x8018C5B8
 void vector::DoDestroyValues() {}
 
 // Range: 0x8018C5B8 -> 0x8018C5E8
-void * vector::vector(class vector * const this /* r31 */) {}
+// this: r31
+vector::vector() {}
 
 // Range: 0x8018C5E8 -> 0x8018C62C
-void * VectorBase::VectorBase(struct VectorBase * const this /* r31 */) {}
+// this: r31
+VectorBase::VectorBase() {}
 
 // Range: 0x8018C62C -> 0x8018C694
-void * vector::~vector(class vector * const this /* r30 */) {}
+// this: r30
+vector::~vector() {}
 
 // Range: 0x8018C694 -> 0x8018C70C
-void * VectorBase::~VectorBase(struct VectorBase * const this /* r30 */) {}
+// this: r30
+VectorBase::~VectorBase() {}
 
 // Range: 0x8018C70C -> 0x8018C710
 void vector::DoDestroyValues() {}
 
 // Range: 0x8018C710 -> 0x8018C740
-void * vector::vector(class vector * const this /* r31 */) {}
+// this: r31
+vector::vector() {}
 
 // Range: 0x8018C740 -> 0x8018C784
-void * VectorBase::VectorBase(struct VectorBase * const this /* r31 */) {}
+// this: r31
+VectorBase::VectorBase() {}
 
 // Range: 0x8018C784 -> 0x8018C790
 struct CASUIScreenState & vector::back() {}
@@ -5307,7 +5855,8 @@ void vector::pop_back() {}
 void vector::push_back(const struct CASUIScreenState & value /* r31 */) {}
 
 // Range: 0x8018C960 -> 0x8018CBA4
-void vector::DoInsertValue(class vector * const this /* r26 */, struct CASUIScreenState * position /* r27 */, const struct CASUIScreenState & value /* r28 */) {
+// this: r26
+void vector::DoInsertValue(struct CASUIScreenState * position /* r27 */, const struct CASUIScreenState & value /* r28 */) {
     // Local variables
     const struct CASUIScreenState * pValue; // [invalid]
     unsigned long nNewSize; // r31
@@ -5328,12 +5877,6 @@ unsigned long VectorBase::GetNewCapacity() {}
 unsigned char vector::empty() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\common\EASTL\1.03.00\include\EASTL\vector.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x801AB068 -> 0x801AB0B0
-*/
 // Range: 0x801AB068 -> 0x801AB070
 struct FenceSellCount * vector::end() {}
 
@@ -5356,44 +5899,44 @@ struct InvStock * vector::begin() {}
 unsigned char vector::empty() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\common\EASTL\1.03.00\include\EASTL\vector.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x801EC714 -> 0x801ECF20
-*/
 // Range: 0x801EC714 -> 0x801EC7CC
-void vector::resize(class vector * const this /* r29 */, unsigned long n /* r30 */) {}
+// this: r29
+void vector::resize(unsigned long n /* r30 */) {}
 
 // Range: 0x801EC7CC -> 0x801EC7D0
 void vector::insert() {}
 
 // Range: 0x801EC7D0 -> 0x801EC838
-void * vector::~vector(class vector * const this /* r30 */) {}
+// this: r30
+vector::~vector() {}
 
 // Range: 0x801EC838 -> 0x801EC8B0
-void * VectorBase::~VectorBase(struct VectorBase * const this /* r30 */) {}
+// this: r30
+VectorBase::~VectorBase() {}
 
 // Range: 0x801EC8B0 -> 0x801EC8B4
 void vector::DoDestroyValues() {}
 
 // Range: 0x801EC8B4 -> 0x801EC8C4
-struct KFTRecord * & vector::__vc() {}
+struct KFTRecord * & vector::operator[]() {}
 
 // Range: 0x801EC8C4 -> 0x801EC8DC
 unsigned long vector::size() {}
 
 // Range: 0x801EC8DC -> 0x801EC90C
-void * vector::vector(class vector * const this /* r31 */) {}
+// this: r31
+vector::vector() {}
 
 // Range: 0x801EC90C -> 0x801EC950
-void * VectorBase::VectorBase(struct VectorBase * const this /* r31 */) {}
+// this: r31
+VectorBase::VectorBase() {}
 
 // Range: 0x801EC950 -> 0x801EC95C
 void vector::clear() {}
 
 // Range: 0x801EC95C -> 0x801EC9DC
-struct KFTRecord * * vector::erase(class vector * const this /* r29 */, struct KFTRecord * * first /* r30 */, struct KFTRecord * * last /* r31 */) {
+// this: r29
+struct KFTRecord * * vector::erase(struct KFTRecord * * first /* r30 */, struct KFTRecord * * last /* r31 */) {
     // Local variables
     struct KFTRecord * * const position; // r0
 }
@@ -5408,7 +5951,8 @@ struct KFTRecord * * vector::begin() {}
 void vector::push_back(struct KFTRecord * const & value /* r31 */) {}
 
 // Range: 0x801ECA58 -> 0x801ECBA8
-void vector::DoInsertValue(class vector * const this /* r31 */, struct KFTRecord * * position /* r26 */, struct KFTRecord * const & value /* r27 */) {
+// this: r31
+void vector::DoInsertValue(struct KFTRecord * * position /* r26 */, struct KFTRecord * const & value /* r27 */) {
     // Local variables
     struct KFTRecord * const * pValue; // [invalid]
     unsigned long nNewSize; // r29
@@ -5426,7 +5970,8 @@ struct KFTRecord * * VectorBase::DoAllocate() {}
 unsigned long VectorBase::GetNewCapacity() {}
 
 // Range: 0x801ECBF8 -> 0x801ECCB8
-void vector::reserve(class vector * const this /* r31 */, unsigned long n /* r29 */) {
+// this: r31
+void vector::reserve(unsigned long n /* r29 */) {
     // Local variables
     struct KFTRecord * * const pNewData; // r30
     long nPrevSize; // r0
@@ -5439,7 +5984,8 @@ struct KFTRecord * * vector::DoRealloc(struct KFTRecord * * first /* r29 */, str
 }
 
 // Range: 0x801ECD10 -> 0x801ECF20
-void vector::DoInsertValues(class vector * const this /* r28 */, class CTilePt * position /* r29 */, unsigned long n /* r30 */, const class CTilePt & value /* r31 */) {
+// this: r28
+void vector::DoInsertValues(class CTilePt * position /* r29 */, unsigned long n /* r30 */, const class CTilePt & value /* r31 */) {
     // Local variables
     class CTilePt temp; // r1+0x8
     unsigned long nExtra; // r26
@@ -5451,23 +5997,19 @@ void vector::DoInsertValues(class vector * const this /* r28 */, class CTilePt *
 }
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\common\EASTL\1.03.00\include\EASTL\vector.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x801FA844 -> 0x801FBA6C
-*/
 // Range: 0x801FA844 -> 0x801FA8B0
 void vector::push_back(class StateMachine * const & value /* r31 */) {}
 
 // Range: 0x801FA8B0 -> 0x801FA8C0
-struct AptAuxIDToChar & vector::__vc() {}
+struct AptAuxIDToChar & vector::operator[]() {}
 
 // Range: 0x801FA8C0 -> 0x801FA958
-void vector::resize(class vector * const this /* r29 */, unsigned long n /* r30 */) {}
+// this: r29
+void vector::resize(unsigned long n /* r30 */) {}
 
 // Range: 0x801FA958 -> 0x801FA9D8
-struct AptAuxIDToChar * vector::erase(class vector * const this /* r29 */, struct AptAuxIDToChar * first /* r30 */, struct AptAuxIDToChar * last /* r31 */) {
+// this: r29
+struct AptAuxIDToChar * vector::erase(struct AptAuxIDToChar * first /* r30 */, struct AptAuxIDToChar * last /* r31 */) {
     // Local variables
     struct AptAuxIDToChar * const position; // r0
 }
@@ -5488,43 +6030,52 @@ struct AptAuxIDToChar * vector::begin() {}
 struct AptAuxIDToChar * vector::end() {}
 
 // Range: 0x801FAA08 -> 0x801FAA70
-void * vector::~vector(class vector * const this /* r30 */) {}
+// this: r30
+vector::~vector() {}
 
 // Range: 0x801FAA70 -> 0x801FAAE8
-void * VectorBase::~VectorBase(struct VectorBase * const this /* r30 */) {}
+// this: r30
+VectorBase::~VectorBase() {}
 
 // Range: 0x801FAAE8 -> 0x801FAB88
-void vector::swap(class vector * const this /* r30 */, class vector & x /* r31 */) {
+// this: r30
+void vector::swap(class vector & x /* r31 */) {
     // Local variables
     class vector temp; // r1+0x8
 }
 
 // Range: 0x801FAB88 -> 0x801FABEC
-void * vector::vector(class vector * const this /* r30 */, const class vector & x /* r31 */) {}
+// this: r30
+vector::vector(const class vector & x /* r31 */) {}
 
 // Range: 0x801FABEC -> 0x801FAC50
-void * VectorBase::VectorBase(struct VectorBase * const this /* r30 */, unsigned long n /* r31 */) {}
+// this: r30
+VectorBase::VectorBase(unsigned long n /* r31 */) {}
 
 // Range: 0x801FAC50 -> 0x801FAC74
 struct AptAuxIDToChar * VectorBase::DoAllocate() {}
 
 // Range: 0x801FAC74 -> 0x801FACA4
-void * vector::vector(class vector * const this /* r31 */) {}
+// this: r31
+vector::vector() {}
 
 // Range: 0x801FACA4 -> 0x801FACE8
-void * VectorBase::VectorBase(struct VectorBase * const this /* r31 */) {}
+// this: r31
+VectorBase::VectorBase() {}
 
 // Range: 0x801FACE8 -> 0x801FACF8
-class ENeighborhoodCustomChar * & vector::__vc() {}
+class ENeighborhoodCustomChar * & vector::operator[]() {}
 
 // Range: 0x801FACF8 -> 0x801FAD00
 class ENeighborhoodCustomChar * * vector::end() {}
 
 // Range: 0x801FAD00 -> 0x801FAD68
-void * vector::~vector(class vector * const this /* r30 */) {}
+// this: r30
+vector::~vector() {}
 
 // Range: 0x801FAD68 -> 0x801FADE0
-void * VectorBase::~VectorBase(struct VectorBase * const this /* r30 */) {}
+// this: r30
+VectorBase::~VectorBase() {}
 
 // Range: 0x801FADE0 -> 0x801FADE4
 void vector::DoDestroyValues() {}
@@ -5536,28 +6087,34 @@ class ENeighborhoodCustomChar * * vector::begin() {}
 void vector::push_back(class ENeighborhoodCustomChar * const & value /* r31 */) {}
 
 // Range: 0x801FAE58 -> 0x801FAE88
-void * vector::vector(class vector * const this /* r31 */) {}
+// this: r31
+vector::vector() {}
 
 // Range: 0x801FAE88 -> 0x801FAECC
-void * VectorBase::VectorBase(struct VectorBase * const this /* r31 */) {}
+// this: r31
+VectorBase::VectorBase() {}
 
 // Range: 0x801FAECC -> 0x801FAED8
 void vector::clear() {}
 
 // Range: 0x801FAED8 -> 0x801FAF40
-void * vector::~vector(class vector * const this /* r30 */) {}
+// this: r30
+vector::~vector() {}
 
 // Range: 0x801FAF40 -> 0x801FAFB8
-void * VectorBase::~VectorBase(struct VectorBase * const this /* r30 */) {}
+// this: r30
+VectorBase::~VectorBase() {}
 
 // Range: 0x801FAFB8 -> 0x801FB008
 void vector::DoDestroyValues(class CachedSimData * first /* r30 */, class CachedSimData * last /* r31 */) {}
 
 // Range: 0x801FB008 -> 0x801FB038
-void * vector::vector(class vector * const this /* r31 */) {}
+// this: r31
+vector::vector() {}
 
 // Range: 0x801FB038 -> 0x801FB07C
-void * VectorBase::VectorBase(struct VectorBase * const this /* r31 */) {}
+// this: r31
+VectorBase::VectorBase() {}
 
 // Range: 0x801FB07C -> 0x801FB084
 class CachedSimData * vector::end() {}
@@ -5566,7 +6123,7 @@ class CachedSimData * vector::end() {}
 class CachedSimData * vector::begin() {}
 
 // Range: 0x801FB08C -> 0x801FB09C
-class CachedSimData & vector::__vc() {}
+class CachedSimData & vector::operator[]() {}
 
 // Range: 0x801FB09C -> 0x801FB0B4
 unsigned long vector::size() {}
@@ -5578,16 +6135,19 @@ void vector::push_back(const class CachedSimData & value /* r31 */) {}
 void vector::clear() {}
 
 // Range: 0x801FB140 -> 0x801FB1C0
-class CachedSimData * vector::erase(class vector * const this /* r29 */, class CachedSimData * first /* r30 */, class CachedSimData * last /* r31 */) {
+// this: r29
+class CachedSimData * vector::erase(class CachedSimData * first /* r30 */, class CachedSimData * last /* r31 */) {
     // Local variables
     class CachedSimData * const position; // r0
 }
 
 // Range: 0x801FB1C0 -> 0x801FB22C
-class CachedSimData * vector::erase(class vector * const this /* r30 */, class CachedSimData * position /* r31 */) {}
+// this: r30
+class CachedSimData * vector::erase(class CachedSimData * position /* r31 */) {}
 
 // Range: 0x801FB22C -> 0x801FB380
-void vector::DoInsertValue(class vector * const this /* r31 */, class CachedSimData * position /* r26 */, const class CachedSimData & value /* r27 */) {
+// this: r31
+void vector::DoInsertValue(class CachedSimData * position /* r26 */, const class CachedSimData & value /* r27 */) {
     // Local variables
     const class CachedSimData * pValue; // [invalid]
     unsigned long nNewSize; // r29
@@ -5605,7 +6165,8 @@ class CachedSimData * VectorBase::DoAllocate() {}
 unsigned long VectorBase::GetNewCapacity() {}
 
 // Range: 0x801FB3D0 -> 0x801FB520
-void vector::DoInsertValue(class vector * const this /* r31 */, class StateMachine * * position /* r26 */, class StateMachine * const & value /* r27 */) {
+// this: r31
+void vector::DoInsertValue(class StateMachine * * position /* r26 */, class StateMachine * const & value /* r27 */) {
     // Local variables
     class StateMachine * const * pValue; // [invalid]
     unsigned long nNewSize; // r29
@@ -5617,7 +6178,8 @@ void vector::DoInsertValue(class vector * const this /* r31 */, class StateMachi
 unsigned long VectorBase::GetNewCapacity() {}
 
 // Range: 0x801FB534 -> 0x801FB700
-void vector::DoInsertValues(class vector * const this /* r29 */, struct AptAuxIDToChar * position /* r30 */, unsigned long n /* r31 */, const struct AptAuxIDToChar & value /* r25 */) {
+// this: r29
+void vector::DoInsertValues(struct AptAuxIDToChar * position /* r30 */, unsigned long n /* r31 */, const struct AptAuxIDToChar & value /* r25 */) {
     // Local variables
     struct AptAuxIDToChar temp; // r1+0x8
     unsigned long nExtra; // r28
@@ -5635,7 +6197,8 @@ void VectorBase::DoFree() {}
 unsigned long VectorBase::GetNewCapacity() {}
 
 // Range: 0x801FB72C -> 0x801FB874
-class vector & vector::__as(class vector * const this /* r30 */, const class vector & x /* r29 */) {
+// this: r30
+class vector & vector::operator=(const class vector & x /* r29 */) {
     // Local variables
     unsigned long n; // r31
     struct AptAuxIDToChar * const pNewData; // r29
@@ -5649,7 +6212,8 @@ struct AptAuxIDToChar * vector::DoRealloc(struct AptAuxIDToChar * first /* r29 *
 }
 
 // Range: 0x801FB8CC -> 0x801FBA1C
-void vector::DoInsertValue(class vector * const this /* r31 */, class ENeighborhoodCustomChar * * position /* r26 */, class ENeighborhoodCustomChar * const & value /* r27 */) {
+// this: r31
+void vector::DoInsertValue(class ENeighborhoodCustomChar * * position /* r26 */, class ENeighborhoodCustomChar * const & value /* r27 */) {
     // Local variables
     class ENeighborhoodCustomChar * const * pValue; // [invalid]
     unsigned long nNewSize; // r29
@@ -5667,32 +6231,31 @@ class ENeighborhoodCustomChar * * VectorBase::DoAllocate() {}
 unsigned long VectorBase::GetNewCapacity() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\common\EASTL\1.03.00\include\EASTL\vector.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x8024CA0C -> 0x8024D07C
-*/
 // Range: 0x8024CA0C -> 0x8024CA74
-void * vector::~vector(class vector * const this /* r30 */) {}
+// this: r30
+vector::~vector() {}
 
 // Range: 0x8024CA74 -> 0x8024CAEC
-void * VectorBase::~VectorBase(struct VectorBase * const this /* r30 */) {}
+// this: r30
+VectorBase::~VectorBase() {}
 
 // Range: 0x8024CAEC -> 0x8024CAF0
 void vector::DoDestroyValues() {}
 
 // Range: 0x8024CAF0 -> 0x8024CB20
-void * vector::vector(class vector * const this /* r31 */) {}
+// this: r31
+vector::vector() {}
 
 // Range: 0x8024CB20 -> 0x8024CB64
-void * VectorBase::VectorBase(struct VectorBase * const this /* r31 */) {}
+// this: r31
+VectorBase::VectorBase() {}
 
 // Range: 0x8024CB64 -> 0x8024CB70
 void vector::clear() {}
 
 // Range: 0x8024CB70 -> 0x8024CBF0
-struct WindyPlantInfo * vector::erase(class vector * const this /* r29 */, struct WindyPlantInfo * first /* r30 */, struct WindyPlantInfo * last /* r31 */) {
+// this: r29
+struct WindyPlantInfo * vector::erase(struct WindyPlantInfo * first /* r30 */, struct WindyPlantInfo * last /* r31 */) {
     // Local variables
     struct WindyPlantInfo * const position; // r0
 }
@@ -5710,7 +6273,8 @@ struct WindyPlantInfo * vector::end() {}
 struct WindyPlantInfo * vector::begin() {}
 
 // Range: 0x8024CD10 -> 0x8024CE64
-void vector::DoInsertValue(class vector * const this /* r31 */, struct DamageEvent * position /* r26 */, const struct DamageEvent & value /* r27 */) {
+// this: r31
+void vector::DoInsertValue(struct DamageEvent * position /* r26 */, const struct DamageEvent & value /* r27 */) {
     // Local variables
     const struct DamageEvent * pValue; // [invalid]
     unsigned long nNewSize; // r29
@@ -5728,7 +6292,8 @@ struct DamageEvent * VectorBase::DoAllocate() {}
 unsigned long VectorBase::GetNewCapacity() {}
 
 // Range: 0x8024CED8 -> 0x8024D02C
-void vector::DoInsertValue(class vector * const this /* r31 */, struct WindyPlantInfo * position /* r26 */, const struct WindyPlantInfo & value /* r27 */) {
+// this: r31
+void vector::DoInsertValue(struct WindyPlantInfo * position /* r26 */, const struct WindyPlantInfo & value /* r27 */) {
     // Local variables
     const struct WindyPlantInfo * pValue; // [invalid]
     unsigned long nNewSize; // r29
@@ -5746,14 +6311,9 @@ struct WindyPlantInfo * VectorBase::DoAllocate() {}
 unsigned long VectorBase::GetNewCapacity() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\common\EASTL\1.03.00\include\EASTL\vector.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x8027A680 -> 0x8027A7F0
-*/
 // Range: 0x8027A680 -> 0x8027A7F0
-void vector::DoInsertValue(class vector * const this /* r29 */, class EFile * * position /* r30 */, class EFile * const & value /* r31 */) {
+// this: r29
+void vector::DoInsertValue(class EFile * * position /* r30 */, class EFile * const & value /* r31 */) {
     // Local variables
     class EFile * const * pValue; // [invalid]
     unsigned long nPrevSize; // r0
@@ -5761,14 +6321,9 @@ void vector::DoInsertValue(class vector * const this /* r29 */, class EFile * * 
 }
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\common\EASTL\1.03.00\include\EASTL\vector.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x802ADC2C -> 0x802ADF34
-*/
 // Range: 0x802ADC2C -> 0x802ADE14
-void vector::DoInsertValue(class vector * const this /* r27 */, struct ResourceIndexRecord * position /* r28 */, const struct ResourceIndexRecord & value /* r29 */) {
+// this: r27
+void vector::DoInsertValue(struct ResourceIndexRecord * position /* r28 */, const struct ResourceIndexRecord & value /* r29 */) {
     // Local variables
     const struct ResourceIndexRecord * pValue; // [invalid]
     unsigned long nPrevSize; // r0
@@ -5776,21 +6331,17 @@ void vector::DoInsertValue(class vector * const this /* r27 */, struct ResourceI
 }
 
 // Range: 0x802ADE14 -> 0x802ADF34
-void vector::reserve(class vector * const this /* r29 */, unsigned long n /* r30 */) {
+// this: r29
+void vector::reserve(unsigned long n /* r30 */) {
     // Local variables
     struct ResourceIndexRecord * const pNewData; // r0
     long nPrevSize; // r0
 }
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\common\EASTL\1.03.00\include\EASTL\vector.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x802D513C -> 0x802D6C44
-*/
 // Range: 0x802D513C -> 0x802D536C
-void vector::DoInsertValues(class vector * const this /* r26 */, unsigned int * position /* r27 */, unsigned long n /* r28 */, const unsigned int & value /* r29 */) {
+// this: r26
+void vector::DoInsertValues(unsigned int * position /* r27 */, unsigned long n /* r28 */, const unsigned int & value /* r29 */) {
     // Local variables
     unsigned int temp; // r1+0x10
     unsigned long nExtra; // r28
@@ -5800,7 +6351,8 @@ void vector::DoInsertValues(class vector * const this /* r26 */, unsigned int * 
 }
 
 // Range: 0x802D536C -> 0x802D5A5C
-void vector::DoInsertValues(class vector * const this /* r26 */, class ERAmbientSound * position /* r27 */, unsigned long n /* r28 */, const class ERAmbientSound & value /* r29 */) {
+// this: r26
+void vector::DoInsertValues(class ERAmbientSound * position /* r27 */, unsigned long n /* r28 */, const class ERAmbientSound & value /* r29 */) {
     // Local variables
     class ERAmbientSound temp; // r1+0xF0
     unsigned long nExtra; // r22
@@ -5810,7 +6362,8 @@ void vector::DoInsertValues(class vector * const this /* r26 */, class ERAmbient
 }
 
 // Range: 0x802D5A5C -> 0x802D5C50
-void vector::DoInsertValue(class vector * const this /* r27 */, struct ResourceInfo * position /* r28 */, const struct ResourceInfo & value /* r29 */) {
+// this: r27
+void vector::DoInsertValue(struct ResourceInfo * position /* r28 */, const struct ResourceInfo & value /* r29 */) {
     // Local variables
     const struct ResourceInfo * pValue; // [invalid]
     unsigned long nPrevSize; // r0
@@ -5818,14 +6371,16 @@ void vector::DoInsertValue(class vector * const this /* r27 */, struct ResourceI
 }
 
 // Range: 0x802D5C50 -> 0x802D5D70
-void vector::reserve(class vector * const this /* r29 */, unsigned long n /* r30 */) {
+// this: r29
+void vector::reserve(unsigned long n /* r30 */) {
     // Local variables
     struct ResourceInfo * const pNewData; // r0
     long nPrevSize; // r0
 }
 
 // Range: 0x802D5D70 -> 0x802D5EEC
-void vector::DoInsertValue(class vector * const this /* r29 */, class ERShader * * position /* r30 */, class ERShader * const & value /* r31 */) {
+// this: r29
+void vector::DoInsertValue(class ERShader * * position /* r30 */, class ERShader * const & value /* r31 */) {
     // Local variables
     class ERShader * const * pValue; // [invalid]
     unsigned long nPrevSize; // r0
@@ -5833,14 +6388,16 @@ void vector::DoInsertValue(class vector * const this /* r29 */, class ERShader *
 }
 
 // Range: 0x802D5EEC -> 0x802D5FC4
-void vector::reserve(class vector * const this /* r31 */, unsigned long n /* r27 */) {
+// this: r31
+void vector::reserve(unsigned long n /* r27 */) {
     // Local variables
     class ERShader * * const pNewData; // r0
     long nPrevSize; // r0
 }
 
 // Range: 0x802D5FC4 -> 0x802D6178
-void vector::DoInsertValue(class vector * const this /* r29 */, struct AnimSetIndex * position /* r30 */, const struct AnimSetIndex & value /* r31 */) {
+// this: r29
+void vector::DoInsertValue(struct AnimSetIndex * position /* r30 */, const struct AnimSetIndex & value /* r31 */) {
     // Local variables
     const struct AnimSetIndex * pValue; // [invalid]
     unsigned long nPrevSize; // r0
@@ -5848,7 +6405,8 @@ void vector::DoInsertValue(class vector * const this /* r29 */, struct AnimSetIn
 }
 
 // Range: 0x802D6178 -> 0x802D644C
-void vector::DoInsertValues(class vector * const this /* r28 */, union SndInstruction * position /* r29 */, unsigned long n /* r30 */, const union SndInstruction & value /* r31 */) {
+// this: r28
+void vector::DoInsertValues(union SndInstruction * position /* r29 */, unsigned long n /* r30 */, const union SndInstruction & value /* r31 */) {
     // Local variables
     union SndInstruction temp; // r1+0x28
     unsigned long nExtra; // r25
@@ -5858,7 +6416,8 @@ void vector::DoInsertValues(class vector * const this /* r28 */, union SndInstru
 }
 
 // Range: 0x802D644C -> 0x802D6740
-void vector::DoInsertValues(class vector * const this /* r28 */, struct AttachmentNode * position /* r29 */, unsigned long n /* r30 */, const struct AttachmentNode & value /* r31 */) {
+// this: r28
+void vector::DoInsertValues(struct AttachmentNode * position /* r29 */, unsigned long n /* r30 */, const struct AttachmentNode & value /* r31 */) {
     // Local variables
     struct AttachmentNode temp; // r1+0x20
     unsigned long nExtra; // r25
@@ -5868,7 +6427,8 @@ void vector::DoInsertValues(class vector * const this /* r28 */, struct Attachme
 }
 
 // Range: 0x802D6740 -> 0x802D6C44
-void vector::DoInsertValues(class vector * const this /* r26 */, struct AttachmentNodeV1 * position /* r27 */, unsigned long n /* r28 */, const struct AttachmentNodeV1 & value /* r29 */) {
+// this: r26
+void vector::DoInsertValues(struct AttachmentNodeV1 * position /* r27 */, unsigned long n /* r28 */, const struct AttachmentNodeV1 & value /* r29 */) {
     // Local variables
     struct AttachmentNodeV1 temp; // r1+0x20
     unsigned long nExtra; // r28
@@ -5878,14 +6438,9 @@ void vector::DoInsertValues(class vector * const this /* r26 */, struct Attachme
 }
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\common\EASTL\1.03.00\include\EASTL\vector.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x802F265C -> 0x802F2980
-*/
 // Range: 0x802F265C -> 0x802F2804
-void vector::DoInsertValue(class vector * const this /* r29 */, struct Item * position /* r30 */, const struct Item & value /* r31 */) {
+// this: r29
+void vector::DoInsertValue(struct Item * position /* r30 */, const struct Item & value /* r31 */) {
     // Local variables
     const struct Item * pValue; // [invalid]
     unsigned long nPrevSize; // r0
@@ -5893,7 +6448,8 @@ void vector::DoInsertValue(class vector * const this /* r29 */, struct Item * po
 }
 
 // Range: 0x802F2804 -> 0x802F2980
-void vector::DoInsertValue(class vector * const this /* r29 */, struct Section * * position /* r30 */, struct Section * const & value /* r31 */) {
+// this: r29
+void vector::DoInsertValue(struct Section * * position /* r30 */, struct Section * const & value /* r31 */) {
     // Local variables
     struct Section * const * pValue; // [invalid]
     unsigned long nPrevSize; // r0

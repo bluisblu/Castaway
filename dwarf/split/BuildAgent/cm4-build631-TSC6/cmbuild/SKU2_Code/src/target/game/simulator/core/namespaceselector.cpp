@@ -5,7 +5,8 @@
     Code range: 0x801257A4 -> 0x80125D3C
 */
 // Range: 0x801257A4 -> 0x80125828
-void * NamespaceSelector::~NamespaceSelector(class NamespaceSelector * const this /* r30 */) {}
+// this: r30
+NamespaceSelector::~NamespaceSelector() {}
 
 // Range: 0x80125880 -> 0x80125898
 class ObjectDataBehaviorConstants * NamespaceSelector::GetBehaviorConstants() {}
@@ -17,13 +18,15 @@ class SoundInfo * NamespaceSelector::GetSoundInfo() {}
 class StringSet * NamespaceSelector::GetStringSet() {}
 
 // Range: 0x801258C8 -> 0x80125954
-void NamespaceSelector::FlushAllCaches(class NamespaceSelector * const this /* r31 */) {
+// this: r31
+void NamespaceSelector::FlushAllCaches() {
     // Local variables
     class map tempStringSets; // r1+0xC
 }
 
 // Range: 0x80125954 -> 0x80125CD0
-class IObjectDataResource * NamespaceSelector::GetCacheItem(class NamespaceSelector * const this /* r30 */, signed short id /* r31 */, class list & dataCache /* r27 */, unsigned int kCacheType /* r28 */, unsigned int kCacheSize /* r29 */) {
+// this: r30
+class IObjectDataResource * NamespaceSelector::GetCacheItem(signed short id /* r31 */, class list & dataCache /* r27 */, unsigned int kCacheType /* r28 */, unsigned int kCacheSize /* r29 */) {
     // Local variables
     struct ListIterator it; // r1+0x40
     int smallest; // r29
@@ -38,6 +41,7 @@ class IObjectDataResource * NamespaceSelector::GetCacheItem(class NamespaceSelec
 class EREdithTreeSet * NamespaceSelector::GetTreeSetResource() {}
 
 // Range: 0x80125CD8 -> 0x80125D3C
-void NamespaceSelector::SetTreeSetResource(class NamespaceSelector * const this /* r30 */, class EREdithTreeSet * resource /* r31 */) {}
+// this: r30
+void NamespaceSelector::SetTreeSetResource(class EREdithTreeSet * resource /* r31 */) {}
 
 

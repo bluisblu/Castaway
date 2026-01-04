@@ -53,12 +53,6 @@ unsigned int cHitTimer::TimeNTicksFromNow() {}
 class cIGZSnd * cSamplePatch::TempGetSnd() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\target\game\simulator\core\patch.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x80106AB4 -> 0x80106AB8
-*/
 // Range: 0x80106AB4 -> 0x80106AB8
 int cHitMan::NumActiveTracks() {}
 

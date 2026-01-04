@@ -5,13 +5,14 @@
     Code range: 0x802DBC84 -> 0x802DBEC0
 */
 // Range: 0x802DBC84 -> 0x802DBCC0
-void * EResource::EResource() {
+EResource::EResource() {
     // References
     // -> struct [anonymous] __vt__9EResource;
 }
 
 // Range: 0x802DBCC0 -> 0x802DBD38
-void * EResource::~EResource(class EResource * const this /* r30 */) {
+// this: r30
+EResource::~EResource() {
     // References
     // -> struct [anonymous] __vt__9EResource;
 }

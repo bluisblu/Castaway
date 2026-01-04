@@ -20,7 +20,6 @@ void AptFloat::DeleteThis() {}
 // Range: 0x80333B5C -> 0x80333B60
 void AptFloat::ForceDelete() {}
 
-struct {
-    // total size: 0x44
-} __vt__8AptFloat; // size: 0x44, address: 0x8045FBD8
+// total size: 0x44
+struct {} __vt__8AptFloat; // size: 0x44, address: 0x8045FBD8
 

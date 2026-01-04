@@ -11,18 +11,21 @@ void ESleep::_tCallback() {
 }
 
 // Range: 0x8027A9FC -> 0x8027AA74
-void * ESleep::ESleep(class ESleep * const this /* r31 */) {
+// this: r31
+ESleep::ESleep() {
     // References
     // -> struct [anonymous] __vt__10ESemaphore;
 }
 
 // Range: 0x8027AA74 -> 0x8027AAF4
-void * ESleep::~ESleep(class ESleep * const this /* r30 */) {
+// this: r30
+ESleep::~ESleep() {
     // References
     // -> struct [anonymous] __vt__10ESemaphore;
 }
 
 // Range: 0x8027AAF4 -> 0x8027AB68
-void ESleep::Sleep(class ESleep * const this /* r31 */) {}
+// this: r31
+void ESleep::Sleep() {}
 
 

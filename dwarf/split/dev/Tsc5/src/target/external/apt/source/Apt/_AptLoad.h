@@ -5,16 +5,18 @@
     Code range: 0x802FF454 -> 0x802FF8C4
 */
 // Range: 0x802FF454 -> 0x802FF48C
-void * AptFileSavedInputState::AptFileSavedInputState(struct AptFileSavedInputState * const this /* r31 */) {}
+// this: r31
+AptFileSavedInputState::AptFileSavedInputState() {}
 
 // Range: 0x802FF48C -> 0x802FF498
-void * AptSavedInputCheckpoints::__nw() {
+void * AptSavedInputCheckpoints::operator new() {
     // References
     // -> class DOGMA_PoolManager * gpNonGCPoolManager;
 }
 
 // Range: 0x802FF498 -> 0x802FF4D0
-void * AptLinker::AptLinker(struct AptLinker * const this /* r31 */) {}
+// this: r31
+AptLinker::AptLinker() {}
 
 // Range: 0x802FF4D0 -> 0x802FF4E4
 void Allocator::Free(void * ptr /* r0 */) {
@@ -23,25 +25,25 @@ void Allocator::Free(void * ptr /* r0 */) {
 }
 
 // Range: 0x802FF4E4 -> 0x802FF4F0
-void * AptLinker::__nw() {
+void * AptLinker::operator new() {
     // References
     // -> class DOGMA_PoolManager * gpNonGCPoolManager;
 }
 
 // Range: 0x802FF520 -> 0x802FF52C
-void * AptLoader::__nw() {
+void * AptLoader::operator new() {
     // References
     // -> class DOGMA_PoolManager * gpNonGCPoolManager;
 }
 
 // Range: 0x802FF52C -> 0x802FF540
-void AptSavedInputCheckpoints::__dl(void * p /* r0 */) {
+void AptSavedInputCheckpoints::operator delete(void * p /* r0 */) {
     // References
     // -> class DOGMA_PoolManager * gpNonGCPoolManager;
 }
 
 // Range: 0x802FF5AC -> 0x802FF5C0
-void AptLinker::__dl(void * p /* r0 */) {
+void AptLinker::operator delete(void * p /* r0 */) {
     // References
     // -> class DOGMA_PoolManager * gpNonGCPoolManager;
 }
@@ -50,7 +52,8 @@ void AptLinker::__dl(void * p /* r0 */) {
 enum State AptFile::GetState() {}
 
 // Range: 0x802FF5C8 -> 0x802FF704
-void AptSavedInputCheckpoints::Checkpoint(struct AptSavedInputCheckpoints * const this /* r29 */, const class EAStringC & s /* r30 */) {
+// this: r29
+void AptSavedInputCheckpoints::Checkpoint(const class EAStringC & s /* r30 */) {
     // Local variables
     struct DbgIterator i; // r1+0x2C
 
@@ -59,7 +62,8 @@ void AptSavedInputCheckpoints::Checkpoint(struct AptSavedInputCheckpoints * cons
 }
 
 // Range: 0x802FF704 -> 0x802FF744
-void * AptFileSavedInputState::AptFileSavedInputState(struct AptFileSavedInputState * const this /* r30 */, enum State state /* r31 */) {}
+// this: r30
+AptFileSavedInputState::AptFileSavedInputState(enum State state /* r31 */) {}
 
 // Range: 0x802FF744 -> 0x802FF74C
 void AptFileSavedInputState::SetState() {}
@@ -74,13 +78,15 @@ class EAStringC & AptFileSavedInputState::GetName() {}
 unsigned char AptSavedInputCheckpoints::CanContinueSavedInputs() {}
 
 // Range: 0x802FF764 -> 0x802FF810
-unsigned char AptSavedInputCheckpoints::allStatesAre2(struct AptSavedInputCheckpoints * const this /* r29 */, enum State state0 /* r30 */, enum State state1 /* r31 */) {
+// this: r29
+unsigned char AptSavedInputCheckpoints::allStatesAre2(enum State state0 /* r30 */, enum State state1 /* r31 */) {
     // Local variables
     struct DbgIterator i; // r1+0x14
 }
 
 // Range: 0x802FF810 -> 0x802FF8BC
-void AptLoader::GetFileVector(struct AptLoader * const this /* r29 */, class AptSharedPtr * aFilePtrs /* r30 */) {
+// this: r29
+void AptLoader::GetFileVector(class AptSharedPtr * aFilePtrs /* r30 */) {
     // Local variables
     int j; // r0
     class Iterator i; // r1+0x10
@@ -90,12 +96,6 @@ void AptLoader::GetFileVector(struct AptLoader * const this /* r29 */, class Apt
 void AptFile::setState() {}
 
 
-/*
-    Compile unit: C:\dev\Tsc5\src\target\external\apt\source\Apt\_AptLoad.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x8030FEF8 -> 0x8030FF94
-*/
 // Range: 0x8030FEF8 -> 0x8030FF00
 struct AptCharacter * AptFile::GetMainCharacter() {}
 
@@ -109,24 +109,12 @@ struct AptCharacter * AptFile::FindExport(const char * szName /* r26 */) {
 }
 
 
-/*
-    Compile unit: C:\dev\Tsc5\src\target\external\apt\source\Apt\_AptLoad.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x803177C8 -> 0x803177D0
-*/
 // Range: 0x803177C8 -> 0x803177D0
 class EAStringC & AptFile::GetName() {}
 
 
-/*
-    Compile unit: C:\dev\Tsc5\src\target\external\apt\source\Apt\_AptLoad.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x80323598 -> 0x80323B28
-*/
 // Range: 0x80323598 -> 0x803235AC
-void AptLoader::__dl(void * p /* r0 */) {
+void AptLoader::operator delete(void * p /* r0 */) {
     // References
     // -> class DOGMA_PoolManager * gpNonGCPoolManager;
 }
@@ -138,13 +126,14 @@ void * Allocator::Alloc() {
 }
 
 // Range: 0x803235B8 -> 0x80323618
-void * AptFile::AptFile(struct AptFile * const this /* r30 */, const class EAStringC & name /* r31 */) {}
+// this: r30
+AptFile::AptFile(const class EAStringC & name /* r31 */) {}
 
 // Range: 0x80323618 -> 0x80323624
-void * AptSharedPtrRefCount::AptSharedPtrRefCount() {}
+AptSharedPtrRefCount::AptSharedPtrRefCount() {}
 
 // Range: 0x80323624 -> 0x80323630
-void * AptFile::__nw() {
+void * AptFile::operator new() {
     // References
     // -> class DOGMA_PoolManager * gpNonGCPoolManager;
 }
@@ -156,28 +145,32 @@ void * AptFile::GetUserData() {}
 void AptFile::setDataPointers() {}
 
 // Range: 0x80323648 -> 0x80323708
-int AptLinker::isFileImported(struct AptLinker * const this /* r29 */, class AptSharedPtr & pFile /* r30 */) {
+// this: r29
+int AptLinker::isFileImported(class AptSharedPtr & pFile /* r30 */) {
     // Local variables
     class Iterator i; // r1+0x10
 }
 
 // Range: 0x80323708 -> 0x803237B8
-int AptFile::isFileImported(struct AptFile * const this /* r27 */, class AptSharedPtr & pFile /* r28 */) {
+// this: r27
+int AptFile::isFileImported(class AptSharedPtr & pFile /* r28 */) {
     // Local variables
     int j; // r29
 }
 
 // Range: 0x803237B8 -> 0x80323818
-void * AptLinkerThingy::AptLinkerThingy(struct AptLinkerThingy * const this /* r29 */, class AptSharedPtr & file /* r30 */, class AptCIH * target /* r31 */) {}
+// this: r29
+AptLinkerThingy::AptLinkerThingy(class AptSharedPtr & file /* r30 */, class AptCIH * target /* r31 */) {}
 
 // Range: 0x80323818 -> 0x80323824
-void * AptLinkerThingy::__nw() {
+void * AptLinkerThingy::operator new() {
     // References
     // -> class DOGMA_PoolManager * gpNonGCPoolManager;
 }
 
 // Range: 0x80323824 -> 0x803238CC
-class Iterator AptLinker::findThingy(struct AptLinker * const this /* r30 */, class AptCIH * pCIH /* r31 */) {
+// this: r30
+class Iterator AptLinker::findThingy(class AptCIH * pCIH /* r31 */) {
     // Local variables
     class Iterator i; // r1+0xC
 }
@@ -186,7 +179,8 @@ class Iterator AptLinker::findThingy(struct AptLinker * const this /* r30 */, cl
 class AptCIH * AptLinkerThingy::GetTarget() {}
 
 // Range: 0x803238D4 -> 0x8032391C
-void AptSavedInputCheckpoints::AllLinked(struct AptSavedInputCheckpoints * const this /* r31 */) {
+// this: r31
+void AptSavedInputCheckpoints::AllLinked() {
     // Local variables
     class BasicString x; // r1+0x8
 }
@@ -210,20 +204,21 @@ int AptSharedPtrRefCount::IncRef() {}
 int AptSharedPtrRefCount::DecRef() {}
 
 // Range: 0x80323968 -> 0x80323A0C
-void * AptFile::~AptFile(struct AptFile * const this /* r30 */) {
+// this: r30
+AptFile::~AptFile() {
     // References
     // -> struct AptUserFunctions gAptFuncs;
     // -> struct AptLoader * gpLoader;
 }
 
 // Range: 0x80323A0C -> 0x80323A20
-void AptFile::__dl(void * p /* r0 */) {
+void AptFile::operator delete(void * p /* r0 */) {
     // References
     // -> class DOGMA_PoolManager * gpNonGCPoolManager;
 }
 
 // Range: 0x80323A20 -> 0x80323A34
-void AptLinkerThingy::__dl(void * p /* r0 */) {
+void AptLinkerThingy::operator delete(void * p /* r0 */) {
     // References
     // -> class DOGMA_PoolManager * gpNonGCPoolManager;
 }
@@ -232,7 +227,8 @@ void AptLinkerThingy::__dl(void * p /* r0 */) {
 void AptSavedInputCheckpoints::FileLoaded() {}
 
 // Range: 0x80323A44 -> 0x80323B28
-void AptSavedInputCheckpoints::updateState(struct AptSavedInputCheckpoints * const this /* r27 */, const class EAStringC & name /* r28 */, enum State lookFor /* r29 */, enum State setTo /* r30 */, enum State ifNotFound /* r31 */) {
+// this: r27
+void AptSavedInputCheckpoints::updateState(const class EAStringC & name /* r28 */, enum State lookFor /* r29 */, enum State setTo /* r30 */, enum State ifNotFound /* r31 */) {
     // Local variables
     struct DbgIterator i; // r1+0x1C
 }

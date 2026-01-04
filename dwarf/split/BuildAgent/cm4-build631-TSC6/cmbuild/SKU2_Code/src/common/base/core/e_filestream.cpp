@@ -5,13 +5,15 @@
     Code range: 0x802609B8 -> 0x80260B44
 */
 // Range: 0x802609B8 -> 0x80260A18
-void * EFileStream::~EFileStream(class EFileStream * const this /* r30 */) {
+// this: r30
+EFileStream::~EFileStream() {
     // References
     // -> struct [anonymous] __vt__11EFileStream;
 }
 
 // Range: 0x80260A18 -> 0x80260A70
-void EFileStream::Close(class EFileStream * const this /* r31 */) {
+// this: r31
+void EFileStream::Close() {
     // References
     // -> class ENgcFileSystem _eorFileSys;
 }

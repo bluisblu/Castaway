@@ -14,13 +14,16 @@ int PPMMutexUnlock() {
 }
 
 // Range: 0x8025C79C -> 0x8025C968
-void * GeneralAllocator::GeneralAllocator(class GeneralAllocator * const this /* r24 */, void * pInitialCore /* r25 */, unsigned long nInitialCoreSize /* r26 */, unsigned char bShouldFreeInitialCore /* r27 */, unsigned char bShouldTrimInitialCore /* r28 */, unsigned long (* pInitialCoreFreeFunction)(class GeneralAllocator *, void *, unsigned long, void *) /* r29 */, void * pInitialCoreFreeFunctionContext /* r30 */) {}
+// this: r24
+GeneralAllocator::GeneralAllocator(void * pInitialCore /* r25 */, unsigned long nInitialCoreSize /* r26 */, unsigned char bShouldFreeInitialCore /* r27 */, unsigned char bShouldTrimInitialCore /* r28 */, unsigned long (* pInitialCoreFreeFunction)(class GeneralAllocator *, void *, unsigned long, void *) /* r29 */, void * pInitialCoreFreeFunctionContext /* r30 */) {}
 
 // Range: 0x8025C968 -> 0x8025C9BC
-void * GeneralAllocator::~GeneralAllocator(class GeneralAllocator * const this /* r30 */) {}
+// this: r30
+GeneralAllocator::~GeneralAllocator() {}
 
 // Range: 0x8025C9BC -> 0x8025CD04
-unsigned char GeneralAllocator::Init(class GeneralAllocator * const this /* r24 */, void * pInitialCore /* r25 */, unsigned long nInitialCoreSize /* r26 */, unsigned char bShouldFreeInitialCore /* r27 */, unsigned char bShouldTrimInitialCore /* r28 */, unsigned long (* pInitialCoreFreeFunction)(class GeneralAllocator *, void *, unsigned long, void *) /* r29 */, void * pInitialCoreFreeFunctionContext /* r30 */) {
+// this: r24
+unsigned char GeneralAllocator::Init(void * pInitialCore /* r25 */, unsigned long nInitialCoreSize /* r26 */, unsigned char bShouldFreeInitialCore /* r27 */, unsigned char bShouldTrimInitialCore /* r28 */, unsigned long (* pInitialCoreFreeFunction)(class GeneralAllocator *, void *, unsigned long, void *) /* r29 */, void * pInitialCoreFreeFunctionContext /* r30 */) {
     // Local variables
     int i; // r3
     struct Chunk * const pBin; // r6
@@ -31,7 +34,8 @@ unsigned char GeneralAllocator::Init(class GeneralAllocator * const this /* r24 
 }
 
 // Range: 0x8025CD04 -> 0x8025CE14
-unsigned char GeneralAllocator::Shutdown(class GeneralAllocator * const this /* r29 */) {
+// this: r29
+unsigned char GeneralAllocator::Shutdown() {
     // Local variables
     volatile struct InitCallbackNode * pCurrent; // r30
     struct CoreBlock * const pCoreBlock; // r0
@@ -41,7 +45,8 @@ unsigned char GeneralAllocator::Shutdown(class GeneralAllocator * const this /* 
 }
 
 // Range: 0x8025CE14 -> 0x8025D0D0
-void GeneralAllocator::SetOption(class GeneralAllocator * const this /* r31 */, int nValue /* r29 */) {
+// this: r31
+void GeneralAllocator::SetOption(int nValue /* r29 */) {
     // Local variables
     void * pMutex; // r0
 }
@@ -76,13 +81,15 @@ void GeneralAllocator::SetAssertionFailureFunction() {}
 void GeneralAllocator::TraceFunctionDefault() {}
 
 // Range: 0x8025D1B4 -> 0x8025D238
-void * GeneralAllocator::Malloc(class GeneralAllocator * const this /* r28 */, unsigned long nSize /* r29 */, int nAllocationFlags /* r30 */) {
+// this: r28
+void * GeneralAllocator::Malloc(unsigned long nSize /* r29 */, int nAllocationFlags /* r30 */) {
     // Local variables
     void * pReturnValue; // r30
 }
 
 // Range: 0x8025D238 -> 0x8025D868
-void * GeneralAllocator::MallocInternal(class GeneralAllocator * const this /* r22 */, unsigned long nSize /* r23 */) {
+// this: r22
+void * GeneralAllocator::MallocInternal(unsigned long nSize /* r23 */) {
     // Local variables
     void * pData; // r26
     struct Chunk * pResultChunk; // r6
@@ -103,10 +110,12 @@ void * GeneralAllocator::MallocInternal(class GeneralAllocator * const this /* r
 }
 
 // Range: 0x8025D868 -> 0x8025D8D4
-void GeneralAllocator::Free(class GeneralAllocator * const this /* r29 */, void * pData /* r30 */) {}
+// this: r29
+void GeneralAllocator::Free(void * pData /* r30 */) {}
 
 // Range: 0x8025D8D4 -> 0x8025DAC8
-void GeneralAllocator::FreeInternal(class GeneralAllocator * const this /* r30 */) {
+// this: r30
+void GeneralAllocator::FreeInternal() {
     // Local variables
     struct Chunk * pChunk; // r4
     unsigned int nChunkSize; // r31
@@ -117,13 +126,15 @@ void GeneralAllocator::FreeInternal(class GeneralAllocator * const this /* r30 *
 }
 
 // Range: 0x8025DAC8 -> 0x8025DB4C
-void * GeneralAllocator::MallocAligned(class GeneralAllocator * const this /* r26 */, unsigned long nSize /* r27 */, unsigned long nAlignment /* r28 */, unsigned long nAlignmentOffset /* r29 */, int nAllocationFlags /* r30 */) {
+// this: r26
+void * GeneralAllocator::MallocAligned(unsigned long nSize /* r27 */, unsigned long nAlignment /* r28 */, unsigned long nAlignmentOffset /* r29 */, int nAllocationFlags /* r30 */) {
     // Local variables
     void * pReturnValue; // r30
 }
 
 // Range: 0x8025DB4C -> 0x8025DF50
-void * GeneralAllocator::MallocAlignedInternal(class GeneralAllocator * const this /* r27 */, unsigned long nAlignment /* r28 */, unsigned long nAlignmentOffset /* r29 */) {
+// this: r27
+void * GeneralAllocator::MallocAlignedInternal(unsigned long nAlignment /* r28 */, unsigned long nAlignmentOffset /* r29 */) {
     // Local variables
     void * pMallocValue; // r0
     void * pReturnValue; // r0
@@ -143,7 +154,8 @@ void * GeneralAllocator::MallocAlignedInternal(class GeneralAllocator * const th
 }
 
 // Range: 0x8025DF50 -> 0x8025E210
-void * GeneralAllocator::ReallocInternal(class GeneralAllocator * const this /* r26 */, void * pData /* r27 */) {
+// this: r26
+void * GeneralAllocator::ReallocInternal(void * pData /* r27 */) {
     // Local variables
     void * pReturnValue; // r0
     struct Chunk * pNewChunk; // r28
@@ -155,7 +167,8 @@ void * GeneralAllocator::ReallocInternal(class GeneralAllocator * const this /* 
 }
 
 // Range: 0x8025E210 -> 0x8025E28C
-void * GeneralAllocator::Calloc(class GeneralAllocator * const this /* r27 */, unsigned long nElementCount /* r28 */, unsigned long nElementSize /* r29 */, int nAllocationFlags /* r30 */) {
+// this: r27
+void * GeneralAllocator::Calloc(unsigned long nElementCount /* r28 */, unsigned long nElementSize /* r29 */, int nAllocationFlags /* r30 */) {
     // Local variables
     void * pReturnValue; // r30
 }
@@ -180,7 +193,8 @@ void GeneralAllocator::ClearFastBins() {
 }
 
 // Range: 0x8025E528 -> 0x8025E56C
-void GeneralAllocator::SetAllocatorName(class GeneralAllocator * const this /* r31 */) {}
+// this: r31
+void GeneralAllocator::SetAllocatorName() {}
 
 // Range: 0x8025E56C -> 0x8025E588
 void GeneralAllocator::UnlinkCoreBlock() {}
@@ -192,14 +206,16 @@ struct CoreBlock * GeneralAllocator::FindCoreBlockForAddress() {
 }
 
 // Range: 0x8025E5C8 -> 0x8025E7E0
-unsigned char GeneralAllocator::AddCore(class GeneralAllocator * const this /* r24 */, void * pCore /* r25 */, unsigned long nCoreSize /* r26 */, unsigned char bShouldFreeCore /* r27 */, unsigned char bShouldTrimCore /* r28 */, unsigned long (* pCoreFreeFunction)(class GeneralAllocator *, void *, unsigned long, void *) /* r29 */, void * pCoreFreeFunctionContext /* r30 */) {
+// this: r24
+unsigned char GeneralAllocator::AddCore(void * pCore /* r25 */, unsigned long nCoreSize /* r26 */, unsigned char bShouldFreeCore /* r27 */, unsigned char bShouldTrimCore /* r28 */, unsigned long (* pCoreFreeFunction)(class GeneralAllocator *, void *, unsigned long, void *) /* r29 */, void * pCoreFreeFunctionContext /* r30 */) {
     // Local variables
     struct CoreBlock * const pCoreBlock; // r0
     struct Chunk * const pChunk; // r0
 }
 
 // Range: 0x8025E7E0 -> 0x8025E8F0
-struct Chunk * GeneralAllocator::ExtendCoreInternal(class GeneralAllocator * const this /* r28 */, unsigned long nMinSize /* r29 */) {
+// this: r28
+struct Chunk * GeneralAllocator::ExtendCoreInternal(unsigned long nMinSize /* r29 */) {
     // Local variables
     unsigned char bShouldSetNewTopChunk; // r31
     struct Chunk * pChunk; // r7
@@ -210,7 +226,8 @@ struct Chunk * GeneralAllocator::ExtendCoreInternal(class GeneralAllocator * con
 }
 
 // Range: 0x8025E8F0 -> 0x8025EA40
-struct Chunk * GeneralAllocator::AddCoreInternal(class GeneralAllocator * const this /* r30 */) {
+// this: r30
+struct Chunk * GeneralAllocator::AddCoreInternal() {
     // Local variables
     void * pCore; // r0
     unsigned long nCoreSize; // r31
@@ -224,7 +241,8 @@ unsigned char GeneralAllocator::FreeCore() {
 }
 
 // Range: 0x8025EAA4 -> 0x8025EC24
-unsigned long GeneralAllocator::TrimCore(class GeneralAllocator * const this /* r23 */) {
+// this: r23
+unsigned long GeneralAllocator::TrimCore() {
     // Local variables
     unsigned long nCoreTrimmed; // r29
     struct CoreBlock * pCoreBlock; // r28

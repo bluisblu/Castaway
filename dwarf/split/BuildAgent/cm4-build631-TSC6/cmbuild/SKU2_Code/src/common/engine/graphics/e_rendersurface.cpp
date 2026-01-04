@@ -5,13 +5,14 @@
     Code range: 0x8029A894 -> 0x8029A9FC
 */
 // Range: 0x8029A894 -> 0x8029A8FC
-void * ERenderSurface::ERenderSurface() {
+ERenderSurface::ERenderSurface() {
     // References
     // -> struct [anonymous] __vt__14ERenderSurface;
 }
 
 // Range: 0x8029A8FC -> 0x8029A93C
-void * ERenderSurface::~ERenderSurface(class ERenderSurface * const this /* r31 */) {}
+// this: r31
+ERenderSurface::~ERenderSurface() {}
 
 // Range: 0x8029A93C -> 0x8029A984
 unsigned char ERenderSurface::Create() {}

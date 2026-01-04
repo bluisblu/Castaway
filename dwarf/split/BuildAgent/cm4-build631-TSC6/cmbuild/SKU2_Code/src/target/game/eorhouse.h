@@ -8,12 +8,6 @@
 class ERLevel * EHouse::GetRLevel() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\target\game\eorhouse.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x80059B8C -> 0x80059B9C
-*/
 // Range: 0x80059B8C -> 0x80059B94
 class EVec2 & EHouse::GetHouseOff() {}
 
@@ -21,12 +15,6 @@ class EVec2 & EHouse::GetHouseOff() {}
 int EHouse::GetLotNum() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\target\game\eorhouse.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x80205D78 -> 0x80205E1C
-*/
 // Range: 0x80205E04 -> 0x80205E0C
 unsigned char EHouse::IsBuilt() {}
 

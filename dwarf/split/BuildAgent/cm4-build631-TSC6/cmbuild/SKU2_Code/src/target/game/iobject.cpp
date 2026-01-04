@@ -11,14 +11,16 @@ static void ExpandBoundingBox(class EBound3 & bound /* r31 */) {
 }
 
 // Range: 0x80232970 -> 0x80232B24
-void * ISimsObjectModel::ISimsObjectModel(class ISimsObjectModel * const this /* r30 */) {
+// this: r30
+ISimsObjectModel::ISimsObjectModel() {
     // References
     // -> class EModelManager _modelman;
     // -> struct [anonymous] __vt__16ISimsObjectModel;
 }
 
 // Range: 0x80232B24 -> 0x80232C8C
-void * ISimsObjectModel::~ISimsObjectModel(class ISimsObjectModel * const this /* r30 */) {
+// this: r30
+ISimsObjectModel::~ISimsObjectModel() {
     // References
     // -> class EModelManager _modelman;
     // -> class EAnimManager _animman;
@@ -42,14 +44,16 @@ void ISimsObjectModel::InsertSubModelsInHouse(class ERLevel * pLevel /* r30 */) 
 }
 
 // Range: 0x80232DCC -> 0x80232E3C
-void ISimsObjectModel::PropigateFlagsToSubModels(class ISimsObjectModel * const this /* r30 */) {
+// this: r30
+void ISimsObjectModel::PropigateFlagsToSubModels() {
     // Local variables
     class NLIteratorPtrType * it; // r31
     class ISimInstance * pData; // r0
 }
 
 // Range: 0x80232E3C -> 0x80232FFC
-void ISimsObjectModel::CleanupStuff(class ISimsObjectModel * const this /* r28 */, class ERLevel * pLevel /* r29 */) {
+// this: r28
+void ISimsObjectModel::CleanupStuff(class ERLevel * pLevel /* r29 */) {
     // Local variables
     int i; // r30
     int n; // r0
@@ -60,7 +64,8 @@ void ISimsObjectModel::CleanupStuff(class ISimsObjectModel * const this /* r28 *
 }
 
 // Range: 0x80232FFC -> 0x802331B0
-void ISimsObjectModel::CheckPendingAnimation(class ISimsObjectModel * const this /* r29 */, const struct ObjAnimDef & animDef /* r30 */) {
+// this: r29
+void ISimsObjectModel::CheckPendingAnimation(const struct ObjAnimDef & animDef /* r30 */) {
     // Local variables
     unsigned int animToCheck; // r30
 
@@ -69,13 +74,15 @@ void ISimsObjectModel::CheckPendingAnimation(class ISimsObjectModel * const this
 }
 
 // Range: 0x802331B0 -> 0x80233324
-void ISimsObjectModel::CheckPendingModel(class ISimsObjectModel * const this /* r29 */, const struct ObjAnimDef & animDef /* r30 */) {
+// this: r29
+void ISimsObjectModel::CheckPendingModel(const struct ObjAnimDef & animDef /* r30 */) {
     // References
     // -> class EModelManager _modelman;
 }
 
 // Range: 0x80233324 -> 0x80233D08
-void ISimsObjectModel::Update(class ISimsObjectModel * const this /* r28 */) {
+// this: r28
+void ISimsObjectModel::Update() {
     // Local variables
     int dir; // r0
     class EMat4 old_Orient; // r1+0x1B0
@@ -123,13 +130,15 @@ void ISimsObjectModel::Update(class ISimsObjectModel * const this /* r28 */) {
 }
 
 // Range: 0x80233D08 -> 0x80233DF8
-void ISimsObjectModel::UpdateParticle(class ISimsObjectModel * const this /* r29 */, const struct ObjAnimDef * animdef /* r30 */) {
+// this: r29
+void ISimsObjectModel::UpdateParticle(const struct ObjAnimDef * animdef /* r30 */) {
     // Local variables
     class EMat4 mOrient; // r1+0x8
 }
 
 // Range: 0x80233DF8 -> 0x80233EAC
-void ISimsObjectModel::DeleteNonContinualParticleEffects(class ISimsObjectModel * const this /* r28 */) {
+// this: r28
+void ISimsObjectModel::DeleteNonContinualParticleEffects() {
     // Local variables
     unsigned char listCleared; // r31
     class NLIteratorPtrType * it; // r30
@@ -138,7 +147,8 @@ void ISimsObjectModel::DeleteNonContinualParticleEffects(class ISimsObjectModel 
 }
 
 // Range: 0x80233EAC -> 0x802340F4
-void ISimsObjectModel::SetupCharacter(class ISimsObjectModel * const this /* r31 */) {
+// this: r31
+void ISimsObjectModel::SetupCharacter() {
     // Local variables
     const struct ResData * const pResData; // r25
     int i; // r24
@@ -148,7 +158,8 @@ void ISimsObjectModel::SetupCharacter(class ISimsObjectModel * const this /* r31
 }
 
 // Range: 0x802340F4 -> 0x802343AC
-void ISimsObjectModel::InitBulb(class ISimsObjectModel * const this /* r28 */) {
+// this: r28
+void ISimsObjectModel::InitBulb() {
     // Local variables
     const struct ResData * const pResData; // r30
     const struct ObjLightDef * pLightDef; // r29
@@ -165,23 +176,28 @@ void ISimsObjectModel::InitBulb(class ISimsObjectModel * const this /* r28 */) {
 }
 
 // Range: 0x802343AC -> 0x8023443C
-void ISimsObjectModel::UpdateBulb(class ISimsObjectModel * const this /* r29 */, const struct ObjAnimDef * animdef /* r30 */) {}
+// this: r29
+void ISimsObjectModel::UpdateBulb(const struct ObjAnimDef * animdef /* r30 */) {}
 
 // Range: 0x8023443C -> 0x80234550
-void ISimsObjectModel::SetSOMModel(class ISimsObjectModel * const this /* r29 */, unsigned int modelId /* r30 */) {
+// this: r29
+void ISimsObjectModel::SetSOMModel(unsigned int modelId /* r30 */) {
     // Local variables
     unsigned int oldModelId; // r31
     class EMat4 mOrient; // r1+0x8
 }
 
 // Range: 0x80234550 -> 0x802345E0
-void ISimsObjectModel::UpdateModel(class ISimsObjectModel * const this /* r29 */, const struct ObjAnimDef * animdef /* r30 */) {}
+// this: r29
+void ISimsObjectModel::UpdateModel(const struct ObjAnimDef * animdef /* r30 */) {}
 
 // Range: 0x802345E0 -> 0x80234694
-void ISimsObjectModel::UpdateShader(class ISimsObjectModel * const this /* r29 */, const struct ObjAnimDef * animdef /* r30 */) {}
+// this: r29
+void ISimsObjectModel::UpdateShader(const struct ObjAnimDef * animdef /* r30 */) {}
 
 // Range: 0x80234694 -> 0x8023479C
-void ISimsObjectModel::AnimStartImmediate(class ISimsObjectModel * const this /* r30 */, float animPosOverrideSecs /* f30 */) {
+// this: r30
+void ISimsObjectModel::AnimStartImmediate(float animPosOverrideSecs /* f30 */) {
     // Local variables
     class EACTrack * pTrack; // r31
     float durationInSeconds; // f31
@@ -189,7 +205,8 @@ void ISimsObjectModel::AnimStartImmediate(class ISimsObjectModel * const this /*
 }
 
 // Range: 0x8023479C -> 0x802348A4
-void ISimsObjectModel::AnimStartBlendIn(class ISimsObjectModel * const this /* r30 */, float animPosOverrideSecs /* f30 */) {
+// this: r30
+void ISimsObjectModel::AnimStartBlendIn(float animPosOverrideSecs /* f30 */) {
     // Local variables
     class EACTrack * pTrack; // r31
     float durationInSeconds; // f31
@@ -197,19 +214,22 @@ void ISimsObjectModel::AnimStartBlendIn(class ISimsObjectModel * const this /* r
 }
 
 // Range: 0x802348A4 -> 0x80234904
-void ISimsObjectModel::KillAllAnimTracks(class ISimsObjectModel * const this /* r30 */) {
+// this: r30
+void ISimsObjectModel::KillAllAnimTracks() {
     // References
     // -> class EAnimManager _animman;
 }
 
 // Range: 0x80234904 -> 0x802349D8
-void ISimsObjectModel::UpdateTracks(class ISimsObjectModel * const this /* r31 */) {
+// this: r31
+void ISimsObjectModel::UpdateTracks() {
     // Local variables
     struct EAnimDef * pAnimDef; // r0
 }
 
 // Range: 0x802349D8 -> 0x80234AA4
-void ISimsObjectModel::UpdateAnimTrack(class ISimsObjectModel * const this /* r29 */, const struct ObjAnimDef * animdef /* r30 */, unsigned char restart /* r31 */) {
+// this: r29
+void ISimsObjectModel::UpdateAnimTrack(const struct ObjAnimDef * animdef /* r30 */, unsigned char restart /* r31 */) {
     // Local variables
     float timeMultiplier; // f0
 
@@ -218,7 +238,8 @@ void ISimsObjectModel::UpdateAnimTrack(class ISimsObjectModel * const this /* r2
 }
 
 // Range: 0x80234AA4 -> 0x80234CCC
-void ISimsObjectModel::ProcessPropertyEventTags(class ISimsObjectModel * const this /* r31 */, const struct ObjAnimDef * animdef /* r28 */, float timeMultiplier /* f31 */) {
+// this: r31
+void ISimsObjectModel::ProcessPropertyEventTags(const struct ObjAnimDef * animdef /* r28 */, float timeMultiplier /* f31 */) {
     // Local variables
     class ERAnim * pAnim; // r29
     int animId; // r4
@@ -233,7 +254,8 @@ void ISimsObjectModel::ProcessPropertyEventTags(class ISimsObjectModel * const t
 }
 
 // Range: 0x80234CCC -> 0x80234F04
-void ISimsObjectModel::StartNewAnimTrack(class ISimsObjectModel * const this /* r28 */, const struct ObjAnimDef * animdef /* r30 */, unsigned char restart /* r29 */) {
+// this: r28
+void ISimsObjectModel::StartNewAnimTrack(const struct ObjAnimDef * animdef /* r30 */, unsigned char restart /* r29 */) {
     // Local variables
     unsigned int animId; // r30
     float animPosOverrideSecs; // r1+0x8
@@ -253,7 +275,8 @@ void ISimsObjectModel::RemoveSubModelsFromHouse(class ERLevel * pLevel /* r29 */
 }
 
 // Range: 0x80234FE4 -> 0x80235084
-void ISimsObjectModel::ChageShader(class ISimsObjectModel * const this /* r29 */, unsigned int oldShdId /* r30 */, unsigned int newShdId /* r31 */) {
+// this: r29
+void ISimsObjectModel::ChageShader(unsigned int oldShdId /* r30 */, unsigned int newShdId /* r31 */) {
     // References
     // -> class EShaderManager _shaderman;
 }
@@ -276,10 +299,12 @@ void ThisSide(signed short & roomId /* r29 */, signed short & lightRoomId /* r30
 unsigned char Hidden() {}
 
 // Range: 0x802351C0 -> 0x80235234
-signed short ISimsObjectModel::GetAdjacentRoom(class ISimsObjectModel * const this /* r31 */) {}
+// this: r31
+signed short ISimsObjectModel::GetAdjacentRoom() {}
 
 // Range: 0x80235234 -> 0x80235394
-void ISimsObjectModel::SetWallForPortal(class ISimsObjectModel * const this /* r25 */) {
+// this: r25
+void ISimsObjectModel::SetWallForPortal() {
     // Local variables
     class cXPortal * pPortal; // r29
     class ERoom * pERoom; // r28
@@ -294,14 +319,16 @@ void ISimsObjectModel::SetWallForPortal(class ISimsObjectModel * const this /* r
 void ISimsObjectModel::CreateShadow() {}
 
 // Range: 0x802353D0 -> 0x80235498
-void ISimsObjectModel::CalcOrient(class ISimsObjectModel * const this /* r31 */) {
+// this: r31
+void ISimsObjectModel::CalcOrient() {
     // Local variables
     class EMat4 mOrient; // r1+0x48
     class EMat4 mShadow; // r1+0x8
 }
 
 // Range: 0x80235498 -> 0x80235514
-void ISimsObjectModel::CalcDynamicOrient(class ISimsObjectModel * const this /* r31 */) {
+// this: r31
+void ISimsObjectModel::CalcDynamicOrient() {
     // Local variables
     class EMat4 mShadow; // r1+0x8
 }
@@ -313,7 +340,8 @@ void ISimsObjectModel::SetOutOfWorld() {}
 void ISimsObjectModel::StartBurp() {}
 
 // Range: 0x8023551C -> 0x802357A8
-enum TreeReturnCode ISimsObjectModel::TryAnimateObject(class ISimsObjectModel * const this /* r31 */, signed short graphicState /* r27 */, signed short * pLocalForEvent /* r28 */) {
+// this: r31
+enum TreeReturnCode ISimsObjectModel::TryAnimateObject(signed short graphicState /* r27 */, signed short * pLocalForEvent /* r28 */) {
     // Local variables
     const struct ObjAnimDef & animDef; // r30
     unsigned int nextAnimID; // r29
@@ -326,7 +354,8 @@ enum TreeReturnCode ISimsObjectModel::TryAnimateObject(class ISimsObjectModel * 
 }
 
 // Range: 0x802357A8 -> 0x802358E4
-enum TreeReturnCode ISimsObjectModel::PreloadAnimation(class ISimsObjectModel * const this /* r29 */, signed short graphicState /* r30 */) {
+// this: r29
+enum TreeReturnCode ISimsObjectModel::PreloadAnimation(signed short graphicState /* r30 */) {
     // Local variables
     unsigned int animationID; // r30
     const struct ObjAnimDef & animDef; // r0
@@ -358,7 +387,8 @@ void ISimsObjectModel::BlendHighlights(struct ELights * pLights /* r30 */) {
 }
 
 // Range: 0x80235B38 -> 0x80235CFC
-void ISimsObjectModel::DoLightingCalculation(class ISimsObjectModel * const this /* r31 */) {
+// this: r31
+void ISimsObjectModel::DoLightingCalculation() {
     // Local variables
     const class DigestGeomShaderPtr * pDigest; // r4
     unsigned char hilights[2]; // r1+0x8
@@ -372,13 +402,15 @@ void ISimsObjectModel::DoLightingCalculation(class ISimsObjectModel * const this
 unsigned char ISimsObjectModel::IsVisible() {}
 
 // Range: 0x80235D54 -> 0x80235D9C
-void ISimsObjectModel::UpdateAnimController(class ISimsObjectModel * const this /* r31 */) {}
+// this: r31
+void ISimsObjectModel::UpdateAnimController() {}
 
 // Range: 0x80235D9C -> 0x80235DDC
 unsigned char ISimsObjectModel::ShouldPlaceOnWaterSurface() {}
 
 // Range: 0x80235DDC -> 0x80235EE8
-unsigned char ISimsObjectModel::ShouldPlaceOnTerrain(class ISimsObjectModel * const this /* r29 */) {
+// this: r29
+unsigned char ISimsObjectModel::ShouldPlaceOnTerrain() {
     // Local variables
     unsigned char bShouldPlace; // r31
     class cXObject * pContainer; // r30
@@ -391,7 +423,8 @@ unsigned char ISimsObjectModel::ShouldPlaceOnTerrain(class ISimsObjectModel * co
 }
 
 // Range: 0x80235EE8 -> 0x80235FCC
-unsigned int ISimsObjectModel::VisibilityTest(class ISimsObjectModel * const this /* r30 */, class E3DWindow & win /* r31 */) {
+// this: r30
+unsigned int ISimsObjectModel::VisibilityTest(class E3DWindow & win /* r31 */) {
     // Local variables
     class EBound3 bounds; // r1+0x18
     float elevation; // r1+0x8
@@ -399,7 +432,8 @@ unsigned int ISimsObjectModel::VisibilityTest(class ISimsObjectModel * const thi
 }
 
 // Range: 0x80235FCC -> 0x802361D0
-void ISimsObjectModel::DoAnimation(class ISimsObjectModel * const this /* r29 */) {
+// this: r29
+void ISimsObjectModel::DoAnimation() {
     // Local variables
     class EMat4 mOrient; // r1+0x10
     float elevation; // r1+0x8
@@ -410,7 +444,8 @@ void ISimsObjectModel::DoAnimation(class ISimsObjectModel * const this /* r29 */
 }
 
 // Range: 0x802361D0 -> 0x80236698
-void ISimsObjectModel::Draw(class ISimsObjectModel * const this /* r24 */, struct ELevelDrawData & renderParam /* r25 */) {
+// this: r24
+void ISimsObjectModel::Draw(struct ELevelDrawData & renderParam /* r25 */) {
     // Local variables
     float instanceAlpha; // f31
     unsigned char isAlphaFadeOn; // r30
@@ -435,7 +470,8 @@ void ISimsObjectModel::Draw(class ISimsObjectModel * const this /* r24 */, struc
 }
 
 // Range: 0x80236698 -> 0x8023679C
-void ISimsObjectModel::DrawAsShadow(class ISimsObjectModel * const this /* r30 */, struct ELevelDrawData & renderParam /* r29 */) {
+// this: r30
+void ISimsObjectModel::DrawAsShadow(struct ELevelDrawData & renderParam /* r29 */) {
     // Local variables
     const class EMat4 * pmOrient; // r0
     const class DigestGeomShaderPtr * pDigest; // r31
@@ -443,7 +479,8 @@ void ISimsObjectModel::DrawAsShadow(class ISimsObjectModel * const this /* r30 *
 }
 
 // Range: 0x8023679C -> 0x8023695C
-void ISimsObjectModel::AnimateLights(class ISimsObjectModel * const this /* r29 */) {
+// this: r29
+void ISimsObjectModel::AnimateLights() {
     // Local variables
     struct EACNodeState * nodeStates; // r0
     int i; // r31
@@ -458,7 +495,8 @@ void ISimsObjectModel::AnimateLights(class ISimsObjectModel * const this /* r29 
 }
 
 // Range: 0x8023695C -> 0x80236B60
-unsigned int ISimsObjectModel::GetAnimRefByIndex(class ISimsObjectModel * const this /* r27 */, signed short animIndex /* r28 */) {
+// this: r27
+unsigned int ISimsObjectModel::GetAnimRefByIndex(signed short animIndex /* r28 */) {
     // Local variables
     class AUTOPTR privatetable; // r1+0xC
     unsigned char hasPrivateTable; // r30
@@ -469,7 +507,8 @@ unsigned int ISimsObjectModel::GetAnimRefByIndex(class ISimsObjectModel * const 
 }
 
 // Range: 0x80236B60 -> 0x80236C5C
-struct ObjAnimDef & ISimsObjectModel::GetAnimDef(class ISimsObjectModel * const this /* r27 */, int graphic /* r28 */) {
+// this: r27
+struct ObjAnimDef & ISimsObjectModel::GetAnimDef(int graphic /* r28 */) {
     // Local variables
     int iNumStates; // r0
     int index; // [invalid]
@@ -479,7 +518,8 @@ struct ObjAnimDef & ISimsObjectModel::GetAnimDef(class ISimsObjectModel * const 
 }
 
 // Range: 0x80236C5C -> 0x80236E4C
-int ISimsObjectModel::processAnimEvents(class ISimsObjectModel * const this /* r29 */, const class ERAnim * pAnim /* r30 */, int iStartTime /* r20 */, int interval /* r31 */, unsigned char bBackward /* r21 */) {
+// this: r29
+int ISimsObjectModel::processAnimEvents(const class ERAnim * pAnim /* r30 */, int iStartTime /* r20 */, int interval /* r31 */, unsigned char bBackward /* r21 */) {
     // Local variables
     int size; // r27
     int delay; // r26
@@ -495,7 +535,8 @@ int ISimsObjectModel::processAnimEvents(class ISimsObjectModel * const this /* r
 }
 
 // Range: 0x80236E4C -> 0x8023709C
-unsigned char ISimsObjectModel::animEventHandler(class ISimsObjectModel * const this /* r31 */, const struct EAnimNote & event /* r28 */, int preLoadMod /* r29 */) {
+// this: r31
+unsigned char ISimsObjectModel::animEventHandler(const struct EAnimNote & event /* r28 */, int preLoadMod /* r29 */) {
     // Local variables
     int number; // r1+0x8
     class NLIteratorPtrType * it; // r29
@@ -508,7 +549,8 @@ unsigned char ISimsObjectModel::animEventHandler(class ISimsObjectModel * const 
 }
 
 // Range: 0x8023709C -> 0x80237180
-void ISimsObjectModel::SetInitalObjectState(class ISimsObjectModel * const this /* r29 */) {
+// this: r29
+void ISimsObjectModel::SetInitalObjectState() {
     // Local variables
     unsigned int graphic; // r31
     const struct ObjAnimDef & animDef; // r30
@@ -525,7 +567,8 @@ void PortalRoom(signed short & roomId /* r29 */, signed short & lightRoomId /* r
 }
 
 // Range: 0x80237200 -> 0x802372B8
-void ISimsObjectModel::Create(class ISimsObjectModel * const this /* r31 */) {}
+// this: r31
+void ISimsObjectModel::Create() {}
 
 // Range: 0x802372B8 -> 0x80237324
 unsigned int ISimsObjectModel::GetTreeAnimationId() {}
@@ -534,13 +577,15 @@ unsigned int ISimsObjectModel::GetTreeAnimationId() {}
 unsigned int ISimsObjectModel::GetTreeModelId() {}
 
 // Range: 0x802374A0 -> 0x80237500
-enum eTreeType ISimsObjectModel::GetTreeType(class ISimsObjectModel * const this /* r31 */) {
+// this: r31
+enum eTreeType ISimsObjectModel::GetTreeType() {
     // Local variables
     enum eTreeType eTree; // r0
 }
 
 // Range: 0x80237500 -> 0x8023764C
-void ISimsObjectModel::SetObjOrient(class ISimsObjectModel * const this /* r30 */) {
+// this: r30
+void ISimsObjectModel::SetObjOrient() {
     // Local variables
     class cXObject * pXOb; // r31
     float _xoff; // f30
@@ -552,14 +597,16 @@ void ISimsObjectModel::SetObjOrient(class ISimsObjectModel * const this /* r30 *
 }
 
 // Range: 0x8023764C -> 0x802376BC
-void ISimsObjectModel::OrientSubObjects(class ISimsObjectModel * const this /* r30 */) {
+// this: r30
+void ISimsObjectModel::OrientSubObjects() {
     // Local variables
     class NLIteratorPtrType * iter; // r31
     class ISimInstance * p; // r0
 }
 
 // Range: 0x802376BC -> 0x80237830
-void ISimsObjectModel::OrentSubObject(class ISimsObjectModel * const this /* r30 */) {
+// this: r30
+void ISimsObjectModel::OrentSubObject() {
     // Local variables
     int theta; // r0
     float ftheta; // f31
@@ -570,22 +617,26 @@ void ISimsObjectModel::OrentSubObject(class ISimsObjectModel * const this /* r30
 }
 
 // Range: 0x80237830 -> 0x8023787C
-void * ISimsWallObjectModel::ISimsWallObjectModel(class ISimsWallObjectModel * const this /* r31 */) {
+// this: r31
+ISimsWallObjectModel::ISimsWallObjectModel() {
     // References
     // -> struct [anonymous] __vt__20ISimsWallObjectModel;
 }
 
 // Range: 0x8023787C -> 0x802378D4
-void * ISimsWallObjectModel::~ISimsWallObjectModel(class ISimsWallObjectModel * const this /* r30 */) {}
+// this: r30
+ISimsWallObjectModel::~ISimsWallObjectModel() {}
 
 // Range: 0x802378D4 -> 0x802378D8
 void ISimsWallObjectModel::CreateShadow() {}
 
 // Range: 0x802378D8 -> 0x80237934
-void ISimsWallObjectModel::Create(class ISimsWallObjectModel * const this /* r31 */) {}
+// this: r31
+void ISimsWallObjectModel::Create() {}
 
 // Range: 0x80237934 -> 0x80237DA4
-void ISimsWallObjectModel::SetObjOrient(class ISimsWallObjectModel * const this /* r27 */) {
+// this: r27
+void ISimsWallObjectModel::SetObjOrient() {
     // Local variables
     class cXObject * pXOb; // r31
     class EMat4 mOr; // r1+0xB8
@@ -610,19 +661,23 @@ void ISimsWallObjectModel::SetObjOrient(class ISimsWallObjectModel * const this 
 }
 
 // Range: 0x80237DA4 -> 0x80237DF0
-void * ISimsMultiTileObjectModel::ISimsMultiTileObjectModel(class ISimsMultiTileObjectModel * const this /* r31 */) {
+// this: r31
+ISimsMultiTileObjectModel::ISimsMultiTileObjectModel() {
     // References
     // -> struct [anonymous] __vt__25ISimsMultiTileObjectModel;
 }
 
 // Range: 0x80237DF0 -> 0x80237E48
-void * ISimsMultiTileObjectModel::~ISimsMultiTileObjectModel(class ISimsMultiTileObjectModel * const this /* r30 */) {}
+// this: r30
+ISimsMultiTileObjectModel::~ISimsMultiTileObjectModel() {}
 
 // Range: 0x80237E48 -> 0x80237EA4
-void ISimsMultiTileObjectModel::Create(class ISimsMultiTileObjectModel * const this /* r31 */) {}
+// this: r31
+void ISimsMultiTileObjectModel::Create() {}
 
 // Range: 0x80237EA4 -> 0x80238264
-void ISimsMultiTileObjectModel::SetObjOrient(class ISimsMultiTileObjectModel * const this /* r31 */) {
+// this: r31
+void ISimsMultiTileObjectModel::SetObjOrient() {
     // Local variables
     class cXObject * pXOb; // r29
     class cXMTObject * pMtOb; // r30
@@ -648,19 +703,23 @@ void ISimsMultiTileObjectModel::SetObjOrient(class ISimsMultiTileObjectModel * c
 }
 
 // Range: 0x80238264 -> 0x802382B0
-void * ISimsCounterTopObject::ISimsCounterTopObject(class ISimsCounterTopObject * const this /* r31 */) {
+// this: r31
+ISimsCounterTopObject::ISimsCounterTopObject() {
     // References
     // -> struct [anonymous] __vt__21ISimsCounterTopObject;
 }
 
 // Range: 0x802382B0 -> 0x80238308
-void * ISimsCounterTopObject::~ISimsCounterTopObject(class ISimsCounterTopObject * const this /* r30 */) {}
+// this: r30
+ISimsCounterTopObject::~ISimsCounterTopObject() {}
 
 // Range: 0x80238308 -> 0x80238344
-void ISimsCounterTopObject::Create(class ISimsCounterTopObject * const this /* r31 */) {}
+// this: r31
+void ISimsCounterTopObject::Create() {}
 
 // Range: 0x80238344 -> 0x802385F4
-void ISimsCounterTopObject::SetObjOrient(class ISimsCounterTopObject * const this /* r25 */) {
+// this: r25
+void ISimsCounterTopObject::SetObjOrient() {
     // Local variables
     int graphic; // r31
     unsigned int workbenchId; // r29
@@ -680,19 +739,23 @@ void ISimsCounterTopObject::SetObjOrient(class ISimsCounterTopObject * const thi
 unsigned char ISimsCounterTopObject::IsSinkId(class cXObject * pOb /* r30 */) {}
 
 // Range: 0x80238670 -> 0x802386BC
-void * IShrubObject::IShrubObject(class IShrubObject * const this /* r31 */) {
+// this: r31
+IShrubObject::IShrubObject() {
     // References
     // -> struct [anonymous] __vt__12IShrubObject;
 }
 
 // Range: 0x802386BC -> 0x80238714
-void * IShrubObject::~IShrubObject(class IShrubObject * const this /* r30 */) {}
+// this: r30
+IShrubObject::~IShrubObject() {}
 
 // Range: 0x80238714 -> 0x80238770
-void IShrubObject::Create(class IShrubObject * const this /* r31 */) {}
+// this: r31
+void IShrubObject::Create() {}
 
 // Range: 0x80238770 -> 0x80238B40
-void IShrubObject::SetObjOrient(class IShrubObject * const this /* r28 */) {
+// this: r28
+void IShrubObject::SetObjOrient() {
     // Local variables
     class cXObject * pXOb; // r30
     float _xoff; // f30
@@ -726,7 +789,8 @@ unsigned char ISimsObjectModel::IsMultiTilePart() {
 }
 
 // Range: 0x80238C18 -> 0x80239580
-void ISimsObjectModel::ApplyMatrix(class ISimsObjectModel * const this /* r31 */, float ftheta /* f26 */, const class EVec3 & vPos /* r26 */, const class EVec3 & vScale /* r27 */) {
+// this: r31
+void ISimsObjectModel::ApplyMatrix(float ftheta /* f26 */, const class EVec3 & vPos /* r26 */, const class EVec3 & vScale /* r27 */) {
     // Local variables
     class EMat4 mOrient; // r1+0x1E8
     class EVec3 vThis; // r1+0xC0
@@ -776,7 +840,8 @@ void ISimsObjectModel::ApplyMatrix(class ISimsObjectModel * const this /* r31 */
 }
 
 // Range: 0x80239580 -> 0x802397C8
-void ISimsObjectModel::DrawCursorHighLight(class ISimsObjectModel * const this /* r27 */, class ERC * prc /* r28 */, class EVec3 & vPos /* r29 */, unsigned char bDoAnimation /* r30 */) {
+// this: r27
+void ISimsObjectModel::DrawCursorHighLight(class ERC * prc /* r28 */, class EVec3 & vPos /* r29 */, unsigned char bDoAnimation /* r30 */) {
     // Local variables
     class EVec3 objectColor; // r1+0x1C
     int it; // r6

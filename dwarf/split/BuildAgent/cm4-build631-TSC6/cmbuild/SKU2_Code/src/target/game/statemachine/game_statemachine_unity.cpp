@@ -5,18 +5,21 @@
     Code range: 0x8016A62C -> 0x8016A62C
 */
 class StateMachineManager * s_pStateMachineManager; // size: 0x4, address: 0x805DBA28
+// total size: 0x4
 class generic_iterator {
-    // total size: 0x4
+    // Members
 protected:
     class StateMachineState * * mIterator; // offset 0x0, size 0x4
 };
+// total size: 0x4
 class generic_iterator {
-    // total size: 0x4
+    // Members
 protected:
     class StateMachine * * mIterator; // offset 0x0, size 0x4
 };
+// total size: 0x7C
 class CreateASimBaseState : public StateMachineFlow {
-    // total size: 0x7C
+    // Members
     unsigned char m_bWaitingForBG; // offset 0x75, size 0x1
     unsigned char m_bWaitingForExit; // offset 0x76, size 0x1
     unsigned char m_bAccepted; // offset 0x77, size 0x1
@@ -38,19 +41,22 @@ enum EDebugMenuButton {
     E_DMB_LEFT = 0,
     E_DMB_RIGHT = 1,
 };
+// total size: 0xC
 class EDebugMenuItem {
-    // total size: 0xC
+    // Members
 public:
     void * __vptr$; // offset 0x0, size 0x4
     class EDebugMenuItem * m_pLast; // offset 0x4, size 0x4
     class EDebugMenuItem * m_pNext; // offset 0x8, size 0x4
 };
+// total size: 0x10
 class ECheatDMI : public EDebugMenuItem {
-    // total size: 0x10
+    // Members
     class ECheatLookup * m_pVariable; // offset 0xC, size 0x4
 };
+// total size: 0x5C
 class ECheatLookup {
-    // total size: 0x5C
+    // Members
 public:
     class ECheatLookup * pNextHash; // offset 0x0, size 0x4
 private:
@@ -63,37 +69,42 @@ private:
     unsigned char m_bExtraNewLine; // offset 0x55, size 0x1
     class ECheatDMI * m_pDMI; // offset 0x58, size 0x4
 };
+// total size: 0x100
 struct HashList {
-    // total size: 0x100
+    // Members
     class ECheatLookup * table[64]; // offset 0x0, size 0x100
 };
+// total size: 0x108
 class ECheats {
-    // total size: 0x108
+    // Members
 protected:
     struct HashList m_cheatLookup; // offset 0x0, size 0x100
     int m_nextCheatIndex; // offset 0x100, size 0x4
     unsigned char m_AlreadyReadCheatsFromFile; // offset 0x104, size 0x1
     unsigned char m_bCheatsOn; // offset 0x105, size 0x1
 };
+// total size: 0x1
 class BG {
-    // total size: 0x1
+    // Static members
+    static unsigned char s_bBGComplete; // size: 0x1
 };
+// total size: 0x48
 class ESleep {
-    // total size: 0x48
+    // Members
 protected:
     class ESemaphore m_semaphore; // offset 0x0, size 0x18
     struct OSAlarm m_alarm; // offset 0x18, size 0x30
 };
-class EFlashManager : public EResourceManager {
-    // total size: 0xD44
-};
+// total size: 0xD44
+class EFlashManager : public EResourceManager {};
 enum eK2yboardMode {
     eK2yboardMode_EnteringText = 0,
     eK2yboardMode_Cancelling = 1,
     eK2yboardMode_Accepting = 2,
 };
+// total size: 0x10
 struct KeyboardInputItem {
-    // total size: 0x10
+    // Members
     char * m_TitleLookup; // offset 0x0, size 0x4
     unsigned short * m_ScratchSpaceString; // offset 0x4, size 0x4
     unsigned short * m_DestinationString; // offset 0x8, size 0x4
@@ -104,14 +115,19 @@ enum K2Y_INPUT_MAXIMUM {
     K2Y_PET_NAME = 1,
     K2Y_GENERIC_NAME = 2,
 };
+// total size: 0xC
 struct KeyboardWorkOrder {
-    // total size: 0xC
+    // Members
     char * m_TitleLookup; // offset 0x0, size 0x4
     const unsigned short * m_DefaultText; // offset 0x4, size 0x4
     unsigned short * m_DestinationString; // offset 0x8, size 0x4
 };
+// total size: 0x14C
 class K2YTarget : public UIObjectBase, public CasListener {
-    // total size: 0x14C
+    // Static members
+    static unsigned short * m_currentEntryPtr; // size: 0x4
+
+    // Members
     enum eK2yboardMode m_Mode; // offset 0xAC, size 0x4
     struct KeyboardInputItem * m_workItems; // offset 0xB0, size 0x4
     int m_numWorkItems; // offset 0xB4, size 0x4
@@ -123,8 +139,9 @@ class K2YTarget : public UIObjectBase, public CasListener {
     class CursorMovementTracker m_CursorTracker; // offset 0xF4, size 0x50
     class EVec2 m_CursorPoint; // offset 0x144, size 0x8
 };
+// total size: 0xB4
 class PRGTarget : public UIObjectBase {
-    // total size: 0xB4
+    // Members
     unsigned char m_bPRGLoaded; // offset 0xA4, size 0x1
     unsigned int m_ControllerFilterID; // offset 0xA8, size 0x4
     int m_SkipStats; // offset 0xAC, size 0x4
@@ -136,8 +153,22 @@ enum O2T_TopLevelState {
     eStateO2TargetOptions = 2,
     eStateO2TargetCardinal = 3,
 };
+// total size: 0x344
 class O2TTarget : public UIObjectBase {
-    // total size: 0x344
+    // Static members
+    static signed char m_DelayInitiateFreeWill; // size: 0x1
+    static unsigned char m_bFreeWillClassic; // size: 0x1
+    static unsigned char m_bFreeWill; // size: 0x1
+    static unsigned char m_bCameraRotate; // size: 0x1
+    static unsigned char m_bCameraRotateDC; // size: 0x1
+    static unsigned char m_bRumbleOn; // size: 0x1
+    static signed char m_CurrentVoiceVolume; // size: 0x1
+    static signed char m_CurrentAmbientVolume; // size: 0x1
+    static signed char m_CurrentMusicVolume; // size: 0x1
+    static signed char m_CurrentSFXVolume; // size: 0x1
+    static class O2TTarget * m_pSingletonPtr; // size: 0x4
+
+    // Members
     unsigned char m_O2TLoaded; // offset 0xA4, size 0x1
     enum O2T_TopLevelState m_CurrentTopLevelState; // offset 0xA8, size 0x4
     enum O2T_TopLevelState m_PreviousTopLevelState; // offset 0xAC, size 0x4
@@ -166,13 +197,21 @@ enum ING_FoodCreationMode {
     kModeMixIngredients = 1,
     kModeMixIngredientsGroup = 2,
 };
+// total size: 0x14
 class PlateManager {
-    // total size: 0x14
+    // Members
     int m_PlateCost; // offset 0x0, size 0x4
     class RefrigeratorIngredient * m_Ingredients[4]; // offset 0x4, size 0x10
 };
+// total size: 0x1D8C
 class INGTarget : public UIObjectBase, public HelpDialogCallback {
-    // total size: 0x1D8C
+    // Static members
+    static unsigned long ING_helpcount; // size: 0x4
+    static char * const ING_HelpBodyIDs[]; // size: 0x0
+    static int m_sNumberOfItemsToTransfer; // size: 0x4
+    static int m_sRefrigeratorLevel; // size: 0x4
+
+    // Members
 protected:
     class UIStringGenerator m_GridShaderTable; // offset 0xA8, size 0x8
     class UIStringGenerator m_MixShaderTable; // offset 0xB0, size 0x8
@@ -199,12 +238,14 @@ protected:
     class EVec2 m_CursorPoint; // offset 0x1D80, size 0x8
     int m_FCIRowIndex; // offset 0x1D88, size 0x4
 };
+// total size: 0x4
 class ShopItem {
-    // total size: 0x4
+    // Members
     class UICatalogItemBase * m_pItem; // offset 0x0, size 0x4
 };
+// total size: 0x8
 class SelectorFilterFunctor {
-    // total size: 0x8
+    // Members
 public:
     signed short m_functionFlags; // offset 0x0, size 0x2
     signed short m_maximumAspiration; // offset 0x2, size 0x2
@@ -212,13 +253,21 @@ public:
     unsigned char m_allowFlagZeroObjects; // offset 0x6, size 0x1
     unsigned char m_forceCorrectBMT; // offset 0x7, size 0x1
 };
+// total size: 0x8
 class MSOItemManager {
-    // total size: 0x8
+    // Members
     class ShopItem * m_StoreItems; // offset 0x0, size 0x4
     unsigned int m_ShopItemCount; // offset 0x4, size 0x4
 };
+// total size: 0x1A8
 class MSOTarget : public UIObjectBase, public HelpDialogCallback {
-    // total size: 0x1A8
+    // Static members
+    static int m_ReturnPoints; // size: 0x4
+    static signed short m_ReturnTokenID; // size: 0x2
+    static int m_ReturnGUID; // size: 0x4
+    static int m_ShopLevel; // size: 0x4
+
+    // Members
 protected:
     class UIStringGenerator m_GridShaderTable; // offset 0xA8, size 0x8
     class UIStringGenerator m_MotiveShaderTable; // offset 0xB0, size 0x8
@@ -245,8 +294,9 @@ enum PPCSelectionState {
     PPC_DONE = 2,
     PPC_COUNT = 3,
 };
+// total size: 0x4
 class NumericalInputSpinner {
-    // total size: 0x4
+    // Members
     int m_framesPressed; // offset 0x0, size 0x4
 };
 enum PPCArrowState {
@@ -254,8 +304,9 @@ enum PPCArrowState {
     PPC_ARROW_READY = 1,
     PPC_ARROW_HIT = 2,
 };
+// total size: 0xD4
 class PPCTarget : public UIObjectBase {
-    // total size: 0xD4
+    // Members
     class UIReflow m_reflow; // offset 0xA4, size 0x18
     unsigned char m_PPCLoaded; // offset 0xBC, size 0x1
     unsigned char m_PPCActive; // offset 0xBD, size 0x1
@@ -278,8 +329,9 @@ enum SQVDialogState {
     SVQState_QuitConfirm = 3,
     SVQState_End = 4,
 };
+// total size: 0x158
 class SVQTarget : public UIObjectBase {
-    // total size: 0x158
+    // Members
     unsigned char m_bSVQLoaded; // offset 0xA4, size 0x1
     enum SVQMode m_Mode; // offset 0xA8, size 0x4
     enum SQVDialogState m_BackoutState; // offset 0xAC, size 0x4
@@ -298,8 +350,14 @@ enum KNLArrowState {
     KNL_ARROW_READY = 1,
     KNL_ARROW_HIT = 2,
 };
+// total size: 0xD8
 class KNLTarget : public UIObjectBase {
-    // total size: 0xD8
+    // Static members
+    static int m_sUserEnteredDays; // size: 0x4
+    static int m_sCostPerKennelDay; // size: 0x4
+    static int m_sMaximumKennelDays; // size: 0x4
+
+    // Members
     class UIReflow m_reflow; // offset 0xA4, size 0x18
     unsigned char m_KNLLoaded; // offset 0xBC, size 0x1
     unsigned char m_KNLActive; // offset 0xBD, size 0x1
@@ -312,8 +370,12 @@ class KNLTarget : public UIObjectBase {
     enum KNLSelectionState m_SelectionState; // offset 0xD0, size 0x4
     class NumericalInputSpinner m_InputSpinner; // offset 0xD4, size 0x4
 };
+// total size: 0x1D4
 class KBXTarget : public UIObjectBase, public HelpDialogCallback {
-    // total size: 0x1D4
+    // Static members
+    static class Neighbor * m_spNeighbor; // size: 0x4
+
+    // Members
 protected:
     class UIDialog m_UIDialog; // offset 0xA8, size 0xA0
     unsigned int m_ControllerFilterID0; // offset 0x148, size 0x4
@@ -340,8 +402,9 @@ enum ePLNLaunch {
     ePLNLaunch_otherPlans = 14,
     ePLNLaunch_cardinal = 15,
 };
+// total size: 0x18
 struct PLNIconData {
-    // total size: 0x18
+    // Members
     int shaderId; // offset 0x0, size 0x4
     const char * dbStringName; // offset 0x4, size 0x4
     const char * interfaceShaderName; // offset 0x8, size 0x4
@@ -349,8 +412,14 @@ struct PLNIconData {
     enum ePLNLaunch launch; // offset 0x10, size 0x4
     enum eKFTType kftType; // offset 0x14, size 0x4
 };
+// total size: 0x13C
 class PLNTarget : public UIObjectBase {
-    // total size: 0x13C
+    // Static members
+    static enum eKFTType m_object; // size: 0x4
+    static int PLNLastIndex; // size: 0x4
+    static struct PLNIconData PLNIconDataTable[15]; // size: 0x168
+
+    // Members
     unsigned int m_filterId; // offset 0xA4, size 0x4
     int m_currentCell; // offset 0xA8, size 0x4
     class KFTTarget * m_pKFTTarget; // offset 0xAC, size 0x4
@@ -369,15 +438,21 @@ enum eCLPLaunch {
     eCLPLaunch_jewelry = 6,
     eCLPLaunch_cardinal = 7,
 };
+// total size: 0x10
 struct PLNIconData {
-    // total size: 0x10
+    // Members
     int shaderId; // offset 0x0, size 0x4
     const char * dbStringName; // offset 0x4, size 0x4
     const char * interfaceShaderName; // offset 0x8, size 0x4
     enum eCLPLaunch launch; // offset 0xC, size 0x4
 };
+// total size: 0x13C
 class CLPTarget : public UIObjectBase {
-    // total size: 0x13C
+    // Static members
+    static int CLPLastIndex; // size: 0x4
+    static struct PLNIconData CLPIconDataTable[7]; // size: 0x70
+
+    // Members
     unsigned int m_filterId; // offset 0xA4, size 0x4
     int m_currentCell; // offset 0xA8, size 0x4
     class KFTTarget * m_pKFTTarget; // offset 0xAC, size 0x4
@@ -386,8 +461,13 @@ class CLPTarget : public UIObjectBase {
     class CursorMovementTracker m_CursorTracker; // offset 0xE4, size 0x50
     class EVec2 m_CursorPoint; // offset 0x134, size 0x8
 };
+// total size: 0x13C
 class COLTarget : public UIObjectBase {
-    // total size: 0x13C
+    // Static members
+    static int m_treasure_map_shaders[9]; // size: 0x24
+    static int m_heiroglyphics_shaders[9]; // size: 0x24
+
+    // Members
     class UIStringGenerator m_shaderNameTable; // offset 0xA4, size 0x8
     int m_tab; // offset 0xAC, size 0x4
     unsigned int m_filterId; // offset 0xB0, size 0x4
@@ -395,13 +475,15 @@ class COLTarget : public UIObjectBase {
     class CursorMovementTracker m_CursorTracker; // offset 0xE4, size 0x50
     class EVec2 m_CursorPoint; // offset 0x134, size 0x8
 };
+// total size: 0x14
 struct TabPage {
-    // total size: 0x14
+    // Members
     int goalState[4]; // offset 0x0, size 0x10
     unsigned char unlocked; // offset 0x10, size 0x1
 };
+// total size: 0x54
 struct BookTab {
-    // total size: 0x54
+    // Members
     int tabShaderId; // offset 0x0, size 0x4
     int tabShaderHiId; // offset 0x4, size 0x4
     int tabShaderDiId; // offset 0x8, size 0x4
@@ -410,8 +492,9 @@ struct BookTab {
     int totalPagesUnlocked; // offset 0x4C, size 0x4
     unsigned char unlocked; // offset 0x50, size 0x1
 };
+// total size: 0x164
 class GOLTarget : public UIObjectBase {
-    // total size: 0x164
+    // Members
     class UIStringGenerator m_tabIconTable; // offset 0xA4, size 0x8
     class UIStringGenerator m_goalTextTable; // offset 0xAC, size 0x8
     class UIStringGenerator m_checkmarkShaderTable; // offset 0xB4, size 0x8
@@ -422,14 +505,19 @@ class GOLTarget : public UIObjectBase {
     class CursorMovementTracker m_CursorTracker; // offset 0x10C, size 0x50
     class EVec2 m_CursorPoint; // offset 0x15C, size 0x8
 };
+// total size: 0x1C
 class ERBinary : public EResource {
-    // total size: 0x1C
+    // Static members
+    static class ETypeInfo m_typeInfo; // size: 0x28
+
+    // Members
 protected:
     void * m_pData; // offset 0x14, size 0x4
     unsigned int m_dataSize; // offset 0x18, size 0x4
 };
+// total size: 0x15C
 class InLevelBaseState : public StateMachineFlow {
-    // total size: 0x15C
+    // Members
 protected:
     enum InteractorType m_InteractorType; // offset 0x78, size 0x4
     class UIDialog m_UIDialog; // offset 0x7C, size 0xA0
@@ -468,14 +556,22 @@ enum MMU_MAIN_MENU_MODE {
     MMU_KEYBOARD = 2,
     MMU_MAIN_MENU_CARDINAL = 3,
 };
+// total size: 0x1C
 struct RandomLotInfo {
-    // total size: 0x1C
+    // Members
     int nLotNumber; // offset 0x0, size 0x4
     class EVec3 cameraEye; // offset 0x4, size 0xC
     class EVec3 cameraTarget; // offset 0x10, size 0xC
 };
+// total size: 0x90
 class CHouseSelectMap {
-    // total size: 0x90
+    // Static members
+    static struct RandomLotInfo s_lots[]; // size: 0x0
+    static float s_fNextLotBaseWaitTime; // size: 0x4
+    static float kFadeInTime; // size: 0x4
+    static float kFadeOutTime; // size: 0x4
+
+    // Members
     class ESimsCam * m_pCamera; // offset 0x0, size 0x4
     int m_nNumChooseableLots; // offset 0x4, size 0x4
     int m_nRandomLotIndex; // offset 0x8, size 0x4
@@ -507,12 +603,14 @@ class CHouseSelectMap {
     unsigned char m_bWaitingForNextDatasetLoad; // offset 0x8D, size 0x1
     unsigned char m_bNextLotCountdownPaused; // offset 0x8E, size 0x1
 };
+// total size: 0xA8
 class MMSTarget : public UIObjectBase {
-    // total size: 0xA8
+    // Members
     class CHouseSelectMap * m_BackgroundLot; // offset 0xA4, size 0x4
 };
+// total size: 0x200
 class MMUTarget : public UIObjectBase {
-    // total size: 0x200
+    // Members
     unsigned char m_bInitialized; // offset 0xA4, size 0x1
     enum MMU_MODE m_currentMode; // offset 0xA8, size 0x4
     enum MMU_MODE m_previousMode; // offset 0xAC, size 0x4
@@ -531,16 +629,18 @@ class MMUTarget : public UIObjectBase {
     class CursorMovementTracker m_CursorTracker; // offset 0x1A8, size 0x50
     class EVec2 m_CursorPoint; // offset 0x1F8, size 0x8
 };
+// total size: 0xB4
 class EALTarget : public UIObjectBase, public HelpDialogCallback {
-    // total size: 0xB4
+    // Members
 protected:
     unsigned int m_ControllerFilterID0; // offset 0xA8, size 0x4
     unsigned char m_bInitialized; // offset 0xAC, size 0x1
     unsigned char m_bDone; // offset 0xAD, size 0x1
     int m_buttonCombo; // offset 0xB0, size 0x4
 };
+// total size: 0x18
 struct PAZItemInfo {
-    // total size: 0x18
+    // Members
     int mItemID; // offset 0x0, size 0x4
     const char * mFlashShaderName; // offset 0x4, size 0x4
     unsigned int mShaderId; // offset 0x8, size 0x4
@@ -548,8 +648,9 @@ struct PAZItemInfo {
     int mAcceptID; // offset 0x10, size 0x4
     int mCancelID; // offset 0x14, size 0x4
 };
+// total size: 0x140
 class PAZTarget : public UIObjectBase {
-    // total size: 0x140
+    // Members
     unsigned char m_bPAZLoaded; // offset 0xA4, size 0x1
     const struct PAZItemInfo * m_pItemInfoArray; // offset 0xA8, size 0x4
     unsigned int m_ControllerFilterID; // offset 0xAC, size 0x4
@@ -566,8 +667,9 @@ enum eMUResult {
     eMUResult_Failed = 2,
     eMUResult_Quit = 3,
 };
+// total size: 0x8
 class PetsHomeButton {
-    // total size: 0x8
+    // Members
     class TRCHomeButton * pHomeButton; // offset 0x0, size 0x4
     unsigned char m_bOldDPDState; // offset 0x4, size 0x1
 };
@@ -579,25 +681,29 @@ enum HomeMenuState {
     MENU_NOTVISIBLE = 0,
     MENU_VISIBLE = 1,
 };
+// total size: 0x8
 struct Vec2 {
-    // total size: 0x8
+    // Members
     float x; // offset 0x0, size 0x4
     float y; // offset 0x4, size 0x4
 };
+// total size: 0x8
 struct MEMAllocatorFunc {
-    // total size: 0x8
+    // Members
     void * (* pfAlloc)(struct MEMAllocator *, unsigned long); // offset 0x0, size 0x4
     void (* pfFree)(struct MEMAllocator *, void *); // offset 0x4, size 0x4
 };
+// total size: 0x10
 struct MEMAllocator {
-    // total size: 0x10
+    // Members
     const struct MEMAllocatorFunc * pFunc; // offset 0x0, size 0x4
     void * pHeap; // offset 0x4, size 0x4
     unsigned long heapParam1; // offset 0x8, size 0x4
     unsigned long heapParam2; // offset 0xC, size 0x4
 };
+// total size: 0x40
 struct HBMDataInfo {
-    // total size: 0x40
+    // Members
     void * layoutBuf; // offset 0x0, size 0x4
     void * spkSeBuf; // offset 0x4, size 0x4
     void * msgBuf; // offset 0x8, size 0x4
@@ -622,8 +728,9 @@ enum _GXTexFilter {
     GX_NEAR_MIP_LIN = 4,
     GX_LIN_MIP_LIN = 5,
 };
+// total size: 0x24
 struct TPLHeader {
-    // total size: 0x24
+    // Members
     unsigned short height; // offset 0x0, size 0x2
     unsigned short width; // offset 0x2, size 0x2
     unsigned long format; // offset 0x4, size 0x4
@@ -644,40 +751,46 @@ enum _GXTlutFmt {
     GX_TL_RGB5A3 = 2,
     GX_MAX_TLUTFMT = 3,
 };
+// total size: 0xC
 struct TPLClutHeader {
-    // total size: 0xC
+    // Members
     unsigned short numEntries; // offset 0x0, size 0x2
     unsigned char unpacked; // offset 0x2, size 0x1
     unsigned char pad8; // offset 0x3, size 0x1
     enum _GXTlutFmt format; // offset 0x4, size 0x4
     char * data; // offset 0x8, size 0x4
 };
+// total size: 0x8
 struct TPLDescriptor {
-    // total size: 0x8
+    // Members
     struct TPLHeader * textureHeader; // offset 0x0, size 0x4
     struct TPLClutHeader * CLUTHeader; // offset 0x4, size 0x4
 };
+// total size: 0xC
 struct TPLPalette {
-    // total size: 0xC
+    // Members
     unsigned long versionNumber; // offset 0x0, size 0x4
     unsigned long numDescriptors; // offset 0x4, size 0x4
     struct TPLDescriptor * descriptorArray; // offset 0x8, size 0x4
 };
+// total size: 0xC
 struct Vec {
-    // total size: 0xC
+    // Members
     float x; // offset 0x0, size 0x4
     float y; // offset 0x4, size 0x4
     float z; // offset 0x8, size 0x4
 };
+// total size: 0x1C
 struct /* @class$587game_statemachine_unity_cpp */ {
-    // total size: 0x1C
+    // Members
     struct Vec2 stick; // offset 0x0, size 0x8
     struct Vec acc; // offset 0x8, size 0xC
     float acc_value; // offset 0x14, size 0x4
     float acc_speed; // offset 0x18, size 0x4
 };
+// total size: 0x24
 struct /* @class$588game_statemachine_unity_cpp */ {
-    // total size: 0x24
+    // Members
     unsigned long hold; // offset 0x0, size 0x4
     unsigned long trig; // offset 0x4, size 0x4
     unsigned long release; // offset 0x8, size 0x4
@@ -687,15 +800,17 @@ struct /* @class$588game_statemachine_unity_cpp */ {
     float rtrigger; // offset 0x20, size 0x4
 };
 union KPADEXStatus {
+    // total size: 0x1C
     struct /* @class$587game_statemachine_unity_cpp */ {
-        // total size: 0x1C
+        // Members
         struct Vec2 stick; // offset 0x0, size 0x8
         struct Vec acc; // offset 0x8, size 0xC
         float acc_value; // offset 0x14, size 0x4
         float acc_speed; // offset 0x18, size 0x4
     } fs; // offset 0x0, size 0x1C
+    // total size: 0x24
     struct /* @class$588game_statemachine_unity_cpp */ {
-        // total size: 0x24
+        // Members
         unsigned long hold; // offset 0x0, size 0x4
         unsigned long trig; // offset 0x4, size 0x4
         unsigned long release; // offset 0x8, size 0x4
@@ -705,8 +820,9 @@ union KPADEXStatus {
         float rtrigger; // offset 0x20, size 0x4
     } cl; // offset 0x0, size 0x24
 };
+// total size: 0x84
 struct KPADStatus {
-    // total size: 0x84
+    // Members
     unsigned long hold; // offset 0x0, size 0x4
     unsigned long trig; // offset 0x4, size 0x4
     unsigned long release; // offset 0x8, size 0x4
@@ -729,14 +845,16 @@ struct KPADStatus {
     unsigned char data_format; // offset 0x5F, size 0x1
     union KPADEXStatus ex_status; // offset 0x60, size 0x24
 };
+// total size: 0x10
 struct HBMKPadData {
-    // total size: 0x10
+    // Members
     struct KPADStatus * kpad; // offset 0x0, size 0x4
     struct Vec2 pos; // offset 0x4, size 0x8
     unsigned long use_devtype; // offset 0xC, size 0x4
 };
+// total size: 0x40
 struct HBMControllerData {
-    // total size: 0x40
+    // Members
     struct HBMKPadData wiiCon[4]; // offset 0x0, size 0x40
 };
 enum FadeState {
@@ -763,8 +881,9 @@ enum HBMSelectBtnNum {
     HBM_SELECT_BTN4 = 4,
     HBM_SELECT_MAX = 5,
 };
+// total size: 0x8
 struct _GXVtxDescList {
-    // total size: 0x8
+    // Members
     enum _GXAttr attr; // offset 0x0, size 0x4
     enum _GXAttrType type; // offset 0x4, size 0x4
 };
@@ -792,15 +911,17 @@ enum _GXCompType {
     GX_RGBA6 = 4,
     GX_RGBA8 = 5,
 };
+// total size: 0x10
 struct _GXVtxAttrFmtList {
-    // total size: 0x10
+    // Members
     enum _GXAttr attr; // offset 0x0, size 0x4
     enum _GXCompCnt cnt; // offset 0x4, size 0x4
     enum _GXCompType type; // offset 0x8, size 0x4
     unsigned char frac; // offset 0xC, size 0x1
 };
+// total size: 0x50
 struct PadControl {
-    // total size: 0x50
+    // Members
     struct Vec2 vAccelHistory[5]; // offset 0x0, size 0x28
     struct Vec2 vPrevAccel; // offset 0x28, size 0x8
     struct Vec2 vDPDHistory[2]; // offset 0x30, size 0x10
@@ -808,14 +929,20 @@ struct PadControl {
     unsigned int accelCount; // offset 0x48, size 0x4
     unsigned int dpdCount; // offset 0x4C, size 0x4
 };
+// total size: 0xC
 struct TRCWiiInit {
-    // total size: 0xC
+    // Members
     void * (* pAllocAlignFunc)(char *, int, int); // offset 0x0, size 0x4
     void * (* pAllocFunc)(char *, int); // offset 0x4, size 0x4
     unsigned char (* pFreeFunc)(void *); // offset 0x8, size 0x4
 };
+// total size: 0x31C4
 class TRCHomeButton {
-    // total size: 0x31C4
+    // Static members
+    static struct TRCWiiInit msInitParams; // size: 0xC
+    static class TRCHomeButton * m_pInstance; // size: 0x4
+
+    // Members
     char mHomeMenuDirectory[32]; // offset 0x0, size 0x20
     enum HomeInputType m_HomeMenu_InputType; // offset 0x20, size 0x4
     enum HomeMenuState m_HomeMenu_State; // offset 0x24, size 0x4
@@ -848,47 +975,42 @@ class TRCHomeButton {
     int m_BanOffsetY; // offset 0x31C0, size 0x4
 };
 static unsigned int g_levelShaders[4]; // size: 0x10, address: 0x80430660
+// total size: 0x20
 class LiveModeInitState : public StateMachineState {
-    // total size: 0x20
+    // Members
     unsigned int m_asyncDatasetId; // offset 0x1C, size 0x4
 };
-class ChangeHouseDemolishHouse : public StateMachineState {
-    // total size: 0x1C
-};
-class ChangeHouseSaveHouse : public StateMachineState {
-    // total size: 0x1C
-};
-class ChangeHouseUnloadHouse : public StateMachineState {
-    // total size: 0x1C
-};
+// total size: 0x1C
+class ChangeHouseDemolishHouse : public StateMachineState {};
+// total size: 0x1C
+class ChangeHouseSaveHouse : public StateMachineState {};
+// total size: 0x1C
+class ChangeHouseUnloadHouse : public StateMachineState {};
+// total size: 0x20
 class ChangeHouseLoadHouse : public StateMachineState {
-    // total size: 0x20
+    // Members
     unsigned int m_asyncDatasetId; // offset 0x1C, size 0x4
 };
-class LiveModeChangeHouseStateMachine : public StateMachine {
-    // total size: 0x78
-};
+// total size: 0x78
+class LiveModeChangeHouseStateMachine : public StateMachine {};
 static float Accumulator; // size: 0x4, address: 0x805DBA30
 static unsigned char FlipFlop; // size: 0x1, address: 0x805D8A08
 class LoadingScreenStateMachine * s_pSM; // size: 0x4, address: 0x805DBA34
-class LoadingScreenWaitingForLoadState : public StateMachineState {
-    // total size: 0x1C
-};
-class LoadingScreenUpdateState : public StateMachineState {
-    // total size: 0x1C
-};
-class IrisTransitionOutState : public StateMachineState {
-    // total size: 0x1C
-};
-class IrisTransitionInState : public StateMachineState {
-    // total size: 0x1C
-};
+// total size: 0x1C
+class LoadingScreenWaitingForLoadState : public StateMachineState {};
+// total size: 0x1C
+class LoadingScreenUpdateState : public StateMachineState {};
+// total size: 0x1C
+class IrisTransitionOutState : public StateMachineState {};
+// total size: 0x1C
+class IrisTransitionInState : public StateMachineState {};
 enum eReturnOperation {
     eReturnOperation_None = 0,
     eReturnOperation_LAST = 1,
 };
+// total size: 0x20
 class MUStatesProcessRequests : public StateMachineState {
-    // total size: 0x20
+    // Members
 public:
     enum eReturnOperation m_returnOperation; // offset 0x1C, size 0x4
 };
@@ -900,8 +1022,9 @@ enum eReturnOperation {
     eReturnOperation_retryError = 4,
     eReturnOperation_LAST = 5,
 };
+// total size: 0x24
 class MUStatesLoadHouse : public StateMachineState {
-    // total size: 0x24
+    // Members
 public:
     enum eReturnOperation m_returnOperation; // offset 0x1C, size 0x4
     float m_fMinimumDisplayTime; // offset 0x20, size 0x4
@@ -913,8 +1036,9 @@ enum eReturnOperation {
     eReturnOperation_yesOrQuit = 3,
     eReturnOperation_LAST = 4,
 };
+// total size: 0x20
 class MUStatesTransitionAutoSaveExisting : public StateMachineState {
-    // total size: 0x20
+    // Members
 public:
     enum eReturnOperation m_returnOperation; // offset 0x1C, size 0x4
 };
@@ -924,8 +1048,9 @@ enum eReturnOperation {
     eReturnOperation_retryError = 2,
     eReturnOperation_LAST = 3,
 };
+// total size: 0x24
 class MUStatesTransitionSaveExistingGame : public StateMachineState {
-    // total size: 0x24
+    // Members
 public:
     enum eReturnOperation m_returnOperation; // offset 0x1C, size 0x4
     float m_minimumDisplayTime; // offset 0x20, size 0x4
@@ -939,22 +1064,24 @@ enum eMURequest {
 };
 enum eMURequest m_resultRequest; // size: 0x4, address: 0x805DBA3C
 enum eMURequest m_pendingRequest; // size: 0x4, address: 0x805DBA40
+// total size: 0x78
 class MUStateMachine : public StateMachine {
-    // total size: 0x78
+    // Static members
+    static enum eMURequest m_pendingRequest; // size: 0x4
+    static enum eMURequest m_resultRequest; // size: 0x4
+    static enum eMUResult m_result; // size: 0x4
 };
+// total size: 0x20
 class PreGameState : public StateMachineState {
-    // total size: 0x20
+    // Members
     unsigned int m_nASyncDatasetID; // offset 0x1C, size 0x4
 };
-class PreGameCreateAFamilyState : public CreateASimBaseState {
-    // total size: 0x7C
-};
-class InLevelCreateASimState : public CreateASimBaseState {
-    // total size: 0x7C
-};
-class PreGameSetupState : public StateMachineFlow {
-    // total size: 0x78
-};
+// total size: 0x7C
+class PreGameCreateAFamilyState : public CreateASimBaseState {};
+// total size: 0x7C
+class InLevelCreateASimState : public CreateASimBaseState {};
+// total size: 0x78
+class PreGameSetupState : public StateMachineFlow {};
 enum eTikiState {
     eTikiState_none = 0,
     eTikiState_unlit = 1,
@@ -970,8 +1097,9 @@ enum eLotShaderState {
     eLotShaderState_wrong_island = 6,
     eLotShaderState_cardinal = 7,
 };
+// total size: 0xC
 struct LotRecord {
-    // total size: 0xC
+    // Members
     unsigned char visible; // offset 0x0, size 0x1
     unsigned char blocked; // offset 0x1, size 0x1
     unsigned char highlight; // offset 0x2, size 0x1
@@ -983,15 +1111,29 @@ enum eMapState {
     eMapState_map = 0,
     eMapState_legend = 1,
 };
+// total size: 0x10
 struct LotRect {
-    // total size: 0x10
+    // Members
     int lx; // offset 0x0, size 0x4
     int ty; // offset 0x4, size 0x4
     int rx; // offset 0x8, size 0x4
     int by; // offset 0xC, size 0x4
 };
+// total size: 0x1EC
 class LSMTarget : public UIObjectBase {
-    // total size: 0x1EC
+    // Static members
+    static int m_scrollTimeTable[3][3]; // size: 0x24
+    static int m_islandCenterPointTable[3][2]; // size: 0x18
+    static unsigned int m_litTikiShaderTable[4]; // size: 0x10
+    static unsigned int m_plumbbobShaderTable[4]; // size: 0x10
+    static unsigned int m_blockedHighlightShaderTable[27]; // size: 0x6C
+    static unsigned int m_blockedShaderTable[27]; // size: 0x6C
+    static unsigned int m_visibleHighlightShaderTable[27]; // size: 0x6C
+    static unsigned int m_visibleShaderTable[27]; // size: 0x6C
+    static unsigned int m_wrongIslandShaderTable[27]; // size: 0x6C
+    static struct LotRect m_LotRectTable[27]; // size: 0x1B0
+
+    // Members
     unsigned int m_filterId; // offset 0xA4, size 0x4
     struct LotRecord * m_lots[27]; // offset 0xA8, size 0x6C
     class UIReflow m_reflow; // offset 0x114, size 0x18
@@ -1024,16 +1166,18 @@ class LSMTarget : public UIObjectBase {
     float m_StickDeflectionThreshold; // offset 0x1E4, size 0x4
     int m_lastFireFrame; // offset 0x1E8, size 0x4
 };
+// total size: 0x80
 class NeighborhoodState : public StateMachineFlow {
-    // total size: 0x80
+    // Members
     class LSMTarget * m_pLSMTarget; // offset 0x78, size 0x4
     unsigned char m_datasetLoading; // offset 0x7C, size 0x1
 };
 static class EVec4 s_press_start_color; // size: 0x10, address: 0x804939C0
 static class EVec2 s_press_start_position; // size: 0x8, address: 0x805DBA48
 static class StartScreenVars * s_pVars; // size: 0x4, address: 0x805DBA50
+// total size: 0x2C
 class StartScreenVars {
-    // total size: 0x2C
+    // Members
 public:
     float m_fStartDoneTime; // offset 0x0, size 0x4
     float m_fStartTimeout; // offset 0x4, size 0x4
@@ -1049,39 +1193,40 @@ public:
     unsigned char m_bAttractMode; // offset 0x27, size 0x1
     float m_pressStartDelayTimer; // offset 0x28, size 0x4
 };
-class TheSimsStartScreenStateMachine : public StateMachine {
-    // total size: 0x78
-};
+// total size: 0x78
+class TheSimsStartScreenStateMachine : public StateMachine {};
+// total size: 0x80
 class StartScreenStartState : public StateMachineFlow {
-    // total size: 0x80
+    // Members
     class ERShader * m_pBg; // offset 0x78, size 0x4
     class ERShader * m_pLogo; // offset 0x7C, size 0x4
 };
 enum eGameState m_stateRequest; // size: 0x4, address: 0x805DBA54
 enum eGameState m_stateCurrent; // size: 0x4, address: 0x805DBA58
 enum eGameState m_stateLast; // size: 0x4, address: 0x805DBA5C
+// total size: 0x50
 class TheSimsNGCLicenseState : public StateMachineState {
-    // total size: 0x50
+    // Members
     class ERFont * m_pFont; // offset 0x1C, size 0x4
     unsigned short m_szLicenseText[21]; // offset 0x20, size 0x2A
     float m_fAlpha; // offset 0x4C, size 0x4
 };
-class EFontManager : public EResourceManager {
-    // total size: 0xD44
-};
+// total size: 0xD44
+class EFontManager : public EResourceManager {};
+// total size: 0x3C
 class TheSimsNGCHealthWarningState : public StateMachineState {
-    // total size: 0x3C
+    // Members
     class Wrapper * m_pLogoWrapper; // offset 0x1C, size 0x4
     class BackgroundPane * m_pLogoPane; // offset 0x20, size 0x4
     class Fader m_fader; // offset 0x24, size 0x10
     unsigned int m_shaderIdScreenA; // offset 0x34, size 0x4
     unsigned int m_shaderIdScreenB; // offset 0x38, size 0x4
 };
-class BackgroundPane : public WrapperPaneBase {
-    // total size: 0x60
-};
+// total size: 0x60
+class BackgroundPane : public WrapperPaneBase {};
+// total size: 0x34
 class TheSimsWiiNunchuckRequiredState : public StateMachineState {
-    // total size: 0x34
+    // Members
     class Wrapper * m_pLogoWrapper; // offset 0x1C, size 0x4
     class BackgroundPane * m_pLogoPane; // offset 0x20, size 0x4
     class Fader m_fader; // offset 0x24, size 0x10
@@ -1093,8 +1238,9 @@ enum _PADWiiBatteryStatus {
     PAD_BATTERY_LEVEL_HIGH = 3,
     PAD_BATTERY_LEVEL_MAX = 4,
 };
+// total size: 0x10
 struct _WiiPadInfo {
-    // total size: 0x10
+    // Members
     unsigned char dpd; // offset 0x0, size 0x1
     unsigned char speaker; // offset 0x1, size 0x1
     unsigned char attach; // offset 0x2, size 0x1
@@ -1104,8 +1250,9 @@ struct _WiiPadInfo {
     unsigned char led; // offset 0xC, size 0x1
     unsigned short reserved; // offset 0xE, size 0x2
 };
+// total size: 0x24
 struct ControllerStatus {
-    // total size: 0x24
+    // Members
     struct _WiiPadInfo vitalStats; // offset 0x0, size 0x10
     unsigned char coreConnected; // offset 0x10, size 0x1
     unsigned int typeNotification; // offset 0x14, size 0x4
@@ -1113,48 +1260,53 @@ struct ControllerStatus {
     unsigned char extensionConnected; // offset 0x1C, size 0x1
     unsigned int userTypeNotified; // offset 0x20, size 0x4
 };
+// total size: 0x114
 class TRCStateMachine : public StateMachine {
-    // total size: 0x114
+    // Members
     float m_checkBatteryDelay; // offset 0x78, size 0x4
     float m_checkNunchukDelay; // offset 0x7C, size 0x4
     struct ControllerStatus mControllerStatus[4]; // offset 0x80, size 0x90
     unsigned long mPadType; // offset 0x110, size 0x4
 };
+// total size: 0x1C
 class TheSimsEAMovieState : public StateMachineState {
-    // total size: 0x1C
+    // Members
     unsigned char m_aptDisabled; // offset 0x19, size 0x1
 };
-class TheSimsMemCardCheckState : public StateMachineState {
-    // total size: 0x1C
-};
+// total size: 0x1C
+class TheSimsMemCardCheckState : public StateMachineState {};
+// total size: 0x34
 class TheSimsMaxisLogoState : public StateMachineState {
-    // total size: 0x34
+    // Members
     class Wrapper * m_pLogoWrapper; // offset 0x1C, size 0x4
     class BackgroundPane * m_pLogoPane; // offset 0x20, size 0x4
     class Fader m_fader; // offset 0x24, size 0x10
 };
+// total size: 0x24
 class TheSimsSimsIntroMovieState : public StateMachineState {
-    // total size: 0x24
+    // Members
     float m_fAlpha; // offset 0x1C, size 0x4
     unsigned char m_bFadeOut; // offset 0x20, size 0x1
     unsigned char m_aptDisabled; // offset 0x21, size 0x1
 };
 static int frames; // size: 0x4, address: 0x805DBA60
+// total size: 0x60
 class TheSimsEnterMainMenuState : public StateMachineState {
-    // total size: 0x60
+    // Members
     unsigned char m_bGlobalsDatasetLoaded; // offset 0x19, size 0x1
     unsigned int m_nMainMenuDatasetID; // offset 0x1C, size 0x4
     char m_szMainMenuDatasetName[64]; // offset 0x20, size 0x40
 };
-class TheSimsMainMenuState : public StateMachineFlow {
-    // total size: 0x78
-};
+// total size: 0x78
+class TheSimsMainMenuState : public StateMachineFlow {};
+// total size: 0x20
 class TheSimsChooseLanguageState : public StateMachineState {
-    // total size: 0x20
+    // Members
     class LanguageSel * m_pLanguageSel; // offset 0x1C, size 0x4
 };
+// total size: 0xEC
 class LanguageSel : private Wrapper {
-    // total size: 0xEC
+    // Members
     class ERQuickdata * m_pSimsUIData; // offset 0xC0, size 0x4
     class ERQuickdata * m_pUrbzUIData; // offset 0xC4, size 0x4
     class ERFont * m_pFont; // offset 0xC8, size 0x4
@@ -1166,226 +1318,172 @@ class LanguageSel : private Wrapper {
     unsigned char m_bDone; // offset 0xE0, size 0x1
     class QTimer m_timeoutTimer; // offset 0xE4, size 0x8
 };
-class TheSimsStateMachine : public StateMachineFlow {
-    // total size: 0x78
-};
-class UrbzModeNewGameState : public StateMachineState {
-    // total size: 0x1C
-};
-class InLevelStoryState : public InLevelBaseState {
-    // total size: 0x15C
-};
-class DummyMode : public EGameState {
-    // total size: 0xC
-};
+// total size: 0x78
+class TheSimsStateMachine : public StateMachineFlow {};
+// total size: 0x1C
+class UrbzModeNewGameState : public StateMachineState {};
+// total size: 0x15C
+class InLevelStoryState : public InLevelBaseState {};
+// total size: 0xC
+class DummyMode : public EGameState {};
 static int s_oldLot; // size: 0x4, address: 0x805DBA64
+// total size: 0x1
 class SerializeUIGameData {
-    // total size: 0x1
+    // Static members
+    static unsigned char m_bInitialized; // size: 0x1
+    static unsigned int * m_pBuffer; // size: 0x4
+    static unsigned int * m_pLoadBuffers[4]; // size: 0x10
 };
 static unsigned int s_batteryTimeout; // size: 0x4, address: 0x805D8A20
 static unsigned int s_delayTimeout; // size: 0x4, address: 0x805DBA68
-class TRCBatteryLowState : public StateMachineState {
-    // total size: 0x1C
-};
+// total size: 0x1C
+class TRCBatteryLowState : public StateMachineState {};
+// total size: 0x24
 class TRCNunchukReconnectState : public StateMachineState {
-    // total size: 0x24
+    // Members
     class EController * m_pCtrl; // offset 0x1C, size 0x4
     unsigned int m_filterId; // offset 0x20, size 0x4
 };
-class TRCNunchukDisconnectState : public StateMachineState {
-    // total size: 0x1C
-};
-class TRCCoreDisconnectState : public StateMachineState {
-    // total size: 0x1C
-};
-class TRCDelayState : public StateMachineState {
-    // total size: 0x1C
-};
-class TRCReadyState : public StateMachineState {
-    // total size: 0x1C
-};
-struct {
-    // total size: 0x24
-} __vt__18TRCBatteryLowState; // size: 0x24, address: 0x80430AD0
-struct {
-    // total size: 0x24
-} __vt__25TRCNunchukDisconnectState; // size: 0x24, address: 0x80430AF4
-struct {
-    // total size: 0x24
-} __vt__24TRCNunchukReconnectState; // size: 0x24, address: 0x80430B18
-struct {
-    // total size: 0x24
-} __vt__22TRCCoreDisconnectState; // size: 0x24, address: 0x80430B3C
-struct {
-    // total size: 0x24
-} __vt__13TRCDelayState; // size: 0x24, address: 0x80430B60
-struct {
-    // total size: 0x24
-} __vt__13TRCReadyState; // size: 0x24, address: 0x80430B84
-struct {
-    // total size: 0x20
-} __vt__7Wrapper; // size: 0x20, address: 0x80430BA8
-struct {
-    // total size: 0x20
-} __vt__14BackgroundPane; // size: 0x20, address: 0x80430BC8
-struct {
-    // total size: 0x24
-} __vt__20UrbzModeNewGameState; // size: 0x24, address: 0x80430C38
-struct {
-    // total size: 0x24
-} __vt__21StartScreenStartState; // size: 0x24, address: 0x80430C5C
-struct {
-    // total size: 0x24
-} __vt__30TheSimsStartScreenStateMachine; // size: 0x24, address: 0x80430C80
-struct {
-    // total size: 0x24
-} __vt__17NeighborhoodState; // size: 0x24, address: 0x80430CA4
-struct {
-    // total size: 0x24
-} __vt__17PreGameSetupState; // size: 0x24, address: 0x80430CC8
-struct {
-    // total size: 0x24
-} __vt__22InLevelCreateASimState; // size: 0x24, address: 0x80430CEC
-struct {
-    // total size: 0x24
-} __vt__25PreGameCreateAFamilyState; // size: 0x24, address: 0x80430D10
-struct {
-    // total size: 0x24
-} __vt__12PreGameState; // size: 0x24, address: 0x80430D34
-struct {
-    // total size: 0x24
-} __vt__34MUStatesTransitionSaveExistingGame; // size: 0x24, address: 0x80430D58
-struct {
-    // total size: 0x24
-} __vt__34MUStatesTransitionAutoSaveExisting; // size: 0x24, address: 0x80430D7C
-struct {
-    // total size: 0x24
-} __vt__17MUStatesLoadHouse; // size: 0x24, address: 0x80430DA0
-struct {
-    // total size: 0x24
-} __vt__23MUStatesProcessRequests; // size: 0x24, address: 0x80430DC4
-struct {
-    // total size: 0x24
-} __vt__20ChangeHouseLoadHouse; // size: 0x24, address: 0x80430DE8
-struct {
-    // total size: 0x24
-} __vt__22ChangeHouseUnloadHouse; // size: 0x24, address: 0x80430E0C
-struct {
-    // total size: 0x24
-} __vt__20ChangeHouseSaveHouse; // size: 0x24, address: 0x80430E30
-struct {
-    // total size: 0x24
-} __vt__24ChangeHouseDemolishHouse; // size: 0x24, address: 0x80430E54
-struct {
-    // total size: 0x20
-} __vt__9ELiveMode; // size: 0x20, address: 0x80430E78
-struct {
-    // total size: 0x24
-} __vt__31LiveModeChangeHouseStateMachine; // size: 0x24, address: 0x80430E98
-struct {
-    // total size: 0x24
-} __vt__17LiveModeInitState; // size: 0x24, address: 0x80430EBC
-struct {
-    // total size: 0x24
-} __vt__15TRCStateMachine; // size: 0x24, address: 0x80430EE0
-struct {
-    // total size: 0x24
-} __vt__17InLevelStoryState; // size: 0x24, address: 0x80430F04
-struct {
-    // total size: 0x24
-} __vt__16InLevelBaseState; // size: 0x24, address: 0x80430F28
-struct {
-    // total size: 0x24
-} __vt__22IrisTransitionOutState; // size: 0x24, address: 0x80430F4C
-struct {
-    // total size: 0x24
-} __vt__21IrisTransitionInState; // size: 0x24, address: 0x80430F70
-struct {
-    // total size: 0x24
-} __vt__24LoadingScreenUpdateState; // size: 0x24, address: 0x80430F94
-struct {
-    // total size: 0x24
-} __vt__32LoadingScreenWaitingForLoadState; // size: 0x24, address: 0x80430FB8
-struct {
-    // total size: 0x24
-} __vt__25LoadingScreenStateMachine; // size: 0x24, address: 0x80430FDC
-struct {
-    // total size: 0x20
-} __vt__9DummyMode; // size: 0x20, address: 0x80431000
-struct {
-    // total size: 0x24
-} __vt__20TheSimsMainMenuState; // size: 0x24, address: 0x80431020
-struct {
-    // total size: 0x24
-} __vt__25TheSimsEnterMainMenuState; // size: 0x24, address: 0x80431044
-struct {
-    // total size: 0x24
-} __vt__26TheSimsSimsIntroMovieState; // size: 0x24, address: 0x80431068
-struct {
-    // total size: 0x24
-} __vt__21TheSimsMaxisLogoState; // size: 0x24, address: 0x8043108C
-struct {
-    // total size: 0x24
-} __vt__19TheSimsEAMovieState; // size: 0x24, address: 0x804310B0
-struct {
-    // total size: 0x24
-} __vt__24TheSimsMemCardCheckState; // size: 0x24, address: 0x804310D4
-struct {
-    // total size: 0x24
-} __vt__31TheSimsWiiNunchuckRequiredState; // size: 0x24, address: 0x804310F8
-struct {
-    // total size: 0x24
-} __vt__28TheSimsNGCHealthWarningState; // size: 0x24, address: 0x8043111C
-struct {
-    // total size: 0x24
-} __vt__22TheSimsNGCLicenseState; // size: 0x24, address: 0x80431140
-struct {
-    // total size: 0x24
-} __vt__26TheSimsChooseLanguageState; // size: 0x24, address: 0x80431164
-struct {
-    // total size: 0x24
-} __vt__19CreateASimBaseState; // size: 0x24, address: 0x80431188
-struct {
-    // total size: 0x24
-} __vt__19TheSimsStateMachine; // size: 0x24, address: 0x804311AC
-struct {
-    // total size: 0x24
-} __vt__16StateMachineFlow; // size: 0x24, address: 0x804311D0
-struct {
-    // total size: 0x20
-} __vt__10EGameState; // size: 0x20, address: 0x804311F8
-struct {
-    // total size: 0x20
-} __vt__12UIObjectBase; // size: 0x20, address: 0x80431228
-struct {
-    // total size: 0x24
-} __vt__14MUStateMachine; // size: 0x24, address: 0x80431248
-struct {
-    // total size: 0x24
-} __vt__12StateMachine; // size: 0x24, address: 0x8043126C
-struct {
-    // total size: 0x24
-} __vt__17StateMachineState; // size: 0x24, address: 0x80431290
+// total size: 0x1C
+class TRCNunchukDisconnectState : public StateMachineState {};
+// total size: 0x1C
+class TRCCoreDisconnectState : public StateMachineState {};
+// total size: 0x1C
+class TRCDelayState : public StateMachineState {};
+// total size: 0x1C
+class TRCReadyState : public StateMachineState {};
+// total size: 0x24
+struct {} __vt__18TRCBatteryLowState; // size: 0x24, address: 0x80430AD0
+// total size: 0x24
+struct {} __vt__25TRCNunchukDisconnectState; // size: 0x24, address: 0x80430AF4
+// total size: 0x24
+struct {} __vt__24TRCNunchukReconnectState; // size: 0x24, address: 0x80430B18
+// total size: 0x24
+struct {} __vt__22TRCCoreDisconnectState; // size: 0x24, address: 0x80430B3C
+// total size: 0x24
+struct {} __vt__13TRCDelayState; // size: 0x24, address: 0x80430B60
+// total size: 0x24
+struct {} __vt__13TRCReadyState; // size: 0x24, address: 0x80430B84
+// total size: 0x20
+struct {} __vt__7Wrapper; // size: 0x20, address: 0x80430BA8
+// total size: 0x20
+struct {} __vt__14BackgroundPane; // size: 0x20, address: 0x80430BC8
+// total size: 0x24
+struct {} __vt__20UrbzModeNewGameState; // size: 0x24, address: 0x80430C38
+// total size: 0x24
+struct {} __vt__21StartScreenStartState; // size: 0x24, address: 0x80430C5C
+// total size: 0x24
+struct {} __vt__30TheSimsStartScreenStateMachine; // size: 0x24, address: 0x80430C80
+// total size: 0x24
+struct {} __vt__17NeighborhoodState; // size: 0x24, address: 0x80430CA4
+// total size: 0x24
+struct {} __vt__17PreGameSetupState; // size: 0x24, address: 0x80430CC8
+// total size: 0x24
+struct {} __vt__22InLevelCreateASimState; // size: 0x24, address: 0x80430CEC
+// total size: 0x24
+struct {} __vt__25PreGameCreateAFamilyState; // size: 0x24, address: 0x80430D10
+// total size: 0x24
+struct {} __vt__12PreGameState; // size: 0x24, address: 0x80430D34
+// total size: 0x24
+struct {} __vt__34MUStatesTransitionSaveExistingGame; // size: 0x24, address: 0x80430D58
+// total size: 0x24
+struct {} __vt__34MUStatesTransitionAutoSaveExisting; // size: 0x24, address: 0x80430D7C
+// total size: 0x24
+struct {} __vt__17MUStatesLoadHouse; // size: 0x24, address: 0x80430DA0
+// total size: 0x24
+struct {} __vt__23MUStatesProcessRequests; // size: 0x24, address: 0x80430DC4
+// total size: 0x24
+struct {} __vt__20ChangeHouseLoadHouse; // size: 0x24, address: 0x80430DE8
+// total size: 0x24
+struct {} __vt__22ChangeHouseUnloadHouse; // size: 0x24, address: 0x80430E0C
+// total size: 0x24
+struct {} __vt__20ChangeHouseSaveHouse; // size: 0x24, address: 0x80430E30
+// total size: 0x24
+struct {} __vt__24ChangeHouseDemolishHouse; // size: 0x24, address: 0x80430E54
+// total size: 0x20
+struct {} __vt__9ELiveMode; // size: 0x20, address: 0x80430E78
+// total size: 0x24
+struct {} __vt__31LiveModeChangeHouseStateMachine; // size: 0x24, address: 0x80430E98
+// total size: 0x24
+struct {} __vt__17LiveModeInitState; // size: 0x24, address: 0x80430EBC
+// total size: 0x24
+struct {} __vt__15TRCStateMachine; // size: 0x24, address: 0x80430EE0
+// total size: 0x24
+struct {} __vt__17InLevelStoryState; // size: 0x24, address: 0x80430F04
+// total size: 0x24
+struct {} __vt__16InLevelBaseState; // size: 0x24, address: 0x80430F28
+// total size: 0x24
+struct {} __vt__22IrisTransitionOutState; // size: 0x24, address: 0x80430F4C
+// total size: 0x24
+struct {} __vt__21IrisTransitionInState; // size: 0x24, address: 0x80430F70
+// total size: 0x24
+struct {} __vt__24LoadingScreenUpdateState; // size: 0x24, address: 0x80430F94
+// total size: 0x24
+struct {} __vt__32LoadingScreenWaitingForLoadState; // size: 0x24, address: 0x80430FB8
+// total size: 0x24
+struct {} __vt__25LoadingScreenStateMachine; // size: 0x24, address: 0x80430FDC
+// total size: 0x20
+struct {} __vt__9DummyMode; // size: 0x20, address: 0x80431000
+// total size: 0x24
+struct {} __vt__20TheSimsMainMenuState; // size: 0x24, address: 0x80431020
+// total size: 0x24
+struct {} __vt__25TheSimsEnterMainMenuState; // size: 0x24, address: 0x80431044
+// total size: 0x24
+struct {} __vt__26TheSimsSimsIntroMovieState; // size: 0x24, address: 0x80431068
+// total size: 0x24
+struct {} __vt__21TheSimsMaxisLogoState; // size: 0x24, address: 0x8043108C
+// total size: 0x24
+struct {} __vt__19TheSimsEAMovieState; // size: 0x24, address: 0x804310B0
+// total size: 0x24
+struct {} __vt__24TheSimsMemCardCheckState; // size: 0x24, address: 0x804310D4
+// total size: 0x24
+struct {} __vt__31TheSimsWiiNunchuckRequiredState; // size: 0x24, address: 0x804310F8
+// total size: 0x24
+struct {} __vt__28TheSimsNGCHealthWarningState; // size: 0x24, address: 0x8043111C
+// total size: 0x24
+struct {} __vt__22TheSimsNGCLicenseState; // size: 0x24, address: 0x80431140
+// total size: 0x24
+struct {} __vt__26TheSimsChooseLanguageState; // size: 0x24, address: 0x80431164
+// total size: 0x24
+struct {} __vt__19CreateASimBaseState; // size: 0x24, address: 0x80431188
+// total size: 0x24
+struct {} __vt__19TheSimsStateMachine; // size: 0x24, address: 0x804311AC
+// total size: 0x24
+struct {} __vt__16StateMachineFlow; // size: 0x24, address: 0x804311D0
+// total size: 0x20
+struct {} __vt__10EGameState; // size: 0x20, address: 0x804311F8
+// total size: 0x20
+struct {} __vt__12UIObjectBase; // size: 0x20, address: 0x80431228
+// total size: 0x24
+struct {} __vt__14MUStateMachine; // size: 0x24, address: 0x80431248
+// total size: 0x24
+struct {} __vt__12StateMachine; // size: 0x24, address: 0x8043126C
+// total size: 0x24
+struct {} __vt__17StateMachineState; // size: 0x24, address: 0x80431290
+// total size: 0x4
 class generic_iterator {
-    // total size: 0x4
+    // Members
 protected:
     class StateMachineStatus * * mIterator; // offset 0x0, size 0x4
 };
+// total size: 0x4
 class Background {
-    // total size: 0x4
+    // Members
 public:
     void * __vptr$; // offset 0x0, size 0x4
 };
+// total size: 0x14
 class ArcFileInfo {
-    // total size: 0x14
+    // Members
     char * m_name; // offset 0x0, size 0x4
     char * m_manager; // offset 0x4, size 0x4
     unsigned int m_sourceLen; // offset 0x8, size 0x4
     unsigned int m_copyStart; // offset 0xC, size 0x4
     unsigned char m_upToDate; // offset 0x10, size 0x1
 };
+// total size: 0x630
 class HDDThread : public EThread {
-    // total size: 0x630
+    // Members
     class ArcFileInfo m_arcInfo[32]; // offset 0x33C, size 0x280
     unsigned char m_doDelete; // offset 0x5BC, size 0x1
     unsigned char m_doCopy; // offset 0x5BD, size 0x1

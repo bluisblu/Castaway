@@ -5,7 +5,8 @@
     Code range: 0x8017A9CC -> 0x8017AA08
 */
 // Range: 0x8017A9CC -> 0x8017AA08
-void * TheSimsStartScreenStateMachine::TheSimsStartScreenStateMachine(class TheSimsStartScreenStateMachine * const this /* r31 */) {
+// this: r31
+TheSimsStartScreenStateMachine::TheSimsStartScreenStateMachine() {
     // References
     // -> struct [anonymous] __vt__30TheSimsStartScreenStateMachine;
 }

@@ -5,16 +5,19 @@
     Code range: 0x800FC314 -> 0x800FDB78
 */
 // Range: 0x800FC314 -> 0x800FC354
-void * Language::~Language(class Language * const this /* r31 */) {}
+// this: r31
+Language::~Language() {}
 
 // Range: 0x800FC354 -> 0x800FC390
-void * Behavior::Behavior(class Behavior * const this /* r31 */) {
+// this: r31
+Behavior::Behavior() {
     // References
     // -> struct [anonymous] __vt__8Behavior;
 }
 
 // Range: 0x800FC390 -> 0x800FC4B4
-void * Behavior::~Behavior(class Behavior * const this /* r27 */) {
+// this: r27
+Behavior::~Behavior() {
     // Local variables
     int i; // r29
     class vector temp; // r1+0x10
@@ -42,7 +45,8 @@ unsigned char Behavior::GetNode(struct BehaviorNode * nodeSpace /* r30 */) {
 }
 
 // Range: 0x800FC568 -> 0x800FC76C
-unsigned char Behavior::GetNodeRef(class Behavior * const this /* r25 */, signed short treeID /* r26 */, signed short nodeNum /* r27 */, struct BehaviorNode * * ppNode /* r28 */) {
+// this: r25
+unsigned char Behavior::GetNodeRef(signed short treeID /* r26 */, signed short nodeNum /* r27 */, struct BehaviorNode * * ppNode /* r28 */) {
     // Local variables
     class ObjectDataBehaviorTree * tree; // r1+0x8
     int currentNamespace; // r0
@@ -55,7 +59,8 @@ unsigned char Behavior::GetNodeRef(class Behavior * const this /* r25 */, signed
 }
 
 // Range: 0x800FC76C -> 0x800FC8AC
-unsigned char Behavior::IsNodeReachable(class Behavior * const this /* r31 */, signed short treeID /* r30 */, int nodeNum /* r29 */) {
+// this: r31
+unsigned char Behavior::IsNodeReachable(signed short treeID /* r30 */, int nodeNum /* r29 */) {
     // Local variables
     class ConsoleAutoRefCount tree; // r1+0x8
     int iNumNodes; // r31
@@ -75,7 +80,8 @@ signed short Behavior::GetBaseID() {
 signed short Behavior::GetTreeClass() {}
 
 // Range: 0x800FC9AC -> 0x800FCC08
-int Behavior::GetCumulativeTreeVersion(class Behavior * const this /* r28 */, signed short inTreeID /* r1+0x8 */) {
+// this: r28
+int Behavior::GetCumulativeTreeVersion(signed short inTreeID /* r1+0x8 */) {
     // Local variables
     class vector open; // r1+0x30
     class vector closed; // r1+0x20
@@ -107,7 +113,8 @@ unsigned char Behavior::GetConstants(signed short id /* r29 */, class ObjectData
 }
 
 // Range: 0x800FCD94 -> 0x800FCE48
-void Behavior::Init(class Behavior * const this /* r30 */) {
+// this: r30
+void Behavior::Init() {
     // Local variables
     int i; // r30
     class ObjectDataBehaviorTree * tree; // r1+0x8
@@ -118,19 +125,22 @@ void Behavior::Init(class Behavior * const this /* r30 */) {
 }
 
 // Range: 0x800FCE48 -> 0x800FCE98
-void * ResourceBehavior::ResourceBehavior(class ResourceBehavior * const this /* r31 */) {
+// this: r31
+ResourceBehavior::ResourceBehavior() {
     // References
     // -> struct [anonymous] __vt__16ResourceBehavior;
 }
 
 // Range: 0x800FCE98 -> 0x800FCF4C
-void * ResourceBehavior::~ResourceBehavior(class ResourceBehavior * const this /* r30 */) {
+// this: r30
+ResourceBehavior::~ResourceBehavior() {
     // References
     // -> struct [anonymous] __vt__16ResourceBehavior;
 }
 
 // Range: 0x800FCF4C -> 0x800FD024
-void ResourceBehavior::Init(class ResourceBehavior * const this /* r30 */, class ObjSelector * pOwner /* r31 */) {
+// this: r30
+void ResourceBehavior::Init(class ObjSelector * pOwner /* r31 */) {
     // Local variables
     int edithTreeSetId; // r4
     const struct ResFile * semiGlobFile; // r4
@@ -147,20 +157,23 @@ int ResourceBehavior::CountTrees() {
 }
 
 // Range: 0x800FD07C -> 0x800FD0F0
-signed short ResourceBehavior::GetTreeIDByName(class ResourceBehavior * const this /* r30 */, const char * treeName /* r31 */) {
+// this: r30
+signed short ResourceBehavior::GetTreeIDByName(const char * treeName /* r31 */) {
     // Local variables
     int treeId; // r3
 }
 
 // Range: 0x800FD0F0 -> 0x800FD1A0
-unsigned char ResourceBehavior::GetTreeByIndex(class ResourceBehavior * const this /* r30 */, class ObjectDataBehaviorTree * * ppTree /* r31 */) {
+// this: r30
+unsigned char ResourceBehavior::GetTreeByIndex(class ObjectDataBehaviorTree * * ppTree /* r31 */) {
     // Local variables
     class EREdithTreeSet * pResource; // r0
     int treeId; // r0
 }
 
 // Range: 0x800FD1A0 -> 0x800FD240
-unsigned char ResourceBehavior::QueryInterface(class ResourceBehavior * const this /* r30 */, void * ppvObject /* r31 */) {}
+// this: r30
+unsigned char ResourceBehavior::QueryInterface(void * ppvObject /* r31 */) {}
 
 // Range: 0x800FD240 -> 0x800FD254
 unsigned int ResourceBehavior::AddRef() {}
@@ -169,13 +182,15 @@ unsigned int ResourceBehavior::AddRef() {}
 unsigned int ResourceBehavior::Release() {}
 
 // Range: 0x800FD2A8 -> 0x800FD2EC
-void * IFFBehavior::IFFBehavior(class IFFBehavior * const this /* r31 */) {
+// this: r31
+IFFBehavior::IFFBehavior() {
     // References
     // -> struct [anonymous] __vt__11IFFBehavior;
 }
 
 // Range: 0x800FD2EC -> 0x800FD344
-void * IFFBehavior::~IFFBehavior(class IFFBehavior * const this /* r30 */) {}
+// this: r30
+IFFBehavior::~IFFBehavior() {}
 
 // Range: 0x800FD344 -> 0x800FD3EC
 int IFFBehavior::CountTrees() {
@@ -185,7 +200,8 @@ int IFFBehavior::CountTrees() {
 }
 
 // Range: 0x800FD3EC -> 0x800FD524
-unsigned char IFFBehavior::GetTreeByIndex(class IFFBehavior * const this /* r28 */, int index /* r30 */, class ObjectDataBehaviorTree * * ppTree /* r29 */) {
+// this: r28
+unsigned char IFFBehavior::GetTreeByIndex(int index /* r30 */, class ObjectDataBehaviorTree * * ppTree /* r29 */) {
     // Local variables
     unsigned int fileID; // r31
     class iResFile * file; // r31
@@ -194,7 +210,8 @@ unsigned char IFFBehavior::GetTreeByIndex(class IFFBehavior * const this /* r28 
 }
 
 // Range: 0x800FD524 -> 0x800FD638
-signed short IFFBehavior::GetTreeIDByName(class IFFBehavior * const this /* r27 */) {
+// this: r27
+signed short IFFBehavior::GetTreeIDByName() {
     // Local variables
     int classes[3]; // r1+0xC
     class StackString treeName; // r1+0x18
@@ -206,7 +223,8 @@ signed short IFFBehavior::GetTreeIDByName(class IFFBehavior * const this /* r27 
 }
 
 // Range: 0x800FD638 -> 0x800FD6D8
-unsigned char IFFBehavior::QueryInterface(class IFFBehavior * const this /* r30 */, void * ppvObject /* r31 */) {}
+// this: r30
+unsigned char IFFBehavior::QueryInterface(void * ppvObject /* r31 */) {}
 
 // Range: 0x800FD6D8 -> 0x800FD6EC
 unsigned int IFFBehavior::AddRef() {}

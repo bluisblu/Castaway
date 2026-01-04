@@ -5,19 +5,22 @@
     Code range: 0x8004D3C0 -> 0x8004DAA0
 */
 // Range: 0x8004D3C0 -> 0x8004D410
-void * CasSceneInGame::CasSceneInGame(class CasSceneInGame * const this /* r31 */) {
+// this: r31
+CasSceneInGame::CasSceneInGame() {
     // References
     // -> struct [anonymous] __vt__14CasSceneInGame;
 }
 
 // Range: 0x8004D410 -> 0x8004D4B8
-void * CasSceneInGame::~CasSceneInGame(class CasSceneInGame * const this /* r30 */) {
+// this: r30
+CasSceneInGame::~CasSceneInGame() {
     // References
     // -> struct [anonymous] __vt__14CasSceneInGame;
 }
 
 // Range: 0x8004D4B8 -> 0x8004D818
-void CasSceneInGame::Reload(class CasSceneInGame * const this /* r27 */) {
+// this: r27
+void CasSceneInGame::Reload() {
     // Local variables
     class ERDataset * pSceneDataset; // r29
     struct CreatedLightingEntry lighting; // r1+0xA8
@@ -43,13 +46,15 @@ void CasSceneInGame::Reload(class CasSceneInGame * const this /* r27 */) {
 }
 
 // Range: 0x8004D818 -> 0x8004D880
-void CasSceneInGame::DoFirstUpdate(class CasSceneInGame * const this /* r30 */) {
+// this: r30
+void CasSceneInGame::DoFirstUpdate() {
     // Local variables
     class WeatherManager * pWeatherManager; // r31
 }
 
 // Range: 0x8004D880 -> 0x8004DA48
-void CasSceneInGame::DrawRoom(class CasSceneInGame * const this /* r28 */, class ERC * prc /* r29 */, const class EMat4 & transform /* r30 */) {
+// this: r28
+void CasSceneInGame::DrawRoom(class ERC * prc /* r29 */, const class EMat4 & transform /* r30 */) {
     // Local variables
     unsigned char bIsViewingMirror; // r31
     class CASTargetTSC6 * pTarget; // r0

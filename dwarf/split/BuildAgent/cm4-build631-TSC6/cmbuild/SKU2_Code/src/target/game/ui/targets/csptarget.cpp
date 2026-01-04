@@ -12,7 +12,8 @@ static unsigned char make_number_string(unsigned short * pDst /* r31 */) {
 }
 
 // Range: 0x801A3A20 -> 0x801A3ED4
-void * CSPTarget::CSPTarget(class CSPTarget * const this /* r29 */, enum eTabs currentTab /* r30 */, unsigned char load_flash /* r31 */) {
+// this: r29
+CSPTarget::CSPTarget(enum eTabs currentTab /* r30 */, unsigned char load_flash /* r31 */) {
     // Local variables
     class cXPerson * person; // r3
 
@@ -71,14 +72,16 @@ void * CSPTarget::CSPTarget(class CSPTarget * const this /* r29 */, enum eTabs c
 }
 
 // Range: 0x801A3ED4 -> 0x801A3FAC
-void * CSPTarget::~CSPTarget(class CSPTarget * const this /* r30 */) {
+// this: r30
+CSPTarget::~CSPTarget() {
     // References
     // -> class EGlobal _globals;
     // -> struct [anonymous] __vt__9CSPTarget;
 }
 
 // Range: 0x801A3FAC -> 0x801A4068
-void CSPTarget::SetVariable(class CSPTarget * const this /* r29 */, const char * szCommand /* r30 */, const char * szParams /* r31 */) {
+// this: r29
+void CSPTarget::SetVariable(const char * szCommand /* r30 */, const char * szParams /* r31 */) {
     // Local variables
     int currTab; // r0
 
@@ -90,7 +93,8 @@ void CSPTarget::SetVariable(class CSPTarget * const this /* r29 */, const char *
 }
 
 // Range: 0x801A4068 -> 0x801A4318
-char * CSPTarget::GetVariable(class CSPTarget * const this /* r29 */, const char * szVar /* r28 */) {
+// this: r29
+char * CSPTarget::GetVariable(const char * szVar /* r28 */) {
     // Local variables
     char * retStr; // r31
     int skillId; // r1+0xC
@@ -109,7 +113,8 @@ char * CSPTarget::GetVariable(class CSPTarget * const this /* r29 */, const char
 }
 
 // Range: 0x801A4318 -> 0x801A49EC
-unsigned short * CSPTarget::GetLocalizable(class CSPTarget * const this /* r28 */, const char * szVar /* r29 */) {
+// this: r28
+unsigned short * CSPTarget::GetLocalizable(const char * szVar /* r29 */) {
     // Local variables
     unsigned short * wideStr; // r31
     int skillId; // r1+0x6C
@@ -126,7 +131,8 @@ unsigned short * CSPTarget::GetLocalizable(class CSPTarget * const this /* r28 *
 }
 
 // Range: 0x801A49EC -> 0x801A4B4C
-void CSPTarget::ChangeSelectedTab(class CSPTarget * const this /* r29 */, enum eTabs newTab /* r30 */, unsigned char bHI /* r31 */) {
+// this: r29
+void CSPTarget::ChangeSelectedTab(enum eTabs newTab /* r30 */, unsigned char bHI /* r31 */) {
     // References
     // -> static const char * const CSP_TabIcon2;
     // -> static const char * const CSP_TabIcon1;
@@ -134,20 +140,23 @@ void CSPTarget::ChangeSelectedTab(class CSPTarget * const this /* r29 */, enum e
 }
 
 // Range: 0x801A4B4C -> 0x801A4C34
-void CSPTarget::SetupJob(class CSPTarget * const this /* r30 */, class Neighbor * n /* r31 */) {
+// this: r30
+void CSPTarget::SetupJob(class Neighbor * n /* r31 */) {
     // References
     // -> static const char * const CSP_JobIcon;
     // -> static unsigned int CSP_JobIconIds[4];
 }
 
 // Range: 0x801A4C34 -> 0x801A4D8C
-void CSPTarget::SetupSkills(class CSPTarget * const this /* r29 */, const class Neighbor * n /* r30 */) {
+// this: r29
+void CSPTarget::SetupSkills(const class Neighbor * n /* r30 */) {
     // Local variables
     int skillNum; // r4
 }
 
 // Range: 0x801A4D8C -> 0x801A4F10
-void CSPTarget::SetupPersonality(class CSPTarget * const this /* r31 */, class Neighbor * n /* r30 */) {
+// this: r31
+void CSPTarget::SetupPersonality(class Neighbor * n /* r30 */) {
     // Local variables
     signed short * neighborPersonData; // r0
 

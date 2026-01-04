@@ -5,13 +5,16 @@
     Code range: 0x800EEE9C -> 0x800EFED8
 */
 // Range: 0x800EEE9C -> 0x800EEF20
-void * AmbientScorePlayer::AmbientScorePlayer(class AmbientScorePlayer * const this /* r31 */) {}
+// this: r31
+AmbientScorePlayer::AmbientScorePlayer() {}
 
 // Range: 0x800EEF20 -> 0x800EEF80
-void * AmbientScorePlayer::~AmbientScorePlayer(class AmbientScorePlayer * const this /* r30 */) {}
+// this: r30
+AmbientScorePlayer::~AmbientScorePlayer() {}
 
 // Range: 0x800EEF80 -> 0x800EF1A0
-void AmbientScorePlayer::Update(class AmbientScorePlayer * const this /* r31 */) {
+// this: r31
+void AmbientScorePlayer::Update() {
     // Local variables
     int i; // r29
     int timediff; // r0
@@ -27,7 +30,8 @@ void AmbientScorePlayer::Update(class AmbientScorePlayer * const this /* r31 */)
 void AmbientScorePlayer::SetListenerCount() {}
 
 // Range: 0x800EF1A8 -> 0x800EF30C
-void AmbientScorePlayer::UpdateListener(class AmbientScorePlayer * const this /* r28 */, unsigned int listenerIndex /* r30 */, const class EVec3 & pos /* r29 */, const class EVec3 & dir /* r31 */) {
+// this: r28
+void AmbientScorePlayer::UpdateListener(unsigned int listenerIndex /* r30 */, const class EVec3 & pos /* r29 */, const class EVec3 & dir /* r31 */) {
     // Local variables
     struct ListenerInfo * listenerInfo; // r30
     class CTilePt tilept; // r1+0x8
@@ -40,7 +44,8 @@ void AmbientScorePlayer::SetTime() {}
 float AmbientScorePlayer::GetTime() {}
 
 // Range: 0x800EF31C -> 0x800EF454
-unsigned char AmbientScorePlayer::Load(class AmbientScorePlayer * const this /* r29 */, const char * scoreName /* r30 */) {
+// this: r29
+unsigned char AmbientScorePlayer::Load(const char * scoreName /* r30 */) {
     // Local variables
     int i; // r30
 
@@ -49,19 +54,22 @@ unsigned char AmbientScorePlayer::Load(class AmbientScorePlayer * const this /* 
 }
 
 // Range: 0x800EF454 -> 0x800EF490
-unsigned char AmbientScorePlayer::Start(class AmbientScorePlayer * const this /* r31 */) {}
+// this: r31
+unsigned char AmbientScorePlayer::Start() {}
 
 // Range: 0x800EF490 -> 0x800EF49C
 unsigned char AmbientScorePlayer::Stop() {}
 
 // Range: 0x800EF49C -> 0x800EF538
-unsigned char AmbientScorePlayer::Shutdown(class AmbientScorePlayer * const this /* r31 */) {
+// this: r31
+unsigned char AmbientScorePlayer::Shutdown() {
     // References
     // -> class EAmbientScoreManager g_ambientscoreman;
 }
 
 // Range: 0x800EF538 -> 0x800EF648
-unsigned char AmbientScorePlayer::SetPause(class AmbientScorePlayer * const this /* r29 */) {
+// this: r29
+unsigned char AmbientScorePlayer::SetPause() {
     // Local variables
     int i; // r30
     int i; // r30
@@ -83,13 +91,15 @@ class vector * AmbientScorePlayer::GetListenerInfos() {}
 unsigned char AmbientScorePlayer::SoundRangeCoversCurTime() {}
 
 // Range: 0x800EF718 -> 0x800EF7B0
-unsigned char AmbientScorePlayer::SoundAlreadyPlaying(class AmbientScorePlayer * const this /* r28 */, const class ERAmbientSound * ambientSound /* r29 */) {
+// this: r28
+unsigned char AmbientScorePlayer::SoundAlreadyPlaying(const class ERAmbientSound * ambientSound /* r29 */) {
     // Local variables
     int i; // r30
 }
 
 // Range: 0x800EF7B0 -> 0x800EFA54
-unsigned char AmbientScorePlayer::SoundInHearingDistance(class AmbientScorePlayer * const this /* r27 */, const class ERAmbientSound * ambientSound /* r28 */) {
+// this: r27
+unsigned char AmbientScorePlayer::SoundInHearingDistance(const class ERAmbientSound * ambientSound /* r28 */) {
     // Local variables
     struct ListenerInfo * it; // r29
     class EVec3 delta; // r1+0x8
@@ -104,27 +114,31 @@ unsigned char AmbientScorePlayer::SoundAllowedByWeatherState(const class ERAmbie
 }
 
 // Range: 0x800EFB84 -> 0x800EFC5C
-class AmbientSoundPlayer * AmbientScorePlayer::AddSoundBasedOnProbability(class AmbientScorePlayer * const this /* r28 */, class vector & soundVect /* r29 */, int totalPlayProb /* r30 */) {
+// this: r28
+class AmbientSoundPlayer * AmbientScorePlayer::AddSoundBasedOnProbability(class vector & soundVect /* r29 */, int totalPlayProb /* r30 */) {
     // Local variables
     int randValue; // r31
     const class ERAmbientSound * * it; // r30
 }
 
 // Range: 0x800EFC5C -> 0x800EFD24
-unsigned char AmbientScorePlayer::KillAllAmbientSounds(class AmbientScorePlayer * const this /* r28 */) {
+// this: r28
+unsigned char AmbientScorePlayer::KillAllAmbientSounds() {
     // Local variables
     unsigned char bSuccess; // r30
     int i; // r29
 }
 
 // Range: 0x800EFD24 -> 0x800EFDCC
-class AmbientSoundPlayer * AmbientScorePlayer::AddNewAmbientSoundPlayer(class AmbientScorePlayer * const this /* r28 */, const class ERAmbientSound * pAmbientSound /* r29 */) {
+// this: r28
+class AmbientSoundPlayer * AmbientScorePlayer::AddNewAmbientSoundPlayer(const class ERAmbientSound * pAmbientSound /* r29 */) {
     // Local variables
     int i; // r30
 }
 
 // Range: 0x800EFDCC -> 0x800EFED8
-void AmbientScorePlayer::RemoveFinishedSounds(class AmbientScorePlayer * const this /* r29 */) {
+// this: r29
+void AmbientScorePlayer::RemoveFinishedSounds() {
     // Local variables
     int i; // r30
 }

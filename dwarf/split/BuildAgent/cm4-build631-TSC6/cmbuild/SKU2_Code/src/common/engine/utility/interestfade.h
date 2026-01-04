@@ -11,12 +11,6 @@ void PyramidFade::SetInterestFade() {}
 float PyramidFade::GetExcludeFromFadeHeight() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\common\engine\utility\interestfade.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x80095F34 -> 0x80095F8C
-*/
 // Range: 0x80095F34 -> 0x80095F7C
 unsigned char LineFade::IsInterestPointInside2D() {}
 
@@ -27,14 +21,9 @@ unsigned char PyramidFade::GetInstantFade() {}
 float PyramidFade::GetAlphaMin() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\common\engine\utility\interestfade.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x80218128 -> 0x80218230
-*/
 // Range: 0x80218128 -> 0x80218160
-void TrapezoidFade::SetInterest(class TrapezoidFade * const this /* r31 */) {}
+// this: r31
+void TrapezoidFade::SetInterest() {}
 
 // Range: 0x80218160 -> 0x80218168
 void PyramidFade::SetSimPos() {}
@@ -49,10 +38,12 @@ void PyramidFade::SetAlphaMin() {}
 void PyramidFade::SetExcludeFromFadeHeight() {}
 
 // Range: 0x80218180 -> 0x802181B8
-void TrapezoidFade::SetUp(class TrapezoidFade * const this /* r31 */) {}
+// this: r31
+void TrapezoidFade::SetUp() {}
 
 // Range: 0x802181B8 -> 0x802181EC
-void TrapezoidFade::SetEye(class TrapezoidFade * const this /* r31 */) {}
+// this: r31
+void TrapezoidFade::SetEye() {}
 
 // Range: 0x802181EC -> 0x80218220
 void TrapezoidFade::SetParms() {}
@@ -64,13 +55,8 @@ void PyramidFade::SetInstantFade() {}
 void TrapezoidFade::Enable() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\common\engine\utility\interestfade.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x802FC254 -> 0x802FC29C
-*/
 // Range: 0x802FC254 -> 0x802FC294
-void * TrapezoidFade::~TrapezoidFade(class TrapezoidFade * const this /* r31 */) {}
+// this: r31
+TrapezoidFade::~TrapezoidFade() {}
 
 

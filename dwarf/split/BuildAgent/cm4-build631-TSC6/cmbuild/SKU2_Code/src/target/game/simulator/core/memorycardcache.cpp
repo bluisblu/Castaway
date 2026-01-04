@@ -5,22 +5,26 @@
     Code range: 0x8012DC34 -> 0x8012EAE0
 */
 // Range: 0x8012DC34 -> 0x8012DD58
-enum EMC_OpStatus MemoryCardCache::Init(class MemoryCardCache * const this /* r29 */, class NghLayout * pLayout /* r30 */) {
+// this: r29
+enum EMC_OpStatus MemoryCardCache::Init(class NghLayout * pLayout /* r30 */) {
     // Local variables
     unsigned int size; // r31
 }
 
 // Range: 0x8012DD58 -> 0x8012DDBC
-void MemoryCardCache::Destroy(class MemoryCardCache * const this /* r30 */) {}
+// this: r30
+void MemoryCardCache::Destroy() {}
 
 // Range: 0x8012DDBC -> 0x8012DE78
-void MemoryCardCache::DestroySubsectionCache(class MemoryCardCache * const this /* r27 */) {
+// this: r27
+void MemoryCardCache::DestroySubsectionCache() {
     // Local variables
     unsigned int i; // r28
 }
 
 // Range: 0x8012DE78 -> 0x8012DF70
-enum EMC_OpStatus MemoryCardCache::GetSection(class MemoryCardCache * const this /* r24 */, const class NghLayout * pLayout /* r25 */, char * buff /* r26 */, unsigned int offset /* r27 */, unsigned int size /* r28 */) {
+// this: r24
+enum EMC_OpStatus MemoryCardCache::GetSection(const class NghLayout * pLayout /* r25 */, char * buff /* r26 */, unsigned int offset /* r27 */, unsigned int size /* r28 */) {
     // Local variables
     int subSection; // r0
     class NghResFileSectionHeader * header; // r30
@@ -28,7 +32,8 @@ enum EMC_OpStatus MemoryCardCache::GetSection(class MemoryCardCache * const this
 }
 
 // Range: 0x8012DF70 -> 0x8012E12C
-enum EMC_OpStatus MemoryCardCache::PutSection(class MemoryCardCache * const this /* r28 */, const class NghLayout * pLayout /* r27 */, const char * buff /* r29 */, unsigned int offset /* r26 */, unsigned int size /* r30 */) {
+// this: r28
+enum EMC_OpStatus MemoryCardCache::PutSection(const class NghLayout * pLayout /* r27 */, const char * buff /* r29 */, unsigned int offset /* r26 */, unsigned int size /* r30 */) {
     // Local variables
     int subSection; // r0
     unsigned int nNewAllocationSize; // r26
@@ -36,7 +41,8 @@ enum EMC_OpStatus MemoryCardCache::PutSection(class MemoryCardCache * const this
 }
 
 // Range: 0x8012E12C -> 0x8012E250
-enum EMC_OpStatus MemoryCardCache::CacheNghSection(class MemoryCardCache * const this /* r26 */, class NghLayout * pLayout /* r27 */, char * buff /* r28 */, unsigned int offset /* r29 */, unsigned int bufsize /* r30 */, unsigned char bIgnoreEndian /* r31 */) {
+// this: r26
+enum EMC_OpStatus MemoryCardCache::CacheNghSection(class NghLayout * pLayout /* r27 */, char * buff /* r28 */, unsigned int offset /* r29 */, unsigned int bufsize /* r30 */, unsigned char bIgnoreEndian /* r31 */) {
     // Local variables
     class NghResFileSectionHeader * pSecHeader; // [invalid]
     unsigned int datasize; // r31
@@ -44,10 +50,12 @@ enum EMC_OpStatus MemoryCardCache::CacheNghSection(class MemoryCardCache * const
 }
 
 // Range: 0x8012E250 -> 0x8012E298
-enum EMC_OpStatus MemoryCardCache::LoadCacheFromMemoryCard(class MemoryCardCache * const this /* r30 */, const class MemoryDevicePort_t & port /* r31 */) {}
+// this: r30
+enum EMC_OpStatus MemoryCardCache::LoadCacheFromMemoryCard(const class MemoryDevicePort_t & port /* r31 */) {}
 
 // Range: 0x8012E298 -> 0x8012E48C
-enum EMC_OpStatus MemoryCardCache::LoadCacheFromMemoryCard(class MemoryCardCache * const this /* r24 */, const class MemoryDevicePort_t & port /* r25 */, class NghResFile * pFile /* r26 */) {
+// this: r24
+enum EMC_OpStatus MemoryCardCache::LoadCacheFromMemoryCard(const class MemoryDevicePort_t & port /* r25 */, class NghResFile * pFile /* r26 */) {
     // Local variables
     enum EMC_OpStatus errReturn; // r31
     unsigned char fileOpened; // r30
@@ -66,7 +74,8 @@ enum EMC_OpStatus MemoryCardCache::LoadCacheFromMemoryCard(class MemoryCardCache
 }
 
 // Range: 0x8012E48C -> 0x8012E570
-enum EMC_OpStatus MemoryCardCache::LoadConfigFromMemoryCard(class MemoryCardCache * const this /* r28 */, const class MemoryDevicePort_t & port /* r29 */) {
+// this: r28
+enum EMC_OpStatus MemoryCardCache::LoadConfigFromMemoryCard(const class MemoryDevicePort_t & port /* r29 */) {
     // Local variables
     enum EMC_OpStatus errReturn; // r31
     unsigned char fileOpened; // r30
@@ -77,7 +86,8 @@ enum EMC_OpStatus MemoryCardCache::LoadConfigFromMemoryCard(class MemoryCardCach
 }
 
 // Range: 0x8012E570 -> 0x8012E8AC
-enum EMC_OpStatus MemoryCardCache::SaveAllToMemoryCard(class MemoryCardCache * const this /* r22 */, const class MemoryDevicePort_t & port /* r23 */) {
+// this: r22
+enum EMC_OpStatus MemoryCardCache::SaveAllToMemoryCard(const class MemoryDevicePort_t & port /* r23 */) {
     // Local variables
     enum EMC_OpStatus errReturn; // r31
     unsigned char fileOpened; // r30
@@ -100,10 +110,12 @@ enum EMC_OpStatus MemoryCardCache::SaveAllToMemoryCard(class MemoryCardCache * c
 }
 
 // Range: 0x8012E8AC -> 0x8012E97C
-enum EMC_OpStatus MemoryCardCache::GetConfig(class MemoryCardCache * const this /* r28 */, char * buff /* r29 */, unsigned int size /* r30 */, const class MemoryDevicePort_t & port /* r31 */) {}
+// this: r28
+enum EMC_OpStatus MemoryCardCache::GetConfig(char * buff /* r29 */, unsigned int size /* r30 */, const class MemoryDevicePort_t & port /* r31 */) {}
 
 // Range: 0x8012E97C -> 0x8012EA30
-enum EMC_OpStatus MemoryCardCache::PutConfig(class MemoryCardCache * const this /* r29 */, const char * buff /* r30 */, unsigned int size /* r31 */) {}
+// this: r29
+enum EMC_OpStatus MemoryCardCache::PutConfig(const char * buff /* r30 */, unsigned int size /* r31 */) {}
 
 // Range: 0x8012EA30 -> 0x8012EA48
 unsigned int MemoryCardCache::GetCurrentBuildVerNum() {}

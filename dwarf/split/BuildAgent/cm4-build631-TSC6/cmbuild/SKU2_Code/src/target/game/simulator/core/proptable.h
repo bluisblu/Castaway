@@ -5,10 +5,11 @@
     Code range: 0x800D56DC -> 0x800D572C
 */
 // Range: 0x800D56DC -> 0x800D571C
-void * PropTable::~PropTable(class PropTable * const this /* r31 */) {}
+// this: r31
+PropTable::~PropTable() {}
 
 // Range: 0x800D571C -> 0x800D572C
-void * PropTable::PropTable() {
+PropTable::PropTable() {
     // References
     // -> struct [anonymous] __vt__9PropTable;
 }

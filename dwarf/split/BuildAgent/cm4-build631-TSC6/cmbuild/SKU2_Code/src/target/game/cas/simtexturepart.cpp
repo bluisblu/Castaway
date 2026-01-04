@@ -5,19 +5,22 @@
     Code range: 0x8004B798 -> 0x8004BD4C
 */
 // Range: 0x8004B798 -> 0x8004B808
-void * SimTexturePart::SimTexturePart(class SimTexturePart * const this /* r30 */) {
+// this: r30
+SimTexturePart::SimTexturePart() {
     // References
     // -> struct [anonymous] __vt__14SimTexturePart;
 }
 
 // Range: 0x8004B808 -> 0x8004B88C
-void * SimTexturePart::~SimTexturePart(class SimTexturePart * const this /* r30 */) {
+// this: r30
+SimTexturePart::~SimTexturePart() {
     // References
     // -> struct [anonymous] __vt__14SimTexturePart;
 }
 
 // Range: 0x8004B88C -> 0x8004B8DC
-void SimTexturePart::Init(class SimTexturePart * const this /* r30 */, enum eSimPartsMapLocation nQuadrantNumber /* r31 */) {}
+// this: r30
+void SimTexturePart::Init(enum eSimPartsMapLocation nQuadrantNumber /* r31 */) {}
 
 // Range: 0x8004B8DC -> 0x8004B948
 void SimTexturePart::GetSkinTextureDef() {
@@ -27,7 +30,8 @@ void SimTexturePart::GetSkinTextureDef() {
 }
 
 // Range: 0x8004B948 -> 0x8004BC10
-void SimTexturePart::Create(class SimTexturePart * const this /* r31 */, const char * szBaseName /* r25 */, unsigned char bHighRes /* r26 */) {
+// this: r31
+void SimTexturePart::Create(const char * szBaseName /* r25 */, unsigned char bHighRes /* r26 */) {
     // Local variables
     struct ETextureDef td; // r1+0x18
     class CasSimDescription & simDesc; // r29
@@ -43,20 +47,23 @@ void SimTexturePart::Create(class SimTexturePart * const this /* r31 */, const c
 }
 
 // Range: 0x8004BC10 -> 0x8004BCF0
-void SimTexturePart::Composite(class SimTexturePart * const this /* r31 */) {
+// this: r31
+void SimTexturePart::Composite() {
     // Local variables
     class SkinCompositor skinCompositor; // r1+0x8
     unsigned int nResID; // r0
 }
 
 // Range: 0x8004BCF0 -> 0x8004BD3C
-void SimTexturePart::Deallocate(class SimTexturePart * const this /* r31 */) {
+// this: r31
+void SimTexturePart::Deallocate() {
     // References
     // -> class ETextureManager _textureman;
 }
 
 // Range: 0x8004BD3C -> 0x8004BD4C
-class ERTexture * SimTexturePart::SwapChangingData(class SimTexturePart * const this /* r5 */) {
+// this: r5
+class ERTexture * SimTexturePart::SwapChangingData() {
     // Local variables
     class ERTexture * pOldTexture; // r0
 }

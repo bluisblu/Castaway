@@ -5,7 +5,8 @@
     Code range: 0x8027CCBC -> 0x8027D4C8
 */
 // Range: 0x8027CCBC -> 0x8027D0B8
-void * EScene::EScene(class EScene * const this /* r31 */) {
+// this: r31
+EScene::EScene() {
     // Local variables
     struct ELights l; // r1+0x70
     class EMat4 mLookAt; // r1+0x30
@@ -16,7 +17,8 @@ void * EScene::EScene(class EScene * const this /* r31 */) {
 }
 
 // Range: 0x8027D0B8 -> 0x8027D100
-void * EScene::~EScene(class EScene * const this /* r31 */) {
+// this: r31
+EScene::~EScene() {
     // References
     // -> class EScene * _pScene;
 }

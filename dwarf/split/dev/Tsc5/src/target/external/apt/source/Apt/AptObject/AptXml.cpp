@@ -5,7 +5,8 @@
     Code range: 0x80332294 -> 0x80332B14
 */
 // Range: 0x80332294 -> 0x803322F0
-void * AptXml::~AptXml(class AptXml * const this /* r30 */) {}
+// this: r30
+AptXml::~AptXml() {}
 
 static char __PRETTY_FUNCTION__[31]; // size: 0x1F, address: 0x8045F930
 // Range: 0x803322F0 -> 0x803323EC
@@ -19,7 +20,8 @@ void AptXml::CleanNativeFunctions() {
 }
 
 // Range: 0x803323EC -> 0x8033249C
-void * AptXml::AptXml(class AptXml * const this /* r30 */, class AptValue * pszSource /* r31 */) {
+// this: r30
+AptXml::AptXml(class AptValue * pszSource /* r31 */) {
     // Local variables
     class IAptXml * pNewAptXml; // r0
 
@@ -29,11 +31,13 @@ void * AptXml::AptXml(class AptXml * const this /* r30 */, class AptValue * pszS
 }
 
 // Range: 0x8033249C -> 0x803324F0
-void AptXml::PreDestroy(class AptXml * const this /* r31 */) {}
+// this: r31
+void AptXml::PreDestroy() {}
 
 static char __PRETTY_FUNCTION__[76]; // size: 0x4C, address: 0x8045F95C
 // Range: 0x803324F0 -> 0x803328AC
-class AptValue * AptXml::objectMemberLookup(const class AptXml * const this /* r28 */, class AptValue * const pContext /* r30 */, const class EAStringC * const pName /* r29 */) {
+// this: r28
+class AptValue * AptXml::objectMemberLookup(class AptValue * const pContext /* r30 */, const class EAStringC * const pName /* r29 */) const {
     // Local variables
     class AptValue * pValueFromXmlNode; // r31
     class AptXmlNode * pXml; // r0
@@ -96,7 +100,6 @@ class AptValue * AptXml::sMethod_parseXml(class AptValue * pThis /* r30 */) {
     // -> class AptNone * gpUndefinedValue;
 }
 
-struct {
-    // total size: 0x44
-} __vt__6AptXml; // size: 0x44, address: 0x8045F9DC
+// total size: 0x44
+struct {} __vt__6AptXml; // size: 0x44, address: 0x8045F9DC
 

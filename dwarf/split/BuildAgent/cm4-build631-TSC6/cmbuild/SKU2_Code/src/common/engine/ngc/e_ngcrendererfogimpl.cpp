@@ -5,7 +5,7 @@
     Code range: 0x802CA038 -> 0x802CA22C
 */
 // Range: 0x802CA038 -> 0x802CA0B0
-void * NGCRendererFogImpl::NGCRendererFogImpl() {}
+NGCRendererFogImpl::NGCRendererFogImpl() {}
 
 // Range: 0x802CA0B0 -> 0x802CA0B8
 void NGCRendererFogImpl::ForceDisable() {}
@@ -17,6 +17,7 @@ void NGCRendererFogImpl::SetProjNearFarValues() {}
 void NGCRendererFogImpl::SetFogValues() {}
 
 // Range: 0x802CA164 -> 0x802CA22C
-void NGCRendererFogImpl::UpdateFogValues(class NGCRendererFogImpl * const this /* r5 */) {}
+// this: r5
+void NGCRendererFogImpl::UpdateFogValues() {}
 
 

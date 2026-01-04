@@ -5,14 +5,16 @@
     Code range: 0x802E4108 -> 0x802E4358
 */
 // Range: 0x802E4108 -> 0x802E41F4
-void * ERMovie::ERMovie(class ERMovie * const this /* r26 */, class EFile * pFile /* r27 */, unsigned int start /* r28 */, unsigned int length /* r29 */, unsigned int id /* r30 */) {
+// this: r26
+ERMovie::ERMovie(class EFile * pFile /* r27 */, unsigned int start /* r28 */, unsigned int length /* r29 */, unsigned int id /* r30 */) {
     // References
     // -> class EGraphics * _pGfx;
     // -> struct [anonymous] __vt__7ERMovie;
 }
 
 // Range: 0x802E41F4 -> 0x802E42A4
-void * ERMovie::~ERMovie(class ERMovie * const this /* r30 */) {
+// this: r30
+ERMovie::~ERMovie() {
     // References
     // -> struct [anonymous] __vt__9EResource;
     // -> class EGraphics * _pGfx;

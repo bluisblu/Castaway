@@ -5,13 +5,15 @@
     Code range: 0x80020030 -> 0x80021800
 */
 // Range: 0x80020030 -> 0x8002006C
-void * ChimpAnimator::ChimpAnimator(class ChimpAnimator * const this /* r31 */) {
+// this: r31
+ChimpAnimator::ChimpAnimator() {
     // References
     // -> struct [anonymous] __vt__13ChimpAnimator;
 }
 
 // Range: 0x8002006C -> 0x80020104
-void * ChimpAnimator::~ChimpAnimator(class ChimpAnimator * const this /* r27 */) {
+// this: r27
+ChimpAnimator::~ChimpAnimator() {
     // Local variables
     unsigned int i; // r29
 
@@ -23,7 +25,8 @@ void * ChimpAnimator::~ChimpAnimator(class ChimpAnimator * const this /* r27 */)
 void ChimpAnimator::GetAllIKBoneIndices(enum eIKBones eBone /* r28 */, unsigned int & outRoot /* r29 */, unsigned int & outMid /* r30 */, unsigned int & outEnd /* r31 */) {}
 
 // Range: 0x800201E8 -> 0x8002059C
-unsigned char ChimpAnimator::Initialize(class ChimpAnimator * const this /* r29 */, class cXPerson * person /* r30 */) {
+// this: r29
+unsigned char ChimpAnimator::Initialize(class cXPerson * person /* r30 */) {
     // Local variables
     unsigned int i; // r30
     unsigned int i; // r30
@@ -33,7 +36,8 @@ unsigned char ChimpAnimator::Initialize(class ChimpAnimator * const this /* r29 
 }
 
 // Range: 0x800205D8 -> 0x80020818
-void ChimpAnimator::setMovementVelocityFromAnimation(class ChimpAnimator * const this /* r29 */) {
+// this: r29
+void ChimpAnimator::setMovementVelocityFromAnimation() {
     // Local variables
     int trans; // r4
     class EVec3 vTrans; // r1+0x1C
@@ -57,13 +61,16 @@ void ChimpAnimator::setMovementVelocityFromAnimation(class ChimpAnimator * const
 void ChimpAnimator::Update() {}
 
 // Range: 0x8002081C -> 0x80020878
-void ChimpAnimator::lockCarryArmNodes(class ChimpAnimator * const this /* r29 */, float * pNodeList /* r30 */, int eTrkFlag /* r31 */) {}
+// this: r29
+void ChimpAnimator::lockCarryArmNodes(float * pNodeList /* r30 */, int eTrkFlag /* r31 */) {}
 
 // Range: 0x80020878 -> 0x800208D4
-void ChimpAnimator::lockCarryArmNodes(class ChimpAnimator * const this /* r29 */, float * pNodeList /* r30 */, class EACTrack * pTrack /* r31 */) {}
+// this: r29
+void ChimpAnimator::lockCarryArmNodes(float * pNodeList /* r30 */, class EACTrack * pTrack /* r31 */) {}
 
 // Range: 0x800208D4 -> 0x80020AF8
-enum TreeReturnCode ChimpAnimator::CarryBehavior(class ChimpAnimator * const this /* r27 */, const class AnimateNewParam * param /* r28 */, signed short animID /* r29 */, const struct AnimRef * & skill /* r30 */, class StackElem * elem /* r31 */) {
+// this: r27
+enum TreeReturnCode ChimpAnimator::CarryBehavior(const class AnimateNewParam * param /* r28 */, signed short animID /* r29 */, const struct AnimRef * & skill /* r30 */, class StackElem * elem /* r31 */) {
     // Local variables
     float fBlendTime; // f31
     int behavior; // r0
@@ -86,7 +93,8 @@ void ChimpAnimator::InitStaticAnimationElements() {
 }
 
 // Range: 0x80020B50 -> 0x80020D10
-float ChimpAnimator::GetZRotation(class ChimpAnimator * const this /* r31 */) {
+// this: r31
+float ChimpAnimator::GetZRotation() {
     // Local variables
     float trackFrames; // f0
     float rot; // f1
@@ -104,7 +112,8 @@ float ChimpAnimator::GetMovementVelocityFromStyle() {
 void ChimpAnimator::UpdateSimDirection() {}
 
 // Range: 0x80020DC0 -> 0x80020F88
-unsigned char ChimpAnimator::rotateAnimation(class ChimpAnimator * const this /* r30 */, float DeltaTime /* f30 */, float DesiredDir /* f31 */, float DeltaDir /* f29 */) {
+// this: r30
+unsigned char ChimpAnimator::rotateAnimation(float DeltaTime /* f30 */, float DesiredDir /* f31 */, float DeltaDir /* f29 */) {
     // Local variables
     unsigned char bRetVal; // r31
     float TurnRate; // f0
@@ -119,7 +128,8 @@ float ChimpAnimator::GetWalkToRunDistance() {}
 float ChimpAnimator::GetRunToWalkDistance() {}
 
 // Range: 0x80020F98 -> 0x800210A0
-int ChimpAnimator::selectRandomIdle(class ChimpAnimator * const this /* r30 */) {
+// this: r30
+int ChimpAnimator::selectRandomIdle() {
     // Local variables
     int desiredAnim; // r3
     unsigned char bCurSitting; // r0
@@ -142,7 +152,8 @@ int ChimpAnimator::SelectRandomIdleStand() {
 }
 
 // Range: 0x80021138 -> 0x8002120C
-unsigned char ChimpAnimator::IsCurrentlySitting(class ChimpAnimator * const this /* r29 */) {
+// this: r29
+unsigned char ChimpAnimator::IsCurrentlySitting() {
     // Local variables
     class EACTrack * pCurTrack; // r0
     unsigned int curResId; // r0
@@ -152,7 +163,8 @@ unsigned char ChimpAnimator::IsCurrentlySitting(class ChimpAnimator * const this
 }
 
 // Range: 0x8002120C -> 0x800212D0
-enum TreeReturnCode ChimpAnimator::TryAnimate(class ChimpAnimator * const this /* r29 */, class StackElem * elem /* r30 */, const class AnimateNewParam * param /* r31 */) {
+// this: r29
+enum TreeReturnCode ChimpAnimator::TryAnimate(class StackElem * elem /* r30 */, const class AnimateNewParam * param /* r31 */) {
     // Local variables
     const struct AnimRef * skillId; // r1+0xC
     unsigned char scale; // r1+0x9
@@ -160,7 +172,8 @@ enum TreeReturnCode ChimpAnimator::TryAnimate(class ChimpAnimator * const this /
 }
 
 // Range: 0x800212D0 -> 0x80021384
-unsigned char ChimpAnimator::IsInSitToStandTransition(class ChimpAnimator * const this /* r29 */, unsigned char & transComplete /* r30 */) {
+// this: r29
+unsigned char ChimpAnimator::IsInSitToStandTransition(unsigned char & transComplete /* r30 */) {
     // Local variables
     class EACTrack * pCurTrack; // r0
     unsigned int curResId; // r0
@@ -169,20 +182,23 @@ unsigned char ChimpAnimator::IsInSitToStandTransition(class ChimpAnimator * cons
 }
 
 // Range: 0x80021384 -> 0x800213D4
-unsigned char ChimpAnimator::IsPlayingSittingAnim(class ChimpAnimator * const this /* r31 */) {
+// this: r31
+unsigned char ChimpAnimator::IsPlayingSittingAnim() {
     // Local variables
     unsigned char transAnimComplete; // r1+0x8
 }
 
 // Range: 0x800213D4 -> 0x80021440
-void ChimpAnimator::handleSitToIdleAnimation(class ChimpAnimator * const this /* r31 */) {
+// this: r31
+void ChimpAnimator::handleSitToIdleAnimation() {
     // Local variables
     const struct AnimRef * skillId; // r1+0xC
     unsigned char scale; // r1+0x8
 }
 
 // Range: 0x80021440 -> 0x80021800
-void ChimpAnimator::AdjustIKTargetHeight(class ChimpAnimator * const this /* r28 */, class IKData * pIKData /* r29 */, class EMat4 & endBoneOrient /* r30 */) {
+// this: r28
+void ChimpAnimator::AdjustIKTargetHeight(class IKData * pIKData /* r29 */, class EMat4 & endBoneOrient /* r30 */) {
     // Local variables
     float socialModeDelta; // r31
     unsigned char isFrontBackLower; // r0

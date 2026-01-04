@@ -11,16 +11,19 @@ class ISmartDataFactory & GetSmartDataFactory() {
 }
 
 // Range: 0x801607C8 -> 0x80160828
-void * SmartDataFactory::SmartDataFactory(class SmartDataFactory * const this /* r31 */) {
+// this: r31
+SmartDataFactory::SmartDataFactory() {
     // References
     // -> struct [anonymous] __vt__16SmartDataFactory;
 }
 
 // Range: 0x80160880 -> 0x801608DC
-void * SmartDataFactory::~SmartDataFactory(class SmartDataFactory * const this /* r30 */) {}
+// this: r30
+SmartDataFactory::~SmartDataFactory() {}
 
 // Range: 0x801608DC -> 0x8016097C
-unsigned char SmartDataFactory::QueryInterface(class SmartDataFactory * const this /* r30 */, void * ppvObject /* r31 */) {}
+// this: r30
+unsigned char SmartDataFactory::QueryInterface(void * ppvObject /* r31 */) {}
 
 // Range: 0x8016097C -> 0x80160990
 unsigned int SmartDataFactory::AddRef() {}
@@ -29,7 +32,8 @@ unsigned int SmartDataFactory::AddRef() {}
 unsigned int SmartDataFactory::Release() {}
 
 // Range: 0x801609E4 -> 0x80160AC8
-enum tDataProvider SmartDataFactory::GetDataProvider(const class SmartDataFactory * const this /* r30 */, unsigned int riid /* r1+0x8 */, const class ObjectDataID & dataID /* r31 */) {
+// this: r30
+enum tDataProvider SmartDataFactory::GetDataProvider(unsigned int riid /* r1+0x8 */, const class ObjectDataID & dataID /* r31 */) const {
     // Local variables
     struct pair resourceID; // r1+0x20
     struct rbtree_iterator it; // r1+0x14
@@ -37,17 +41,20 @@ enum tDataProvider SmartDataFactory::GetDataProvider(const class SmartDataFactor
 }
 
 // Range: 0x80160AC8 -> 0x80160B7C
-void SmartDataFactory::SetDataProvider(class SmartDataFactory * const this /* r31 */, unsigned int riid /* r1+0x8 */, enum tDataProvider dataProvider /* r1+0xC */) {
+// this: r31
+void SmartDataFactory::SetDataProvider(unsigned int riid /* r1+0x8 */, enum tDataProvider dataProvider /* r1+0xC */) {
     // Local variables
     struct pair resourceID; // r1+0x38
     struct rbtree_iterator it; // r1+0x18
 }
 
 // Range: 0x80160B7C -> 0x80160BEC
-unsigned char SmartDataFactory::CreateObject(class SmartDataFactory * const this /* r29 */, unsigned int riid /* r30 */, void * ppvObject /* r31 */) {}
+// this: r29
+unsigned char SmartDataFactory::CreateObject(unsigned int riid /* r30 */, void * ppvObject /* r31 */) {}
 
 // Range: 0x80160BEC -> 0x80160C90
-unsigned char SmartDataFactory::CreateObject(class SmartDataFactory * const this /* r29 */, unsigned int riid /* r30 */, void * ppvObject /* r31 */) {
+// this: r29
+unsigned char SmartDataFactory::CreateObject(unsigned int riid /* r30 */, void * ppvObject /* r31 */) {
     // Local variables
     enum tDataProvider dataProvider; // r5
 }

@@ -5,13 +5,15 @@
     Code range: 0x802E8FF8 -> 0x802E967C
 */
 // Range: 0x802E8FF8 -> 0x802E9098
-void * ERSoundEvent::ERSoundEvent(class ERSoundEvent * const this /* r30 */) {
+// this: r30
+ERSoundEvent::ERSoundEvent() {
     // References
     // -> struct [anonymous] __vt__12ERSoundEvent;
 }
 
 // Range: 0x802E9098 -> 0x802E9188
-void * ERSoundEvent::~ERSoundEvent(class ERSoundEvent * const this /* r30 */) {
+// this: r30
+ERSoundEvent::~ERSoundEvent() {
     // References
     // -> class ESoundEventManager g_soundeventman;
     // -> struct [anonymous] __vt__9EResource;
@@ -19,7 +21,8 @@ void * ERSoundEvent::~ERSoundEvent(class ERSoundEvent * const this /* r30 */) {
 }
 
 // Range: 0x802E9188 -> 0x802E9530
-void ERSoundEvent::Load(class ERSoundEvent * const this /* r30 */, class EFile * binaryFile /* r31 */) {
+// this: r30
+void ERSoundEvent::Load(class EFile * binaryFile /* r31 */) {
     // Local variables
     class EDataHeader resourceHeader; // r1+0x18
     unsigned char c; // r1+0xA
@@ -40,7 +43,8 @@ void ERSoundEvent::Load(class ERSoundEvent * const this /* r30 */, class EFile *
 void ERSoundEvent::Refresh() {}
 
 // Range: 0x802E9540 -> 0x802E95DC
-void ERSoundEvent::AddRefSoundsEffects(class ERSoundEvent * const this /* r24 */) {
+// this: r24
+void ERSoundEvent::AddRefSoundsEffects() {
     // Local variables
     int j; // r28
     int jmax; // r27
@@ -53,7 +57,8 @@ void ERSoundEvent::AddRefSoundsEffects(class ERSoundEvent * const this /* r24 */
 }
 
 // Range: 0x802E95DC -> 0x802E967C
-void ERSoundEvent::DelRefSoundsEffectsAsync(class ERSoundEvent * const this /* r24 */) {
+// this: r24
+void ERSoundEvent::DelRefSoundsEffectsAsync() {
     // Local variables
     int j; // r27
     int jmax; // r26

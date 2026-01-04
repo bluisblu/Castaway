@@ -17,13 +17,8 @@ unsigned char FlashPiMenu::IsExpandedMenuLocked() {}
 void FlashPiMenu::ResetDirectControlData() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\target\game\flashpimenu.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x802276F8 -> 0x80227728
-*/
 // Range: 0x802276F8 -> 0x80227728
-void * DirectControlData::DirectControlData(struct DirectControlData * const this /* r31 */) {}
+// this: r31
+DirectControlData::DirectControlData() {}
 
 

@@ -5,19 +5,22 @@
     Code range: 0x802D888C -> 0x802D8BDC
 */
 // Range: 0x802D888C -> 0x802D88D0
-void * ERCharacter::ERCharacter(class ERCharacter * const this /* r31 */) {
+// this: r31
+ERCharacter::ERCharacter() {
     // References
     // -> struct [anonymous] __vt__11ERCharacter;
 }
 
 // Range: 0x802D88D0 -> 0x802D8940
-void * ERCharacter::~ERCharacter(class ERCharacter * const this /* r30 */) {
+// this: r30
+ERCharacter::~ERCharacter() {
     // References
     // -> class ECharacterManager _characterman;
 }
 
 // Range: 0x802D8940 -> 0x802D8BC0
-void ERCharacter::Load(class ERCharacter * const this /* r25 */, class EFile & s /* r26 */) {
+// this: r25
+void ERCharacter::Load(class EFile & s /* r26 */) {
     // Local variables
     class EDataHeader resourceHeader; // r1+0x18
     class EString name; // r1+0x14

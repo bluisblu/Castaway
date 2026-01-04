@@ -5,25 +5,29 @@
     Code range: 0x802232B8 -> 0x802254A0
 */
 // Range: 0x802232B8 -> 0x80223384
-void * ESpriteRender::ESpriteRender(class ESpriteRender * const this /* r30 */) {
+// this: r30
+ESpriteRender::ESpriteRender() {
     // References
     // -> struct [anonymous] __vt__13ESpriteRender;
 }
 
 // Range: 0x802233C4 -> 0x80223444
-void * ESpriteRender::~ESpriteRender(class ESpriteRender * const this /* r30 */) {
+// this: r30
+ESpriteRender::~ESpriteRender() {
     // References
     // -> struct [anonymous] __vt__13ESpriteRender;
 }
 
 // Range: 0x80223444 -> 0x8022359C
-void ESpriteRender::DeleteShaders(class ESpriteRender * const this /* r31 */) {
+// this: r31
+void ESpriteRender::DeleteShaders() {
     // References
     // -> class EShaderManager _shaderman;
 }
 
 // Range: 0x8022359C -> 0x80223748
-void ESpriteRender::Update(class ESpriteRender * const this /* r30 */) {
+// this: r30
+void ESpriteRender::Update() {
     // Local variables
     const class SpriteSlot & sslot; // r31
     class ESim * pESim; // r0
@@ -34,7 +38,8 @@ void ESpriteRender::Update(class ESpriteRender * const this /* r30 */) {
 }
 
 // Range: 0x80223748 -> 0x80223940
-void ESpriteRender::DrawIntoOrderTable(class ESpriteRender * const this /* r29 */) {
+// this: r29
+void ESpriteRender::DrawIntoOrderTable() {
     // Local variables
     const class SpriteSlot & sslot; // r31
     class ISimInstance * pInstance; // r30
@@ -51,7 +56,8 @@ void ESpriteRender::DrawIntoOrderTable(class ESpriteRender * const this /* r29 *
 void ESpriteRender::SpriteRenderOrderTableCallback(struct ELevelDrawData & renderParam /* r31 */) {}
 
 // Range: 0x8022398C -> 0x80223E9C
-void ESpriteRender::DrawDirectly(class ESpriteRender * const this /* r27 */, class ERC * prc /* r28 */) {
+// this: r27
+void ESpriteRender::DrawDirectly(class ERC * prc /* r28 */) {
     // Local variables
     const class SpriteSlot & sslot; // r30
     class ISimInstance * pInstance; // r31
@@ -73,7 +79,8 @@ void ESpriteRender::DrawDirectly(class ESpriteRender * const this /* r27 */, cla
 }
 
 // Range: 0x80223E9C -> 0x802244A4
-void ESpriteRender::SetSprite(class ESpriteRender * const this /* r30 */) {
+// this: r30
+void ESpriteRender::SetSprite() {
     // Local variables
     const class SpriteSlot & sslot; // r31
     int balloonSpriteID; // r28
@@ -107,7 +114,8 @@ unsigned char ESpriteRender::SetUpRect(class ERC * prc /* r26 */, const class EV
 }
 
 // Range: 0x80224784 -> 0x80224C90
-unsigned char ESpriteRender::SetUpDoubleRect(class ESpriteRender * const this /* r29 */, class ERC * prc /* r24 */, const class EVec3 & vPos /* r25 */, float xSize /* f30 */, float ySize /* f31 */, class ERShader * shaderLeft /* r26 */, class ERShader * shaderRight /* r27 */, struct SpriteData & data /* r28 */) {
+// this: r29
+unsigned char ESpriteRender::SetUpDoubleRect(class ERC * prc /* r24 */, const class EVec3 & vPos /* r25 */, float xSize /* f30 */, float ySize /* f31 */, class ERShader * shaderLeft /* r26 */, class ERShader * shaderRight /* r27 */, struct SpriteData & data /* r28 */) {
     // Local variables
     class E3DWindow * pWin; // r0
     class EVec3 vDiagonal; // r1+0x54
@@ -119,13 +127,15 @@ unsigned char ESpriteRender::SetUpDoubleRect(class ESpriteRender * const this /*
 }
 
 // Range: 0x80224C90 -> 0x80224EA0
-void ESpriteRender::SetSkillMeterState(class ESpriteRender * const this /* r31 */) {
+// this: r31
+void ESpriteRender::SetSkillMeterState() {
     // References
     // -> class EModelManager _modelman;
 }
 
 // Range: 0x80224EA0 -> 0x80225124
-float ESpriteRender::UpdateSkillMeter(class ESpriteRender * const this /* r29 */, class EVec3 & vInnerColor /* r30 */, class EVec3 & vOuterColor /* r31 */) {
+// this: r29
+float ESpriteRender::UpdateSkillMeter(class EVec3 & vInnerColor /* r30 */, class EVec3 & vOuterColor /* r31 */) {
     // Local variables
     float scaleFactor; // f1
 
@@ -137,7 +147,8 @@ float ESpriteRender::UpdateSkillMeter(class ESpriteRender * const this /* r29 */
 }
 
 // Range: 0x80225124 -> 0x80225438
-void ESpriteRender::DrawSkillMeter(class ESpriteRender * const this /* r24 */, class ERC * prc /* r25 */) {
+// this: r24
+void ESpriteRender::DrawSkillMeter(class ERC * prc /* r25 */) {
     // Local variables
     class cXPerson * person; // r27
     class EVec3 vColorInner; // r1+0x44
@@ -161,7 +172,8 @@ void ESpriteRender::DrawSkillMeter(class ESpriteRender * const this /* r24 */, c
 }
 
 // Range: 0x80225438 -> 0x802254A0
-void ESpriteRender::UpdateSkillMeter(class ESpriteRender * const this /* r31 */) {
+// this: r31
+void ESpriteRender::UpdateSkillMeter() {
     // Local variables
     class EVec3 vec1; // r1+0x14
     class EVec3 vec2; // r1+0x8

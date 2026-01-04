@@ -5,6 +5,7 @@
     Code range: 0x800636A0 -> 0x800636E8
 */
 // Range: 0x800636A0 -> 0x800636E8
-void * InteractorInfo::InteractorInfo(struct InteractorInfo * const this /* r31 */) {}
+// this: r31
+InteractorInfo::InteractorInfo() {}
 
 

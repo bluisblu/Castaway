@@ -5,13 +5,15 @@
     Code range: 0x80281630 -> 0x80281954
 */
 // Range: 0x80281630 -> 0x80281698
-void * Effect::Effect(class Effect * const this /* r30 */) {
+// this: r30
+Effect::Effect() {
     // References
     // -> struct [anonymous] __vt__Q27Effects6Effect;
 }
 
 // Range: 0x80281698 -> 0x802817B8
-void * Effect::Effect(class Effect * const this /* r30 */, const struct ClientParams & params /* r31 */) {
+// this: r30
+Effect::Effect(const struct ClientParams & params /* r31 */) {
     // References
     // -> struct [anonymous] __vt__Q27Effects6Effect;
 }

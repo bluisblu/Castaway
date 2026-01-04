@@ -5,13 +5,15 @@
     Code range: 0x8023B47C -> 0x8023B8E4
 */
 // Range: 0x8023B47C -> 0x8023B4BC
-void * IBaseSimInstance::~IBaseSimInstance(class IBaseSimInstance * const this /* r31 */) {}
+// this: r31
+IBaseSimInstance::~IBaseSimInstance() {}
 
 // Range: 0x8023B4BC -> 0x8023B4C8
 void ISimInstance::SetPlacementError() {}
 
 // Range: 0x8023B4C8 -> 0x8023B5AC
-void * ISimInstance::ISimInstance(class ISimInstance * const this /* r29 */) {
+// this: r29
+ISimInstance::ISimInstance() {
     // References
     // -> struct ELights _ERRORLightCur;
     // -> class EVec3 _ERRORLight;
@@ -19,7 +21,8 @@ void * ISimInstance::ISimInstance(class ISimInstance * const this /* r29 */) {
 }
 
 // Range: 0x8023B5AC -> 0x8023B6F8
-void * ISimInstance::~ISimInstance(class ISimInstance * const this /* r29 */) {
+// this: r29
+ISimInstance::~ISimInstance() {
     // References
     // -> struct [anonymous] __vt__12ISimInstance;
 }
@@ -34,7 +37,8 @@ unsigned char ISimInstance::GetIsPerson() {}
 class ObjSelector * ISimInstance::GetSelector() {}
 
 // Range: 0x8023B770 -> 0x8023B844
-unsigned char ISimInstance::HasInteractions(class ISimInstance * const this /* r30 */) {
+// this: r30
+unsigned char ISimInstance::HasInteractions() {
     // Local variables
     class cXObject * pXObj; // r31
     unsigned char hasInteractions; // r31
@@ -45,7 +49,8 @@ unsigned char ISimInstance::HasInteractions(class ISimInstance * const this /* r
 }
 
 // Range: 0x8023B844 -> 0x8023B8E4
-class EVec3 ISimInstance::GetLastNodePos(class ISimInstance * const this /* r30 */) {
+// this: r30
+class EVec3 ISimInstance::GetLastNodePos() {
     // Local variables
     int numNodes; // r0
     class EMat4 pos; // r1+0x18

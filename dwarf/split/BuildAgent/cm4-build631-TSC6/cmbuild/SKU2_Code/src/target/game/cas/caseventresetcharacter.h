@@ -8,17 +8,13 @@
 enum eSpecies CasEventResetCharacter::GetSpecies() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\target\game\cas\caseventresetcharacter.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x8019702C -> 0x801970E0
-*/
 // Range: 0x8019702C -> 0x80197084
-void * CasEventResetCharacter::~CasEventResetCharacter(class CasEventResetCharacter * const this /* r30 */) {}
+// this: r30
+CasEventResetCharacter::~CasEventResetCharacter() {}
 
 // Range: 0x80197084 -> 0x801970DC
-void * CasEventResetCharacter::CasEventResetCharacter(class CasEventResetCharacter * const this /* r30 */, enum eSpecies nSpecies /* r31 */) {
+// this: r30
+CasEventResetCharacter::CasEventResetCharacter(enum eSpecies nSpecies /* r31 */) {
     // References
     // -> struct [anonymous] __vt__22CasEventResetCharacter;
 }

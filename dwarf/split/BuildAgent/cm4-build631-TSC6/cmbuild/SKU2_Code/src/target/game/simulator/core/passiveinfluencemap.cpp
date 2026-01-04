@@ -5,19 +5,22 @@
     Code range: 0x800A6E3C -> 0x800AA000
 */
 // Range: 0x800A6E3C -> 0x800A6EAC
-void * PassiveInfluenceMap::PassiveInfluenceMap(class PassiveInfluenceMap * const this /* r30 */) {
+// this: r30
+PassiveInfluenceMap::PassiveInfluenceMap() {
     // References
     // -> class PassiveInfluenceMap * s_passiveInfluenceMap;
 }
 
 // Range: 0x800A6EAC -> 0x800A6F1C
-void * PassiveInfluenceMap::~PassiveInfluenceMap(class PassiveInfluenceMap * const this /* r30 */) {
+// this: r30
+PassiveInfluenceMap::~PassiveInfluenceMap() {
     // References
     // -> class PassiveInfluenceMap * s_passiveInfluenceMap;
 }
 
 // Range: 0x800A6F1C -> 0x800A700C
-void PassiveInfluenceMap::AddItemToMap(class PassiveInfluenceMap * const this /* r28 */, class PassiveInfluenceItem * pItem /* r1+0x8 */) {
+// this: r28
+void PassiveInfluenceMap::AddItemToMap(class PassiveInfluenceItem * pItem /* r1+0x8 */) {
     // Local variables
     class vector & tv; // r31
     unsigned int tile; // r30
@@ -26,7 +29,8 @@ void PassiveInfluenceMap::AddItemToMap(class PassiveInfluenceMap * const this /*
 }
 
 // Range: 0x800A700C -> 0x800A7120
-void PassiveInfluenceMap::RemoveItemFromMap(class PassiveInfluenceMap * const this /* r26 */, class PassiveInfluenceItem * pItem /* r27 */) {
+// this: r26
+void PassiveInfluenceMap::RemoveItemFromMap(class PassiveInfluenceItem * pItem /* r27 */) {
     // Local variables
     class vector & tv; // r31
     unsigned int tile; // r30
@@ -41,7 +45,8 @@ void PassiveInfluenceMap::RemoveItemFromMap(class PassiveInfluenceMap * const th
 class vector * PassiveInfluenceMap::GetListForTile() {}
 
 // Range: 0x800A7168 -> 0x800A7210
-void PassiveInfluenceMap::EmptyMap(class PassiveInfluenceMap * const this /* r27 */) {
+// this: r27
+void PassiveInfluenceMap::EmptyMap() {
     // Local variables
     int x; // r30
     int y; // r29
@@ -56,7 +61,8 @@ class PassiveInfluencePerson * PassiveInfluenceMap::NotifySimulator() {
 }
 
 // Range: 0x800A7228 -> 0x800A73EC
-unsigned char PassiveInfluenceMap::CheckObjectInfluence(class PassiveInfluenceMap * const this /* r29 */, class PassiveInfluenceTarget * pTarget /* r30 */) {
+// this: r29
+unsigned char PassiveInfluenceMap::CheckObjectInfluence(class PassiveInfluenceTarget * pTarget /* r30 */) {
     // Local variables
     class vector & tv; // r27
     unsigned int i; // r26
@@ -77,13 +83,15 @@ unsigned char PassiveInfluenceMap::ApplyInfluence(class PassiveInfluenceObject *
 }
 
 // Range: 0x800A74FC -> 0x800A75BC
-void * PassiveInfluenceSystem::PassiveInfluenceSystem(class PassiveInfluenceSystem * const this /* r30 */) {
+// this: r30
+PassiveInfluenceSystem::PassiveInfluenceSystem() {
     // References
     // -> class PassiveInfluenceSystem * s_passiveInfluenceSystem;
 }
 
 // Range: 0x800A7614 -> 0x800A76C4
-void * PassiveInfluenceSystem::~PassiveInfluenceSystem(class PassiveInfluenceSystem * const this /* r30 */) {
+// this: r30
+PassiveInfluenceSystem::~PassiveInfluenceSystem() {
     // References
     // -> class PassiveInfluenceMap * s_passiveInfluenceMap;
     // -> class PassiveInfluenceSystem * s_passiveInfluenceSystem;
@@ -100,7 +108,8 @@ void PassiveInfluenceSystem::FlushSystem() {
 void PassiveInfluenceSystem::DoStream() {}
 
 // Range: 0x800A76F8 -> 0x800A7C2C
-unsigned char PassiveInfluenceSystem::AddObjectToMap(class PassiveInfluenceSystem * const this /* r25 */, class cXObject * pObj /* r26 */, signed char animationType /* r27 */, signed char areaType /* r28 */, signed char areaSize /* r29 */, signed char flags /* r30 */, signed short triggerRadius /* r31 */, signed short lockoutID /* r24 */) {
+// this: r25
+unsigned char PassiveInfluenceSystem::AddObjectToMap(class cXObject * pObj /* r26 */, signed char animationType /* r27 */, signed char areaType /* r28 */, signed char areaSize /* r29 */, signed char flags /* r30 */, signed short triggerRadius /* r31 */, signed short lockoutID /* r24 */) {
     // Local variables
     int type; // r0
     struct ListIterator it; // r1+0x64
@@ -122,7 +131,8 @@ unsigned char PassiveInfluenceSystem::AddObjectToMap(class PassiveInfluenceSyste
 }
 
 // Range: 0x800A7C2C -> 0x800A7FC0
-unsigned char PassiveInfluenceSystem::RemoveObjectFromMap(class PassiveInfluenceSystem * const this /* r31 */, class cXObject * pObj /* r29 */) {
+// this: r31
+unsigned char PassiveInfluenceSystem::RemoveObjectFromMap(class cXObject * pObj /* r29 */) {
     // Local variables
     struct ListIterator personItr; // r1+0x64
     class PassiveInfluencePerson * instancePtr; // r30
@@ -139,7 +149,8 @@ unsigned char PassiveInfluenceSystem::RemoveObjectFromMap(class PassiveInfluence
 }
 
 // Range: 0x800A7FC0 -> 0x800A8308
-void PassiveInfluenceSystem::MoveObjectInWorld(class PassiveInfluenceSystem * const this /* r29 */, class cXObject * pObj /* r30 */) {
+// this: r29
+void PassiveInfluenceSystem::MoveObjectInWorld(class cXObject * pObj /* r30 */) {
     // Local variables
     struct ListIterator personInf; // r1+0x4C
     struct ListIterator objInf; // r1+0x48
@@ -155,7 +166,8 @@ void PassiveInfluenceSystem::MoveObjectInWorld(class PassiveInfluenceSystem * co
 }
 
 // Range: 0x800A8308 -> 0x800A8E3C
-class PassiveInfluencePerson * PassiveInfluenceSystem::NotifySimulator(class PassiveInfluenceSystem * const this /* r31 */, class cXPerson * person /* r1+0x8 */, int x /* r21 */, int y /* r20 */) {
+// this: r31
+class PassiveInfluencePerson * PassiveInfluenceSystem::NotifySimulator(class cXPerson * person /* r1+0x8 */, int x /* r21 */, int y /* r20 */) {
     // Local variables
     unsigned char bTextHandled; // r25
     struct ListIterator itr; // r1+0x38
@@ -213,7 +225,8 @@ unsigned char PassiveInfluenceSystem::ShouldItemAffectPerson(class PassiveInflue
 }
 
 // Range: 0x800A8F64 -> 0x800A91D4
-unsigned char PassiveInfluenceSystem::CheckObjects(class PassiveInfluenceSystem * const this /* r29 */, int ticksToCheck /* r30 */) {
+// this: r29
+unsigned char PassiveInfluenceSystem::CheckObjects(int ticksToCheck /* r30 */) {
     // Local variables
     struct ListIterator target; // r1+0x3C
     struct ListIterator lockout; // r1+0x38
@@ -228,7 +241,8 @@ unsigned char PassiveInfluenceSystem::CheckObjects(class PassiveInfluenceSystem 
 }
 
 // Range: 0x800A91D4 -> 0x800A9368
-unsigned char PassiveInfluenceSystem::SetInfluenceMotiveDelta(class PassiveInfluenceSystem * const this /* r30 */, class cXObject * pObj /* r31 */) {
+// this: r30
+unsigned char PassiveInfluenceSystem::SetInfluenceMotiveDelta(class cXObject * pObj /* r31 */) {
     // Local variables
     struct TypedMotiveInc motiveInc; // r1+0x28
     struct ListIterator personItr; // r1+0x24
@@ -236,14 +250,16 @@ unsigned char PassiveInfluenceSystem::SetInfluenceMotiveDelta(class PassiveInflu
 }
 
 // Range: 0x800A9368 -> 0x800A94B8
-void PassiveInfluenceSystem::ClearInfluenceMotiveDeltas(class PassiveInfluenceSystem * const this /* r30 */, class cXObject * pObj /* r31 */) {
+// this: r30
+void PassiveInfluenceSystem::ClearInfluenceMotiveDeltas(class cXObject * pObj /* r31 */) {
     // Local variables
     struct ListIterator personItr; // r1+0x24
     struct ListIterator movableItr; // r1+0x20
 }
 
 // Range: 0x800A94B8 -> 0x800A958C
-unsigned char PassiveInfluenceSystem::SetSkillNameID(class PassiveInfluenceSystem * const this /* r29 */, class cXObject * pObj /* r30 */, const struct AnimRef * skillID /* r31 */) {
+// this: r29
+unsigned char PassiveInfluenceSystem::SetSkillNameID(class cXObject * pObj /* r30 */, const struct AnimRef * skillID /* r31 */) {
     // Local variables
     struct ListIterator it; // r1+0x14
 }
@@ -257,7 +273,8 @@ void PassiveInfluenceMap::CalculateTargetArea(class PassiveInfluenceItem * pItem
 }
 
 // Range: 0x800A9640 -> 0x800A97A0
-void PassiveInfluenceMap::FilledArc_Line(class PassiveInfluenceMap * const this /* r31 */, int xLeft /* r25 */, int xRight /* r26 */, int yLine /* r27 */, class PassiveInfluenceItem * pItem /* r28 */) {
+// this: r31
+void PassiveInfluenceMap::FilledArc_Line(int xLeft /* r25 */, int xRight /* r26 */, int yLine /* r27 */, class PassiveInfluenceItem * pItem /* r28 */) {
     // Local variables
     class cFixedWorld * world; // r30
     class cXObject * originObject; // r29
@@ -273,7 +290,8 @@ void PassiveInfluenceMap::FilledArc_Polygon(int angle /* r24 */, int * nVerts /*
 }
 
 // Range: 0x800A99B0 -> 0x800A9C84
-void PassiveInfluenceMap::FilledArc(class PassiveInfluenceMap * const this /* r25 */, int radius /* r28 */, int xPos /* r27 */, int yPos /* r24 */, class PassiveInfluenceItem * pItem /* r26 */) {
+// this: r25
+void PassiveInfluenceMap::FilledArc(int radius /* r28 */, int xPos /* r27 */, int yPos /* r24 */, class PassiveInfluenceItem * pItem /* r26 */) {
     // Local variables
     struct vert2 vertList[6]; // r1+0x10
     int numVerts; // r1+0x8
@@ -290,7 +308,8 @@ void PassiveInfluenceMap::FilledArc(class PassiveInfluenceMap * const this /* r2
 }
 
 // Range: 0x800A9C84 -> 0x800AA000
-void PassiveInfluenceMap::CalculateAffectedArea(class PassiveInfluenceMap * const this /* r26 */, class PassiveInfluenceItem * pItem /* r27 */) {
+// this: r26
+void PassiveInfluenceMap::CalculateAffectedArea(class PassiveInfluenceItem * pItem /* r27 */) {
     // Local variables
     class cFixedWorld * world; // r31
     class CTilePt pt; // r1+0x10

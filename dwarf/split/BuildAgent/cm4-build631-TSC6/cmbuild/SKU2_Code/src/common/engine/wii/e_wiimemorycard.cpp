@@ -25,16 +25,19 @@ static void LoadNandBanner() {
 }
 
 // Range: 0x802AFCF8 -> 0x802AFD38
-void * EWiiMemoryCard::~EWiiMemoryCard(class EWiiMemoryCard * const this /* r31 */) {}
+// this: r31
+EWiiMemoryCard::~EWiiMemoryCard() {}
 
 // Range: 0x802AFD38 -> 0x802AFD80
-enum EMC_OpStatus EWiiMemoryCard::InitMemoryCard(class EWiiMemoryCard * const this /* r31 */) {}
+// this: r31
+enum EMC_OpStatus EWiiMemoryCard::InitMemoryCard() {}
 
 // Range: 0x802AFD80 -> 0x802AFD88
 enum EMC_OpStatus EWiiMemoryCard::UnInitMemoryCard() {}
 
 // Range: 0x802AFD88 -> 0x802B01D0
-enum EMC_OpStatus EWiiMemoryCard::LoadDataChunkS(class EWiiMemoryCard * const this /* r29 */, const char * pFileName /* r28 */, unsigned int size /* r30 */, unsigned int offset /* r27 */, void * pOutData /* r31 */) {
+// this: r29
+enum EMC_OpStatus EWiiMemoryCard::LoadDataChunkS(const char * pFileName /* r28 */, unsigned int size /* r30 */, unsigned int offset /* r27 */, void * pOutData /* r31 */) {
     // Local variables
     enum EMC_OpStatus status; // r0
     class NandFile file; // r1+0x8
@@ -50,7 +53,8 @@ enum EMC_OpStatus EWiiMemoryCard::OpenForIO() {}
 enum EMC_OpStatus EWiiMemoryCard::CloseForIO() {}
 
 // Range: 0x802B0210 -> 0x802B0658
-enum EMC_OpStatus EWiiMemoryCard::SaveDataChunkS(class EWiiMemoryCard * const this /* r29 */, const char * pFileName /* r28 */, unsigned int size /* r30 */, unsigned int offset /* r27 */, void * pInData /* r31 */) {
+// this: r29
+enum EMC_OpStatus EWiiMemoryCard::SaveDataChunkS(const char * pFileName /* r28 */, unsigned int size /* r30 */, unsigned int offset /* r27 */, void * pInData /* r31 */) {
     // Local variables
     enum EMC_OpStatus status; // r0
     class NandFile file; // r1+0x8
@@ -60,7 +64,8 @@ enum EMC_OpStatus EWiiMemoryCard::SaveDataChunkS(class EWiiMemoryCard * const th
 enum EMC_OpStatus EWiiMemoryCard::SaveDataS() {}
 
 // Range: 0x802B0670 -> 0x802B0D10
-enum EMC_OpStatus EWiiMemoryCard::CreateFileS(class EWiiMemoryCard * const this /* r31 */, const char * pFileName /* r28 */, unsigned int size /* r27 */) {
+// this: r31
+enum EMC_OpStatus EWiiMemoryCard::CreateFileS(const char * pFileName /* r28 */, unsigned int size /* r27 */) {
     // Local variables
     int result; // r0
     enum EMC_OpStatus status; // r29
@@ -76,7 +81,8 @@ enum EMC_OpStatus EWiiMemoryCard::CreateFileS(class EWiiMemoryCard * const this 
 }
 
 // Range: 0x802B0D10 -> 0x802B0F40
-enum EMC_OpStatus EWiiMemoryCard::DeleteDataS(class EWiiMemoryCard * const this /* r30 */, const char * pFileName /* r31 */) {
+// this: r30
+enum EMC_OpStatus EWiiMemoryCard::DeleteDataS(const char * pFileName /* r31 */) {
     // Local variables
     enum EMC_OpStatus status; // r0
 
@@ -91,7 +97,8 @@ enum EMC_OpStatus EWiiMemoryCard::FormatCardS() {}
 enum EMC_OpStatus EWiiMemoryCard::UnFormatCardS() {}
 
 // Range: 0x802B0F50 -> 0x802B10F0
-enum EMC_OpStatus EWiiMemoryCard::IsSpaceAvailable(class EWiiMemoryCard * const this /* r31 */, unsigned char & available /* r29 */) {
+// this: r31
+enum EMC_OpStatus EWiiMemoryCard::IsSpaceAvailable(unsigned char & available /* r29 */) {
     // Local variables
     unsigned long answer; // r1+0x8
     unsigned long blocks; // r30
@@ -100,7 +107,8 @@ enum EMC_OpStatus EWiiMemoryCard::IsSpaceAvailable(class EWiiMemoryCard * const 
 }
 
 // Range: 0x802B10F0 -> 0x802B128C
-enum EMC_OpStatus EWiiMemoryCard::IsEnoughFiles(class EWiiMemoryCard * const this /* r31 */, unsigned char & available /* r29 */) {
+// this: r31
+enum EMC_OpStatus EWiiMemoryCard::IsEnoughFiles(unsigned char & available /* r29 */) {
     // Local variables
     unsigned long answer; // r1+0x8
     unsigned long inodes; // r30
@@ -124,7 +132,8 @@ void EWiiMemoryCard::SetupSaveTypes() {}
 void EWiiMemoryCard::SetGameCode() {}
 
 // Range: 0x802B12D4 -> 0x802B135C
-enum EMC_OpStatus EWiiMemoryCard::DoesFileExist(class EWiiMemoryCard * const this /* r29 */, unsigned char & bExists /* r30 */) {}
+// this: r29
+enum EMC_OpStatus EWiiMemoryCard::DoesFileExist(unsigned char & bExists /* r30 */) {}
 
 // Range: 0x802B135C -> 0x802B136C
 enum EMC_OpStatus EWiiMemoryCard::GetSectorSize() {}

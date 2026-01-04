@@ -5,13 +5,15 @@
     Code range: 0x802DC6F4 -> 0x802DCB74
 */
 // Range: 0x802DC6F4 -> 0x802DC76C
-void * EResPrefetchFile::~EResPrefetchFile(class EResPrefetchFile * const this /* r30 */) {}
+// this: r30
+EResPrefetchFile::~EResPrefetchFile() {}
 
 // Range: 0x802DC76C -> 0x802DC770
 void EResPrefetchFile::Destroy() {}
 
 // Range: 0x802DC770 -> 0x802DCADC
-unsigned long EResPrefetchFile::Read(class EResPrefetchFile * const this /* r29 */, unsigned long nSize /* r26 */) {
+// this: r29
+unsigned long EResPrefetchFile::Read(unsigned long nSize /* r26 */) {
     // Local variables
     unsigned long bytesRead; // r31
     unsigned char * pFirstAfterEnd; // r6

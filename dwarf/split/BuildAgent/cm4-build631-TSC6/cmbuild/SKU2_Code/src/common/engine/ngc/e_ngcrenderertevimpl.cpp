@@ -11,7 +11,8 @@ void NGCRendererTevImpl::SetupTextureCoordinateGeneration() {
 }
 
 // Range: 0x802C6520 -> 0x802C67F8
-void NGCRendererTevImpl::SetupTEVStageVertexIntensity(class NGCRendererTevImpl * const this /* r27 */, int & tevStageIdInt /* r28 */) {
+// this: r27
+void NGCRendererTevImpl::SetupTEVStageVertexIntensity(int & tevStageIdInt /* r28 */) {
     // Local variables
     enum _GXTevStageID tevStageId; // r10
 
@@ -21,7 +22,8 @@ void NGCRendererTevImpl::SetupTEVStageVertexIntensity(class NGCRendererTevImpl *
 }
 
 // Range: 0x802C67F8 -> 0x802C6E9C
-void NGCRendererTevImpl::Setup2TEVStageTexture(class NGCRendererTevImpl * const this /* r16 */, int pass /* r17 */, int & tevStageIdInt /* r18 */, int texcoord /* r19 */, int & texmap /* r20 */, enum _GXTevRegID outputRegister /* r21 */) {
+// this: r16
+void NGCRendererTevImpl::Setup2TEVStageTexture(int pass /* r17 */, int & tevStageIdInt /* r18 */, int texcoord /* r19 */, int & texmap /* r20 */, enum _GXTevRegID outputRegister /* r21 */) {
     // Local variables
     enum _GXTevStageID tevStageId; // r22
 
@@ -30,7 +32,8 @@ void NGCRendererTevImpl::Setup2TEVStageTexture(class NGCRendererTevImpl * const 
 }
 
 // Range: 0x802C6E9C -> 0x802C7784
-void NGCRendererTevImpl::SetupFinalBlendMode(class NGCRendererTevImpl * const this /* r27 */, int & tevStageId /* r28 */, int passCount /* r29 */) {
+// this: r27
+void NGCRendererTevImpl::SetupFinalBlendMode(int & tevStageId /* r28 */, int passCount /* r29 */) {
     // Local variables
     unsigned char firstPassSrcAlphaAsTevStage; // r30
     unsigned char k0; // r0
@@ -45,7 +48,8 @@ void NGCRendererTevImpl::SetupFinalBlendMode(class NGCRendererTevImpl * const th
 }
 
 // Range: 0x802C7784 -> 0x802C9430
-void NGCRendererTevImpl::UpdateTEVStages(class NGCRendererTevImpl * const this /* r15 */, int passCount /* r16 */, float fixedAlpha /* f31 */, unsigned int overrideColor /* f2 */, unsigned char useShadowTexture /* f3 */) {
+// this: r15
+void NGCRendererTevImpl::UpdateTEVStages(int passCount /* r16 */, float fixedAlpha /* f31 */, unsigned int overrideColor /* f2 */, unsigned char useShadowTexture /* f3 */) {
     // Local variables
     int tevStageIdInt; // r1+0x3C
     int texCoord; // r20
@@ -73,7 +77,8 @@ void NGCRendererTevImpl::UpdateTEVStages(class NGCRendererTevImpl * const this /
 }
 
 // Range: 0x802C9430 -> 0x802CA038
-void NGCRendererTevImpl::UpdateTEVStagesSimple(class NGCRendererTevImpl * const this /* r27 */, int nPasses /* r28 */, int iPass /* r29 */, float fixedAlpha /* f31 */, unsigned char useShadowTexture /* r30 */) {
+// this: r27
+void NGCRendererTevImpl::UpdateTEVStagesSimple(int nPasses /* r28 */, int iPass /* r29 */, float fixedAlpha /* f31 */, unsigned char useShadowTexture /* r30 */) {
     // Local variables
     int tevStageIdInt; // r1+0x14
     int texMap; // r1+0x10

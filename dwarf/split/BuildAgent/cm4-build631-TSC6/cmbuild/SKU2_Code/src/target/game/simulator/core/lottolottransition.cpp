@@ -5,7 +5,8 @@
     Code range: 0x80121C50 -> 0x80122974
 */
 // Range: 0x80121C50 -> 0x80121C88
-unsigned char Transition::IsAvailable(class Transition * const this /* r31 */) {}
+// this: r31
+unsigned char Transition::IsAvailable() {}
 
 // Range: 0x80121C88 -> 0x801221CC
 void LotToLotTransition::Initialize() {

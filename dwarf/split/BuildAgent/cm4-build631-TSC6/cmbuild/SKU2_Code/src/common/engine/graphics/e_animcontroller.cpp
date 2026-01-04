@@ -5,19 +5,24 @@
     Code range: 0x80286F78 -> 0x80290DB0
 */
 // Range: 0x80286F78 -> 0x80287088
-void * EACTrack::EACTrack(class EACTrack * const this /* r30 */) {}
+// this: r30
+EACTrack::EACTrack() {}
 
 // Range: 0x80287088 -> 0x802871AC
-void * EAnimController::EAnimController(class EAnimController * const this /* r30 */) {}
+// this: r30
+EAnimController::EAnimController() {}
 
 // Range: 0x802871AC -> 0x80287260
-void * EAnimController::~EAnimController(class EAnimController * const this /* r30 */) {}
+// this: r30
+EAnimController::~EAnimController() {}
 
 // Range: 0x80287260 -> 0x80287354
-void EAnimController::Deallocate(class EAnimController * const this /* r30 */) {}
+// this: r30
+void EAnimController::Deallocate() {}
 
 // Range: 0x80287354 -> 0x80287430
-void EAnimController::DeallocateNodes(class EAnimController * const this /* r28 */) {
+// this: r28
+void EAnimController::DeallocateNodes() {
     // Local variables
     int i; // r29
 
@@ -26,7 +31,8 @@ void EAnimController::DeallocateNodes(class EAnimController * const this /* r28 
 }
 
 // Range: 0x80287430 -> 0x8028798C
-void EAnimController::Init(class EAnimController * const this /* r30 */, unsigned int characterId /* r26 */, enum eAnimatedObjectType animatedType /* r31 */, unsigned int flags /* r25 */) {
+// this: r30
+void EAnimController::Init(unsigned int characterId /* r26 */, enum eAnimatedObjectType animatedType /* r31 */, unsigned int flags /* r25 */) {
     // Local variables
     int nodeArraySize; // r27
     int i; // r26
@@ -59,7 +65,8 @@ void EAnimController::ResumeTrack() {}
 void EAnimController::CalcOrientMatrix(const class EVec3 & vPosIn /* r29 */, const class EVec3 & vRotIn /* r30 */, class EMat4 & mOrientOut /* r31 */) {}
 
 // Range: 0x80287F34 -> 0x802883BC
-void EAnimController::Update(class EAnimController * const this /* r29 */, class EVec3 * pvPosInOut /* r30 */, class EVec3 * pvRotInOut /* r31 */, class EVec3 & vScaleIn /* r25 */) {
+// this: r29
+void EAnimController::Update(class EVec3 * pvPosInOut /* r30 */, class EVec3 * pvRotInOut /* r31 */, class EVec3 & vScaleIn /* r25 */) {
     // Local variables
     class EVec3 vAccumPos; // r1+0x5C
     class EVec3 vAccumRot; // r1+0x50
@@ -76,7 +83,8 @@ void EAnimController::Update(class EAnimController * const this /* r29 */, class
 }
 
 // Range: 0x802883BC -> 0x80288530
-void EAnimController::ProcessEvents(class EAnimController * const this /* r22 */, class TNodeList & eventRanges /* r31 */, unsigned char addToRunList /* r23 */) {
+// this: r22
+void EAnimController::ProcessEvents(class TNodeList & eventRanges /* r31 */, unsigned char addToRunList /* r23 */) {
     // Local variables
     class NLIteratorPtrType * i; // r26
     float minrange; // f30
@@ -88,7 +96,8 @@ void EAnimController::ProcessEvents(class EAnimController * const this /* r22 */
 }
 
 // Range: 0x80288530 -> 0x80289034
-void EAnimController::UpdateTrack(class EAnimController * const this /* r25 */, class EACTrack * pTrack /* r26 */, class EVec3 & vAccumPos /* r27 */, class EVec3 & vAccumRot /* r8 */, class TNodeList & eventRanges /* r28 */) {
+// this: r25
+void EAnimController::UpdateTrack(class EACTrack * pTrack /* r26 */, class EVec3 & vAccumPos /* r27 */, class EVec3 & vAccumRot /* r8 */, class TNodeList & eventRanges /* r28 */) {
     // Local variables
     class TNodeList trackEventRanges; // r1+0x104
     float intensity; // f31
@@ -126,7 +135,8 @@ float EAnimController::GetSlavePos() {
 }
 
 // Range: 0x802890B0 -> 0x80289278
-void EAnimController::Compute(class EAnimController * const this /* r28 */, const class EMat4 & mOrient /* r29 */) {
+// this: r28
+void EAnimController::Compute(const class EMat4 & mOrient /* r29 */) {
     // Local variables
     class EACTrack * pTrack; // r30
     class EACTrack * pSrcTrack; // r1+0x10
@@ -136,7 +146,8 @@ void EAnimController::Compute(class EAnimController * const this /* r28 */, cons
 }
 
 // Range: 0x80289278 -> 0x802893F4
-void EAnimController::CalcTightBoundBox(class EAnimController * const this /* r26 */, class EBound3 & bOut /* r27 */, unsigned char * includeNodes /* r28 */) {
+// this: r26
+void EAnimController::CalcTightBoundBox(class EBound3 & bOut /* r27 */, unsigned char * includeNodes /* r28 */) {
     // Local variables
     unsigned char first; // r30
     int i; // r29
@@ -158,7 +169,8 @@ void EAnimController::AnimateSpecial(class ERAnim * pAnim /* r28 */, float pos /
 }
 
 // Range: 0x80289780 -> 0x80289C5C
-void EAnimController::BlendTrackAttributes(class EAnimController * const this /* r22 */, class EACTrack * pTrack /* r23 */, const struct EACAttributeStates & srcAttributeStates /* r24 */, struct EACAttributeStates & destAttributeStates /* r25 */) {
+// this: r22
+void EAnimController::BlendTrackAttributes(class EACTrack * pTrack /* r23 */, const struct EACAttributeStates & srcAttributeStates /* r24 */, struct EACAttributeStates & destAttributeStates /* r25 */) {
     // Local variables
     float intensity; // f28
     struct EACNodeState * pSrcNodeState; // r30
@@ -181,7 +193,8 @@ void EAnimController::BlendTrackAttributes(class EAnimController * const this /*
 }
 
 // Range: 0x80289C5C -> 0x8028A20C
-void EAnimController::Animate(class EAnimController * const this /* r20 */, class EACTrack * pTrack /* r21 */, struct EACAttributeStates & destAttributes /* r22 */) {
+// this: r20
+void EAnimController::Animate(class EACTrack * pTrack /* r21 */, struct EACAttributeStates & destAttributes /* r22 */) {
     // Local variables
     class EAnimNodeDataPos * pNodeDataPos; // r26
     struct EACTrackNodeStreams * pNodeStreams; // r25
@@ -216,7 +229,8 @@ void EAnimController::Layer(float u /* f31 */, struct EACNodeState & curState /*
 }
 
 // Range: 0x8028A764 -> 0x8028AD00
-void EAnimController::ComputeNonUniformScaleMatrices(class EAnimController * const this /* r23 */, const class EMat4 & mOrient /* r24 */) {
+// this: r23
+void EAnimController::ComputeNonUniformScaleMatrices(const class EMat4 & mOrient /* r24 */) {
     // Local variables
     int nodeCounter; // r31
     class EMat4 * mNodes; // r30
@@ -232,7 +246,8 @@ void EAnimController::ComputeNonUniformScaleMatrices(class EAnimController * con
 }
 
 // Range: 0x8028AD00 -> 0x8028ADD0
-unsigned char EAnimController::RunTimeBoneTranslation(class EAnimController * const this /* r26 */, class EMat4 & mLocal /* r27 */, int boneIdx /* r28 */, unsigned char initMatrix /* r29 */) {
+// this: r26
+unsigned char EAnimController::RunTimeBoneTranslation(class EMat4 & mLocal /* r27 */, int boneIdx /* r28 */, unsigned char initMatrix /* r29 */) {
     // Local variables
     unsigned char retVal; // r30
     class EVec3 * pDeltaTrans; // r0
@@ -240,7 +255,8 @@ unsigned char EAnimController::RunTimeBoneTranslation(class EAnimController * co
 }
 
 // Range: 0x8028ADD0 -> 0x8028B090
-void EAnimController::ComputeUniformScaleMatrices(class EAnimController * const this /* r23 */, const class EMat4 & mOrient /* r24 */) {
+// this: r23
+void EAnimController::ComputeUniformScaleMatrices(const class EMat4 & mOrient /* r24 */) {
     // Local variables
     int nodeCounter; // r31
     class EMat4 * mNodes; // r30
@@ -254,7 +270,8 @@ void EAnimController::ComputeUniformScaleMatrices(class EAnimController * const 
 }
 
 // Range: 0x8028B090 -> 0x8028B21C
-void EAnimController::ComputeMatrices(class EAnimController * const this /* r30 */, const class EMat4 & mOrient /* r31 */) {
+// this: r30
+void EAnimController::ComputeMatrices(const class EMat4 & mOrient /* r31 */) {
     // References
     // -> class EFrameAllocGroup _frag;
     // -> int _evenodd;
@@ -262,13 +279,15 @@ void EAnimController::ComputeMatrices(class EAnimController * const this /* r30 
 }
 
 // Range: 0x8028B21C -> 0x8028B2A0
-void EAnimController::StopAllTracks(class EAnimController * const this /* r29 */) {
+// this: r29
+void EAnimController::StopAllTracks() {
     // Local variables
     int i; // r30
 }
 
 // Range: 0x8028B2A0 -> 0x8028B4D4
-void EAnimController::DeactivateTrack(class EAnimController * const this /* r29 */, class EACTrack * pTrack /* r30 */) {
+// this: r29
+void EAnimController::DeactivateTrack(class EACTrack * pTrack /* r30 */) {
     // Local variables
     class RBIteratorPtrType * si; // r28
     class EACTrack * pStaticTrack; // r27
@@ -276,14 +295,16 @@ void EAnimController::DeactivateTrack(class EAnimController * const this /* r29 
 }
 
 // Range: 0x8028B4D4 -> 0x8028B8D0
-void EAnimController::RemoveTrackFromOutgoingList(class EAnimController * const this /* r22 */) {
+// this: r22
+void EAnimController::RemoveTrackFromOutgoingList() {
     // Local variables
     int outgoingIndex; // r23
     class EACTrack * nextOutgoingTrack; // r6
 }
 
 // Range: 0x8028B8D0 -> 0x8028BE80
-void EAnimController::CreateStreams(class EAnimController * const this /* r22 */, class EACTrack * pTrack /* r23 */) {
+// this: r22
+void EAnimController::CreateStreams(class EACTrack * pTrack /* r23 */) {
     // Local variables
     int streamSize; // r21
     int cNode; // r26
@@ -311,7 +332,8 @@ void EAnimController::StopTrack() {}
 unsigned int EAnimController::GetTrackAnimId() {}
 
 // Range: 0x8028C27C -> 0x8028CC50
-class EACTrack * EAnimController::SetTrackAnim(class EAnimController * const this /* r22 */, enum eTrackFlags trackFlags /* r23 */, unsigned int animId /* r24 */, int blendType /* r30 */, float blendDuration /* f31 */, class EACTrack * * ppOutgoingTrack /* r25 */) {
+// this: r22
+class EACTrack * EAnimController::SetTrackAnim(enum eTrackFlags trackFlags /* r23 */, unsigned int animId /* r24 */, int blendType /* r30 */, float blendDuration /* f31 */, class EACTrack * * ppOutgoingTrack /* r25 */) {
     // Local variables
     class EACTrack * pTrack; // r28
     class EACTrack * pOutgoingTrack; // r27
@@ -324,7 +346,8 @@ class EACTrack * EAnimController::SetTrackAnim(class EAnimController * const thi
 }
 
 // Range: 0x8028CC50 -> 0x8028CCAC
-class EACTrack * EAnimController::SetTrackAnim(class EAnimController * const this /* r30 */, enum eTrackFlags trackFlags /* r31 */) {
+// this: r30
+class EACTrack * EAnimController::SetTrackAnim(enum eTrackFlags trackFlags /* r31 */) {
     // Local variables
     unsigned int id; // r0
 }
@@ -342,7 +365,8 @@ float EAnimController::GetTrackIntensity() {}
 float EAnimController::GetTrackSpeed() {}
 
 // Range: 0x8028D1CC -> 0x8028D2F0
-void EAnimController::BlendAllOutgoingTracks(class EAnimController * const this /* r28 */, float intensity /* f29 */, float duration /* f30 */, unsigned char includeExternal /* r29 */) {
+// this: r28
+void EAnimController::BlendAllOutgoingTracks(float intensity /* f29 */, float duration /* f30 */, unsigned char includeExternal /* r29 */) {
     // Local variables
     int i; // r30
 }
@@ -376,7 +400,8 @@ void EAnimController::BlendTrackIntensity() {
 void EAnimController::SetTrackPhaseLock(class EACTrack * pTrackToBeLocked /* r30 */, class EACTrack * pMasterTrack /* r31 */, float offset /* f31 */) {}
 
 // Range: 0x8028D818 -> 0x8028DA60
-void EAnimController::SetProceduralTrack(class EAnimController * const this /* r27 */, enum eTrackFlags trackFlags /* r28 */, void (* pfnUpdateCallback)(unsigned int, class EACTrack *, class ERCharacter *, class EVec3 &, class EVec3 &) /* r29 */, void (* pfnComputeCallback)(unsigned int, class EACTrack *, class EMat4 &, class ERCharacter *, struct EACNodeState *) /* r30 */, unsigned int userParam /* r31 */) {}
+// this: r27
+void EAnimController::SetProceduralTrack(enum eTrackFlags trackFlags /* r28 */, void (* pfnUpdateCallback)(unsigned int, class EACTrack *, class ERCharacter *, class EVec3 &, class EVec3 &) /* r29 */, void (* pfnComputeCallback)(unsigned int, class EACTrack *, class EMat4 &, class ERCharacter *, struct EACNodeState *) /* r30 */, unsigned int userParam /* r31 */) {}
 
 // Range: 0x8028DA60 -> 0x8028DCB8
 void EAnimController::RestartTrack() {
@@ -449,7 +474,8 @@ void EAnimController::SetAllTrackSpeed() {
 unsigned int EAnimController::VisibilityTestNoCompute() {}
 
 // Range: 0x8028EC84 -> 0x8028EFDC
-void EAnimController::CalcVisibilitySphere(class EAnimController * const this /* r28 */, const class EMat4 & mOrient /* r29 */, class EBoundSphere & sphereOut /* r30 */) {
+// this: r28
+void EAnimController::CalcVisibilitySphere(const class EMat4 & mOrient /* r29 */, class EBoundSphere & sphereOut /* r30 */) {
     // Local variables
     class EBoundSphere sphere; // r1+0x58
     int i; // r31
@@ -468,16 +494,19 @@ class EVec3 EAnimController::GetAnimRootNodeTrans() {
 }
 
 // Range: 0x8028F070 -> 0x8028F0F4
-void EAnimController::Draw(class EAnimController * const this /* r29 */, class ERC * prc /* r30 */, class ERModel * pRModel /* r31 */) {
+// this: r29
+void EAnimController::Draw(class ERC * prc /* r30 */, class ERModel * pRModel /* r31 */) {
     // References
     // -> int _framecount;
 }
 
 // Range: 0x8028F0F4 -> 0x8028F110
-void EAnimController::SetVertexMorphWeights(const class EAnimController * const this /* r5 */) {}
+// this: r5
+void EAnimController::SetVertexMorphWeights() const {}
 
 // Range: 0x8028F110 -> 0x8028F26C
-class EVec3 EAnimController::CalcNodePos(class EAnimController * const this /* r30 */, int nIndex /* r31 */) {
+// this: r30
+class EVec3 EAnimController::CalcNodePos(int nIndex /* r31 */) {
     // Local variables
     class EMat4 & mOrient; // r0
 }
@@ -498,23 +527,28 @@ unsigned int EAnimController::GetNodeChildNodeIdx() {}
 int EAnimController::GetNodeParentIdx() {}
 
 // Range: 0x8028F3F4 -> 0x8028F574
-void EAnimController::CalcNodeBindPoseInv(class EAnimController * const this /* r29 */, int nIndex /* r30 */, class EMat4 & mOrientOut /* r31 */) {}
+// this: r29
+void EAnimController::CalcNodeBindPoseInv(int nIndex /* r30 */, class EMat4 & mOrientOut /* r31 */) {}
 
 // Range: 0x8028F574 -> 0x8028F6AC
-void EAnimController::CalcNodeBindPose(class EAnimController * const this /* r29 */, int nIndex /* r30 */, class EMat4 & mOrientOut /* r31 */) {}
+// this: r29
+void EAnimController::CalcNodeBindPose(int nIndex /* r30 */, class EMat4 & mOrientOut /* r31 */) {}
 
 // Range: 0x8028F6AC -> 0x8028F970
-void EAnimController::CalcNodeOrient(class EAnimController * const this /* r29 */, int nIndex /* r30 */, class EMat4 & mOrientOut /* r31 */) {
+// this: r29
+void EAnimController::CalcNodeOrient(int nIndex /* r30 */, class EMat4 & mOrientOut /* r31 */) {
     // Local variables
     class EMat4 mNode; // r1+0x88
     class EMat4 mLocal; // r1+0x48
 }
 
 // Range: 0x8028F970 -> 0x8028FAE4
-void EAnimController::SetTrackActive(class EAnimController * const this /* r30 */, class EACTrack * pTrack /* r31 */, unsigned char active /* r27 */) {}
+// this: r30
+void EAnimController::SetTrackActive(class EACTrack * pTrack /* r31 */, unsigned char active /* r27 */) {}
 
 // Range: 0x8028FAE4 -> 0x8028FBC0
-void EAnimController::Enable(class EAnimController * const this /* r30 */, const class EMat4 & mOrient /* r6 */) {
+// this: r30
+void EAnimController::Enable(const class EMat4 & mOrient /* r6 */) {
     // Local variables
     int size; // r31
 
@@ -526,7 +560,8 @@ void EAnimController::Enable(class EAnimController * const this /* r30 */, const
 void EAnimController::SetTrackScale() {}
 
 // Range: 0x8028FBEC -> 0x8028FF00
-void EAnimController::MirrorBones(class EAnimController * const this /* r29 */, struct EACNodeState * pNodeStates /* r30 */) {
+// this: r29
+void EAnimController::MirrorBones(struct EACNodeState * pNodeStates /* r30 */) {
     // Local variables
     struct EACNodeState tmp; // r1+0x8
     class RBIteratorPtrType * iter; // r31
@@ -555,7 +590,8 @@ unsigned char EAnimController::IsMirrorNeeded() {
 void EAnimController::AddBoneConstantTranslations() {}
 
 // Range: 0x80290000 -> 0x80290100
-void EAnimController::UpdateEnableBoneTranslationFlag(class EAnimController * const this /* r29 */) {
+// this: r29
+void EAnimController::UpdateEnableBoneTranslationFlag() {
     // Local variables
     unsigned char isTransEnabled; // r31
     class RBIteratorPtrType * iter; // r30
@@ -572,7 +608,8 @@ void EAnimController::AvoidInitialization() {
 }
 
 // Range: 0x802901F8 -> 0x802903A4
-void EAnimController::FindAndBlendStaticallyBlendedTracks(class EAnimController * const this /* r29 */, class EACTrack * pTrack /* r30 */) {
+// this: r29
+void EAnimController::FindAndBlendStaticallyBlendedTracks(class EACTrack * pTrack /* r30 */) {
     // Local variables
     class EACTrack * pStaticBlendTrack; // r31
     struct EACAttributeStates staticTrackAttributeStates; // r1+0x8
@@ -583,7 +620,8 @@ void EAnimController::FindAndBlendStaticallyBlendedTracks(class EAnimController 
 }
 
 // Range: 0x802903A4 -> 0x80290760
-void EAnimController::ComputeBlendOutgoingTracks(class EAnimController * const this /* r18 */, struct EACAttributeStates & srcTrackAttributes /* r19 */, class EACTrack * & pSrcTrack /* r20 */) {
+// this: r18
+void EAnimController::ComputeBlendOutgoingTracks(struct EACAttributeStates & srcTrackAttributes /* r19 */, class EACTrack * & pSrcTrack /* r20 */) {
     // Local variables
     int i; // r24
     int tempNodeArrayIndex; // r23
@@ -601,7 +639,8 @@ void EAnimController::ComputeBlendOutgoingTracks(class EAnimController * const t
 class EACTrack * EAnimController::GetFirstTrack() {}
 
 // Range: 0x80290808 -> 0x8029094C
-void EAnimController::BlendAllOverlayTracks(class EAnimController * const this /* r28 */, struct EACAttributeStates & srcAttributeStates /* r29 */, const class EMat4 & mOrient /* r30 */) {
+// this: r28
+void EAnimController::BlendAllOverlayTracks(struct EACAttributeStates & srcAttributeStates /* r29 */, const class EMat4 & mOrient /* r30 */) {
     // Local variables
     int i; // r31
     class EACTrack * pTrack; // r25

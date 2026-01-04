@@ -5,16 +5,19 @@
     Code range: 0x80265F28 -> 0x80266798
 */
 // Range: 0x80265F28 -> 0x80265F78
-void * ENCamera::ENCamera(class ENCamera * const this /* r31 */) {
+// this: r31
+ENCamera::ENCamera() {
     // References
     // -> struct [anonymous] __vt__8ENCamera;
 }
 
 // Range: 0x80265F78 -> 0x80265FD4
-void * ENCamera::~ENCamera(class ENCamera * const this /* r30 */) {}
+// this: r30
+ENCamera::~ENCamera() {}
 
 // Range: 0x80265FD4 -> 0x802661D4
-void ENCamera::Write(class ENCamera * const this /* r22 */, class EStream & s /* r23 */) {
+// this: r22
+void ENCamera::Write(class EStream & s /* r23 */) {
     // Local variables
     int nVersion; // r0
     int i; // r24
@@ -22,7 +25,8 @@ void ENCamera::Write(class ENCamera * const this /* r22 */, class EStream & s /*
 }
 
 // Range: 0x802661D4 -> 0x802663FC
-void ENCamera::Read(class ENCamera * const this /* r31 */, class EStream & s /* r23 */) {
+// this: r31
+void ENCamera::Read(class EStream & s /* r23 */) {
     // Local variables
     int nVersion; // r1+0x8
     int i; // r24
@@ -32,7 +36,8 @@ void ENCamera::Read(class ENCamera * const this /* r31 */, class EStream & s /* 
 }
 
 // Range: 0x802663FC -> 0x80266604
-void ENCamera::Read(class ENCamera * const this /* r27 */, class EFile * s /* r28 */) {
+// this: r27
+void ENCamera::Read(class EFile * s /* r28 */) {
     // Local variables
     int nVersion; // r1+0x8
     int i; // r29
@@ -42,7 +47,8 @@ void ENCamera::Read(class ENCamera * const this /* r27 */, class EFile * s /* r2
 }
 
 // Range: 0x80266604 -> 0x80266798
-unsigned int ENCamera::Read(class ENCamera * const this /* r26 */, unsigned char * buff /* r27 */) {
+// this: r26
+unsigned int ENCamera::Read(unsigned char * buff /* r27 */) {
     // Local variables
     unsigned char * start; // r29
     int nVersion; // r1+0x8

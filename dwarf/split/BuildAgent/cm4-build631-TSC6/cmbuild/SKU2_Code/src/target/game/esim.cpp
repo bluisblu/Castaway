@@ -5,7 +5,8 @@
     Code range: 0x8022035C -> 0x80222F04
 */
 // Range: 0x8022035C -> 0x80220668
-void * ESim::ESim(class ESim * const this /* r30 */, class cXPerson * person /* r31 */) {
+// this: r30
+ESim::ESim(class cXPerson * person /* r31 */) {
     // References
     // -> class ESimsDataManager _simsdataman;
     // -> static class EVec3 bigPosVal;
@@ -14,7 +15,8 @@ void * ESim::ESim(class ESim * const this /* r30 */, class cXPerson * person /* 
 }
 
 // Range: 0x80220668 -> 0x802207B0
-void * ESim::~ESim(class ESim * const this /* r29 */) {
+// this: r29
+ESim::~ESim() {
     // References
     // -> volatile class ESim * s_changingSim;
     // -> class EGraphics * _pGfx;
@@ -23,7 +25,8 @@ void * ESim::~ESim(class ESim * const this /* r29 */) {
 }
 
 // Range: 0x802207B0 -> 0x80220928
-void ESim::InitModel(class ESim * const this /* r30 */) {
+// this: r30
+void ESim::InitModel() {
     // Local variables
     class ESleep sleeper; // r1+0x8
     const struct NPC * pServiceNPC; // r4
@@ -34,17 +37,20 @@ void ESim::InitModel(class ESim * const this /* r30 */) {
 }
 
 // Range: 0x80220928 -> 0x80220A40
-void ESim::InitShadow(class ESim * const this /* r30 */) {
+// this: r30
+void ESim::InitShadow() {
     // Local variables
     class EMat4 mShadow; // r1+0x8
     unsigned int modelId; // r31
 }
 
 // Range: 0x80220A40 -> 0x80220AE0
-void ESim::DestroyShadow(class ESim * const this /* r30 */) {}
+// this: r30
+void ESim::DestroyShadow() {}
 
 // Range: 0x80220AE0 -> 0x80220CB8
-void ESim::InitAnimation(class ESim * const this /* r31 */) {
+// this: r31
+void ESim::InitAnimation() {
     // Local variables
     unsigned int i; // r27
     unsigned int i; // r27
@@ -62,7 +68,8 @@ void ESim::InitAnimation(class ESim * const this /* r31 */) {
 }
 
 // Range: 0x80220CB8 -> 0x80220DF4
-void ESim::UnloadRequiredAnimations(class ESim * const this /* r28 */) {
+// this: r28
+void ESim::UnloadRequiredAnimations() {
     // Local variables
     unsigned int i; // r28
     unsigned int i; // r28
@@ -79,7 +86,8 @@ void ESim::UnloadRequiredAnimations(class ESim * const this /* r28 */) {
 }
 
 // Range: 0x80220DF4 -> 0x80220EF0
-void ESim::InitServiceNPC(class ESim * const this /* r28 */, const struct NPC * pServiceNPC /* r29 */) {
+// this: r28
+void ESim::InitServiceNPC(const struct NPC * pServiceNPC /* r29 */) {
     // Local variables
     char guidStr[32]; // r1+0x8
     unsigned int nPredefinedSimDatasetID; // r30
@@ -91,21 +99,24 @@ void ESim::InitServiceNPC(class ESim * const this /* r28 */, const struct NPC * 
 }
 
 // Range: 0x80220EF0 -> 0x802210CC
-void ESim::InitNormalSim(class ESim * const this /* r30 */) {
+// this: r30
+void ESim::InitNormalSim() {
     // Local variables
     class QTimer timer; // r1+0x10
     class EString strFullName; // r1+0x8
 }
 
 // Range: 0x802210CC -> 0x802211C4
-unsigned char ESim::ReadModelFromCache(class ESim * const this /* r30 */) {
+// this: r30
+unsigned char ESim::ReadModelFromCache() {
     // Local variables
     unsigned int guid; // r31
     class SimModelTSC6 * pSimModel; // r0
 }
 
 // Range: 0x802211C4 -> 0x80221370
-unsigned char ESim::TryCacheModel(class ESim * const this /* r29 */, unsigned char bDeleteModel /* r30 */) {
+// this: r29
+unsigned char ESim::TryCacheModel(unsigned char bDeleteModel /* r30 */) {
     // Local variables
     class SimModelTSC6 * pCachedSimModel; // r0
     unsigned char retval; // r31
@@ -127,14 +138,16 @@ unsigned char ESim::IsChimp() {}
 unsigned char ESim::IsBoar() {}
 
 // Range: 0x80221398 -> 0x8022144C
-void ESim::DrawPlumbBob(class ESim * const this /* r31 */) {
+// this: r31
+void ESim::DrawPlumbBob() {
     // Local variables
     class PlumbBob * pPlumbBob; // r0
     float scaleFactor; // f0
 }
 
 // Range: 0x8022144C -> 0x802215B0
-float ESim::UpdatePlumbBob(class ESim * const this /* r29 */, class EVec3 & vInnerColor /* r30 */, class EVec3 & vOuterColor /* r31 */) {
+// this: r29
+float ESim::UpdatePlumbBob(class EVec3 & vInnerColor /* r30 */, class EVec3 & vOuterColor /* r31 */) {
     // Local variables
     float scaleFactor; // f1
 
@@ -145,14 +158,16 @@ float ESim::UpdatePlumbBob(class ESim * const this /* r29 */, class EVec3 & vInn
 }
 
 // Range: 0x802215B0 -> 0x80221618
-void ESim::DrawSkillMeter(class ESim * const this /* r30 */, class ERC * prc /* r31 */) {
+// this: r30
+void ESim::DrawSkillMeter(class ERC * prc /* r31 */) {
     // Local variables
     class EVec3 vColorInner; // r1+0x14
     class EVec3 vColorOuter; // r1+0x8
 }
 
 // Range: 0x80221618 -> 0x80221714
-void ESim::SetPlumbBobState(class ESim * const this /* r30 */, unsigned int plumbBobState /* r31 */) {}
+// this: r30
+void ESim::SetPlumbBobState(unsigned int plumbBobState /* r31 */) {}
 
 // Range: 0x80221714 -> 0x802217E8
 void ESim::PropOrderTableCallback(struct ELevelDrawData & renderParam /* r28 */) {
@@ -191,7 +206,8 @@ void ESim::CensorOrderTableCallback(struct ELevelDrawData & renderParam /* r29 *
 }
 
 // Range: 0x80221A94 -> 0x80221AE0
-void ESim::DrawCharacterModel(class ESim * const this /* r9 */) {}
+// this: r9
+void ESim::DrawCharacterModel() {}
 
 // Range: 0x80221AE0 -> 0x80221BA0
 void ESim::ServiceNpcOrderTableCallback(struct ELevelDrawData & renderParam /* r29 */) {
@@ -202,7 +218,8 @@ void ESim::ServiceNpcOrderTableCallback(struct ELevelDrawData & renderParam /* r
 }
 
 // Range: 0x80221BA0 -> 0x80221C9C
-void ESim::DrawSimAndNpcCommonItems(class ESim * const this /* r30 */, class ERC * prc /* r31 */) {
+// this: r30
+void ESim::DrawSimAndNpcCommonItems(class ERC * prc /* r31 */) {
     // Local variables
     class EMat4 mat; // r1+0x8
     float Height; // f1
@@ -219,7 +236,8 @@ void ESim::SkillMeterOrderTableCallback(struct ELevelDrawData & renderParam /* r
 }
 
 // Range: 0x80221D28 -> 0x80221F58
-void ESim::DrawCursorHighLight(class ESim * const this /* r30 */, class ERC * prc /* r31 */, unsigned char bDoAnimation /* r29 */) {
+// this: r30
+void ESim::DrawCursorHighLight(class ERC * prc /* r31 */, unsigned char bDoAnimation /* r29 */) {
     // Local variables
     class EVec3 playerColor; // r1+0x1C
     class EMat4 mOrient; // r1+0x68
@@ -240,7 +258,8 @@ void ESim::DrawCursorHighLight(class ESim * const this /* r30 */, class ERC * pr
 }
 
 // Range: 0x80221F58 -> 0x80221FB4
-void ESim::DoAnimation(class ESim * const this /* r31 */) {
+// this: r31
+void ESim::DoAnimation() {
     // Local variables
     const class EMat4 & mOrient; // r0
 }
@@ -249,7 +268,8 @@ void ESim::DoAnimation(class ESim * const this /* r31 */) {
 void ESim::DoLightingCalculation() {}
 
 // Range: 0x80221FB8 -> 0x80222438
-void ESim::Draw(class ESim * const this /* r29 */, struct ELevelDrawData & renderParam /* r30 */) {
+// this: r29
+void ESim::Draw(struct ELevelDrawData & renderParam /* r30 */) {
     // Local variables
     struct ELights * pLights; // r31
     class EVec3 ambColor; // r1+0x5C
@@ -275,7 +295,8 @@ void ESim::Draw(class ESim * const this /* r29 */, struct ELevelDrawData & rende
 }
 
 // Range: 0x80222438 -> 0x80222570
-void ESim::Update(class ESim * const this /* r31 */) {
+// this: r31
+void ESim::Update() {
     // Local variables
     int currCensorState; // r3
     class ERShader * pShader; // r1+0x8
@@ -285,14 +306,16 @@ void ESim::Update(class ESim * const this /* r31 */) {
 }
 
 // Range: 0x80222570 -> 0x80222614
-unsigned int ESim::VisibilityTest(class ESim * const this /* r30 */, class E3DWindow & win /* r31 */) {
+// this: r30
+unsigned int ESim::VisibilityTest(class E3DWindow & win /* r31 */) {
     // Local variables
     class EMat4 mOrient; // r1+0x20
     class EBound3 box; // r1+0x8
 }
 
 // Range: 0x80222614 -> 0x80222744
-void ESim::UpdateShowerCurtain(class ESim * const this /* r31 */) {
+// this: r31
+void ESim::UpdateShowerCurtain() {
     // Local variables
     int censorship; // r0
 
@@ -302,7 +325,8 @@ void ESim::UpdateShowerCurtain(class ESim * const this /* r31 */) {
 }
 
 // Range: 0x80222744 -> 0x80222914
-void ESim::UpdateSkinChange(class ESim * const this /* r31 */) {
+// this: r31
+void ESim::UpdateSkinChange() {
     // Local variables
     const struct NPC * pServiceNPC; // r0
 
@@ -314,10 +338,12 @@ void ESim::UpdateSkinChange(class ESim * const this /* r31 */) {
 }
 
 // Range: 0x80222914 -> 0x80222978
-unsigned char ESim::CreateSkinAsync(class ESim * const this /* r31 */) {}
+// this: r31
+unsigned char ESim::CreateSkinAsync() {}
 
 // Range: 0x80222978 -> 0x80222A44
-void ESim::CreateThumbnail(class ESim * const this /* r30 */) {
+// this: r30
+void ESim::CreateThumbnail() {
     // Local variables
     class QTimer timer; // r1+0x8
     class SimImageMaker sim; // r1+0x10
@@ -334,16 +360,19 @@ void ESim::tProcessCommand() {
 unsigned char ESim::HasQueuedOperation() {}
 
 // Range: 0x80222A84 -> 0x80222AD4
-void ESim::UpdateQueuedOperation(class ESim * const this /* r31 */) {
+// this: r31
+void ESim::UpdateQueuedOperation() {
     // References
     // -> class EApp * _pApp;
 }
 
 // Range: 0x80222AD4 -> 0x80222B24
-void ESim::DrawSim(class ESim * const this /* r30 */, unsigned char bDrawOn /* r31 */) {}
+// this: r30
+void ESim::DrawSim(unsigned char bDrawOn /* r31 */) {}
 
 // Range: 0x80222B24 -> 0x80222BE8
-class EVec3 ESim::GetObCenter(class ESim * const this /* r31 */) {
+// this: r31
+class EVec3 ESim::GetObCenter() {
     // Local variables
     class EVec3 vPelvis; // r1+0x18
     class EBound3 mBound; // r1+0x28
@@ -366,16 +395,19 @@ void ESim::UpdatePlumbBob() {
 }
 
 // Range: 0x80222C64 -> 0x80222D18
-void ESim::UpdateShadow(class ESim * const this /* r30 */) {
+// this: r30
+void ESim::UpdateShadow() {
     // Local variables
     unsigned char drawShadow; // r31
 }
 
 // Range: 0x80222D18 -> 0x80222DA4
-void ESim::ChangeClothing(class ESim * const this /* r30 */) {}
+// this: r30
+void ESim::ChangeClothing() {}
 
 // Range: 0x80222DA4 -> 0x80222DEC
-void ESimShadow::DrawShadow(class ESimShadow * const this /* r30 */, struct ELevelDrawData & renderParam /* r31 */) {}
+// this: r30
+void ESimShadow::DrawShadow(struct ELevelDrawData & renderParam /* r31 */) {}
 
 // Range: 0x80222DEC -> 0x80222E34
 void ESimShadow::GetShadowCenter(class EVec3 & pos /* r31 */) {}

@@ -11,22 +11,10 @@ void Interaction::SetDebugOverride() {}
 void Interaction::SetAvailable() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\target\game\simulator\core\interaction.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x80079084 -> 0x8007908C
-*/
 // Range: 0x80079084 -> 0x8007908C
 int Interaction::GetTreeTabEntryIndex() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\target\game\simulator\core\interaction.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x800A66D8 -> 0x800A6818
-*/
 // Range: 0x800A66D8 -> 0x800A66E4
 unsigned char Interaction::GetDebugOverride() {}
 
@@ -91,12 +79,6 @@ unsigned char Interaction::GetAutoFirstSelect() {}
 float Interaction::GetAttenuation() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\target\game\simulator\core\interaction.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x8011B0F0 -> 0x8011B1F8
-*/
 // Range: 0x8011B0F0 -> 0x8011B110
 void Interaction::SetAutoFirstSelect() {}
 
@@ -125,12 +107,6 @@ void Interaction::SetCarryNameOver() {}
 unsigned char Interaction::SetShader() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\target\game\simulator\core\interaction.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x8022773C -> 0x80227748
-*/
 // Range: 0x8022773C -> 0x80227748
 unsigned char Interaction::GetDisabled() {}
 

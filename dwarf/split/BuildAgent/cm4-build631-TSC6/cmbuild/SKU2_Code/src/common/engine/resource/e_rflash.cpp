@@ -5,13 +5,14 @@
     Code range: 0x802DCB74 -> 0x802DD4C4
 */
 // Range: 0x802DCB74 -> 0x802DCBB4
-void * ERFlash::ERFlash() {
+ERFlash::ERFlash() {
     // References
     // -> struct [anonymous] __vt__7ERFlash;
 }
 
 // Range: 0x802DCBB4 -> 0x802DCC44
-void * ERFlash::~ERFlash(class ERFlash * const this /* r30 */) {
+// this: r30
+ERFlash::~ERFlash() {
     // References
     // -> class EFlashManager _flashman;
     // -> struct [anonymous] __vt__9EResource;
@@ -19,25 +20,29 @@ void * ERFlash::~ERFlash(class ERFlash * const this /* r30 */) {
 }
 
 // Range: 0x802DCC44 -> 0x802DCC8C
-void ERFlash::Deallocate(class ERFlash * const this /* r31 */) {}
+// this: r31
+void ERFlash::Deallocate() {}
 
 // Range: 0x802DCC8C -> 0x802DCD60
-void ERFlash::Load(class ERFlash * const this /* r30 */, class EFile * pFile /* r31 */) {
+// this: r30
+void ERFlash::Load(class EFile * pFile /* r31 */) {
     // Local variables
     class EDataHeader resourceHeader; // r1+0x8
 }
 
 // Range: 0x802DCD60 -> 0x802DCDA0
-class FlashBigFile * ERFlash::GetFlashBigData(class ERFlash * const this /* r31 */) {
+// this: r31
+class FlashBigFile * ERFlash::GetFlashBigData() {
     // Local variables
     class FlashBigFile * temp; // r0
 }
 
 // Range: 0x802DCDA0 -> 0x802DCDB0
-void * FlashBigFile::FlashBigFile() {}
+FlashBigFile::FlashBigFile() {}
 
 // Range: 0x802DCDB0 -> 0x802DCEF8
-void * FlashBigFile::~FlashBigFile(class FlashBigFile * const this /* r24 */) {
+// this: r24
+FlashBigFile::~FlashBigFile() {
     // Local variables
     int numFiles; // r0
     int curFile; // r27
@@ -55,7 +60,8 @@ unsigned char FlashBigFile::IsTexture(int index /* r1+0x8 */) {
 }
 
 // Range: 0x802DCF68 -> 0x802DD17C
-void FlashBigFile::LoadFiles(class FlashBigFile * const this /* r27 */, class EFile * file /* r28 */) {
+// this: r27
+void FlashBigFile::LoadFiles(class EFile * file /* r28 */) {
     // Local variables
     char header[24]; // r1+0x18
     int fileoffset; // r0
@@ -71,7 +77,8 @@ void FlashBigFile::LoadFiles(class FlashBigFile * const this /* r27 */, class EF
 }
 
 // Range: 0x802DD17C -> 0x802DD1C8
-void * FlashBigFile::GetDataSection(class FlashBigFile * const this /* r31 */) {
+// this: r31
+void * FlashBigFile::GetDataSection() {
     // Local variables
     int offset; // r1+0x10
     int size; // r1+0xC
@@ -79,19 +86,22 @@ void * FlashBigFile::GetDataSection(class FlashBigFile * const this /* r31 */) {
 }
 
 // Range: 0x802DD1C8 -> 0x802DD238
-struct AptAuxGeoInfo * FlashBigFile::GetGeometry(class FlashBigFile * const this /* r31 */) {
+// this: r31
+struct AptAuxGeoInfo * FlashBigFile::GetGeometry() {
     // Local variables
     struct AptAuxGeoInfo * pInfo; // r31
 }
 
 // Range: 0x802DD238 -> 0x802DD2D4
-class ERTexture * FlashBigFile::GetTexture(class FlashBigFile * const this /* r31 */, int & width /* r29 */, int & height /* r30 */) {
+// this: r31
+class ERTexture * FlashBigFile::GetTexture(int & width /* r29 */, int & height /* r30 */) {
     // Local variables
     class FlashTexture * flashTex; // r31
 }
 
 // Range: 0x802DD2D4 -> 0x802DD4C4
-class FlashTexture * FlashBigFile::CreateTexture(class FlashBigFile * const this /* r29 */, int index /* r1+0x8 */) {
+// this: r29
+class FlashTexture * FlashBigFile::CreateTexture(int index /* r1+0x8 */) {
     // Local variables
     unsigned char * texData; // r31
     unsigned char * pData; // r30

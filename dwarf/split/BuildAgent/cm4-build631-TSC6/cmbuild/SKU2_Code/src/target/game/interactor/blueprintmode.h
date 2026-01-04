@@ -11,7 +11,8 @@ unsigned char BlueprintInteractor::GetIsBlueprintModeEnabled() {
 }
 
 // Range: 0x8005DF6C -> 0x8005DFB0
-void * BlueprintInteractor::BlueprintInteractor(class BlueprintInteractor * const this /* r31 */) {
+// this: r31
+BlueprintInteractor::BlueprintInteractor() {
     // References
     // -> struct [anonymous] __vt__Q216InteractorModule19BlueprintInteractor;
 }

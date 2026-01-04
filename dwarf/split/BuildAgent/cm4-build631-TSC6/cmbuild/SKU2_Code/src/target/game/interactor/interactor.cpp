@@ -5,7 +5,8 @@
     Code range: 0x8005E058 -> 0x800601B8
 */
 // Range: 0x8005E058 -> 0x8005E1AC
-void * CursorMovementTracker::CursorMovementTracker(class CursorMovementTracker * const this /* r31 */) {}
+// this: r31
+CursorMovementTracker::CursorMovementTracker() {}
 
 // Range: 0x8005E1AC -> 0x8005E1B4
 void CursorMovementTracker::SetEdgeFuzziness() {}
@@ -14,10 +15,12 @@ void CursorMovementTracker::SetEdgeFuzziness() {}
 void CursorMovementTracker::SetCursor(int xpos /* r30 */, int ypos /* r31 */) {}
 
 // Range: 0x8005E200 -> 0x8005E240
-void CursorMovementTracker::Reset(class CursorMovementTracker * const this /* r31 */) {}
+// this: r31
+void CursorMovementTracker::Reset() {}
 
 // Range: 0x8005E240 -> 0x8005E3CC
-float CursorMovementTracker::GetTotalBorderInfluence(class CursorMovementTracker * const this /* r28 */, int xpos /* r29 */, int ypos /* r31 */, class EVec2 * outVec /* r30 */) {
+// this: r28
+float CursorMovementTracker::GetTotalBorderInfluence(int xpos /* r29 */, int ypos /* r31 */, class EVec2 * outVec /* r30 */) {
     // Local variables
     float leftInf; // r1+0x14
     float rightInf; // r1+0x10
@@ -37,7 +40,8 @@ float CursorMovementTracker::GetEdgeInfluence() {
 }
 
 // Range: 0x8005E44C -> 0x8005E664
-void CursorMovementTracker::UpdateCursorPositionFromJoystick(class CursorMovementTracker * const this /* r29 */) {
+// this: r29
+void CursorMovementTracker::UpdateCursorPositionFromJoystick() {
     // Local variables
     float input_dx; // f0
     float input_dy; // f0
@@ -56,7 +60,8 @@ void CursorMovementTracker::UpdateCursorPositionFromJoystick(class CursorMovemen
 }
 
 // Range: 0x8005E664 -> 0x8005E714
-void CursorMovementTracker::UpdateCurrentFuzzyEdgeInfluence(class CursorMovementTracker * const this /* r29 */, int screen_dx /* r30 */, int screen_dy /* r31 */) {
+// this: r29
+void CursorMovementTracker::UpdateCurrentFuzzyEdgeInfluence(int screen_dx /* r30 */, int screen_dy /* r31 */) {
     // Local variables
     class EVec2 edgeVec; // r1+0x18
     float currentFuzzyInfluence; // f0
@@ -64,7 +69,8 @@ void CursorMovementTracker::UpdateCurrentFuzzyEdgeInfluence(class CursorMovement
 }
 
 // Range: 0x8005E714 -> 0x8005E86C
-void CursorMovementTracker::UpdateCursorPositionFromControllerCursor(class CursorMovementTracker * const this /* r30 */) {
+// this: r30
+void CursorMovementTracker::UpdateCursorPositionFromControllerCursor() {
     // Local variables
     float newPixelX; // f31
     float newPixelY; // f30
@@ -73,7 +79,8 @@ void CursorMovementTracker::UpdateCursorPositionFromControllerCursor(class Curso
 }
 
 // Range: 0x8005E86C -> 0x8005E910
-unsigned char CursorMovementTracker::UseControllerCursorPosInsteadOfJoystick(class CursorMovementTracker * const this /* r31 */) {
+// this: r31
+unsigned char CursorMovementTracker::UseControllerCursorPosInsteadOfJoystick() {
     // References
     // -> class EGlobal _globals;
 }
@@ -86,7 +93,8 @@ void CursorMovementTracker::UpdateCursorAlpha() {
 }
 
 // Range: 0x8005E9F4 -> 0x8005EC40
-void CursorMovementTracker::Update(class CursorMovementTracker * const this /* r26 */, const class EVec2 & stickInput /* r27 */, class EVec2 & clearOutput /* r28 */, class EVec2 & edgeOutput /* r29 */, unsigned char forceEdge /* r30 */, const class EVec2 & controllerCursorPosition /* r31 */) {
+// this: r26
+void CursorMovementTracker::Update(const class EVec2 & stickInput /* r27 */, class EVec2 & clearOutput /* r28 */, class EVec2 & edgeOutput /* r29 */, unsigned char forceEdge /* r30 */, const class EVec2 & controllerCursorPosition /* r31 */) {
     // Local variables
     unsigned char bUseControllerCursorInsteadOfJoystick; // r0
 
@@ -97,10 +105,12 @@ void CursorMovementTracker::Update(class CursorMovementTracker * const this /* r
 }
 
 // Range: 0x8005EC40 -> 0x8005EC8C
-void * WiiMoteToMenuInteractor::WiiMoteToMenuInteractor(class WiiMoteToMenuInteractor * const this /* r31 */) {}
+// this: r31
+WiiMoteToMenuInteractor::WiiMoteToMenuInteractor() {}
 
 // Range: 0x8005EC8C -> 0x8005EE28
-unsigned char WiiMoteToMenuInteractor::CheckForNunchukDpadEmulation(class WiiMoteToMenuInteractor * const this /* r31 */, unsigned int menuItemCount /* r27 */, unsigned int * outNewSelectedItem /* r28 */, unsigned char bReverseOrder /* r29 */) {
+// this: r31
+unsigned char WiiMoteToMenuInteractor::CheckForNunchukDpadEmulation(unsigned int menuItemCount /* r27 */, unsigned int * outNewSelectedItem /* r28 */, unsigned char bReverseOrder /* r29 */) {
     // Local variables
     unsigned char retVal; // r30
     float nunchukTilt; // r1+0x8
@@ -109,13 +119,15 @@ unsigned char WiiMoteToMenuInteractor::CheckForNunchukDpadEmulation(class WiiMot
 }
 
 // Range: 0x8005EE28 -> 0x8005EE9C
-unsigned char WiiMoteToMenuInteractor::IsCursorInBoundingBox(class WiiMoteToMenuInteractor * const this /* r30 */, class EController * pCtrl /* r31 */) {
+// this: r30
+unsigned char WiiMoteToMenuInteractor::IsCursorInBoundingBox(class EController * pCtrl /* r31 */) {
     // Local variables
     class EVec2 controllerCursorPosition; // r1+0x10
 }
 
 // Range: 0x8005EE9C -> 0x8005EFB8
-unsigned char WiiMoteToMenuInteractor::IsCursorInScrollBar(class WiiMoteToMenuInteractor * const this /* r28 */, class EController * pCtrl /* r29 */, float scrollWidth /* f30 */, float barFraction /* f31 */, unsigned char & bUp /* r30 */) {
+// this: r28
+unsigned char WiiMoteToMenuInteractor::IsCursorInScrollBar(class EController * pCtrl /* r29 */, float scrollWidth /* f30 */, float barFraction /* f31 */, unsigned char & bUp /* r30 */) {
     // Local variables
     unsigned char bRetVal; // r31
     class EVec2 controllerCursorPosition; // r1+0x8
@@ -123,7 +135,8 @@ unsigned char WiiMoteToMenuInteractor::IsCursorInScrollBar(class WiiMoteToMenuIn
 }
 
 // Range: 0x8005EFB8 -> 0x8005F0F4
-void WiiMoteToMenuInteractor::SetBoundingBox_Int(class WiiMoteToMenuInteractor * const this /* r31 */, int x1 /* r27 */, int y1 /* r28 */, int x2 /* r29 */, int y2 /* r30 */) {
+// this: r31
+void WiiMoteToMenuInteractor::SetBoundingBox_Int(int x1 /* r27 */, int y1 /* r28 */, int x2 /* r29 */, int y2 /* r30 */) {
     // Local variables
     int left; // r1+0x14
     int right; // r1+0x10
@@ -138,10 +151,12 @@ void WiiMoteToMenuInteractor::SetBoundingBox_Int(class WiiMoteToMenuInteractor *
 }
 
 // Range: 0x8005F0F4 -> 0x8005F1A0
-void WiiMoteToGridInteractor::SetMaxItems(class WiiMoteToGridInteractor * const this /* r29 */, int max /* r30 */) {}
+// this: r29
+void WiiMoteToGridInteractor::SetMaxItems(int max /* r30 */) {}
 
 // Range: 0x8005F1A0 -> 0x8005F4B8
-unsigned char WiiMoteToMenuInteractor::CheckForWiiMoteDpadEmulation(class WiiMoteToMenuInteractor * const this /* r28 */, class EController * pCtrl /* r25 */, unsigned int menuItemCount /* r29 */, unsigned int * outNewSelectedItem /* r30 */, unsigned char bReverseOrder /* r26 */, unsigned char bAllowUnselected /* r27 */) {
+// this: r28
+unsigned char WiiMoteToMenuInteractor::CheckForWiiMoteDpadEmulation(class EController * pCtrl /* r25 */, unsigned int menuItemCount /* r29 */, unsigned int * outNewSelectedItem /* r30 */, unsigned char bReverseOrder /* r26 */, unsigned char bAllowUnselected /* r27 */) {
     // Local variables
     unsigned char retVal; // r31
     class EVec2 controllerCursorPosition; // r1+0x18
@@ -170,16 +185,19 @@ unsigned char WiiMoteToMenuInteractor::DoWiiMoteDpadEmulation(unsigned int curre
 }
 
 // Range: 0x8005F580 -> 0x8005F59C
-void * MenuItemPosition::MenuItemPosition() {}
+MenuItemPosition::MenuItemPosition() {}
 
 // Range: 0x8005F59C -> 0x8005F5DC
-void * MenuItemPosition::~MenuItemPosition(class MenuItemPosition * const this /* r31 */) {}
+// this: r31
+MenuItemPosition::~MenuItemPosition() {}
 
 // Range: 0x8005F5DC -> 0x8005F670
-void * WiiMoteToGridInteractor::WiiMoteToGridInteractor(class WiiMoteToGridInteractor * const this /* r30 */) {}
+// this: r30
+WiiMoteToGridInteractor::WiiMoteToGridInteractor() {}
 
 // Range: 0x8005F670 -> 0x8005F6E0
-void * WiiMoteToGridInteractor::~WiiMoteToGridInteractor(class WiiMoteToGridInteractor * const this /* r30 */) {}
+// this: r30
+WiiMoteToGridInteractor::~WiiMoteToGridInteractor() {}
 
 // Range: 0x8005F6E0 -> 0x8005F71C
 void WiiMoteToGridInteractor::ValidateRow() {
@@ -189,7 +207,8 @@ void WiiMoteToGridInteractor::ValidateRow() {
 }
 
 // Range: 0x8005F71C -> 0x8005FA00
-void WiiMoteToGridInteractor::FindKeyByCursorIntersection(class WiiMoteToGridInteractor * const this /* r31 */) {
+// this: r31
+void WiiMoteToGridInteractor::FindKeyByCursorIntersection() {
     // Local variables
     class MenuItemPosition * selectedKey; // r6
     int i; // r0
@@ -204,7 +223,8 @@ void WiiMoteToGridInteractor::FindKeyByCursorIntersection(class WiiMoteToGridInt
 }
 
 // Range: 0x8005FA00 -> 0x8005FC80
-void WiiMoteToGridInteractor::AddKey(class WiiMoteToGridInteractor * const this /* r30 */) {
+// this: r30
+void WiiMoteToGridInteractor::AddKey() {
     // Local variables
     char * pStr; // r28
     int count; // [invalid]
@@ -212,19 +232,22 @@ void WiiMoteToGridInteractor::AddKey(class WiiMoteToGridInteractor * const this 
 }
 
 // Range: 0x8005FC80 -> 0x8005FCBC
-void * UndoRedoCommand::UndoRedoCommand(struct UndoRedoCommand * const this /* r31 */) {}
+// this: r31
+UndoRedoCommand::UndoRedoCommand() {}
 
 // Range: 0x8005FCBC -> 0x8005FCC8
 void UndoRedoCommand::Erase() {}
 
 // Range: 0x8005FCC8 -> 0x8005FDDC
-void * Interactor::Interactor(class Interactor * const this /* r28 */) {
+// this: r28
+Interactor::Interactor() {
     // References
     // -> struct [anonymous] __vt__Q216InteractorModule10Interactor;
 }
 
 // Range: 0x8005FDDC -> 0x8005FE20
-void Interactor::Update(class Interactor * const this /* r31 */) {
+// this: r31
+void Interactor::Update() {
     // References
     // -> class PyramidFade g_pyramidFade;
 }
@@ -236,19 +259,23 @@ void Interactor::AttachCamera() {}
 class ESimsCam * Interactor::GetAttachedCamera() {}
 
 // Range: 0x8005FE30 -> 0x8005FE50
-void Interactor::GetInteractorInfo(class Interactor * const this /* r5 */) {}
+// this: r5
+void Interactor::GetInteractorInfo() {}
 
 // Range: 0x8005FE50 -> 0x8005FE58
 void Interactor::SetExtents() {}
 
 // Range: 0x8005FE58 -> 0x8005FEEC
-void Interactor::OnCommandReleased(class Interactor * const this /* r31 */) {}
+// this: r31
+void Interactor::OnCommandReleased() {}
 
 // Range: 0x8005FEEC -> 0x8005FF70
-void Interactor::OnCommandUpdate(class Interactor * const this /* r31 */) {}
+// this: r31
+void Interactor::OnCommandUpdate() {}
 
 // Range: 0x8005FF70 -> 0x8005FFC8
-void Interactor::ResetInputState(class Interactor * const this /* r31 */) {}
+// this: r31
+void Interactor::ResetInputState() {}
 
 // Range: 0x8005FFC8 -> 0x8006000C
 float Interactor::GetSelectionRadius() {
@@ -258,7 +285,8 @@ float Interactor::GetSelectionRadius() {
 }
 
 // Range: 0x8006000C -> 0x8006001C
-void Interactor::UpdateObjectHighlights(class Interactor * const this /* r5 */) {}
+// this: r5
+void Interactor::UpdateObjectHighlights() {}
 
 // Range: 0x8006001C -> 0x80060024
 class EVec3 & Interactor::GetPos() {}
@@ -267,7 +295,8 @@ class EVec3 & Interactor::GetPos() {}
 class EVec3 & Interactor::GetSnappedPos() {}
 
 // Range: 0x8006002C -> 0x80060064
-void Interactor::SnapToPos(class Interactor * const this /* r31 */) {}
+// this: r31
+void Interactor::SnapToPos() {}
 
 // Range: 0x80060064 -> 0x8006008C
 unsigned char Interactor::EitherStickCentered() {}

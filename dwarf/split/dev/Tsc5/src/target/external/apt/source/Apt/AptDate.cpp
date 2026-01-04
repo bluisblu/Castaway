@@ -4,16 +4,16 @@
     Language: C++
     Code range: 0x8031A67C -> 0x8031D7CC
 */
+// total size: 0x8
 struct DateMembers {
-    // total size: 0x8
+    // Members
     char * szName; // offset 0x0, size 0x4
     int nIndex; // offset 0x4, size 0x4
 };
 static struct DateMembers wordlist[37]; // size: 0x128, address: 0x8045B8A8
 static signed char lookup[58]; // size: 0x3A, address: 0x8045B9D0
-class DateMembersIndex {
-    // total size: 0x1
-};
+// total size: 0x1
+class DateMembersIndex {};
 // Range: 0x8031A67C -> 0x8031A6E4
 unsigned char AptDate::dateIsYearLeap() {
     // Local variables
@@ -33,7 +33,8 @@ void AptDate::setDates(struct AptSysClock * mTM1 /* r30 */, struct AptSysClock *
 }
 
 // Range: 0x8031A898 -> 0x8031AB34
-int AptDate::getDayOfWeek(class AptDate * const this /* r25 */, int year /* r26 */, int month /* r27 */, int day /* r28 */) {
+// this: r25
+int AptDate::getDayOfWeek(int year /* r26 */, int month /* r27 */, int day /* r28 */) {
     // Local variables
     int nTmp1; // r31
     int nTmp2; // r4
@@ -44,7 +45,8 @@ int AptDate::getDayOfWeek(class AptDate * const this /* r25 */, int year /* r26 
 }
 
 // Range: 0x8031AB34 -> 0x8031B0F4
-void AptDate::toString(class AptDate * const this /* r30 */, class EAStringC & sDate /* r31 */) {
+// this: r30
+void AptDate::toString(class EAStringC & sDate /* r31 */) {
     // Local variables
     char days[7][4]; // r1+0x10
     char mon[12][4]; // r1+0x30
@@ -354,7 +356,6 @@ void AptDate::CleanNativeFunctions() {
     // -> class AptNativeFunction * psMethod_getDate;
 }
 
-struct {
-    // total size: 0x44
-} __vt__7AptDate; // size: 0x44, address: 0x8045BB50
+// total size: 0x44
+struct {} __vt__7AptDate; // size: 0x44, address: 0x8045BB50
 

@@ -44,12 +44,6 @@ struct DbgIterator StringAsVectorPolicy::Copy(const struct AptFileSavedInputStat
 struct AptFileSavedInputState * StringAsVectorPolicy::Copy(const struct AptFileSavedInputState * srcBegin /* r29 */, const struct AptFileSavedInputState * srcEnd /* r30 */, struct AptFileSavedInputState * dstBegin /* r31 */) {}
 
 
-/*
-    Compile unit: C:\dev\Tsc5\src\target\external\apt\source\Apt\_AptVector.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x80324514 -> 0x8032474C
-*/
 // Range: 0x80324514 -> 0x80324578
 class AptSharedPtr * StringAsVectorPolicy::Copy(class AptSharedPtr * srcBegin /* r29 */, class AptSharedPtr * srcEnd /* r30 */, class AptSharedPtr * dstBegin /* r31 */) {}
 

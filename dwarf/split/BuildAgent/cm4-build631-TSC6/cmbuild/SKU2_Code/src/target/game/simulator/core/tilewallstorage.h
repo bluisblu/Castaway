@@ -5,7 +5,8 @@
     Code range: 0x800EB4C4 -> 0x800EB5B4
 */
 // Range: 0x800EB4C4 -> 0x800EB4FC
-class TileWallStorage & TileWallStorage::Clear(class TileWallStorage * const this /* r31 */) {}
+// this: r31
+class TileWallStorage & TileWallStorage::Clear() {}
 
 // Range: 0x800EB4FC -> 0x800EB514
 unsigned char TileWallStorage::HasDiagonal() {}

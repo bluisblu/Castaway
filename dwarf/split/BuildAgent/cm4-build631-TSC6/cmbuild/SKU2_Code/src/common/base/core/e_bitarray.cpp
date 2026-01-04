@@ -5,7 +5,8 @@
     Code range: 0x8025EC24 -> 0x8025EEB4
 */
 // Range: 0x8025EC24 -> 0x8025EC74
-void * EBitArray::EBitArray(class EBitArray * const this /* r31 */) {
+// this: r31
+EBitArray::EBitArray() {
     // References
     // -> struct [anonymous] __vt__9EBitArray;
 }
@@ -17,13 +18,15 @@ void * EBitArray::AllocateMemory(unsigned long size /* r31 */) {}
 void EBitArray::FreeMemory(void * ptr /* r31 */) {}
 
 // Range: 0x8025ECE0 -> 0x8025ED2C
-void EBitArray::Deallocate(class EBitArray * const this /* r31 */) {}
+// this: r31
+void EBitArray::Deallocate() {}
 
 // Range: 0x8025ED2C -> 0x8025ED3C
 void EBitArray::SetGrowBy() {}
 
 // Range: 0x8025ED3C -> 0x8025EEA4
-void EBitArray::SetSize(class EBitArray * const this /* r26 */, int size /* r31 */, int allocSize /* r27 */) {
+// this: r26
+void EBitArray::SetSize(int size /* r31 */, int allocSize /* r27 */) {
     // Local variables
     int i; // [invalid]
     int heapAllocSize; // r29

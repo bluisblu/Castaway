@@ -5,7 +5,8 @@
     Code range: 0x800D83B4 -> 0x800DAAA4
 */
 // Range: 0x800D83B4 -> 0x800D87B0
-void RoomScoreConstants::UpdateConstants(class RoomScoreConstants * const this /* r31 */) {
+// this: r31
+void RoomScoreConstants::UpdateConstants() {
     // Local variables
     unsigned int fileID; // r29
     signed short id; // r0
@@ -38,13 +39,15 @@ void RoomScoreConstants::UpdateConstants(class RoomScoreConstants * const this /
 }
 
 // Range: 0x800D87B0 -> 0x800D8834
-void * RoomManager::RoomManager(class RoomManager * const this /* r30 */) {
+// this: r30
+RoomManager::RoomManager() {
     // References
     // -> class RoomManager * sRoomMgr;
 }
 
 // Range: 0x800D888C -> 0x800D896C
-void * RoomManager::~RoomManager(class RoomManager * const this /* r30 */) {
+// this: r30
+RoomManager::~RoomManager() {
     // Local variables
     struct rbtree_iterator i; // r1+0x10
     class Room * aRoom; // r0
@@ -54,35 +57,40 @@ void * RoomManager::~RoomManager(class RoomManager * const this /* r30 */) {
 }
 
 // Range: 0x800D896C -> 0x800D89E4
-void RoomManager::RoomScoreChanged(class RoomManager * const this /* r31 */) {
+// this: r31
+void RoomManager::RoomScoreChanged() {
     // Local variables
     struct rbtree_iterator f; // r1+0x10
     class Room * aRoom; // r0
 }
 
 // Range: 0x800D89E4 -> 0x800D8A5C
-void RoomManager::RoomLightingChanged(class RoomManager * const this /* r31 */) {
+// this: r31
+void RoomManager::RoomLightingChanged() {
     // Local variables
     struct rbtree_iterator f; // r1+0x10
     class Room * aRoom; // r0
 }
 
 // Range: 0x800D8A5C -> 0x800D8B08
-void RoomManager::AllRoomsLightingChanged(class RoomManager * const this /* r30 */) {
+// this: r30
+void RoomManager::AllRoomsLightingChanged() {
     // Local variables
     struct rbtree_iterator f; // r1+0x10
     class Room * aRoom; // r31
 }
 
 // Range: 0x800D8B08 -> 0x800D8BB4
-void RoomManager::AllRoomsScoreChanged(class RoomManager * const this /* r30 */) {
+// this: r30
+void RoomManager::AllRoomsScoreChanged() {
     // Local variables
     struct rbtree_iterator f; // r1+0x10
     class Room * aRoom; // r31
 }
 
 // Range: 0x800D8BB4 -> 0x800D8F50
-void RoomManager::ComputeRooms(class RoomManager * const this /* r27 */) {
+// this: r27
+void RoomManager::ComputeRooms() {
     // Local variables
     int houseArea; // r30
     struct rbtree_iterator i; // r1+0x20
@@ -103,14 +111,16 @@ void RoomManager::ComputeRooms(class RoomManager * const this /* r27 */) {
 }
 
 // Range: 0x800D8F50 -> 0x800D8FD0
-class Room * RoomManager::GetRoom(class RoomManager * const this /* r31 */, unsigned short inRoomID /* r1+0x8 */) {
+// this: r31
+class Room * RoomManager::GetRoom(unsigned short inRoomID /* r1+0x8 */) {
     // Local variables
     struct rbtree_iterator i; // r1+0x10
     class Room * aRoom; // r0
 }
 
 // Range: 0x800D8FD0 -> 0x800D90C4
-class Room * RoomManager::GetNewRoom(class RoomManager * const this /* r31 */, unsigned short inRoomID /* r1+0x8 */) {
+// this: r31
+class Room * RoomManager::GetNewRoom(unsigned short inRoomID /* r1+0x8 */) {
     // Local variables
     struct rbtree_iterator i; // r1+0x14
     class Room * aRoom; // r31
@@ -122,7 +132,8 @@ class Room * RoomManager::GetNewRoom(class RoomManager * const this /* r31 */, u
 void RoomManager::UpdateRooms() {}
 
 // Range: 0x800D90F8 -> 0x800D9270
-unsigned char RoomManager::ProcessDegenerateTile(class RoomManager * const this /* r27 */, const class CTilePt & inPt /* r28 */, unsigned short inRoom /* r29 */, enum Sides inSide /* r30 */) {
+// this: r27
+unsigned char RoomManager::ProcessDegenerateTile(const class CTilePt & inPt /* r28 */, unsigned short inRoom /* r29 */, enum Sides inSide /* r30 */) {
     // Local variables
     struct rbtree_iterator i; // r1+0x18
     enum Sides opposite_side; // r31
@@ -131,21 +142,24 @@ unsigned char RoomManager::ProcessDegenerateTile(class RoomManager * const this 
 }
 
 // Range: 0x800D9270 -> 0x800D93AC
-unsigned char RoomManager::ResolveDiagonal(class RoomManager * const this /* r26 */, const class CTilePt & inPt /* r27 */, class Room * * outRoom1 /* r28 */, class Room * * outRoom2 /* r29 */, enum Sides * outSide1 /* r30 */, enum Sides * outSide2 /* r31 */) {
+// this: r26
+unsigned char RoomManager::ResolveDiagonal(const class CTilePt & inPt /* r27 */, class Room * * outRoom1 /* r28 */, class Room * * outRoom2 /* r29 */, enum Sides * outSide1 /* r30 */, enum Sides * outSide2 /* r31 */) {
     // Local variables
     struct rbtree_iterator i; // r1+0x10
     struct pair v; // r1+0x14
 }
 
 // Range: 0x800D93F4 -> 0x800D94DC
-unsigned char RoomManager::ResolveDiagonal(class RoomManager * const this /* r26 */, const class CTilePt & inPt /* r27 */, unsigned short * outRoom1 /* r28 */, unsigned short * outRoom2 /* r29 */, enum Sides * outSide1 /* r30 */, enum Sides * outSide2 /* r31 */) {
+// this: r26
+unsigned char RoomManager::ResolveDiagonal(const class CTilePt & inPt /* r27 */, unsigned short * outRoom1 /* r28 */, unsigned short * outRoom2 /* r29 */, enum Sides * outSide1 /* r30 */, enum Sides * outSide2 /* r31 */) {
     // Local variables
     struct rbtree_iterator i; // r1+0x10
     struct pair v; // r1+0x14
 }
 
 // Range: 0x800D94DC -> 0x800D9584
-void RoomManager::ResetRooms(class RoomManager * const this /* r30 */) {
+// this: r30
+void RoomManager::ResetRooms() {
     // Local variables
     struct rbtree_iterator i; // r1+0x10
     class Room * rm; // r31
@@ -161,14 +175,16 @@ float RoomManager::GetOutsideAmbientLevel() {
 }
 
 // Range: 0x800D9604 -> 0x800D9688
-void RoomManager::ClearRoomPartitions(class RoomManager * const this /* r31 */) {
+// this: r31
+void RoomManager::ClearRoomPartitions() {
     // Local variables
     struct rbtree_iterator i; // r1+0x10
     class Room * rm; // r0
 }
 
 // Range: 0x800D9688 -> 0x800D9750
-void RoomManager::ResetRoomManager(class RoomManager * const this /* r31 */) {
+// this: r31
+void RoomManager::ResetRoomManager() {
     // Local variables
     struct rbtree_iterator i; // r1+0x14
     class map tempRooms; // r1+0x18
@@ -194,7 +210,8 @@ void RoomManager::SetRoomIntensityColorScale(int roomId /* r26 */, unsigned char
 }
 
 // Range: 0x800D999C -> 0x800D9A70
-void RoomManager::ChangeLightingGroup(class RoomManager * const this /* r28 */, unsigned short newGroup /* r29 */) {
+// this: r28
+void RoomManager::ChangeLightingGroup(unsigned short newGroup /* r29 */) {
     // Local variables
     class Room * targetRoom; // r0
     unsigned short oldGroup; // r0
@@ -203,19 +220,23 @@ void RoomManager::ChangeLightingGroup(class RoomManager * const this /* r28 */, 
 }
 
 // Range: 0x800D9A70 -> 0x800D9B38
-void * Room::Room(class Room * const this /* r28 */, class RoomManager * inMgr /* r29 */) {}
+// this: r28
+Room::Room(class RoomManager * inMgr /* r29 */) {}
 
 // Range: 0x800D9B38 -> 0x800D9BDC
-void * Room::~Room(class Room * const this /* r29 */) {}
+// this: r29
+Room::~Room() {}
 
 // Range: 0x800D9BDC -> 0x800D9C48
 void Room::Clear() {}
 
 // Range: 0x800D9C48 -> 0x800D9C98
-class vector * Room::GetPartition(class Room * const this /* r31 */) {}
+// this: r31
+class vector * Room::GetPartition() {}
 
 // Range: 0x800D9C98 -> 0x800D9FA0
-void Room::ComputeRoom(class Room * const this /* r31 */) {
+// this: r31
+void Room::ComputeRoom() {
     // Local variables
     float score; // f2
     float objAmbient; // f31
@@ -251,7 +272,8 @@ void Room::ComputeRoom(class Room * const this /* r31 */) {
 unsigned char IsScoredStyle(enum WallStyle s /* r30 */) {}
 
 // Range: 0x800DA008 -> 0x800DA240
-void Room::CollectTileStats(class Room * const this /* r31 */, const class CTilePt & tile /* r25 */) {
+// this: r31
+void Room::CollectTileStats(const class CTilePt & tile /* r25 */) {
     // Local variables
     class TileWalls tw; // r1+0x8
     struct SegSearch * ss; // r0
@@ -269,7 +291,8 @@ void Room::CollectTileStats(class Room * const this /* r31 */, const class CTile
 }
 
 // Range: 0x800DA240 -> 0x800DA438
-void Room::CollectObjectStats(class Room * const this /* r29 */, class ObjectIterator & objectIter /* r30 */) {
+// this: r29
+void Room::CollectObjectStats(class ObjectIterator & objectIter /* r30 */) {
     // Local variables
     class cXObject * object; // r31
     int category; // r0
@@ -286,7 +309,8 @@ float Room::GetObjectDensity() {}
 int Room::GetArea() {}
 
 // Range: 0x800DA494 -> 0x800DA4EC
-void Room::AbsorbNewRoomList(class Room * const this /* r30 */, const class vector & inRoomList /* r31 */) {}
+// this: r30
+void Room::AbsorbNewRoomList(const class vector & inRoomList /* r31 */) {}
 
 // Range: 0x800DA4EC -> 0x800DA590
 unsigned char Room::IsTileInRoom(const class CTilePt & where /* r28 */) {
@@ -296,7 +320,8 @@ unsigned char Room::IsTileInRoom(const class CTilePt & where /* r28 */) {
 }
 
 // Range: 0x800DA590 -> 0x800DA694
-unsigned char Room::IsOutside(class Room * const this /* r30 */) {
+// this: r30
+unsigned char Room::IsOutside() {
     // Local variables
     const class CTilePt * it; // r31
     int id; // r3
@@ -304,10 +329,12 @@ unsigned char Room::IsOutside(class Room * const this /* r30 */) {
 }
 
 // Range: 0x800DA694 -> 0x800DA724
-void Room::SetOverheadLights(class Room * const this /* r30 */, unsigned char on /* r31 */) {}
+// this: r30
+void Room::SetOverheadLights(unsigned char on /* r31 */) {}
 
 // Range: 0x800DA724 -> 0x800DA7C0
-int Room::GetPeopleCount(class Room * const this /* r25 */) {
+// this: r25
+int Room::GetPeopleCount() {
     // Local variables
     int count; // r29
     class ObjectModule * om; // r28
@@ -320,7 +347,8 @@ int Room::GetPeopleCount(class Room * const this /* r25 */) {
 float Room::GetAmbientLight() {}
 
 // Range: 0x800DA810 -> 0x800DA930
-float Room::GetAmbientLightMultiplier(class Room * const this /* r28 */) {
+// this: r28
+float Room::GetAmbientLightMultiplier() {
     // Local variables
     const class vector & tiles; // r31
     const class CTilePt * it; // r30
@@ -340,14 +368,16 @@ unsigned short GetLightRoomID(unsigned short roomId /* r30 */) {
 }
 
 // Range: 0x800DA9A0 -> 0x800DAA64
-void RoomManager::ResetRoomStyles(class RoomManager * const this /* r28 */) {
+// this: r28
+void RoomManager::ResetRoomStyles() {
     // Local variables
     struct rbtree_iterator i; // r1+0x10
     class Room * rm; // r29
 }
 
 // Range: 0x800DAA64 -> 0x800DAAA4
-void * RoomScoreConstants::RoomScoreConstants(class RoomScoreConstants * const this /* r31 */) {
+// this: r31
+RoomScoreConstants::RoomScoreConstants() {
     // References
     // -> struct [anonymous] __vt__18RoomScoreConstants;
 }

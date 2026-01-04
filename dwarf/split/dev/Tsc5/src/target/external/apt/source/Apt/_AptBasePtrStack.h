@@ -5,7 +5,8 @@
     Code range: 0x803005A4 -> 0x80300678
 */
 // Range: 0x803005A4 -> 0x80300618
-void AptBasePtrStack::Pop(class AptBasePtrStack * const this /* r31 */) {
+// this: r31
+void AptBasePtrStack::Pop() {
     // References
     // -> static char __PRETTY_FUNCTION__[33];
 }
@@ -20,20 +21,16 @@ void AptBasePtrStack::Push(class AptValue * element /* r8 */) {
 }
 
 
-/*
-    Compile unit: C:\dev\Tsc5\src\target\external\apt\source\Apt\_AptBasePtrStack.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x8030AFC4 -> 0x8030B328
-*/
 // Range: 0x8030AFC4 -> 0x8030B000
-void AptBasePtrStack::Init(class AptBasePtrStack * const this /* r31 */) {
+// this: r31
+void AptBasePtrStack::Init() {
     // References
     // -> class DOGMA_PoolManager * gpNonGCPoolManager;
 }
 
 // Range: 0x8030B000 -> 0x8030B054
-void AptBasePtrStack::Shutdown(class AptBasePtrStack * const this /* r31 */) {
+// this: r31
+void AptBasePtrStack::Shutdown() {
     // References
     // -> class DOGMA_PoolManager * gpNonGCPoolManager;
 }
@@ -42,7 +39,8 @@ void AptBasePtrStack::Shutdown(class AptBasePtrStack * const this /* r31 */) {
 void AptBasePtrStack::PushNoInc() {}
 
 // Range: 0x8030B070 -> 0x8030B108
-void AptBasePtrStack::Pop(class AptBasePtrStack * const this /* r27 */, int nItems /* r28 */) {
+// this: r27
+void AptBasePtrStack::Pop(int nItems /* r28 */) {
     // Local variables
     int iLoop; // r29
 
@@ -51,7 +49,8 @@ void AptBasePtrStack::Pop(class AptBasePtrStack * const this /* r27 */, int nIte
 }
 
 // Range: 0x8030B108 -> 0x8030B1E0
-void AptBasePtrStack::PopAndPush(class AptBasePtrStack * const this /* r31 */, int nItems /* r26 */, class AptValue * element /* r27 */) {
+// this: r31
+void AptBasePtrStack::PopAndPush(int nItems /* r26 */, class AptValue * element /* r27 */) {
     // Local variables
     int iLoop; // r28
 
@@ -63,7 +62,8 @@ void AptBasePtrStack::PopAndPush(class AptBasePtrStack * const this /* r31 */, i
 int AptBasePtrStack::GetSize() {}
 
 // Range: 0x8030B1E8 -> 0x8030B288
-void AptBasePtrStack::SafePop(class AptBasePtrStack * const this /* r27 */, int nItems /* r28 */) {
+// this: r27
+void AptBasePtrStack::SafePop(int nItems /* r28 */) {
     // Local variables
     int iLoop; // r29
 
@@ -78,12 +78,13 @@ void AptBasePtrStack::PopNoDec() {}
 class AptValue * AptBasePtrStack::Top() {}
 
 // Range: 0x8030B2A8 -> 0x8030B314
-void * AptBasePtrStack::~AptBasePtrStack(class AptBasePtrStack * const this /* r30 */) {
+// this: r30
+AptBasePtrStack::~AptBasePtrStack() {
     // References
     // -> class DOGMA_PoolManager * gpNonGCPoolManager;
 }
 
 // Range: 0x8030B314 -> 0x8030B328
-void * AptBasePtrStack::AptBasePtrStack() {}
+AptBasePtrStack::AptBasePtrStack() {}
 
 

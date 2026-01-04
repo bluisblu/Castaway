@@ -1,14 +1,4 @@
 /*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\target\game\simulator\core\Simulator.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x80007CF4 -> 0x80007D04
-*/
-// Range: 0x80007CF4 -> 0x80007D04
-void cSimulator::SetGlobal() {}
-
-
-/*
     Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\target\game\simulator\core\simulator.h
     Producer: MW EABI PPC C-Compiler
     Language: C++
@@ -33,12 +23,6 @@ enum TimeOfDay cSimulator::GetTimeOfDay() {}
 signed short cSimulator::GetGlobal() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\target\game\simulator\core\simulator.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x8003A6EC -> 0x8003A6F8
-*/
 // Range: 0x8003A6EC -> 0x8003A6F8
 void cSimulator::SetSpeedForCASandCAP() {
     // References
@@ -46,22 +30,10 @@ void cSimulator::SetSpeedForCASandCAP() {
 }
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\target\game\simulator\core\simulator.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x80052108 -> 0x8005210C
-*/
 // Range: 0x80052108 -> 0x8005210C
 unsigned char cSimulator::IsPaused() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\target\game\simulator\core\simulator.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x8008D438 -> 0x8008D4A8
-*/
 // Range: 0x8008D438 -> 0x8008D440
 enum Mode cSimulator::GetMode() {}
 
@@ -72,12 +44,6 @@ enum SimSpeed cSimulator::GetSpeed() {}
 class GameTime & cSimulator::GetCurrentGameTime() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\target\game\simulator\core\simulator.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x800BB1AC -> 0x800BB220
-*/
 // Range: 0x800BB1AC -> 0x800BB1B4
 int cSimulator::GetTicks() {}
 
@@ -85,7 +51,8 @@ int cSimulator::GetTicks() {}
 void cSimulator::SetMode() {}
 
 // Range: 0x800BB1BC -> 0x800BB1F4
-void cSimulator::SetSpeed(class cSimulator * const this /* r31 */) {}
+// this: r31
+void cSimulator::SetSpeed() {}
 
 // Range: 0x800BB1F4 -> 0x800BB210
 unsigned char cSimulator::IsValidSpeed() {}
@@ -97,12 +64,6 @@ class PassiveInfluenceSystem * cSimulator::GetPassiveInfluenceSystem() {}
 enum TimeOfDay cSimulator::ComputeTimeOfDay() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\target\game\simulator\core\simulator.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x800FC120 -> 0x800FC1B0
-*/
 // Range: 0x800FC120 -> 0x800FC128
 void cSimulator::SetArchValue() {}
 
@@ -128,12 +89,6 @@ void cSimulator::AddFunds() {}
 unsigned char cSimulator::GetGlobalRef() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\target\game\simulator\core\simulator.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x80170D38 -> 0x80170D50
-*/
 // Range: 0x80170D38 -> 0x80170D50
 void cSimulator::Pause() {}
 

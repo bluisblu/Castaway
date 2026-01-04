@@ -8,7 +8,8 @@
 class RelMatrix * RelMatrix::CreateInstance() {}
 
 // Range: 0x800D7620 -> 0x800D7678
-void * RelMatrixImpl::RelMatrixImpl(class RelMatrixImpl * const this /* r31 */) {
+// this: r31
+RelMatrixImpl::RelMatrixImpl() {
     // References
     // -> struct [anonymous] __vt__13RelMatrixImpl;
 }
@@ -17,13 +18,15 @@ void * RelMatrixImpl::RelMatrixImpl(class RelMatrixImpl * const this /* r31 */) 
 void RelMatrix::DestroyInstance() {}
 
 // Range: 0x800D7698 -> 0x800D76AC
-void RelInt::DoStream(class RelInt * const this /* r0 */) {}
+// this: r0
+void RelInt::DoStream() {}
 
 // Range: 0x800D76AC -> 0x800D76B4
 unsigned char RelMatrixImpl::Init() {}
 
 // Range: 0x800D76B4 -> 0x800D777C
-void RelMatrixImpl::CopyTo(class RelMatrixImpl * const this /* r26 */, class RelMatrix & dest /* r27 */) {
+// this: r26
+void RelMatrixImpl::CopyTo(class RelMatrix & dest /* r27 */) {
     // Local variables
     class RelArray * * i; // r31
     int numValues; // r30
@@ -32,19 +35,22 @@ void RelMatrixImpl::CopyTo(class RelMatrixImpl * const this /* r26 */, class Rel
 }
 
 // Range: 0x800D777C -> 0x800D77D4
-int RelMatrixImpl::GetArraySize(class RelMatrixImpl * const this /* r30 */) {
+// this: r30
+int RelMatrixImpl::GetArraySize() {
     // Local variables
     class RelArray * * array; // r0
 }
 
 // Range: 0x800D77D4 -> 0x800D785C
-void RelMatrixImpl::RemoveArray(class RelMatrixImpl * const this /* r29 */, int key /* r30 */) {
+// this: r29
+void RelMatrixImpl::RemoveArray(int key /* r30 */) {
     // Local variables
     class RelArray * * i; // r31
 }
 
 // Range: 0x800D785C -> 0x800D7978
-void RelMatrixImpl::SetArraySize(class RelMatrixImpl * const this /* r28 */, int key /* r30 */, int numValues /* r29 */) {
+// this: r28
+void RelMatrixImpl::SetArraySize(int key /* r30 */, int numValues /* r29 */) {
     // Local variables
     class RelArray * * array; // r31
     class RelArray * r; // r30
@@ -54,31 +60,36 @@ void RelMatrixImpl::SetArraySize(class RelMatrixImpl * const this /* r28 */, int
 }
 
 // Range: 0x800D7978 -> 0x800D7980
-void * RelInt::RelInt() {}
+RelInt::RelInt() {}
 
 // Range: 0x800D7980 -> 0x800D79DC
-void RelMatrixImpl::CreateNewArray(class RelMatrixImpl * const this /* r30 */, int key /* r31 */) {
+// this: r30
+void RelMatrixImpl::CreateNewArray(int key /* r31 */) {
     // Local variables
     class RelArray * newArray; // r1+0x8
 }
 
 // Range: 0x800D79DC -> 0x800D7A34
-void * RelArray::RelArray(class RelArray * const this /* r30 */, int inKey /* r31 */) {}
+// this: r30
+RelArray::RelArray(int inKey /* r31 */) {}
 
 // Range: 0x800D7A34 -> 0x800D7AA8
-class RelArray * * RelMatrixImpl::FindArray(class RelMatrixImpl * const this /* r29 */, int key /* r30 */) {
+// this: r29
+class RelArray * * RelMatrixImpl::FindArray(int key /* r30 */) {
     // Local variables
     class RelArray * * i; // r31
 }
 
 // Range: 0x800D7AA8 -> 0x800D7B14
-int RelMatrixImpl::GetValue(class RelMatrixImpl * const this /* r29 */, int index /* r30 */) {
+// this: r29
+int RelMatrixImpl::GetValue(int index /* r30 */) {
     // Local variables
     class RelArray * * array; // r0
 }
 
 // Range: 0x800D7B14 -> 0x800D7C04
-void RelMatrixImpl::SetValue(class RelMatrixImpl * const this /* r27 */, int key /* r28 */, int index /* r29 */, int value /* r30 */) {
+// this: r27
+void RelMatrixImpl::SetValue(int key /* r28 */, int index /* r29 */, int value /* r30 */) {
     // Local variables
     class RelArray * * array; // r31
 }
@@ -98,7 +109,8 @@ void LogRelMatrixStats() {
 }
 
 // Range: 0x800D7C30 -> 0x800D7DF0
-void RelMatrixImpl::DoStream(class RelMatrixImpl * const this /* r27 */, class ReconBuffer * rb /* r28 */, int version /* r29 */) {
+// this: r27
+void RelMatrixImpl::DoStream(class ReconBuffer * rb /* r28 */, int version /* r29 */) {
     // Local variables
     int i; // r31
     int mver; // r1+0x14
@@ -115,20 +127,24 @@ void RelMatrixImpl::DoStream(class RelMatrixImpl * const this /* r27 */, class R
 }
 
 // Range: 0x800D7DF0 -> 0x800D7E40
-void * RelArray::RelArray(class RelArray * const this /* r31 */) {}
+// this: r31
+RelArray::RelArray() {}
 
 // Range: 0x800D7E40 -> 0x800D7EB4
-void RelArray::DoStream(class RelArray * const this /* r29 */, class ReconBuffer * rb /* r30 */, int version /* r31 */) {}
+// this: r29
+void RelArray::DoStream(class ReconBuffer * rb /* r30 */, int version /* r31 */) {}
 
 // Range: 0x800D7EB4 -> 0x800D7F28
-void RelMatrixImpl::Clear(class RelMatrixImpl * const this /* r30 */) {
+// this: r30
+void RelMatrixImpl::Clear() {
     // Local variables
     class RelArray * * i; // r4
     class RelArray * del; // r31
 }
 
 // Range: 0x800D7F28 -> 0x800D7FA8
-void * RelMatrixImpl::~RelMatrixImpl(class RelMatrixImpl * const this /* r30 */) {
+// this: r30
+RelMatrixImpl::~RelMatrixImpl() {
     // References
     // -> struct [anonymous] __vt__13RelMatrixImpl;
 }
@@ -137,6 +153,7 @@ void * RelMatrixImpl::~RelMatrixImpl(class RelMatrixImpl * const this /* r30 */)
 int RelMatrixImpl::CountKeys() {}
 
 // Range: 0x800D7FB0 -> 0x800D8018
-int RelMatrixImpl::GetNthKey(class RelMatrixImpl * const this /* r30 */, int n /* r31 */) {}
+// this: r30
+int RelMatrixImpl::GetNthKey(int n /* r31 */) {}
 
 

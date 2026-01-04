@@ -17,8 +17,9 @@ union /* @class$5351engine_core_unity_cpp */ {
     void (* m_pArgRoutine)(void *); // offset 0x0, size 0x4
     class EEvent * m_pFlushEvent; // offset 0x0, size 0x4
 };
+// total size: 0x10
 class BackgroundCmd {
-    // total size: 0x10
+    // Members
 public:
     enum BackCommand m_cmd; // offset 0x0, size 0x4
     union { // inferred
@@ -34,8 +35,9 @@ public:
     unsigned char m_bWait; // offset 0x8, size 0x1
     void * m_pArg; // offset 0xC, size 0x4
 };
+// total size: 0x3B0
 class BackgroundImpl : public Background, private EThread {
-    // total size: 0x3B0
+    // Members
 public:
     unsigned char m_bInitialized; // offset 0x344, size 0x1
     class EMutex m_cmdMutex; // offset 0x348, size 0x1C
@@ -43,8 +45,9 @@ public:
 };
 static class BackgroundImpl _background; // size: 0x3B0, address: 0x804F7050
 class EApp * _pApp; // size: 0x4, address: 0x805DBE94
+// total size: 0x28
 class ERMovie : public EResource {
-    // total size: 0x28
+    // Members
 protected:
     class EFile * m_pFile; // offset 0x14, size 0x4
     unsigned int m_Start; // offset 0x18, size 0x4
@@ -53,8 +56,9 @@ protected:
     class EMovie * m_pMovie; // offset 0x24, size 0x4
 };
 static unsigned char bWasInError; // size: 0x1, address: 0x805DBE98
+// total size: 0x208
 class TString : public EFixedString {
-    // total size: 0x208
+    // Members
     char m_szBuffer[512]; // offset 0x8, size 0x200
 };
 int _evenodd; // size: 0x4, address: 0x805DBE9C
@@ -88,8 +92,9 @@ static float dtHist[2]; // size: 0x8, address: 0x805DBED0
 class EThread _idleThread; // size: 0x340, address: 0x804F74E0
 static void (* _pExitFunc)(); // size: 0x4, address: 0x805DBED8
 class EScene * _pScene; // size: 0x4, address: 0x805DBEDC
+// total size: 0x150
 class EScene {
-    // total size: 0x150
+    // Members
 public:
     void * __vptr$; // offset 0x0, size 0x4
 protected:
@@ -98,28 +103,25 @@ protected:
     class EVec3 m_vCurrentPos; // offset 0x140, size 0xC
 };
 class EScene _scene; // size: 0x150, address: 0x804F7830
-struct {
-    // total size: 0xC
-} __vt__6EScene; // size: 0xC, address: 0x80453CA4
-struct {
-    // total size: 0x68
-} __vt__7EEngine; // size: 0x68, address: 0x80453CB0
-struct {
-    // total size: 0x74
-} __vt__4EApp; // size: 0x74, address: 0x80453D18
-struct {
-    // total size: 0x40
-} __vt__14BackgroundImpl; // size: 0x40, address: 0x80453DA0
-struct {
-    // total size: 0x2C
-} __vt__10Background; // size: 0x2C, address: 0x80453DE0
+// total size: 0xC
+struct {} __vt__6EScene; // size: 0xC, address: 0x80453CA4
+// total size: 0x68
+struct {} __vt__7EEngine; // size: 0x68, address: 0x80453CB0
+// total size: 0x74
+struct {} __vt__4EApp; // size: 0x74, address: 0x80453D18
+// total size: 0x40
+struct {} __vt__14BackgroundImpl; // size: 0x40, address: 0x80453DA0
+// total size: 0x2C
+struct {} __vt__10Background; // size: 0x2C, address: 0x80453DE0
+// total size: 0x4
 class EScratchBuffUser {
-    // total size: 0x4
+    // Members
 public:
     void * __vptr$; // offset 0x0, size 0x4
 };
+// total size: 0x44
 class EResPrefetchFile : public EFile {
-    // total size: 0x44
+    // Members
 protected:
     class EResourceManager * m_pResMan; // offset 0x2C, size 0x4
     unsigned char * m_pStreamPos; // offset 0x30, size 0x4
@@ -134,16 +136,18 @@ enum EPrefetchMsgType {
     E_PF_FLUSH = 2,
     E_PF_TERMINATE = 3,
 };
+// total size: 0x14
 struct EPrefetchMsg {
-    // total size: 0x14
+    // Members
     enum EPrefetchMsgType type; // offset 0x0, size 0x4
     unsigned int resId; // offset 0x4, size 0x4
     class EResource * pResource; // offset 0x8, size 0x4
     class EResourceManager * pResMan; // offset 0xC, size 0x4
     class EEvent * pReply; // offset 0x10, size 0x4
 };
+// total size: 0x418
 class EResPrefetch : public EScratchBuffUser, public EThread {
-    // total size: 0x418
+    // Members
 protected:
     class EResPrefetchFile m_preFetchFile; // offset 0x344, size 0x44
     class EMsgQueue m_msgQueue; // offset 0x388, size 0x4C
@@ -164,18 +168,19 @@ protected:
     float m_loadProgress; // offset 0x40C, size 0x4
     unsigned char m_loading; // offset 0x410, size 0x1
 };
+// total size: 0x20
 class ERAudioStream : public EResource {
-    // total size: 0x20
+    // Members
 public:
     class EFile * const m_pFile; // offset 0x14, size 0x4
     unsigned int m_uStartOffset; // offset 0x18, size 0x4
     unsigned int m_uEndOffset; // offset 0x1C, size 0x4
 };
-class EAudioStreamManager : public EResourceManager {
-    // total size: 0xD44
-};
+// total size: 0xD44
+class EAudioStreamManager : public EResourceManager {};
+// total size: 0x14
 class EScratchBuffMan {
-    // total size: 0x14
+    // Members
 protected:
     const char * m_pFile; // offset 0x0, size 0x4
     int m_line; // offset 0x4, size 0x4
@@ -183,8 +188,9 @@ protected:
     void * m_pBuffer; // offset 0xC, size 0x4
     unsigned int m_buffSize; // offset 0x10, size 0x4
 };
+// total size: 0x18
 struct ESchedCommand {
-    // total size: 0x18
+    // Members
     unsigned int command; // offset 0x0, size 0x4
     unsigned int data; // offset 0x4, size 0x4
     unsigned int data2; // offset 0x8, size 0x4
@@ -192,19 +198,22 @@ struct ESchedCommand {
     struct ESchedCommand * pLast; // offset 0x10, size 0x4
     struct ESchedCommand * pNext; // offset 0x14, size 0x4
 };
+// total size: 0x348
 class EScheduler : public EThread {
-    // total size: 0x348
+    // Members
     int m_vblankCount; // offset 0x33C, size 0x4
     int m_frameCount; // offset 0x340, size 0x4
 };
+// total size: 0x38
 class EFrameAllocGroup : public EGlobalManagerClient {
-    // total size: 0x38
+    // Members
 protected:
     class EAllocGroup m_ag[2]; // offset 0x4, size 0x30
     int m_evenodd; // offset 0x34, size 0x4
 };
+// total size: 0xD48
 class EMovieMan : public EResourceManager {
-    // total size: 0xD48
+    // Members
     unsigned int m_movieId; // offset 0xD44, size 0x4
 };
 

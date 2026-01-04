@@ -11,12 +11,6 @@ class CasSimDescription * const ObjSelector::GetSimDescription() {}
 struct NPC * ObjSelector::GetServiceNPC() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\target\game\simulator\core\objselector.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x80059B9C -> 0x80059BAC
-*/
 // Range: 0x80059B9C -> 0x80059BA4
 class Behavior * ObjSelector::GetBehavior() {}
 
@@ -24,20 +18,15 @@ class Behavior * ObjSelector::GetBehavior() {}
 struct ObjDefinition * ObjSelector::GetDefinition() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\target\game\simulator\core\objselector.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x800A4174 -> 0x800A4238
-*/
 // Range: 0x800A4174 -> 0x800A41CC
-void * TTAB_Tuning::~TTAB_Tuning(struct TTAB_Tuning * const this /* r30 */) {}
+// this: r30
+TTAB_Tuning::~TTAB_Tuning() {}
 
 // Range: 0x800A41CC -> 0x800A41E0
 void ObjSelector::SetDefID() {}
 
 // Range: 0x800A41E0 -> 0x800A41F0
-void * TTAB_Tuning::TTAB_Tuning() {}
+TTAB_Tuning::TTAB_Tuning() {}
 
 // Range: 0x800A41F0 -> 0x800A41F8
 struct ObjDefinition * ObjSelector::GetDefinition() {}
@@ -49,7 +38,7 @@ unsigned int ObjSelector::GetNamespaceID() {}
 class cXPerson * ObjSelector::GetSimulatorPerson() {}
 
 // Range: 0x800A4208 -> 0x800A4210
-void * ThumbnailLoader::ThumbnailLoader() {}
+ThumbnailLoader::ThumbnailLoader() {}
 
 // Range: 0x800A4210 -> 0x800A4218
 char * ObjSelector::GetName() {}
@@ -64,12 +53,6 @@ unsigned int ObjSelector::GetSemiNamespaceID() {}
 void ObjSelector::SetSimulatorPerson() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\target\game\simulator\core\objselector.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x801001B4 -> 0x80100750
-*/
 // Range: 0x801001B4 -> 0x801001BC
 struct ResFile * ObjSelector::GetResFileData() {}
 

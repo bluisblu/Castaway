@@ -11,6 +11,7 @@ class EVec3 AwarenessTweakTool::kMaxHeadNodeAwarenessAngle() {}
 class EVec3 AwarenessTweakTool::kMaxTorsoNodeAwarenessAngle() {}
 
 // Range: 0x8001FF30 -> 0x8001FF70
-void * AwarenessTweakTool::~AwarenessTweakTool(class AwarenessTweakTool * const this /* r31 */) {}
+// this: r31
+AwarenessTweakTool::~AwarenessTweakTool() {}
 
 

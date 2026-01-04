@@ -14,12 +14,6 @@ struct AnimRef * PassiveInfluencePerson::GetSkillName() {}
 signed char PassiveInfluencePerson::GetAnimation() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\target\game\simulator\core\passiveinfluencemap.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x800BA9B4 -> 0x800BAE84
-*/
 // Range: 0x800BA9B4 -> 0x800BA9BC
 class cXObject * PassiveInfluenceObject::GetObject() {}
 
@@ -30,10 +24,12 @@ class vector & PassiveInfluenceTarget::GetTileVector() {}
 class cXObject * PassiveInfluenceTarget::GetObject() {}
 
 // Range: 0x800BA9CC -> 0x800BAA0C
-void * PassiveInfluenceItem::~PassiveInfluenceItem(class PassiveInfluenceItem * const this /* r31 */) {}
+// this: r31
+PassiveInfluenceItem::~PassiveInfluenceItem() {}
 
 // Range: 0x800BAA0C -> 0x800BAAC0
-void * PassiveInfluencePortal::~PassiveInfluencePortal(class PassiveInfluencePortal * const this /* r30 */) {
+// this: r30
+PassiveInfluencePortal::~PassiveInfluencePortal() {
     // Local variables
     class vector temp; // r1+0x10
 
@@ -43,7 +39,8 @@ void * PassiveInfluencePortal::~PassiveInfluencePortal(class PassiveInfluencePor
 }
 
 // Range: 0x800BAAC0 -> 0x800BABA4
-void * PassiveInfluenceMovable::~PassiveInfluenceMovable(class PassiveInfluenceMovable * const this /* r29 */) {
+// this: r29
+PassiveInfluenceMovable::~PassiveInfluenceMovable() {
     // Local variables
     class vector temp; // r1+0x20
     class vector temp; // r1+0x10
@@ -54,7 +51,8 @@ void * PassiveInfluenceMovable::~PassiveInfluenceMovable(class PassiveInfluenceM
 }
 
 // Range: 0x800BABA4 -> 0x800BAC4C
-void * PassiveInfluenceObject::~PassiveInfluenceObject(class PassiveInfluenceObject * const this /* r30 */) {
+// this: r30
+PassiveInfluenceObject::~PassiveInfluenceObject() {
     // Local variables
     class vector temp; // r1+0x10
 
@@ -63,7 +61,8 @@ void * PassiveInfluenceObject::~PassiveInfluenceObject(class PassiveInfluenceObj
 }
 
 // Range: 0x800BAC4C -> 0x800BAD38
-void * PassiveInfluencePerson::~PassiveInfluencePerson(class PassiveInfluencePerson * const this /* r29 */) {
+// this: r29
+PassiveInfluencePerson::~PassiveInfluencePerson() {
     // Local variables
     class vector temp; // r1+0x20
     class vector temp; // r1+0x10
@@ -73,7 +72,8 @@ void * PassiveInfluencePerson::~PassiveInfluencePerson(class PassiveInfluencePer
 }
 
 // Range: 0x800BAD38 -> 0x800BADF4
-void * PassiveInfluenceTarget::~PassiveInfluenceTarget(class PassiveInfluenceTarget * const this /* r30 */) {
+// this: r30
+PassiveInfluenceTarget::~PassiveInfluenceTarget() {
     // Local variables
     class vector temp; // r1+0x10
 

@@ -5,19 +5,23 @@
     Code range: 0x800824EC -> 0x80082BE4
 */
 // Range: 0x800824EC -> 0x8008252C
-void * BranchInstance::BranchInstance(class BranchInstance * const this /* r31 */) {
+// this: r31
+BranchInstance::BranchInstance() {
     // References
     // -> struct [anonymous] __vt__14BranchInstance;
 }
 
 // Range: 0x8008252C -> 0x800825B8
-void BranchInstance::Init(class BranchInstance * const this /* r31 */) {}
+// this: r31
+void BranchInstance::Init() {}
 
 // Range: 0x800825B8 -> 0x80082610
-void * BranchInstance::~BranchInstance(class BranchInstance * const this /* r30 */) {}
+// this: r30
+BranchInstance::~BranchInstance() {}
 
 // Range: 0x80082610 -> 0x80082690
-void BranchInstance::UpdateDrawPosition(class BranchInstance * const this /* r28 */, class EVec3 & drawPos /* r29 */) {
+// this: r28
+void BranchInstance::UpdateDrawPosition(class EVec3 & drawPos /* r29 */) {
     // Local variables
     unsigned int nNodeCount; // r0
     unsigned int i; // r30
@@ -25,13 +29,15 @@ void BranchInstance::UpdateDrawPosition(class BranchInstance * const this /* r28
 }
 
 // Range: 0x80082690 -> 0x800826F0
-void BranchInstance::UpdateDrawRotation(class BranchInstance * const this /* r30 */, class EVec3 & drawRot /* r31 */) {
+// this: r30
+void BranchInstance::UpdateDrawRotation(class EVec3 & drawRot /* r31 */) {
     // Local variables
     class EQuat rotQ; // r1+0x8
 }
 
 // Range: 0x800826F0 -> 0x80082750
-void BranchInstance::SetupCharacter(class BranchInstance * const this /* r31 */) {}
+// this: r31
+void BranchInstance::SetupCharacter() {}
 
 // Range: 0x80082750 -> 0x80082780
 void BranchInstance::RegisterBranchInstance() {}
@@ -40,7 +46,8 @@ void BranchInstance::RegisterBranchInstance() {}
 void BranchInstance::SetLevel() {}
 
 // Range: 0x80082788 -> 0x80082860
-void BranchInstance::Draw(class BranchInstance * const this /* r27 */, class ERC * prc /* r28 */, class TreeInstance * pTree /* r29 */, class InstanceData * pInstanceData /* r30 */) {
+// this: r27
+void BranchInstance::Draw(class ERC * prc /* r28 */, class TreeInstance * pTree /* r29 */, class InstanceData * pInstanceData /* r30 */) {
     // Local variables
     unsigned char bHasAlpha; // r31
     class EOrderTableData otd; // r1+0x8
@@ -50,7 +57,8 @@ void BranchInstance::Draw(class BranchInstance * const this /* r27 */, class ERC
 void BranchInstance::DrawDigest() {}
 
 // Range: 0x80082864 -> 0x8008293C
-void BranchInstance::Draw(class BranchInstance * const this /* r27 */, class ERC * prc /* r28 */, class ISimInstance * pTree /* r29 */, class InstanceData * pInstanceData /* r30 */) {
+// this: r27
+void BranchInstance::Draw(class ERC * prc /* r28 */, class ISimInstance * pTree /* r29 */, class InstanceData * pInstanceData /* r30 */) {
     // Local variables
     unsigned char bHasAlpha; // r31
     class EOrderTableData otd; // r1+0x8
@@ -87,7 +95,8 @@ void BranchInstance::BranchSimOrderTableCallback(struct ELevelDrawData & renderP
 }
 
 // Range: 0x80082B38 -> 0x80082BE4
-unsigned int BranchInstance::VisibilityTest(class BranchInstance * const this /* r30 */, class E3DWindow & win /* r31 */) {
+// this: r30
+unsigned int BranchInstance::VisibilityTest(class E3DWindow & win /* r31 */) {
     // Local variables
     class EVec3 bboxDiagLen; // r1+0x24
     float radiusBSphere; // f31

@@ -5,32 +5,38 @@
     Code range: 0x8029B248 -> 0x8029C1B0
 */
 // Range: 0x8029B248 -> 0x8029B288
-void * ESubModel::ESubModel(class ESubModel * const this /* r31 */) {}
+// this: r31
+ESubModel::ESubModel() {}
 
 // Range: 0x8029B288 -> 0x8029B340
-void * ESubModel::~ESubModel(class ESubModel * const this /* r29 */) {}
+// this: r29
+ESubModel::~ESubModel() {}
 
 // Range: 0x8029B340 -> 0x8029B3A4
-void ESubModel::DelRefSubResources(class ESubModel * const this /* r29 */) {
+// this: r29
+void ESubModel::DelRefSubResources() {
     // Local variables
     int c; // r30
 }
 
 // Range: 0x8029B3A4 -> 0x8029B408
-void ESubModel::AddRefSubResources(class ESubModel * const this /* r29 */) {
+// this: r29
+void ESubModel::AddRefSubResources() {
     // Local variables
     int c; // r30
 }
 
 // Range: 0x8029B408 -> 0x8029B4A8
-unsigned char ESubModel::TryIncrementSubResources(class ESubModel * const this /* r29 */) {
+// this: r29
+unsigned char ESubModel::TryIncrementSubResources() {
     // Local variables
     int c; // r30
     int undo; // r30
 }
 
 // Range: 0x8029B4A8 -> 0x8029B660
-void ESubModel::Read(class ESubModel * const this /* r26 */, class EFile * s /* r27 */, int modelVersion /* r28 */) {
+// this: r26
+void ESubModel::Read(class EFile * s /* r27 */, int modelVersion /* r28 */) {
     // Local variables
     unsigned int numTrees; // r1+0x10
     unsigned int i; // r30
@@ -42,123 +48,143 @@ void ESubModel::Read(class ESubModel * const this /* r26 */, class EFile * s /* 
 }
 
 // Range: 0x8029B660 -> 0x8029B700
-void ESubModel::Draw(class ESubModel * const this /* r27 */, class ERC * prc /* r28 */) {
+// this: r27
+void ESubModel::Draw(class ERC * prc /* r28 */) {
     // Local variables
     int cSubModelShader; // r29
 }
 
 // Range: 0x8029B700 -> 0x8029B790
-void ESubModel::DrawGeometry(class ESubModel * const this /* r27 */, class ERC * prc /* r28 */) {
+// this: r27
+void ESubModel::DrawGeometry(class ERC * prc /* r28 */) {
     // Local variables
     int cSubModelShader; // r29
 }
 
 // Range: 0x8029B790 -> 0x8029B82C
-void ESubModel::DrawAsShadow(class ESubModel * const this /* r27 */, class ERC * prc /* r28 */) {
+// this: r27
+void ESubModel::DrawAsShadow(class ERC * prc /* r28 */) {
     // Local variables
     int cSubModelShader; // r29
 }
 
 // Range: 0x8029B82C -> 0x8029B8A0
-void ESubModel::DrawWireFrame(class ESubModel * const this /* r28 */, class ERC * prc /* r29 */) {
+// this: r28
+void ESubModel::DrawWireFrame(class ERC * prc /* r29 */) {
     // Local variables
     int cSubModelShader; // r30
 }
 
 // Range: 0x8029B8A0 -> 0x8029B914
-void ESubModel::BuildDisplayList(class ESubModel * const this /* r28 */, struct ESMBuildDisplayListData * pDataExchange /* r29 */) {
+// this: r28
+void ESubModel::BuildDisplayList(struct ESMBuildDisplayListData * pDataExchange /* r29 */) {
     // Local variables
     int cSubModelShader; // r30
 }
 
 // Range: 0x8029B914 -> 0x8029B980
-void ESubModel::GetMinMaxX(class ESubModel * const this /* r27 */, float * minX /* r28 */, float * maxX /* r29 */) {
+// this: r27
+void ESubModel::GetMinMaxX(float * minX /* r28 */, float * maxX /* r29 */) {
     // Local variables
     int cSubModelShader; // r30
 }
 
 // Range: 0x8029B980 -> 0x8029B9E8
-unsigned char ESubModel::BuildDisplayListStripsMorph(class ESubModel * const this /* r29 */) {
+// this: r29
+unsigned char ESubModel::BuildDisplayListStripsMorph() {
     // Local variables
     int i; // r30
 }
 
 // Range: 0x8029B9E8 -> 0x8029BA4C
-void ESubModel::ResetStripsMorph(class ESubModel * const this /* r29 */) {
+// this: r29
+void ESubModel::ResetStripsMorph() {
     // Local variables
     int i; // r30
 }
 
 // Range: 0x8029BA4C -> 0x8029BAD0
-unsigned char ESubModel::ApplyMorphTargetsToStripsMorph(class ESubModel * const this /* r26 */, float * currentBrowseMorphTargetWeightList /* r27 */, float * userSelectedMorphTargetWeightList /* r28 */) {
+// this: r26
+unsigned char ESubModel::ApplyMorphTargetsToStripsMorph(float * currentBrowseMorphTargetWeightList /* r27 */, float * userSelectedMorphTargetWeightList /* r28 */) {
     // Local variables
     unsigned char status; // r30
     int i; // r29
 }
 
 // Range: 0x8029BAD0 -> 0x8029BB34
-void ESubModel::ApplyLatticesToStripsMorph(class ESubModel * const this /* r29 */) {
+// this: r29
+void ESubModel::ApplyLatticesToStripsMorph() {
     // Local variables
     int i; // r30
 }
 
 // Range: 0x8029BB34 -> 0x8029BBA0
-void ESubModel::AllocateMorphTargetArray(class ESubModel * const this /* r27 */, unsigned int numCurrentBrowseMorphTargets /* r28 */, unsigned int numMorphRegions /* r29 */) {
+// this: r27
+void ESubModel::AllocateMorphTargetArray(unsigned int numCurrentBrowseMorphTargets /* r28 */, unsigned int numMorphRegions /* r29 */) {
     // Local variables
     int i; // r30
 }
 
 // Range: 0x8029BBA0 -> 0x8029BC14
-unsigned char ESubModel::RegisterCurrentBrowseMorphTarget(class ESubModel * const this /* r27 */, class ESubModel * pMorphTarget /* r28 */, int currentBrowseMorphTargetIndex /* r29 */) {
+// this: r27
+unsigned char ESubModel::RegisterCurrentBrowseMorphTarget(class ESubModel * pMorphTarget /* r28 */, int currentBrowseMorphTargetIndex /* r29 */) {
     // Local variables
     unsigned char status; // r3
     int i; // r30
 }
 
 // Range: 0x8029BC14 -> 0x8029BC88
-void ESubModel::UnregisterCurrentBrowseMorphTarget(class ESubModel * const this /* r28 */, int currentBrowseMorphTargetIndex /* r29 */) {
+// this: r28
+void ESubModel::UnregisterCurrentBrowseMorphTarget(int currentBrowseMorphTargetIndex /* r29 */) {
     // Local variables
     int i; // r30
 }
 
 // Range: 0x8029BC88 -> 0x8029BCFC
-void ESubModel::UnregisterUserSelectedMorphTarget(class ESubModel * const this /* r28 */, int userSelectedMorphTargetIndex /* r29 */) {
+// this: r28
+void ESubModel::UnregisterUserSelectedMorphTarget(int userSelectedMorphTargetIndex /* r29 */) {
     // Local variables
     int i; // r30
 }
 
 // Range: 0x8029BCFC -> 0x8029BD68
-void ESubModel::PromoteCurrentBrowseMorphTarget(class ESubModel * const this /* r27 */, int * currentBrowseMorphTargetIndexArray /* r28 */, int morphRegionIndex /* r29 */) {
+// this: r27
+void ESubModel::PromoteCurrentBrowseMorphTarget(int * currentBrowseMorphTargetIndexArray /* r28 */, int morphRegionIndex /* r29 */) {
     // Local variables
     int i; // r30
 }
 
 // Range: 0x8029BD68 -> 0x8029BDDC
-void ESubModel::CreateLatticeParameterVerts(class ESubModel * const this /* r28 */, class TArray * volumeList /* r29 */) {
+// this: r28
+void ESubModel::CreateLatticeParameterVerts(class TArray * volumeList /* r29 */) {
     // Local variables
     int i; // r30
 }
 
 // Range: 0x8029BDDC -> 0x8029BE40
-void ESubModel::FreeLatticeResource(class ESubModel * const this /* r29 */) {
+// this: r29
+void ESubModel::FreeLatticeResource() {
     // Local variables
     int i; // r30
 }
 
 // Range: 0x8029BE40 -> 0x8029BEB8
-unsigned char ESubModel::HasModifiableColor(class ESubModel * const this /* r29 */) {
+// this: r29
+unsigned char ESubModel::HasModifiableColor() {
     // Local variables
     int i; // r30
 }
 
 // Range: 0x8029BEB8 -> 0x8029BF4C
-void ESubModel::TransformModelUV(class ESubModel * const this /* r22 */, const class EVec2 & scale /* r23 */, const class EVec2 & translate /* r24 */, unsigned int altShaderID /* r25 */, const class EVec2 & altScale /* r26 */, const class EVec2 & altTranslate /* r27 */, unsigned char bIsWeldable /* r28 */, unsigned char bTranslateFirstUV /* r29 */) {
+// this: r22
+void ESubModel::TransformModelUV(const class EVec2 & scale /* r23 */, const class EVec2 & translate /* r24 */, unsigned int altShaderID /* r25 */, const class EVec2 & altScale /* r26 */, const class EVec2 & altTranslate /* r27 */, unsigned char bIsWeldable /* r28 */, unsigned char bTranslateFirstUV /* r29 */) {
     // Local variables
     int i; // r30
 }
 
 // Range: 0x8029BF4C -> 0x8029C0E0
-unsigned char ESubModel::RaycastIntersection(class ESubModel * const this /* r19 */, const class EVec3 & ray_pos_unModified /* r25 */, const class EVec3 & ray_pos /* r26 */, const class EVec3 & ray_dir /* r27 */, class EVec3 & hit_pos /* r28 */, float & hit_dist /* r29 */, unsigned char bFirst /* r30 */, class RaycastLastHit * lastHit /* r31 */) {
+// this: r19
+unsigned char ESubModel::RaycastIntersection(const class EVec3 & ray_pos_unModified /* r25 */, const class EVec3 & ray_pos /* r26 */, const class EVec3 & ray_dir /* r27 */, class EVec3 & hit_pos /* r28 */, float & hit_dist /* r29 */, unsigned char bFirst /* r30 */, class RaycastLastHit * lastHit /* r31 */) {
     // Local variables
     unsigned char bHit; // r23
     class RBIteratorPtrType * iter; // r22
@@ -170,7 +196,8 @@ unsigned char ESubModel::RaycastIntersection(class ESubModel * const this /* r19
 }
 
 // Range: 0x8029C0E0 -> 0x8029C1B0
-void ESubModel::CreateQuadTrees(class ESubModel * const this /* r26 */) {
+// this: r26
+void ESubModel::CreateQuadTrees() {
     // Local variables
     unsigned int nSMS; // r28
     unsigned int i; // r27

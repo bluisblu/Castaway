@@ -11,12 +11,6 @@ unsigned int ERBinary::GetDataSize() {}
 void * ERBinary::GetData() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\common\engine\resource\e_rbinary.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x802F0448 -> 0x802F05E4
-*/
 // Range: 0x802F0448 -> 0x802F0468
 void ERBinary::SafeDelete() {}
 

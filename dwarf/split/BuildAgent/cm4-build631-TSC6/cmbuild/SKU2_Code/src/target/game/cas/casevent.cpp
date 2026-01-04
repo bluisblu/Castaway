@@ -5,6 +5,7 @@
     Code range: 0x800294E8 -> 0x80029528
 */
 // Range: 0x800294E8 -> 0x80029528
-void * CasEvent::~CasEvent(class CasEvent * const this /* r31 */) {}
+// this: r31
+CasEvent::~CasEvent() {}
 
 

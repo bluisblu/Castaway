@@ -8,25 +8,13 @@
 void EIStaticModel::GetPos(class EVec3 & vPos /* r31 */) {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\target\game\level\e_istaticmodel.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x8003F3CC -> 0x8003F414
-*/
 // Range: 0x8003F3CC -> 0x8003F3D4
 class ERModel * EIStaticModel::GetModel() {}
 
 // Range: 0x8003F3D4 -> 0x8003F414
-void * EIStaticModel::__nw(unsigned long size /* r31 */) {}
+void * EIStaticModel::operator new(unsigned long size /* r31 */) {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\target\game\level\e_istaticmodel.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x80052164 -> 0x80052174
-*/
 // Range: 0x80052164 -> 0x8005216C
 class EMat4 & EIStaticModel::GetOrient() {}
 
@@ -34,14 +22,8 @@ class EMat4 & EIStaticModel::GetOrient() {}
 class EMat4 & EIStaticModel::GetAdjDrawMatrix() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\target\game\level\e_istaticmodel.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x8008867C -> 0x800887F0
-*/
 // Range: 0x8008867C -> 0x800886B0
-void EIStaticModel::__dl(void * p /* r31 */) {}
+void EIStaticModel::operator delete(void * p /* r31 */) {}
 
 // Range: 0x800886B0 -> 0x800886C0
 unsigned short EIStaticModel::GetReadVersion() {
@@ -86,7 +68,8 @@ unsigned short EIStaticModel::GetTypeVersion() {
 }
 
 // Range: 0x80088734 -> 0x80088744
-void EIStaticModel::GetAnchorPos(class EIStaticModel * const this /* r5 */) {}
+// this: r5
+void EIStaticModel::GetAnchorPos() {}
 
 // Range: 0x80088744 -> 0x8008877C
 class ETypeInfo * EIStaticModel::RegisterType() {
@@ -102,20 +85,15 @@ void EIStaticModel::Destruct() {}
 void EIStaticModel::Construct() {}
 
 // Range: 0x800887B8 -> 0x800887C0
-void * EIStaticModel::__nw() {}
+void * EIStaticModel::operator new() {}
 
 // Range: 0x800887C0 -> 0x800887F0
 class EIStaticModel * EIStaticModel::New() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\target\game\level\e_istaticmodel.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x8020F5CC -> 0x8020F600
-*/
 // Range: 0x8020F5CC -> 0x8020F5DC
-void EIStaticModel::GetOrient(const class EIStaticModel * const this /* r5 */) {}
+// this: r5
+void EIStaticModel::GetOrient() const {}
 
 // Range: 0x8020F5DC -> 0x8020F600
 unsigned char EIStaticModel::IsSkydome() {}

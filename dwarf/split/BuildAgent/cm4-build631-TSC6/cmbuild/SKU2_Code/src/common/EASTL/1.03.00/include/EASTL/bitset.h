@@ -5,10 +5,12 @@
     Code range: 0x8013D158 -> 0x8013D834
 */
 // Range: 0x8013D158 -> 0x8013D188
-void * bitset::bitset(class bitset * const this /* r31 */) {}
+// this: r31
+bitset::bitset() {}
 
 // Range: 0x8013D188 -> 0x8013D1B8
-void * BitsetBase::BitsetBase(struct BitsetBase * const this /* r31 */) {}
+// this: r31
+BitsetBase::BitsetBase() {}
 
 // Range: 0x8013D1B8 -> 0x8013D1CC
 void BitsetBase::reset() {}
@@ -23,7 +25,8 @@ unsigned int BitsetBase::DoGetWord() {}
 unsigned long bitset::find_next() {}
 
 // Range: 0x8013D234 -> 0x8013D2CC
-unsigned long BitsetBase::DoFindNext(const struct BitsetBase * const this /* r29 */) {
+// this: r29
+unsigned long BitsetBase::DoFindNext() const {
     // Local variables
     unsigned long word_index; // r30
     unsigned int this_word; // r3
@@ -41,16 +44,18 @@ unsigned long first_bit_in_word() {
 unsigned long first_bit() {}
 
 // Range: 0x8013D3AC -> 0x8013D3D8
-unsigned char reference::__opb() {}
+unsigned char reference::operator bool() {}
 
 // Range: 0x8013D3D8 -> 0x8013D428
-void * reference::reference(class reference * const this /* r30 */, unsigned long i /* r31 */) {}
+// this: r30
+reference::reference(unsigned long i /* r31 */) {}
 
 // Range: 0x8013D428 -> 0x8013D434
 unsigned int & BitsetBase::DoGetWord() {}
 
 // Range: 0x8013D434 -> 0x8013D4B8
-class bitset & bitset::set(class bitset * const this /* r30 */, unsigned long i /* r31 */) {}
+// this: r30
+class bitset & bitset::set(unsigned long i /* r31 */) {}
 
 // Range: 0x8013D4B8 -> 0x8013D4BC
 unsigned long bitset::find_first() {}
@@ -64,10 +69,10 @@ unsigned long BitsetBase::DoFindFirst() {
 }
 
 // Range: 0x8013D52C -> 0x8013D57C
-class reference & reference::__as() {}
+class reference & reference::operator=() {}
 
 // Range: 0x8013D57C -> 0x8013D5B4
-class reference bitset::__vc() {}
+class reference bitset::operator[]() {}
 
 // Range: 0x8013D5B4 -> 0x8013D5B8
 unsigned long bitset::count() {}
@@ -81,13 +86,15 @@ unsigned long BitsetBase::count() {
 }
 
 // Range: 0x8013D638 -> 0x8013D668
-class bitset & bitset::reset(class bitset * const this /* r31 */) {}
+// this: r31
+class bitset & bitset::reset() {}
 
 // Range: 0x8013D668 -> 0x8013D694
-unsigned char reference::__opb() {}
+unsigned char reference::operator bool() {}
 
 // Range: 0x8013D694 -> 0x8013D6E4
-void * reference::reference(class reference * const this /* r30 */, unsigned long i /* r31 */) {}
+// this: r30
+reference::reference(unsigned long i /* r31 */) {}
 
 // Range: 0x8013D6E4 -> 0x8013D6E8
 unsigned int & BitsetBase::DoGetWord() {}
@@ -105,12 +112,14 @@ unsigned long bitset::find_next() {}
 unsigned long BitsetBase::DoFindNext() {}
 
 // Range: 0x8013D774 -> 0x8013D7F8
-class bitset & bitset::set(class bitset * const this /* r30 */, unsigned long i /* r31 */) {}
+// this: r30
+class bitset & bitset::set(unsigned long i /* r31 */) {}
 
 // Range: 0x8013D7F8 -> 0x8013D828
-void * bitset::bitset(class bitset * const this /* r31 */) {}
+// this: r31
+bitset::bitset() {}
 
 // Range: 0x8013D828 -> 0x8013D834
-void * BitsetBase::BitsetBase() {}
+BitsetBase::BitsetBase() {}
 
 

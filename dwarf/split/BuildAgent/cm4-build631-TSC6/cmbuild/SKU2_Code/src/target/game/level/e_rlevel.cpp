@@ -34,38 +34,42 @@ static void Outside(signed short & roomId /* r29 */, signed short & lightRoomId 
 }
 
 // Range: 0x8008D628 -> 0x8008D62C
-class EStream & __ls() {}
+class EStream & operator<<() {}
 
 // Range: 0x8008D62C -> 0x8008D674
-class EStream & __rs(class EStream & s /* r30 */, class ERLevel * & pD /* r31 */) {
+class EStream & operator>>(class EStream & s /* r30 */, class ERLevel * & pD /* r31 */) {
     // Local variables
     class EStorable * pStorable; // r1+0x8
 }
 
 // Range: 0x8008D674 -> 0x8008D6BC
-class EFile & __rs(class EFile & s /* r30 */, class ERLevel * & pD /* r31 */) {
+class EFile & operator>>(class EFile & s /* r30 */, class ERLevel * & pD /* r31 */) {
     // Local variables
     class EStorable * pStorable; // r1+0x8
 }
 
 // Range: 0x8008D6BC -> 0x8008D9C0
-void * ERLevel::ERLevel(class ERLevel * const this /* r30 */) {
+// this: r30
+ERLevel::ERLevel() {
     // References
     // -> struct [anonymous] __vt__7ERLevel;
 }
 
 // Range: 0x8008D9C0 -> 0x8008DB98
-void * ERLevel::~ERLevel(class ERLevel * const this /* r29 */) {
+// this: r29
+ERLevel::~ERLevel() {
     // References
     // -> class EEngine * _pEngine;
     // -> struct [anonymous] __vt__7ERLevel;
 }
 
 // Range: 0x8008DB98 -> 0x8008DBE8
-void ERLevel::GetSunLight(class ERLevel * const this /* r30 */, struct EDirLight & SunDir /* r31 */) {}
+// this: r30
+void ERLevel::GetSunLight(struct EDirLight & SunDir /* r31 */) {}
 
 // Range: 0x8008DBE8 -> 0x8008DE7C
-void ERLevel::Write(class ERLevel * const this /* r30 */, class EStream & s /* r31 */) {
+// this: r30
+void ERLevel::Write(class EStream & s /* r31 */) {
     // Local variables
     int i; // r27
     int i; // r27
@@ -75,21 +79,24 @@ void ERLevel::Write(class ERLevel * const this /* r30 */, class EStream & s /* r
 }
 
 // Range: 0x8008DE7C -> 0x8008DF00
-void ERLevel::AddInstancesFromList(class ERLevel * const this /* r29 */) {
+// this: r29
+void ERLevel::AddInstancesFromList() {
     // Local variables
     class NLIteratorPtrType * i; // r30
     class EInstance * pInstance; // r0
 }
 
 // Range: 0x8008DF00 -> 0x8008DFAC
-void ERLevel::AddInstancesFromBoundTree(class ERLevel * const this /* r30 */, class EStorable * pNode /* r31 */) {
+// this: r30
+void ERLevel::AddInstancesFromBoundTree(class EStorable * pNode /* r31 */) {
     // Local variables
     class EBoundTreeNode * pBTNode; // r0
     class EInstance * pInstance; // r0
 }
 
 // Range: 0x8008DFAC -> 0x8008E6F8
-void ERLevel::Read(class ERLevel * const this /* r30 */, class EStream & s /* r31 */) {
+// this: r30
+void ERLevel::Read(class EStream & s /* r31 */) {
     // Local variables
     int version; // r1+0x14
     int empty[3]; // r1+0x30
@@ -105,7 +112,8 @@ void ERLevel::Read(class ERLevel * const this /* r30 */, class EStream & s /* r3
 }
 
 // Range: 0x8008E6F8 -> 0x8008EDC0
-void ERLevel::Load(class ERLevel * const this /* r30 */, class EFile & s /* r31 */) {
+// this: r30
+void ERLevel::Load(class EFile & s /* r31 */) {
     // Local variables
     int version; // r1+0xC
     int empty[3]; // r1+0x10
@@ -116,7 +124,8 @@ void ERLevel::Load(class ERLevel * const this /* r30 */, class EFile & s /* r31 
 }
 
 // Range: 0x8008EDC0 -> 0x8008EF9C
-void ERLevel::Refresh(class ERLevel * const this /* r30 */, class EFile * pFile /* r27 */) {
+// this: r30
+void ERLevel::Refresh(class EFile * pFile /* r27 */) {
     // Local variables
     class ERLevel * level; // r31
     int i; // r27
@@ -138,40 +147,48 @@ void ERLevel::DestroyInstancesOriginallyReadByLevel() {
 }
 
 // Range: 0x8008F07C -> 0x8008F13C
-void ERLevel::Deallocate(class ERLevel * const this /* r28 */) {
+// this: r28
+void ERLevel::Deallocate() {
     // Local variables
     int i; // r29
 }
 
 // Range: 0x8008F13C -> 0x8008F2DC
-void ERLevel::DeallocateSub(class ERLevel * const this /* r31 */) {
+// this: r31
+void ERLevel::DeallocateSub() {
     // Local variables
     int i; // r28
 }
 
 // Range: 0x8008F2DC -> 0x8008F384
-void ERLevel::DeallocateMidlotInstances(class ERLevel * const this /* r28 */) {
+// this: r28
+void ERLevel::DeallocateMidlotInstances() {
     // Local variables
     int i; // r29
 }
 
 // Range: 0x8008F384 -> 0x8008F3C8
-void ERLevel::InsertInstance(class ERLevel * const this /* r30 */, class EInstance * pInstance /* r31 */) {}
+// this: r30
+void ERLevel::InsertInstance(class EInstance * pInstance /* r31 */) {}
 
 // Range: 0x8008F3C8 -> 0x8008F438
-void ERLevel::InsertWall(class ERLevel * const this /* r29 */, class EInstance * pWall /* r30 */, unsigned char drawShadow /* r31 */) {}
+// this: r29
+void ERLevel::InsertWall(class EInstance * pWall /* r30 */, unsigned char drawShadow /* r31 */) {}
 
 // Range: 0x8008F438 -> 0x8008F49C
-void ERLevel::RemoveWall(class ERLevel * const this /* r30 */, class EInstance * pWall /* r31 */) {
+// this: r30
+void ERLevel::RemoveWall(class EInstance * pWall /* r31 */) {
     // Local variables
     class NLIteratorPtrType * i; // r0
 }
 
 // Range: 0x8008F49C -> 0x8008F50C
-void ERLevel::InsertLight(class ERLevel * const this /* r30 */, class EILight * pLight /* r31 */) {}
+// this: r30
+void ERLevel::InsertLight(class EILight * pLight /* r31 */) {}
 
 // Range: 0x8008F50C -> 0x8008F578
-void ERLevel::RemoveLight(class ERLevel * const this /* r30 */, class EILight * pLight /* r31 */) {
+// this: r30
+void ERLevel::RemoveLight(class EILight * pLight /* r31 */) {
     // Local variables
     class NLIteratorPtrType * i; // r4
 }
@@ -180,22 +197,26 @@ void ERLevel::RemoveLight(class ERLevel * const this /* r30 */, class EILight * 
 void ERLevel::ValidateInstanceInLevel() {}
 
 // Range: 0x8008F57C -> 0x8008F658
-void ERLevel::InsertSkydomeInstance(class ERLevel * const this /* r30 */, class EInstance * pInstance /* r31 */) {
+// this: r30
+void ERLevel::InsertSkydomeInstance(class EInstance * pInstance /* r31 */) {
     // Local variables
     int i; // r5
 }
 
 // Range: 0x8008F658 -> 0x8008F73C
-void ERLevel::AddInstanceToLevel(class ERLevel * const this /* r30 */, class EInstance * pInstance /* r31 */) {}
+// this: r30
+void ERLevel::AddInstanceToLevel(class EInstance * pInstance /* r31 */) {}
 
 // Range: 0x8008F73C -> 0x8008F950
-void ERLevel::AddInstanceToLevelHead(class ERLevel * const this /* r30 */, class EInstance * pInstance /* r31 */) {
+// this: r30
+void ERLevel::AddInstanceToLevelHead(class EInstance * pInstance /* r31 */) {
     // Local variables
     int i; // r3
 }
 
 // Range: 0x8008F950 -> 0x8008FAF8
-void ERLevel::AddWallInstanceToLevel(class ERLevel * const this /* r29 */, class EInstance * pInstance /* r30 */) {
+// this: r29
+void ERLevel::AddWallInstanceToLevel(class EInstance * pInstance /* r30 */) {
     // Local variables
     int i; // [invalid]
     int j; // r31
@@ -204,13 +225,15 @@ void ERLevel::AddWallInstanceToLevel(class ERLevel * const this /* r29 */, class
 }
 
 // Range: 0x8008FAF8 -> 0x8008FB4C
-void ERLevel::PrepareInstance(class ERLevel * const this /* r30 */, class EInstance * pInstance /* r31 */) {}
+// this: r30
+void ERLevel::PrepareInstance(class EInstance * pInstance /* r31 */) {}
 
 // Range: 0x8008FB4C -> 0x8008FB58
 void ERLevel::AddShadowCaster() {}
 
 // Range: 0x8008FB58 -> 0x8008FBA4
-void ERLevel::RemoveShadowCaster(class ERLevel * const this /* r31 */) {
+// this: r31
+void ERLevel::RemoveShadowCaster() {
     // Local variables
     class NLIteratorPtrType * iLevelList; // r4
 }
@@ -219,33 +242,38 @@ void ERLevel::RemoveShadowCaster(class ERLevel * const this /* r31 */) {
 void ERLevel::AddShadowReceiver() {}
 
 // Range: 0x8008FBB0 -> 0x8008FBFC
-void ERLevel::RemoveShadowReceiver(class ERLevel * const this /* r31 */) {
+// this: r31
+void ERLevel::RemoveShadowReceiver() {
     // Local variables
     class NLIteratorPtrType * iLevelList; // r4
 }
 
 // Range: 0x8008FBFC -> 0x8008FCB8
-void ERLevel::AddInstanceToRoom(class ERLevel * const this /* r30 */, class EInstance * pInstance /* r31 */) {
+// this: r30
+void ERLevel::AddInstanceToRoom(class EInstance * pInstance /* r31 */) {
     // Local variables
     int roomIx; // r0
 }
 
 // Range: 0x8008FCB8 -> 0x8008FD6C
-void ERLevel::RemoveInstanceFromRoom(class ERLevel * const this /* r29 */, class EInstance * pInstance /* r30 */) {
+// this: r29
+void ERLevel::RemoveInstanceFromRoom(class EInstance * pInstance /* r30 */) {
     // Local variables
     int roomIx; // r5
     int flags; // r31
 }
 
 // Range: 0x8008FD6C -> 0x8008FDC8
-int ERLevel::GetRoomIndex(const class ERLevel * const this /* r31 */) {
+// this: r31
+int ERLevel::GetRoomIndex() const {
     // Local variables
     signed short unused; // r1+0xA
     signed short roomId; // r1+0x8
 }
 
 // Range: 0x8008FDC8 -> 0x8008FE20
-void ERLevel::NotifyInstanceMoved(class ERLevel * const this /* r30 */, class EInstance * pInstance /* r31 */) {
+// this: r30
+void ERLevel::NotifyInstanceMoved(class EInstance * pInstance /* r31 */) {
     // Local variables
     int roomId; // r0
     int oldRoomId; // r0
@@ -255,26 +283,30 @@ void ERLevel::NotifyInstanceMoved(class ERLevel * const this /* r30 */, class EI
 void ERLevel::AddInstanceToIdMap() {}
 
 // Range: 0x8008FE48 -> 0x8008FEDC
-void ERLevel::RemoveInstanceFromIdMap(class ERLevel * const this /* r30 */, class EInstance * pInstance /* r31 */) {
+// this: r30
+void ERLevel::RemoveInstanceFromIdMap(class EInstance * pInstance /* r31 */) {
     // Local variables
     class EInstance * pMapInstance; // r1+0x8
     class HTIteratorPtrType * i; // r4
 }
 
 // Range: 0x8008FEDC -> 0x8008FF60
-class EMidLotInstance * ERLevel::FindMidLotInstance(class ERLevel * const this /* r27 */, enum eMidLotObjectType objectType /* r28 */) {
+// this: r27
+class EMidLotInstance * ERLevel::FindMidLotInstance(enum eMidLotObjectType objectType /* r28 */) {
     // Local variables
     int i; // r29
 }
 
 // Range: 0x8008FF60 -> 0x8008FFF4
-void ERLevel::GetAllMidLotInstances(class ERLevel * const this /* r26 */, enum eMidLotObjectType objectType /* r27 */, class vector & l /* r28 */) {
+// this: r26
+void ERLevel::GetAllMidLotInstances(enum eMidLotObjectType objectType /* r27 */, class vector & l /* r28 */) {
     // Local variables
     int i; // r29
 }
 
 // Range: 0x8008FFF4 -> 0x800900B8
-void ERLevel::Init(class ERLevel * const this /* r28 */) {
+// this: r28
+void ERLevel::Init() {
     // Local variables
     int i; // r29
 }
@@ -294,7 +326,8 @@ void ERLevel::UnregisterFloorOTDs(class EInstance * pInstance /* r28 */) {
 }
 
 // Range: 0x800901A0 -> 0x800902B4
-void ERLevel::RemoveInstance(class ERLevel * const this /* r31 */, class EInstance * pInstance /* r1+0x8 */) {
+// this: r31
+void ERLevel::RemoveInstance(class EInstance * pInstance /* r1+0x8 */) {
     // Local variables
     class EInstance * * pLast; // r0
 }
@@ -306,14 +339,16 @@ void ERLevel::SetBounds(class EInstance * pInstance /* r30 */, const class EBoun
 void ERLevel::AddBounds() {}
 
 // Range: 0x80090364 -> 0x80090408
-class EBound3 ERLevel::CalcBounds(class EBound3 * b /* r27 */, class ERLevel * const this /* r28 */) {
+// this: r27
+class EBound3 ERLevel::CalcBounds(class ERLevel * const this /* r28 */) {
     // Local variables
     unsigned char first; // r1+0x8
     int i; // r29
 }
 
 // Range: 0x80090408 -> 0x800905B4
-void ERLevel::Update(class ERLevel * const this /* r31 */) {
+// this: r31
+void ERLevel::Update() {
     // Local variables
     unsigned int currentPri; // r29
     class RBIteratorPtrType * iAlways; // [invalid]
@@ -325,10 +360,12 @@ void ERLevel::Update(class ERLevel * const this /* r31 */) {
 }
 
 // Range: 0x800905B4 -> 0x80090604
-void ERLevel::UpdateLightingEtc(class ERLevel * const this /* r31 */) {}
+// this: r31
+void ERLevel::UpdateLightingEtc() {}
 
 // Range: 0x80090604 -> 0x800916E4
-void ERLevel::Draw(class ERLevel * const this /* r23 */, class ERC * prc /* r24 */) {
+// this: r23
+void ERLevel::Draw(class ERC * prc /* r24 */) {
     // Local variables
     class Room * room; // r0
     class E3DWindow * pWin; // r25
@@ -408,7 +445,8 @@ void ERLevel::Draw(class ERLevel * const this /* r23 */, class ERC * prc /* r24 
 }
 
 // Range: 0x800916E4 -> 0x80091824
-unsigned char ERLevel::ObjectShouldBeOccluded(class ERLevel * const this /* r28 */, class EInstance * inst /* r27 */) {
+// this: r28
+unsigned char ERLevel::ObjectShouldBeOccluded(class EInstance * inst /* r27 */) {
     // Local variables
     unsigned char ret; // r30
     signed short locID; // r1+0xC
@@ -421,7 +459,8 @@ unsigned char ERLevel::ObjectShouldBeOccluded(class ERLevel * const this /* r28 
 }
 
 // Range: 0x80091824 -> 0x80091AEC
-void ERLevel::DrawToShadowMap(class ERLevel * const this /* r30 */, class ERC * prc /* r31 */) {
+// this: r30
+void ERLevel::DrawToShadowMap(class ERC * prc /* r31 */) {
     // Local variables
     class ESimsCam * pCam; // r27
     class ESim * pSelectedSim; // r26
@@ -475,7 +514,8 @@ void ShadowCalculatePlane(struct ShadowPlane * plane /* r28 */, float width /* f
 }
 
 // Range: 0x80092104 -> 0x8009234C
-void ERLevel::ShadowSetup(class ERLevel * const this /* r29 */, class EVec3 & lightPos /* r30 */, class EBoundSphere & bSphere /* r31 */) {
+// this: r29
+void ERLevel::ShadowSetup(class EVec3 & lightPos /* r30 */, class EBoundSphere & bSphere /* r31 */) {
     // Local variables
     class EVec3 lightDir; // r1+0x44
     float lightScreenZ; // f30
@@ -488,7 +528,8 @@ void ERLevel::ShadowSetup(class ERLevel * const this /* r29 */, class EVec3 & li
 }
 
 // Range: 0x8009239C -> 0x80092584
-void ERLevel::PreDrawShadows(class ERLevel * const this /* r29 */, const class EBoundSphere & bndSphere /* r30 */) {
+// this: r29
+void ERLevel::PreDrawShadows(const class EBoundSphere & bndSphere /* r30 */) {
     // Local variables
     float elongation_correction; // f31
     class EVec3 lightDir; // r1+0x3C
@@ -499,13 +540,15 @@ void ERLevel::PreDrawShadows(class ERLevel * const this /* r29 */, const class E
 }
 
 // Range: 0x80092584 -> 0x800925F8
-void ERLevel::PostDrawShadows(class ERLevel * const this /* r31 */) {
+// this: r31
+void ERLevel::PostDrawShadows() {
     // References
     // -> class ENgcGraphics _ngcGfx;
 }
 
 // Range: 0x800925F8 -> 0x80092758
-void ERLevel::DrawOuterLotInstancesWithShadow(class ERLevel * const this /* r27 */, int maxReflectionSubModels /* r28 */, unsigned char skipOuterLotFrustumCulling /* r29 */) {
+// this: r27
+void ERLevel::DrawOuterLotInstancesWithShadow(int maxReflectionSubModels /* r28 */, unsigned char skipOuterLotFrustumCulling /* r29 */) {
     // Local variables
     float shadowAlpha; // f31
     int i; // [invalid]
@@ -514,7 +557,8 @@ void ERLevel::DrawOuterLotInstancesWithShadow(class ERLevel * const this /* r27 
 }
 
 // Range: 0x80092758 -> 0x80092924
-void ERLevel::DrawInstancesWithShadow(class ERLevel * const this /* r28 */, const class TNodeList & list /* r29 */) {
+// this: r28
+void ERLevel::DrawInstancesWithShadow(const class TNodeList & list /* r29 */) {
     // Local variables
     float shadowAlpha; // f31
     class NLIteratorPtrType * iShadow; // r30
@@ -526,7 +570,8 @@ void ERLevel::DrawInstancesWithShadow(class ERLevel * const this /* r28 */, cons
 }
 
 // Range: 0x80092924 -> 0x80092A3C
-unsigned char ERLevel::DrawInstanceToShadowTexture(class ERLevel * const this /* r29 */, class EBaseInstance * pInstance /* r30 */, unsigned char bSim /* r31 */) {
+// this: r29
+unsigned char ERLevel::DrawInstanceToShadowTexture(class EBaseInstance * pInstance /* r30 */, unsigned char bSim /* r31 */) {
     // Local variables
     class EBoundSphere bndSphere; // r1+0x8
     class EBound3 mBounds; // r1+0x18
@@ -546,14 +591,16 @@ class EOrderTableData * ERLevel::AllocAndCopyOTD(class EOrderTableData & otd /* 
 }
 
 // Range: 0x80092AA0 -> 0x80092B10
-void ERLevel::RegisterFloor(class ERLevel * const this /* r30 */) {
+// this: r30
+void ERLevel::RegisterFloor() {
     // Local variables
     class EOrderTableData * pOTD; // r0
     int roomIx; // r0
 }
 
 // Range: 0x80092B10 -> 0x80092BD4
-void ERLevel::InsertInOrderTable(class ERLevel * const this /* r29 */, class EOrderTableData & otd /* r30 */) {
+// this: r29
+void ERLevel::InsertInOrderTable(class EOrderTableData & otd /* r30 */) {
     // Local variables
     class EOrderTableData * pOTD; // r0
     float distance; // f0
@@ -562,20 +609,23 @@ void ERLevel::InsertInOrderTable(class ERLevel * const this /* r29 */, class EOr
 }
 
 // Range: 0x80092BD4 -> 0x80092C64
-void ERLevel::InsertInDOFForegroundObjectList(class ERLevel * const this /* r30 */, class EOrderTableData & otd /* r31 */) {
+// this: r30
+void ERLevel::InsertInDOFForegroundObjectList(class EOrderTableData & otd /* r31 */) {
     // Local variables
     class EOrderTableData * pOTD; // r0
     class EOrderTableData * pTail; // r6
 }
 
 // Range: 0x80092C64 -> 0x80092DA8
-void ERLevel::DrawOrderTableEntry(class ERLevel * const this /* r29 */, class EOrderTableData * pDrawNode /* r30 */, class ERC * prc /* r31 */) {
+// this: r29
+void ERLevel::DrawOrderTableEntry(class EOrderTableData * pDrawNode /* r30 */, class ERC * prc /* r31 */) {
     // References
     // -> unsigned char m_drawingOrderTable;
 }
 
 // Range: 0x80092DA8 -> 0x80092E20
-void ERLevel::DrawOrderTableSlot(class ERLevel * const this /* r29 */) {
+// this: r29
+void ERLevel::DrawOrderTableSlot() {
     // Local variables
     class EOrderTableData * pDrawNode; // r4
     class EOrderTableData * pNext; // r30
@@ -589,7 +639,8 @@ static int OrderTableSortReferenceCompare() {
 }
 
 // Range: 0x80092EA4 -> 0x80092FF0
-void ERLevel::DrawOrderTable(class ERLevel * const this /* r28 */) {
+// this: r28
+void ERLevel::DrawOrderTable() {
     // Local variables
     struct OrderTableSortReference * pSortList; // r29
     class EOrderTableData * otd; // r3
@@ -597,7 +648,8 @@ void ERLevel::DrawOrderTable(class ERLevel * const this /* r28 */) {
 }
 
 // Range: 0x80092FF0 -> 0x80093248
-void ERLevel::SetRoomCount(class ERLevel * const this /* r30 */, int roomCount /* r27 */) {
+// this: r30
+void ERLevel::SetRoomCount(int roomCount /* r27 */) {
     // Local variables
     int c; // r28
     int size; // r31
@@ -606,7 +658,8 @@ void ERLevel::SetRoomCount(class ERLevel * const this /* r30 */, int roomCount /
 }
 
 // Range: 0x80093248 -> 0x800932E8
-void ERLevel::UpdateLightsIntensityScale(class ERLevel * const this /* r28 */, class EVec3 & scale /* r27 */) {
+// this: r28
+void ERLevel::UpdateLightsIntensityScale(class EVec3 & scale /* r27 */) {
     // Local variables
     const class RoomData * rd; // r0
     const struct LightData * ld; // r0
@@ -662,7 +715,8 @@ static void InterpolateSkyLights(float x /* f30 */, const struct LightingSkyLigh
 }
 
 // Range: 0x80093A98 -> 0x80093D88
-void ERLevel::InterpolateLevelLighting(class ERLevel * const this /* r28 */, float timeInHours /* f30 */, struct LightingEntry & output /* r29 */) {
+// this: r28
+void ERLevel::InterpolateLevelLighting(float timeInHours /* f30 */, struct LightingEntry & output /* r29 */) {
     // Local variables
     int fromIx; // r1+0xC
     int toIx; // r1+0x8
@@ -677,7 +731,8 @@ void ERLevel::InterpolateLevelLighting(class ERLevel * const this /* r28 */, flo
 void ERLevel::OutsideLightsInit() {}
 
 // Range: 0x80093D8C -> 0x80093FBC
-void ERLevel::OutsideLightsUpdate(class ERLevel * const this /* r29 */, struct LightingEntry & lighting /* r30 */, unsigned char bGetSunDirFromWeatherSystem /* r31 */) {
+// this: r29
+void ERLevel::OutsideLightsUpdate(struct LightingEntry & lighting /* r30 */, unsigned char bGetSunDirFromWeatherSystem /* r31 */) {
     // Local variables
     class EVec3 sunDir; // r1+0x40
     class EVec3 moonDir; // r1+0x34
@@ -702,7 +757,8 @@ void ERLevel::UpdateFloorLighting() {
 void ERLevel::InsertHouseObject() {}
 
 // Range: 0x80094054 -> 0x80094424
-void ERLevel::CreateMidLotObjects(class ERLevel * const this /* r15 */) {
+// this: r15
+void ERLevel::CreateMidLotObjects() {
     // Local variables
     int i; // r19
     enum eMidLotObjectType midlottype; // r18
@@ -718,7 +774,8 @@ void ERLevel::CreateMidLotObjects(class ERLevel * const this /* r15 */) {
 unsigned char ERLevel::MidLotInitDone() {}
 
 // Range: 0x80094430 -> 0x800944F0
-void ERLevel::GetLightsAtLocation(class ERLevel * const this /* r27 */, struct ELights & lights /* r26 */) {
+// this: r27
+void ERLevel::GetLightsAtLocation(struct ELights & lights /* r26 */) {
     // Local variables
     const signed short * ids; // r30
     const struct LightData * ld; // r0
@@ -744,7 +801,8 @@ unsigned char ERLevel::RaycastIntersectionStaticSubModel(class EIStaticSubModel 
 }
 
 // Range: 0x80094728 -> 0x800949C0
-unsigned char ERLevel::FindOuterLotInteresection(class ERLevel * const this /* r25 */, class EVec3 & ray_pos /* r26 */, class EVec3 & ray_dir /* r27 */, class EVec3 & hit_pos /* r28 */, float & hit_dist /* r29 */, class RaycastLastHit * lastHit /* r30 */) {
+// this: r25
+unsigned char ERLevel::FindOuterLotInteresection(class EVec3 & ray_pos /* r26 */, class EVec3 & ray_dir /* r27 */, class EVec3 & hit_pos /* r28 */, float & hit_dist /* r29 */, class RaycastLastHit * lastHit /* r30 */) {
     // Local variables
     int iFirstCollisionInstance; // [invalid]
     class EIStaticSubModel * pStaticSubModel; // r23

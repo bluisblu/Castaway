@@ -5,12 +5,12 @@
     Code range: 0x802231C0 -> 0x80223250
 */
 // Range: 0x802231C0 -> 0x8022321C
-void * ESims3DHead::__nw(unsigned long size /* r30 */) {
+void * ESims3DHead::operator new(unsigned long size /* r30 */) {
     // Local variables
     void * result; // r31
 }
 
 // Range: 0x8022321C -> 0x80223250
-void ESims3DHead::__dl(void * p /* r31 */) {}
+void ESims3DHead::operator delete(void * p /* r31 */) {}
 
 

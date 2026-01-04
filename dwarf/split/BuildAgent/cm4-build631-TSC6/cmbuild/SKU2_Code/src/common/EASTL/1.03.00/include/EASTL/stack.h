@@ -17,15 +17,10 @@ int & stack::top() {}
 void stack::push() {}
 
 // Range: 0x8011DF10 -> 0x8011DF58
-void * stack::stack(class stack * const this /* r31 */) {}
+// this: r31
+stack::stack() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\common\EASTL\1.03.00\include\EASTL\stack.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x8016C084 -> 0x8016C0D8
-*/
 // Range: 0x8016C084 -> 0x8016C088
 void stack::push() {}
 
@@ -36,20 +31,17 @@ void stack::pop() {}
 class StateMachineStatus * & stack::top() {}
 
 // Range: 0x8016C090 -> 0x8016C0D8
-void * stack::stack(class stack * const this /* r31 */) {}
+// this: r31
+stack::stack() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\common\EASTL\1.03.00\include\EASTL\stack.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x8018E0B8 -> 0x8018E158
-*/
 // Range: 0x8018E0B8 -> 0x8018E100
-void * stack::stack(class stack * const this /* r31 */) {}
+// this: r31
+stack::stack() {}
 
 // Range: 0x8018E100 -> 0x8018E148
-void * stack::stack(class stack * const this /* r31 */) {}
+// this: r31
+stack::stack() {}
 
 // Range: 0x8018E148 -> 0x8018E14C
 struct CASUIScreenState & stack::top() {}

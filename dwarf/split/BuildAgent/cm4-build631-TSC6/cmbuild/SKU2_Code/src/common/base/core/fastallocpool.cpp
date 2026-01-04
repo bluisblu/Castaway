@@ -5,13 +5,15 @@
     Code range: 0x802736C0 -> 0x802738FC
 */
 // Range: 0x802736C0 -> 0x80273738
-void * FastAllocPool::FastAllocPool(class FastAllocPool * const this /* r31 */) {
+// this: r31
+FastAllocPool::FastAllocPool() {
     // References
     // -> struct [anonymous] __vt__13FastAllocPool;
 }
 
 // Range: 0x80273738 -> 0x80273778
-void * FastAllocPool::~FastAllocPool(class FastAllocPool * const this /* r31 */) {}
+// this: r31
+FastAllocPool::~FastAllocPool() {}
 
 // Range: 0x80273778 -> 0x802737F0
 void FastAllocPool::Init() {
@@ -22,7 +24,8 @@ void FastAllocPool::Init() {
 }
 
 // Range: 0x802737F0 -> 0x80273898
-void * ProtectedAllocPool::ProtectedAllocPool(class ProtectedAllocPool * const this /* r31 */) {
+// this: r31
+ProtectedAllocPool::ProtectedAllocPool() {
     // References
     // -> struct [anonymous] __vt__6EMutex;
     // -> struct [anonymous] __vt__18ProtectedAllocPool;
@@ -30,6 +33,7 @@ void * ProtectedAllocPool::ProtectedAllocPool(class ProtectedAllocPool * const t
 }
 
 // Range: 0x80273898 -> 0x802738FC
-void * ProtectedAllocPool::~ProtectedAllocPool(class ProtectedAllocPool * const this /* r30 */) {}
+// this: r30
+ProtectedAllocPool::~ProtectedAllocPool() {}
 
 

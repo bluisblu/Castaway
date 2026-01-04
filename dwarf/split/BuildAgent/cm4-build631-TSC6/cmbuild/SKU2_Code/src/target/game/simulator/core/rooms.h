@@ -20,12 +20,6 @@ class Room * RoomManager::GetRoom() {}
 class map & RoomManager::GetRoomCollection() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\target\game\simulator\core\rooms.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x8008BB80 -> 0x8008BBB0
-*/
 // Range: 0x8008BB80 -> 0x8008BB88
 class RoomManager * RoomManager::GetRoomManager() {
     // References
@@ -42,12 +36,6 @@ unsigned char VALIDROOMID() {}
 float Room::GetPointLightDimmer() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\target\game\simulator\core\rooms.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x800CE478 -> 0x800CE5C4
-*/
 // Range: 0x800CE478 -> 0x800CE480
 void Room::SetDirty() {}
 
@@ -64,16 +52,18 @@ void Room::SetUsed() {}
 unsigned char Room::IsDirty() {}
 
 // Range: 0x800CE4AC -> 0x800CE4EC
-void * Room::__nw(unsigned long size /* r31 */) {}
+void * Room::operator new(unsigned long size /* r31 */) {}
 
 // Range: 0x800CE4EC -> 0x800CE4F8
-void * DiagonalNode::DiagonalNode() {}
+DiagonalNode::DiagonalNode() {}
 
 // Range: 0x800CE4F8 -> 0x800CE54C
-void Room::ClearPartition(class Room * const this /* r30 */) {}
+// this: r30
+void Room::ClearPartition() {}
 
 // Range: 0x800CE54C -> 0x800CE584
-void Room::SetRoomIntensityScale(class Room * const this /* r31 */) {}
+// this: r31
+void Room::SetRoomIntensityScale() {}
 
 // Range: 0x800CE584 -> 0x800CE58C
 class EVec3 & Room::GetRoomIntensityScale() {}
@@ -82,17 +72,12 @@ class EVec3 & Room::GetRoomIntensityScale() {}
 void Room::SetLightingGroup() {}
 
 // Range: 0x800CE590 -> 0x800CE5C4
-void Room::__dl(void * ptr /* r31 */) {}
+void Room::operator delete(void * ptr /* r31 */) {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\target\game\simulator\core\rooms.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x80113EC4 -> 0x80114048
-*/
 // Range: 0x80113EC4 -> 0x80113FAC
-unsigned short RoomManager::GetMaxRoomId(class RoomManager * const this /* r29 */) {
+// this: r29
+unsigned short RoomManager::GetMaxRoomId() {
     // Local variables
     unsigned short maxId; // r31
     struct rbtree_iterator i; // r1+0x14
@@ -107,18 +92,13 @@ class RoomManager * RoomManager::CreateInstance() {}
 void RoomManager::DestroyInstance() {}
 
 // Range: 0x80113FE4 -> 0x80114048
-float RoomManager::GetRoomEnvironmentScore(class RoomManager * const this /* r30 */) {
+// this: r30
+float RoomManager::GetRoomEnvironmentScore() {
     // Local variables
     class Room * r; // r31
 }
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\target\game\simulator\core\rooms.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x8020F588 -> 0x8020F5A4
-*/
 // Range: 0x8020F588 -> 0x8020F594
 void Room::ClearRoomIntensityScaleDirty() {}
 

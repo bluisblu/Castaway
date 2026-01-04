@@ -5,7 +5,7 @@
     Code range: 0x8006B638 -> 0x8006B6C8
 */
 // Range: 0x8006B638 -> 0x8006B688
-void * EOrderTableData::EOrderTableData() {}
+EOrderTableData::EOrderTableData() {}
 
 // Range: 0x8006B688 -> 0x8006B6C8
 void EOrderTableData::SetDefaults() {}

@@ -8,14 +8,9 @@
 signed short ObjectDataBehaviorConstants::GetValue() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\target\game\simulator\objectdata\behaviorconstants.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x8015E864 -> 0x8015ED38
-*/
 // Range: 0x8015E864 -> 0x8015E8BC
-void * QuickDataBehaviorConstants::~QuickDataBehaviorConstants(class QuickDataBehaviorConstants * const this /* r30 */) {}
+// this: r30
+QuickDataBehaviorConstants::~QuickDataBehaviorConstants() {}
 
 // Range: 0x8015E8BC -> 0x8015E8C8
 unsigned char EdithBehaviorConstants::IsTuning() {}
@@ -30,16 +25,19 @@ void EdithBehaviorConstants::SetIsTuning() {}
 void EdithBehaviorConstants::SetValueCount() {}
 
 // Range: 0x8015E914 -> 0x8015E96C
-void * IFFBehaviorConstants::~IFFBehaviorConstants(class IFFBehaviorConstants * const this /* r30 */) {}
+// this: r30
+IFFBehaviorConstants::~IFFBehaviorConstants() {}
 
 // Range: 0x8015E96C -> 0x8015E9BC
-void * IFFBehaviorConstants::IFFBehaviorConstants(class IFFBehaviorConstants * const this /* r31 */) {
+// this: r31
+IFFBehaviorConstants::IFFBehaviorConstants() {
     // References
     // -> struct [anonymous] __vt__20IFFBehaviorConstants;
 }
 
 // Range: 0x8015E9BC -> 0x8015EA00
-void * QuickDataBehaviorConstants::QuickDataBehaviorConstants(class QuickDataBehaviorConstants * const this /* r31 */) {
+// this: r31
+QuickDataBehaviorConstants::QuickDataBehaviorConstants() {
     // References
     // -> struct [anonymous] __vt__26QuickDataBehaviorConstants;
 }

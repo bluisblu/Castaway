@@ -5,7 +5,8 @@
     Code range: 0x8017A990 -> 0x8017A9CC
 */
 // Range: 0x8017A990 -> 0x8017A9CC
-void * InLevelStoryState::InLevelStoryState(class InLevelStoryState * const this /* r31 */) {
+// this: r31
+InLevelStoryState::InLevelStoryState() {
     // References
     // -> struct [anonymous] __vt__17InLevelStoryState;
 }

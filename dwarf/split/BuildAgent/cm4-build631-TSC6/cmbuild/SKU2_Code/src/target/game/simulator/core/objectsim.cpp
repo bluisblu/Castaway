@@ -18,7 +18,8 @@ unsigned char TryFindSafeLocForSim(class cXObject * newObj /* r23 */, class FTil
 }
 
 // Range: 0x80146648 -> 0x80146700
-unsigned char cXObject::AllowIdleOptimization(class cXObject * const this /* r29 */) {
+// this: r29
+unsigned char cXObject::AllowIdleOptimization() {
     // Local variables
     unsigned char bSpriteSlotActive; // r31
     class SpriteSlot * i; // r30
@@ -28,7 +29,8 @@ unsigned char cXObject::AllowIdleOptimization(class cXObject * const this /* r29
 enum NodeAction cXObject::HandleBreakpoint() {}
 
 // Range: 0x80146704 -> 0x80146928
-enum TreeReturnCode cXObject::TryUserEvent(class cXObject * const this /* r28 */, class StackElem * elem /* r29 */, class XPrimParam * param /* r30 */) {
+// this: r28
+enum TreeReturnCode cXObject::TryUserEvent(class StackElem * elem /* r29 */, class XPrimParam * param /* r30 */) {
     // Local variables
     class cXObject * obj; // r0
     signed short timeout; // r1+0x8
@@ -42,7 +44,8 @@ enum TreeReturnCode cXObject::TryUserEvent(class cXObject * const this /* r28 */
 }
 
 // Range: 0x80146928 -> 0x80146AB4
-enum TreeReturnCode cXObject::TryTestObjectType(class cXObject * const this /* r28 */, class XPrimParam * param /* r29 */) {
+// this: r28
+enum TreeReturnCode cXObject::TryTestObjectType(class XPrimParam * param /* r29 */) {
     // Local variables
     int guid; // r31
     signed short id; // r1+0x8
@@ -87,7 +90,8 @@ enum TreeReturnCode cXObject::TryIsPersonInArea(class XPrimParam * param /* r23 
 }
 
 // Range: 0x80146FFC -> 0x801485D8
-enum TreeReturnCode cXObject::TryFindGoodLocation(class cXObject * const this /* r28 */, class StackElem * elem /* r18 */, class XPrimParam * param /* r24 */, enum TFGL_ACTIONS * action /* r25 */, class FTilePt * pStart /* r26 */, int * pLevel /* r27 */, signed short * relID /* r17 */) {
+// this: r28
+enum TreeReturnCode cXObject::TryFindGoodLocation(class StackElem * elem /* r18 */, class XPrimParam * param /* r24 */, enum TFGL_ACTIONS * action /* r25 */, class FTilePt * pStart /* r26 */, int * pLevel /* r27 */, signed short * relID /* r17 */) {
     // Local variables
     class cXObject * obj; // r29
     class FTilePt start; // r1+0x50
@@ -160,7 +164,8 @@ enum TreeReturnCode cXObject::TryFindGoodLocation(class cXObject * const this /*
 }
 
 // Range: 0x801485D8 -> 0x80148B64
-enum TreeReturnCode cXObject::TrySetBalloon(class cXObject * const this /* r30 */, class StackElem * elem /* r25 */, class XPrimParam * param /* r31 */) {
+// this: r30
+enum TreeReturnCode cXObject::TrySetBalloon(class StackElem * elem /* r25 */, class XPrimParam * param /* r31 */) {
     // Local variables
     class cXObject * targ; // r27
     int priority; // r29
@@ -179,7 +184,8 @@ enum TreeReturnCode cXObject::TrySetBalloon(class cXObject * const this /* r30 *
 }
 
 // Range: 0x80148B64 -> 0x80149088
-enum TreeReturnCode cXObject::TryCallNamedTree(class cXObject * const this /* r30 */, class StackElem * elem /* r31 */, class XPrimParam * param /* r25 */) {
+// this: r30
+enum TreeReturnCode cXObject::TryCallNamedTree(class StackElem * elem /* r31 */, class XPrimParam * param /* r25 */) {
     // Local variables
     unsigned int fileID; // r29
     unsigned int fileID2; // r28
@@ -214,7 +220,8 @@ static int ParseOneString(const class BString2 & rawText /* r25 */, const class 
 }
 
 // Range: 0x801492D8 -> 0x8014A1E0
-void cXObject::ParseUIString(class cXObject * const this /* r26 */, class BString2 & rawText /* r27 */, class StackElem * elem /* r28 */, signed short * stackVars /* r22 */, class ObjSelector * * stackObjType /* r29 */, unsigned char bUseDefaultReplace /* r30 */) {
+// this: r26
+void cXObject::ParseUIString(class BString2 & rawText /* r27 */, class StackElem * elem /* r28 */, signed short * stackVars /* r22 */, class ObjSelector * * stackObjType /* r29 */, unsigned char bUseDefaultReplace /* r30 */) {
     // Local variables
     int pos; // r23
     int local1; // r1+0x90
@@ -283,7 +290,8 @@ void get_food_replacement_string(signed short foodid /* r30 */, class BString2 &
 }
 
 // Range: 0x8014A24C -> 0x8014A4C0
-enum TreeReturnCode cXObject::TryMakeActionString(class cXObject * const this /* r26 */, class StackElem * elem /* r27 */, class XPrimParam * param /* r28 */) {
+// this: r26
+enum TreeReturnCode cXObject::TryMakeActionString(class StackElem * elem /* r27 */, class XPrimParam * param /* r28 */) {
     // Local variables
     unsigned char bIsMenuInProgress; // r0
     unsigned char bIsExecutingInMainSim; // r0
@@ -300,7 +308,8 @@ enum TreeReturnCode cXObject::TryMakeActionString(class cXObject * const this /*
 }
 
 // Range: 0x8014A4C0 -> 0x8014A9F0
-enum TreeReturnCode cXObject::TryPushAction(class cXObject * const this /* r30 */, class StackElem * elem /* r31 */) {
+// this: r30
+enum TreeReturnCode cXObject::TryPushAction(class StackElem * elem /* r31 */) {
     // Local variables
     class PushActionParam & pushAction; // r29
     int paramNum; // r28
@@ -333,7 +342,8 @@ unsigned char _MotiveLessThan() {
 }
 
 // Range: 0x8014AA14 -> 0x8014ABD0
-enum TreeReturnCode cXObject::TryFind5WorstMotives(class cXObject * const this /* r31 */) {
+// this: r31
+enum TreeReturnCode cXObject::TryFind5WorstMotives() {
     // Local variables
     int srchTarget; // r12
     int motivesToTest[8]; // r1+0x8
@@ -345,7 +355,8 @@ enum TreeReturnCode cXObject::TryFind5WorstMotives(class cXObject * const this /
 }
 
 // Range: 0x8014ABD0 -> 0x8014B678
-enum TreeReturnCode cXObject::TryRelationship2(class cXObject * const this /* r25 */, class StackElem * elem /* r26 */, class XPrimParam * _param /* r27 */) {
+// this: r25
+enum TreeReturnCode cXObject::TryRelationship2(class StackElem * elem /* r26 */, class XPrimParam * _param /* r27 */) {
     // Local variables
     int key; // r24
     class RelMatrix * matrix; // r30
@@ -372,7 +383,8 @@ enum TreeReturnCode cXObject::TryRelationship2(class cXObject * const this /* r2
 }
 
 // Range: 0x8014B678 -> 0x8014BBCC
-enum TreeReturnCode cXObject::TryRelationship(class cXObject * const this /* r27 */, class StackElem * elem /* r28 */, class XPrimParam * param /* r29 */) {
+// this: r27
+enum TreeReturnCode cXObject::TryRelationship(class StackElem * elem /* r28 */, class XPrimParam * param /* r29 */) {
     // Local variables
     int key; // r25
     class RelMatrix * matrix; // r24
@@ -393,7 +405,8 @@ enum TreeReturnCode cXObject::TryRelationship(class cXObject * const this /* r27
 }
 
 // Range: 0x8014BBCC -> 0x8014BC94
-enum TreeReturnCode cXObject::TryTutorial(class cXObject * const this /* r31 */) {
+// this: r31
+enum TreeReturnCode cXObject::TryTutorial() {
     // Local variables
     enum TreeReturnCode result; // r3
 
@@ -411,7 +424,8 @@ enum TreeReturnCode StartFireAtObjectLoc(class cXObject * obj /* r29 */, class O
 }
 
 // Range: 0x8014BE14 -> 0x8014C4E0
-enum TreeReturnCode cXObject::TryBurn(class cXObject * const this /* r30 */, class XPrimParam * param /* r31 */) {
+// this: r30
+enum TreeReturnCode cXObject::TryBurn(class XPrimParam * param /* r31 */) {
     // Local variables
     class cXObject * obj; // r29
     class ObjSelector * const fireSel; // r28
@@ -441,7 +455,8 @@ enum TreeReturnCode cXObject::TryBurn(class cXObject * const this /* r30 */, cla
 }
 
 // Range: 0x8014C4E0 -> 0x8014CEB0
-enum TreeReturnCode cXObject::TryCreateObject(class cXObject * const this /* r22 */, class StackElem * elem /* r23 */, class XPrimParam * param /* r24 */) {
+// this: r22
+enum TreeReturnCode cXObject::TryCreateObject(class StackElem * elem /* r23 */, class XPrimParam * param /* r24 */) {
     // Local variables
     class ObjSelector * selector; // r31
     int guid; // r21
@@ -492,7 +507,8 @@ enum TreeReturnCode cXObject::TryPreloadObject(class XPrimParam * param /* r30 *
 }
 
 // Range: 0x8014CF4C -> 0x8014D1B4
-enum TreeReturnCode cXObject::TryDropOnto(class cXObject * const this /* r31 */, class StackElem * elem /* r27 */, class XPrimParam * param /* r28 */) {
+// this: r31
+enum TreeReturnCode cXObject::TryDropOnto(class StackElem * elem /* r27 */, class XPrimParam * param /* r28 */) {
     // Local variables
     int sourceSlotNum; // r30
     int destSlotNum; // r29
@@ -506,7 +522,8 @@ enum TreeReturnCode cXObject::TryDropOnto(class cXObject * const this /* r31 */,
 }
 
 // Range: 0x8014D1B4 -> 0x8014D52C
-enum TreeReturnCode cXObject::TrySnapObject(class cXObject * const this /* r27 */, class XPrimParam * param /* r26 */) {
+// this: r27
+enum TreeReturnCode cXObject::TrySnapObject(class XPrimParam * param /* r26 */) {
     // Local variables
     signed short sourceObjectID; // r1+0x10
     signed short destObjectID; // r1+0xE
@@ -537,7 +554,8 @@ enum TreeReturnCode cXObject::TryBudget(class XPrimParam * param /* r30 */) {
 }
 
 // Range: 0x8014D680 -> 0x8014E5F4
-enum TreeReturnCode cXObject::TrySetToNext(class cXObject * const this /* r29 */, class StackElem * elem /* r24 */, class XPrimParam * param /* r30 */) {
+// this: r29
+enum TreeReturnCode cXObject::TrySetToNext(class StackElem * elem /* r24 */, class XPrimParam * param /* r30 */) {
     // Local variables
     const signed short * dest; // r1+0x20
     signed short srchType; // r26
@@ -579,7 +597,8 @@ enum TreeReturnCode cXObject::TrySetToNext(class cXObject * const this /* r29 */
 }
 
 // Range: 0x8014E5F4 -> 0x8014E8DC
-enum TreeReturnCode cXObject::TryFindFunctionalObject(class cXObject * const this /* r30 */, class StackElem * elem /* r31 */) {
+// this: r30
+enum TreeReturnCode cXObject::TryFindFunctionalObject(class StackElem * elem /* r31 */) {
     // Local variables
     int scoreField; // r26
     enum ObjEntryPoint ep; // r25
@@ -599,7 +618,8 @@ enum TreeReturnCode cXObject::TryFindFunctionalObject(class cXObject * const thi
 }
 
 // Range: 0x8014E8DC -> 0x8014EA98
-enum TreeReturnCode cXObject::TryCallFunctionalTree(class cXObject * const this /* r28 */, class XPrimParam * param /* r29 */) {
+// this: r28
+enum TreeReturnCode cXObject::TryCallFunctionalTree(class XPrimParam * param /* r29 */) {
     // Local variables
     class cXObject * obj; // r30
     enum ObjEntryPoint ep; // r4
@@ -611,7 +631,8 @@ enum TreeReturnCode cXObject::TryCallFunctionalTree(class cXObject * const this 
 }
 
 // Range: 0x8014EA98 -> 0x8015076C
-enum TreeReturnCode cXObject::TryGenericSimCall(class cXObject * const this /* r25 */, class StackElem * elem /* r23 */) {
+// this: r25
+enum TreeReturnCode cXObject::TryGenericSimCall(class StackElem * elem /* r23 */) {
     // Local variables
     enum TreeReturnCode result; // r30
     class cXPerson * PersonA; // r27
@@ -741,7 +762,8 @@ enum TreeReturnCode cXObject::TryGenericSimCall(class cXObject * const this /* r
 }
 
 // Range: 0x8015076C -> 0x80150D40
-enum TreeReturnCode cXObject::ShowAllObjectDialogs(class cXObject * const this /* r25 */, class StackElem * elem /* r26 */) {
+// this: r25
+enum TreeReturnCode cXObject::ShowAllObjectDialogs(class StackElem * elem /* r26 */) {
     // Local variables
     class cXObject * pObj; // r0
     class ObjSelector * pSel; // r31
@@ -782,7 +804,8 @@ void cXObject::TransitionToNewHouse(signed short TargetHouse /* r29 */, signed s
 }
 
 // Range: 0x80150E1C -> 0x80150F7C
-void cXObject::TransitionToLot(class cXObject * const this /* r24 */, signed short target /* r25 */, signed short transitionID /* r26 */) {
+// this: r24
+void cXObject::TransitionToLot(signed short target /* r25 */, signed short transitionID /* r26 */) {
     // Local variables
     class Neighborhood * neighborhood; // r29
     signed short nID; // r30
@@ -799,10 +822,12 @@ void cXObject::TransitionToLot(class cXObject * const this /* r24 */, signed sho
 }
 
 // Range: 0x80150F7C -> 0x80151060
-void cXObject::RewriteDialogParamIndices(class cXObject * const this /* r30 */, class DialogParam & dialogParam /* r31 */) {}
+// this: r30
+void cXObject::RewriteDialogParamIndices(class DialogParam & dialogParam /* r31 */) {}
 
 // Range: 0x80151060 -> 0x80151334
-enum TreeReturnCode cXObject::TryDialog(class cXObject * const this /* r27 */, class StackElem * elem /* r28 */, class XPrimParam * param /* r29 */, unsigned char bParseUseDefaultReplace /* r30 */) {
+// this: r27
+enum TreeReturnCode cXObject::TryDialog(class StackElem * elem /* r28 */, class XPrimParam * param /* r29 */, unsigned char bParseUseDefaultReplace /* r30 */) {
     // Local variables
     class EGlobal & pGlobals; // r0
     class DialogParam dlgParam; // r1+0x8
@@ -819,7 +844,8 @@ enum TreeReturnCode cXObject::TryDialog(class cXObject * const this /* r27 */, c
 }
 
 // Range: 0x80151334 -> 0x801514BC
-enum TreeReturnCode cXObject::TryKillObject(class cXObject * const this /* r27 */, class StackElem * elem /* r28 */, class XPrimParam * param /* r29 */, signed short * pKillID /* r30 */) {
+// this: r27
+enum TreeReturnCode cXObject::TryKillObject(class StackElem * elem /* r28 */, class XPrimParam * param /* r29 */, signed short * pKillID /* r30 */) {
     // Local variables
     class cXObject * obj; // r31
     class cXPerson * person; // r31
@@ -829,7 +855,8 @@ enum TreeReturnCode cXObject::TryKillObject(class cXObject * const this /* r27 *
 }
 
 // Range: 0x801514BC -> 0x801515D8
-enum TreeReturnCode cXObject::TryIdle(class cXObject * const this /* r29 */, class XPrimParam * param /* r30 */) {
+// this: r29
+enum TreeReturnCode cXObject::TryIdle(class XPrimParam * param /* r30 */) {
     // Local variables
     signed short * var; // r0
     int idleStatus; // r0
@@ -839,7 +866,8 @@ enum TreeReturnCode cXObject::TryIdle(class cXObject * const this /* r29 */, cla
 }
 
 // Range: 0x801515D8 -> 0x801517D4
-enum TreeReturnCode cXObject::TryUpdate(class cXObject * const this /* r29 */, class XPrimParam * param /* r30 */) {
+// this: r29
+enum TreeReturnCode cXObject::TryUpdate(class XPrimParam * param /* r30 */) {
     // Local variables
     class cXObject * obj; // r31
     class ISimInstance * pIObjectInstance; // r0
@@ -849,7 +877,8 @@ enum TreeReturnCode cXObject::TryUpdate(class cXObject * const this /* r29 */, c
 }
 
 // Range: 0x801517D4 -> 0x801519FC
-enum TreeReturnCode cXObject::TryGrab(class cXObject * const this /* r29 */, class XPrimParam * param /* r28 */) {
+// this: r29
+enum TreeReturnCode cXObject::TryGrab(class XPrimParam * param /* r28 */) {
     // Local variables
     class cXObject * grab; // r31
     class IBaseSimInstance * pISim; // r30
@@ -858,7 +887,8 @@ enum TreeReturnCode cXObject::TryGrab(class cXObject * const this /* r29 */, cla
 }
 
 // Range: 0x801519FC -> 0x80151AC8
-enum TreeReturnCode cXObject::TryTreeBreak(class cXObject * const this /* r30 */, class XPrimParam * param /* r31 */) {
+// this: r30
+enum TreeReturnCode cXObject::TryTreeBreak(class XPrimParam * param /* r31 */) {
     // Local variables
     signed short check; // r1+0x8
 
@@ -867,7 +897,8 @@ enum TreeReturnCode cXObject::TryTreeBreak(class cXObject * const this /* r30 */
 }
 
 // Range: 0x80151AC8 -> 0x80151C54
-enum TreeReturnCode cXObject::TryRandom(class cXObject * const this /* r30 */) {
+// this: r30
+enum TreeReturnCode cXObject::TryRandom() {
     // Local variables
     class RandomParam rand; // r1+0x18
     const signed short * plhs; // r1+0x10
@@ -879,7 +910,8 @@ enum TreeReturnCode cXObject::TryRandom(class cXObject * const this /* r30 */) {
 }
 
 // Range: 0x80151C54 -> 0x801523B8
-enum TreeReturnCode cXObject::TryRoomEffect(class cXObject * const this /* r29 */, class StackElem * elem /* r30 */, class XPrimParam * param /* r26 */) {
+// this: r29
+enum TreeReturnCode cXObject::TryRoomEffect(class StackElem * elem /* r30 */, class XPrimParam * param /* r26 */) {
     // Local variables
     unsigned char roomEffect; // r0
     unsigned char notRoomFlag; // r31
@@ -900,7 +932,8 @@ enum TreeReturnCode cXObject::TryRoomEffect(class cXObject * const this /* r29 *
 }
 
 // Range: 0x801523B8 -> 0x8015265C
-enum TreeReturnCode cXObject::TryCheckObject(class cXObject * const this /* r29 */, class XPrimParam * param /* r30 */) {
+// this: r29
+enum TreeReturnCode cXObject::TryCheckObject(class XPrimParam * param /* r30 */) {
     // Local variables
     signed short id; // r1+0x8
     class cXObject * pObj; // r0
@@ -925,7 +958,8 @@ enum TreeReturnCode cXObject::TryCheckObject(class cXObject * const this /* r29 
 }
 
 // Range: 0x8015265C -> 0x8015297C
-enum TreeReturnCode cXObject::TryAnimateObject(class cXObject * const this /* r27 */, class StackElem * elem /* r28 */) {
+// this: r27
+enum TreeReturnCode cXObject::TryAnimateObject(class StackElem * elem /* r28 */) {
     // Local variables
     class AnimateObjectParam animateObject; // r1+0x10
     class cXObject * pTargetObj; // r30
@@ -942,7 +976,8 @@ enum TreeReturnCode cXObject::TryAnimateObject(class cXObject * const this /* r2
 }
 
 // Range: 0x8015297C -> 0x80152DB8
-enum TreeReturnCode cXObject::TryCompleteGoal(class cXObject * const this /* r26 */, class CompleteGoalParam & goalParam /* r31 */) {
+// this: r26
+enum TreeReturnCode cXObject::TryCompleteGoal(class CompleteGoalParam & goalParam /* r31 */) {
     // Local variables
     class IGoalUnlock * unlocks; // r29
     enum UnlockType type; // r28
@@ -956,7 +991,8 @@ enum TreeReturnCode cXObject::TryCompleteGoal(class cXObject * const this /* r26
 }
 
 // Range: 0x80152DB8 -> 0x80153AD0
-enum TreeReturnCode cXObject::TryCameraControl(class cXObject * const this /* r29 */, class StackElem * elem /* r30 */, class XPrimParam * param /* r31 */) {
+// this: r29
+enum TreeReturnCode cXObject::TryCameraControl(class StackElem * elem /* r30 */, class XPrimParam * param /* r31 */) {
     // Local variables
     class cXPerson * aPerson; // r0
     int player; // r26
@@ -1006,7 +1042,8 @@ enum TreeReturnCode cXObject::TryCameraControl(class cXObject * const this /* r2
 }
 
 // Range: 0x80153AD0 -> 0x80153C7C
-enum TreeReturnCode cXObject::TryDistanceTo(class cXObject * const this /* r31 */, class StackElem * elem /* r29 */) {
+// this: r31
+enum TreeReturnCode cXObject::TryDistanceTo(class StackElem * elem /* r29 */) {
     // Local variables
     class DistanceToParam distanceTo; // r1+0xC
     signed short fromID; // r1+0x8
@@ -1018,7 +1055,8 @@ enum TreeReturnCode cXObject::TryDistanceTo(class cXObject * const this /* r31 *
 }
 
 // Range: 0x80153C7C -> 0x80153E24
-enum TreeReturnCode cXObject::TryDirectionTo(class cXObject * const this /* r29 */, class StackElem * elem /* r30 */) {
+// this: r29
+enum TreeReturnCode cXObject::TryDirectionTo(class StackElem * elem /* r30 */) {
     // Local variables
     class DirectionToParam directionTo; // r1+0x10
     const signed short * plhs; // r1+0xC
@@ -1032,7 +1070,8 @@ enum TreeReturnCode cXObject::TryDirectionTo(class cXObject * const this /* r29 
 }
 
 // Range: 0x80153E24 -> 0x80154048
-enum TreeReturnCode cXObject::TryNotifyStackObject(class cXObject * const this /* r31 */) {
+// this: r31
+enum TreeReturnCode cXObject::TryNotifyStackObject() {
     // Local variables
     class cXObject * stackObj; // r30
     class StackElem * objElem; // r29
@@ -1046,7 +1085,8 @@ enum TreeReturnCode cXObject::TryNotifyStackObject(class cXObject * const this /
 }
 
 // Range: 0x80154048 -> 0x801540FC
-enum TreeReturnCode cXObject::TryParticleEffect(class cXObject * const this /* r31 */) {
+// this: r31
+enum TreeReturnCode cXObject::TryParticleEffect() {
     // Local variables
     class ParticleEffectParam particleEffectParam; // r1+0x8
     class cXPerson * person; // r0
@@ -1056,7 +1096,8 @@ enum TreeReturnCode cXObject::TryParticleEffect(class cXObject * const this /* r
 }
 
 // Range: 0x801540FC -> 0x80154B9C
-enum TreeReturnCode cXObject::TryMemory(class cXObject * const this /* r24 */, class StackElem * elem /* r26 */, class XPrimParam * _param /* r25 */) {
+// this: r24
+enum TreeReturnCode cXObject::TryMemory(class StackElem * elem /* r26 */, class XPrimParam * _param /* r25 */) {
     // Local variables
     class cXObject * obj; // r26
     class cXObject * relObj; // r26
@@ -1079,7 +1120,8 @@ enum TreeReturnCode cXObject::TryMemory(class cXObject * const this /* r24 */, c
 }
 
 // Range: 0x80154B9C -> 0x80154D0C
-enum TreeReturnCode cXObject::TryPassiveInfluence(class cXObject * const this /* r27 */, class StackElem * elem /* r29 */, class XPrimParam * param /* r28 */) {
+// this: r27
+enum TreeReturnCode cXObject::TryPassiveInfluence(class StackElem * elem /* r29 */, class XPrimParam * param /* r28 */) {
     // Local variables
     signed short originID; // r1+0xE
     class cXObject * originObject; // r31
@@ -1097,7 +1139,8 @@ enum TreeReturnCode cXObject::TryWantsAndFearsNotify() {}
 enum TreeReturnCode cXObject::TryChangeWantFearTree() {}
 
 // Range: 0x80154D1C -> 0x80154F64
-enum TreeReturnCode cXObject::TrySetMotiveDelta(class cXObject * const this /* r28 */, class StackElem * elem /* r30 */, class XPrimParam * param /* r29 */) {
+// this: r28
+enum TreeReturnCode cXObject::TrySetMotiveDelta(class StackElem * elem /* r30 */, class XPrimParam * param /* r29 */) {
     // Local variables
     class cXObject * pObj; // r31
     signed short incPerHour; // r1+0xA
@@ -1111,7 +1154,8 @@ enum TreeReturnCode cXObject::TrySetMotiveDelta(class cXObject * const this /* r
 }
 
 // Range: 0x80154F64 -> 0x80155050
-enum TreeReturnCode cXObject::TryAnimate(class cXObject * const this /* r29 */, class StackElem * elem /* r30 */, const class AnimateNewParam * param /* r31 */) {
+// this: r29
+enum TreeReturnCode cXObject::TryAnimate(class StackElem * elem /* r30 */, const class AnimateNewParam * param /* r31 */) {
     // Local variables
     const struct AnimRef * skill; // r1+0xC
     int behavior; // r0
@@ -1124,14 +1168,16 @@ enum TreeReturnCode cXObject::TryAnimate(class cXObject * const this /* r29 */, 
 }
 
 // Range: 0x80155050 -> 0x80155104
-unsigned char cXObject::Simulate(class cXObject * const this /* r29 */) {
+// this: r29
+unsigned char cXObject::Simulate() {
     // Local variables
     unsigned char engaged; // r31
     class SpriteSlot * i; // r30
 }
 
 // Range: 0x80155104 -> 0x8015548C
-enum TreeReturnCode cXObject::TryElement(class cXObject * const this /* r29 */, class StackElem * elem /* r30 */, class XPrimParam * param /* r31 */) {
+// this: r29
+enum TreeReturnCode cXObject::TryElement(class StackElem * elem /* r30 */, class XPrimParam * param /* r31 */) {
     // Local variables
     enum TreeReturnCode result; // r3
     enum TFGL_ACTIONS action; // r1+0x10
@@ -1152,7 +1198,8 @@ enum TreeReturnCode cXObject::TryKillSounds() {
 }
 
 // Range: 0x801554D8 -> 0x80155640
-enum TreeReturnCode cXObject::TryPlaySound(class cXObject * const this /* r29 */, class StackElem * elem /* r28 */, class PlaySoundParam * param /* r31 */) {
+// this: r29
+enum TreeReturnCode cXObject::TryPlaySound(class StackElem * elem /* r28 */, class PlaySoundParam * param /* r31 */) {
     // Local variables
     signed short soundID; // r30
     signed short sourceID; // r29
@@ -1162,10 +1209,12 @@ enum TreeReturnCode cXObject::TryPlaySound(class cXObject * const this /* r29 */
 }
 
 // Range: 0x80155640 -> 0x801556E4
-unsigned char cXObject::GosubObjectTree(class cXObject * const this /* r28 */, class cXObject * other /* r29 */, signed short * stck /* r30 */, signed short treeID /* r31 */) {}
+// this: r28
+unsigned char cXObject::GosubObjectTree(class cXObject * other /* r29 */, signed short * stck /* r30 */, signed short treeID /* r31 */) {}
 
 // Range: 0x801556E4 -> 0x80155778
-unsigned char cXObject::RunTree(class cXObject * const this /* r28 */, class Behavior * beh /* r29 */, signed short stackObjectID /* r30 */, signed short * locals /* r31 */) {
+// this: r28
+unsigned char cXObject::RunTree(class Behavior * beh /* r29 */, signed short stackObjectID /* r30 */, signed short * locals /* r31 */) {
     // Local variables
     signed short treeID; // r0
 }
@@ -1177,7 +1226,8 @@ unsigned char OnEdithSetFlagField1() {
 }
 
 // Range: 0x8015579C -> 0x80156388
-enum TreeReturnCode cXObject::TryExpression(class cXObject * const this /* r29 */, class ExpressionParam * expression /* r30 */) {
+// this: r29
+enum TreeReturnCode cXObject::TryExpression(class ExpressionParam * expression /* r30 */) {
     // Local variables
     enum TreeReturnCode result; // r28
     const signed short * plhs; // r1+0x14
@@ -1205,7 +1255,8 @@ static int fround() {}
 void cXObject::GetShortComboValue() {}
 
 // Range: 0x80156484 -> 0x801564DC
-signed short cXObject::GetValueFromShortOwnerCombo(class cXObject * const this /* r31 */) {
+// this: r31
+signed short cXObject::GetValueFromShortOwnerCombo() {
     // Local variables
     signed short owner; // r1+0xC
     signed short data; // r1+0xA
@@ -1213,7 +1264,8 @@ signed short cXObject::GetValueFromShortOwnerCombo(class cXObject * const this /
 }
 
 // Range: 0x801564DC -> 0x8015655C
-void cXObject::SetValueInShortOwnerCombo(class cXObject * const this /* r30 */, signed short value /* r31 */) {
+// this: r30
+void cXObject::SetValueInShortOwnerCombo(signed short value /* r31 */) {
     // Local variables
     signed short owner; // r1+0xA
     signed short data; // r1+0x8
@@ -1221,7 +1273,8 @@ void cXObject::SetValueInShortOwnerCombo(class cXObject * const this /* r30 */, 
 }
 
 // Range: 0x8015655C -> 0x80159D54
-enum TreeReturnCode cXObject::InterpValue(class cXObject * const this /* r25 */, signed short ownerField /* r23 */, signed short dataField /* r26 */, const signed short * * dataRef /* r27 */, float * * floatRef /* r28 */, signed short * pResultValue /* r29 */) {
+// this: r25
+enum TreeReturnCode cXObject::InterpValue(signed short ownerField /* r23 */, signed short dataField /* r26 */, const signed short * * dataRef /* r27 */, float * * floatRef /* r28 */, signed short * pResultValue /* r29 */) {
     // Local variables
     signed short data; // r30
     const signed short * ptemp; // r1+0x14
@@ -1299,7 +1352,8 @@ enum TreeReturnCode cXObject::InterpValue(class cXObject * const this /* r25 */,
 }
 
 // Range: 0x80159D54 -> 0x80159F04
-enum TreeReturnCode cXObject::InterpWriteValue(class cXObject * const this /* r27 */, signed short dataField /* r28 */, const signed short * * varToSet /* r29 */, signed short valueToWrite /* r30 */) {
+// this: r27
+enum TreeReturnCode cXObject::InterpWriteValue(signed short dataField /* r28 */, const signed short * * varToSet /* r29 */, signed short valueToWrite /* r30 */) {
     // Local variables
     class cXObject * obj; // r0
 
@@ -1308,7 +1362,8 @@ enum TreeReturnCode cXObject::InterpWriteValue(class cXObject * const this /* r2
 }
 
 // Range: 0x80159F04 -> 0x80159FF8
-enum TreeReturnCode cXObject::TryDrop(class cXObject * const this /* r29 */) {
+// this: r29
+enum TreeReturnCode cXObject::TryDrop() {
     // Local variables
     class cXObject * obj; // r31
     int level; // r30
@@ -1316,7 +1371,8 @@ enum TreeReturnCode cXObject::TryDrop(class cXObject * const this /* r29 */) {
 }
 
 // Range: 0x80159FF8 -> 0x8015A8B8
-enum TreeReturnCode cXObject::TrySnap(class cXObject * const this /* r30 */, class StackElem * elem /* r21 */, class XPrimParam * param /* r31 */) {
+// this: r30
+enum TreeReturnCode cXObject::TrySnap(class StackElem * elem /* r21 */, class XPrimParam * param /* r31 */) {
     // Local variables
     class cXObject * obj; // r27
     class FTilePt dest; // r1+0x38
@@ -1353,7 +1409,8 @@ enum TreeReturnCode cXObject::TrySnap(class cXObject * const this /* r30 */, cla
 }
 
 // Range: 0x8015A8B8 -> 0x8015AD14
-enum TreeReturnCode cXObject::TrySnap(class cXObject * const this /* r25 */, const class FTilePt & loc /* r26 */, int level /* r27 */, class cXObject * container /* r28 */, int slotNum /* r29 */, unsigned char ignoreRooms /* r23 */, int snapDirection /* r30 */, unsigned char useFootprint /* r31 */) {
+// this: r25
+enum TreeReturnCode cXObject::TrySnap(const class FTilePt & loc /* r26 */, int level /* r27 */, class cXObject * container /* r28 */, int slotNum /* r29 */, unsigned char ignoreRooms /* r23 */, int snapDirection /* r30 */, unsigned char useFootprint /* r31 */) {
     // Local variables
     class CTilePt pt; // r1+0x20
     class CTilePt tileDelta; // r1+0x1C
@@ -1372,7 +1429,8 @@ enum TreeReturnCode cXObject::TrySnap(class cXObject * const this /* r25 */, con
 }
 
 // Range: 0x8015AD14 -> 0x8015AF50
-enum TreeReturnCode cXObject::TryHUDCreate(class cXObject * const this /* r28 */, class XPrimParam * param /* r29 */) {
+// this: r28
+enum TreeReturnCode cXObject::TryHUDCreate(class XPrimParam * param /* r29 */) {
     // Local variables
     signed short hudRequested; // r30
     signed short hudJobLevel; // r1+0x8
@@ -1384,7 +1442,8 @@ enum TreeReturnCode cXObject::TryHUDCreate(class cXObject * const this /* r28 */
 }
 
 // Range: 0x8015AF50 -> 0x8015B224
-enum TreeReturnCode cXObject::TryHUDAddItem(class cXObject * const this /* r31 */, class StackElem * elem /* r27 */, class XPrimParam * param /* r28 */) {
+// this: r31
+enum TreeReturnCode cXObject::TryHUDAddItem(class StackElem * elem /* r27 */, class XPrimParam * param /* r28 */) {
     // Local variables
     signed short hudID; // r1+0xA
     signed short controlID; // r1+0x8
@@ -1399,7 +1458,8 @@ enum TreeReturnCode cXObject::TryHUDAddItem(class cXObject * const this /* r31 *
 }
 
 // Range: 0x8015B224 -> 0x8015B334
-enum TreeReturnCode cXObject::TryHUDManage(class cXObject * const this /* r28 */, class XPrimParam * param /* r29 */) {
+// this: r28
+enum TreeReturnCode cXObject::TryHUDManage(class XPrimParam * param /* r29 */) {
     // Local variables
     signed short hudID; // r1+0xA
     signed short playerID; // r1+0x8
@@ -1413,7 +1473,8 @@ enum TreeReturnCode cXObject::TryHUDManage(class cXObject * const this /* r28 */
 enum TreeReturnCode cXObject::TryHUDData() {}
 
 // Range: 0x8015B33C -> 0x8015B608
-enum TreeReturnCode cXObject::TryCustomUI(class cXObject * const this /* r28 */, class XPrimParam * param /* r29 */) {
+// this: r28
+enum TreeReturnCode cXObject::TryCustomUI(class XPrimParam * param /* r29 */) {
     // Local variables
     enum TreeReturnCode result; // r31
     unsigned char runCustomUI; // r30
@@ -1431,7 +1492,8 @@ enum TreeReturnCode cXObject::TryCustomUI(class cXObject * const this /* r28 */,
 }
 
 // Range: 0x8015B608 -> 0x8015B95C
-enum TreeReturnCode cXObject::TryLotTransition(class cXObject * const this /* r31 */, class XPrimParam * param /* r26 */) {
+// this: r31
+enum TreeReturnCode cXObject::TryLotTransition(class XPrimParam * param /* r26 */) {
     // Local variables
     class Neighborhood * neighborhood; // r30
     signed short nID; // r28
@@ -1456,7 +1518,8 @@ enum TreeReturnCode cXObject::TryLotTransition(class cXObject * const this /* r3
 }
 
 // Range: 0x8015B95C -> 0x8015C300
-enum TreeReturnCode cXObject::TryFamilyInventory(class cXObject * const this /* r28 */, class StackElem * elem /* r26 */, class XPrimParam * param /* r29 */) {
+// this: r28
+enum TreeReturnCode cXObject::TryFamilyInventory(class StackElem * elem /* r26 */, class XPrimParam * param /* r29 */) {
     // Local variables
     enum TreeReturnCode retval; // r31
     class Neighbor * nbr; // r3
@@ -1510,7 +1573,8 @@ enum TreeReturnCode cXObject::TryFamilyInventory(class cXObject * const this /* 
 }
 
 // Range: 0x8015C300 -> 0x8015C614
-enum TreeReturnCode cXObject::TryListenForInput(class cXObject * const this /* r31 */, class XPrimParam * param /* r26 */) {
+// this: r31
+enum TreeReturnCode cXObject::TryListenForInput(class XPrimParam * param /* r26 */) {
     // Local variables
     enum TreeReturnCode retval; // r29
     const signed short * pObjectID; // r1+0x8
@@ -1524,7 +1588,8 @@ enum TreeReturnCode cXObject::TryListenForInput(class cXObject * const this /* r
 }
 
 // Range: 0x8015C614 -> 0x8015C720
-enum TreeReturnCode cXObject::TrySyncAudio(class cXObject * const this /* r26 */, class XPrimParam * param /* r27 */) {
+// this: r26
+enum TreeReturnCode cXObject::TrySyncAudio(class XPrimParam * param /* r27 */) {
     // Local variables
     enum TreeReturnCode retval; // r31
     signed short command; // r30
@@ -1538,7 +1603,8 @@ enum TreeReturnCode cXObject::TrySyncAudio(class cXObject * const this /* r26 */
 }
 
 // Range: 0x8015C720 -> 0x8015C8F4
-enum TreeReturnCode cXObject::TryNotifyPlans(class cXObject * const this /* r28 */, class XPrimParam * param /* r29 */) {
+// this: r28
+enum TreeReturnCode cXObject::TryNotifyPlans(class XPrimParam * param /* r29 */) {
     // Local variables
     class cXPerson * person; // r30
     class cXObject * object; // r30
@@ -1549,7 +1615,8 @@ enum TreeReturnCode cXObject::TryNotifyPlans(class cXObject * const this /* r28 
 }
 
 // Range: 0x8015C8F4 -> 0x8015D050
-enum TreeReturnCode cXObject::TryManageClothing(class cXObject * const this /* r27 */, class XPrimParam * param /* r28 */) {
+// this: r27
+enum TreeReturnCode cXObject::TryManageClothing(class XPrimParam * param /* r28 */) {
     // Local variables
     enum TreeReturnCode retval; // r30
     enum eBodyPart CASParts[10]; // r1+0x18
@@ -1587,7 +1654,8 @@ void cXObject::ChangeSelectedSimL() {
 }
 
 // Range: 0x8015D1E8 -> 0x8015D250
-signed short cXObject::CreateOOWObjectByGuid(class cXObject * const this /* r30 */, int guid /* r31 */) {
+// this: r30
+signed short cXObject::CreateOOWObjectByGuid(int guid /* r31 */) {
     // Local variables
     class ObjSelector * selector; // r4
 }

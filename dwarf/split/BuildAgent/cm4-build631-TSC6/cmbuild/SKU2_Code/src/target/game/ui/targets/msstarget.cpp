@@ -5,7 +5,8 @@
     Code range: 0x801D2780 -> 0x801D30A4
 */
 // Range: 0x801D2780 -> 0x801D2A10
-void * MSSTarget::MSSTarget(class MSSTarget * const this /* r31 */) {
+// this: r31
+MSSTarget::MSSTarget() {
     // Local variables
     unsigned long index; // r24
     unsigned long songindex; // r23
@@ -23,13 +24,15 @@ void * MSSTarget::MSSTarget(class MSSTarget * const this /* r31 */) {
 }
 
 // Range: 0x801D2A10 -> 0x801D2A88
-void * MSSTarget::~MSSTarget(class MSSTarget * const this /* r30 */) {
+// this: r30
+MSSTarget::~MSSTarget() {
     // References
     // -> struct [anonymous] __vt__9MSSTarget;
 }
 
 // Range: 0x801D2A88 -> 0x801D2BE4
-void MSSTarget::SetVariable(class MSSTarget * const this /* r29 */, const char * varname /* r30 */, const char * varvalue /* r31 */) {
+// this: r29
+void MSSTarget::SetVariable(const char * varname /* r30 */, const char * varvalue /* r31 */) {
     // Local variables
     unsigned char bEnabled; // r0
     unsigned long songcount; // r0
@@ -44,7 +47,8 @@ void MSSTarget::SetVariable(class MSSTarget * const this /* r29 */, const char *
 }
 
 // Range: 0x801D2BE4 -> 0x801D2C94
-char * MSSTarget::GetVariable(class MSSTarget * const this /* r29 */, const char * varname /* r30 */) {
+// this: r29
+char * MSSTarget::GetVariable(const char * varname /* r30 */) {
     // Local variables
     char * pResult; // r31
 
@@ -95,7 +99,8 @@ unsigned char MSSTarget::CommitMusicSelections() {
 }
 
 // Range: 0x801D2EE8 -> 0x801D2FAC
-unsigned char MSSTarget::get_MSS_entries(class MSSTarget * const this /* r27 */, char * pResult /* r28 */) {
+// this: r27
+unsigned char MSSTarget::get_MSS_entries(char * pResult /* r28 */) {
     // Local variables
     int genreindex; // r30
     int songindex; // r29

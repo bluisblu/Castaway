@@ -5,18 +5,12 @@
     Code range: 0x8002FE90 -> 0x8002FEA4
 */
 // Range: 0x8002FE90 -> 0x8002FEA4
-void * ERTexture::__nw() {
+void * ERTexture::operator new() {
     // References
     // -> class ETextureManager _textureman;
 }
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\common\engine\resource\e_rtexture.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x802F0AC4 -> 0x802F0C60
-*/
 // Range: 0x802F0AC4 -> 0x802F0AE4
 void ERTexture::SafeDelete() {}
 

@@ -6,7 +6,8 @@
 */
 class CheatMenuParams s_cheatMenuParams; // size: 0xC, address: 0x804F7034
 // Range: 0x8027AFC8 -> 0x8027B008
-void * CheatMenuParams::~CheatMenuParams(class CheatMenuParams * const this /* r31 */) {}
+// this: r31
+CheatMenuParams::~CheatMenuParams() {}
 
 // Range: 0x8027B008 -> 0x8027B044
 void CheatMenuParams::Add() {}

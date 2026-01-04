@@ -5,10 +5,12 @@
     Code range: 0x800F98E8 -> 0x800FAF04
 */
 // Range: 0x800F98E8 -> 0x800F9964
-void * AmbientSoundPlayer::AmbientSoundPlayer(class AmbientSoundPlayer * const this /* r30 */) {}
+// this: r30
+AmbientSoundPlayer::AmbientSoundPlayer() {}
 
 // Range: 0x800F9964 -> 0x800F99E4
-void * AmbientSoundPlayer::~AmbientSoundPlayer(class AmbientSoundPlayer * const this /* r30 */) {}
+// this: r30
+AmbientSoundPlayer::~AmbientSoundPlayer() {}
 
 // Range: 0x800F99E4 -> 0x800F99EC
 void AmbientSoundPlayer::SetScorePlayer() {}
@@ -17,10 +19,12 @@ void AmbientSoundPlayer::SetScorePlayer() {}
 void AmbientSoundPlayer::SetAmbientSound() {}
 
 // Range: 0x800F99F4 -> 0x800F9A28
-void AmbientSoundPlayer::Update(class AmbientSoundPlayer * const this /* r31 */) {}
+// this: r31
+void AmbientSoundPlayer::Update() {}
 
 // Range: 0x800F9A28 -> 0x800F9D58
-unsigned char AmbientSoundPlayer::Start(class AmbientSoundPlayer * const this /* r31 */) {
+// this: r31
+unsigned char AmbientSoundPlayer::Start() {
     // Local variables
     int selectedSound; // r0
     float angle; // f1
@@ -32,7 +36,8 @@ unsigned char AmbientSoundPlayer::Start(class AmbientSoundPlayer * const this /*
 }
 
 // Range: 0x800F9D58 -> 0x800F9DC8
-unsigned char AmbientSoundPlayer::Stop(class AmbientSoundPlayer * const this /* r31 */) {}
+// this: r31
+unsigned char AmbientSoundPlayer::Stop() {}
 
 // Range: 0x800F9DC8 -> 0x800F9E04
 unsigned char AmbientSoundPlayer::Pause() {}
@@ -41,7 +46,8 @@ unsigned char AmbientSoundPlayer::Pause() {}
 unsigned char AmbientSoundPlayer::UnPause() {}
 
 // Range: 0x800F9E40 -> 0x800FA5FC
-void AmbientSoundPlayer::SetInitialSoundPosition(class AmbientSoundPlayer * const this /* r30 */) {
+// this: r30
+void AmbientSoundPlayer::SetInitialSoundPosition() {
     // Local variables
     class EVec3 newPos; // r1+0x70
     class EVec3 diffVect; // r1+0x64
@@ -72,7 +78,8 @@ void AmbientSoundPlayer::UpdateSoundPosition() {
 }
 
 // Range: 0x800FA644 -> 0x800FAACC
-void AmbientSoundPlayer::UpdateLoopingSoundPosition(class AmbientSoundPlayer * const this /* r31 */) {
+// this: r31
+void AmbientSoundPlayer::UpdateLoopingSoundPosition() {
     // Local variables
     float axisDist; // f28
     float minAxisDist; // f30
@@ -86,7 +93,8 @@ void AmbientSoundPlayer::UpdateLoopingSoundPosition(class AmbientSoundPlayer * c
 }
 
 // Range: 0x800FAACC -> 0x800FADC8
-void AmbientSoundPlayer::UpdatePanAndVolume(class AmbientSoundPlayer * const this /* r31 */) {
+// this: r31
+void AmbientSoundPlayer::UpdatePanAndVolume() {
     // Local variables
     int lVol; // r1+0x1C
     int rVol; // r1+0x18
@@ -106,7 +114,8 @@ void AmbientSoundPlayer::UpdatePanAndVolume(class AmbientSoundPlayer * const thi
 }
 
 // Range: 0x800FADC8 -> 0x800FAE80
-void AmbientSoundPlayer::UpdateSoundVolume(class AmbientSoundPlayer * const this /* r31 */) {
+// this: r31
+void AmbientSoundPlayer::UpdateSoundVolume() {
     // Local variables
     int scaledVolume; // r29
 }

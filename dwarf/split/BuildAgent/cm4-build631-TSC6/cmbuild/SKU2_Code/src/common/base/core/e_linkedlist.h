@@ -11,7 +11,8 @@ struct ERedBlackTreeNode * & TLinkedList::Next() {}
 struct ERedBlackTreeNode * TLinkedList::Head() {}
 
 // Range: 0x8001A518 -> 0x8001A548
-void * TLinkedList::TLinkedList(class TLinkedList * const this /* r31 */) {}
+// this: r31
+TLinkedList::TLinkedList() {}
 
 // Range: 0x8001A548 -> 0x8001A54C
 void TLinkedList::Init() {}
@@ -32,22 +33,10 @@ struct ENodeListNode * & TLinkedList::Next() {}
 struct ENodeListNode * TLinkedList::Head() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\common\base\core\e_linkedlist.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x80051470 -> 0x80051480
-*/
 // Range: 0x80051470 -> 0x80051480
 unsigned char TLinkedList::IsEmpty() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\common\base\core\e_linkedlist.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x802DBC7C -> 0x802DBC84
-*/
 // Range: 0x802DBC7C -> 0x802DBC84
 class EResourceManager * & TLinkedList::Next() {}
 

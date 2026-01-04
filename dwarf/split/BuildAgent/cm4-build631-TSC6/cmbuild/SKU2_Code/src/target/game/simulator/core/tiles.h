@@ -5,22 +5,25 @@
     Code range: 0x800186CC -> 0x800188AC
 */
 // Range: 0x800186CC -> 0x80018704
-void * FTilePt::FTilePt(class FTilePt * const this /* r31 */) {}
+// this: r31
+FTilePt::FTilePt() {}
 
 // Range: 0x80018704 -> 0x80018708
-void * FInt::FInt() {}
+FInt::FInt() {}
 
 // Range: 0x80018708 -> 0x80018730
-unsigned char FTilePt::__ne() {}
+unsigned char FTilePt::operator!=() {}
 
 // Range: 0x80018730 -> 0x80018798
-unsigned char FTilePt::__eq(const class FTilePt * const this /* r29 */, const class FTilePt & inPt /* r30 */) {}
+// this: r29
+unsigned char FTilePt::operator==(const class FTilePt & inPt /* r30 */) const {}
 
 // Range: 0x80018798 -> 0x800187B0
-unsigned char FInt::__eq() {}
+unsigned char FInt::operator==() {}
 
 // Range: 0x800187B0 -> 0x800187EC
-void FTilePt::CenterOnTile(class FTilePt * const this /* r31 */) {}
+// this: r31
+void FTilePt::CenterOnTile() {}
 
 // Range: 0x800187EC -> 0x80018800
 void FInt::SetFrac() {}
@@ -29,32 +32,30 @@ void FInt::SetFrac() {}
 float FInt::ToFloat() {}
 
 // Range: 0x80018834 -> 0x80018878
-void FTilePt::Set(class FTilePt * const this /* r30 */, const struct FInt & y /* r31 */) {}
+// this: r30
+void FTilePt::Set(const struct FInt & y /* r31 */) {}
 
 // Range: 0x80018884 -> 0x800188AC
 void FInt::SetFromFloat() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\target\game\simulator\core\tiles.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x80051734 -> 0x80051B50
-*/
 // Range: 0x80051734 -> 0x80051794
-void * FTilePt::FTilePt(class FTilePt * const this /* r29 */, int inX /* r30 */, int inY /* r31 */) {}
+// this: r29
+FTilePt::FTilePt(int inX /* r30 */, int inY /* r31 */) {}
 
 // Range: 0x80051794 -> 0x800517F0
-void FTilePt::Set(class FTilePt * const this /* r30 */, int _y /* r31 */) {}
+// this: r30
+void FTilePt::Set(int _y /* r31 */) {}
 
 // Range: 0x800517F0 -> 0x80051804
 void FInt::SetInteger() {}
 
 // Range: 0x80051804 -> 0x80051828
-class FTilePt & FTilePt::__apl() {}
+class FTilePt & FTilePt::operator+=() {}
 
 // Range: 0x80051828 -> 0x800518A0
-void * FTilePt::FTilePt(class FTilePt * const this /* r30 */, int direction /* r31 */) {}
+// this: r30
+FTilePt::FTilePt(int direction /* r31 */) {}
 
 // Range: 0x800518A0 -> 0x80051934
 void OffsetCoordsInDirection() {}
@@ -63,7 +64,8 @@ void OffsetCoordsInDirection() {}
 int FInt::Integer() {}
 
 // Range: 0x80051940 -> 0x80051A40
-void FTileRect::Rotate(class FTileRect * const this /* r31 */) {
+// this: r31
+void FTileRect::Rotate() {
     // Local variables
     struct FInt oldLeft; // r1+0x10
     struct FInt temp; // r1+0xC
@@ -71,24 +73,20 @@ void FTileRect::Rotate(class FTileRect * const this /* r31 */) {
 }
 
 // Range: 0x80051A40 -> 0x80051A7C
-class FTileRect & FTileRect::__apl() {}
+class FTileRect & FTileRect::operator+=() {}
 
 // Range: 0x80051A7C -> 0x80051AA0
 void FTileRect::Set() {}
 
 // Range: 0x80051AA0 -> 0x80051AE8
-void * FTileRect::FTileRect(class FTileRect * const this /* r31 */) {}
+// this: r31
+FTileRect::FTileRect() {}
 
 // Range: 0x80051AE8 -> 0x80051B50
-class EVec3 FTilePt::ToWorldSpace3(const class FTilePt * const this /* r31 */) {}
+// this: r31
+class EVec3 FTilePt::ToWorldSpace3() const {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\target\game\simulator\core\tiles.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x800A6818 -> 0x800A6CB8
-*/
 // Range: 0x800A6818 -> 0x800A6860
 unsigned char FTileRect::ContainsPt() {}
 
@@ -100,13 +98,13 @@ int FTilePt::SquareDist() {
 }
 
 // Range: 0x800A6888 -> 0x800A6894
-void * TilePt::TilePt() {}
+TilePt::TilePt() {}
 
 // Range: 0x800A68DC -> 0x800A68F8
-class FTilePt & FTilePt::__amu() {}
+class FTilePt & FTilePt::operator*=() {}
 
 // Range: 0x800A68F8 -> 0x800A691C
-class FTilePt & FTilePt::__ami() {}
+class FTilePt & FTilePt::operator-=() {}
 
 // Range: 0x800A691C -> 0x800A69E8
 int FTilePt::GetApproximateDirection() {
@@ -119,7 +117,8 @@ int FTilePt::GetApproximateDirection() {
 }
 
 // Range: 0x800A69E8 -> 0x800A6AF0
-void * FTilePt::FTilePt(class FTilePt * const this /* r29 */, const class FTilePt & pt1 /* r30 */, const class FTilePt & pt2 /* r31 */, float t /* f31 */) {}
+// this: r29
+FTilePt::FTilePt(const class FTilePt & pt1 /* r30 */, const class FTilePt & pt2 /* r31 */, float t /* f31 */) {}
 
 // Range: 0x800A6AF0 -> 0x800A6B0C
 int FTilePt::GetWholeYDelta() {
@@ -134,7 +133,8 @@ int FTilePt::GetWholeXDelta() {
 }
 
 // Range: 0x800A6B28 -> 0x800A6B6C
-int FTilePt::GetApproximateDirection(const class FTilePt * const this /* r31 */) {
+// this: r31
+int FTilePt::GetApproximateDirection() const {
     // Local variables
     class FTilePt origin; // r1+0x8
 }
@@ -155,12 +155,6 @@ void FTilePt::GetWholePoint() {}
 void OffsetCoordsInDirection() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\target\game\simulator\core\tiles.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x800FB218 -> 0x800FB424
-*/
 // Range: 0x800FB218 -> 0x800FB290
 void CardinalRotateCoords() {
     // Local variables
@@ -172,13 +166,15 @@ void CardinalRotateCoords() {
 void FTileRect::SetWhole() {}
 
 // Range: 0x800FB2A4 -> 0x800FB300
-class EVec2 FTilePt::ToWorldSpace2(const class FTilePt * const this /* r31 */) {}
+// this: r31
+class EVec2 FTilePt::ToWorldSpace2() const {}
 
 // Range: 0x800FB300 -> 0x800FB368
 unsigned char FTileRect::Sect() {}
 
 // Range: 0x800FB368 -> 0x800FB3AC
-void FTilePt::Set(class FTilePt * const this /* r30 */, const class FTilePt & other /* r31 */) {}
+// this: r30
+void FTilePt::Set(const class FTilePt & other /* r31 */) {}
 
 // Range: 0x800FB3AC -> 0x800FB424
 void CardinalRotateCoords() {

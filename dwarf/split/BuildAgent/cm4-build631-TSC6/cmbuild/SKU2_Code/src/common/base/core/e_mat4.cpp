@@ -5,10 +5,11 @@
     Code range: 0x80262D14 -> 0x80264D7C
 */
 // Range: 0x80262D14 -> 0x80262E10
-class EVec4 __ml() {}
+class EVec4 operator*() {}
 
 // Range: 0x80262E10 -> 0x80262E24
-void EMat4::Mult4x4(class EMat4 * const this /* r0 */) {}
+// this: r0
+void EMat4::Mult4x4() {}
 
 // Range: 0x80262E24 -> 0x80262E94
 class EMat4 & EMat4::PreScale() {
@@ -27,14 +28,14 @@ class EMat4 & EMat4::PreTranslate() {
 }
 
 // Range: 0x80262FA4 -> 0x80263034
-class EStream & __ls(class EStream & s /* r25 */, const class EMat4 & m /* r26 */) {
+class EStream & operator<<(class EStream & s /* r25 */, const class EMat4 & m /* r26 */) {
     // Local variables
     int i; // r28
     int j; // r27
 }
 
 // Range: 0x80263034 -> 0x802630B4
-class EStream & __rs(class EStream & s /* r27 */) {
+class EStream & operator>>(class EStream & s /* r27 */) {
     // Local variables
     int i; // r29
     int j; // r28
@@ -44,7 +45,8 @@ class EStream & __rs(class EStream & s /* r27 */) {
 void EMat4::GetColumn() {}
 
 // Range: 0x802630D8 -> 0x8026319C
-class EMat4 & EMat4::Normalize(class EMat4 * const this /* r29 */) {
+// this: r29
+class EMat4 & EMat4::Normalize() {
     // Local variables
     int i; // r30
     class EVec3 vCol; // r1+0x8
@@ -67,10 +69,12 @@ class EMat4 & EMat4::Transpose() {
 class EMat4 & EMat4::Id() {}
 
 // Range: 0x802632D4 -> 0x80263328
-class EMat4 & EMat4::Translate(class EMat4 * const this /* r30 */, const class EVec3 & v /* r31 */) {}
+// this: r30
+class EMat4 & EMat4::Translate(const class EVec3 & v /* r31 */) {}
 
 // Range: 0x80263328 -> 0x8026337C
-class EMat4 & EMat4::Scale(class EMat4 * const this /* r30 */, const class EVec3 & v /* r31 */) {}
+// this: r30
+class EMat4 & EMat4::Scale(const class EVec3 & v /* r31 */) {}
 
 // Range: 0x8026337C -> 0x802633BC
 float EMat4::GetScaleX() {
@@ -85,21 +89,24 @@ float EMat4::GetScaleY() {
 }
 
 // Range: 0x802633FC -> 0x8026347C
-class EMat4 & EMat4::RotateX(class EMat4 * const this /* r31 */, float angle /* f30 */) {
+// this: r31
+class EMat4 & EMat4::RotateX(float angle /* f30 */) {
     // Local variables
     float sinAngle; // f0
     float cosAngle; // f0
 }
 
 // Range: 0x8026347C -> 0x802634FC
-class EMat4 & EMat4::RotateY(class EMat4 * const this /* r31 */, float angle /* f30 */) {
+// this: r31
+class EMat4 & EMat4::RotateY(float angle /* f30 */) {
     // Local variables
     float sinAngle; // f0
     float cosAngle; // f0
 }
 
 // Range: 0x802634FC -> 0x8026357C
-class EMat4 & EMat4::RotateZ(class EMat4 * const this /* r31 */, float angle /* f30 */) {
+// this: r31
+class EMat4 & EMat4::RotateZ(float angle /* f30 */) {
     // Local variables
     float sinAngle; // f0
     float cosAngle; // f0
@@ -113,7 +120,8 @@ unsigned char EMat4::Invert() {
 }
 
 // Range: 0x8026388C -> 0x802639B4
-class EMat4 & EMat4::Rotate(class EMat4 * const this /* r30 */, const class EVec3 & vAxis /* r31 */, float angle /* f30 */) {
+// this: r30
+class EMat4 & EMat4::Rotate(const class EVec3 & vAxis /* r31 */, float angle /* f30 */) {
     // Local variables
     float fSin; // f0
     float fCos; // f0
@@ -130,7 +138,8 @@ class EMat4 & EMat4::Rotate(class EMat4 * const this /* r30 */, const class EVec
 }
 
 // Range: 0x802639B4 -> 0x80263ABC
-class EMat4 & EMat4::PostRotateX(class EMat4 * const this /* r31 */, float angle /* f30 */) {
+// this: r31
+class EMat4 & EMat4::PostRotateX(float angle /* f30 */) {
     // Local variables
     float sinAngle; // f0
     float cosAngle; // f0
@@ -139,7 +148,8 @@ class EMat4 & EMat4::PostRotateX(class EMat4 * const this /* r31 */, float angle
 }
 
 // Range: 0x80263ABC -> 0x80263BC4
-class EMat4 & EMat4::PostRotateY(class EMat4 * const this /* r31 */, float angle /* f30 */) {
+// this: r31
+class EMat4 & EMat4::PostRotateY(float angle /* f30 */) {
     // Local variables
     float sinAngle; // f0
     float cosAngle; // f0
@@ -148,7 +158,8 @@ class EMat4 & EMat4::PostRotateY(class EMat4 * const this /* r31 */, float angle
 }
 
 // Range: 0x80263BC4 -> 0x80263CA4
-class EMat4 & EMat4::PreRotateZ(class EMat4 * const this /* r31 */, float angle /* f30 */) {
+// this: r31
+class EMat4 & EMat4::PreRotateZ(float angle /* f30 */) {
     // Local variables
     float sinAngle; // f0
     float cosAngle; // f0
@@ -157,7 +168,8 @@ class EMat4 & EMat4::PreRotateZ(class EMat4 * const this /* r31 */, float angle 
 }
 
 // Range: 0x80263CA4 -> 0x80263DAC
-class EMat4 & EMat4::PostRotateZ(class EMat4 * const this /* r31 */, float angle /* f30 */) {
+// this: r31
+class EMat4 & EMat4::PostRotateZ(float angle /* f30 */) {
     // Local variables
     float sinAngle; // f0
     float cosAngle; // f0
@@ -188,7 +200,8 @@ float EMat4::GetMaxScale() {
 }
 
 // Range: 0x80263FD8 -> 0x80264084
-void EMat4::GetHPR(class EMat4 * const this /* r28 */, float & heading /* r29 */, float & pitch /* r30 */, float & roll /* r31 */) {
+// this: r28
+void EMat4::GetHPR(float & heading /* r29 */, float & pitch /* r30 */, float & roll /* r31 */) {
     // Local variables
     float len; // f0
 }
@@ -203,7 +216,8 @@ float EMat4::ExtractAxisRotation(const class EVec3 & vAxis /* r31 */) {
 void EMat4::GetLookAtPos() {}
 
 // Range: 0x80264198 -> 0x8026438C
-class EMat4 & EMat4::LookAtPos(class EMat4 * const this /* r29 */, const class EVec3 & vEye /* r30 */, const class EVec3 & vUp /* r31 */) {
+// this: r29
+class EMat4 & EMat4::LookAtPos(const class EVec3 & vEye /* r30 */, const class EVec3 & vUp /* r31 */) {
     // Local variables
     class EVec3 zbody; // r1+0x20
     class EVec3 xbody; // r1+0x14
@@ -211,10 +225,12 @@ class EMat4 & EMat4::LookAtPos(class EMat4 * const this /* r29 */, const class E
 }
 
 // Range: 0x8026438C -> 0x8026460C
-class EMat4 & EMat4::LookAt(class EMat4 * const this /* r31 */, const class EVec3 & vEye /* r29 */, const class EVec3 & vUp /* r30 */) {}
+// this: r31
+class EMat4 & EMat4::LookAt(const class EVec3 & vEye /* r29 */, const class EVec3 & vUp /* r30 */) {}
 
 // Range: 0x8026460C -> 0x80264734
-class EMat4 & EMat4::LookAtDirect(class EMat4 * const this /* r29 */, const class EVec3 & vOldUnitDir /* r30 */, const class EVec3 & vNewUnitDir /* r31 */, float multiplier /* f30 */) {
+// this: r29
+class EMat4 & EMat4::LookAtDirect(const class EVec3 & vOldUnitDir /* r30 */, const class EVec3 & vNewUnitDir /* r31 */, float multiplier /* f30 */) {
     // Local variables
     float dot; // f0
     float angle; // f0
@@ -223,14 +239,16 @@ class EMat4 & EMat4::LookAtDirect(class EMat4 * const this /* r29 */, const clas
 }
 
 // Range: 0x80264734 -> 0x80264824
-class EMat4 & EMat4::Projection(class EMat4 * const this /* r31 */, float aspect /* f27 */, float nearPlane /* f28 */, float farPlane /* f29 */) {
+// this: r31
+class EMat4 & EMat4::Projection(float aspect /* f27 */, float nearPlane /* f28 */, float farPlane /* f29 */) {
     // Local variables
     float fovy; // f30
     float cot; // f30
 }
 
 // Range: 0x80264824 -> 0x8026492C
-class EMat4 & EMat4::Ortho(class EMat4 * const this /* r31 */, float left /* f26 */, float right /* f27 */, float bottom /* f28 */, float top /* f29 */, float nearPlane /* f30 */, float farPlane /* f31 */) {
+// this: r31
+class EMat4 & EMat4::Ortho(float left /* f26 */, float right /* f27 */, float bottom /* f28 */, float top /* f29 */, float nearPlane /* f30 */, float farPlane /* f31 */) {
     // Local variables
     float rml; // f6
     float tmb; // f7
@@ -238,7 +256,8 @@ class EMat4 & EMat4::Ortho(class EMat4 * const this /* r31 */, float left /* f26
 }
 
 // Range: 0x8026492C -> 0x80264AA8
-class EMat4 & EMat4::BlendQuat(class EMat4 * const this /* r29 */, float u /* f31 */, const class EMat4 & mA /* r30 */, const class EMat4 & mB /* r31 */) {
+// this: r29
+class EMat4 & EMat4::BlendQuat(float u /* f31 */, const class EMat4 & mA /* r30 */, const class EMat4 & mB /* r31 */) {
     // Local variables
     class EQuat qA; // r1+0x98
     class EQuat qB; // r1+0x88

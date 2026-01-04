@@ -5,7 +5,8 @@
     Code range: 0x8026142C -> 0x802614A4
 */
 // Range: 0x8026142C -> 0x80261498
-void * EGlobalManagerClient::~EGlobalManagerClient(class EGlobalManagerClient * const this /* r30 */) {
+// this: r30
+EGlobalManagerClient::~EGlobalManagerClient() {
     // References
     // -> unsigned char m_shutdownComplete;
     // -> struct [anonymous] __vt__20EGlobalManagerClient;

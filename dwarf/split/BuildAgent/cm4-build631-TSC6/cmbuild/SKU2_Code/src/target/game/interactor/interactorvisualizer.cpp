@@ -5,10 +5,12 @@
     Code range: 0x800669BC -> 0x8006B638
 */
 // Range: 0x800669BC -> 0x80066A04
-void * InteractorVisualizer::InteractorVisualizer(class InteractorVisualizer * const this /* r31 */) {}
+// this: r31
+InteractorVisualizer::InteractorVisualizer() {}
 
 // Range: 0x80066A5C -> 0x80066AB8
-void * InteractorVisualizer::~InteractorVisualizer(class InteractorVisualizer * const this /* r30 */) {}
+// this: r30
+InteractorVisualizer::~InteractorVisualizer() {}
 
 // Range: 0x80066AB8 -> 0x80066B74
 void InteractorVisualizer::Initialize() {
@@ -17,7 +19,8 @@ void InteractorVisualizer::Initialize() {
 }
 
 // Range: 0x80066B74 -> 0x80066BC0
-void InteractorVisualizer::Shutdown(class InteractorVisualizer * const this /* r30 */) {}
+// this: r30
+void InteractorVisualizer::Shutdown() {}
 
 // Range: 0x80066BC0 -> 0x80066CFC
 unsigned char InteractorVisualizer::CreateResources(class FloorPainter & interactor /* r30 */) {
@@ -43,7 +46,8 @@ void InteractorVisualizer::PreDraw(class FloorPainter & interactor /* r30 */) {
 }
 
 // Range: 0x80066D70 -> 0x80067368
-void InteractorVisualizer::Draw(class InteractorVisualizer * const this /* r30 */, class FloorPainter & interactor /* r31 */) {
+// this: r30
+void InteractorVisualizer::Draw(class FloorPainter & interactor /* r31 */) {
     // Local variables
     const class EVec3 & snappedPos; // r28
     const class EVec3 & anchorPos; // r27
@@ -136,7 +140,8 @@ void InteractorVisualizer::PreDraw(class WallPainter & interactor /* r30 */) {
 }
 
 // Range: 0x80067CDC -> 0x80067FA4
-void InteractorVisualizer::Draw(class InteractorVisualizer * const this /* r27 */, class WallPainter & interactor /* r28 */) {
+// this: r27
+void InteractorVisualizer::Draw(class WallPainter & interactor /* r28 */) {
     // Local variables
     class InteractorResourceSet * pResourceSet; // r29
     const class EVec3 & playerColor; // r31
@@ -156,7 +161,8 @@ void InteractorVisualizer::Draw(class InteractorVisualizer * const this /* r27 *
 }
 
 // Range: 0x80067FA4 -> 0x800681E0
-void InteractorVisualizer::DrawWallpaperRoomPreview(class InteractorVisualizer * const this /* r28 */, class WallPainter & interactor /* r29 */) {
+// this: r28
+void InteractorVisualizer::DrawWallpaperRoomPreview(class WallPainter & interactor /* r29 */) {
     // Local variables
     class InteractorResourceSet * pResourceSet; // r31
     class ERShader * pShader; // r0
@@ -174,7 +180,8 @@ void InteractorVisualizer::DrawWallpaperRoomPreview(class InteractorVisualizer *
 }
 
 // Range: 0x800681E0 -> 0x800683B8
-int InteractorVisualizer::DrawWallpaperPreviewOnAffectedWalls(class InteractorVisualizer * const this /* r26 */, class WallPainter & interactor /* r27 */) {
+// this: r26
+int InteractorVisualizer::DrawWallpaperPreviewOnAffectedWalls(class WallPainter & interactor /* r27 */) {
     // Local variables
     class InteractorResourceSet * pResourceSet; // r29
     class ERShader * pShader; // r0
@@ -198,7 +205,8 @@ unsigned char InteractorVisualizer::CreateResources(class WallManipulator & inte
 }
 
 // Range: 0x80068544 -> 0x800688F4
-int InteractorVisualizer::DrawWallpaperRectPreview(class InteractorVisualizer * const this /* r28 */, const class EVec2 & v0 /* r22 */, const class EVec2 & v1 /* r21 */, float wallH /* f31 */) {
+// this: r28
+int InteractorVisualizer::DrawWallpaperRectPreview(const class EVec2 & v0 /* r22 */, const class EVec2 & v1 /* r21 */, float wallH /* f31 */) {
     // Local variables
     class CTilePt startTile; // r1+0x14
     class CTilePt endTile; // r1+0x10
@@ -222,7 +230,8 @@ int InteractorVisualizer::DrawWallpaperRectPreview(class InteractorVisualizer * 
 unsigned char InteractorVisualizer::DestroyResources() {}
 
 // Range: 0x800688F8 -> 0x8006896C
-void InteractorVisualizer::PreDraw(class InteractorVisualizer * const this /* r29 */, class WallManipulator & interactor /* r30 */) {
+// this: r29
+void InteractorVisualizer::PreDraw(class WallManipulator & interactor /* r30 */) {
     // Local variables
     int pid; // r0
 
@@ -231,7 +240,8 @@ void InteractorVisualizer::PreDraw(class InteractorVisualizer * const this /* r2
 }
 
 // Range: 0x8006896C -> 0x80068C30
-void InteractorVisualizer::Draw(class InteractorVisualizer * const this /* r28 */, class WallManipulator & interactor /* r29 */) {
+// this: r28
+void InteractorVisualizer::Draw(class WallManipulator & interactor /* r29 */) {
     // Local variables
     class EMat4 orientation; // r1+0x30
     class EVec3 & playerColor; // r30
@@ -247,7 +257,8 @@ void InteractorVisualizer::Draw(class InteractorVisualizer * const this /* r28 *
 }
 
 // Range: 0x80068C30 -> 0x80068E50
-void InteractorVisualizer::DrawWallRectPreview(class InteractorVisualizer * const this /* r27 */, class WallManipulator & interactor /* r28 */) {
+// this: r27
+void InteractorVisualizer::DrawWallRectPreview(class WallManipulator & interactor /* r28 */) {
     // Local variables
     class ERShader * pShader; // r29
     float rep; // f30
@@ -286,7 +297,8 @@ void InteractorVisualizer::DrawVerticalRect(const class EVec2 & v0 /* r20 */, co
 }
 
 // Range: 0x80069298 -> 0x800694D4
-void InteractorVisualizer::DrawRoomPreview(class InteractorVisualizer * const this /* r29 */, class WallManipulator & interactor /* r30 */) {
+// this: r29
+void InteractorVisualizer::DrawRoomPreview(class WallManipulator & interactor /* r30 */) {
     // Local variables
     class EVec3 anchorPos; // r1+0x2C
     class EVec3 pos; // r1+0x20
@@ -302,7 +314,8 @@ void InteractorVisualizer::DrawRoomPreview(class InteractorVisualizer * const th
 }
 
 // Range: 0x800694D4 -> 0x8006995C
-int InteractorVisualizer::DrawPreviewOnAffectedWalls(class InteractorVisualizer * const this /* r23 */, class WallManipulator & interactor /* r31 */, class EVec3 & vStart /* r22 */, class EVec3 & vEnd /* r21 */) {
+// this: r23
+int InteractorVisualizer::DrawPreviewOnAffectedWalls(class WallManipulator & interactor /* r31 */, class EVec3 & vStart /* r22 */, class EVec3 & vEnd /* r21 */) {
     // Local variables
     class CTilePt startTile; // r1+0x14
     class CTilePt endTile; // r1+0x10
@@ -347,10 +360,12 @@ void InteractorVisualizer::PreDraw(class ObjectManipulator & interactor /* r30 *
 }
 
 // Range: 0x80069AB8 -> 0x80069B0C
-void InteractorVisualizer::DrawBPVisuals(class InteractorVisualizer * const this /* r29 */, class ERC * rc /* r30 */, class Interactor & interactor /* r31 */) {}
+// this: r29
+void InteractorVisualizer::DrawBPVisuals(class ERC * rc /* r30 */, class Interactor & interactor /* r31 */) {}
 
 // Range: 0x80069B0C -> 0x80069F68
-void InteractorVisualizer::DrawBPWallCaps(class InteractorVisualizer * const this /* r31 */, class Interactor & interactor /* r18 */) {
+// this: r31
+void InteractorVisualizer::DrawBPWallCaps(class Interactor & interactor /* r18 */) {
     // Local variables
     int directionLookup[4]; // r1+0xA8
     class EHouse * pEhouse; // r8
@@ -402,7 +417,8 @@ void InteractorVisualizer::DrawWallCapQuad(class EVec2 & v0 /* r25 */, class EVe
 }
 
 // Range: 0x8006A298 -> 0x8006A658
-void InteractorVisualizer::DrawBPGrid(class InteractorVisualizer * const this /* r28 */, class ERC * rc /* r30 */, class Interactor & interactor /* r31 */) {
+// this: r28
+void InteractorVisualizer::DrawBPGrid(class ERC * rc /* r30 */, class Interactor & interactor /* r31 */) {
     // Local variables
     class cFixedWorld * world; // r29
     int x1; // r28
@@ -425,7 +441,8 @@ void InteractorVisualizer::DrawBPGrid(class InteractorVisualizer * const this /*
 }
 
 // Range: 0x8006A658 -> 0x8006A784
-void InteractorVisualizer::Draw(class InteractorVisualizer * const this /* r28 */, class ObjectManipulator & interactor /* r29 */) {
+// this: r28
+void InteractorVisualizer::Draw(class ObjectManipulator & interactor /* r29 */) {
     // Local variables
     const class EVec3 & playerColor; // r30
     const class EVec3 & pos; // r0
@@ -451,13 +468,15 @@ unsigned char InteractorVisualizer::CreateResources() {
 unsigned char InteractorVisualizer::DestroyResources() {}
 
 // Range: 0x8006A7C8 -> 0x8006A864
-void InteractorVisualizer::PreDraw(class InteractorVisualizer * const this /* r29 */, class SimInteractor & interactor /* r30 */) {
+// this: r29
+void InteractorVisualizer::PreDraw(class SimInteractor & interactor /* r30 */) {
     // References
     // -> class EGlobal _globals;
 }
 
 // Range: 0x8006A864 -> 0x8006A9D8
-void InteractorVisualizer::Draw(class InteractorVisualizer * const this /* r27 */, class SimInteractor & interactor /* r28 */) {
+// this: r27
+void InteractorVisualizer::Draw(class SimInteractor & interactor /* r28 */) {
     // Local variables
     class PlumbBob * pPlumbBob; // r31
     class cXPerson * sim; // r30
@@ -484,7 +503,8 @@ unsigned char InteractorVisualizer::CreateResources() {
 unsigned char InteractorVisualizer::DestroyResources() {}
 
 // Range: 0x8006AA1C -> 0x8006AAB8
-void InteractorVisualizer::PreDraw(class InteractorVisualizer * const this /* r29 */, class RayInteractor & interactor /* r30 */) {
+// this: r29
+void InteractorVisualizer::PreDraw(class RayInteractor & interactor /* r30 */) {
     // References
     // -> class EGlobal _globals;
 }
@@ -507,7 +527,8 @@ unsigned char InteractorVisualizer::CreateResources() {}
 unsigned char InteractorVisualizer::DestroyResources() {}
 
 // Range: 0x8006AB70 -> 0x8006AC0C
-void InteractorVisualizer::PreDraw(class InteractorVisualizer * const this /* r29 */, class DirectInteractor & interactor /* r30 */) {
+// this: r29
+void InteractorVisualizer::PreDraw(class DirectInteractor & interactor /* r30 */) {
     // References
     // -> class EGlobal _globals;
 }
@@ -530,7 +551,8 @@ unsigned char InteractorVisualizer::CreateResources() {}
 unsigned char InteractorVisualizer::DestroyResources() {}
 
 // Range: 0x8006ACC4 -> 0x8006AD60
-void InteractorVisualizer::PreDraw(class InteractorVisualizer * const this /* r29 */, class SocialModeInteractor & interactor /* r30 */) {
+// this: r29
+void InteractorVisualizer::PreDraw(class SocialModeInteractor & interactor /* r30 */) {
     // References
     // -> class EGlobal _globals;
 }
@@ -549,7 +571,8 @@ void InteractorVisualizer::InteractorOrderTableCallback(struct ELevelDrawData & 
 }
 
 // Range: 0x8006AE14 -> 0x8006AE74
-void InteractorVisualizer::SetupDrawCallback(class InteractorVisualizer * const this /* r30 */, int playerId /* r31 */) {
+// this: r30
+void InteractorVisualizer::SetupDrawCallback(int playerId /* r31 */) {
     // Local variables
     class Interactor * pInteractor; // r0
 }
@@ -565,7 +588,8 @@ unsigned char InteractorVisualizer::SelectShader(int shaderId /* r31 */) {
 }
 
 // Range: 0x8006AED8 -> 0x8006B2DC
-void InteractorVisualizer::Draw(class InteractorVisualizer * const this /* r26 */, class PlacementObject & placementObject /* r23 */, class EVec3 & pos /* r27 */) {
+// this: r26
+void InteractorVisualizer::Draw(class PlacementObject & placementObject /* r23 */, class EVec3 & pos /* r27 */) {
     // Local variables
     class cXMTObject * pGridObject; // r24
     class cXObject * pObjectInHand; // r25
@@ -587,7 +611,8 @@ void InteractorVisualizer::Draw(class InteractorVisualizer * const this /* r26 *
 }
 
 // Range: 0x8006B2DC -> 0x8006B40C
-void InteractorVisualizer::DrawResource(class InteractorVisualizer * const this /* r26 */, int modelId /* r29 */, const class EVec3 & color /* r27 */, class EMat4 * pOrientMat /* r28 */) {
+// this: r26
+void InteractorVisualizer::DrawResource(int modelId /* r29 */, const class EVec3 & color /* r27 */, class EMat4 * pOrientMat /* r28 */) {
     // Local variables
     class InteractorResourceSet * pResourceSet; // r0
     class ERModel * pModel; // r30
@@ -601,7 +626,8 @@ void InteractorVisualizer::DrawResource(class InteractorVisualizer * const this 
 }
 
 // Range: 0x8006B40C -> 0x8006B4E4
-class InteractorResourceSet * InteractorVisualizer::CreateResourceSet(class InteractorVisualizer * const this /* r30 */, class Interactor & interactor /* r1+0x8 */) {
+// this: r30
+class InteractorResourceSet * InteractorVisualizer::CreateResourceSet(class Interactor & interactor /* r1+0x8 */) {
     // Local variables
     struct pair * iter; // r0
     class InteractorResourceSet insertSet; // r1+0x11C
@@ -609,19 +635,22 @@ class InteractorResourceSet * InteractorVisualizer::CreateResourceSet(class Inte
 }
 
 // Range: 0x8006B4F8 -> 0x8006B56C
-unsigned char InteractorVisualizer::DestroyResourceSet(class InteractorVisualizer * const this /* r30 */, class Interactor & interactor /* r1+0x8 */) {
+// this: r30
+unsigned char InteractorVisualizer::DestroyResourceSet(class Interactor & interactor /* r1+0x8 */) {
     // Local variables
     struct pair * iter; // r31
 }
 
 // Range: 0x8006B56C -> 0x8006B5DC
-class InteractorResourceSet * InteractorVisualizer::GetInteractorResourceSet(class InteractorVisualizer * const this /* r30 */, class Interactor * pInteractor /* r1+0x8 */) {
+// this: r30
+class InteractorResourceSet * InteractorVisualizer::GetInteractorResourceSet(class Interactor * pInteractor /* r1+0x8 */) {
     // Local variables
     struct pair * iter; // r0
 }
 
 // Range: 0x8006B5DC -> 0x8006B638
-void InteractorVisualizer::SetDefaultLights(class InteractorVisualizer * const this /* r31 */) {
+// this: r31
+void InteractorVisualizer::SetDefaultLights() {
     // References
     // -> class ERC * s_pERC;
     // -> static class EVec3 white;

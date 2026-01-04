@@ -5,22 +5,25 @@
     Code range: 0x80250B6C -> 0x802536AC
 */
 // Range: 0x80250B6C -> 0x80250B90
-void * ERTQuantize4D::ERTQuantize4D() {
+ERTQuantize4D::ERTQuantize4D() {
     // References
     // -> struct [anonymous] __vt__13ERTQuantize4D;
 }
 
 // Range: 0x80250B90 -> 0x80250BFC
-void * ERTQuantize4D::~ERTQuantize4D(class ERTQuantize4D * const this /* r30 */) {
+// this: r30
+ERTQuantize4D::~ERTQuantize4D() {
     // References
     // -> struct [anonymous] __vt__13ERTQuantize4D;
 }
 
 // Range: 0x80250BFC -> 0x80250C50
-void ERTQuantize4D::Deallocate(class ERTQuantize4D * const this /* r31 */) {}
+// this: r31
+void ERTQuantize4D::Deallocate() {}
 
 // Range: 0x80250C50 -> 0x80250F54
-unsigned char ERTQuantize4D::Init(class ERTQuantize4D * const this /* r30 */, unsigned int maxColors /* r26 */, unsigned int maxMemUsage /* r27 */, void * (* pfnAlloc)(unsigned int) /* r28 */, void (* pfnFree)(void *) /* r29 */, unsigned char YUVColorSpace /* r31 */) {
+// this: r30
+unsigned char ERTQuantize4D::Init(unsigned int maxColors /* r26 */, unsigned int maxMemUsage /* r27 */, void * (* pfnAlloc)(unsigned int) /* r28 */, void (* pfnFree)(void *) /* r29 */, unsigned char YUVColorSpace /* r31 */) {
     // Local variables
     unsigned short i; // r7
     unsigned short * pNode; // r0
@@ -36,7 +39,8 @@ void * ERTQuantize4D::DefaultAlloc(unsigned int size /* r31 */) {}
 void ERTQuantize4D::DefaultFree(void * p /* r31 */) {}
 
 // Range: 0x80250FC0 -> 0x802510B4
-void ERTQuantize4D::InitializeCube(class ERTQuantize4D * const this /* r31 */) {
+// this: r31
+void ERTQuantize4D::InitializeCube() {
     // Local variables
     unsigned int number_pixels; // r0
     unsigned int max_shift; // r5
@@ -58,7 +62,8 @@ void ERTQuantize4D::AddPixel() {
 }
 
 // Range: 0x802512CC -> 0x80251348
-void ERTQuantize4D::FlushAdd(class ERTQuantize4D * const this /* r30 */, struct ERTQ4CacheNode & cn /* r31 */) {
+// this: r30
+void ERTQuantize4D::FlushAdd(struct ERTQ4CacheNode & cn /* r31 */) {
     // Local variables
     unsigned char color[4]; // r1+0x8
     class EVec4 vYuva; // r1+0x10
@@ -71,7 +76,8 @@ void ERTQuantize4D::TransformToYuva() {
 }
 
 // Range: 0x80251538 -> 0x80251964
-void ERTQuantize4D::Classify(class ERTQuantize4D * const this /* r20 */, const class EVec4 & vColor /* r21 */, int count /* r22 */) {
+// this: r20
+void ERTQuantize4D::Classify(const class EVec4 & vColor /* r21 */, int count /* r22 */) {
     // Local variables
     struct ERTQ4Node * node; // r6
     unsigned int level; // r23
@@ -83,7 +89,8 @@ void ERTQuantize4D::Classify(class ERTQuantize4D * const this /* r20 */, const c
 }
 
 // Range: 0x80251964 -> 0x80251E44
-void ERTQuantize4D::PruneLevel(class ERTQuantize4D * const this /* r15 */, struct ERTQ4Node * node /* f1 */) {
+// this: r15
+void ERTQuantize4D::PruneLevel(struct ERTQ4Node * node /* f1 */) {
     // Local variables
     unsigned int id; // f2
 }
@@ -92,23 +99,27 @@ void ERTQuantize4D::PruneLevel(class ERTQuantize4D * const this /* r15 */, struc
 void ERTQuantize4D::PruneChild() {}
 
 // Range: 0x80251F38 -> 0x80252210
-void ERTQuantize4D::Compute(class ERTQuantize4D * const this /* r31 */) {
+// this: r31
+void ERTQuantize4D::Compute() {
     // Local variables
     int cc; // r27
     struct ERTQ4CacheNode & cn; // r0
 }
 
 // Range: 0x80252210 -> 0x802522B4
-void ERTQuantize4D::Reduction(class ERTQuantize4D * const this /* r29 */) {}
+// this: r29
+void ERTQuantize4D::Reduction() {}
 
 // Range: 0x802522B4 -> 0x80252980
-void ERTQuantize4D::Reduce(class ERTQuantize4D * const this /* r15 */, struct ERTQ4Node * node /* r14 */) {
+// this: r15
+void ERTQuantize4D::Reduce(struct ERTQ4Node * node /* r14 */) {
     // Local variables
     unsigned int id; // r16
 }
 
 // Range: 0x80252980 -> 0x80252AA8
-void ERTQuantize4D::MColormap(class ERTQuantize4D * const this /* r30 */, struct ERTQ4Node * node /* r31 */) {
+// this: r30
+void ERTQuantize4D::MColormap(struct ERTQ4Node * node /* r31 */) {
     // Local variables
     unsigned int id; // r27
     float unique; // f1
@@ -121,7 +132,8 @@ int ERTQuantize4D::GetPaletteSize() {}
 void ERTQuantize4D::GetPaletteEntry() {}
 
 // Range: 0x80252D34 -> 0x80253258
-int ERTQuantize4D::GetClosestColor(class ERTQuantize4D * const this /* r29 */) {
+// this: r29
+int ERTQuantize4D::GetClosestColor() {
     // Local variables
     unsigned int packedColor; // r30
     unsigned int hashedColor; // r0
@@ -136,7 +148,8 @@ int ERTQuantize4D::GetClosestColor(class ERTQuantize4D * const this /* r29 */) {
 }
 
 // Range: 0x80253258 -> 0x802536AC
-void ERTQuantize4D::ClosestColor(class ERTQuantize4D * const this /* r15 */, struct ERTQ4Node * node /* r16 */) {
+// this: r15
+void ERTQuantize4D::ClosestColor(struct ERTQ4Node * node /* r16 */) {
     // Local variables
     unsigned int id; // r17
     class EVec4 & vColor; // r0

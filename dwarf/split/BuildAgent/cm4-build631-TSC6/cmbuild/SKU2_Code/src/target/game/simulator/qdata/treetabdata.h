@@ -8,7 +8,8 @@
 int TreeTableEntry::CountAds() {}
 
 // Range: 0x80163974 -> 0x80163A14
-class TreeTableAd * TreeTableEntry::GetAdByID(const class TreeTableEntry * const this /* r29 */, int id /* r30 */) {
+// this: r29
+class TreeTableAd * TreeTableEntry::GetAdByID(int id /* r30 */) const {
     // Local variables
     int i; // r31
 
@@ -20,7 +21,7 @@ class TreeTableAd * TreeTableEntry::GetAdByID(const class TreeTableEntry * const
 int TreeTableAd::GetAdID() {}
 
 // Range: 0x80163A1C -> 0x80163A34
-void * TreeTableAd::TreeTableAd() {}
+TreeTableAd::TreeTableAd() {}
 
 // Range: 0x80163A34 -> 0x80163A3C
 class ELocString & TreeTableEntry::GetName() {}

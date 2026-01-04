@@ -5,22 +5,26 @@
     Code range: 0x80025650 -> 0x80025D28
 */
 // Range: 0x80025650 -> 0x800256C8
-void * LinearSpring2D::LinearSpring2D(class LinearSpring2D * const this /* r31 */) {
+// this: r31
+LinearSpring2D::LinearSpring2D() {
     // References
     // -> struct [anonymous] __vt__14LinearSpring2D;
 }
 
 // Range: 0x800256C8 -> 0x8002574C
-void LinearSpring2D::Init(class LinearSpring2D * const this /* r31 */) {
+// this: r31
+void LinearSpring2D::Init() {
     // Local variables
     float radiusSq; // f5
 }
 
 // Range: 0x8002574C -> 0x800257D4
-void LinearSpring2D::CalculateConstants(class LinearSpring2D * const this /* r31 */, float fDragMulFactor /* f31 */) {}
+// this: r31
+void LinearSpring2D::CalculateConstants(float fDragMulFactor /* f31 */) {}
 
 // Range: 0x800257D4 -> 0x80025948
-void LinearSpring2D::Update(class LinearSpring2D * const this /* r29 */, float dt /* f30 */) {
+// this: r29
+void LinearSpring2D::Update(float dt /* f30 */) {
     // Local variables
     unsigned int updateIter; // r30
     unsigned int kMaxIter; // r0
@@ -30,16 +34,20 @@ void LinearSpring2D::Update(class LinearSpring2D * const this /* r29 */, float d
 }
 
 // Range: 0x80025948 -> 0x800259C8
-void LinearSpring2D::UpdatePosition(class LinearSpring2D * const this /* r31 */, float dt /* f31 */) {}
+// this: r31
+void LinearSpring2D::UpdatePosition(float dt /* f31 */) {}
 
 // Range: 0x800259C8 -> 0x80025A70
-void LinearSpring2D::UpdateAcceleration(class LinearSpring2D * const this /* r31 */) {}
+// this: r31
+void LinearSpring2D::UpdateAcceleration() {}
 
 // Range: 0x80025A70 -> 0x80025AD8
-void LinearSpring2D::UpdateVelocity(class LinearSpring2D * const this /* r31 */, float dt /* f31 */) {}
+// this: r31
+void LinearSpring2D::UpdateVelocity(float dt /* f31 */) {}
 
 // Range: 0x80025AD8 -> 0x80025C2C
-void LinearSpring2D::ComputeTipRotationTranslation(class LinearSpring2D * const this /* r29 */, float lengthRatio /* f30 */, class EQuat & rot /* r30 */, class EVec3 & trans /* r31 */, float mulfac /* f31 */) {
+// this: r29
+void LinearSpring2D::ComputeTipRotationTranslation(float lengthRatio /* f30 */, class EQuat & rot /* r30 */, class EVec3 & trans /* r31 */, float mulfac /* f31 */) {
     // Local variables
     float invAreaRatioSq; // f2
     float ratio; // f0
@@ -57,6 +65,7 @@ class EVec3 LinearSpring2D::ComputeRotationAxis(class EVec3 * rotAxis /* r31 */)
 }
 
 // Range: 0x80025CDC -> 0x80025D28
-void LinearSpring2D::Reset(class LinearSpring2D * const this /* r31 */) {}
+// this: r31
+void LinearSpring2D::Reset() {}
 
 

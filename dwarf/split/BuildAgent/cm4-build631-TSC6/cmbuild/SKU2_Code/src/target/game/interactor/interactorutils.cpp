@@ -5,7 +5,7 @@
     Code range: 0x80063DD0 -> 0x80066980
 */
 // Range: 0x80063DD0 -> 0x80063DE8
-void * PlacementData::PlacementData() {}
+PlacementData::PlacementData() {}
 
 // Range: 0x80063DE8 -> 0x80063EC8
 void InitializeInteractorModule() {

@@ -5,7 +5,8 @@
     Code range: 0x801BFDEC -> 0x801C1370
 */
 // Range: 0x801BFDEC -> 0x801C015C
-void * R2LTarget::R2LTarget(class R2LTarget * const this /* r31 */) {
+// this: r31
+R2LTarget::R2LTarget() {
     // Local variables
     int i; // r25
     int i; // r25
@@ -32,7 +33,8 @@ void * R2LTarget::R2LTarget(class R2LTarget * const this /* r31 */) {
 }
 
 // Range: 0x801C015C -> 0x801C0290
-void * R2LTarget::~R2LTarget(class R2LTarget * const this /* r29 */) {
+// this: r29
+R2LTarget::~R2LTarget() {
     // References
     // -> class EGlobal _globals;
     // -> class AptViewer * _gpAptViewer;
@@ -40,7 +42,8 @@ void * R2LTarget::~R2LTarget(class R2LTarget * const this /* r29 */) {
 }
 
 // Range: 0x801C02F8 -> 0x801C065C
-void R2LTarget::SetVariable(class R2LTarget * const this /* r30 */, const char * szCommand /* r27 */, const char * szParams /* r28 */) {
+// this: r30
+void R2LTarget::SetVariable(const char * szCommand /* r27 */, const char * szParams /* r28 */) {
     // Local variables
     int item; // r1+0x10
     int grid; // r1+0xC
@@ -61,7 +64,8 @@ void R2LTarget::SetVariable(class R2LTarget * const this /* r30 */, const char *
 }
 
 // Range: 0x801C065C -> 0x801C0708
-char * R2LTarget::GetVariable(class R2LTarget * const this /* r29 */, const char * szVar /* r30 */) {
+// this: r29
+char * R2LTarget::GetVariable(const char * szVar /* r30 */) {
     // Local variables
     char * retStr; // r31
 
@@ -70,7 +74,8 @@ char * R2LTarget::GetVariable(class R2LTarget * const this /* r29 */, const char
 }
 
 // Range: 0x801C0708 -> 0x801C0BD8
-unsigned short * R2LTarget::GetLocalizable(class R2LTarget * const this /* r30 */, const char * szVar /* r27 */) {
+// this: r30
+unsigned short * R2LTarget::GetLocalizable(const char * szVar /* r27 */) {
     // Local variables
     unsigned short * wideStr; // r31
     int grid; // r1+0x3C
@@ -107,7 +112,8 @@ int sort_records_by_name(void * recordAsVoid1 /* r27 */, void * recordAsVoid2 /*
 }
 
 // Range: 0x801C0D7C -> 0x801C0DFC
-void R2LTarget::Update(class R2LTarget * const this /* r31 */) {
+// this: r31
+void R2LTarget::Update() {
     // Local variables
     class EVec2 dummy; // r1+0x8
 
@@ -120,7 +126,8 @@ void R2LTarget::Update(class R2LTarget * const this /* r31 */) {
 void R2LTarget::SpawnSummaryDialog() {}
 
 // Range: 0x801C0E00 -> 0x801C107C
-void R2LTarget::SetupRelationships(class R2LTarget * const this /* r26 */) {
+// this: r26
+void R2LTarget::SetupRelationships() {
     // Local variables
     class cXPerson * pPerson; // r27
     class vector relList; // r1+0x10
@@ -134,7 +141,8 @@ void R2LTarget::SetupRelationships(class R2LTarget * const this /* r26 */) {
 }
 
 // Range: 0x801C107C -> 0x801C133C
-void R2LTarget::ChangeSelection(class R2LTarget * const this /* r30 */, int newSelection /* r28 */) {
+// this: r30
+void R2LTarget::ChangeSelection(int newSelection /* r28 */) {
     // Local variables
     const struct RelationshipTable * pRelTab; // r31
     class R2LRecord * rec; // r29

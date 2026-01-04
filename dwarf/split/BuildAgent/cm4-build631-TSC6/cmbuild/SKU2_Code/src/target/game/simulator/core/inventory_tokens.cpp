@@ -17,7 +17,8 @@ unsigned char InventoryTokens::GetDescription(class ELocString & desc /* r30 */)
 }
 
 // Range: 0x8011FAB0 -> 0x8011FBB8
-unsigned int InventoryTokens::GetLargeShaderSymbol(const struct InventoryTokens * const this /* r29 */, unsigned char fromInventory /* r30 */) {
+// this: r29
+unsigned int InventoryTokens::GetLargeShaderSymbol(unsigned char fromInventory /* r30 */) const {
     // Local variables
     class ObjSelector * sel; // r0
     struct ObjDefinition * pObjDefinition; // r0
@@ -25,7 +26,8 @@ unsigned int InventoryTokens::GetLargeShaderSymbol(const struct InventoryTokens 
 }
 
 // Range: 0x8011FBB8 -> 0x8011FCC0
-unsigned int InventoryTokens::GetSmallShaderSymbol(const struct InventoryTokens * const this /* r29 */, unsigned char fromInventory /* r30 */) {
+// this: r29
+unsigned int InventoryTokens::GetSmallShaderSymbol(unsigned char fromInventory /* r30 */) const {
     // Local variables
     class ObjSelector * sel; // r0
     struct ObjDefinition * pObjDefinition; // r0
@@ -33,7 +35,8 @@ unsigned int InventoryTokens::GetSmallShaderSymbol(const struct InventoryTokens 
 }
 
 // Range: 0x8011FCC0 -> 0x8011FD18
-signed short InventoryTokens::GetHarvestTool(const struct InventoryTokens * const this /* r31 */) {
+// this: r31
+signed short InventoryTokens::GetHarvestTool() const {
     // Local variables
     class InventoryItems * pInventory; // r0
     signed short toolToken; // r1+0x8

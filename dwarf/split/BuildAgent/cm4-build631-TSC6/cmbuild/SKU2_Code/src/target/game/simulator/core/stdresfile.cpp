@@ -5,7 +5,8 @@
     Code range: 0x800E2BA4 -> 0x800E2D98
 */
 // Range: 0x800E2BA4 -> 0x800E2D68
-int StdResFile::Open(class StdResFile * const this /* r25 */) {
+// this: r25
+int StdResFile::Open() {
     // Local variables
     int err; // r0
     class iResFile * spiffFile; // r27

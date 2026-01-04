@@ -5,13 +5,15 @@
     Code range: 0x8009674C -> 0x80096A04
 */
 // Range: 0x8009674C -> 0x800967A0
-void * TreeInstance::TreeInstance(class TreeInstance * const this /* r30 */, enum eTreeType eType /* r31 */) {
+// this: r30
+TreeInstance::TreeInstance(enum eTreeType eType /* r31 */) {
     // References
     // -> struct [anonymous] __vt__12TreeInstance;
 }
 
 // Range: 0x800967A0 -> 0x80096814
-void * TreeInstance::~TreeInstance(class TreeInstance * const this /* r30 */) {
+// this: r30
+TreeInstance::~TreeInstance() {
     // References
     // -> struct [anonymous] __vt__12TreeInstance;
 }
@@ -20,7 +22,8 @@ void * TreeInstance::~TreeInstance(class TreeInstance * const this /* r30 */) {
 void TreeInstance::Init() {}
 
 // Range: 0x80096818 -> 0x800968D0
-void TreeInstance::SetupCharacter(class TreeInstance * const this /* r31 */) {
+// this: r31
+void TreeInstance::SetupCharacter() {
     // Local variables
     enum eBranchStyle ebranchStyle; // r4
 }
@@ -38,10 +41,12 @@ float TreeInstance::GetArea() {
 void TreeInstance::RegisterTreeInstance() {}
 
 // Range: 0x80096920 -> 0x80096964
-void TreeInstance::RegisterBranchStyle(class TreeInstance * const this /* r30 */, enum eBranchStyle branchStyle /* r31 */) {}
+// this: r30
+void TreeInstance::RegisterBranchStyle(enum eBranchStyle branchStyle /* r31 */) {}
 
 // Range: 0x80096964 -> 0x80096A04
-class EVec3 TreeInstance::GetTreeTipPos(class TreeInstance * const this /* r30 */) {
+// this: r30
+class EVec3 TreeInstance::GetTreeTipPos() {
     // Local variables
     int numNodes; // r0
     class EMat4 pos; // r1+0x18

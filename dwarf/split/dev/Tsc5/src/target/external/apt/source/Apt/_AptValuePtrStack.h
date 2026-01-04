@@ -5,13 +5,15 @@
     Code range: 0x8030AD90 -> 0x8030AFC4
 */
 // Range: 0x8030AD90 -> 0x8030ADCC
-void AptValuePtrStack::init(class AptValuePtrStack * const this /* r31 */) {
+// this: r31
+void AptValuePtrStack::init() {
     // References
     // -> class DOGMA_PoolManager * gpNonGCPoolManager;
 }
 
 // Range: 0x8030ADCC -> 0x8030AE20
-void AptValuePtrStack::shutdown(class AptValuePtrStack * const this /* r31 */) {
+// this: r31
+void AptValuePtrStack::shutdown() {
     // References
     // -> class DOGMA_PoolManager * gpNonGCPoolManager;
 }
@@ -23,7 +25,8 @@ void AptValuePtrStack::push(class AptValue * element /* r8 */) {
 }
 
 // Range: 0x8030AE64 -> 0x8030AED0
-void AptValuePtrStack::pop(class AptValuePtrStack * const this /* r31 */) {
+// this: r31
+void AptValuePtrStack::pop() {
     // References
     // -> static char __PRETTY_FUNCTION__[34];
 }
@@ -38,23 +41,19 @@ class AptValue * AptValuePtrStack::at() {}
 class AptValue * AptValuePtrStack::top() {}
 
 // Range: 0x8030AEFC -> 0x8030AF68
-void * AptValuePtrStack::~AptValuePtrStack(class AptValuePtrStack * const this /* r30 */) {
+// this: r30
+AptValuePtrStack::~AptValuePtrStack() {
     // References
     // -> class DOGMA_PoolManager * gpNonGCPoolManager;
 }
 
 // Range: 0x8030AFB0 -> 0x8030AFC4
-void * AptValuePtrStack::AptValuePtrStack() {}
+AptValuePtrStack::AptValuePtrStack() {}
 
 
-/*
-    Compile unit: C:\dev\Tsc5\src\target\external\apt\source\Apt\_AptValuePtrStack.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x80310560 -> 0x803105AC
-*/
 // Range: 0x80310560 -> 0x803105AC
-void * AptValuePtrStack::AptValuePtrStack(class AptValuePtrStack * const this /* r31 */) {
+// this: r31
+AptValuePtrStack::AptValuePtrStack() {
     // References
     // -> class DOGMA_PoolManager * gpNonGCPoolManager;
 }

@@ -5,10 +5,12 @@
     Code range: 0x802959E4 -> 0x8029671C
 */
 // Range: 0x802959E4 -> 0x80295AA4
-void * EMirrorPortal::EMirrorPortal(class EMirrorPortal * const this /* r31 */) {}
+// this: r31
+EMirrorPortal::EMirrorPortal() {}
 
 // Range: 0x80295AA4 -> 0x80295B44
-void * EMirrorPortal::~EMirrorPortal(class EMirrorPortal * const this /* r29 */) {}
+// this: r29
+EMirrorPortal::~EMirrorPortal() {}
 
 // Range: 0x80295B44 -> 0x80295B4C
 void EMirrorPortal::SetNumCorners() {}
@@ -17,13 +19,15 @@ void EMirrorPortal::SetNumCorners() {}
 void EMirrorPortal::SetCorner() {}
 
 // Range: 0x80295B70 -> 0x80295BDC
-void EMirrorPortal::SetMirrorShader(class EMirrorPortal * const this /* r30 */, unsigned int shaderId /* r31 */) {
+// this: r30
+void EMirrorPortal::SetMirrorShader(unsigned int shaderId /* r31 */) {
     // References
     // -> class EShaderManager _shaderman;
 }
 
 // Range: 0x80295BDC -> 0x80295D78
-void EMirrorPortal::StartRendering(class EMirrorPortal * const this /* r27 */, class E3DWindow & win /* r28 */, class ERC * prc /* r29 */) {
+// this: r27
+void EMirrorPortal::StartRendering(class E3DWindow & win /* r28 */, class ERC * prc /* r29 */) {
     // Local variables
     class EMat4 proj; // r1+0x38
 
@@ -32,10 +36,12 @@ void EMirrorPortal::StartRendering(class EMirrorPortal * const this /* r27 */, c
 }
 
 // Range: 0x80295D78 -> 0x80295EBC
-void EMirrorPortal::StopRendering(class EMirrorPortal * const this /* r29 */, class E3DWindow & win /* r30 */, class ERC * prc /* r31 */) {}
+// this: r29
+void EMirrorPortal::StopRendering(class E3DWindow & win /* r30 */, class ERC * prc /* r31 */) {}
 
 // Range: 0x80295EBC -> 0x80296194
-void EMirrorPortal::CalcMirrorMatrix(class EMirrorPortal * const this /* r30 */) {
+// this: r30
+void EMirrorPortal::CalcMirrorMatrix() {
     // Local variables
     class EVec3 normal; // r1+0x50
     class EVec3 zAxis; // r1+0x44

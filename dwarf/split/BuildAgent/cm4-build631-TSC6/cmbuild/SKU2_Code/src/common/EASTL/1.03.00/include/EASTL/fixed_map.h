@@ -5,6 +5,7 @@
     Code range: 0x800D3D3C -> 0x800D3D80
 */
 // Range: 0x800D3D3C -> 0x800D3D80
-void * fixed_map::fixed_map(class fixed_map * const this /* r31 */) {}
+// this: r31
+fixed_map::fixed_map() {}
 
 

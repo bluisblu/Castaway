@@ -11,18 +11,14 @@ void FindGoodLocationParams::SetPreferEmptyTiles() {}
 void FindGoodLocationParams::SetStayInRoom() {}
 
 // Range: 0x8001AC88 -> 0x8001ACD0
-void FindGoodLocationParams::SetStartLocation(class FindGoodLocationParams * const this /* r30 */, int level /* r31 */) {}
+// this: r30
+void FindGoodLocationParams::SetStartLocation(int level /* r31 */) {}
 
 // Range: 0x8001ACD0 -> 0x8001AD30
-void * FindGoodLocationParams::FindGoodLocationParams(class FindGoodLocationParams * const this /* r30 */) {}
+// this: r30
+FindGoodLocationParams::FindGoodLocationParams() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\target\game\simulator\core\findgoodlocationparams.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x8011DF58 -> 0x8011E010
-*/
 // Range: 0x8011DF58 -> 0x8011DF60
 void FindGoodLocationParams::SetEditableTilesOnly() {}
 
@@ -39,7 +35,8 @@ unsigned char FindGoodLocationParams::GetPreferEmptyTiles() {}
 unsigned char FindGoodLocationParams::GetEditableTilesOnly() {}
 
 // Range: 0x8011DF80 -> 0x8011DFC4
-unsigned char FindGoodLocationParams::GetStartLocation(const class FindGoodLocationParams * const this /* r5 */) {}
+// this: r5
+unsigned char FindGoodLocationParams::GetStartLocation() const {}
 
 // Range: 0x8011DFC4 -> 0x8011DFE0
 int FindGoodLocationParams::GetLevel() {}

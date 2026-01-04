@@ -5,6 +5,7 @@
     Code range: 0x802738FC -> 0x802739D8
 */
 // Range: 0x802738FC -> 0x802739D8
-void SimsLightInfo::Read(class SimsLightInfo * const this /* r30 */, class EFile * s /* r31 */) {}
+// this: r30
+void SimsLightInfo::Read(class EFile * s /* r31 */) {}
 
 

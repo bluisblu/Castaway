@@ -5,7 +5,8 @@
     Code range: 0x802B5C00 -> 0x802B853C
 */
 // Range: 0x802B5C00 -> 0x802B5CD0
-void * ENgcMovie::ENgcMovie(class ENgcMovie * const this /* r31 */) {
+// this: r31
+ENgcMovie::ENgcMovie() {
     // Local variables
     unsigned int soundMode; // r0
 
@@ -18,13 +19,15 @@ void * ENgcMovie::ENgcMovie(class ENgcMovie * const this /* r31 */) {
 }
 
 // Range: 0x802B5CD0 -> 0x802B5D4C
-void * ENgcMovie::~ENgcMovie(class ENgcMovie * const this /* r30 */) {
+// this: r30
+ENgcMovie::~ENgcMovie() {
     // References
     // -> struct [anonymous] __vt__9ENgcMovie;
 }
 
 // Range: 0x802B5D4C -> 0x802B5EB4
-unsigned char ENgcMovie::Load(class ENgcMovie * const this /* r30 */) {
+// this: r30
+unsigned char ENgcMovie::Load() {
     // References
     // -> class EApp * _pApp;
     // -> class EGraphics * _pGfx;
@@ -32,22 +35,26 @@ unsigned char ENgcMovie::Load(class ENgcMovie * const this /* r30 */) {
 }
 
 // Range: 0x802B5EB4 -> 0x802B5FA0
-void ENgcMovie::Start(class ENgcMovie * const this /* r31 */, int y /* r30 */) {}
+// this: r31
+void ENgcMovie::Start(int y /* r30 */) {}
 
 // Range: 0x802B5FA0 -> 0x802B5FDC
-void ENgcMovie::Stop(class ENgcMovie * const this /* r31 */) {}
+// this: r31
+void ENgcMovie::Stop() {}
 
 // Range: 0x802B5FDC -> 0x802B5FE0
 void ENgcMovie::Reset() {}
 
 // Range: 0x802B5FE0 -> 0x802B603C
-unsigned char ENgcMovie::IsFinished(class ENgcMovie * const this /* r31 */) {
+// this: r31
+unsigned char ENgcMovie::IsFinished() {
     // References
     // -> static unsigned char bPausedDueToDiskError;
 }
 
 // Range: 0x802B603C -> 0x802B6154
-unsigned char ENgcMovie::GetNextFrame(class ENgcMovie * const this /* r30 */) {
+// this: r30
+unsigned char ENgcMovie::GetNextFrame() {
     // Local variables
     unsigned char Result; // r31
 
@@ -59,7 +66,8 @@ unsigned char ENgcMovie::GetNextFrame(class ENgcMovie * const this /* r30 */) {
 }
 
 // Range: 0x802B6154 -> 0x802B628C
-unsigned char ENgcMovie::PlayerInit(class ENgcMovie * const this /* r29 */, int audioSystem /* r30 */) {
+// this: r29
+unsigned char ENgcMovie::PlayerInit(int audioSystem /* r30 */) {
     // Local variables
     unsigned char old; // r30
 
@@ -76,7 +84,8 @@ unsigned char ENgcMovie::PlayerInit(class ENgcMovie * const this /* r29 */, int 
 }
 
 // Range: 0x802B628C -> 0x802B62F4
-void ENgcMovie::PlayerQuit(class ENgcMovie * const this /* r30 */) {
+// this: r30
+void ENgcMovie::PlayerQuit() {
     // Local variables
     unsigned char old; // r31
 
@@ -176,7 +185,8 @@ int ENgcMovie::PlayerGetState() {
 }
 
 // Range: 0x802B6CF4 -> 0x802B6D40
-void ENgcMovie::PlayerDrawDone(class ENgcMovie * const this /* r31 */) {
+// this: r31
+void ENgcMovie::PlayerDrawDone() {
     // Local variables
     void * textureSet; // r0
 }

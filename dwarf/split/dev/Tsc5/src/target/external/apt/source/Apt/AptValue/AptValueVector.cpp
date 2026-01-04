@@ -5,19 +5,22 @@
     Code range: 0x80333CD8 -> 0x80333E00
 */
 // Range: 0x80333CD8 -> 0x80333D20
-void * AptValueVector::AptValueVector(class AptValueVector * const this /* r31 */) {
+// this: r31
+AptValueVector::AptValueVector() {
     // References
     // -> class DOGMA_PoolManager * gpNonGCPoolManager;
 }
 
 // Range: 0x80333D20 -> 0x80333D88
-void * AptValueVector::~AptValueVector(class AptValueVector * const this /* r30 */) {
+// this: r30
+AptValueVector::~AptValueVector() {
     // References
     // -> class DOGMA_PoolManager * gpNonGCPoolManager;
 }
 
 // Range: 0x80333D88 -> 0x80333E00
-void AptValueVector::ReleaseValues(class AptValueVector * const this /* r30 */) {
+// this: r30
+void AptValueVector::ReleaseValues() {
     // Local variables
     class AptValue * pValue; // r31
     unsigned int uRefCount; // r0

@@ -5,19 +5,22 @@
     Code range: 0x80115E38 -> 0x801166D4
 */
 // Range: 0x80115E38 -> 0x80115E84
-void * House::House(class House * const this /* r31 */) {
+// this: r31
+House::House() {
     // References
     // -> struct [anonymous] __vt__5House;
 }
 
 // Range: 0x80115E84 -> 0x80115EFC
-void * House::~House(class House * const this /* r30 */) {
+// this: r30
+House::~House() {
     // References
     // -> struct [anonymous] __vt__5House;
 }
 
 // Range: 0x80115EFC -> 0x80115F80
-void House::Initialize(class House * const this /* r31 */) {
+// this: r31
+void House::Initialize() {
     // References
     // -> class RoomManager * pRoomManager;
     // -> class ObjectModule * pObjectModule;
@@ -25,7 +28,8 @@ void House::Initialize(class House * const this /* r31 */) {
 }
 
 // Range: 0x80115F80 -> 0x80116024
-void House::Destroy(class House * const this /* r31 */) {
+// this: r31
+void House::Destroy() {
     // References
     // -> class cSimulator * pSimulator;
     // -> class ObjectModule * pObjectModule;
@@ -39,10 +43,12 @@ void House::RefreshHouse() {
 }
 
 // Range: 0x80116070 -> 0x80116118
-void House::SetLotSize(class House * const this /* r29 */, int xSize /* r30 */, int ySize /* r31 */) {}
+// this: r29
+void House::SetLotSize(int xSize /* r30 */, int ySize /* r31 */) {}
 
 // Range: 0x80116118 -> 0x80116254
-int House::LoadFile(class House * const this /* r27 */, class iResFile * file /* r28 */, int * pVersion /* r29 */) {
+// this: r27
+int House::LoadFile(class iResFile * file /* r28 */, int * pVersion /* r29 */) {
     // Local variables
     int version; // r1+0xC
     signed short gameEdition; // r0
@@ -55,7 +61,8 @@ int House::LoadFile(class House * const this /* r27 */, class iResFile * file /*
 }
 
 // Range: 0x80116254 -> 0x80116308
-void House::ComputeAndStoreLotData(class House * const this /* r30 */) {
+// this: r30
+void House::ComputeAndStoreLotData() {
     // Local variables
     unsigned char hasPhone; // r1+0xB
     unsigned char hasBaby; // r1+0xA
@@ -67,7 +74,8 @@ void House::ComputeAndStoreLotData(class House * const this /* r30 */) {
 }
 
 // Range: 0x80116308 -> 0x801163AC
-int House::SaveFile(class House * const this /* r29 */, class iResFile * pFile /* r30 */) {
+// this: r29
+int House::SaveFile(class iResFile * pFile /* r30 */) {
     // Local variables
     int version; // r31
 
@@ -77,7 +85,8 @@ int House::SaveFile(class House * const this /* r29 */, class iResFile * pFile /
 }
 
 // Range: 0x801163AC -> 0x801164D0
-unsigned char House::DoCommand(class House * const this /* r29 */, signed short command /* r30 */, int info /* r31 */) {
+// this: r29
+unsigned char House::DoCommand(signed short command /* r30 */, int info /* r31 */) {
     // Local variables
     class cXObject * obj; // r0
 }
@@ -95,13 +104,16 @@ unsigned char House::IsResident(class cXPerson * person /* r31 */) {
 }
 
 // Range: 0x801165A8 -> 0x801165F8
-void House::EnterLiveMode(class House * const this /* r31 */) {}
+// this: r31
+void House::EnterLiveMode() {}
 
 // Range: 0x801165F8 -> 0x80116638
-void House::PrepareForBudgetWindow(class House * const this /* r31 */) {}
+// this: r31
+void House::PrepareForBudgetWindow() {}
 
 // Range: 0x80116638 -> 0x801166D4
-void House::DoStream(class House * const this /* r6 */, class ReconBuffer * r /* r30 */, int version /* r31 */) {
+// this: r6
+void House::DoStream(class ReconBuffer * r /* r30 */, int version /* r31 */) {
     // Local variables
     int junkValue; // r1+0x8
     int i; // r31

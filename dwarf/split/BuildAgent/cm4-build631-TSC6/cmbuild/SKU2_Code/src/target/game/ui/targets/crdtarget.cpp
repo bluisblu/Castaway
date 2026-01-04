@@ -5,23 +5,27 @@
     Code range: 0x801A1F58 -> 0x801A33E8
 */
 // Range: 0x801A1F58 -> 0x801A2244
-void * CRDTarget::CRDTarget(class CRDTarget * const this /* r29 */, class UIObjectBase * pCallingTarget /* r30 */) {
+// this: r29
+CRDTarget::CRDTarget(class UIObjectBase * pCallingTarget /* r30 */) {
     // References
     // -> struct [anonymous] __vt__9CRDTarget;
 }
 
 // Range: 0x801A2244 -> 0x801A2358
-void * CRDTarget::~CRDTarget(class CRDTarget * const this /* r30 */) {
+// this: r30
+CRDTarget::~CRDTarget() {
     // References
     // -> class EGlobal _globals;
     // -> struct [anonymous] __vt__9CRDTarget;
 }
 
 // Range: 0x801A2358 -> 0x801A2430
-void CRDTarget::SetVariable(class CRDTarget * const this /* r29 */, const char * szCommand /* r30 */) {}
+// this: r29
+void CRDTarget::SetVariable(const char * szCommand /* r30 */) {}
 
 // Range: 0x801A2430 -> 0x801A251C
-char * CRDTarget::GetVariable(class CRDTarget * const this /* r28 */, const char * szVar /* r29 */) {
+// this: r28
+char * CRDTarget::GetVariable(const char * szVar /* r29 */) {
     // Local variables
     char * retStr; // r30
 }
@@ -37,7 +41,8 @@ unsigned short * CRDTarget::GetLocalizable() {
 void CRDTarget::Draw() {}
 
 // Range: 0x801A25A0 -> 0x801A26E0
-void CRDTarget::Update(class CRDTarget * const this /* r30 */) {
+// this: r30
+void CRDTarget::Update() {
     // Local variables
     unsigned char cheatState; // r0
     float interp; // f3
@@ -49,7 +54,8 @@ void CRDTarget::Update(class CRDTarget * const this /* r30 */) {
 }
 
 // Range: 0x801A26E0 -> 0x801A280C
-void CRDTarget::ShowCredits(class CRDTarget * const this /* r29 */) {
+// this: r29
+void CRDTarget::ShowCredits() {
     // Local variables
     class UIReflow reflow; // r1+0x8
 
@@ -58,31 +64,36 @@ void CRDTarget::ShowCredits(class CRDTarget * const this /* r29 */) {
 }
 
 // Range: 0x801A280C -> 0x801A28B8
-void CRDTarget::HideCredits(class CRDTarget * const this /* r31 */) {
+// this: r31
+void CRDTarget::HideCredits() {
     // Local variables
     class UIReflow reflow; // r1+0x8
 }
 
 // Range: 0x801A28B8 -> 0x801A292C
-void CRDTarget::StartCredits(class CRDTarget * const this /* r31 */) {
+// this: r31
+void CRDTarget::StartCredits() {
     // References
     // -> class EClock _sysclock;
 }
 
 // Range: 0x801A292C -> 0x801A29F8
-void CRDTarget::EndCredits(class CRDTarget * const this /* r30 */) {
+// this: r30
+void CRDTarget::EndCredits() {
     // References
     // -> class EGraphics * _pGfx;
 }
 
 // Range: 0x801A2A54 -> 0x801A2AD4
-void CRDTarget::InitCreditsTextFetch(class CRDTarget * const this /* r31 */) {
+// this: r31
+void CRDTarget::InitCreditsTextFetch() {
     // References
     // -> class EGlobal _globals;
 }
 
 // Range: 0x801A2AD4 -> 0x801A3328
-void CRDTarget::ScrollingCallback(class CRDTarget * const this /* r18 */, class ERC * prc /* r19 */, const struct structDrawCBparams * params /* r20 */) {
+// this: r18
+void CRDTarget::ScrollingCallback(class ERC * prc /* r19 */, const struct structDrawCBparams * params /* r20 */) {
     // Local variables
     unsigned char doDraw; // r3
     unsigned char drawnFirst; // r24
@@ -118,7 +129,8 @@ void CRDTarget::ScrollingCallback(class CRDTarget * const this /* r18 */, class 
 }
 
 // Range: 0x801A3328 -> 0x801A33A4
-void CRDTarget::ShowPhoto(class CRDTarget * const this /* r31 */) {
+// this: r31
+void CRDTarget::ShowPhoto() {
     // Local variables
     class UIReflow reflow; // r1+0x8
 }

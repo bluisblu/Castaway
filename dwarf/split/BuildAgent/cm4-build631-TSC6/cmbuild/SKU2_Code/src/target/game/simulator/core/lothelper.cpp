@@ -5,7 +5,8 @@
     Code range: 0x801203F4 -> 0x80120908
 */
 // Range: 0x801203F4 -> 0x8012044C
-void * LotHelper::LotHelper(class LotHelper * const this /* r31 */) {}
+// this: r31
+LotHelper::LotHelper() {}
 
 // Range: 0x8012044C -> 0x8012048C
 void LotHelper::ResetFlagsForLot() {
@@ -14,7 +15,8 @@ void LotHelper::ResetFlagsForLot() {
 }
 
 // Range: 0x8012048C -> 0x8012051C
-void LotHelper::FlagDatasetForLot(class LotHelper * const this /* r29 */, int lotNum /* r30 */, unsigned char shouldLoad /* r31 */) {
+// this: r29
+void LotHelper::FlagDatasetForLot(int lotNum /* r30 */, unsigned char shouldLoad /* r31 */) {
     // Local variables
     unsigned int index; // r0
 }
@@ -64,7 +66,8 @@ unsigned int LotHelper::findResFileObjectIndex() {
 }
 
 // Range: 0x80120858 -> 0x80120908
-void LotHelper::DoStream(class LotHelper * const this /* r27 */, class ReconBuffer * r /* r28 */) {
+// this: r27
+void LotHelper::DoStream(class ReconBuffer * r /* r28 */) {
     // Local variables
     int i; // r29
 }

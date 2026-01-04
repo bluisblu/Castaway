@@ -14,12 +14,6 @@ struct _DOGMA_MemPool * _DOGMA_MemPool::GetNextPool() {}
 unsigned char _DOGMA_MemPool::PtrIsInThisPool() {}
 
 
-/*
-    Compile unit: C:\dev\TSC5\src\target\external\apt\include\apt\DogmaAllocator.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x80330044 -> 0x803300F0
-*/
 // Range: 0x80330044 -> 0x80330058
 void _DOGMA_MemPool::SetupPool() {}
 

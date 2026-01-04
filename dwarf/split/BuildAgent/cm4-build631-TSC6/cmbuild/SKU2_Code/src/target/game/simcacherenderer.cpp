@@ -5,16 +5,19 @@
     Code range: 0x80245108 -> 0x8024611C
 */
 // Range: 0x80245108 -> 0x8024517C
-void * CachedSimRenderer::CachedSimRenderer(class CachedSimRenderer * const this /* r31 */) {
+// this: r31
+CachedSimRenderer::CachedSimRenderer() {
     // References
     // -> class EVec3 kDefaultSimPosition;
 }
 
 // Range: 0x8024517C -> 0x802451D8
-void * CachedSimRenderer::~CachedSimRenderer(class CachedSimRenderer * const this /* r30 */) {}
+// this: r30
+CachedSimRenderer::~CachedSimRenderer() {}
 
 // Range: 0x802451D8 -> 0x80245250
-void CachedSimRenderer::SetupAnimController(class CachedSimRenderer * const this /* r31 */) {}
+// this: r31
+void CachedSimRenderer::SetupAnimController() {}
 
 // Range: 0x80245250 -> 0x80245258
 void CachedSimRenderer::SetPos() {}
@@ -23,7 +26,8 @@ void CachedSimRenderer::SetPos() {}
 void CachedSimRenderer::SetAnim() {}
 
 // Range: 0x8024526C -> 0x8024532C
-void CachedSimRenderer::Update(class CachedSimRenderer * const this /* r31 */) {
+// this: r31
+void CachedSimRenderer::Update() {
     // Local variables
     class EMat4 mSimOrient; // r1+0x30
     class EVec3 vScale; // r1+0x20
@@ -31,14 +35,16 @@ void CachedSimRenderer::Update(class CachedSimRenderer * const this /* r31 */) {
 }
 
 // Range: 0x8024532C -> 0x802453D0
-void CachedSimRenderer::Render(class CachedSimRenderer * const this /* r28 */, class ERC * prc /* r29 */) {
+// this: r28
+void CachedSimRenderer::Render(class ERC * prc /* r29 */) {
     // Local variables
     int nNodes; // r31
     class EMat4 * pmNodes; // r30
 }
 
 // Range: 0x802453D0 -> 0x80245430
-void CachedSimRenderer::GetBoneOrientation(class CachedSimRenderer * const this /* r29 */, int index /* r30 */, class EMat4 & orient /* r31 */) {}
+// this: r29
+void CachedSimRenderer::GetBoneOrientation(int index /* r30 */, class EMat4 & orient /* r31 */) {}
 
 // Range: 0x80245430 -> 0x80245438
 void CachedSimRenderer::SetIndex() {}

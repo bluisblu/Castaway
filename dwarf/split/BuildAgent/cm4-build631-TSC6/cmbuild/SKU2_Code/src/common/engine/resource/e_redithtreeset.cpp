@@ -8,19 +8,22 @@
 int IffMapCompare() {}
 
 // Range: 0x802D93CC -> 0x802D9414
-void * EREdithTreeSet::EREdithTreeSet(class EREdithTreeSet * const this /* r31 */) {
+// this: r31
+EREdithTreeSet::EREdithTreeSet() {
     // References
     // -> struct [anonymous] __vt__14EREdithTreeSet;
 }
 
 // Range: 0x802D9414 -> 0x802D9484
-void * EREdithTreeSet::~EREdithTreeSet(class EREdithTreeSet * const this /* r30 */) {
+// this: r30
+EREdithTreeSet::~EREdithTreeSet() {
     // References
     // -> struct [anonymous] __vt__14EREdithTreeSet;
 }
 
 // Range: 0x802D9484 -> 0x802D94EC
-void EREdithTreeSet::Deallocate(class EREdithTreeSet * const this /* r29 */) {
+// this: r29
+void EREdithTreeSet::Deallocate() {
     // References
     // -> class EEdithTreeSetMan _edithtreesetman;
 }
@@ -32,7 +35,8 @@ void EREdithTreeSet::Write() {}
 void EREdithTreeSet::Read() {}
 
 // Range: 0x802D94FC -> 0x802D9880
-void EREdithTreeSet::Load(class EREdithTreeSet * const this /* r28 */, class EFile * pFile /* r31 */) {
+// this: r28
+void EREdithTreeSet::Load(class EFile * pFile /* r31 */) {
     // Local variables
     class EDataHeader resourceHeader; // r1+0x44
     struct TreeSetHeader header; // r1+0x30
@@ -61,7 +65,8 @@ void * EREdithTreeSet::GetBehaviorTree() {
 int EREdithTreeSet::GetTreeIDByIndex() {}
 
 // Range: 0x802D9918 -> 0x802D99AC
-int EREdithTreeSet::GetTreeIDByName(class EREdithTreeSet * const this /* r28 */, const char * name /* r29 */) {
+// this: r28
+int EREdithTreeSet::GetTreeIDByName(const char * name /* r29 */) {
     // Local variables
     unsigned int treeCount; // r30
 }

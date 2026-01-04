@@ -18,7 +18,8 @@ static void WPADGetInfoCallback() {
 }
 
 // Range: 0x802AEB7C -> 0x802AEBD4
-void * EWiiControllerManager::~EWiiControllerManager(class EWiiControllerManager * const this /* r30 */) {}
+// this: r30
+EWiiControllerManager::~EWiiControllerManager() {}
 
 // Range: 0x802AEBD4 -> 0x802AEC00
 struct _WiiPadInfo * EWiiControllerManager::GetWPADInfo() {
@@ -30,7 +31,8 @@ struct _WiiPadInfo * EWiiControllerManager::GetWPADInfo() {
 }
 
 // Range: 0x802AEC00 -> 0x802AED28
-unsigned char EWiiControllerManager::Init(class EWiiControllerManager * const this /* r23 */) {
+// this: r23
+unsigned char EWiiControllerManager::Init() {
     // Local variables
     int i; // r24
 
@@ -47,7 +49,8 @@ unsigned char EWiiControllerManager::Init(class EWiiControllerManager * const th
 void EWiiControllerManager::Shutdown() {}
 
 // Range: 0x802AED2C -> 0x802AEF68
-void EWiiControllerManager::Update(class EWiiControllerManager * const this /* r25 */) {
+// this: r25
+void EWiiControllerManager::Update() {
     // Local variables
     int i; // r26
 
@@ -80,7 +83,8 @@ unsigned int EWiiController::GetButtons() {
 }
 
 // Range: 0x802AF214 -> 0x802AF388
-void EWiiController::UpdateWPADInfo(class EWiiController * const this /* r31 */) {
+// this: r31
+void EWiiController::UpdateWPADInfo() {
     // References
     // -> static struct WPADInfo _wpadInfo[4];
     // -> static unsigned char _wpadInfoFlag[4];
@@ -99,7 +103,8 @@ unsigned char EWiiControllerManager::WasHomeButtonPressed() {
 }
 
 // Range: 0x802AF3F8 -> 0x802AF46C
-void EWiiControllerManager::ToggleDPD(class EWiiControllerManager * const this /* r29 */, unsigned char on /* r30 */) {
+// this: r29
+void EWiiControllerManager::ToggleDPD(unsigned char on /* r30 */) {
     // Local variables
     int i; // r31
 }
@@ -108,28 +113,32 @@ void EWiiControllerManager::ToggleDPD(class EWiiControllerManager * const this /
 unsigned char EWiiController::HasVibration() {}
 
 // Range: 0x802AF474 -> 0x802AF57C
-unsigned char EWiiController::VibrateMotorOne(class EWiiController * const this /* r31 */) {
+// this: r31
+unsigned char EWiiController::VibrateMotorOne() {
     // References
     // -> unsigned char s_bShuttingDown;
     // -> unsigned char bWasInError;
 }
 
 // Range: 0x802AF57C -> 0x802AF684
-unsigned char EWiiController::VibrateMotorTwo(class EWiiController * const this /* r31 */) {
+// this: r31
+unsigned char EWiiController::VibrateMotorTwo() {
     // References
     // -> unsigned char s_bShuttingDown;
     // -> unsigned char bWasInError;
 }
 
 // Range: 0x802AF684 -> 0x802AF78C
-unsigned char EWiiController::StopMotorOne(class EWiiController * const this /* r31 */) {
+// this: r31
+unsigned char EWiiController::StopMotorOne() {
     // References
     // -> unsigned char s_bShuttingDown;
     // -> unsigned char bWasInError;
 }
 
 // Range: 0x802AF78C -> 0x802AF894
-unsigned char EWiiController::StopMotorTwo(class EWiiController * const this /* r31 */) {
+// this: r31
+unsigned char EWiiController::StopMotorTwo() {
     // References
     // -> unsigned char s_bShuttingDown;
     // -> unsigned char bWasInError;

@@ -11,12 +11,6 @@ class EInstance * ERLevel::GetInstance() {}
 int ERLevel::GetNumInstances() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\target\game\level\e_rlevel.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x8004D2B0 -> 0x8004D2C8
-*/
 // Range: 0x8004D2B0 -> 0x8004D2BC
 void ERLevel::SetSunYawOffset() {}
 
@@ -24,12 +18,6 @@ void ERLevel::SetSunYawOffset() {}
 void ERLevel::SetDayNightLightTable() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\target\game\level\e_rlevel.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x80059B30 -> 0x80059B8C
-*/
 // Range: 0x80059B30 -> 0x80059B3C
 void ELevelDrawData::DirtyLights() {}
 
@@ -37,26 +25,23 @@ void ELevelDrawData::DirtyLights() {}
 void ELevelDrawData::DirtyViewMatrix() {}
 
 // Range: 0x80059B48 -> 0x80059B7C
-void ELevelDrawData::DirtyShader(struct ELevelDrawData * const this /* r31 */) {}
+// this: r31
+void ELevelDrawData::DirtyShader() {}
 
 // Range: 0x80059B7C -> 0x80059B8C
 void ELevelDrawData::DirtyModelMatrix() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\target\game\level\e_rlevel.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x800888A8 -> 0x80088E20
-*/
 // Range: 0x800888A8 -> 0x800888F0
-unsigned char ELevelDrawData::ChangeShader(struct ELevelDrawData * const this /* r7 */) {
+// this: r7
+unsigned char ELevelDrawData::ChangeShader() {
     // Local variables
     unsigned char bChanged; // r6
 }
 
 // Range: 0x800888F0 -> 0x800889A4
-void ELevelDrawData::AnimController(struct ELevelDrawData * const this /* r28 */, class EAnimController * pAnimController /* r29 */, int bMatsInDL /* r30 */) {
+// this: r28
+void ELevelDrawData::AnimController(class EAnimController * pAnimController /* r29 */, int bMatsInDL /* r30 */) {
     // Local variables
     const class EMat4 * modelMatrices; // r31
     int modelMatrixCount; // r5
@@ -78,7 +63,8 @@ unsigned char ELevelDrawData::ChangeShaderShadow(class ERShader * pShader /* r5 
 void ELevelDrawData::ViewMatrix() {}
 
 // Range: 0x80088A64 -> 0x80088AA8
-void ERLevel::RefreshRoomAssignment(class ERLevel * const this /* r30 */, class EInstance * pInstance /* r31 */) {}
+// this: r30
+void ERLevel::RefreshRoomAssignment(class EInstance * pInstance /* r31 */) {}
 
 // Range: 0x80088AA8 -> 0x80088ABC
 void ELevelDrawData::ForceModelMatrix() {}
@@ -87,13 +73,14 @@ void ELevelDrawData::ForceModelMatrix() {}
 unsigned char ELevelDrawData::IsSortEnabled() {}
 
 // Range: 0x80088ACC -> 0x80088B4C
-void * ELevelDrawData::ELevelDrawData(struct ELevelDrawData * const this /* r31 */) {}
+// this: r31
+ELevelDrawData::ELevelDrawData() {}
 
 // Range: 0x80088B4C -> 0x80088B5C
-void * EOrderTableEntry::EOrderTableEntry() {}
+EOrderTableEntry::EOrderTableEntry() {}
 
 // Range: 0x80088B5C -> 0x80088B6C
-void ERLevel::__dl() {
+void ERLevel::operator delete() {
     // References
     // -> class ELevelManager _levelman;
 }
@@ -108,7 +95,8 @@ unsigned short ERLevel::GetReadVersion() {
 }
 
 // Range: 0x80088BA0 -> 0x80088CB8
-void ELevelDrawData::Setup(struct ELevelDrawData * const this /* r28 */, class E3DWindow * pWin3D /* r29 */, const class EVec3 & vOutsideLight /* r30 */) {
+// this: r28
+void ELevelDrawData::Setup(class E3DWindow * pWin3D /* r29 */, const class EVec3 & vOutsideLight /* r30 */) {
     // Local variables
     float lightZScale; // f31
 }
@@ -157,24 +145,18 @@ void ERLevel::Destruct() {}
 void ERLevel::Construct() {}
 
 // Range: 0x80088D94 -> 0x80088D9C
-void * ERLevel::__nw() {}
+void * ERLevel::operator new() {}
 
 // Range: 0x80088D9C -> 0x80088DD0
 class ERLevel * ERLevel::New() {}
 
 // Range: 0x80088DD0 -> 0x80088DE4
-void * ERLevel::__nw() {
+void * ERLevel::operator new() {
     // References
     // -> class ELevelManager _levelman;
 }
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\target\game\level\e_rlevel.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x801CB2D8 -> 0x801CB2FC
-*/
 // Range: 0x801CB2D8 -> 0x801CB2E4
 class EIAmbLight * ERLevel::GetSunAmbient() {}
 
@@ -185,12 +167,6 @@ class EIDirLight * ERLevel::GetMoon() {}
 class EIDirLight * ERLevel::GetSun() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\target\game\level\e_rlevel.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x80217930 -> 0x80217980
-*/
 // Range: 0x80217930 -> 0x8021793C
 void ERLevel::SetDrawWallShadowsFunc() {}
 
@@ -207,12 +183,6 @@ void ERLevel::SetWallFadeState() {}
 float ERLevel::GetPointLightDimmer() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\target\game\level\e_rlevel.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x8024D780 -> 0x8024D798
-*/
 // Range: 0x8024D780 -> 0x8024D78C
 void ERLevel::SetRainBlend() {}
 

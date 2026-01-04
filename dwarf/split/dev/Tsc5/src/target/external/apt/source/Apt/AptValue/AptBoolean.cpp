@@ -20,7 +20,6 @@ void AptBoolean::DeleteThis() {}
 // Range: 0x80333A64 -> 0x80333A68
 void AptBoolean::ForceDelete() {}
 
-struct {
-    // total size: 0x44
-} __vt__10AptBoolean; // size: 0x44, address: 0x8045FB90
+// total size: 0x44
+struct {} __vt__10AptBoolean; // size: 0x44, address: 0x8045FB90
 

@@ -5,20 +5,23 @@
     Code range: 0x802423A0 -> 0x80243638
 */
 // Range: 0x802423A0 -> 0x80242648
-void * CUnlockDisplay::CUnlockDisplay(class CUnlockDisplay * const this /* r29 */) {
+// this: r29
+CUnlockDisplay::CUnlockDisplay() {
     // References
     // -> class EGraphics * _pGfx;
     // -> struct [anonymous] __vt__14CUnlockDisplay;
 }
 
 // Range: 0x80242648 -> 0x802426B4
-void * CUnlockDisplay::~CUnlockDisplay(class CUnlockDisplay * const this /* r30 */) {
+// this: r30
+CUnlockDisplay::~CUnlockDisplay() {
     // References
     // -> struct [anonymous] __vt__14CUnlockDisplay;
 }
 
 // Range: 0x802426B4 -> 0x802427BC
-void CUnlockDisplay::makeObjects(class CUnlockDisplay * const this /* r26 */) {
+// this: r26
+void CUnlockDisplay::makeObjects() {
     // Local variables
     int numberOfObjects; // r31
     int numberOfSims; // r30
@@ -30,14 +33,16 @@ void CUnlockDisplay::makeObjects(class CUnlockDisplay * const this /* r26 */) {
 }
 
 // Range: 0x802427BC -> 0x8024282C
-void CUnlockDisplay::destroyObjects(class CUnlockDisplay * const this /* r30 */) {
+// this: r30
+void CUnlockDisplay::destroyObjects() {
     // Local variables
     class CUnlockDisplayObject * pObj; // r4
     class CUnlockDisplayObject * pNext; // r31
 }
 
 // Range: 0x8024282C -> 0x80242990
-void CUnlockDisplay::SetupForObject(class CUnlockDisplay * const this /* r31 */, struct ObjectDefinition * pData /* r26 */, const class EVec3 & pos /* r27 */, const class EVec3 & rot /* r28 */, const class EVec3 & rotAdd /* r29 */) {
+// this: r31
+void CUnlockDisplay::SetupForObject(struct ObjectDefinition * pData /* r26 */, const class EVec3 & pos /* r27 */, const class EVec3 & rot /* r28 */, const class EVec3 & rotAdd /* r29 */) {
     // Local variables
     class CUnlockDisplayObject * pObj; // r30
     unsigned int otherMID; // r1+0xC
@@ -45,7 +50,8 @@ void CUnlockDisplay::SetupForObject(class CUnlockDisplay * const this /* r31 */,
 }
 
 // Range: 0x80242990 -> 0x80242B50
-void CUnlockDisplay::Update(class CUnlockDisplay * const this /* r31 */) {
+// this: r31
+void CUnlockDisplay::Update() {
     // Local variables
     class CUnlockDisplayObject * pObj; // r3
     class CUnlockDisplayObject * pNext; // r30
@@ -67,7 +73,8 @@ void CUnlockDisplay::SetDisplayBox() {}
 void CUnlockDisplay::ManualCameraPos() {}
 
 // Range: 0x80242BB4 -> 0x80243360
-void CUnlockDisplay::Draw(class CUnlockDisplay * const this /* r30 */, class ERC * prc /* r31 */) {
+// this: r30
+void CUnlockDisplay::Draw(class ERC * prc /* r31 */) {
     // Local variables
     class EWindow * pOldWin; // r26
     class E3DWindow * pOld3DWin; // r25
@@ -94,10 +101,12 @@ void CUnlockDisplay::Draw(class CUnlockDisplay * const this /* r30 */, class ERC
 }
 
 // Range: 0x80243360 -> 0x802433CC
-void CUnlockDisplay::SetDirectLight(class CUnlockDisplay * const this /* r30 */, int index /* r31 */) {}
+// this: r30
+void CUnlockDisplay::SetDirectLight(int index /* r31 */) {}
 
 // Range: 0x802433CC -> 0x80243408
-void CUnlockDisplay::SetAmbientLight(class CUnlockDisplay * const this /* r31 */) {}
+// this: r31
+void CUnlockDisplay::SetAmbientLight() {}
 
 // Range: 0x80243408 -> 0x80243458
 void CUnlockDisplay::SetMultiColorNumber(int colorIndex /* r30 */) {
@@ -106,7 +115,8 @@ void CUnlockDisplay::SetMultiColorNumber(int colorIndex /* r30 */) {
 }
 
 // Range: 0x80243458 -> 0x802434CC
-void CUnlockDisplay::SetDirectLightDir(class CUnlockDisplay * const this /* r30 */, int index /* r31 */) {}
+// this: r30
+void CUnlockDisplay::SetDirectLightDir(int index /* r31 */) {}
 
 // Range: 0x802434CC -> 0x80243638
 unsigned char CUnlockDisplay::GetBedOtherHalfIDs() {

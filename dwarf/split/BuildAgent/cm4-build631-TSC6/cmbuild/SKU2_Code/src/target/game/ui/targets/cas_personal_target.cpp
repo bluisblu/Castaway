@@ -5,7 +5,8 @@
     Code range: 0x801972A4 -> 0x801987D4
 */
 // Range: 0x801972A4 -> 0x80197780
-void * CASPersonalTarget::CASPersonalTarget(class CASPersonalTarget * const this /* r28 */, class CasMediator & mediator /* r29 */, unsigned char bLoadPersonality /* r31 */) {
+// this: r28
+CASPersonalTarget::CASPersonalTarget(class CasMediator & mediator /* r29 */, unsigned char bLoadPersonality /* r31 */) {
     // Local variables
     class UIScreenManager * pUISM; // r31
 
@@ -15,7 +16,8 @@ void * CASPersonalTarget::CASPersonalTarget(class CASPersonalTarget * const this
 }
 
 // Range: 0x80197780 -> 0x80197860
-void * CASPersonalTarget::~CASPersonalTarget(class CASPersonalTarget * const this /* r29 */) {
+// this: r29
+CASPersonalTarget::~CASPersonalTarget() {
     // Local variables
     class UIScreenManager * pUISM; // r3
 
@@ -25,7 +27,8 @@ void * CASPersonalTarget::~CASPersonalTarget(class CASPersonalTarget * const thi
 }
 
 // Range: 0x80197860 -> 0x80197B5C
-void CASPersonalTarget::SetVariable(class CASPersonalTarget * const this /* r27 */, const char * szCommand /* r28 */, const char * szParams /* r29 */) {
+// this: r27
+void CASPersonalTarget::SetVariable(const char * szCommand /* r28 */, const char * szParams /* r29 */) {
     // Local variables
     signed char curVal; // r30
     unsigned int nZodiacSign; // r0
@@ -41,7 +44,8 @@ void CASPersonalTarget::SetVariable(class CASPersonalTarget * const this /* r27 
 }
 
 // Range: 0x80197B5C -> 0x80197BDC
-void CASPersonalTarget::Update(class CASPersonalTarget * const this /* r31 */) {
+// this: r31
+void CASPersonalTarget::Update() {
     // Local variables
     class EVec2 dummy; // r1+0x8
 
@@ -51,7 +55,8 @@ void CASPersonalTarget::Update(class CASPersonalTarget * const this /* r31 */) {
 }
 
 // Range: 0x80197BDC -> 0x80197C4C
-void CASPersonalTarget::HandlePersonalityAnimation(class CASPersonalTarget * const this /* r29 */, const char * szParams /* r30 */) {
+// this: r29
+void CASPersonalTarget::HandlePersonalityAnimation(const char * szParams /* r30 */) {
     // Local variables
     class CasSimRenderer * animRenderer; // r31
 }
@@ -60,7 +65,8 @@ void CASPersonalTarget::HandlePersonalityAnimation(class CASPersonalTarget * con
 signed short CASPersonalTarget::ConvertFromPersonalityTextToEnum(const char * personalityStr /* r31 */) {}
 
 // Range: 0x80197D8C -> 0x8019800C
-char * CASPersonalTarget::GetVariable(class CASPersonalTarget * const this /* r28 */, const char * szVar /* r27 */) {
+// this: r28
+char * CASPersonalTarget::GetVariable(const char * szVar /* r27 */) {
     // Local variables
     char * retStr; // r29
     class CasSimDescription * pSimDesc; // r28
@@ -70,7 +76,8 @@ char * CASPersonalTarget::GetVariable(class CASPersonalTarget * const this /* r2
 }
 
 // Range: 0x8019800C -> 0x80198284
-unsigned short * CASPersonalTarget::GetLocalizable(class CASPersonalTarget * const this /* r29 */, const char * szVar /* r30 */) {
+// this: r29
+unsigned short * CASPersonalTarget::GetLocalizable(const char * szVar /* r30 */) {
     // Local variables
     unsigned short widestring[4096]; // r1+0x18
     signed short signNum; // r0

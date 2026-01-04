@@ -11,19 +11,24 @@ char * Debug_GetNameFromCommand() {
 }
 
 // Range: 0x800602BC -> 0x80060300
-void * InstanceData::InstanceData(class InstanceData * const this /* r31 */) {}
+// this: r31
+InstanceData::InstanceData() {}
 
 // Range: 0x80060358 -> 0x800603B8
-void * InstanceData::~InstanceData(class InstanceData * const this /* r30 */) {}
+// this: r30
+InstanceData::~InstanceData() {}
 
 // Range: 0x800603B8 -> 0x8006041C
-void InstanceData::AddCommandMapping(class InstanceData * const this /* r30 */, enum InteractorCommand interactorCmd /* r31 */) {}
+// this: r30
+void InstanceData::AddCommandMapping(enum InteractorCommand interactorCmd /* r31 */) {}
 
 // Range: 0x8006041C -> 0x8006048C
-void InstanceData::AddCommandMapping(class InstanceData * const this /* r30 */, enum InteractorCommand interactorCmd /* r31 */) {}
+// this: r30
+void InstanceData::AddCommandMapping(enum InteractorCommand interactorCmd /* r31 */) {}
 
 // Range: 0x8006048C -> 0x800605AC
-unsigned char InstanceData::OpenSession(class InstanceData * const this /* r24 */, int nButtonMapping /* r25 */, const struct ButtonSemantic * buttonSems /* r26 */, int nStickMappings /* r27 */, const struct StickSemantic * stickSems /* r28 */, const char * szDebugFilterName /* r29 */, int priority /* r30 */) {
+// this: r24
+unsigned char InstanceData::OpenSession(int nButtonMapping /* r25 */, const struct ButtonSemantic * buttonSems /* r26 */, int nStickMappings /* r27 */, const struct StickSemantic * stickSems /* r28 */, const char * szDebugFilterName /* r29 */, int priority /* r30 */) {
     // Local variables
     class EController * pCtrl; // r31
     int n; // r30
@@ -34,7 +39,8 @@ unsigned char InstanceData::OpenSession(class InstanceData * const this /* r24 *
 }
 
 // Range: 0x800605AC -> 0x80060608
-void InstanceData::CloseSession(class InstanceData * const this /* r31 */) {
+// this: r31
+void InstanceData::CloseSession() {
     // Local variables
     class EController * pCtrl; // r0
 
@@ -46,7 +52,8 @@ void InstanceData::CloseSession(class InstanceData * const this /* r31 */) {
 unsigned int InstanceData::GetControllerFilterId() {}
 
 // Range: 0x80060610 -> 0x80060A30
-void InstanceData::Update(class InstanceData * const this /* r25 */, float delta /* f28 */) {
+// this: r25
+void InstanceData::Update(float delta /* f28 */) {
     // Local variables
     class EController * pCtrl; // r29
     struct pair * it; // r28
@@ -67,13 +74,16 @@ void InstanceData::Update(class InstanceData * const this /* r25 */, float delta
 }
 
 // Range: 0x80060A30 -> 0x80060AA0
-void * InteractorInputManager::InteractorInputManager(class InteractorInputManager * const this /* r30 */) {}
+// this: r30
+InteractorInputManager::InteractorInputManager() {}
 
 // Range: 0x80060AA0 -> 0x80060B08
-void * InteractorInputManager::~InteractorInputManager(class InteractorInputManager * const this /* r30 */) {}
+// this: r30
+InteractorInputManager::~InteractorInputManager() {}
 
 // Range: 0x80060B08 -> 0x80060B7C
-void InteractorInputManager::Update(class InteractorInputManager * const this /* r29 */, float delta /* f31 */) {
+// this: r29
+void InteractorInputManager::Update(float delta /* f31 */) {
     // Local variables
     int n; // r30
 }

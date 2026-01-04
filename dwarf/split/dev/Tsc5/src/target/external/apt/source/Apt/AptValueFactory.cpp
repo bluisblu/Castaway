@@ -4,9 +4,8 @@
     Language: C++
     Code range: 0x8032F5E8 -> 0x8032F5EC
 */
-class AptValueFactory {
-    // total size: 0x1
-};
+// total size: 0x1
+class AptValueFactory {};
 // Range: 0x8032F5E8 -> 0x8032F5EC
 class AptValue * AptValueFactory::CreateString() {
     // Local variables

@@ -5,10 +5,12 @@
     Code range: 0x80016B84 -> 0x80016CE4
 */
 // Range: 0x80016B84 -> 0x80016BDC
-void * RoutingSlot::~RoutingSlot(class RoutingSlot * const this /* r30 */) {}
+// this: r30
+RoutingSlot::~RoutingSlot() {}
 
 // Range: 0x80016BDC -> 0x80016C1C
-void * Slot::~Slot(class Slot * const this /* r31 */) {}
+// this: r31
+Slot::~Slot() {}
 
 // Range: 0x80016C74 -> 0x80016C7C
 float ObjectSlot::GetAltOffset() {}
@@ -47,12 +49,6 @@ unsigned char SpriteSlot::IsWantIcon() {}
 int SpriteSlot::GetSpriteID() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\target\game\simulator\core\slots.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x8005210C -> 0x80052124
-*/
 // Range: 0x8005210C -> 0x8005211C
 int ObjectSlot::GetHeightMask() {}
 
@@ -60,17 +56,12 @@ int ObjectSlot::GetHeightMask() {}
 enum StdHeight ObjectSlot::GetHeight() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\target\game\simulator\core\slots.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x800CDD58 -> 0x800CE1A0
-*/
 // Range: 0x800CDDB0 -> 0x800CDDB8
 void SpriteSlot::SetAltOffset() {}
 
 // Range: 0x800CDDB8 -> 0x800CDE10
-void * ObjectSlot::~ObjectSlot(class ObjectSlot * const this /* r30 */) {}
+// this: r30
+ObjectSlot::~ObjectSlot() {}
 
 // Range: 0x800CDE10 -> 0x800CDE18
 void ObjectSlot::SetXOffset() {}
@@ -148,13 +139,15 @@ int SpriteSlot::GetTicksPerFrame() {}
 unsigned char SpriteSlot::IsSkillMeter() {}
 
 // Range: 0x800CDF9C -> 0x800CDFF4
-void * QuickDataSlotDescList::~QuickDataSlotDescList(class QuickDataSlotDescList * const this /* r30 */) {}
+// this: r30
+QuickDataSlotDescList::~QuickDataSlotDescList() {}
 
 // Range: 0x800CDFF4 -> 0x800CDFFC
 int IFFSlotDescList::GetNumSlots() {}
 
 // Range: 0x800CDFFC -> 0x800CE064
-void * IFFSlotDescList::~IFFSlotDescList(class IFFSlotDescList * const this /* r30 */) {}
+// this: r30
+IFFSlotDescList::~IFFSlotDescList() {}
 
 // Range: 0x800CE0BC -> 0x800CE0C8
 unsigned char RoutingSlot::GetIgnoreRooms() {}
@@ -229,12 +222,6 @@ enum tObjectDataType IFFSlotDescList::GetDataSourceType() {}
 class ObjectDataID ObjectDataSlotDescList::GetDataID() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\target\game\simulator\core\slots.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x801166D4 -> 0x801167D8
-*/
 // Range: 0x801166D4 -> 0x801166DC
 void ObjectSlot::SetObjectID() {}
 
@@ -266,31 +253,21 @@ unsigned char RoutingSlot::SnapsToDirection() {}
 unsigned char ObjectSlot::IsFreePos() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\target\game\simulator\core\slots.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x80161F28 -> 0x80161FB8
-*/
 // Range: 0x80161F28 -> 0x80161F74
-void * IFFSlotDescList::IFFSlotDescList(class IFFSlotDescList * const this /* r31 */) {
+// this: r31
+IFFSlotDescList::IFFSlotDescList() {
     // References
     // -> struct [anonymous] __vt__15IFFSlotDescList;
 }
 
 // Range: 0x80161F74 -> 0x80161FB8
-void * QuickDataSlotDescList::QuickDataSlotDescList(class QuickDataSlotDescList * const this /* r31 */) {
+// this: r31
+QuickDataSlotDescList::QuickDataSlotDescList() {
     // References
     // -> struct [anonymous] __vt__21QuickDataSlotDescList;
 }
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\target\game\simulator\core\slots.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x80225540 -> 0x80225594
-*/
 // Range: 0x80225540 -> 0x80225548
 float SpriteSlot::GetAltOffset() {}
 

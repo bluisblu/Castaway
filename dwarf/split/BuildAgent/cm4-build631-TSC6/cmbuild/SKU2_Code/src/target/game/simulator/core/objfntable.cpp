@@ -11,13 +11,15 @@ class ObjFnTableQuickData * ObjFnTableQuickData::CreateInstance() {}
 class ObjFnTable * ObjFnTable::CreateInstance() {}
 
 // Range: 0x800A12C8 -> 0x800A1324
-void * ObjFnTableQuickData::ObjFnTableQuickData(class ObjFnTableQuickData * const this /* r31 */) {
+// this: r31
+ObjFnTableQuickData::ObjFnTableQuickData() {
     // References
     // -> struct [anonymous] __vt__19ObjFnTableQuickData;
 }
 
 // Range: 0x800A1324 -> 0x800A1394
-void * ObjFnTableQuickData::~ObjFnTableQuickData(class ObjFnTableQuickData * const this /* r30 */) {
+// this: r30
+ObjFnTableQuickData::~ObjFnTableQuickData() {
     // References
     // -> struct [anonymous] __vt__19ObjFnTableQuickData;
 }
@@ -46,26 +48,30 @@ void ObjFnTableQuickData::SetTreeID() {}
 void ObjFnTableQuickData::SetCheckTreeID() {}
 
 // Range: 0x800A1444 -> 0x800A14D0
-int ObjFnTableQuickData::Load(class ObjFnTableQuickData * const this /* r28 */, unsigned int fileID /* r29 */, signed short id /* r30 */) {
+// this: r28
+int ObjFnTableQuickData::Load(unsigned int fileID /* r29 */, signed short id /* r30 */) {
     // Local variables
     class iResFile * pFile; // r0
     int err; // r31
 }
 
 // Range: 0x800A14D0 -> 0x800A1568
-int ObjFnTableQuickData::Load(class ObjFnTableQuickData * const this /* r28 */, signed short id /* r29 */) {
+// this: r28
+int ObjFnTableQuickData::Load(signed short id /* r29 */) {
     // Local variables
     const struct ResFile * pResFile; // r0
 }
 
 // Range: 0x800A1568 -> 0x800A15D0
-void ObjFnTableQuickData::BuildFromOldEntries(class ObjFnTableQuickData * const this /* r31 */) {}
+// this: r31
+void ObjFnTableQuickData::BuildFromOldEntries() {}
 
 // Range: 0x800A15D0 -> 0x800A15D8
 class ObjectDataID ObjFnTableQuickData::GetDataID() {}
 
 // Range: 0x800A15D8 -> 0x800A164C
-unsigned char ObjFnTableQuickData::LoadFromDataID(class ObjFnTableQuickData * const this /* r29 */, const class ObjectDataID & id /* r30 */) {}
+// this: r29
+unsigned char ObjFnTableQuickData::LoadFromDataID(const class ObjectDataID & id /* r30 */) {}
 
 // Range: 0x800A164C -> 0x800A1654
 unsigned char ObjFnTableQuickData::SaveDataByID() {}
@@ -77,7 +83,8 @@ unsigned char ObjFnTableQuickData::GetResourceName() {}
 unsigned char ObjFnTableQuickData::SetResourceName() {}
 
 // Range: 0x800A1664 -> 0x800A1704
-unsigned char ObjFnTableQuickData::QueryInterface(class ObjFnTableQuickData * const this /* r30 */, void * ppvObject /* r31 */) {}
+// this: r30
+unsigned char ObjFnTableQuickData::QueryInterface(void * ppvObject /* r31 */) {}
 
 // Range: 0x800A1704 -> 0x800A1718
 unsigned int ObjFnTableQuickData::AddRef() {}

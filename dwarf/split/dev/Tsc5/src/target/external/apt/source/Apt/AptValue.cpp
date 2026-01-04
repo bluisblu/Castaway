@@ -25,16 +25,16 @@ static char __PRETTY_FUNCTION__[34]; // size: 0x22, address: 0x8045E5B8
 static char __PRETTY_FUNCTION__[45]; // size: 0x2D, address: 0x8045E5DC
 static char __PRETTY_FUNCTION__[40]; // size: 0x28, address: 0x8045E610
 static char __PRETTY_FUNCTION__[36]; // size: 0x24, address: 0x8045E638
+// total size: 0x8
 struct Objects {
-    // total size: 0x8
+    // Members
     char * szName; // offset 0x0, size 0x4
     int nIndex; // offset 0x4, size 0x4
 };
 static struct Objects wordlist[37]; // size: 0x128, address: 0x8045E710
 static signed char lookup[38]; // size: 0x26, address: 0x8045E838
-class ObjectIndex {
-    // total size: 0x1
-};
+// total size: 0x1
+class ObjectIndex {};
 static char __PRETTY_FUNCTION__[44]; // size: 0x2C, address: 0x8045E860
 static char __PRETTY_FUNCTION__[61]; // size: 0x3D, address: 0x8045E88C
 static char __PRETTY_FUNCTION__[33]; // size: 0x21, address: 0x8045E8CC
@@ -64,7 +64,8 @@ unsigned char sbSuspendRefcountDeletions; // size: 0x1, address: 0x805DC478
 void (* sReferenceRegistrationCb)(class AptValue *, class AptValue *, char *); // size: 0x4, address: 0x805DC47C
 unsigned int snCurrentAllocationNumber; // size: 0x4, address: 0x805DC480
 // Range: 0x8032C944 -> 0x8032CA74
-int AptValue::toInteger(const class AptValue * const this /* r31 */) {
+// this: r31
+int AptValue::toInteger() const {
     // Local variables
     class AptString * pString; // r0
     class EAStringC * sBuf; // r31
@@ -74,13 +75,15 @@ int AptValue::toInteger(const class AptValue * const this /* r31 */) {
 }
 
 // Range: 0x8032CA74 -> 0x8032CB84
-float AptValue::toFloat(const class AptValue * const this /* r31 */) {
+// this: r31
+float AptValue::toFloat() const {
     // References
     // -> class AptNone * gpUndefinedValue;
 }
 
 // Range: 0x8032CB84 -> 0x8032CD14
-unsigned char AptValue::toBool(const class AptValue * const this /* r30 */) {
+// this: r30
+unsigned char AptValue::toBool() const {
     // Local variables
     class AptString * pString; // r0
     class EAStringC * sBuf; // r31
@@ -90,13 +93,15 @@ unsigned char AptValue::toBool(const class AptValue * const this /* r30 */) {
 }
 
 // Range: 0x8032CD14 -> 0x8032CD7C
-void AptValue::toString(const class AptValue * const this /* r30 */, char * szBuf /* r31 */) {
+// this: r30
+void AptValue::toString(char * szBuf /* r31 */) const {
     // Local variables
     class EAStringC sBuf; // r1+0x8
 }
 
 // Range: 0x8032CD7C -> 0x8032D1E0
-void AptValue::toString(const class AptValue * const this /* r29 */, class EAStringC & sBuf /* r30 */) {
+// this: r29
+void AptValue::toString(class EAStringC & sBuf /* r30 */) const {
     // Local variables
     char szTemp[128]; // r1+0x48
     class AptFloat * pF; // r0
@@ -186,9 +191,8 @@ void AptValueInitialize() {
     // -> class AptNone * gpUndefinedValue;
 }
 
-class AptExtern : public AptValueNoGC {
-    // total size: 0xC
-};
+// total size: 0xC
+class AptExtern : public AptValueNoGC {};
 static char __PRETTY_FUNCTION__[22]; // size: 0x16, address: 0x8045EB14
 // Range: 0x8032E044 -> 0x8032E3C4
 void AptValueShutdown() {
@@ -220,7 +224,8 @@ void AptValueShutdownRemaining() {
 }
 
 // Range: 0x8032E408 -> 0x8032E53C
-class EAStringC AptValue::urlEncode(class EAStringC * sProperties /* r29 */, class AptValue * const this /* r30 */) {
+// this: r29
+class EAStringC AptValue::urlEncode(class AptValue * const this /* r30 */) {
     // Local variables
     class AptNativeHash * pObjHash; // r31
     class EAStringC sValueBuf; // r1+0x8
@@ -228,7 +233,8 @@ class EAStringC AptValue::urlEncode(class EAStringC * sProperties /* r29 */, cla
 }
 
 // Range: 0x8032E53C -> 0x8032E6C8
-class EAStringC AptValue::urlEncodeCustomRender(class EAStringC * sProperties /* r27 */, class AptValue * const this /* r28 */) {
+// this: r27
+class EAStringC AptValue::urlEncodeCustomRender(class AptValue * const this /* r28 */) {
     // Local variables
     class AptNativeHash * pObjHash; // r30
     class EAStringC sValueBuf; // r1+0xC
@@ -239,7 +245,8 @@ class EAStringC AptValue::urlEncodeCustomRender(class EAStringC * sProperties /*
 }
 
 // Range: 0x8032E6C8 -> 0x8032EC58
-class AptValue * AptValue::findChild(class AptValue * const this /* r27 */, const class EAStringC * pName /* r28 */) {
+// this: r27
+class AptValue * AptValue::findChild(const class EAStringC * pName /* r28 */) {
     // Local variables
     struct Objects * pObjects; // r0
     class AptValue * pValue; // r30
@@ -272,7 +279,8 @@ class AptValue * AptValue::findChild(class AptValue * const this /* r27 */, cons
 }
 
 // Range: 0x8032EC58 -> 0x8032ED58
-int AptValue::isMCInParentChain(const class AptValue * const this /* r29 */) {
+// this: r29
+int AptValue::isMCInParentChain() const {
     // Local variables
     class AptValue * pMovieClip; // r0
     class AptValue * pPrototypeMovieClip; // r0
@@ -291,7 +299,8 @@ unsigned char AptValue::CanCreateScriptObject() {}
 enum AptVirtualFunctionTable_Indices gVftTrackThisType; // size: 0x4, address: 0x805DAB90
 class AptValue * gpTrackThisObject; // size: 0x4, address: 0x805DC488
 // Range: 0x8032EDA4 -> 0x8032EE20
-void AptValue::AddRef(class AptValue * const this /* r31 */) {
+// this: r31
+void AptValue::AddRef() {
     // Local variables
     enum AptVirtualFunctionTable_Indices mYtype; // r0
     class EAStringC temp; // r1+0x8
@@ -302,7 +311,8 @@ void AptValue::AddRef(class AptValue * const this /* r31 */) {
 }
 
 // Range: 0x8032EE20 -> 0x8032EF68
-void AptValue::Release(class AptValue * const this /* r30 */) {
+// this: r30
+void AptValue::Release() {
     // Local variables
     int nRefCount; // r0
     enum AptVirtualFunctionTable_Indices mYtype; // r0
@@ -325,21 +335,17 @@ unsigned char AptValueWithHash::ContainsNativeHashVirtual() {}
 void AptValueWithHash::RegisterReferences() {}
 
 // Range: 0x8032EF84 -> 0x8032EFB8
-void AptValueWithHash::DestroyGCPointers(class AptValueWithHash * const this /* r31 */) {}
+// this: r31
+void AptValueWithHash::DestroyGCPointers() {}
 
-struct {
-    // total size: 0x44
-} __vt__24AptGlobalExtensionObject; // size: 0x44, address: 0x8045EC84
-struct {
-    // total size: 0x44
-} __vt__9AptExtern; // size: 0x44, address: 0x8045ECC8
-struct {
-    // total size: 0x44
-} __vt__7AptNone; // size: 0x44, address: 0x8045ED0C
-struct {
-    // total size: 0x44
-} __vt__16AptValueWithHash; // size: 0x44, address: 0x8045ED94
-struct {
-    // total size: 0x44
-} __vt__8AptValue; // size: 0x44, address: 0x8045EE60
+// total size: 0x44
+struct {} __vt__24AptGlobalExtensionObject; // size: 0x44, address: 0x8045EC84
+// total size: 0x44
+struct {} __vt__9AptExtern; // size: 0x44, address: 0x8045ECC8
+// total size: 0x44
+struct {} __vt__7AptNone; // size: 0x44, address: 0x8045ED0C
+// total size: 0x44
+struct {} __vt__16AptValueWithHash; // size: 0x44, address: 0x8045ED94
+// total size: 0x44
+struct {} __vt__8AptValue; // size: 0x44, address: 0x8045EE60
 

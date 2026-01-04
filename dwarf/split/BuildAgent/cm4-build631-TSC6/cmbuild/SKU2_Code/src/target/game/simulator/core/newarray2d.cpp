@@ -11,7 +11,8 @@ void * _Default2dArrayAlloc(unsigned int size /* r31 */) {}
 void _Default2dArrayFree(void * p /* r31 */) {}
 
 // Range: 0x8012D158 -> 0x8012D284
-int _c2DArray::ReadFromDisk(class _c2DArray * const this /* r25 */, class iResFile * pFile /* r26 */) {
+// this: r25
+int _c2DArray::ReadFromDisk(class iResFile * pFile /* r26 */) {
     // Local variables
     struct HandleNode * tmphandle; // r30
     unsigned char * data; // r29
@@ -31,10 +32,12 @@ int _c2DArray::ReadFromDisk(class _c2DArray * const this /* r25 */, class iResFi
 void _c2DArray::Swizzle() {}
 
 // Range: 0x8012D288 -> 0x8012D31C
-void * _c2DArray::_c2DArray(class _c2DArray * const this /* r27 */, int entrySize /* r28 */, int xSize /* r29 */, int ySize /* r30 */, const class BString & name /* r31 */) {}
+// this: r27
+_c2DArray::_c2DArray(int entrySize /* r28 */, int xSize /* r29 */, int ySize /* r30 */, const class BString & name /* r31 */) {}
 
 // Range: 0x8012D31C -> 0x8012D3C0
-void * _c2DArray::~_c2DArray(class _c2DArray * const this /* r29 */) {}
+// this: r29
+_c2DArray::~_c2DArray() {}
 
 // Range: 0x8012D3C0 -> 0x8012D3D0
 void _c2DArray::AddArray() {
@@ -52,7 +55,8 @@ void _c2DArray::RemoveArray() {
 }
 
 // Range: 0x8012D400 -> 0x8012D554
-int _c2DArray::WriteToDisk(class _c2DArray * const this /* r25 */, class iResFile * pFile /* r26 */, int rType /* r27 */, signed short id /* r28 */, unsigned char enableCompression /* r29 */) {
+// this: r25
+int _c2DArray::WriteToDisk(class iResFile * pFile /* r26 */, int rType /* r27 */, signed short id /* r28 */, unsigned char enableCompression /* r29 */) {
     // Local variables
     int size; // r31
     struct HandleNode * h; // r30
@@ -66,14 +70,16 @@ int _c2DArray::WriteToDisk(class _c2DArray * const this /* r25 */, class iResFil
 void _c2DArray::ClearBytes() {}
 
 // Range: 0x8012D590 -> 0x8012D6E0
-unsigned char _c2DArray::SetSize(class _c2DArray * const this /* r31 */, int newxSize /* r28 */, int newySize /* r29 */) {
+// this: r31
+unsigned char _c2DArray::SetSize(int newxSize /* r28 */, int newySize /* r29 */) {
     // Local variables
     int dataSize; // r30
     int count; // r6
 }
 
 // Range: 0x8012D6E0 -> 0x8012DAA4
-void _c2DArray::DoStream(class _c2DArray * const this /* r28 */, class ReconBuffer * r /* r27 */, unsigned char compressionEnabledForWriting /* r25 */) {
+// this: r28
+void _c2DArray::DoStream(class ReconBuffer * r /* r27 */, unsigned char compressionEnabledForWriting /* r25 */) {
     // Local variables
     signed short placeHolder; // r1+0x10
     signed short version; // r1+0xE
@@ -110,7 +116,8 @@ class _c2DArray * _c2DArray::GetArray(const class BString & name /* r30 */) {
 }
 
 // Range: 0x8012DB68 -> 0x8012DC34
-void _c2DArray::SetName(class _c2DArray * const this /* r28 */, const class BString & name /* r29 */) {
+// this: r28
+void _c2DArray::SetName(const class BString & name /* r29 */) {
     // Local variables
     int cnt; // r31
     unsigned char found; // r30

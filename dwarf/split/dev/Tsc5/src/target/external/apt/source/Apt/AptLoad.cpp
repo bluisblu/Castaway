@@ -14,19 +14,22 @@ unsigned char AptFileNameCompare(const char * str1 /* r29 */, const char * str2 
 }
 
 // Range: 0x80321DE0 -> 0x80321EB4
-class AptSharedPtr AptLoader::findFile(struct AptLoader * const this /* r29 */, const class EAStringC & sFilename /* r30 */) {
+// this: r29
+class AptSharedPtr AptLoader::findFile(const class EAStringC & sFilename /* r30 */) {
     // Local variables
     class Iterator i; // r1+0xC
 }
 
 // Range: 0x80321EB4 -> 0x80321F50
-void * AptLoader::~AptLoader(struct AptLoader * const this /* r30 */) {
+// this: r30
+AptLoader::~AptLoader() {
     // Local variables
     class Iterator i; // r1+0x8
 }
 
 // Range: 0x80321F50 -> 0x80322040
-void AptLoader::Invalidate(struct AptLoader * const this /* r30 */, struct AptFile * pFile /* r31 */) {
+// this: r30
+void AptLoader::Invalidate(struct AptFile * pFile /* r31 */) {
     // Local variables
     class Iterator i; // r1+0x18
     class Iterator next; // r1+0x14
@@ -42,7 +45,8 @@ class AptSharedPtr AptLoader::IsLoaded() {
 }
 
 // Range: 0x80322114 -> 0x803221E4
-class AptSharedPtr AptLoader::Load(struct AptLoader * const this /* r30 */, const class EAStringC & sFilename /* r31 */) {
+// this: r30
+class AptSharedPtr AptLoader::Load(const class EAStringC & sFilename /* r31 */) {
     // Local variables
     class AptSharedPtr f; // r1+0x10
     struct AptFile * pFile; // r1+0xC
@@ -50,14 +54,16 @@ class AptSharedPtr AptLoader::Load(struct AptLoader * const this /* r30 */, cons
 }
 
 // Range: 0x803221E4 -> 0x803222AC
-unsigned char AptLoader::AllImportsAvailable(struct AptLoader * const this /* r26 */, class AptSharedPtr & f /* r27 */) {
+// this: r26
+unsigned char AptLoader::AllImportsAvailable(class AptSharedPtr & f /* r27 */) {
     // Local variables
     unsigned char bReady; // r29
     int j; // r28
 }
 
 // Range: 0x803222AC -> 0x80322490
-void AptLoader::Update(struct AptLoader * const this /* r27 */) {
+// this: r27
+void AptLoader::Update() {
     // Local variables
     unsigned char bMovedToResolved; // r28
     class Iterator i; // r1+0x20
@@ -79,7 +85,8 @@ void AptLoader::CompleteLoad(class AptSharedPtr & f /* r28 */, void * pData /* r
 }
 
 // Range: 0x80322564 -> 0x80322730
-void AptLoader::CancelPreloadedAnimation(struct AptLoader * const this /* r28 */) {
+// this: r28
+void AptLoader::CancelPreloadedAnimation() {
     // Local variables
     class AptSharedPtr f; // r1+0x18
     enum State state; // r0
@@ -91,15 +98,16 @@ void AptLoader::CancelPreloadedAnimation(struct AptLoader * const this /* r28 */
     // -> struct AptUserFunctions gAptFuncs;
 }
 
-struct DbgIterator : public DbgIteratorBase {
-    // total size: 0xC
-};
+// total size: 0xC
+struct DbgIterator : public DbgIteratorBase {};
+// total size: 0x104
 struct AptSavedInputRecordCheckpoint : public AptSavedInputRecord {
-    // total size: 0x104
+    // Members
     char szBuf[256]; // offset 0x4, size 0x100
 };
 // Range: 0x80322730 -> 0x80322AB8
-void AptLinker::Update(struct AptLinker * const this /* r30 */) {
+// this: r30
+void AptLinker::Update() {
     // Local variables
     int nOrigLength; // r31
     struct DbgIterator i; // r1+0x3C
@@ -124,28 +132,32 @@ void AptLinker::Update(struct AptLinker * const this /* r30 */) {
     // -> struct AptLoader * gpLoader;
 }
 
+// total size: 0xC
 class DbgIteratorBase {
-    // total size: 0xC
+    // Members
 protected:
     class AptSharedPtr * mPtr; // offset 0x0, size 0x4
     class AptSharedPtr * mBegin; // offset 0x4, size 0x4
     class AptSharedPtr * mEnd; // offset 0x8, size 0x4
 };
+// total size: 0x8
 struct DbgIteratorFactory {
-    // total size: 0x8
+    // Members
 private:
     class AptSharedPtr * mBegin; // offset 0x0, size 0x4
     class AptSharedPtr * mEnd; // offset 0x4, size 0x4
 };
 // Range: 0x80322AB8 -> 0x80322B48
-void AptLinker::Notify(struct AptLinker * const this /* r30 */, class AptSharedPtr & f /* r31 */) {
+// this: r30
+void AptLinker::Notify(class AptSharedPtr & f /* r31 */) {
     // Local variables
     struct DbgIterator i; // r1+0x14
 }
 
 static char __PRETTY_FUNCTION__[46]; // size: 0x2E, address: 0x8045C3F8
 // Range: 0x80322B48 -> 0x80323094
-void AptLinker::Load(struct AptLinker * const this /* r30 */, const class EAStringC & sFilename /* r26 */, class EAStringC & sTarget /* r25 */) {
+// this: r30
+void AptLinker::Load(const class EAStringC & sFilename /* r26 */, class EAStringC & sTarget /* r25 */) {
     // Local variables
     class AptValue * pTarget; // r25
     class AptSharedPtr f; // r1+0x4C
@@ -162,7 +174,8 @@ void AptLinker::Load(struct AptLinker * const this /* r30 */, const class EAStri
 }
 
 // Range: 0x80323094 -> 0x803230F8
-void AptLinker::CancelLoad(struct AptLinker * const this /* r31 */) {
+// this: r31
+void AptLinker::CancelLoad() {
     // Local variables
     class Iterator i; // r1+0xC
 }

@@ -5,13 +5,15 @@
     Code range: 0x802E5098 -> 0x802E8DC0
 */
 // Range: 0x802E5098 -> 0x802E5170
-void * ERShader::ERShader(class ERShader * const this /* r30 */) {
+// this: r30
+ERShader::ERShader() {
     // References
     // -> struct [anonymous] __vt__8ERShader;
 }
 
 // Range: 0x802E5170 -> 0x802E5260
-void * ERShader::~ERShader(class ERShader * const this /* r30 */) {
+// this: r30
+ERShader::~ERShader() {
     // References
     // -> struct [anonymous] __vt__9EResource;
     // -> class EShaderManager _shaderman;
@@ -19,7 +21,8 @@ void * ERShader::~ERShader(class ERShader * const this /* r30 */) {
 }
 
 // Range: 0x802E5260 -> 0x802E539C
-void ERShader::Deallocate(class ERShader * const this /* r29 */) {
+// this: r29
+void ERShader::Deallocate() {
     // Local variables
     struct EShaderDef * sd; // r0
 
@@ -29,7 +32,8 @@ void ERShader::Deallocate(class ERShader * const this /* r29 */) {
 }
 
 // Range: 0x802E539C -> 0x802E55E0
-void ERShader::DelRefSubResources(class ERShader * const this /* r29 */) {
+// this: r29
+void ERShader::DelRefSubResources() {
     // Local variables
     int crp; // r6
     int crp; // r30
@@ -37,13 +41,15 @@ void ERShader::DelRefSubResources(class ERShader * const this /* r29 */) {
 }
 
 // Range: 0x802E55E0 -> 0x802E56F8
-void ERShader::DeallocateIncomingShader(class ERShader * const this /* r30 */) {
+// this: r30
+void ERShader::DeallocateIncomingShader() {
     // References
     // -> class EShaderManager _shaderman;
 }
 
 // Range: 0x802E56F8 -> 0x802E5A54
-void ERShader::AddRefSubResources(class ERShader * const this /* r30 */) {
+// this: r30
+void ERShader::AddRefSubResources() {
     // Local variables
     unsigned char shouldUseLoc; // r7
     unsigned int i; // r8
@@ -59,7 +65,8 @@ void ERShader::AddRefSubResources(class ERShader * const this /* r30 */) {
 }
 
 // Range: 0x802E5A54 -> 0x802E5F74
-unsigned char ERShader::TryIncrementSubResources(class ERShader * const this /* r30 */) {
+// this: r30
+unsigned char ERShader::TryIncrementSubResources() {
     // Local variables
     unsigned char shouldUseLoc; // r7
     unsigned int i; // r8
@@ -82,7 +89,8 @@ unsigned char ERShader::TryIncrementSubResources(class ERShader * const this /* 
 }
 
 // Range: 0x802E5F74 -> 0x802E61D4
-void ERShader::CreateEShaderForTexture(class ERShader * const this /* r30 */, class ETexture * pTexture /* r31 */) {
+// this: r30
+void ERShader::CreateEShaderForTexture(class ETexture * pTexture /* r31 */) {
     // Local variables
     struct EShaderDef sd; // r1+0x8
     class EShader * pCustomShdr; // r0
@@ -97,7 +105,8 @@ void ERShader::CreateEShaderForTexture(class ERShader * const this /* r30 */, cl
 void ERShader::Refresh() {}
 
 // Range: 0x802E61F0 -> 0x802E62FC
-void ERShader::Load(class ERShader * const this /* r29 */, class EFile & s /* r30 */) {
+// this: r29
+void ERShader::Load(class EFile & s /* r30 */) {
     // Local variables
     struct EShaderDef sd; // r1+0x8
 
@@ -106,7 +115,8 @@ void ERShader::Load(class ERShader * const this /* r29 */, class EFile & s /* r3
 }
 
 // Range: 0x802E62FC -> 0x802E6ACC
-class ERShader * ERShader::Clone(class ERShader * const this /* r26 */, unsigned int newResId /* r27 */) {
+// this: r26
+class ERShader * ERShader::Clone(unsigned int newResId /* r27 */) {
     // Local variables
     unsigned int i; // r28
 
@@ -121,7 +131,8 @@ void ERShader::SetDefaultShaderState() {
 }
 
 // Range: 0x802E6AD4 -> 0x802E6E44
-void ERShader::DoLoadMultiShader(class ERShader * const this /* r29 */, char * ptr /* r30 */, struct EShaderDef & sd /* r31 */) {
+// this: r29
+void ERShader::DoLoadMultiShader(char * ptr /* r30 */, struct EShaderDef & sd /* r31 */) {
     // Local variables
     unsigned char mulShaderType; // r1+0x8
     int i; // r27
@@ -138,7 +149,8 @@ void ERShader::DoLoadMultiShader(class ERShader * const this /* r29 */, char * p
 }
 
 // Range: 0x802E6E44 -> 0x802E6F0C
-unsigned char ERShader::SetCurrentShaderForState(class ERShader * const this /* r30 */) {
+// this: r30
+unsigned char ERShader::SetCurrentShaderForState() {
     // Local variables
     int i; // r31
 
@@ -147,7 +159,8 @@ unsigned char ERShader::SetCurrentShaderForState(class ERShader * const this /* 
 }
 
 // Range: 0x802E6F0C -> 0x802E7068
-void ERShader::ChangeCurrentShader(class ERShader * const this /* r30 */, class ERShader * pRShader /* r31 */) {
+// this: r30
+void ERShader::ChangeCurrentShader(class ERShader * pRShader /* r31 */) {
     // Local variables
     unsigned int crp; // r6
 
@@ -162,7 +175,8 @@ unsigned int ERShader::GetMultiShaderStateID() {
 }
 
 // Range: 0x802E70CC -> 0x802E71C0
-unsigned char ERShader::SetShaderASyncForState(class ERShader * const this /* r30 */) {
+// this: r30
+unsigned char ERShader::SetShaderASyncForState() {
     // Local variables
     int i; // r31
 
@@ -171,7 +185,8 @@ unsigned char ERShader::SetShaderASyncForState(class ERShader * const this /* r3
 }
 
 // Range: 0x802E71C0 -> 0x802E77F4
-void ERShader::DoLoad(class ERShader * const this /* r28 */, class EFile & s /* r24 */, struct EShaderDef & sd /* r29 */) {
+// this: r28
+void ERShader::DoLoad(class EFile & s /* r24 */, struct EShaderDef & sd /* r29 */) {
     // Local variables
     class EDataHeader resourceHeader; // r1+0x8
     unsigned char isMultiShader; // r25
@@ -203,7 +218,8 @@ char * ERShader::CopyShedData(struct EShaderDef & sd /* r28 */, char * ptr /* r2
 }
 
 // Range: 0x802E7A7C -> 0x802E7B38
-void ERShader::AddToUpdateList(class ERShader * const this /* r31 */) {
+// this: r31
+void ERShader::AddToUpdateList() {
     // References
     // -> class TLinkedList s_updateList;
     // -> class EMutex s_updateListMutex;
@@ -211,7 +227,8 @@ void ERShader::AddToUpdateList(class ERShader * const this /* r31 */) {
 }
 
 // Range: 0x802E7B38 -> 0x802E7C08
-void ERShader::RemoveFromUpdateList(class ERShader * const this /* r31 */) {
+// this: r31
+void ERShader::RemoveFromUpdateList() {
     // References
     // -> class EShaderManager _shaderman;
     // -> class TLinkedList s_updateList;
@@ -219,7 +236,8 @@ void ERShader::RemoveFromUpdateList(class ERShader * const this /* r31 */) {
 }
 
 // Range: 0x802E7C08 -> 0x802E7F44
-void ERShader::Update(class ERShader * const this /* r31 */) {
+// this: r31
+void ERShader::Update() {
     // References
     // -> class EShaderManager _shaderman;
 }
@@ -238,7 +256,8 @@ void ERShader::UpdateWeatherShader() {}
 void ERShader::UpdateTimeOfDayShader() {}
 
 // Range: 0x802E8124 -> 0x802E81F8
-void ERShader::InterpolateShaders(class ERShader * const this /* r30 */) {
+// this: r30
+void ERShader::InterpolateShaders() {
     // Local variables
     float ratio; // f1
 
@@ -247,7 +266,8 @@ void ERShader::InterpolateShaders(class ERShader * const this /* r30 */) {
 }
 
 // Range: 0x802E81F8 -> 0x802E858C
-void ERShader::BlendCurrentShader(class ERShader * const this /* r27 */, float ratio /* f31 */) {
+// this: r27
+void ERShader::BlendCurrentShader(float ratio /* f31 */) {
     // Local variables
     const struct EShaderDef * incomingSD; // r0
     int i; // r28
@@ -291,9 +311,11 @@ void ERShader::SetDayNightShaderToClosestTime() {
 }
 
 // Range: 0x802E89FC -> 0x802E8C00
-void ERShader::ReplaceTexture(class ERShader * const this /* r28 */, class ERTexture * pT /* r29 */, int iRenderPass /* r30 */) {}
+// this: r28
+void ERShader::ReplaceTexture(class ERTexture * pT /* r29 */, int iRenderPass /* r30 */) {}
 
 // Range: 0x802E8C00 -> 0x802E8DC0
-void ERShader::SwapTexture(class ERShader * const this /* r29 */, class ERTexture * pT /* r30 */, int iRenderPass /* r31 */) {}
+// this: r29
+void ERShader::SwapTexture(class ERTexture * pT /* r30 */, int iRenderPass /* r31 */) {}
 
 

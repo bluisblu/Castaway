@@ -11,14 +11,8 @@ void ERShader::Select(class ERC * prc /* r30 */, unsigned int overrideColorId /*
 class EShader * ERShader::GetShader() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\common\engine\resource\e_rshader.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x8006B710 -> 0x8006B74C
-*/
 // Range: 0x8006B710 -> 0x8006B724
-void * ERShader::__nw() {
+void * ERShader::operator new() {
     // References
     // -> class EShaderManager _shaderman;
 }
@@ -27,12 +21,6 @@ void * ERShader::__nw() {
 class ERTexture * ERShader::GetRTextureForRenderPass() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\common\engine\resource\e_rshader.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x80084298 -> 0x800843A0
-*/
 // Range: 0x80084298 -> 0x800842D8
 void ERShader::SelectForShadowMask(class ERC * prc /* r31 */) {}
 
@@ -40,18 +28,14 @@ void ERShader::SelectForShadowMask(class ERC * prc /* r31 */) {}
 unsigned char ERShader::IsMultiShader() {}
 
 // Range: 0x800842E4 -> 0x80084360
-unsigned char ERShader::IsMultiTextureShader(class ERShader * const this /* r31 */) {}
+// this: r31
+unsigned char ERShader::IsMultiTextureShader() {}
 
 // Range: 0x80084360 -> 0x800843A0
-class ERShader * ERShader::GetCurrentShader(class ERShader * const this /* r31 */) {}
+// this: r31
+class ERShader * ERShader::GetCurrentShader() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\common\engine\resource\e_rshader.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x8017E764 -> 0x8017E78C
-*/
 // Range: 0x8017E764 -> 0x8017E770
 unsigned char ERShader::IsStateChangePending() {}
 
@@ -62,12 +46,6 @@ unsigned char ERShader::SupportsMultiShaderStates() {}
 unsigned char ERShader::GetCurrentGraphicsState() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\common\engine\resource\e_rshader.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x802EFB8C -> 0x802EFD44
-*/
 // Range: 0x802EFB8C -> 0x802EFBAC
 void ERShader::SafeDelete() {}
 

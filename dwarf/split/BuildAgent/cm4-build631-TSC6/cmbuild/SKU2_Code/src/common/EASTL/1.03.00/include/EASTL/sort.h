@@ -171,12 +171,6 @@ void partial_sort(int * first /* r26 */, int * middle /* r27 */, int * last /* r
 int * get_partition(int * first /* r28 */, int * last /* r29 */, int pivotValue /* r30 */, unsigned char (* compare)(int, int) /* r31 */) {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\common\EASTL\1.03.00\include\EASTL\sort.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x8021505C -> 0x802159F0
-*/
 // Range: 0x8021505C -> 0x80215060
 void sort() {}
 
@@ -258,12 +252,6 @@ void partial_sort(class Neighbor * * first /* r25 */, class Neighbor * * middle 
 class Neighbor * * get_partition(class Neighbor * * first /* r28 */, class Neighbor * * last /* r29 */, class Neighbor * pivotValue /* r30 */, class RelationsCmp & compare /* r31 */) {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\common\EASTL\1.03.00\include\EASTL\sort.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x802AC0F4 -> 0x802AD2DC
-*/
 // Range: 0x802AC0F4 -> 0x802AC2E8
 void quick_sort(struct ResourceIndexRecord * first /* r26 */, struct ResourceIndexRecord * last /* r27 */, unsigned char (* compare)(struct ResourceIndexRecord &) /* r28 */) {}
 

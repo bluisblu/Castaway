@@ -5,7 +5,7 @@
     Code range: 0x80300288 -> 0x803003BC
 */
 // Range: 0x80300288 -> 0x8030029C
-void AptValueGC::__dl(void * p /* r0 */) {
+void AptValueGC::operator delete(void * p /* r0 */) {
     // References
     // -> class AptValueGC_PoolManager * gpGCPoolManager;
 }
@@ -14,13 +14,14 @@ void AptValueGC::__dl(void * p /* r0 */) {
 void AptValue::SetAllowDelayedDeletion() {}
 
 // Range: 0x803002AC -> 0x803002E8
-void * AptValueGC::AptValueGC(class AptValueGC * const this /* r31 */) {
+// this: r31
+AptValueGC::AptValueGC() {
     // References
     // -> struct [anonymous] __vt__10AptValueGC;
 }
 
 // Range: 0x803002E8 -> 0x803002F4
-void * AptValueGC::__nw() {
+void * AptValueGC::operator new() {
     // References
     // -> class AptValueGC_PoolManager * gpGCPoolManager;
 }
@@ -29,7 +30,8 @@ void * AptValueGC::__nw() {
 unsigned char AptValueGC::IsGarbageCollected() {}
 
 // Range: 0x803002FC -> 0x80300368
-void AptValue::ForceDelete(class AptValue * const this /* r31 */) {}
+// this: r31
+void AptValue::ForceDelete() {}
 
 // Range: 0x80300368 -> 0x80300370
 class AptNativeHash * AptValue::GetNativeHashVirtual() {}
@@ -59,32 +61,28 @@ void AptValue::PreDestroy() {}
 void AptValue::DestroyGCPointers() {}
 
 
-/*
-    Compile unit: C:\dev\TSC5\src\target\external\apt\include\apt\AptValue\AptValue.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x8030B55C -> 0x8030B600
-*/
 // Range: 0x8030B55C -> 0x8030B570
-void AptValueNoGC::__dl(void * p /* r0 */) {
+void AptValueNoGC::operator delete(void * p /* r0 */) {
     // References
     // -> class DOGMA_PoolManager * gpNonGCPoolManager;
 }
 
 // Range: 0x8030B570 -> 0x8030B5AC
-void * AptValueNoGC::AptValueNoGC(class AptValueNoGC * const this /* r31 */) {
+// this: r31
+AptValueNoGC::AptValueNoGC() {
     // References
     // -> struct [anonymous] __vt__12AptValueNoGC;
 }
 
 // Range: 0x8030B5AC -> 0x8030B5B8
-void * AptValueNoGC::__nw() {
+void * AptValueNoGC::operator new() {
     // References
     // -> class DOGMA_PoolManager * gpNonGCPoolManager;
 }
 
 // Range: 0x8030B5B8 -> 0x8030B5F4
-void * AptValueGC::AptValueGC(class AptValueGC * const this /* r31 */) {
+// this: r31
+AptValueGC::AptValueGC() {
     // References
     // -> struct [anonymous] __vt__10AptValueGC;
 }
@@ -96,12 +94,6 @@ unsigned char AptValueNoGC::IsGarbageCollected() {}
 void AptValueNoGC::RegisterReferences() {}
 
 
-/*
-    Compile unit: C:\dev\TSC5\src\target\external\apt\include\apt\AptValue\AptValue.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x8032F198 -> 0x8032F1A4
-*/
 // Range: 0x8032F198 -> 0x8032F1A4
 unsigned char AptValue::GetAllowDelayedDeletion() {}
 

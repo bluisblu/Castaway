@@ -5,14 +5,16 @@
     Code range: 0x802D0494 -> 0x802D0588
 */
 // Range: 0x802D0494 -> 0x802D0514
-void * ENgcTextureC4::ENgcTextureC4(class ENgcTextureC4 * const this /* r31 */) {
+// this: r31
+ENgcTextureC4::ENgcTextureC4() {
     // References
     // -> struct [anonymous] __vt__13ENgcTextureC4;
     // -> struct [anonymous] __vt__15ENgcTextureBase;
 }
 
 // Range: 0x802D0514 -> 0x802D0574
-void * ENgcTextureC4::~ENgcTextureC4(class ENgcTextureC4 * const this /* r30 */) {
+// this: r30
+ENgcTextureC4::~ENgcTextureC4() {
     // References
     // -> class ETextureManager _textureman;
 }

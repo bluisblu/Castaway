@@ -8,6 +8,7 @@
 enum WallStyle cXPortal::GetWallStyle() {}
 
 // Range: 0x800D5454 -> 0x800D54BC
-float cXPortal::GetRouteScore(class cXPortal * const this /* r30 */, signed short routeID /* r31 */) {}
+// this: r30
+float cXPortal::GetRouteScore(signed short routeID /* r31 */) {}
 
 

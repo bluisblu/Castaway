@@ -5,13 +5,15 @@
     Code range: 0x8010A80C -> 0x8010B390
 */
 // Range: 0x8010A80C -> 0x8010A8C8
-void * EdithDialogPrimitive::EdithDialogPrimitive(class EdithDialogPrimitive * const this /* r30 */) {
+// this: r30
+EdithDialogPrimitive::EdithDialogPrimitive() {
     // References
     // -> struct [anonymous] __vt__20EdithDialogPrimitive;
 }
 
 // Range: 0x8010A8C8 -> 0x8010A920
-void * EdithDialogPrimitive::~EdithDialogPrimitive(class EdithDialogPrimitive * const this /* r30 */) {}
+// this: r30
+EdithDialogPrimitive::~EdithDialogPrimitive() {}
 
 // Range: 0x8010A920 -> 0x8010A940
 void EdithDialogPrimitive::SelectionCallback() {}
@@ -23,10 +25,12 @@ void EdithDialogPrimitive::AssignString(class BString2 & str /* r30 */, const un
 }
 
 // Range: 0x8010AA34 -> 0x8010AB58
-void EdithDialogPrimitive::ResetDialogParameters(class EdithDialogPrimitive * const this /* r31 */) {}
+// this: r31
+void EdithDialogPrimitive::ResetDialogParameters() {}
 
 // Range: 0x8010AB58 -> 0x8010B2E0
-unsigned char EdithDialogPrimitive::SetDialog(class EdithDialogPrimitive * const this /* r27 */, class StackElem * elem /* r28 */, const class DialogParam * param /* r29 */, class cXObject * pObject /* r30 */, unsigned char bParseUseDefaultReplace /* r31 */) {
+// this: r27
+unsigned char EdithDialogPrimitive::SetDialog(class StackElem * elem /* r28 */, const class DialogParam * param /* r29 */, class cXObject * pObject /* r30 */, unsigned char bParseUseDefaultReplace /* r31 */) {
     // Local variables
     unsigned char bResult; // r25
     class ObjSelector * textSel; // r1+0x20
@@ -53,7 +57,8 @@ unsigned char EdithDialogPrimitive::SetDialog(class EdithDialogPrimitive * const
 }
 
 // Range: 0x8010B2E0 -> 0x8010B390
-unsigned char EdithDialogPrimitive::DoPlanThoughtBalloon(class EdithDialogPrimitive * const this /* r29 */, int shaderID /* r30 */, int timeoutMS /* r31 */) {
+// this: r29
+unsigned char EdithDialogPrimitive::DoPlanThoughtBalloon(int shaderID /* r30 */, int timeoutMS /* r31 */) {
     // References
     // -> class GameData _gd;
 }

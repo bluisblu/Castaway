@@ -23,32 +23,14 @@ unsigned char ActionMenu::IsDPDOverMenu() {}
 unsigned char ActionMenu::IsMenuAvailable() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\target\game\ui\targets\actionmenu.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x80145F94 -> 0x80145F9C
-*/
 // Range: 0x80145F94 -> 0x80145F9C
 void ActionMenu::SetSelectedObject() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\target\game\ui\targets\actionmenu.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x801AB0B4 -> 0x801AB0BC
-*/
 // Range: 0x801AB0B4 -> 0x801AB0BC
 unsigned char ActionMenu::IsActionMenuFlashReady() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\target\game\ui\targets\actionmenu.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x801C92F8 -> 0x801C9324
-*/
 // Range: 0x801C92F8 -> 0x801C930C
 class MenuItem * ActionMenu::GetCurrentSubMenu() {}
 
@@ -62,12 +44,6 @@ unsigned char MenuItem::IsNamed() {}
 unsigned char MenuItem::IsDisabled() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\target\game\ui\targets\actionmenu.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x80227734 -> 0x8022773C
-*/
 // Range: 0x80227734 -> 0x8022773C
 void ActionMenu::Set2LineMoreEnable() {}
 

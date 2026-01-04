@@ -5,15 +5,19 @@
     Code range: 0x8023A030 -> 0x8023A1B4
 */
 // Range: 0x8023A030 -> 0x8023A070
-void * EIObjTileBoundRect::~EIObjTileBoundRect(class EIObjTileBoundRect * const this /* r31 */) {}
+// this: r31
+EIObjTileBoundRect::~EIObjTileBoundRect() {}
 
 // Range: 0x8023A070 -> 0x8023A0AC
-void * EIObjTileBoundRect::EIObjTileBoundRect(class EIObjTileBoundRect * const this /* r31 */) {}
+// this: r31
+EIObjTileBoundRect::EIObjTileBoundRect() {}
 
 // Range: 0x8023A0AC -> 0x8023A0F4
-void * EIObjTileBoundRect::EIObjTileBoundRect(class EIObjTileBoundRect * const this /* r30 */, const class CTilePt & cPtIn /* r31 */) {}
+// this: r30
+EIObjTileBoundRect::EIObjTileBoundRect(const class CTilePt & cPtIn /* r31 */) {}
 
 // Range: 0x8023A0F4 -> 0x8023A1B4
-unsigned char EIObjTileBoundRect::PtInRect(class EIObjTileBoundRect * const this /* r30 */, float fx /* f30 */, float fy /* f31 */) {}
+// this: r30
+unsigned char EIObjTileBoundRect::PtInRect(float fx /* f30 */, float fy /* f31 */) {}
 
 

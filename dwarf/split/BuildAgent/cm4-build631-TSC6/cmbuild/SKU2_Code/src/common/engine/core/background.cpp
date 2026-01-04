@@ -5,37 +5,45 @@
     Code range: 0x8027B0DC -> 0x8027B634
 */
 // Range: 0x8027B0DC -> 0x8027B11C
-void * Background::~Background(class Background * const this /* r31 */) {}
+// this: r31
+Background::~Background() {}
 
 // Range: 0x8027B11C -> 0x8027B190
-void * BackgroundImpl::~BackgroundImpl(class BackgroundImpl * const this /* r30 */) {}
+// this: r30
+BackgroundImpl::~BackgroundImpl() {}
 
 // Range: 0x8027B190 -> 0x8027B1F0
-void BackgroundImpl::Shutdown(class BackgroundImpl * const this /* r31 */) {
+// this: r31
+void BackgroundImpl::Shutdown() {
     // References
     // -> class Background * _pBackground;
 }
 
 // Range: 0x8027B1F0 -> 0x8027B244
-void BackgroundImpl::TerminateThread(class BackgroundImpl * const this /* r31 */) {}
+// this: r31
+void BackgroundImpl::TerminateThread() {}
 
 // Range: 0x8027B244 -> 0x8027B2AC
-void BackgroundImpl::Init(class BackgroundImpl * const this /* r31 */) {}
+// this: r31
+void BackgroundImpl::Init() {}
 
 // Range: 0x8027B2AC -> 0x8027B2B0
 void BackgroundImpl::Update() {}
 
 // Range: 0x8027B2B0 -> 0x8027B314
-void BackgroundImpl::ExecuteRoutine(class BackgroundImpl * const this /* r30 */, void (* pRoutine)() /* r31 */) {}
+// this: r30
+void BackgroundImpl::ExecuteRoutine(void (* pRoutine)() /* r31 */) {}
 
 // Range: 0x8027B314 -> 0x8027B388
-void BackgroundImpl::ExecuteArgRoutine(class BackgroundImpl * const this /* r29 */, void (* pArgRoutine)(void *) /* r30 */, void * data /* r31 */) {}
+// this: r29
+void BackgroundImpl::ExecuteArgRoutine(void (* pArgRoutine)(void *) /* r30 */, void * data /* r31 */) {}
 
 // Range: 0x8027B388 -> 0x8027B394
 void BackgroundImpl::SendCommand() {}
 
 // Range: 0x8027B394 -> 0x8027B458
-void BackgroundImpl::Flush(class BackgroundImpl * const this /* r30 */) {
+// this: r30
+void BackgroundImpl::Flush() {
     // Local variables
     class EEvent flushEvent; // r1+0x8
 }
@@ -44,7 +52,8 @@ void BackgroundImpl::Flush(class BackgroundImpl * const this /* r30 */) {
 unsigned char BackgroundImpl::IsCallingThread() {}
 
 // Range: 0x8027B460 -> 0x8027B550
-void BackgroundImpl::Main(class BackgroundImpl * const this /* r30 */) {
+// this: r30
+void BackgroundImpl::Main() {
     // Local variables
     unsigned int msg; // r1+0x8
     class BackgroundCmd * pCmd; // r31

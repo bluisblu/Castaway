@@ -8,19 +8,22 @@
 void HDDThread::Main() {}
 
 // Range: 0x802EA0A0 -> 0x802EA144
-unsigned char HDDThread::ArcIsCurrent(class HDDThread * const this /* r28 */, const char * name /* r29 */) {}
+// this: r28
+unsigned char HDDThread::ArcIsCurrent(const char * name /* r29 */) {}
 
 // Range: 0x802EA144 -> 0x802EA18C
 unsigned char HDDThread::ArcIsCurrent() {}
 
 // Range: 0x802EA18C -> 0x802EA1EC
-void HDDThread::SetPriorityHigh(class HDDThread * const this /* r30 */) {
+// this: r30
+void HDDThread::SetPriorityHigh() {
     // References
     // -> class ENgcFileSystem _eorFileSys;
 }
 
 // Range: 0x802EA1EC -> 0x802EA24C
-void HDDThread::SetPriorityLow(class HDDThread * const this /* r30 */) {
+// this: r30
+void HDDThread::SetPriorityLow() {
     // References
     // -> class ENgcFileSystem _eorFileSys;
 }

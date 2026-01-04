@@ -4,8 +4,13 @@
     Language: C++
     Code range: 0x802483D4 -> 0x802483D4
 */
+// total size: 0xA8
 class RainEffect {
-    // total size: 0xA8
+    // Static members
+    static float VISIBLE_RAIN_OFFSET; // size: 0x4
+    static float INVISIBLE_RAIN_OFFSET; // size: 0x4
+
+    // Members
     class EMat4 m_windRotMatrix; // offset 0x0, size 0x40
     class ERModel * m_pModel; // offset 0x40, size 0x4
     float m_fRainModelRadius; // offset 0x44, size 0x4
@@ -26,17 +31,20 @@ char * ms_szFogLevelNames[4]; // size: 0x10, address: 0x80452760
 char * ms_szMoonPhaseNames[8]; // size: 0x20, address: 0x804527C8
 float MAX_WIND_SPEED; // size: 0x4, address: 0x805DEBD8
 int SECONDS_BETWEEN_MOON_PHASE_UPDATE; // size: 0x4, address: 0x805DBDD0
+// total size: 0x4
 struct WeatherSounds {
-    // total size: 0x4
+    // Members
     class VECTOR soundevents; // offset 0x0, size 0x4
 };
+// total size: 0x4
 class generic_iterator {
-    // total size: 0x4
+    // Members
 protected:
     struct DamageEvent * mIterator; // offset 0x0, size 0x4
 };
+// total size: 0x4
 class generic_iterator {
-    // total size: 0x4
+    // Members
 protected:
     struct WindyPlantInfo * mIterator; // offset 0x0, size 0x4
 };

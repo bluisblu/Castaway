@@ -5,14 +5,16 @@
     Code range: 0x80037F78 -> 0x8003A6EC
 */
 // Range: 0x80037F78 -> 0x80038130
-void * CasSimRenderer::CasSimRenderer(class CasSimRenderer * const this /* r28 */, int charId /* r29 */, unsigned char bInCAFMode /* r30 */) {
+// this: r28
+CasSimRenderer::CasSimRenderer(int charId /* r29 */, unsigned char bInCAFMode /* r30 */) {
     // References
     // -> unsigned int s_nCasFemaleSimAnimations[39];
     // -> struct [anonymous] __vt__14CasSimRenderer;
 }
 
 // Range: 0x80038130 -> 0x800382D8
-void * CasSimRenderer::~CasSimRenderer(class CasSimRenderer * const this /* r30 */) {
+// this: r30
+CasSimRenderer::~CasSimRenderer() {
     // References
     // -> class EAnimManager _animman;
     // -> class EGraphics * _pGfx;
@@ -24,10 +26,12 @@ void * CasSimRenderer::~CasSimRenderer(class CasSimRenderer * const this /* r30 
 void CasSimRenderer::CharacterModelCached() {}
 
 // Range: 0x800382E8 -> 0x8003833C
-unsigned char CasSimRenderer::AllMorphDataDeallocated(class CasSimRenderer * const this /* r31 */) {}
+// this: r31
+unsigned char CasSimRenderer::AllMorphDataDeallocated() {}
 
 // Range: 0x8003833C -> 0x800386A0
-void CasSimRenderer::Update(class CasSimRenderer * const this /* r28 */, float fDeltaSeconds /* f31 */) {
+// this: r28
+void CasSimRenderer::Update(float fDeltaSeconds /* f31 */) {
     // Local variables
     unsigned int nSimPosition; // r31
     class CASTargetTSC6 * pCASTarget; // r0
@@ -44,7 +48,8 @@ void CasSimRenderer::Update(class CasSimRenderer * const this /* r28 */, float f
 }
 
 // Range: 0x800386A0 -> 0x800388C0
-void CasSimRenderer::Draw(class CasSimRenderer * const this /* r28 */, class ERC * prc /* r29 */) {
+// this: r28
+void CasSimRenderer::Draw(class ERC * prc /* r29 */) {
     // Local variables
     float totalRotation; // f3
     class EVec3 mRot; // r1+0x10
@@ -71,7 +76,8 @@ void CasSimRenderer::processEvents(int iStartTime /* r24 */, int interval /* r25
 }
 
 // Range: 0x800389E4 -> 0x80038B30
-void CasSimRenderer::DoSoundEvents(class CasSimRenderer * const this /* r28 */, float fDeltaSeconds /* f31 */) {
+// this: r28
+void CasSimRenderer::DoSoundEvents(float fDeltaSeconds /* f31 */) {
     // Local variables
     int animId; // r31
     class ERAnim * pAnim; // r0
@@ -83,7 +89,8 @@ void CasSimRenderer::DoSoundEvents(class CasSimRenderer * const this /* r28 */, 
 }
 
 // Range: 0x80038B30 -> 0x80038C10
-class ETexture * CasSimRenderer::CreateImage(class CasSimRenderer * const this /* r31 */, enum eImageModelSetType imageModelSetType /* r26 */, unsigned int nWidth /* r27 */, unsigned int nHeight /* r28 */, unsigned int nDepth /* r29 */, unsigned int nBackgroundTextureID /* r30 */) {
+// this: r31
+class ETexture * CasSimRenderer::CreateImage(enum eImageModelSetType imageModelSetType /* r26 */, unsigned int nWidth /* r27 */, unsigned int nHeight /* r28 */, unsigned int nDepth /* r29 */, unsigned int nBackgroundTextureID /* r30 */) {
     // Local variables
     enum eSpecies species; // r31
     class SimImageMaker simImageMaker; // r1+0x8
@@ -93,22 +100,26 @@ class ETexture * CasSimRenderer::CreateImage(class CasSimRenderer * const this /
 void CasSimRenderer::SetBaseOrient() {}
 
 // Range: 0x80038C18 -> 0x80038C8C
-void CasSimRenderer::SetProp(class CasSimRenderer * const this /* r29 */, class EMidLotInstance * pInstance /* r30 */, unsigned int bone /* r31 */) {}
+// this: r29
+void CasSimRenderer::SetProp(class EMidLotInstance * pInstance /* r30 */, unsigned int bone /* r31 */) {}
 
 // Range: 0x80038C8C -> 0x80038D2C
-void CasSimRenderer::SetFaceImage(class CasSimRenderer * const this /* r30 */, class ETexture * pFaceImage /* r31 */) {
+// this: r30
+void CasSimRenderer::SetFaceImage(class ETexture * pFaceImage /* r31 */) {
     // References
     // -> class EGraphics * _pGfx;
 }
 
 // Range: 0x80038D2C -> 0x80038E48
-void CasSimRenderer::DrawFaceImage(class CasSimRenderer * const this /* r28 */, class ERC * prc /* r27 */) {
+// this: r28
+void CasSimRenderer::DrawFaceImage(class ERC * prc /* r27 */) {
     // Local variables
     const class CasSimDescription * pSimDesc; // r0
 }
 
 // Range: 0x80038E48 -> 0x80038EBC
-void CasSimRenderer::GetBonePos(class CasSimRenderer * const this /* r29 */, unsigned int nBoneNumber /* r30 */, class EVec3 & vPos /* r31 */) {
+// this: r29
+void CasSimRenderer::GetBonePos(unsigned int nBoneNumber /* r30 */, class EVec3 & vPos /* r31 */) {
     // Local variables
     class EMat4 mTempMat; // r1+0x8
 }
@@ -117,25 +128,29 @@ void CasSimRenderer::GetBonePos(class CasSimRenderer * const this /* r29 */, uns
 void CasSimRenderer::SetPositionNum() {}
 
 // Range: 0x80038EC4 -> 0x80038F4C
-unsigned int CasSimRenderer::SetNextAnimation(class CasSimRenderer * const this /* r29 */, unsigned int animID /* r30 */) {
+// this: r29
+unsigned int CasSimRenderer::SetNextAnimation(unsigned int animID /* r30 */) {
     // References
     // -> class EAnimManager _animman;
 }
 
 // Range: 0x80038F4C -> 0x80038FD8
-unsigned char CasSimRenderer::CheckPending(class CasSimRenderer * const this /* r29 */) {
+// this: r29
+unsigned char CasSimRenderer::CheckPending() {
     // References
     // -> class EAnimManager _animman;
 }
 
 // Range: 0x80038FD8 -> 0x800390EC
-void CasSimRenderer::PlayPersonalityAnim(class CasSimRenderer * const this /* r31 */, signed short personalityVal /* r30 */) {}
+// this: r31
+void CasSimRenderer::PlayPersonalityAnim(signed short personalityVal /* r30 */) {}
 
 // Range: 0x800390EC -> 0x800390F4
 void CasSimRenderer::SetBoneTranslationOffsets() {}
 
 // Range: 0x800390F4 -> 0x800392CC
-void CasSimRenderer::SetupSimCommon(class CasSimRenderer * const this /* r27 */, unsigned char bResetAll /* r28 */) {
+// this: r27
+void CasSimRenderer::SetupSimCommon(unsigned char bResetAll /* r28 */) {
     // Local variables
     class CasSimDescription * pOldSimDesc; // r31
     class CasSimDescription * pSimDesc; // r30
@@ -147,7 +162,8 @@ void CasSimRenderer::SetupSimCommon(class CasSimRenderer * const this /* r27 */,
 }
 
 // Range: 0x800392CC -> 0x800393C0
-void CasSimRenderer::SetupSim(class CasSimRenderer * const this /* r31 */) {
+// this: r31
+void CasSimRenderer::SetupSim() {
     // Local variables
     class EString sGender; // r1+0x8
 
@@ -157,29 +173,35 @@ void CasSimRenderer::SetupSim(class CasSimRenderer * const this /* r31 */) {
 }
 
 // Range: 0x800393C0 -> 0x80039468
-void CasSimRenderer::HandleEventInitCharacter(class CasSimRenderer * const this /* r30 */, const class CasEventInitCharacter & event /* r31 */) {}
+// this: r30
+void CasSimRenderer::HandleEventInitCharacter(const class CasEventInitCharacter & event /* r31 */) {}
 
 // Range: 0x80039468 -> 0x80039510
-void CasSimRenderer::HandleEventResetCharacterDraw(class CasSimRenderer * const this /* r30 */, const class CasEventResetCharacterDraw & event /* r31 */) {}
+// this: r30
+void CasSimRenderer::HandleEventResetCharacterDraw(const class CasEventResetCharacterDraw & event /* r31 */) {}
 
 // Range: 0x80039510 -> 0x80039714
-void CasSimRenderer::HandleEventChangeCharacter(class CasSimRenderer * const this /* r29 */, const class CasEventChangeCharacter & event /* r30 */) {
+// this: r29
+void CasSimRenderer::HandleEventChangeCharacter(const class CasEventChangeCharacter & event /* r30 */) {
     // Local variables
     class CasMediator * pMediator; // r31
     class CasSimDescription * pSimDesc; // r30
 }
 
 // Range: 0x80039714 -> 0x800398F0
-void CasSimRenderer::HandleEventChangeFocus(class CasSimRenderer * const this /* r30 */, const class CasEventChangeFocus & event /* r31 */) {}
+// this: r30
+void CasSimRenderer::HandleEventChangeFocus(const class CasEventChangeFocus & event /* r31 */) {}
 
 // Range: 0x800398F0 -> 0x80039950
-void CasSimRenderer::HandleEventMorphCharacter(class CasSimRenderer * const this /* r30 */, const class CasEventMorphCharacter & event /* r31 */) {
+// this: r30
+void CasSimRenderer::HandleEventMorphCharacter(const class CasEventMorphCharacter & event /* r31 */) {
     // References
     // -> class EGraphics * _pGfx;
 }
 
 // Range: 0x80039950 -> 0x80039A40
-void CasSimRenderer::HandleEventSetMorphRegion(class CasSimRenderer * const this /* r30 */, const class CasEventSetMorphRegion & event /* r31 */) {}
+// this: r30
+void CasSimRenderer::HandleEventSetMorphRegion(const class CasEventSetMorphRegion & event /* r31 */) {}
 
 // Range: 0x80039A40 -> 0x80039A84
 unsigned char CasSimRenderer::IsRegularIdleAnim() {}
@@ -197,35 +219,40 @@ unsigned char CasSimRenderer::IsPantIdleAnim() {}
 unsigned char CasSimRenderer::IsSittingIdleAnim() {}
 
 // Range: 0x80039BB0 -> 0x80039C2C
-unsigned int CasSimRenderer::SetNextRandomRegularIdle(class CasSimRenderer * const this /* r30 */) {
+// this: r30
+unsigned int CasSimRenderer::SetNextRandomRegularIdle() {
     // Local variables
     int randIdle; // r0
     unsigned int newIdleID; // r31
 }
 
 // Range: 0x80039C2C -> 0x80039CA8
-unsigned int CasSimRenderer::SetNextRandomShirtIdle(class CasSimRenderer * const this /* r30 */) {
+// this: r30
+unsigned int CasSimRenderer::SetNextRandomShirtIdle() {
     // Local variables
     int randIdle; // r0
     unsigned int newIdleID; // r31
 }
 
 // Range: 0x80039CA8 -> 0x80039D70
-unsigned int CasSimRenderer::SetNextRandomSittingIdle(class CasSimRenderer * const this /* r31 */) {
+// this: r31
+unsigned int CasSimRenderer::SetNextRandomSittingIdle() {
     // Local variables
     unsigned int animID; // r3
     unsigned int nRand; // r0
 }
 
 // Range: 0x80039D70 -> 0x8003A238
-void CasSimRenderer::SelectNextStandingAnimation(class CasSimRenderer * const this /* r31 */) {
+// this: r31
+void CasSimRenderer::SelectNextStandingAnimation() {
     // Local variables
     unsigned int prev; // r30
     unsigned int next; // r29
 }
 
 // Range: 0x8003A238 -> 0x8003A5B8
-void CasSimRenderer::UpdateClothingChange(class CasSimRenderer * const this /* r31 */) {
+// this: r31
+void CasSimRenderer::UpdateClothingChange() {
     // Local variables
     unsigned int numAnimations; // r0
     unsigned int i; // r6
@@ -242,13 +269,15 @@ void CasSimRenderer::UpdateClothingChange(class CasSimRenderer * const this /* r
 unsigned char CasSimRenderer::HasQueuedOperation() {}
 
 // Range: 0x8003A5DC -> 0x8003A63C
-void CasSimRenderer::UpdateQueuedOperation(class CasSimRenderer * const this /* r31 */) {
+// this: r31
+void CasSimRenderer::UpdateQueuedOperation() {
     // References
     // -> class EApp * _pApp;
 }
 
 // Range: 0x8003A63C -> 0x8003A6A8
-unsigned char CasSimRenderer::StartClothingChange(class CasSimRenderer * const this /* r31 */) {}
+// this: r31
+unsigned char CasSimRenderer::StartClothingChange() {}
 
 // Range: 0x8003A6A8 -> 0x8003A6BC
 void CasSimRenderer::ProcessDataManagerCommand() {

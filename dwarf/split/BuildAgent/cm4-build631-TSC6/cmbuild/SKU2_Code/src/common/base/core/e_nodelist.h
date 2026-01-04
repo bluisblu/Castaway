@@ -5,13 +5,16 @@
     Code range: 0x800232D0 -> 0x8002348C
 */
 // Range: 0x800232D0 -> 0x80023324
-void * ENodeList::~ENodeList(class ENodeList * const this /* r30 */) {}
+// this: r30
+ENodeList::~ENodeList() {}
 
 // Range: 0x80023324 -> 0x80023364
-void * TNodeList::TNodeList(class TNodeList * const this /* r30 */, unsigned char bDeleteData /* r31 */) {}
+// this: r30
+TNodeList::TNodeList(unsigned char bDeleteData /* r31 */) {}
 
 // Range: 0x80023394 -> 0x8002341C
-void TNodeList::DeleteAll(class TNodeList * const this /* r29 */) {
+// this: r29
+void TNodeList::DeleteAll() {
     // Local variables
     class NLIteratorPtrType * i; // r31
     class NLIteratorPtrType * last; // r30
@@ -43,17 +46,13 @@ class NLIteratorPtrType * ENodeList::Next() {}
 class NLIteratorPtrType * ENodeList::Head() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\common\base\core\e_nodelist.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x80050DA0 -> 0x800511D4
-*/
 // Range: 0x80050DA0 -> 0x80050DE0
-void * TNodeList::TNodeList(class TNodeList * const this /* r30 */, unsigned char bDeleteData /* r31 */) {}
+// this: r30
+TNodeList::TNodeList(unsigned char bDeleteData /* r31 */) {}
 
 // Range: 0x80050DE0 -> 0x80050E28
-class TNodeList & TNodeList::__as(class TNodeList * const this /* r30 */, const class TNodeList & src /* r31 */) {}
+// this: r30
+class TNodeList & TNodeList::operator=(const class TNodeList & src /* r31 */) {}
 
 // Range: 0x80050E28 -> 0x80050E2C
 void TNodeList::AddTail() {}
@@ -89,19 +88,24 @@ class EIWallPart * TNodeList::GetData() {}
 class ERoomWall * TNodeList::GetData() {}
 
 // Range: 0x80050E54 -> 0x80050E94
-void * TNodeList::TNodeList(class TNodeList * const this /* r30 */, unsigned char bDeleteData /* r31 */) {}
+// this: r30
+TNodeList::TNodeList(unsigned char bDeleteData /* r31 */) {}
 
 // Range: 0x80050E94 -> 0x80050ED4
-void * TNodeList::TNodeList(class TNodeList * const this /* r30 */, unsigned char bDeleteData /* r31 */) {}
+// this: r30
+TNodeList::TNodeList(unsigned char bDeleteData /* r31 */) {}
 
 // Range: 0x80050ED4 -> 0x80050F14
-void * TNodeList::TNodeList(class TNodeList * const this /* r30 */, unsigned char bDeleteData /* r31 */) {}
+// this: r30
+TNodeList::TNodeList(unsigned char bDeleteData /* r31 */) {}
 
 // Range: 0x80050F14 -> 0x80050F54
-void * TNodeList::TNodeList(class TNodeList * const this /* r30 */, unsigned char bDeleteData /* r31 */) {}
+// this: r30
+TNodeList::TNodeList(unsigned char bDeleteData /* r31 */) {}
 
 // Range: 0x80050F54 -> 0x80050FF0
-void TNodeList::DeleteAll(class TNodeList * const this /* r29 */) {
+// this: r29
+void TNodeList::DeleteAll() {
     // Local variables
     class NLIteratorPtrType * i; // r31
     class NLIteratorPtrType * last; // r30
@@ -112,7 +116,8 @@ void TNodeList::DeleteAll(class TNodeList * const this /* r29 */) {
 class HRObjectFloorRecord * TNodeList::GetData() {}
 
 // Range: 0x80050FF4 -> 0x80051090
-void TNodeList::DeleteAll(class TNodeList * const this /* r29 */) {
+// this: r29
+void TNodeList::DeleteAll() {
     // Local variables
     class NLIteratorPtrType * i; // r31
     class NLIteratorPtrType * last; // r30
@@ -123,7 +128,8 @@ void TNodeList::DeleteAll(class TNodeList * const this /* r29 */) {
 class HRObjectRecord * TNodeList::GetData() {}
 
 // Range: 0x80051094 -> 0x80051130
-void TNodeList::DeleteAll(class TNodeList * const this /* r29 */) {
+// this: r29
+void TNodeList::DeleteAll() {
     // Local variables
     class NLIteratorPtrType * i; // r31
     class NLIteratorPtrType * last; // r30
@@ -134,7 +140,8 @@ void TNodeList::DeleteAll(class TNodeList * const this /* r29 */) {
 class HRWallRecord * TNodeList::GetData() {}
 
 // Range: 0x80051134 -> 0x800511D0
-void TNodeList::DeleteAll(class TNodeList * const this /* r29 */) {
+// this: r29
+void TNodeList::DeleteAll() {
     // Local variables
     class NLIteratorPtrType * i; // r31
     class NLIteratorPtrType * last; // r30
@@ -145,20 +152,16 @@ void TNodeList::DeleteAll(class TNodeList * const this /* r29 */) {
 class HRFloorRecord * TNodeList::GetData() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\common\base\core\e_nodelist.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x8008BBB0 -> 0x8008BE04
-*/
 // Range: 0x8008BBB0 -> 0x8008BBB4
 class EILight * TNodeList::GetData() {}
 
 // Range: 0x8008BBB4 -> 0x8008BBF4
-void * TNodeList::TNodeList(class TNodeList * const this /* r30 */, unsigned char bDeleteData /* r31 */) {}
+// this: r30
+TNodeList::TNodeList(unsigned char bDeleteData /* r31 */) {}
 
 // Range: 0x8008BBF4 -> 0x8008BC7C
-void TNodeList::DeleteAll(class TNodeList * const this /* r29 */) {
+// this: r29
+void TNodeList::DeleteAll() {
     // Local variables
     class NLIteratorPtrType * i; // r31
     class NLIteratorPtrType * last; // r30
@@ -172,7 +175,8 @@ class EParticleObj * TNodeList::GetData() {}
 class NLIteratorPtrType * TNodeList::AddTail() {}
 
 // Range: 0x8008BC84 -> 0x8008BCE0
-void TNodeList::Delete(class TNodeList * const this /* r30 */, class NLIteratorPtrType * i /* r31 */) {
+// this: r30
+void TNodeList::Delete(class NLIteratorPtrType * i /* r31 */) {
     // Local variables
     class EParticleObj * data; // r0
 }
@@ -181,13 +185,16 @@ void TNodeList::Delete(class TNodeList * const this /* r30 */, class NLIteratorP
 void TNodeList::Remove() {}
 
 // Range: 0x8008BCE4 -> 0x8008BD24
-void * TNodeList::TNodeList(class TNodeList * const this /* r30 */, unsigned char bDeleteData /* r31 */) {}
+// this: r30
+TNodeList::TNodeList(unsigned char bDeleteData /* r31 */) {}
 
 // Range: 0x8008BD24 -> 0x8008BD64
-void * TNodeList::TNodeList(class TNodeList * const this /* r30 */, unsigned char bDeleteData /* r31 */) {}
+// this: r30
+TNodeList::TNodeList(unsigned char bDeleteData /* r31 */) {}
 
 // Range: 0x8008BD94 -> 0x8008BDD4
-void * TNodeList::TNodeList(class TNodeList * const this /* r30 */, unsigned char bDeleteData /* r31 */) {}
+// this: r30
+TNodeList::TNodeList(unsigned char bDeleteData /* r31 */) {}
 
 // Range: 0x8008BDD4 -> 0x8008BDD8
 class EInstance * TNodeList::GetData() {}
@@ -226,14 +233,9 @@ class NLIteratorPtrType * TNodeList::Search() {}
 class EBaseInstance * TNodeList::GetData() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\common\base\core\e_nodelist.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x8016ECE8 -> 0x8016EDCC
-*/
 // Range: 0x8016ECE8 -> 0x8016ED28
-void * TNodeList::TNodeList(class TNodeList * const this /* r30 */, unsigned char bDeleteData /* r31 */) {}
+// this: r30
+TNodeList::TNodeList(unsigned char bDeleteData /* r31 */) {}
 
 // Range: 0x8016ED28 -> 0x8016ED2C
 class EGameState * TNodeList::GetData() {}
@@ -242,7 +244,8 @@ class EGameState * TNodeList::GetData() {}
 class NLIteratorPtrType * TNodeList::AddTail() {}
 
 // Range: 0x8016ED30 -> 0x8016EDCC
-void TNodeList::DeleteAll(class TNodeList * const this /* r29 */) {
+// this: r29
+void TNodeList::DeleteAll() {
     // Local variables
     class NLIteratorPtrType * i; // r31
     class NLIteratorPtrType * last; // r30
@@ -250,12 +253,6 @@ void TNodeList::DeleteAll(class TNodeList * const this /* r29 */) {
 }
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\common\base\core\e_nodelist.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x801EC704 -> 0x801EC714
-*/
 // Range: 0x801EC704 -> 0x801EC708
 class NLIteratorPtrType * TNodeList::AddTail() {}
 
@@ -269,23 +266,20 @@ class NLIteratorPtrType * TNodeList::AddTail() {}
 class NLIteratorPtrType * TNodeList::AddTail() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\common\base\core\e_nodelist.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x8021F614 -> 0x8021F8E4
-*/
 // Range: 0x8021F614 -> 0x8021F618
 class NLIteratorPtrType * TNodeList::AddTail() {}
 
 // Range: 0x8021F618 -> 0x8021F658
-void * TNodeList::TNodeList(class TNodeList * const this /* r30 */, unsigned char bDeleteData /* r31 */) {}
+// this: r30
+TNodeList::TNodeList(unsigned char bDeleteData /* r31 */) {}
 
 // Range: 0x8021F658 -> 0x8021F698
-void * TNodeList::TNodeList(class TNodeList * const this /* r30 */, unsigned char bDeleteData /* r31 */) {}
+// this: r30
+TNodeList::TNodeList(unsigned char bDeleteData /* r31 */) {}
 
 // Range: 0x8021F698 -> 0x8021F728
-void TNodeList::SafeDeleteAll(class TNodeList * const this /* r29 */) {
+// this: r29
+void TNodeList::SafeDeleteAll() {
     // Local variables
     class NLIteratorPtrType * i; // r31
     class NLIteratorPtrType * last; // r30
@@ -296,10 +290,12 @@ void TNodeList::SafeDeleteAll(class TNodeList * const this /* r29 */) {
 class NLIteratorPtrType * TNodeList::AddTail() {}
 
 // Range: 0x8021F72C -> 0x8021F76C
-void * TNodeList::TNodeList(class TNodeList * const this /* r30 */, unsigned char bDeleteData /* r31 */) {}
+// this: r30
+TNodeList::TNodeList(unsigned char bDeleteData /* r31 */) {}
 
 // Range: 0x8021F76C -> 0x8021F808
-void TNodeList::DeleteAll(class TNodeList * const this /* r29 */) {
+// this: r29
+void TNodeList::DeleteAll() {
     // Local variables
     class NLIteratorPtrType * i; // r31
     class NLIteratorPtrType * last; // r30
@@ -316,10 +312,12 @@ void TNodeList::Remove() {}
 class NLIteratorPtrType * TNodeList::AddTail() {}
 
 // Range: 0x8021F814 -> 0x8021F854
-void * TNodeList::TNodeList(class TNodeList * const this /* r30 */, unsigned char bDeleteData /* r31 */) {}
+// this: r30
+TNodeList::TNodeList(unsigned char bDeleteData /* r31 */) {}
 
 // Range: 0x8021F854 -> 0x8021F8E4
-void TNodeList::SafeDeleteAll(class TNodeList * const this /* r29 */) {
+// this: r29
+void TNodeList::SafeDeleteAll() {
     // Local variables
     class NLIteratorPtrType * i; // r31
     class NLIteratorPtrType * last; // r30
@@ -327,22 +325,10 @@ void TNodeList::SafeDeleteAll(class TNodeList * const this /* r29 */) {
 }
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\common\base\core\e_nodelist.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x8027DBB0 -> 0x8027DBB8
-*/
 // Range: 0x8027DBB0 -> 0x8027DBB8
 struct EffectEntry * TNodeList::GetData() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\common\base\core\e_nodelist.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x80290DD0 -> 0x80290DE0
-*/
 // Range: 0x80290DD0 -> 0x80290DD8
 class EDL * TNodeList::GetData() {}
 
@@ -350,12 +336,6 @@ class EDL * TNodeList::GetData() {}
 class ETexture * TNodeList::GetData() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\common\base\core\e_nodelist.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x802E0914 -> 0x802E091C
-*/
 // Range: 0x802E0914 -> 0x802E091C
 class EFontSize * TNodeList::GetData() {}
 

@@ -5,7 +5,8 @@
     Code range: 0x801F22C8 -> 0x801F3024
 */
 // Range: 0x801F22C8 -> 0x801F24DC
-void * MODTarget::MODTarget(class MODTarget * const this /* r29 */) {
+// this: r29
+MODTarget::MODTarget() {
     // References
     // -> class EGlobal _globals;
     // -> static const char * const HUD_icon;
@@ -20,7 +21,8 @@ void * MODTarget::MODTarget(class MODTarget * const this /* r29 */) {
 }
 
 // Range: 0x801F24DC -> 0x801F2560
-void * MODTarget::~MODTarget(class MODTarget * const this /* r30 */) {
+// this: r30
+MODTarget::~MODTarget() {
     // References
     // -> class EGlobal _globals;
     // -> struct [anonymous] __vt__9MODTarget;
@@ -30,7 +32,8 @@ void * MODTarget::~MODTarget(class MODTarget * const this /* r30 */) {
 void MODTarget::SetVariable() {}
 
 // Range: 0x801F2564 -> 0x801F26D0
-char * MODTarget::GetVariable(class MODTarget * const this /* r29 */, const char * szVar /* r30 */) {
+// this: r29
+char * MODTarget::GetVariable(const char * szVar /* r30 */) {
     // Local variables
     char * retStr; // r31
     int value; // r0
@@ -47,7 +50,8 @@ char * MODTarget::GetVariable(class MODTarget * const this /* r29 */, const char
 }
 
 // Range: 0x801F26D0 -> 0x801F27C4
-unsigned short * MODTarget::GetLocalizable(class MODTarget * const this /* r29 */, const char * szVar /* r30 */) {
+// this: r29
+unsigned short * MODTarget::GetLocalizable(const char * szVar /* r30 */) {
     // Local variables
     unsigned short * wideStr; // r31
     unsigned short * outString; // r30
@@ -61,7 +65,8 @@ unsigned short * MODTarget::GetLocalizable(class MODTarget * const this /* r29 *
 void MODTarget::Update() {}
 
 // Range: 0x801F27C8 -> 0x801F282C
-int MODTarget::GetMeterDisplayValue(class MODTarget * const this /* r31 */) {
+// this: r31
+int MODTarget::GetMeterDisplayValue() {
     // Local variables
     class cXPerson * pPerson; // r3
     float tmpVal; // f0
@@ -72,7 +77,8 @@ int MODTarget::GetMeterDisplayValue(class MODTarget * const this /* r31 */) {
 }
 
 // Range: 0x801F282C -> 0x801F28F8
-void MODTarget::SetMeterValue(class MODTarget * const this /* r30 */) {
+// this: r30
+void MODTarget::SetMeterValue() {
     // Local variables
     float scaledMeter; // f1
     int value; // r31
@@ -130,19 +136,22 @@ void MODTarget::DrawMoodHeadCallback(class ERC * prc /* r30 */, struct structDra
 }
 
 // Range: 0x801F2C98 -> 0x801F2CEC
-void MODTarget::ShowMood(class MODTarget * const this /* r31 */) {
+// this: r31
+void MODTarget::ShowMood() {
     // References
     // -> class EGlobal _globals;
 }
 
 // Range: 0x801F2CEC -> 0x801F2D40
-void MODTarget::HideMood(class MODTarget * const this /* r31 */) {
+// this: r31
+void MODTarget::HideMood() {
     // References
     // -> class EGlobal _globals;
 }
 
 // Range: 0x801F2D40 -> 0x801F2EB0
-void MODTarget::UpdateMood(class MODTarget * const this /* r30 */) {
+// this: r30
+void MODTarget::UpdateMood() {
     // Local variables
     class cSimulator * pSimulator; // r0
     int currentTime; // r3
@@ -163,7 +172,8 @@ void MODTarget::UpdateMood(class MODTarget * const this /* r30 */) {
 unsigned char MODTarget::IsMoodActive() {}
 
 // Range: 0x801F2EB8 -> 0x801F2FA4
-void MODTarget::SetWarning(class MODTarget * const this /* r31 */) {
+// this: r31
+void MODTarget::SetWarning() {
     // Local variables
     int crMotiveIndex; // r0
 

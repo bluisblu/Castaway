@@ -5,7 +5,8 @@
     Code range: 0x8016D89C -> 0x8016E42C
 */
 // Range: 0x8016D89C -> 0x8016D908
-void CreateASimBaseState::Startup(class CreateASimBaseState * const this /* r30 */) {
+// this: r30
+void CreateASimBaseState::Startup() {
     // References
     // -> class HDDThread g_hddThread;
     // -> class EGlobal _globals;
@@ -15,7 +16,8 @@ void CreateASimBaseState::Startup(class CreateASimBaseState * const this /* r30 
 void CreateASimBaseState::Shutdown() {}
 
 // Range: 0x8016D930 -> 0x8016D9D4
-void CreateASimBaseState::Reset(class CreateASimBaseState * const this /* r30 */) {
+// this: r30
+void CreateASimBaseState::Reset() {
     // References
     // -> class GameData _gd;
     // -> class EGlobal _globals;
@@ -28,7 +30,8 @@ void CreateASimBaseState::GetDatasetName(char * buffer /* r30 */) {
 }
 
 // Range: 0x8016DA6C -> 0x8016E2D8
-void CreateASimBaseState::Update(class CreateASimBaseState * const this /* r30 */) {
+// this: r30
+void CreateASimBaseState::Update() {
     // Local variables
     int iRetVal; // r0
     unsigned char bDone; // r27
@@ -47,7 +50,8 @@ void CreateASimBaseState::Update(class CreateASimBaseState * const this /* r30 *
 }
 
 // Range: 0x8016E2D8 -> 0x8016E428
-void CreateASimBaseState::OnBackOut(class CreateASimBaseState * const this /* r29 */) {
+// this: r29
+void CreateASimBaseState::OnBackOut() {
     // References
     // -> class cBoxX * g_pBoxX;
     // -> class EFlashManager _flashman;

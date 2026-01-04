@@ -17,12 +17,6 @@ class cSimulator * GetSimulator() {
 }
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\target\game\simulator\core\globs.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x80019898 -> 0x800198C8
-*/
 // Range: 0x80019898 -> 0x800198A0
 class cSoundPlayer * GetSoundPlayer() {
     // References
@@ -60,12 +54,6 @@ class WeatherManager * GetWeatherManager() {
 }
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\target\game\simulator\core\globs.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x8002F710 -> 0x8002F780
-*/
 // Range: 0x8002F710 -> 0x8002F718
 class NghResFile * GetNghResFile() {
     // References
@@ -85,12 +73,6 @@ int GetSaveFileVersion() {
 }
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\target\game\simulator\core\globs.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x8005172C -> 0x80051734
-*/
 // Range: 0x8005172C -> 0x80051734
 class House * GetHouse() {
     // References
@@ -98,12 +80,6 @@ class House * GetHouse() {
 }
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\target\game\simulator\core\globs.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x800A1824 -> 0x800A182C
-*/
 // Range: 0x800A1824 -> 0x800A182C
 class LightingParameters * GetLightingParameters() {
     // References
@@ -111,12 +87,6 @@ class LightingParameters * GetLightingParameters() {
 }
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\target\game\simulator\core\globs.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x800F98DC -> 0x800F98E4
-*/
 // Range: 0x800F98DC -> 0x800F98E4
 struct ECheatVariables * GetEORCheats() {
     // References

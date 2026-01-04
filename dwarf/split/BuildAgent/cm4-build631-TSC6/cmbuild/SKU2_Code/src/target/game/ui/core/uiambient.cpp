@@ -5,7 +5,8 @@
     Code range: 0x8017F098 -> 0x8017F7C8
 */
 // Range: 0x8017F098 -> 0x8017F170
-void * UIAMBIENT::UIAMBIENT(class UIAMBIENT * const this /* r28 */) {
+// this: r28
+UIAMBIENT::UIAMBIENT() {
     // Local variables
     int i; // r29
 
@@ -15,7 +16,8 @@ void * UIAMBIENT::UIAMBIENT(class UIAMBIENT * const this /* r28 */) {
 }
 
 // Range: 0x8017F170 -> 0x8017F21C
-void * UIAMBIENT::~UIAMBIENT(class UIAMBIENT * const this /* r27 */) {
+// this: r27
+UIAMBIENT::~UIAMBIENT() {
     // Local variables
     int i; // r29
 
@@ -25,14 +27,16 @@ void * UIAMBIENT::~UIAMBIENT(class UIAMBIENT * const this /* r27 */) {
 }
 
 // Range: 0x8017F21C -> 0x8017F310
-void UIAMBIENT::PlaySound(class UIAMBIENT * const this /* r31 */, unsigned int sampleId /* r30 */) {
+// this: r31
+void UIAMBIENT::PlaySound(unsigned int sampleId /* r30 */) {
     // References
     // -> class EAudioSampleManager * _pAudiosampleman;
     // -> class EGlobal _globals;
 }
 
 // Range: 0x8017F310 -> 0x8017F468
-void UIAMBIENT::Update(class UIAMBIENT * const this /* r31 */) {
+// this: r31
+void UIAMBIENT::Update() {
     // Local variables
     int index; // r30
     unsigned int nextIndex; // r4
@@ -43,7 +47,8 @@ void UIAMBIENT::Update(class UIAMBIENT * const this /* r31 */) {
 }
 
 // Range: 0x8017F468 -> 0x8017F664
-void UIAMBIENT::UpdateAmbientAudioLoad(class UIAMBIENT * const this /* r27 */, int index /* r26 */) {
+// this: r27
+void UIAMBIENT::UpdateAmbientAudioLoad(int index /* r26 */) {
     // Local variables
     int pan; // r6
     float otherChannelVolume; // f1
@@ -56,7 +61,8 @@ void UIAMBIENT::UpdateAmbientAudioLoad(class UIAMBIENT * const this /* r27 */, i
 }
 
 // Range: 0x8017F664 -> 0x8017F720
-void UIAMBIENT::StopSound(class UIAMBIENT * const this /* r28 */, int voiceIndex /* r31 */) {
+// this: r28
+void UIAMBIENT::StopSound(int voiceIndex /* r31 */) {
     // References
     // -> class EAudio * _pActualAudio;
     // -> class EAudioSampleManager * _pAudiosampleman;

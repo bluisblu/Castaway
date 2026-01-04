@@ -5,7 +5,8 @@
     Code range: 0x80279DA0 -> 0x8027A154
 */
 // Range: 0x80279DA0 -> 0x80279E18
-void * ENgcFile::~ENgcFile(class ENgcFile * const this /* r30 */) {
+// this: r30
+ENgcFile::~ENgcFile() {
     // References
     // -> struct [anonymous] __vt__8ENgcFile;
 }
@@ -20,10 +21,12 @@ class EFile * ENgcFile::Creator(const char * fileName /* r28 */, enum DeviceType
 }
 
 // Range: 0x80279F20 -> 0x80279F70
-void ENgcFile::Destroy(class ENgcFile * const this /* r31 */) {}
+// this: r31
+void ENgcFile::Destroy() {}
 
 // Range: 0x80279F70 -> 0x80279FE4
-unsigned long ENgcFile::Read(class ENgcFile * const this /* r28 */, unsigned long nSize /* r29 */) {
+// this: r28
+unsigned long ENgcFile::Read(unsigned long nSize /* r29 */) {
     // Local variables
     int bytesRead; // r0
     int bytesToRead; // r31
@@ -31,7 +34,8 @@ unsigned long ENgcFile::Read(class ENgcFile * const this /* r28 */, unsigned lon
 }
 
 // Range: 0x80279FE4 -> 0x8027A0CC
-int ENgcFile::BufferReadRequest(class ENgcFile * const this /* r30 */, unsigned char * pBuffer /* r29 */, int requestSize /* r31 */) {
+// this: r30
+int ENgcFile::BufferReadRequest(unsigned char * pBuffer /* r29 */, int requestSize /* r31 */) {
     // Local variables
     int readSize; // [invalid]
     int fileReadOffset; // r6

@@ -5,7 +5,8 @@
     Code range: 0x80160330 -> 0x80160748
 */
 // Range: 0x80160330 -> 0x80160384
-void * basic_string::~basic_string(class basic_string * const this /* r30 */) {}
+// this: r30
+basic_string::~basic_string() {}
 
 // Range: 0x80160384 -> 0x801603A0
 void basic_string::DeallocateSelf() {}
@@ -14,7 +15,8 @@ void basic_string::DeallocateSelf() {}
 void basic_string::DoFree() {}
 
 // Range: 0x801603B4 -> 0x80160404
-class basic_string & basic_string::__as(class basic_string * const this /* r30 */, const char * p /* r31 */) {}
+// this: r30
+class basic_string & basic_string::operator=(const char * p /* r31 */) {}
 
 // Range: 0x80160404 -> 0x80160424
 unsigned long CharStrlen() {
@@ -23,7 +25,8 @@ unsigned long CharStrlen() {
 }
 
 // Range: 0x80160424 -> 0x80160470
-void * basic_string::basic_string(class basic_string * const this /* r31 */) {}
+// this: r31
+basic_string::basic_string() {}
 
 // Range: 0x80160470 -> 0x80160488
 void basic_string::AllocateSelf() {
@@ -38,16 +41,19 @@ char * basic_string::c_str() {}
 unsigned long basic_string::length() {}
 
 // Range: 0x801604A0 -> 0x8016054C
-class basic_string & basic_string::assign(class basic_string * const this /* r28 */, const char * pBegin /* r29 */, const char * pEnd /* r30 */) {
+// this: r28
+class basic_string & basic_string::assign(const char * pBegin /* r29 */, const char * pEnd /* r30 */) {
     // Local variables
     long n; // r31
 }
 
 // Range: 0x8016054C -> 0x801605C0
-char * basic_string::erase(class basic_string * const this /* r29 */, char * pBegin /* r30 */, char * pEnd /* r31 */) {}
+// this: r29
+char * basic_string::erase(char * pBegin /* r30 */, char * pEnd /* r31 */) {}
 
 // Range: 0x801605C0 -> 0x801606DC
-class basic_string & basic_string::append(class basic_string * const this /* r31 */, const char * pBegin /* r26 */, const char * pEnd /* r27 */) {
+// this: r31
+class basic_string & basic_string::append(const char * pBegin /* r26 */, const char * pEnd /* r27 */) {
     // Local variables
     unsigned long n; // r30
     unsigned long nCapacity; // r5

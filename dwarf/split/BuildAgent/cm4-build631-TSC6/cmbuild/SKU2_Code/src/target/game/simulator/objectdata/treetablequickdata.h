@@ -23,7 +23,7 @@ int TreeTableAdQuickData::GetMax() {}
 int TreeTableAdQuickData::GetRange() {}
 
 // Range: 0x80163CE8 -> 0x80163CEC
-class ITreeTableAd & TreeTableAdQuickData::__as() {}
+class ITreeTableAd & TreeTableAdQuickData::operator=() {}
 
 // Range: 0x80163CEC -> 0x80163CF0
 void TreeTableAdQuickData::SetPersonalityAd() {}

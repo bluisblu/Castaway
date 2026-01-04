@@ -8,31 +8,36 @@
 void ENodeList::Remove() {}
 
 // Range: 0x802687C8 -> 0x8026883C
-class NLIteratorPtrType * ENodeList::AddHead(class ENodeList * const this /* r30 */, unsigned int data /* r31 */) {
+// this: r30
+class NLIteratorPtrType * ENodeList::AddHead(unsigned int data /* r31 */) {
     // Local variables
     struct ENodeListNode * i; // r3
 }
 
 // Range: 0x8026883C -> 0x802688B0
-class NLIteratorPtrType * ENodeList::AddTail(class ENodeList * const this /* r30 */, unsigned int data /* r31 */) {
+// this: r30
+class NLIteratorPtrType * ENodeList::AddTail(unsigned int data /* r31 */) {
     // Local variables
     struct ENodeListNode * i; // r3
 }
 
 // Range: 0x802688B0 -> 0x8026894C
-void ENodeList::AddTail(class ENodeList * const this /* r28 */) {
+// this: r28
+void ENodeList::AddTail() {
     // Local variables
     class NLIteratorPtrType * i; // r4
 }
 
 // Range: 0x8026894C -> 0x802689F0
-class NLIteratorPtrType * ENodeList::InsertAfter(class ENodeList * const this /* r29 */, class NLIteratorPtrType * target /* r30 */, unsigned int data /* r31 */) {
+// this: r29
+class NLIteratorPtrType * ENodeList::InsertAfter(class NLIteratorPtrType * target /* r30 */, unsigned int data /* r31 */) {
     // Local variables
     struct ENodeListNode * i; // r3
 }
 
 // Range: 0x802689F0 -> 0x80268A4C
-void ENodeList::RemoveAll(class ENodeList * const this /* r30 */) {
+// this: r30
+void ENodeList::RemoveAll() {
     // Local variables
     class NLIteratorPtrType * i; // r4
 }
@@ -51,6 +56,7 @@ class NLIteratorPtrType * ENodeList::Search() {
 }
 
 // Range: 0x80268A94 -> 0x80268B14
-void ENodeList::MoveContents(class ENodeList * const this /* r29 */, class ENodeList & source /* r30 */) {}
+// this: r29
+void ENodeList::MoveContents(class ENodeList & source /* r30 */) {}
 
 

@@ -5,7 +5,8 @@
     Code range: 0x80123A4C -> 0x80124064
 */
 // Range: 0x80123A4C -> 0x80123B30
-void * MotiveEffects::MotiveEffects(class MotiveEffects * const this /* r29 */, class cXPerson * person /* r30 */) {
+// this: r29
+MotiveEffects::MotiveEffects(class cXPerson * person /* r30 */) {
     // Local variables
     class PiecewisePt low; // r1+0x10
     class PiecewisePt high; // r1+0x8
@@ -16,14 +17,16 @@ void * MotiveEffects::MotiveEffects(class MotiveEffects * const this /* r29 */, 
 }
 
 // Range: 0x80123B30 -> 0x80123BE0
-float MotiveEffects::GetCurrentScore(class MotiveEffects * const this /* r30 */) {
+// this: r30
+float MotiveEffects::GetCurrentScore() {
     // Local variables
     float result; // f31
     class MotiveCurve * c; // r31
 }
 
 // Range: 0x80123BE0 -> 0x80123EC0
-float MotiveEffects::GetInteractionScore(class MotiveEffects * const this /* r24 */, const class ITreeTableEntry * pEntry /* r25 */, class cXObject * pObject /* r26 */, int relationshipFlags /* r27 */) {
+// this: r24
+float MotiveEffects::GetInteractionScore(const class ITreeTableEntry * pEntry /* r25 */, class cXObject * pObject /* r26 */, int relationshipFlags /* r27 */) {
     // Local variables
     float result; // f27
     class IGoalUnlock * pGoals; // r31
@@ -42,7 +45,8 @@ float MotiveEffects::GetInteractionScore(class MotiveEffects * const this /* r24
 }
 
 // Range: 0x80123EC0 -> 0x80124064
-float MotiveEffects::CalcRelationshipModifier(class MotiveEffects * const this /* r29 */, const class ITreeTableAd * ad /* r30 */, int relationshipFlags /* r31 */) {
+// this: r29
+float MotiveEffects::CalcRelationshipModifier(const class ITreeTableAd * ad /* r30 */, int relationshipFlags /* r31 */) {
     // Local variables
     float score; // f31
 

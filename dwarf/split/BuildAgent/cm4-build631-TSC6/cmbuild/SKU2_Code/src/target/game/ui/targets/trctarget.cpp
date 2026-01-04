@@ -5,14 +5,16 @@
     Code range: 0x801F4A6C -> 0x801F60CC
 */
 // Range: 0x801F4A6C -> 0x801F4D8C
-void * TRCTarget::TRCTarget(class TRCTarget * const this /* r28 */) {
+// this: r28
+TRCTarget::TRCTarget() {
     // References
     // -> static const char * const TRC_loaded;
     // -> struct [anonymous] __vt__9TRCTarget;
 }
 
 // Range: 0x801F4D8C -> 0x801F4E28
-void * TRCTarget::~TRCTarget(class TRCTarget * const this /* r30 */) {
+// this: r30
+TRCTarget::~TRCTarget() {
     // References
     // -> struct [anonymous] __vt__9TRCTarget;
 }
@@ -27,7 +29,8 @@ void TRCTarget::ZeroInputCallback() {}
 void TRCTarget::Update() {}
 
 // Range: 0x801F4E34 -> 0x801F4F54
-void TRCTarget::HideDialog(class TRCTarget * const this /* r29 */) {
+// this: r29
+void TRCTarget::HideDialog() {
     // Local variables
     class UIScreenManager * pUISM; // r30
     class EController * pCtrl; // r0
@@ -39,25 +42,29 @@ void TRCTarget::HideDialog(class TRCTarget * const this /* r29 */) {
 }
 
 // Range: 0x801F4F54 -> 0x801F4FE0
-void TRCTarget::ShowCoreDialog(class TRCTarget * const this /* r31 */) {
+// this: r31
+void TRCTarget::ShowCoreDialog() {
     // References
     // -> class EGlobal _globals;
 }
 
 // Range: 0x801F4FE0 -> 0x801F5074
-void TRCTarget::ShowExtensionDialog(class TRCTarget * const this /* r31 */) {
+// this: r31
+void TRCTarget::ShowExtensionDialog() {
     // References
     // -> class EGlobal _globals;
 }
 
 // Range: 0x801F5074 -> 0x801F5124
-void TRCTarget::ShowBatteryLowDialog(class TRCTarget * const this /* r30 */) {
+// this: r30
+void TRCTarget::ShowBatteryLowDialog() {
     // References
     // -> class EGlobal _globals;
 }
 
 // Range: 0x801F5124 -> 0x801F5278
-void TRCTarget::SpawnDialog(class TRCTarget * const this /* r29 */) {
+// this: r29
+void TRCTarget::SpawnDialog() {
     // Local variables
     class EController * pCtrl; // r0
 
@@ -68,13 +75,15 @@ void TRCTarget::SpawnDialog(class TRCTarget * const this /* r29 */) {
 }
 
 // Range: 0x801F5278 -> 0x801F53EC
-char * TRCTarget::GetVariable(class TRCTarget * const this /* r28 */, const char * szVar /* r29 */) {
+// this: r28
+char * TRCTarget::GetVariable(const char * szVar /* r29 */) {
     // Local variables
     char * retStr; // r30
 }
 
 // Range: 0x801F53EC -> 0x801F5560
-unsigned short * TRCTarget::GetLocalizable(class TRCTarget * const this /* r29 */, const char * szVar /* r30 */) {
+// this: r29
+unsigned short * TRCTarget::GetLocalizable(const char * szVar /* r30 */) {
     // Local variables
     unsigned short * wideStr; // r31
     int num; // r0
@@ -82,7 +91,8 @@ unsigned short * TRCTarget::GetLocalizable(class TRCTarget * const this /* r29 *
 }
 
 // Range: 0x801F5560 -> 0x801F5758
-void TRCTarget::SetVariable(class TRCTarget * const this /* r29 */, const char * szCommand /* r31 */) {
+// this: r29
+void TRCTarget::SetVariable(const char * szCommand /* r31 */) {
     // Local variables
     class UIScreenManager * pUISM; // r0
 
@@ -92,7 +102,8 @@ void TRCTarget::SetVariable(class TRCTarget * const this /* r29 */, const char *
 }
 
 // Range: 0x801F5758 -> 0x801F5A10
-void TRCTarget::CalculateBackgroundSize(class TRCTarget * const this /* r29 */) {
+// this: r29
+void TRCTarget::CalculateBackgroundSize() {
     // Local variables
     class EVec2 vTLdummy; // r1+0x60
     class EVec2 bodyTextSize; // r1+0x58
@@ -101,7 +112,8 @@ void TRCTarget::CalculateBackgroundSize(class TRCTarget * const this /* r29 */) 
 }
 
 // Range: 0x801F5A10 -> 0x801F5BB8
-float TRCTarget::CalculateMaxOptionWidth(class TRCTarget * const this /* r29 */) {
+// this: r29
+float TRCTarget::CalculateMaxOptionWidth() {
     // Local variables
     float optionWidth; // f31
     class EVec2 size; // r1+0x60
@@ -117,7 +129,8 @@ class EVec2 TRCTarget::GetOptionTextSize(class EVec2 * ret /* r28 */, unsigned s
 }
 
 // Range: 0x801F5C70 -> 0x801F60BC
-void TRCTarget::SetupWidgets(class TRCTarget * const this /* r31 */) {
+// this: r31
+void TRCTarget::SetupWidgets() {
     // Local variables
     int i; // r28
     float titleY; // f31

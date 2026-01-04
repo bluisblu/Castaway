@@ -5,14 +5,16 @@
     Code range: 0x8012EBA0 -> 0x80134388
 */
 // Range: 0x8012EBA0 -> 0x8012EC68
-void * NghResFile::NghResFile(class NghResFile * const this /* r30 */) {
+// this: r30
+NghResFile::NghResFile() {
     // References
     // -> class NghLayout s_nghLayout11;
     // -> struct [anonymous] __vt__10NghResFile;
 }
 
 // Range: 0x8012EC68 -> 0x8012ED50
-void * NghResFile::~NghResFile(class NghResFile * const this /* r28 */) {
+// this: r28
+NghResFile::~NghResFile() {
     // Local variables
     unsigned int i; // r30
 
@@ -46,7 +48,8 @@ void NghResFile::Update() {}
 unsigned char NghResFile::Writable() {}
 
 // Range: 0x8012EDA8 -> 0x8012EDB8
-void NghResFile::GetFileName(class NghResFile * const this /* r5 */) {}
+// this: r5
+void NghResFile::GetFileName() {}
 
 // Range: 0x8012EDB8 -> 0x8012EE14
 int NghResFile::GetNghIndex() {
@@ -129,7 +132,8 @@ struct HandleNode * NghResFile::GetByID(signed short id /* r31 */) {
 struct HandleNode * NghResFile::GetByName() {}
 
 // Range: 0x8012F0F0 -> 0x8012F160
-struct HandleNode * NghResFile::GetByIndex(class NghResFile * const this /* r30 */, signed short index /* r31 */) {
+// this: r30
+struct HandleNode * NghResFile::GetByIndex(signed short index /* r31 */) {
     // Local variables
     struct NghResFileWriteInfo * * ppList; // r0
     struct NghResFileWriteInfo * pNode; // r3
@@ -187,13 +191,15 @@ void NghResFile::SetInfo() {}
 void NghResFile::SetCurrentHouse() {}
 
 // Range: 0x8012F2DC -> 0x8012F34C
-void NghResFile::FlushHouseData(const class NghResFile * const this /* r27 */) {
+// this: r27
+void NghResFile::FlushHouseData() const {
     // Local variables
     int i; // r28
 }
 
 // Range: 0x8012F34C -> 0x8012F3F4
-void NghResFile::FlushCharacterData(class NghResFile * const this /* r27 */, unsigned char flushThumbnails /* r28 */) {
+// this: r27
+void NghResFile::FlushCharacterData(unsigned char flushThumbnails /* r28 */) {
     // Local variables
     int i; // r29
     unsigned int i; // r6
@@ -203,19 +209,22 @@ void NghResFile::FlushCharacterData(class NghResFile * const this /* r27 */, uns
 }
 
 // Range: 0x8012F3F4 -> 0x8012F464
-void NghResFile::FlushNeighborData(class NghResFile * const this /* r28 */) {
+// this: r28
+void NghResFile::FlushNeighborData() {
     // Local variables
     int i; // r29
 }
 
 // Range: 0x8012F464 -> 0x8012F504
-void NghResFile::FlushAllData(class NghResFile * const this /* r31 */) {
+// this: r31
+void NghResFile::FlushAllData() {
     // References
     // -> class EGlobal _globals;
 }
 
 // Range: 0x8012F504 -> 0x8012F684
-void NghResFile::Init(class NghResFile * const this /* r28 */) {
+// this: r28
+void NghResFile::Init() {
     // Local variables
     int i; // r29
 
@@ -227,7 +236,8 @@ void NghResFile::Init(class NghResFile * const this /* r28 */) {
 }
 
 // Range: 0x8012F684 -> 0x8012F7A0
-void NghResFile::reset(class NghResFile * const this /* r31 */) {
+// this: r31
+void NghResFile::reset() {
     // Local variables
     int i; // r27
     int j; // r26
@@ -238,7 +248,8 @@ void NghResFile::reset(class NghResFile * const this /* r31 */) {
 }
 
 // Range: 0x8012F7A0 -> 0x8012F850
-struct NghResFileWriteInfo * * NghResFile::FindListByResType(class NghResFile * const this /* r29 */, unsigned int type /* r30 */) {
+// this: r29
+struct NghResFileWriteInfo * * NghResFile::FindListByResType(unsigned int type /* r30 */) {
     // Local variables
     struct NghResFileWriteInfo * * result; // r31
     int index; // r0
@@ -251,13 +262,15 @@ void NghResFile::WriteList(char * pDest /* r23 */, unsigned int uResType /* r24 
 }
 
 // Range: 0x8012F970 -> 0x8012FA34
-unsigned char NghResFile::IsSectionLoaded(const class NghResFile * const this /* r31 */) {
+// this: r31
+unsigned char NghResFile::IsSectionLoaded() const {
     // Local variables
     unsigned char bLoaded; // r0
 }
 
 // Range: 0x8012FA34 -> 0x8012FC24
-void NghResFile::FlushSection(class NghResFile * const this /* r31 */, unsigned int uSecType /* r26 */) {
+// this: r31
+void NghResFile::FlushSection(unsigned int uSecType /* r26 */) {
     // Local variables
     unsigned int i; // r26
     unsigned int uCurrentHouse; // r25
@@ -269,7 +282,8 @@ void NghResFile::FlushSection(class NghResFile * const this /* r31 */, unsigned 
 }
 
 // Range: 0x8012FC24 -> 0x8012FD90
-char * NghResFile::ReadSection(class NghResFile * const this /* r25 */, unsigned int uSectionOffset /* r26 */, unsigned int uSectionSize /* r27 */, unsigned char & isFromMemoryCard /* r28 */, enum EMC_OpStatus & errReturn /* r29 */) {
+// this: r25
+char * NghResFile::ReadSection(unsigned int uSectionOffset /* r26 */, unsigned int uSectionSize /* r27 */, unsigned char & isFromMemoryCard /* r28 */, enum EMC_OpStatus & errReturn /* r29 */) {
     // Local variables
     char * pMemoryBlock; // r30
     class EFile * pFile; // r1+0x8
@@ -280,7 +294,8 @@ char * NghResFile::ReadSection(class NghResFile * const this /* r25 */, unsigned
 }
 
 // Range: 0x8012FD90 -> 0x801300E4
-class NghResFileSectionHeader * NghResFile::DecompressSection(class NghResFile * const this /* r31 */, class NghResFileSectionHeader * pSecHeader /* r30 */, unsigned char bIgnoreEndian /* r29 */) {
+// this: r31
+class NghResFileSectionHeader * NghResFile::DecompressSection(class NghResFileSectionHeader * pSecHeader /* r30 */, unsigned char bIgnoreEndian /* r29 */) {
     // Local variables
     unsigned int uSize; // r1+0xC
     unsigned int uCompressedDataSize; // r1+0x8
@@ -294,7 +309,8 @@ class NghResFileSectionHeader * NghResFile::DecompressSection(class NghResFile *
 }
 
 // Range: 0x801300E4 -> 0x80130204
-enum EMC_OpStatus NghResFile::ValidateSaveGame(const class NghResFile * const this /* r29 */, const char * fileName /* r26 */, const class MemoryDevicePort_t & port_ /* r27 */, unsigned char bValidate /* r28 */) {
+// this: r29
+enum EMC_OpStatus NghResFile::ValidateSaveGame(const char * fileName /* r26 */, const class MemoryDevicePort_t & port_ /* r27 */, unsigned char bValidate /* r28 */) const {
     // Local variables
     unsigned int uOffset; // r31
     unsigned int uSize; // r30
@@ -321,7 +337,8 @@ enum EMC_OpStatus NghResFile::IsSaveGameValid(const char * fileName /* r24 */, c
 }
 
 // Range: 0x80130350 -> 0x801306FC
-enum EMC_OpStatus NghResFile::ReadHostSection(class NghResFile * const this /* r15 */, void * pSource /* r16 */, unsigned char bIgnoreEndian /* r1+0x8 */) {
+// this: r15
+enum EMC_OpStatus NghResFile::ReadHostSection(void * pSource /* r16 */, unsigned char bIgnoreEndian /* r1+0x8 */) {
     // Local variables
     enum EMC_OpStatus errReturn; // r1+0x28
     char * pMemoryBlock; // r14
@@ -361,7 +378,8 @@ enum EMC_OpStatus NghResFile::ReadHostSection(class NghResFile * const this /* r
 }
 
 // Range: 0x801306FC -> 0x8013092C
-enum EMC_OpStatus NghResFile::ReadBothSection(class NghResFile * const this /* r30 */, void * pSource /* r31 */, unsigned char bIgnoreEndian /* r1+0x8 */) {
+// this: r30
+enum EMC_OpStatus NghResFile::ReadBothSection(void * pSource /* r31 */, unsigned char bIgnoreEndian /* r1+0x8 */) {
     // Local variables
     enum EMC_OpStatus errReturn; // r1+0x18
     char * pMemoryBlock; // r28
@@ -404,7 +422,8 @@ unsigned short NghResFile::GetResIDFromThumbGUID() {
 unsigned short NghResFile::GetResIDFromThumbID() {}
 
 // Range: 0x801309A0 -> 0x80130AC8
-enum EMC_OpStatus NghResFile::ReadThumbSection(class NghResFile * const this /* r25 */, void * pSource /* r26 */, unsigned char bIgnoreEndian /* r1+0x8 */) {
+// this: r25
+enum EMC_OpStatus NghResFile::ReadThumbSection(void * pSource /* r26 */, unsigned char bIgnoreEndian /* r1+0x8 */) {
     // Local variables
     int iCount; // r30
     char * pMemoryBlock; // r29
@@ -418,7 +437,8 @@ enum EMC_OpStatus NghResFile::ReadThumbSection(class NghResFile * const this /* 
 }
 
 // Range: 0x80130AC8 -> 0x80130BE0
-enum EMC_OpStatus NghResFile::ReadThumbSubSection(class NghResFile * const this /* r24 */, void * pMemoryBlock /* r27 */, int nIndex /* r25 */, unsigned char bIgnoreEndian /* r26 */) {
+// this: r24
+enum EMC_OpStatus NghResFile::ReadThumbSubSection(void * pMemoryBlock /* r27 */, int nIndex /* r25 */, unsigned char bIgnoreEndian /* r26 */) {
     // Local variables
     class NghResFileSectionHeader * pSecHeader; // r31
     unsigned int uEntryOffset; // r30
@@ -430,7 +450,8 @@ enum EMC_OpStatus NghResFile::ReadThumbSubSection(class NghResFile * const this 
 }
 
 // Range: 0x80130BE0 -> 0x80130F64
-enum EMC_OpStatus NghResFile::WriteHostSection(class NghResFile * const this /* r27 */, void * pMemoryBlock /* r28 */) {
+// this: r27
+enum EMC_OpStatus NghResFile::WriteHostSection(void * pMemoryBlock /* r28 */) {
     // Local variables
     unsigned int uSize; // r0
     unsigned int uEntries; // r31
@@ -457,7 +478,8 @@ enum EMC_OpStatus NghResFile::WriteHostSection(class NghResFile * const this /* 
 }
 
 // Range: 0x80130F64 -> 0x801312FC
-enum EMC_OpStatus NghResFile::WriteBothSection(class NghResFile * const this /* r24 */, void * pMemoryBlock /* r25 */) {
+// this: r24
+enum EMC_OpStatus NghResFile::WriteBothSection(void * pMemoryBlock /* r25 */) {
     // Local variables
     int iNumEntries; // r1+0x28
     unsigned int m_uSize; // r0
@@ -482,7 +504,8 @@ enum EMC_OpStatus NghResFile::WriteBothSection(class NghResFile * const this /* 
 }
 
 // Range: 0x801312FC -> 0x801313A4
-enum EMC_OpStatus NghResFile::WriteThumbSection(class NghResFile * const this /* r25 */, void * pMemoryBlock /* r26 */) {
+// this: r25
+enum EMC_OpStatus NghResFile::WriteThumbSection(void * pMemoryBlock /* r26 */) {
     // Local variables
     enum EMC_OpStatus errReturn; // r29
     unsigned int thumbChunkSize; // r0
@@ -497,7 +520,8 @@ enum EMC_OpStatus NghResFile::WriteThumbSection(class NghResFile * const this /*
 }
 
 // Range: 0x801313A4 -> 0x8013164C
-enum EMC_OpStatus NghResFile::WriteThumbSubSection(class NghResFile * const this /* r28 */, void * pMemoryBlock /* r29 */, int nIndex /* r30 */, unsigned int & nDataSize /* r20 */, unsigned int & nCompressedSize /* r31 */) {
+// this: r28
+enum EMC_OpStatus NghResFile::WriteThumbSubSection(void * pMemoryBlock /* r29 */, int nIndex /* r30 */, unsigned int & nDataSize /* r20 */, unsigned int & nCompressedSize /* r31 */) {
     // Local variables
     unsigned int thumbChunkSize; // r25
     char * pDest; // r24
@@ -513,7 +537,8 @@ enum EMC_OpStatus NghResFile::WriteThumbSubSection(class NghResFile * const this
 }
 
 // Range: 0x8013164C -> 0x80131AA4
-enum EMC_OpStatus NghResFile::LoadHouseContents(class NghResFile * const this /* r19 */, unsigned int uHouseNum /* r18 */, void * pSource /* r20 */, unsigned char bIgnoreEndian /* r21 */) {
+// this: r19
+enum EMC_OpStatus NghResFile::LoadHouseContents(unsigned int uHouseNum /* r18 */, void * pSource /* r20 */, unsigned char bIgnoreEndian /* r21 */) {
     // Local variables
     void * pMemoryBlock; // [invalid]
     enum EMC_OpStatus errReturn; // r31
@@ -546,7 +571,8 @@ enum EMC_OpStatus NghResFile::LoadHouseContents(class NghResFile * const this /*
 }
 
 // Range: 0x80131AA4 -> 0x80131E5C
-enum EMC_OpStatus NghResFile::SaveHouseContents(class NghResFile * const this /* r19 */, unsigned int uHouseNum /* r20 */, void * pMemoryBlock /* r21 */) {
+// this: r19
+enum EMC_OpStatus NghResFile::SaveHouseContents(unsigned int uHouseNum /* r20 */, void * pMemoryBlock /* r21 */) {
     // Local variables
     int iNumEntries; // r1+0x28
     unsigned int uCurrentHouse; // r26
@@ -570,10 +596,12 @@ enum EMC_OpStatus NghResFile::SaveHouseContents(class NghResFile * const this /*
 }
 
 // Range: 0x80131E5C -> 0x80131F04
-void NghResFile::FlushHouseContents(const class NghResFile * const this /* r29 */) {}
+// this: r29
+void NghResFile::FlushHouseContents() const {}
 
 // Range: 0x80131F04 -> 0x80131F58
-void NghResFile::FlushAllHouseContents(class NghResFile * const this /* r30 */) {
+// this: r30
+void NghResFile::FlushAllHouseContents() {
     // Local variables
     unsigned int i; // r31
 
@@ -585,7 +613,8 @@ void NghResFile::FlushAllHouseContents(class NghResFile * const this /* r30 */) 
 unsigned char NghResFile::AreHouseContentsLoaded() {}
 
 // Range: 0x80131F7C -> 0x801321E0
-void NghResFile::SetLayout(class NghResFile * const this /* r26 */, class NghLayout * pLayout /* r27 */) {
+// this: r26
+void NghResFile::SetLayout(class NghLayout * pLayout /* r27 */) {
     // Local variables
     unsigned int nNewNumThumbnails; // r0
     unsigned int nOldNumHouses; // r0
@@ -602,7 +631,8 @@ void NghResFile::SetLayout(class NghResFile * const this /* r26 */, class NghLay
 }
 
 // Range: 0x801321E0 -> 0x8013268C
-int NghResFile::SaveToFileInMemoryBlocks(class NghResFile * const this /* r26 */, const char * szFileName /* r27 */) {
+// this: r26
+int NghResFile::SaveToFileInMemoryBlocks(const char * szFileName /* r27 */) {
     // Local variables
     class StackString nghName; // r1+0x10
     class EFile * pFile; // r1+0x8
@@ -620,7 +650,8 @@ int NghResFile::SaveToFileInMemoryBlocks(class NghResFile * const this /* r26 */
 }
 
 // Range: 0x8013268C -> 0x801329E8
-int NghResFile::LoadFromFile(class NghResFile * const this /* r28 */, const char * fileName /* r29 */) {
+// this: r28
+int NghResFile::LoadFromFile(const char * fileName /* r29 */) {
     // Local variables
     class StackString nghName; // r1+0x10
     class EFile * pDefaultNghFile; // r1+0x8
@@ -636,7 +667,8 @@ int NghResFile::LoadFromFile(class NghResFile * const this /* r28 */, const char
 }
 
 // Range: 0x801329E8 -> 0x80132B20
-enum EMC_OpStatus NghResFile::SaveToMemoryCardCache(class NghResFile * const this /* r27 */) {
+// this: r27
+enum EMC_OpStatus NghResFile::SaveToMemoryCardCache() {
     // Local variables
     class StackString sOldSourceFilePath; // r1+0x8
     enum EMC_OpStatus errReturn; // r30
@@ -662,7 +694,8 @@ unsigned int NghResFile::ReadNghVersion(class EFile * pFile /* r29 */) {
 }
 
 // Range: 0x80132C18 -> 0x80132D24
-enum EMC_OpStatus NghResFile::CopyDefaultNghToCache(class NghResFile * const this /* r30 */, const char * inFileName /* r31 */) {
+// this: r30
+enum EMC_OpStatus NghResFile::CopyDefaultNghToCache(const char * inFileName /* r31 */) {
     // Local variables
     class StackString nghName; // r1+0x10
     class EFile * pDefaultNghFile; // r1+0x8
@@ -675,7 +708,8 @@ enum EMC_OpStatus NghResFile::CopyDefaultNghToCache(class NghResFile * const thi
 }
 
 // Range: 0x80132D24 -> 0x801330D4
-enum EMC_OpStatus NghResFile::CopyDefaultNghToCache_Version11(class NghResFile * const this /* r30 */, class EFile * pFile /* r31 */) {
+// this: r30
+enum EMC_OpStatus NghResFile::CopyDefaultNghToCache_Version11(class EFile * pFile /* r31 */) {
     // Local variables
     unsigned int uFileSize; // r0
     enum EMC_OpStatus errReturn; // r26
@@ -697,7 +731,8 @@ enum EMC_OpStatus NghResFile::CopyDefaultNghToCache_Version11(class NghResFile *
 }
 
 // Range: 0x801330D4 -> 0x801336DC
-enum EMC_OpStatus NghResFile::ConvertDefaultNghToVersion11(class NghResFile * const this /* r24 */, class EFile * pFile /* r25 */) {
+// this: r24
+enum EMC_OpStatus NghResFile::ConvertDefaultNghToVersion11(class EFile * pFile /* r25 */) {
     // Local variables
     unsigned int uFileSize; // r0
     enum EMC_OpStatus errReturn; // r31
@@ -726,7 +761,8 @@ enum EMC_OpStatus NghResFile::ConvertDefaultNghToVersion11(class NghResFile * co
 }
 
 // Range: 0x801336DC -> 0x801337D4
-enum EMC_OpStatus NghResFile::LoadFromMemoryCardCache(class NghResFile * const this /* r29 */) {
+// this: r29
+enum EMC_OpStatus NghResFile::LoadFromMemoryCardCache() {
     // Local variables
     enum EMC_OpStatus errReturn; // r30
 
@@ -736,7 +772,8 @@ enum EMC_OpStatus NghResFile::LoadFromMemoryCardCache(class NghResFile * const t
 }
 
 // Range: 0x801337D4 -> 0x80133A00
-enum EMC_OpStatus NghResFile::CopyHouse(class NghResFile * const this /* r29 */, int dstHouseNum /* r30 */, class NghResFile & srcFile /* r31 */, int srcHouseNum /* r23 */) {
+// this: r29
+enum EMC_OpStatus NghResFile::CopyHouse(int dstHouseNum /* r30 */, class NghResFile & srcFile /* r31 */, int srcHouseNum /* r23 */) {
     // Local variables
     unsigned int i; // r25
     class StackString dummy; // r1+0x18
@@ -758,7 +795,8 @@ void NghResFile::GetDefaultNghPath(const char * fileName /* r30 */, class StackS
 }
 
 // Range: 0x80133A70 -> 0x80133AB8
-class MemoryCardCache * NghResFile::GetMemoryCardCache(class NghResFile * const this /* r31 */) {}
+// this: r31
+class MemoryCardCache * NghResFile::GetMemoryCardCache() {}
 
 // Range: 0x80133AB8 -> 0x80133ACC
 void NghResFile::SwapTwoByteNumber() {
@@ -775,35 +813,41 @@ void NghResFile::SwapFourByteNumber() {
 }
 
 // Range: 0x80133AF0 -> 0x80133B4C
-void NghResFileSectionHeader::EndianSwap(class NghResFileSectionHeader * const this /* r31 */) {}
+// this: r31
+void NghResFileSectionHeader::EndianSwap() {}
 
 // Range: 0x80133B4C -> 0x80133BEC
-unsigned char NghResFile::RegisterSection(class NghResFile * const this /* r26 */, enum RegistryID id /* r27 */, void (* saveSection)(enum SectionID, class SaveRecord &) /* r28 */, void (* loadSection)(enum SectionID, class SaveRecord &) /* r29 */, void (* saveComplete)(enum SectionID, class SaveRecord &) /* r30 */) {
+// this: r26
+unsigned char NghResFile::RegisterSection(enum RegistryID id /* r27 */, void (* saveSection)(enum SectionID, class SaveRecord &) /* r28 */, void (* loadSection)(enum SectionID, class SaveRecord &) /* r29 */, void (* saveComplete)(enum SectionID, class SaveRecord &) /* r30 */) {
     // Local variables
     struct RegistryNode * iter; // r31
 }
 
 // Range: 0x80133BEC -> 0x80133C70
-unsigned char NghResFile::FindNodeInRegistry(class NghResFile * const this /* r27 */, enum RegistryID id /* r28 */, struct RegistryNode & node /* r29 */) {
+// this: r27
+unsigned char NghResFile::FindNodeInRegistry(enum RegistryID id /* r28 */, struct RegistryNode & node /* r29 */) {
     // Local variables
     unsigned char found; // r31
     struct RegistryNode * iter; // r30
 }
 
 // Range: 0x80133C70 -> 0x80133CF8
-void NghResFile::SectionSaveViaRegistry(class NghResFile * const this /* r28 */, enum RegistryID id /* r29 */, enum SectionID section /* r30 */, class SaveRecord & saveRec /* r31 */) {
+// this: r28
+void NghResFile::SectionSaveViaRegistry(enum RegistryID id /* r29 */, enum SectionID section /* r30 */, class SaveRecord & saveRec /* r31 */) {
     // Local variables
     struct RegistryNode regNode; // r1+0x8
 }
 
 // Range: 0x80133CF8 -> 0x80133D80
-void NghResFile::SaveCompleteViaRegistry(class NghResFile * const this /* r28 */, enum RegistryID id /* r29 */, enum SectionID section /* r30 */, class SaveRecord & saveRec /* r31 */) {
+// this: r28
+void NghResFile::SaveCompleteViaRegistry(enum RegistryID id /* r29 */, enum SectionID section /* r30 */, class SaveRecord & saveRec /* r31 */) {
     // Local variables
     struct RegistryNode regNode; // r1+0x8
 }
 
 // Range: 0x80133D80 -> 0x80133E08
-void NghResFile::SectionLoadViaRegistry(class NghResFile * const this /* r28 */, enum RegistryID id /* r29 */, enum SectionID section /* r30 */, class SaveRecord & saveRec /* r31 */) {
+// this: r28
+void NghResFile::SectionLoadViaRegistry(enum RegistryID id /* r29 */, enum SectionID section /* r30 */, class SaveRecord & saveRec /* r31 */) {
     // Local variables
     struct RegistryNode regNode; // r1+0x8
 }
@@ -834,7 +878,8 @@ int NghLayout::GetSubSectionNumberForOffset() {
 }
 
 // Range: 0x80133EBC -> 0x8013407C
-unsigned char NghLayout::IsOffsetARegistrySubSection(class NghLayout * const this /* r27 */, unsigned int offset /* r28 */, enum RegistryID & registryId /* r29 */, enum SectionID & sectionId /* r30 */) {
+// this: r27
+unsigned char NghLayout::IsOffsetARegistrySubSection(unsigned int offset /* r28 */, enum RegistryID & registryId /* r29 */, enum SectionID & sectionId /* r30 */) {
     // Local variables
     unsigned char valid; // r31
     class NghSubSectionIterator iter; // r1+0x8

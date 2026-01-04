@@ -5,13 +5,15 @@
     Code range: 0x8011E2DC -> 0x8011E550
 */
 // Range: 0x8011E2DC -> 0x8011E334
-void * OwnableItem::OwnableItem(class OwnableItem * const this /* r31 */) {
+// this: r31
+OwnableItem::OwnableItem() {
     // References
     // -> struct [anonymous] __vt__11OwnableItem;
 }
 
 // Range: 0x8011E334 -> 0x8011E39C
-void * ObjectItem::~ObjectItem(class ObjectItem * const this /* r30 */) {}
+// this: r30
+ObjectItem::~ObjectItem() {}
 
 // Range: 0x8011E39C -> 0x8011E3A4
 int ObjectItem::GetGuid() {}
@@ -29,7 +31,8 @@ signed short ObjectItem::GetOwnershipPoints() {}
 void ObjectItem::SetupOwnershipInfo() {}
 
 // Range: 0x8011E3C0 -> 0x8011E428
-void * OwnableItem::~OwnableItem(class OwnableItem * const this /* r30 */) {}
+// this: r30
+OwnableItem::~OwnableItem() {}
 
 // Range: 0x8011E428 -> 0x8011E430
 signed char OwnableItem::GetCategory() {}

@@ -8,12 +8,6 @@
 unsigned int EREdithTreeSet::GetNumTrees() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\common\engine\resource\e_redithtreeset.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x802F0714 -> 0x802F08D4
-*/
 // Range: 0x802F0714 -> 0x802F0734
 void EREdithTreeSet::SafeDelete() {}
 

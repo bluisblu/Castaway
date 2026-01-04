@@ -5,7 +5,8 @@
     Code range: 0x801B48E0 -> 0x801B5B30
 */
 // Range: 0x801B48E0 -> 0x801B4C88
-void * MOTTarget::MOTTarget(class MOTTarget * const this /* r31 */) {
+// this: r31
+MOTTarget::MOTTarget() {
     // Local variables
     int i; // r26
 
@@ -33,14 +34,16 @@ void * MOTTarget::MOTTarget(class MOTTarget * const this /* r31 */) {
 }
 
 // Range: 0x801B4C88 -> 0x801B4D40
-void * MOTTarget::~MOTTarget(class MOTTarget * const this /* r30 */) {
+// this: r30
+MOTTarget::~MOTTarget() {
     // References
     // -> class EGlobal _globals;
     // -> struct [anonymous] __vt__9MOTTarget;
 }
 
 // Range: 0x801B4D40 -> 0x801B4E3C
-void MOTTarget::SetVariable(class MOTTarget * const this /* r30 */, const char * szCommand /* r31 */) {
+// this: r30
+void MOTTarget::SetVariable(const char * szCommand /* r31 */) {
     // References
     // -> static const char * const MOT_loaded;
     // -> static const char * const MOT_hide_callback;
@@ -51,7 +54,8 @@ void MOTTarget::SetVariable(class MOTTarget * const this /* r30 */, const char *
 }
 
 // Range: 0x801B4E3C -> 0x801B4F68
-char * MOTTarget::GetVariable(class MOTTarget * const this /* r29 */, const char * szVar /* r30 */) {
+// this: r29
+char * MOTTarget::GetVariable(const char * szVar /* r30 */) {
     // Local variables
     char * retStr; // r31
 
@@ -72,10 +76,12 @@ unsigned short * MOTTarget::GetLocalizable(const char * szVar /* r31 */) {
 }
 
 // Range: 0x801B50F0 -> 0x801B514C
-void MOTTarget::SetAlpha(class MOTTarget * const this /* r30 */, unsigned int value /* r31 */) {}
+// this: r30
+void MOTTarget::SetAlpha(unsigned int value /* r31 */) {}
 
 // Range: 0x801B514C -> 0x801B5314
-void MOTTarget::Update(class MOTTarget * const this /* r30 */) {
+// this: r30
+void MOTTarget::Update() {
     // References
     // -> static const char * const MOT_text_hide_callback;
     // -> static const char * const MOT_text_show_callback;
@@ -85,7 +91,8 @@ void MOTTarget::Update(class MOTTarget * const this /* r30 */) {
 }
 
 // Range: 0x801B5314 -> 0x801B54E8
-void MOTTarget::ShowMotives(class MOTTarget * const this /* r26 */) {
+// this: r26
+void MOTTarget::ShowMotives() {
     // Local variables
     int i; // r30
     int yPosition; // r29
@@ -96,13 +103,15 @@ void MOTTarget::ShowMotives(class MOTTarget * const this /* r26 */) {
 }
 
 // Range: 0x801B54E8 -> 0x801B5500
-unsigned char MOTTarget::HideMotives(class MOTTarget * const this /* r4 */) {
+// this: r4
+unsigned char MOTTarget::HideMotives() {
     // Local variables
     unsigned char ret; // r0
 }
 
 // Range: 0x801B5500 -> 0x801B588C
-void MOTTarget::UpdateMotiveBars(class MOTTarget * const this /* r25 */) {
+// this: r25
+void MOTTarget::UpdateMotiveBars() {
     // Local variables
     unsigned char skipAnimation; // r27
     class cXPerson * person; // r3
@@ -123,7 +132,8 @@ void MOTTarget::UpdateMotiveBars(class MOTTarget * const this /* r25 */) {
 }
 
 // Range: 0x801B588C -> 0x801B59C4
-int MOTTarget::ReadMotiveBar(class MOTTarget * const this /* r29 */, int barNumber /* r30 */) {
+// this: r29
+int MOTTarget::ReadMotiveBar(int barNumber /* r30 */) {
     // Local variables
     class cXPerson * pPerson; // r31
     int motiveNumber; // r0
@@ -134,7 +144,8 @@ int MOTTarget::ReadMotiveBar(class MOTTarget * const this /* r29 */, int barNumb
 }
 
 // Range: 0x801B59C4 -> 0x801B5A48
-void MOTTarget::ResetRealMotiveValues(class MOTTarget * const this /* r27 */) {
+// this: r27
+void MOTTarget::ResetRealMotiveValues() {
     // Local variables
     int barNumber; // r29
     int motiveNumber; // r0
@@ -152,7 +163,8 @@ void MOTTarget::SetTextButtonPressed() {}
 int MOTTarget::MapMotiveIDFromBar() {}
 
 // Range: 0x801B5AC4 -> 0x801B5B30
-int MOTTarget::CountUnlockedMotives(class MOTTarget * const this /* r29 */) {
+// this: r29
+int MOTTarget::CountUnlockedMotives() {
     // Local variables
     int count; // r31
     int i; // r30

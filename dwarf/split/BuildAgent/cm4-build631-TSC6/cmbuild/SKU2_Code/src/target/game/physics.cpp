@@ -5,9 +5,11 @@
     Code range: 0x8023E448 -> 0x8023E4E4
 */
 // Range: 0x8023E448 -> 0x8023E4A4
-void * Physics::Physics(class Physics * const this /* r31 */) {}
+// this: r31
+Physics::Physics() {}
 
 // Range: 0x8023E4A4 -> 0x8023E4E4
-void * Physics::~Physics(class Physics * const this /* r31 */) {}
+// this: r31
+Physics::~Physics() {}
 
 

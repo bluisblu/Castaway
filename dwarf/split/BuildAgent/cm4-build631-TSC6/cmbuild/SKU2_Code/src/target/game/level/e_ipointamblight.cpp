@@ -5,19 +5,23 @@
     Code range: 0x80085770 -> 0x80085954
 */
 // Range: 0x80085770 -> 0x80085800
-void * EIPointAmbLight::EIPointAmbLight(class EIPointAmbLight * const this /* r31 */) {
+// this: r31
+EIPointAmbLight::EIPointAmbLight() {
     // References
     // -> struct [anonymous] __vt__15EIPointAmbLight;
 }
 
 // Range: 0x80085800 -> 0x8008585C
-void EIPointAmbLight::Write(class EIPointAmbLight * const this /* r30 */, class EStream & s /* r31 */) {}
+// this: r30
+void EIPointAmbLight::Write(class EStream & s /* r31 */) {}
 
 // Range: 0x8008585C -> 0x800858C8
-void EIPointAmbLight::Read(class EIPointAmbLight * const this /* r30 */, class EStream & s /* r31 */) {}
+// this: r30
+void EIPointAmbLight::Read(class EStream & s /* r31 */) {}
 
 // Range: 0x800858C8 -> 0x80085954
-void EIPointAmbLight::Setup(class EIPointAmbLight * const this /* r31 */) {
+// this: r31
+void EIPointAmbLight::Setup() {
     // Local variables
     class EBound3 b; // r1+0x20
 }

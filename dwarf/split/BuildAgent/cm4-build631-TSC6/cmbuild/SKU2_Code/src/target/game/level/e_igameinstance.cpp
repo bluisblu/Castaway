@@ -5,18 +5,21 @@
     Code range: 0x800840F0 -> 0x800841F8
 */
 // Range: 0x800840F0 -> 0x8008415C
-void DigestGeomShaderPtr::UpdateShaderFlags(class DigestGeomShaderPtr * const this /* r30 */) {
+// this: r30
+void DigestGeomShaderPtr::UpdateShaderFlags() {
     // Local variables
     class EShader * shader; // r31
 }
 
 // Range: 0x8008415C -> 0x800841A0
-void * EIGameInstance::EIGameInstance(class EIGameInstance * const this /* r31 */) {
+// this: r31
+EIGameInstance::EIGameInstance() {
     // References
     // -> struct [anonymous] __vt__14EIGameInstance;
 }
 
 // Range: 0x800841A0 -> 0x800841F8
-void * EIGameInstance::~EIGameInstance(class EIGameInstance * const this /* r30 */) {}
+// this: r30
+EIGameInstance::~EIGameInstance() {}
 
 

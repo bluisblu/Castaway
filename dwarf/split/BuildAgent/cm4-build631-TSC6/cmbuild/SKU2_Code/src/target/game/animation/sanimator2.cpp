@@ -20,7 +20,8 @@ static void HandleEffectNote(const struct EAnimNote & event /* r29 */, enum Prop
 }
 
 // Range: 0x80007EC8 -> 0x80008278
-void * SAnimator2::SAnimator2(class SAnimator2 * const this /* r29 */) {
+// this: r29
+SAnimator2::SAnimator2() {
     // Local variables
     int i; // r30
     int i; // r0
@@ -32,7 +33,8 @@ void * SAnimator2::SAnimator2(class SAnimator2 * const this /* r29 */) {
 }
 
 // Range: 0x80008278 -> 0x800084B8
-void * SAnimator2::~SAnimator2(class SAnimator2 * const this /* r30 */) {
+// this: r30
+SAnimator2::~SAnimator2() {
     // Local variables
     class CasSimDescription & currentSimDesc; // r0
 
@@ -43,7 +45,8 @@ void * SAnimator2::~SAnimator2(class SAnimator2 * const this /* r30 */) {
 }
 
 // Range: 0x800084B8 -> 0x800085D0
-unsigned char SAnimator2::Initialize(class SAnimator2 * const this /* r30 */) {}
+// this: r30
+unsigned char SAnimator2::Initialize() {}
 
 // Range: 0x800085D0 -> 0x800085D4
 void SAnimator2::SetIsRaining() {}
@@ -52,16 +55,19 @@ void SAnimator2::SetIsRaining() {}
 void SAnimator2::Render() {}
 
 // Range: 0x800085D8 -> 0x80008698
-enum TreeReturnCode SAnimator2::TryChangeSuit(class SAnimator2 * const this /* r31 */) {
+// this: r31
+enum TreeReturnCode SAnimator2::TryChangeSuit() {
     // Local variables
     const struct NPC * pServiceNPC; // r0
 }
 
 // Range: 0x80008698 -> 0x80008704
-void SAnimator2::checkParticleCleanup(class SAnimator2 * const this /* r31 */) {}
+// this: r31
+void SAnimator2::checkParticleCleanup() {}
 
 // Range: 0x80008704 -> 0x80008A14
-void SAnimator2::updateFreeMoveState(class SAnimator2 * const this /* r31 */) {
+// this: r31
+void SAnimator2::updateFreeMoveState() {
     // Local variables
     float DeltaTime; // f31
     float fDeltaDir; // f30
@@ -73,16 +79,19 @@ void SAnimator2::updateFreeMoveState(class SAnimator2 * const this /* r31 */) {
 }
 
 // Range: 0x80008A14 -> 0x80008B18
-enum eLocomotionState SAnimator2::GetCurrentLocomotionState(class SAnimator2 * const this /* r31 */) {
+// this: r31
+enum eLocomotionState SAnimator2::GetCurrentLocomotionState() {
     // References
     // -> class EGlobal _globals;
 }
 
 // Range: 0x80008B18 -> 0x80008B60
-void SAnimator2::EndWaterParticleEffect(class SAnimator2 * const this /* r31 */) {}
+// this: r31
+void SAnimator2::EndWaterParticleEffect() {}
 
 // Range: 0x80008B60 -> 0x80008CBC
-void SAnimator2::SpawnWaterParticleEffect(class SAnimator2 * const this /* r31 */) {
+// this: r31
+void SAnimator2::SpawnWaterParticleEffect() {
     // Local variables
     class REffectsAttachment * pParticleInfo; // r29
     const struct AttachmentNode & node; // r28
@@ -94,22 +103,27 @@ void SAnimator2::SpawnWaterParticleEffect(class SAnimator2 * const this /* r31 *
 }
 
 // Range: 0x80008CBC -> 0x80008D7C
-void SAnimator2::updateMovementState(class SAnimator2 * const this /* r31 */) {
+// this: r31
+void SAnimator2::updateMovementState() {
     // Local variables
     enum eLocomotionState curState; // r0
 }
 
 // Range: 0x80008D7C -> 0x80008E20
-void SAnimator2::Update(class SAnimator2 * const this /* r31 */) {}
+// this: r31
+void SAnimator2::Update() {}
 
 // Range: 0x80008E20 -> 0x80008E7C
-void SAnimator2::UpdateCheckDrawCurtain(class SAnimator2 * const this /* r31 */) {}
+// this: r31
+void SAnimator2::UpdateCheckDrawCurtain() {}
 
 // Range: 0x80008E7C -> 0x80008F28
-void SAnimator2::UpdateSetTimeMultiplier(class SAnimator2 * const this /* r30 */) {}
+// this: r30
+void SAnimator2::UpdateSetTimeMultiplier() {}
 
 // Range: 0x80008F28 -> 0x8000918C
-void SAnimator2::UpdateProcessSkillEvents(class SAnimator2 * const this /* r31 */) {
+// this: r31
+void SAnimator2::UpdateProcessSkillEvents() {
     // Local variables
     float fTickUpdateTime; // f31
     class ERAnim * pAnim; // r0
@@ -123,16 +137,19 @@ void SAnimator2::UpdateProcessSkillEvents(class SAnimator2 * const this /* r31 *
 }
 
 // Range: 0x8000918C -> 0x800091D8
-void SAnimator2::adjustAnimationPlayRates(class SAnimator2 * const this /* r31 */) {}
+// this: r31
+void SAnimator2::adjustAnimationPlayRates() {}
 
 // Range: 0x800091D8 -> 0x800092DC
-void SAnimator2::Reset(class SAnimator2 * const this /* r29 */) {
+// this: r29
+void SAnimator2::Reset() {
     // References
     // -> class EAnimManager _animman;
 }
 
 // Range: 0x800092DC -> 0x80009340
-void SAnimator2::ClearLowMotivePendingAnim(class SAnimator2 * const this /* r31 */) {
+// this: r31
+void SAnimator2::ClearLowMotivePendingAnim() {
     // References
     // -> class EAnimManager _animman;
 }
@@ -147,7 +164,8 @@ void SAnimator2::SnapToGrid() {}
 void SAnimator2::ForceLocation() {}
 
 // Range: 0x80009360 -> 0x8000954C
-enum TreeReturnCode SAnimator2::resolveSkillForPrimitive(class SAnimator2 * const this /* r26 */, class StackElem * elem /* r31 */, const class IdleAnimateParam * param /* r27 */, const struct AnimRef * & theSkill /* r28 */, unsigned char & scale /* r29 */) {
+// this: r26
+enum TreeReturnCode SAnimator2::resolveSkillForPrimitive(class StackElem * elem /* r31 */, const class IdleAnimateParam * param /* r27 */, const struct AnimRef * & theSkill /* r28 */, unsigned char & scale /* r29 */) {
     // Local variables
     class cXObject * obj; // r31
     signed short animID; // r30
@@ -158,7 +176,8 @@ enum TreeReturnCode SAnimator2::resolveSkillForPrimitive(class SAnimator2 * cons
 }
 
 // Range: 0x8000954C -> 0x80009728
-enum TreeReturnCode SAnimator2::resolveSkillForPrimitive(class SAnimator2 * const this /* r26 */, class StackElem * elem /* r27 */, const class AnimateNewParam * param /* r28 */, const struct AnimRef * & theSkill /* r29 */, unsigned char & scale /* r30 */) {
+// this: r26
+enum TreeReturnCode SAnimator2::resolveSkillForPrimitive(class StackElem * elem /* r27 */, const class AnimateNewParam * param /* r28 */, const struct AnimRef * & theSkill /* r29 */, unsigned char & scale /* r30 */) {
     // Local variables
     class cXObject * obj; // r3
     signed short animID; // r31
@@ -168,7 +187,8 @@ enum TreeReturnCode SAnimator2::resolveSkillForPrimitive(class SAnimator2 * cons
 }
 
 // Range: 0x80009728 -> 0x800097E0
-enum TreeReturnCode SAnimator2::loadSkillAnim(class SAnimator2 * const this /* r28 */, const struct AnimRef * skill /* r29 */) {
+// this: r28
+enum TreeReturnCode SAnimator2::loadSkillAnim(const struct AnimRef * skill /* r29 */) {
     // Local variables
     unsigned int animID; // r30
 
@@ -177,7 +197,8 @@ enum TreeReturnCode SAnimator2::loadSkillAnim(class SAnimator2 * const this /* r
 }
 
 // Range: 0x800097E0 -> 0x80009AF8
-enum TreeReturnCode SAnimator2::TryIdleAnimate(class SAnimator2 * const this /* r29 */, class StackElem * elem /* r27 */, class IdleAnimateParam * param /* r30 */) {
+// this: r29
+enum TreeReturnCode SAnimator2::TryIdleAnimate(class StackElem * elem /* r27 */, class IdleAnimateParam * param /* r30 */) {
     // Local variables
     signed short animID; // r28
     enum TreeReturnCode code; // r31
@@ -193,7 +214,8 @@ enum TreeReturnCode SAnimator2::TryIdleAnimate(class SAnimator2 * const this /* 
 }
 
 // Range: 0x80009AF8 -> 0x80009CB8
-enum TreeReturnCode SAnimator2::SelectAlgorithmicIdle(class SAnimator2 * const this /* r27 */, const struct AnimRef * & skill /* r28 */, unsigned char & scale /* r29 */) {
+// this: r27
+enum TreeReturnCode SAnimator2::SelectAlgorithmicIdle(const struct AnimRef * & skill /* r28 */, unsigned char & scale /* r29 */) {
     // Local variables
     enum TreeReturnCode code; // r3
     int desiredAnim; // r30
@@ -203,7 +225,8 @@ enum TreeReturnCode SAnimator2::SelectAlgorithmicIdle(class SAnimator2 * const t
 }
 
 // Range: 0x80009CB8 -> 0x80009F14
-enum TreeReturnCode SAnimator2::TryAnimate(class SAnimator2 * const this /* r26 */, class StackElem * elem /* r27 */, const class AnimateNewParam * param /* r28 */) {
+// this: r26
+enum TreeReturnCode SAnimator2::TryAnimate(class StackElem * elem /* r27 */, const class AnimateNewParam * param /* r28 */) {
     // Local variables
     enum TreeReturnCode result; // r1+0x14
     int eventNumber; // r1+0x10
@@ -218,7 +241,8 @@ enum TreeReturnCode SAnimator2::TryAnimate(class SAnimator2 * const this /* r26 
 void SAnimator2::SetAnimDisplacements() {}
 
 // Range: 0x80009F18 -> 0x8000A0C8
-void SAnimator2::BeginFollow(class SAnimator2 * const this /* r29 */, float routeDistance /* f31 */) {
+// this: r29
+void SAnimator2::BeginFollow(float routeDistance /* f31 */) {
     // Local variables
     enum eFollowMode followMode; // r30
     int x; // r0
@@ -230,7 +254,8 @@ void SAnimator2::BeginFollow(class SAnimator2 * const this /* r29 */, float rout
 }
 
 // Range: 0x8000A0C8 -> 0x8000A1AC
-void SAnimator2::determineWalkRunStyle(class SAnimator2 * const this /* r31 */, float routeDistance /* f31 */) {
+// this: r31
+void SAnimator2::determineWalkRunStyle(float routeDistance /* f31 */) {
     // Local variables
     enum eWalkRunStyle runWalkStyle; // r3
 }
@@ -239,7 +264,8 @@ void SAnimator2::determineWalkRunStyle(class SAnimator2 * const this /* r31 */, 
 enum eFollowMode SAnimator2::determineFirstFollowMode() {}
 
 // Range: 0x8000A1D0 -> 0x8000A354
-enum TreeReturnCode SAnimator2::FollowOneStep(class SAnimator2 * const this /* r27 */) {
+// this: r27
+enum TreeReturnCode SAnimator2::FollowOneStep() {
     // Local variables
     enum TreeReturnCode result; // r29
     class FTilePt goal; // r1+0x8
@@ -249,13 +275,15 @@ enum TreeReturnCode SAnimator2::FollowOneStep(class SAnimator2 * const this /* r
 }
 
 // Range: 0x8000A354 -> 0x8000A438
-unsigned char SAnimator2::EndFollow(class SAnimator2 * const this /* r30 */) {
+// this: r30
+unsigned char SAnimator2::EndFollow() {
     // Local variables
     unsigned char bRetVal; // r31
 }
 
 // Range: 0x8000A438 -> 0x8000A5A4
-void SAnimator2::StartDefaultIdle(class SAnimator2 * const this /* r29 */) {
+// this: r29
+void SAnimator2::StartDefaultIdle() {
     // Local variables
     class EACTrack * pTrack; // r31
     int desiredAnim; // r30
@@ -278,14 +306,16 @@ int SAnimator2::IsFollowing() {}
 int SAnimator2::IsInterruptable() {}
 
 // Range: 0x8000A620 -> 0x8000A6B0
-int SAnimator2::DequeueAnimEvent(class SAnimator2 * const this /* r29 */, int * number /* r30 */) {
+// this: r29
+int SAnimator2::DequeueAnimEvent(int * number /* r30 */) {
     // Local variables
     int result; // r31
     int qsize; // r0
 }
 
 // Range: 0x8000A6B0 -> 0x8000A9C8
-void SAnimator2::ReconStream(class SAnimator2 * const this /* r30 */, class ReconBuffer * r /* r31 */, int version /* r27 */) {
+// this: r30
+void SAnimator2::ReconStream(class ReconBuffer * r /* r31 */, int version /* r27 */) {
     // Local variables
     signed short count; // r1+0xE
     int i; // r28
@@ -305,13 +335,15 @@ void SAnimator2::ReconStream(class SAnimator2 * const this /* r30 */, class Reco
 }
 
 // Range: 0x8000A9C8 -> 0x8000AA64
-void SAnimator2::Dress(class SAnimator2 * const this /* r29 */, const struct PropRef * pProp /* r30 */) {
+// this: r29
+void SAnimator2::Dress(const struct PropRef * pProp /* r30 */) {
     // Local variables
     unsigned int id; // r31
 }
 
 // Range: 0x8000AA64 -> 0x8000AAEC
-void SAnimator2::AddProp(class SAnimator2 * const this /* r29 */, unsigned int id /* r30 */, unsigned char bShowInWindow /* r31 */) {
+// this: r29
+void SAnimator2::AddProp(unsigned int id /* r30 */, unsigned char bShowInWindow /* r31 */) {
     // Local variables
     struct EPropItem * Prop; // r1+0x8
 
@@ -320,7 +352,8 @@ void SAnimator2::AddProp(class SAnimator2 * const this /* r29 */, unsigned int i
 }
 
 // Range: 0x8000AAEC -> 0x8000AB70
-void SAnimator2::RemoveProp(class SAnimator2 * const this /* r30 */, unsigned int id /* r31 */) {
+// this: r30
+void SAnimator2::RemoveProp(unsigned int id /* r31 */) {
     // References
     // -> class EModelManager _modelman;
 }
@@ -335,7 +368,8 @@ unsigned char SAnimator2::PreloadDress(const struct PropRef * pProp /* r31 */) {
 }
 
 // Range: 0x8000ABCC -> 0x8000AC40
-void SAnimator2::Undress(class SAnimator2 * const this /* r30 */, const struct PropRef * pProp /* r31 */) {
+// this: r30
+void SAnimator2::Undress(const struct PropRef * pProp /* r31 */) {
     // Local variables
     unsigned int id; // r0
     int index; // r4
@@ -348,7 +382,8 @@ int SAnimator2::getPersonX() {}
 int SAnimator2::getPersonY() {}
 
 // Range: 0x8000AC90 -> 0x8000AD08
-float SAnimator2::getPersonZ(class SAnimator2 * const this /* r30 */) {
+// this: r30
+float SAnimator2::getPersonZ() {
     // Local variables
     float zOffset; // f31
     class cXObject * pContainer; // r31
@@ -356,19 +391,22 @@ float SAnimator2::getPersonZ(class SAnimator2 * const this /* r30 */) {
 }
 
 // Range: 0x8000AD08 -> 0x8000AD54
-void SAnimator2::DetachMonitoredTrack(class SAnimator2 * const this /* r31 */) {
+// this: r31
+void SAnimator2::DetachMonitoredTrack() {
     // References
     // -> float kFastRemoveBlendTime;
 }
 
 // Range: 0x8000AD54 -> 0x8000ADC0
-void SAnimator2::setFirstFollowMode(class SAnimator2 * const this /* r31 */) {}
+// this: r31
+void SAnimator2::setFirstFollowMode() {}
 
 // Range: 0x8000ADC0 -> 0x8000AE00
 void SAnimator2::setFollowDone() {}
 
 // Range: 0x8000AE00 -> 0x8000B058
-unsigned char SAnimator2::endFollowDone(class SAnimator2 * const this /* r30 */) {
+// this: r30
+unsigned char SAnimator2::endFollowDone() {
     // Local variables
     int size; // r0
     class EACTrack * pTrack; // r29
@@ -383,13 +421,15 @@ unsigned char SAnimator2::endFollowDone(class SAnimator2 * const this /* r30 */)
 }
 
 // Range: 0x8000B058 -> 0x8000B0F8
-unsigned char SAnimator2::followStandToTurnUpdate(class SAnimator2 * const this /* r29 */, float & DesiredDir /* r30 */, float & DeltaDir /* r31 */, float DeltaTime /* f31 */) {
+// this: r29
+unsigned char SAnimator2::followStandToTurnUpdate(float & DesiredDir /* r30 */, float & DeltaDir /* r31 */, float DeltaTime /* f31 */) {
     // Local variables
     unsigned char bRetVal; // r0
 }
 
 // Range: 0x8000B0F8 -> 0x8000B2DC
-unsigned char SAnimator2::followSidestepUpdate(class SAnimator2 * const this /* r27 */, float & DesiredDir /* r28 */, float & DeltaDir /* r29 */, float DeltaTime /* r1+0x8 */) {
+// this: r27
+unsigned char SAnimator2::followSidestepUpdate(float & DesiredDir /* r28 */, float & DeltaDir /* r29 */, float DeltaTime /* r1+0x8 */) {
     // Local variables
     unsigned char bRetVal; // r30
     int size; // r0
@@ -400,7 +440,8 @@ unsigned char SAnimator2::followSidestepUpdate(class SAnimator2 * const this /* 
 }
 
 // Range: 0x8000B2DC -> 0x8000B5DC
-void SAnimator2::SetMovingTurnRate(class SAnimator2 * const this /* r30 */, float deltaDir /* f31 */) {
+// this: r30
+void SAnimator2::SetMovingTurnRate(float deltaDir /* f31 */) {
     // Local variables
     class EVec2 dist; // r1+0x8
     float cos2Theta; // f0
@@ -413,26 +454,30 @@ void SAnimator2::SetMovingTurnRate(class SAnimator2 * const this /* r30 */, floa
 }
 
 // Range: 0x8000B5DC -> 0x8000B710
-unsigned char SAnimator2::followMiddleUpdate(class SAnimator2 * const this /* r26 */, float & DesiredDir /* r27 */, float & DeltaDir /* r28 */, float DeltaTime /* r1+0x8 */) {
+// this: r26
+unsigned char SAnimator2::followMiddleUpdate(float & DesiredDir /* r27 */, float & DeltaDir /* r28 */, float DeltaTime /* r1+0x8 */) {
     // Local variables
     unsigned char bRetVal; // r30
     int size; // r29
 }
 
 // Range: 0x8000B710 -> 0x8000B7B4
-unsigned char SAnimator2::followMoveToTurnUpdate(class SAnimator2 * const this /* r29 */, float & DesiredDir /* r30 */, float & DeltaDir /* r31 */, float DeltaTime /* f31 */) {
+// this: r29
+unsigned char SAnimator2::followMoveToTurnUpdate(float & DesiredDir /* r30 */, float & DeltaDir /* r31 */, float DeltaTime /* f31 */) {
     // Local variables
     unsigned char bRetVal; // r0
 }
 
 // Range: 0x8000B7B4 -> 0x8000B864
-unsigned char SAnimator2::followDoneUpdate(class SAnimator2 * const this /* r29 */, float & DesiredDir /* r30 */, float & DeltaDir /* r31 */, float DeltaTime /* f31 */) {
+// this: r29
+unsigned char SAnimator2::followDoneUpdate(float & DesiredDir /* r30 */, float & DeltaDir /* r31 */, float DeltaTime /* f31 */) {
     // Local variables
     unsigned char bRetVal; // r0
 }
 
 // Range: 0x8000B864 -> 0x8000B9A4
-void SAnimator2::endMoveAnimation(class SAnimator2 * const this /* r29 */) {
+// this: r29
+void SAnimator2::endMoveAnimation() {
     // Local variables
     class FTilePt goal; // r1+0x8
     int level; // r30
@@ -441,7 +486,8 @@ void SAnimator2::endMoveAnimation(class SAnimator2 * const this /* r29 */) {
 }
 
 // Range: 0x8000B9A4 -> 0x8000BB1C
-void SAnimator2::UpdatePortalMode(class SAnimator2 * const this /* r31 */) {
+// this: r31
+void SAnimator2::UpdatePortalMode() {
     // Local variables
     int rsSize; // r0
     int size; // r0
@@ -452,7 +498,8 @@ void SAnimator2::UpdatePortalMode(class SAnimator2 * const this /* r31 */) {
 }
 
 // Range: 0x8000BB1C -> 0x8000BE3C
-void SAnimator2::moveAnimation(class SAnimator2 * const this /* r28 */) {
+// this: r28
+void SAnimator2::moveAnimation() {
     // Local variables
     float DesiredDir; // r1+0xC
     float DeltaDir; // r1+0x8
@@ -469,13 +516,15 @@ void SAnimator2::moveAnimation(class SAnimator2 * const this /* r28 */) {
 void SAnimator2::setFollowMiddle() {}
 
 // Range: 0x8000BE64 -> 0x8000BEBC
-void SAnimator2::updateDesiredAndDeltaDir(class SAnimator2 * const this /* r29 */, float & DesiredDir /* r30 */, float & DeltaDir /* r31 */) {}
+// this: r29
+void SAnimator2::updateDesiredAndDeltaDir(float & DesiredDir /* r30 */, float & DeltaDir /* r31 */) {}
 
 // Range: 0x8000BEBC -> 0x8000BEF8
 void SAnimator2::setFollowEnd() {}
 
 // Range: 0x8000BEF8 -> 0x8000C154
-void SAnimator2::awarenessMove(class SAnimator2 * const this /* r30 */) {
+// this: r30
+void SAnimator2::awarenessMove() {
     // Local variables
     float DeltaDir; // r1+0x8
     unsigned char bContinueMove; // r31
@@ -488,7 +537,8 @@ void SAnimator2::awarenessMove(class SAnimator2 * const this /* r30 */) {
 }
 
 // Range: 0x8000C154 -> 0x8000C3CC
-void SAnimator2::setMovementVelocityFromAnimation(class SAnimator2 * const this /* r29 */) {
+// this: r29
+void SAnimator2::setMovementVelocityFromAnimation() {
     // Local variables
     int trans; // r4
     class EVec3 vTrans; // r1+0x1C
@@ -515,13 +565,15 @@ float SAnimator2::getAnimDuration() {
 }
 
 // Range: 0x8000C484 -> 0x8000C534
-void SAnimator2::initShuffleRotation(class SAnimator2 * const this /* r31 */, float DeltaDir /* f30 */) {
+// this: r31
+void SAnimator2::initShuffleRotation(float DeltaDir /* f30 */) {
     // Local variables
     float animDurationInSeconds; // f0
 }
 
 // Range: 0x8000C534 -> 0x8000C720
-float SAnimator2::setRotationRateFromShuffleDir(class SAnimator2 * const this /* r26 */, int ShuffleDir /* r27 */) {
+// this: r26
+float SAnimator2::setRotationRateFromShuffleDir(int ShuffleDir /* r27 */) {
     // Local variables
     unsigned int valueFlag; // r30
     unsigned int turnVelocityIndex; // r29
@@ -551,14 +603,16 @@ float SAnimator2::getDeltaDirFromDesiredDir() {
 }
 
 // Range: 0x8000C83C -> 0x8000CAB8
-float SAnimator2::getDesiredDir(class SAnimator2 * const this /* r31 */) {
+// this: r31
+float SAnimator2::getDesiredDir() {
     // Local variables
     float DesiredDir; // f1
     class EVec2 TempVec; // r1+0x8
 }
 
 // Range: 0x8000CAB8 -> 0x8000CBCC
-float SAnimator2::GetTurnRate(class SAnimator2 * const this /* r31 */) {
+// this: r31
+float SAnimator2::GetTurnRate() {
     // Local variables
     float TurnRate; // f0
 
@@ -568,7 +622,8 @@ float SAnimator2::GetTurnRate(class SAnimator2 * const this /* r31 */) {
 }
 
 // Range: 0x8000CBCC -> 0x8000CE9C
-unsigned char SAnimator2::rotateAnimation(class SAnimator2 * const this /* r30 */, float DeltaTime /* f30 */, float DesiredDir /* f31 */, float DeltaDir /* f29 */) {
+// this: r30
+unsigned char SAnimator2::rotateAnimation(float DeltaTime /* f30 */, float DesiredDir /* f31 */, float DeltaDir /* f29 */) {
     // Local variables
     unsigned char bRetVal; // r31
     float TurnRate; // f0
@@ -581,7 +636,8 @@ unsigned char SAnimator2::rotateAnimation(class SAnimator2 * const this /* r30 *
 }
 
 // Range: 0x8000CE9C -> 0x8000D080
-void SAnimator2::sidestepAlongNode(class SAnimator2 * const this /* r29 */, float & DeltaTime /* r30 */) {
+// this: r29
+void SAnimator2::sidestepAlongNode(float & DeltaTime /* r30 */) {
     // Local variables
     class EVec2 Target; // r1+0x20
     float Velocity; // f30
@@ -592,7 +648,8 @@ void SAnimator2::sidestepAlongNode(class SAnimator2 * const this /* r29 */, floa
 }
 
 // Range: 0x8000D080 -> 0x8000D1C0
-void SAnimator2::advanceAlongNode(class SAnimator2 * const this /* r28 */, float & DeltaTime /* r29 */) {
+// this: r28
+void SAnimator2::advanceAlongNode(float & DeltaTime /* r29 */) {
     // Local variables
     class EVec2 Target; // r1+0x8
     int x; // r30
@@ -600,7 +657,8 @@ void SAnimator2::advanceAlongNode(class SAnimator2 * const this /* r28 */, float
 }
 
 // Range: 0x8000D1C0 -> 0x8000D27C
-float SAnimator2::GetWalkRunIntensityRatio(class SAnimator2 * const this /* r31 */) {
+// this: r31
+float SAnimator2::GetWalkRunIntensityRatio() {
     // Local variables
     float runVel; // f30
     float walkVel; // f1
@@ -609,13 +667,15 @@ float SAnimator2::GetWalkRunIntensityRatio(class SAnimator2 * const this /* r31 
 }
 
 // Range: 0x8000D27C -> 0x8000D30C
-void SAnimator2::UpdateWalkRunStyleForMovingTurns(class SAnimator2 * const this /* r31 */) {
+// this: r31
+void SAnimator2::UpdateWalkRunStyleForMovingTurns() {
     // Local variables
     float intensity; // f0
 }
 
 // Range: 0x8000D30C -> 0x8000D37C
-void SAnimator2::UpdateWalkRunMonitoredTrack(class SAnimator2 * const this /* r31 */) {}
+// this: r31
+void SAnimator2::UpdateWalkRunMonitoredTrack() {}
 
 // Range: 0x8000D37C -> 0x8000D384
 float SAnimator2::GetWalkToRunDistance() {}
@@ -624,7 +684,8 @@ float SAnimator2::GetWalkToRunDistance() {}
 float SAnimator2::GetRunToWalkDistance() {}
 
 // Range: 0x8000D38C -> 0x8000D680
-void SAnimator2::UpdateWalkRunAnimation(class SAnimator2 * const this /* r31 */) {
+// this: r31
+void SAnimator2::UpdateWalkRunAnimation() {
     // Local variables
     int dx1; // r30
     int dy1; // r29
@@ -643,7 +704,8 @@ void SAnimator2::UpdateWalkRunAnimation(class SAnimator2 * const this /* r31 */)
 }
 
 // Range: 0x8000D680 -> 0x8000D81C
-float SAnimator2::getUseSpeed(class SAnimator2 * const this /* r31 */, float maxSpeed /* f31 */, float dist /* f26 */, float deltaTime /* f27 */) {
+// this: r31
+float SAnimator2::getUseSpeed(float maxSpeed /* f31 */, float dist /* f26 */, float deltaTime /* f27 */) {
     // Local variables
     float acc; // f30
     float ThresholdDist; // f29
@@ -653,7 +715,8 @@ float SAnimator2::getUseSpeed(class SAnimator2 * const this /* r31 */, float max
 }
 
 // Range: 0x8000D81C -> 0x8000D964
-void SAnimator2::EnableWalkFade(class SAnimator2 * const this /* r30 */, unsigned int & uFlags /* r31 */, float dist /* f29 */, float maxSpeed /* f30 */, float rampUpTime /* f31 */) {
+// this: r30
+void SAnimator2::EnableWalkFade(unsigned int & uFlags /* r31 */, float dist /* f29 */, float maxSpeed /* f30 */, float rampUpTime /* f31 */) {
     // Local variables
     int size; // r0
     float acc; // f3
@@ -662,7 +725,8 @@ void SAnimator2::EnableWalkFade(class SAnimator2 * const this /* r30 */, unsigne
 }
 
 // Range: 0x8000D964 -> 0x8000DC18
-void SAnimator2::moveTowardsDestination(class SAnimator2 * const this /* r29 */, float & DeltaTime /* r30 */, class EVec2 & Target /* r31 */) {
+// this: r29
+void SAnimator2::moveTowardsDestination(float & DeltaTime /* r30 */, class EVec2 & Target /* r31 */) {
     // Local variables
     float MaxVelocity; // f31
     class EVec2 DirectionVec; // r1+0x18
@@ -676,14 +740,16 @@ void SAnimator2::moveTowardsDestination(class SAnimator2 * const this /* r29 */,
 }
 
 // Range: 0x8000DC18 -> 0x8000DE44
-void SAnimator2::setAnimationState(class SAnimator2 * const this /* r30 */) {
+// this: r30
+void SAnimator2::setAnimationState() {
     // Local variables
     enum eAnimState newAnimState; // r31
     int iCurrIdleState; // r3
 }
 
 // Range: 0x8000DE44 -> 0x8000E148
-void SAnimator2::updateRenderAnimation(class SAnimator2 * const this /* r29 */) {
+// this: r29
+void SAnimator2::updateRenderAnimation() {
     // Local variables
     int x; // r0
     int y; // r0
@@ -698,7 +764,8 @@ void SAnimator2::updateRenderAnimation(class SAnimator2 * const this /* r29 */) 
 }
 
 // Range: 0x8000E148 -> 0x8000E2D0
-void SAnimator2::updateParticles(class SAnimator2 * const this /* r27 */) {
+// this: r27
+void SAnimator2::updateParticles() {
     // Local variables
     class RBIteratorPtrType * i; // r30
     class TRedBlackTree * pList; // r0
@@ -722,7 +789,8 @@ float SAnimator2::GetMotiveMag(float val /* f2 */) {
 enum SurfaceType SAnimator2::GetSurfaceType() {}
 
 // Range: 0x8000E37C -> 0x8000E508
-void SAnimator2::playFootprint(class SAnimator2 * const this /* r26 */, const char * anim_event /* r27 */) {
+// this: r26
+void SAnimator2::playFootprint(const char * anim_event /* r27 */) {
     // Local variables
     enum SurfaceType surfaceType; // r0
     enum ShoeType shoeType; // r0
@@ -738,16 +806,19 @@ void SAnimator2::playFootprint(class SAnimator2 * const this /* r26 */, const ch
 float SAnimator2::GetAnimationTurnAngle(int m_ShuffleDir /* r30 */) {}
 
 // Range: 0x8000E5E4 -> 0x8000E820
-void SAnimator2::getTurnSkillID(class SAnimator2 * const this /* r28 */, const struct AnimRef * & SkillId /* r29 */, int ShuffleDir /* r27 */, unsigned char & isMirrored /* r30 */, unsigned char & scale /* r31 */) {}
+// this: r28
+void SAnimator2::getTurnSkillID(const struct AnimRef * & SkillId /* r29 */, int ShuffleDir /* r27 */, unsigned char & isMirrored /* r30 */, unsigned char & scale /* r31 */) {}
 
 // Range: 0x8000E820 -> 0x8000EB44
-void SAnimator2::getWalkRunSkillID(class SAnimator2 * const this /* r29 */, const struct AnimRef * & SkillId /* r30 */, unsigned char & scale /* r31 */) {
+// this: r29
+void SAnimator2::getWalkRunSkillID(const struct AnimRef * & SkillId /* r30 */, unsigned char & scale /* r31 */) {
     // References
     // -> class EAnimManager _animman;
 }
 
 // Range: 0x8000EB44 -> 0x8000EC18
-void SAnimator2::UpdateNPCAutoRun(class SAnimator2 * const this /* r31 */) {
+// this: r31
+void SAnimator2::UpdateNPCAutoRun() {
     // Local variables
     float pos; // f31
     const struct AnimRef * SkillId; // r1+0xC
@@ -759,13 +830,15 @@ void SAnimator2::UpdateNPCAutoRun(class SAnimator2 * const this /* r31 */) {
 }
 
 // Range: 0x8000EC18 -> 0x8000ECB4
-unsigned char SAnimator2::UpdateNPCAutoRunState(class SAnimator2 * const this /* r30 */) {
+// this: r30
+unsigned char SAnimator2::UpdateNPCAutoRunState() {
     // Local variables
     unsigned char bRetVal; // r31
 }
 
 // Range: 0x8000ECB4 -> 0x8000ED18
-void SAnimator2::SetupWalkRunCurveBlendTrack(class SAnimator2 * const this /* r30 */, class EACTrack * pTrack /* r31 */) {
+// this: r30
+void SAnimator2::SetupWalkRunCurveBlendTrack(class EACTrack * pTrack /* r31 */) {
     // Local variables
     float trackPos; // f0
 }
@@ -774,7 +847,8 @@ void SAnimator2::SetupWalkRunCurveBlendTrack(class SAnimator2 * const this /* r3
 void SAnimator2::handleSidestepAnimation() {}
 
 // Range: 0x8000ED38 -> 0x8000EEF8
-void SAnimator2::initSidestep(class SAnimator2 * const this /* r31 */) {
+// this: r31
+void SAnimator2::initSidestep() {
     // Local variables
     float intensity; // f31
     const struct AnimRef * ForwardSkillID; // r1+0x10
@@ -795,7 +869,8 @@ float SAnimator2::getSidestepIntensity() {
 }
 
 // Range: 0x8000EF44 -> 0x8000F100
-void SAnimator2::setSideStepSpeedFromAnimation(class SAnimator2 * const this /* r29 */, const struct AnimRef * SkillId /* r30 */) {
+// this: r29
+void SAnimator2::setSideStepSpeedFromAnimation(const struct AnimRef * SkillId /* r30 */) {
     // Local variables
     class EAnimNodeDataPos * pNodeDataPos; // r0
     struct EACTrackNodeStreams * pStreams; // r5
@@ -814,21 +889,24 @@ void SAnimator2::setSideStepSpeedFromAnimation(class SAnimator2 * const this /* 
 }
 
 // Range: 0x8000F100 -> 0x8000F21C
-void SAnimator2::getSidestepSkillIDs(class SAnimator2 * const this /* r28 */, const struct AnimRef * & ForwardSkillID /* r29 */, unsigned char & fwdScale /* r30 */) {
+// this: r28
+void SAnimator2::getSidestepSkillIDs(const struct AnimRef * & ForwardSkillID /* r29 */, unsigned char & fwdScale /* r30 */) {
     // Local variables
     unsigned char bForward; // r31
     unsigned char bRight; // r0
 }
 
 // Range: 0x8000F21C -> 0x8000F4F8
-void SAnimator2::handleWalkRunAnimation(class SAnimator2 * const this /* r31 */) {
+// this: r31
+void SAnimator2::handleWalkRunAnimation() {
     // Local variables
     float intensity; // f0
     float fVelocityRatio; // f1
 }
 
 // Range: 0x8000F4F8 -> 0x8000F5AC
-void SAnimator2::initWalkRunFadeOut(class SAnimator2 * const this /* r31 */) {
+// this: r31
+void SAnimator2::initWalkRunFadeOut() {
     // Local variables
     const struct AnimRef * SkillId; // r1+0x10
     class EACTrack * pTrack; // r1+0xC
@@ -837,7 +915,8 @@ void SAnimator2::initWalkRunFadeOut(class SAnimator2 * const this /* r31 */) {
 }
 
 // Range: 0x8000F5AC -> 0x8000F8C8
-void SAnimator2::initWalkRun(class SAnimator2 * const this /* r31 */) {
+// this: r31
+void SAnimator2::initWalkRun() {
     // Local variables
     const struct AnimRef * SkillId; // r1+0x14
     class EACTrack * pTrack; // r1+0x10
@@ -853,10 +932,12 @@ void SAnimator2::initWalkRun(class SAnimator2 * const this /* r31 */) {
 }
 
 // Range: 0x8000F8C8 -> 0x8000F964
-void SAnimator2::getMotionCurveSkillID(class SAnimator2 * const this /* r29 */, const struct AnimRef * & SkillId /* r30 */, unsigned char & scale /* r31 */) {}
+// this: r29
+void SAnimator2::getMotionCurveSkillID(const struct AnimRef * & SkillId /* r30 */, unsigned char & scale /* r31 */) {}
 
 // Range: 0x8000F964 -> 0x8000FB5C
-void SAnimator2::CheckCollision(class SAnimator2 * const this /* r28 */, class EVec2 & startPosSimCoords /* r30 */, class EVec2 & endPosSimCoords /* r29 */) {
+// this: r28
+void SAnimator2::CheckCollision(class EVec2 & startPosSimCoords /* r30 */, class EVec2 & endPosSimCoords /* r29 */) {
     // Local variables
     class EVec2 stopPos; // r1+0x18
     float simCollisionRadius; // f31
@@ -869,7 +950,8 @@ void SAnimator2::CheckCollision(class SAnimator2 * const this /* r28 */, class E
 }
 
 // Range: 0x8000FB5C -> 0x8001002C
-void SAnimator2::handleFreeMoveWalkRunAnimation(class SAnimator2 * const this /* r31 */) {
+// this: r31
+void SAnimator2::handleFreeMoveWalkRunAnimation() {
     // Local variables
     class EVec3 lastPosition; // r1+0x40
     enum eWalkRunStyle runWalkStyle; // r29
@@ -894,7 +976,8 @@ void SAnimator2::handleFreeMoveWalkRunAnimation(class SAnimator2 * const this /*
 }
 
 // Range: 0x8001002C -> 0x80010188
-void SAnimator2::handleRunStopAnimation(class SAnimator2 * const this /* r30 */) {
+// this: r30
+void SAnimator2::handleRunStopAnimation() {
     // Local variables
     unsigned char scale; // r1+0x8
     class EACTrack * pTrack; // r31
@@ -913,10 +996,12 @@ unsigned char SAnimator2::getIsLeftFootUp() {
 }
 
 // Range: 0x800101DC -> 0x80010290
-void SAnimator2::SetNextStateFromCompletedTurn(class SAnimator2 * const this /* r31 */) {}
+// this: r31
+void SAnimator2::SetNextStateFromCompletedTurn() {}
 
 // Range: 0x80010290 -> 0x8001037C
-void SAnimator2::stopIdleOverlay(class SAnimator2 * const this /* r30 */) {
+// this: r30
+void SAnimator2::stopIdleOverlay() {
     // Local variables
     unsigned char scale; // r1+0x8
     const struct AnimRef * skillId; // r1+0xC
@@ -927,7 +1012,8 @@ void SAnimator2::stopIdleOverlay(class SAnimator2 * const this /* r30 */) {
 }
 
 // Range: 0x8001037C -> 0x80010694
-int SAnimator2::selectRandomIdle(class SAnimator2 * const this /* r30 */) {
+// this: r30
+int SAnimator2::selectRandomIdle() {
     // Local variables
     unsigned char desiredAnim; // r31
     int lowMotive; // r0
@@ -941,7 +1027,8 @@ int SAnimator2::selectRandomIdle(class SAnimator2 * const this /* r30 */) {
 }
 
 // Range: 0x80010694 -> 0x8001089C
-void SAnimator2::handleSkillIdleAnimation(class SAnimator2 * const this /* r31 */) {
+// this: r31
+void SAnimator2::handleSkillIdleAnimation() {
     // Local variables
     unsigned char scale; // r1+0x8
     const struct AnimRef * skill; // r1+0xC
@@ -953,13 +1040,15 @@ void SAnimator2::handleSkillIdleAnimation(class SAnimator2 * const this /* r31 *
 }
 
 // Range: 0x8001089C -> 0x80010940
-void SAnimator2::SetPendingLowMotiveAnim(class SAnimator2 * const this /* r30 */, const struct AnimRef * & skill /* r31 */) {
+// this: r30
+void SAnimator2::SetPendingLowMotiveAnim(const struct AnimRef * & skill /* r31 */) {
     // References
     // -> class EAnimManager _animman;
 }
 
 // Range: 0x80010940 -> 0x80010EB0
-void SAnimator2::handleIdleAnimation(class SAnimator2 * const this /* r31 */) {
+// this: r31
+void SAnimator2::handleIdleAnimation() {
     // Local variables
     int iCurrentIdleState; // r30
     unsigned char scale; // r1+0x8
@@ -982,7 +1071,8 @@ void SAnimator2::handleIdleAnimation(class SAnimator2 * const this /* r31 */) {
 }
 
 // Range: 0x80010EB0 -> 0x80010FF4
-void SAnimator2::handleImpatientIdleAnimation(class SAnimator2 * const this /* r31 */) {
+// this: r31
+void SAnimator2::handleImpatientIdleAnimation() {
     // Local variables
     class EACTrack * pTrack; // r30
     const struct AnimRef * SkillId; // r1+0xC
@@ -994,7 +1084,8 @@ void SAnimator2::handleImpatientIdleAnimation(class SAnimator2 * const this /* r
 }
 
 // Range: 0x80010FF4 -> 0x8001109C
-void SAnimator2::clearImpatientIdleAnimation(class SAnimator2 * const this /* r31 */) {
+// this: r31
+void SAnimator2::clearImpatientIdleAnimation() {
     // Local variables
     const struct AnimRef * SkillId; // r1+0xC
     unsigned char scale; // r1+0x8
@@ -1004,7 +1095,8 @@ void SAnimator2::clearImpatientIdleAnimation(class SAnimator2 * const this /* r3
 }
 
 // Range: 0x8001109C -> 0x80011194
-void SAnimator2::LoadSMOptionalMotionAnims(class SAnimator2 * const this /* r31 */) {
+// this: r31
+void SAnimator2::LoadSMOptionalMotionAnims() {
     // Local variables
     unsigned char scale; // r1+0x8
     const struct AnimRef * SkillId; // r1+0xC
@@ -1014,7 +1106,8 @@ void SAnimator2::LoadSMOptionalMotionAnims(class SAnimator2 * const this /* r31 
 }
 
 // Range: 0x80011194 -> 0x8001128C
-void SAnimator2::LoadDCOptionalMotionAnims(class SAnimator2 * const this /* r31 */) {
+// this: r31
+void SAnimator2::LoadDCOptionalMotionAnims() {
     // Local variables
     unsigned char scale; // r1+0x8
     const struct AnimRef * SkillId; // r1+0xC
@@ -1024,14 +1117,16 @@ void SAnimator2::LoadDCOptionalMotionAnims(class SAnimator2 * const this /* r31 
 }
 
 // Range: 0x8001128C -> 0x80011370
-struct AnimRef * SAnimator2::LoadOptionalIdleAnim(class SAnimator2 * const this /* r30 */, unsigned char & scale /* r31 */) {
+// this: r30
+struct AnimRef * SAnimator2::LoadOptionalIdleAnim(unsigned char & scale /* r31 */) {
     // Local variables
     int desiredAnim; // r4
     const struct AnimRef * SkillId; // r1+0x8
 }
 
 // Range: 0x80011370 -> 0x80011448
-void SAnimator2::UnloadPendingLongIdleAnim(class SAnimator2 * const this /* r30 */) {
+// this: r30
+void SAnimator2::UnloadPendingLongIdleAnim() {
     // Local variables
     int desiredAnim; // r4
     const struct AnimRef * SkillId; // r1+0xC
@@ -1042,7 +1137,8 @@ void SAnimator2::UnloadPendingLongIdleAnim(class SAnimator2 * const this /* r30 
 }
 
 // Range: 0x80011448 -> 0x8001154C
-void SAnimator2::UnloadOptionalIdleAnim(class SAnimator2 * const this /* r31 */) {
+// this: r31
+void SAnimator2::UnloadOptionalIdleAnim() {
     // Local variables
     int desiredAnim; // r4
     const struct AnimRef * SkillId; // r1+0xC
@@ -1050,7 +1146,8 @@ void SAnimator2::UnloadOptionalIdleAnim(class SAnimator2 * const this /* r31 */)
 }
 
 // Range: 0x8001154C -> 0x80011680
-void SAnimator2::UnloadDCOptionalMotionAnims(class SAnimator2 * const this /* r30 */) {
+// this: r30
+void SAnimator2::UnloadDCOptionalMotionAnims() {
     // Local variables
     unsigned char scale; // r1+0x8
     const struct AnimRef * SkillId; // r1+0xC
@@ -1060,7 +1157,8 @@ void SAnimator2::UnloadDCOptionalMotionAnims(class SAnimator2 * const this /* r3
 }
 
 // Range: 0x80011680 -> 0x800117B4
-void SAnimator2::UnloadSMOptionalMotionAnims(class SAnimator2 * const this /* r30 */) {
+// this: r30
+void SAnimator2::UnloadSMOptionalMotionAnims() {
     // Local variables
     unsigned char scale; // r1+0x8
     const struct AnimRef * SkillId; // r1+0xC
@@ -1070,10 +1168,12 @@ void SAnimator2::UnloadSMOptionalMotionAnims(class SAnimator2 * const this /* r3
 }
 
 // Range: 0x800117B4 -> 0x8001182C
-void SAnimator2::CheckOptionalMotionAnimStatusOnStateChange(class SAnimator2 * const this /* r30 */, enum eAnimState nextAnimState /* r31 */) {}
+// this: r30
+void SAnimator2::CheckOptionalMotionAnimStatusOnStateChange(enum eAnimState nextAnimState /* r31 */) {}
 
 // Range: 0x8001182C -> 0x80011B30
-void SAnimator2::handleTurnAnimation(class SAnimator2 * const this /* r31 */) {
+// this: r31
+void SAnimator2::handleTurnAnimation() {
     // Local variables
     class EACTrack * pTrack; // r30
     const struct AnimRef * SkillId; // r1+0xC
@@ -1093,7 +1193,8 @@ void SAnimator2::handleTurnAnimation(class SAnimator2 * const this /* r31 */) {
 }
 
 // Range: 0x80011B30 -> 0x800120E0
-void SAnimator2::positionCharacter(class SAnimator2 * const this /* r30 */, class EMat4 * mOrient /* r31 */) {
+// this: r30
+void SAnimator2::positionCharacter(class EMat4 * mOrient /* r31 */) {
     // Local variables
     class EVec3 vTempVec; // r1+0x7C
     class EVec3 vPos; // r1+0x70
@@ -1124,7 +1225,8 @@ void SAnimator2::UpdateSimDirection() {}
 void SAnimator2::GetBonePosAndDirForParticle() {}
 
 // Range: 0x8001214C -> 0x8001220C
-void SAnimator2::AttachParticleEffect(class SAnimator2 * const this /* r27 */, unsigned int bone /* r28 */, unsigned int effectId /* r29 */, int effectTypeAndFlags /* r30 */) {
+// this: r27
+void SAnimator2::AttachParticleEffect(unsigned int bone /* r28 */, unsigned int effectId /* r29 */, int effectTypeAndFlags /* r30 */) {
     // Local variables
     class TRedBlackTree * pTree; // r1+0x8
     class RBIteratorPtrType * rbi; // r0
@@ -1135,7 +1237,8 @@ void SAnimator2::AttachParticleEffect(class SAnimator2 * const this /* r27 */, u
 }
 
 // Range: 0x8001220C -> 0x800122A8
-void SAnimator2::DetachParticleEffect(class SAnimator2 * const this /* r30 */) {
+// this: r30
+void SAnimator2::DetachParticleEffect() {
     // Local variables
     struct AnimParticleData data; // r1+0x8
 
@@ -1150,13 +1253,15 @@ unsigned char SAnimator2::StartParticleEffectFromEdithPrimitive() {}
 void SAnimator2::convertAnimationFormatToEngineFormat() {}
 
 // Range: 0x800122DC -> 0x8001233C
-class EVec3 SAnimator2::GetEngineFormatPos(class EVec3 * vEnginePos /* r30 */, class SAnimator2 * const this /* r31 */) {
+// this: r30
+class EVec3 SAnimator2::GetEngineFormatPos(class SAnimator2 * const this /* r31 */) {
     // Local variables
     class EVec3 vWorldPos; // r1+0x8
 }
 
 // Range: 0x8001233C -> 0x8001251C
-void SAnimator2::processEvents(class SAnimator2 * const this /* r28 */, int iStartTime /* r29 */, int interval /* r30 */, unsigned char bBackward /* r24 */, unsigned char bUseRelationshipList /* r23 */) {
+// this: r28
+void SAnimator2::processEvents(int iStartTime /* r29 */, int interval /* r30 */, unsigned char bBackward /* r24 */, unsigned char bUseRelationshipList /* r23 */) {
     // Local variables
     class ERAnim * pAnim; // r0
     int size; // r26
@@ -1179,7 +1284,8 @@ void SAnimator2::processEvents(class SAnimator2 * const this /* r28 */, int iSta
 void SAnimator2::PlayBySource(const char * eventID /* r29 */, signed short sourceID /* r30 */, int preLoadMod /* r31 */) {}
 
 // Range: 0x80012574 -> 0x80012768
-void SAnimator2::eventHandler(class SAnimator2 * const this /* r28 */, const struct EAnimNote & event /* r29 */, int preLoadMod /* r30 */) {
+// this: r28
+void SAnimator2::eventHandler(const struct EAnimNote & event /* r29 */, int preLoadMod /* r30 */) {
     // Local variables
     int number; // r1+0x10
     class ERQuickdata * pObjectData; // r31
@@ -1193,7 +1299,8 @@ void SAnimator2::eventHandler(class SAnimator2 * const this /* r28 */, const str
 }
 
 // Range: 0x80012768 -> 0x80012864
-void SAnimator2::PreloadEvents(class SAnimator2 * const this /* r26 */) {
+// this: r26
+void SAnimator2::PreloadEvents() {
     // Local variables
     class ERAnim * pAnim; // r0
     const class TArray * notes; // r30
@@ -1218,7 +1325,8 @@ void SAnimator2::PreloadBoneParticleEvent(const class REffectsAttachment * parti
 }
 
 // Range: 0x800128E8 -> 0x800129E4
-void SAnimator2::_handleParticleEvent(class SAnimator2 * const this /* r26 */, const class REffectsAttachment * particle /* r27 */, enum PropKind kind /* r28 */) {
+// this: r26
+void SAnimator2::_handleParticleEvent(const class REffectsAttachment * particle /* r27 */, enum PropKind kind /* r28 */) {
     // Local variables
     int nEmitters; // r0
     int i; // r29
@@ -1230,7 +1338,8 @@ void SAnimator2::_handleParticleEvent(class SAnimator2 * const this /* r26 */, c
 }
 
 // Range: 0x800129E4 -> 0x80012BE4
-void SAnimator2::procBoneParticleEvt(class SAnimator2 * const this /* r31 */, const struct AnimParticleData * pParticleData /* r24 */, enum PropKind kind /* r25 */) {
+// this: r31
+void SAnimator2::procBoneParticleEvt(const struct AnimParticleData * pParticleData /* r24 */, enum PropKind kind /* r25 */) {
     // Local variables
     unsigned char bShouldContinueOnSkillStart; // r28
     unsigned int type; // r27
@@ -1243,7 +1352,8 @@ void SAnimator2::procBoneParticleEvt(class SAnimator2 * const this /* r31 */, co
 }
 
 // Range: 0x80012BE4 -> 0x80012C90
-void SAnimator2::cleanupParticlesDelayed(class SAnimator2 * const this /* r28 */, class TRedBlackTree * pActiveParticleTree /* r29 */) {
+// this: r28
+void SAnimator2::cleanupParticlesDelayed(class TRedBlackTree * pActiveParticleTree /* r29 */) {
     // Local variables
     class RBIteratorPtrType * i; // r31
     class RBIteratorPtrType * j; // r30
@@ -1252,7 +1362,8 @@ void SAnimator2::cleanupParticlesDelayed(class SAnimator2 * const this /* r28 */
 }
 
 // Range: 0x80012C90 -> 0x80012D3C
-void SAnimator2::cleanupParticlesImmediate(class SAnimator2 * const this /* r27 */, class TRedBlackTree * pActiveParticleTree /* r28 */) {
+// this: r27
+void SAnimator2::cleanupParticlesImmediate(class TRedBlackTree * pActiveParticleTree /* r28 */) {
     // Local variables
     class RBIteratorPtrType * i; // r31
     class RBIteratorPtrType * j; // r30
@@ -1272,7 +1383,8 @@ void SAnimator2::cleanupParticles(class TRedBlackTree * pActiveParticleTree /* r
 }
 
 // Range: 0x80012E00 -> 0x80012F40
-void SAnimator2::playRumble(class SAnimator2 * const this /* r28 */, const struct RumbleDataElement * pRumble /* r29 */) {
+// this: r28
+void SAnimator2::playRumble(const struct RumbleDataElement * pRumble /* r29 */) {
     // Local variables
     int ControlNum; // r30
     class EGlobal & Globals; // r0
@@ -1292,7 +1404,8 @@ void SAnimator2::playRumble(class SAnimator2 * const this /* r28 */, const struc
 void SAnimator2::footstepEvent() {}
 
 // Range: 0x80012F44 -> 0x80013340
-unsigned char SAnimator2::startSkill(class SAnimator2 * const this /* r25 */, const struct AnimRef * skill /* r26 */, unsigned char bBackwards /* r27 */, unsigned int skillType /* r28 */, unsigned char scale /* r29 */, float animPosOverride /* f31 */, unsigned char mirrored /* r30 */) {
+// this: r25
+unsigned char SAnimator2::startSkill(const struct AnimRef * skill /* r26 */, unsigned char bBackwards /* r27 */, unsigned int skillType /* r28 */, unsigned char scale /* r29 */, float animPosOverride /* f31 */, unsigned char mirrored /* r30 */) {
     // Local variables
     class EACTrack * pTrack; // r26
     class ERAnim * pAnim; // r3
@@ -1308,7 +1421,8 @@ unsigned char SAnimator2::startSkill(class SAnimator2 * const this /* r25 */, co
 }
 
 // Range: 0x80013340 -> 0x800133EC
-unsigned char SAnimator2::MakeSureAllAnimEventsAreDone(class SAnimator2 * const this /* r28 */, const struct AnimRef * animId /* r29 */, int & iStartTime /* r30 */) {
+// this: r28
+unsigned char SAnimator2::MakeSureAllAnimEventsAreDone(const struct AnimRef * animId /* r29 */, int & iStartTime /* r30 */) {
     // Local variables
     class ERAnim * pAnim; // r0
     int duration; // r31
@@ -1318,35 +1432,41 @@ unsigned char SAnimator2::MakeSureAllAnimEventsAreDone(class SAnimator2 * const 
 }
 
 // Range: 0x800133EC -> 0x80013450
-unsigned char SAnimator2::isAnimationDone(class SAnimator2 * const this /* r30 */) {
+// this: r30
+unsigned char SAnimator2::isAnimationDone() {
     // Local variables
     unsigned char result; // r31
 }
 
 // Range: 0x80013450 -> 0x800134E0
-unsigned char SAnimator2::ShouldEndSkillTrack(class SAnimator2 * const this /* r30 */) {
+// this: r30
+unsigned char SAnimator2::ShouldEndSkillTrack() {
     // Local variables
     unsigned char bRetVal; // r31
 }
 
 // Range: 0x800134E0 -> 0x8001357C
-void SAnimator2::stopCurAnim(class SAnimator2 * const this /* r30 */, unsigned char bResetEventCount /* r31 */) {}
+// this: r30
+void SAnimator2::stopCurAnim(unsigned char bResetEventCount /* r31 */) {}
 
 // Range: 0x8001357C -> 0x80013608
-void SAnimator2::setPersonDirection(class SAnimator2 * const this /* r31 */) {
+// this: r31
+void SAnimator2::setPersonDirection() {
     // Local variables
     int TempDir; // r5
 }
 
 // Range: 0x80013608 -> 0x80013754
-void SAnimator2::updateCarryAnimation(class SAnimator2 * const this /* r30 */) {
+// this: r30
+void SAnimator2::updateCarryAnimation() {
     // Local variables
     unsigned int animID; // r31
     signed short obj_group; // r0
 }
 
 // Range: 0x80013754 -> 0x800138AC
-void SAnimator2::stopCarry(class SAnimator2 * const this /* r30 */) {
+// this: r30
+void SAnimator2::stopCarry() {
     // Local variables
     class ObjectModule * module; // r0
     class cXObject * pObj; // r31
@@ -1359,13 +1479,15 @@ void SAnimator2::stopCarry(class SAnimator2 * const this /* r30 */) {
 }
 
 // Range: 0x800138AC -> 0x80013914
-void SAnimator2::clearSuspendedCarry(class SAnimator2 * const this /* r31 */) {
+// this: r31
+void SAnimator2::clearSuspendedCarry() {
     // References
     // -> float kDefaultBlendTime;
 }
 
 // Range: 0x80013914 -> 0x80013A30
-void SAnimator2::updateRenderModels(class SAnimator2 * const this /* r30 */) {
+// this: r30
+void SAnimator2::updateRenderModels() {
     // Local variables
     signed short currentOutfit; // r0
     unsigned char bCostumeChanged; // r3
@@ -1375,13 +1497,15 @@ void SAnimator2::updateRenderModels(class SAnimator2 * const this /* r30 */) {
 unsigned char SAnimator2::setJobModel() {}
 
 // Range: 0x80013A34 -> 0x80013AD8
-unsigned char SAnimator2::wearNormal(class SAnimator2 * const this /* r30 */) {
+// this: r30
+unsigned char SAnimator2::wearNormal() {
     // Local variables
     class CasSimDescription & currentSimDesc; // r31
 }
 
 // Range: 0x80013AD8 -> 0x80013BF0
-unsigned char SAnimator2::setNewModel(class SAnimator2 * const this /* r28 */, const char * rowname /* r29 */) {
+// this: r28
+unsigned char SAnimator2::setNewModel(const char * rowname /* r29 */) {
     // Local variables
     class CasSimDescription & personSimDesc; // r30
 }
@@ -1396,20 +1520,24 @@ char * SAnimator2::GetCostumeName() {
 unsigned char SAnimator2::removeCostume() {}
 
 // Range: 0x80013CE4 -> 0x80013D94
-void SAnimator2::GetCarryHandPosAndDir(class SAnimator2 * const this /* r28 */, class EVec3 & Dir /* r29 */, class EMat4 & posDirMat /* r30 */, unsigned int slotId /* r31 */) {}
+// this: r28
+void SAnimator2::GetCarryHandPosAndDir(class EVec3 & Dir /* r29 */, class EMat4 & posDirMat /* r30 */, unsigned int slotId /* r31 */) {}
 
 // Range: 0x80013D94 -> 0x80013DE0
-void SAnimator2::GetBonePos(class SAnimator2 * const this /* r6 */) {}
+// this: r6
+void SAnimator2::GetBonePos() {}
 
 // Range: 0x80013DE0 -> 0x80013E80
-unsigned char SAnimator2::PropsHaveAlpha(class SAnimator2 * const this /* r29 */) {
+// this: r29
+unsigned char SAnimator2::PropsHaveAlpha() {
     // Local variables
     unsigned char bl; // r31
     int i; // r30
 }
 
 // Range: 0x80013E80 -> 0x80013F94
-void SAnimator2::DrawProps(class SAnimator2 * const this /* r26 */, class ERC * prc /* r27 */, unsigned char InWindow /* r28 */) {
+// this: r26
+void SAnimator2::DrawProps(class ERC * prc /* r27 */, unsigned char InWindow /* r28 */) {
     // Local variables
     int i; // r29
 
@@ -1418,7 +1546,8 @@ void SAnimator2::DrawProps(class SAnimator2 * const this /* r26 */, class ERC * 
 }
 
 // Range: 0x80013F94 -> 0x8001409C
-void SAnimator2::DrawPropsShadow(class SAnimator2 * const this /* r27 */, class ERC * prc /* r28 */) {
+// this: r27
+void SAnimator2::DrawPropsShadow(class ERC * prc /* r28 */) {
     // Local variables
     int i; // r29
 
@@ -1427,7 +1556,8 @@ void SAnimator2::DrawPropsShadow(class SAnimator2 * const this /* r27 */, class 
 }
 
 // Range: 0x8001409C -> 0x8001414C
-void SAnimator2::removeAllProps(class SAnimator2 * const this /* r29 */) {
+// this: r29
+void SAnimator2::removeAllProps() {
     // Local variables
     int i; // r30
 
@@ -1436,17 +1566,20 @@ void SAnimator2::removeAllProps(class SAnimator2 * const this /* r29 */) {
 }
 
 // Range: 0x8001414C -> 0x80014234
-void SAnimator2::updateCensor(class SAnimator2 * const this /* r30 */) {
+// this: r30
+void SAnimator2::updateCensor() {
     // Local variables
     int censorship; // r31
     int size; // r0
 }
 
 // Range: 0x80014234 -> 0x80014268
-void SAnimator2::SetIdleInitialized(class SAnimator2 * const this /* r31 */) {}
+// this: r31
+void SAnimator2::SetIdleInitialized() {}
 
 // Range: 0x80014268 -> 0x800142C4
-void SAnimator2::UpdateAnimationValidity(class SAnimator2 * const this /* r30 */) {
+// this: r30
+void SAnimator2::UpdateAnimationValidity() {
     // Local variables
     unsigned char shouldUpdate; // r31
 }
@@ -1464,19 +1597,24 @@ unsigned char SAnimator2::SetAwareOfObjectKilled() {}
 unsigned char SAnimator2::ClearAwareOfObject() {}
 
 // Range: 0x800142E4 -> 0x800143A8
-void SAnimator2::setAwarenessFollowStart(class SAnimator2 * const this /* r31 */, float deltaDir /* f31 */) {}
+// this: r31
+void SAnimator2::setAwarenessFollowStart(float deltaDir /* f31 */) {}
 
 // Range: 0x800143A8 -> 0x80014410
-void SAnimator2::setAwarenessFollowEnd(class SAnimator2 * const this /* r31 */) {}
+// this: r31
+void SAnimator2::setAwarenessFollowEnd() {}
 
 // Range: 0x80014410 -> 0x80014454
-void SAnimator2::setAwarenessFollowMiddle(class SAnimator2 * const this /* r31 */) {}
+// this: r31
+void SAnimator2::setAwarenessFollowMiddle() {}
 
 // Range: 0x80014454 -> 0x800144D4
-void SAnimator2::exitAwarenessFollow(class SAnimator2 * const this /* r31 */) {}
+// this: r31
+void SAnimator2::exitAwarenessFollow() {}
 
 // Range: 0x800144D4 -> 0x80014680
-int SAnimator2::shouldUseLowMotiveIdle(class SAnimator2 * const this /* r30 */) {
+// this: r30
+int SAnimator2::shouldUseLowMotiveIdle() {
     // Local variables
     int motive; // r31
     float motiveValue; // f31
@@ -1487,7 +1625,8 @@ int SAnimator2::shouldUseLowMotiveIdle(class SAnimator2 * const this /* r30 */) 
 }
 
 // Range: 0x80014680 -> 0x8001477C
-int SAnimator2::shouldUseLowMotiveWalk(class SAnimator2 * const this /* r30 */) {
+// this: r30
+int SAnimator2::shouldUseLowMotiveWalk() {
     // Local variables
     int retVal; // r31
     float lowMotiveThreshold; // f31
@@ -1498,28 +1637,33 @@ int SAnimator2::shouldUseLowMotiveWalk(class SAnimator2 * const this /* r30 */) 
 }
 
 // Range: 0x8001477C -> 0x80014818
-unsigned char SAnimator2::IsSimulatorControlled(class SAnimator2 * const this /* r30 */) {
+// this: r30
+unsigned char SAnimator2::IsSimulatorControlled() {
     // Local variables
     unsigned char bRetVal; // r31
 }
 
 // Range: 0x80014818 -> 0x8001488C
-void SAnimator2::SetPlayerControl(class SAnimator2 * const this /* r30 */, unsigned char isPlayerControlled /* r31 */) {}
+// this: r30
+void SAnimator2::SetPlayerControl(unsigned char isPlayerControlled /* r31 */) {}
 
 // Range: 0x8001488C -> 0x800148E8
-enum eWalkRunStyle SAnimator2::StartAutoRun(class SAnimator2 * const this /* r31 */) {}
+// this: r31
+enum eWalkRunStyle SAnimator2::StartAutoRun() {}
 
 // Range: 0x80014998 -> 0x800149A4
 class EAnimController & SAnimator2::GetAnimController() {}
 
 // Range: 0x800149A4 -> 0x80014A50
-unsigned char SAnimator2::PendingAnimationLoaded(class SAnimator2 * const this /* r28 */, enum TreeReturnCode & result /* r29 */, const class AnimateNewParam * param /* r30 */) {
+// this: r28
+unsigned char SAnimator2::PendingAnimationLoaded(enum TreeReturnCode & result /* r29 */, const class AnimateNewParam * param /* r30 */) {
     // References
     // -> class EAnimManager _animman;
 }
 
 // Range: 0x80014A50 -> 0x80014B14
-enum TreeReturnCode SAnimator2::PreloadOnly(class SAnimator2 * const this /* r26 */, unsigned char & shouldReturn /* r27 */, const class AnimateNewParam * param /* r28 */, const struct AnimRef * & skill /* r29 */, class StackElem * elem /* r30 */) {
+// this: r26
+enum TreeReturnCode SAnimator2::PreloadOnly(unsigned char & shouldReturn /* r27 */, const class AnimateNewParam * param /* r28 */, const struct AnimRef * & skill /* r29 */, class StackElem * elem /* r30 */) {
     // Local variables
     enum TreeReturnCode result; // r31
     unsigned char scale; // r1+0x8
@@ -1529,7 +1673,8 @@ enum TreeReturnCode SAnimator2::PreloadOnly(class SAnimator2 * const this /* r26
 }
 
 // Range: 0x80014B14 -> 0x80014C9C
-enum TreeReturnCode SAnimator2::BackgroundBehavior(class SAnimator2 * const this /* r29 */, const struct AnimRef * & skill /* r30 */) {
+// this: r29
+enum TreeReturnCode SAnimator2::BackgroundBehavior(const struct AnimRef * & skill /* r30 */) {
     // Local variables
     unsigned char scale; // r1+0x8
     class EACTrack * pTrack; // r31
@@ -1538,7 +1683,8 @@ enum TreeReturnCode SAnimator2::BackgroundBehavior(class SAnimator2 * const this
 }
 
 // Range: 0x80014C9C -> 0x80014ED8
-enum TreeReturnCode SAnimator2::FXAnimationBehavior(class SAnimator2 * const this /* r30 */, const class AnimateNewParam * param /* r28 */, const struct AnimRef * & skill /* r31 */) {
+// this: r30
+enum TreeReturnCode SAnimator2::FXAnimationBehavior(const class AnimateNewParam * param /* r28 */, const struct AnimRef * & skill /* r31 */) {
     // Local variables
     unsigned char scale; // r1+0x8
     class EACTrack * pTrack; // r29
@@ -1550,10 +1696,12 @@ enum TreeReturnCode SAnimator2::FXAnimationBehavior(class SAnimator2 * const thi
 enum TreeReturnCode SAnimator2::CarryBehavior() {}
 
 // Range: 0x80014EE0 -> 0x80014F3C
-enum TreeReturnCode SAnimator2::TurnOffAnim(class SAnimator2 * const this /* r31 */) {}
+// this: r31
+enum TreeReturnCode SAnimator2::TurnOffAnim() {}
 
 // Range: 0x80014F3C -> 0x80015050
-enum TreeReturnCode SAnimator2::ProcessDequeueEvent(class SAnimator2 * const this /* r28 */, const class AnimateNewParam * param /* r30 */, int eventNumber /* r29 */, class StackElem * elem /* r31 */) {
+// this: r28
+enum TreeReturnCode SAnimator2::ProcessDequeueEvent(const class AnimateNewParam * param /* r30 */, int eventNumber /* r29 */, class StackElem * elem /* r31 */) {
     // Local variables
     int local; // r30
 
@@ -1562,7 +1710,8 @@ enum TreeReturnCode SAnimator2::ProcessDequeueEvent(class SAnimator2 * const thi
 }
 
 // Range: 0x80015050 -> 0x800151E4
-enum TreeReturnCode SAnimator2::ProcessNoDequeueEvent(class SAnimator2 * const this /* r28 */, const class AnimateNewParam * param /* r30 */, int eventNumber /* r29 */, class StackElem * elem /* r31 */) {
+// this: r28
+enum TreeReturnCode SAnimator2::ProcessNoDequeueEvent(const class AnimateNewParam * param /* r30 */, int eventNumber /* r29 */, class StackElem * elem /* r31 */) {
     // Local variables
     int local; // r30
 
@@ -1571,7 +1720,8 @@ enum TreeReturnCode SAnimator2::ProcessNoDequeueEvent(class SAnimator2 * const t
 }
 
 // Range: 0x800151E4 -> 0x80015408
-unsigned char SAnimator2::ProcessAnimatePrimitiveNotEntered(class SAnimator2 * const this /* r26 */, enum TreeReturnCode & result /* r27 */, const class AnimateNewParam * param /* r24 */, const struct AnimRef * & skill /* r28 */, class StackElem * elem /* r31 */, unsigned char overrideCarry /* r29 */, unsigned char mirrored /* r30 */) {
+// this: r26
+unsigned char SAnimator2::ProcessAnimatePrimitiveNotEntered(enum TreeReturnCode & result /* r27 */, const class AnimateNewParam * param /* r24 */, const struct AnimRef * & skill /* r28 */, class StackElem * elem /* r31 */, unsigned char overrideCarry /* r29 */, unsigned char mirrored /* r30 */) {
     // Local variables
     unsigned char scale; // r1+0x8
     enum TreeReturnCode code; // r3
@@ -1602,7 +1752,8 @@ void SAnimator2::TrackCleanup() {
 void SAnimator2::WalkToTurnTrackEnd() {}
 
 // Range: 0x800154A8 -> 0x8001569C
-float SAnimator2::GetZRotation(class SAnimator2 * const this /* r31 */) {
+// this: r31
+float SAnimator2::GetZRotation() {
     // Local variables
     float trackFrames; // f0
     float rot; // f1
@@ -1614,7 +1765,8 @@ float SAnimator2::GetZRotation(class SAnimator2 * const this /* r31 */) {
 unsigned char SAnimator2::IsSmoothRouteEnabled() {}
 
 // Range: 0x80015700 -> 0x80015808
-void SAnimator2::DisableSmoothRoute(class SAnimator2 * const this /* r31 */) {
+// this: r31
+void SAnimator2::DisableSmoothRoute() {
     // Local variables
     enum eWalkRunStyle style; // r3
 }
@@ -1652,17 +1804,20 @@ class EInstance * SAnimator2::FindClosestWall(const class EVec3 & ray_dir /* r25
 }
 
 // Range: 0x80015AA0 -> 0x80015B50
-void SAnimator2::GetCurrentSimSphere(class SAnimator2 * const this /* r5 */, class EBoundSphere & sphere /* r31 */) {
+// this: r5
+void SAnimator2::GetCurrentSimSphere(class EBoundSphere & sphere /* r31 */) {
     // Local variables
     class EVec3 curSimPos; // r1+0x8
     float tmp; // f30
 }
 
 // Range: 0x80015B50 -> 0x80015B90
-void SAnimator2::GetAnimSimSphere(class SAnimator2 * const this /* r5 */, class EBoundSphere & sphere /* r31 */) {}
+// this: r5
+void SAnimator2::GetAnimSimSphere(class EBoundSphere & sphere /* r31 */) {}
 
 // Range: 0x80015B90 -> 0x80015C68
-unsigned char SAnimator2::IsSimOccluded(class SAnimator2 * const this /* r29 */, class E3DWindow * pWin /* r30 */, class EVec3 & simPos /* r31 */) {
+// this: r29
+unsigned char SAnimator2::IsSimOccluded(class E3DWindow * pWin /* r30 */, class EVec3 & simPos /* r31 */) {
     // Local variables
     class EVec3 delta; // r1+0x18
     float dist; // f0
@@ -1687,13 +1842,15 @@ void SAnimator2::DeallocateStaticAnimationElements() {
 }
 
 // Range: 0x80015CD4 -> 0x80015D4C
-void SAnimator2::UpdateLocomotionState(class SAnimator2 * const this /* r30 */, enum eLocomotionState state /* r31 */) {}
+// this: r30
+void SAnimator2::UpdateLocomotionState(enum eLocomotionState state /* r31 */) {}
 
 // Range: 0x80015D4C -> 0x80015DEC
 enum StdAnimIdx SAnimator2::GetLocomotionAnimIndex() {}
 
 // Range: 0x80015DEC -> 0x80015EA8
-void SAnimator2::HandleIKEvent(class SAnimator2 * const this /* r30 */, const struct EAnimNote & event /* r31 */) {
+// this: r30
+void SAnimator2::HandleIKEvent(const struct EAnimNote & event /* r31 */) {
     // Local variables
     const char * strOne; // r0
     unsigned char bTurnOn; // r31
@@ -1721,7 +1878,8 @@ unsigned char SAnimator2::IsFrontBackLower() {
 }
 
 // Range: 0x80015F84 -> 0x80016074
-float SAnimator2::GetSocialModeDelta(class SAnimator2 * const this /* r30 */) {
+// this: r30
+float SAnimator2::GetSocialModeDelta() {
     // Local variables
     float socialModeDelta; // f30
     class cXObject * pObj; // r31
@@ -1732,7 +1890,8 @@ float SAnimator2::GetSocialModeDelta(class SAnimator2 * const this /* r30 */) {
 }
 
 // Range: 0x80016074 -> 0x8001615C
-void SAnimator2::AdjustIKTargetHeight(class SAnimator2 * const this /* r29 */, class IKData * pIKData /* r30 */, class EMat4 & endBoneOrient /* r31 */) {
+// this: r29
+void SAnimator2::AdjustIKTargetHeight(class IKData * pIKData /* r30 */, class EMat4 & endBoneOrient /* r31 */) {
     // Local variables
     float socialModeDelta; // f0
 }
@@ -1746,13 +1905,15 @@ float SAnimator2::GetFootOrientation() {
 }
 
 // Range: 0x800161B4 -> 0x80016218
-unsigned char SAnimator2::IsIKEnabled(class SAnimator2 * const this /* r30 */) {
+// this: r30
+unsigned char SAnimator2::IsIKEnabled() {
     // Local variables
     unsigned char i; // r31
 }
 
 // Range: 0x80016218 -> 0x800163EC
-void SAnimator2::updateIKAnimation(class SAnimator2 * const this /* r31 */) {
+// this: r31
+void SAnimator2::updateIKAnimation() {
     // Local variables
     unsigned char i; // r28
     class IKData * pIKData; // r27
@@ -1770,7 +1931,8 @@ void SAnimator2::updateIKAnimation(class SAnimator2 * const this /* r31 */) {
 void SAnimator2::GetAllIKBoneIndices() {}
 
 // Range: 0x80016400 -> 0x80016568
-class EVec2 SAnimator2::GetRaycastPosition(class EVec2 * raycastPos /* r29 */, class SAnimator2 * const this /* r30 */, enum eRaycastLocation eLoc /* r31 */) {
+// this: r29
+class EVec2 SAnimator2::GetRaycastPosition(class SAnimator2 * const this /* r30 */, enum eRaycastLocation eLoc /* r31 */) {
     // Local variables
     float mulFac; // f4
     float angleToSim; // f31
@@ -1785,7 +1947,8 @@ unsigned char SAnimator2::IsFrontBoneLower() {}
 unsigned char SAnimator2::IsLeftBoneLower() {}
 
 // Range: 0x80016598 -> 0x8001664C
-unsigned char SAnimator2::GetOffSetForSocialMode(class SAnimator2 * const this /* r29 */, float & offset /* r30 */) {
+// this: r29
+unsigned char SAnimator2::GetOffSetForSocialMode(float & offset /* r30 */) {
     // Local variables
     unsigned char isMinOffsetChanged; // r31
     class cXObject * pObj; // r0
@@ -1797,7 +1960,8 @@ unsigned char SAnimator2::GetOffSetForSocialMode(class SAnimator2 * const this /
 float SAnimator2::ComputeOffset() {}
 
 // Range: 0x80016664 -> 0x800166E8
-float SAnimator2::GetSimTerrainOffset(class SAnimator2 * const this /* r31 */) {
+// this: r31
+float SAnimator2::GetSimTerrainOffset() {
     // Local variables
     float socialOffset; // r1+0x8
     float simOffset; // f31
@@ -1805,7 +1969,8 @@ float SAnimator2::GetSimTerrainOffset(class SAnimator2 * const this /* r31 */) {
 }
 
 // Range: 0x800166E8 -> 0x80016844
-void SAnimator2::UpdateRaycastElevations(class SAnimator2 * const this /* r26 */) {
+// this: r26
+void SAnimator2::UpdateRaycastElevations() {
     // Local variables
     class EVec2 curPos; // r1+0x10
     unsigned int i; // r27

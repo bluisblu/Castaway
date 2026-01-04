@@ -5,7 +5,8 @@
     Code range: 0x801B47F4 -> 0x801B48E0
 */
 // Range: 0x801B47F4 -> 0x801B48E0
-void * ModelessDialog::~ModelessDialog(struct ModelessDialog * const this /* r30 */) {
+// this: r30
+ModelessDialog::~ModelessDialog() {
     // References
     // -> class EShaderManager _shaderman;
 }

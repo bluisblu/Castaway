@@ -13,7 +13,8 @@ void ObjectSaveTypeTable3::DoStream(class ReconBuffer * r /* r25 */, int version
 }
 
 // Range: 0x8022F978 -> 0x8022FA6C
-void ObjectSaveIDTable::DoStream(class ObjectSaveIDTable * const this /* r28 */, class ReconBuffer * r /* r29 */) {
+// this: r28
+void ObjectSaveIDTable::DoStream(class ReconBuffer * r /* r29 */) {
     // Local variables
     struct HRObject * const pHRObj; // r0
     int & iNumObjects; // r30
@@ -31,10 +32,12 @@ struct HRSelector * ObjectSaveIDTable::findHRSel() {
 }
 
 // Range: 0x8022FAC0 -> 0x8022FB2C
-void * HouseRecon::HouseRecon(class HouseRecon * const this /* r30 */) {}
+// this: r30
+HouseRecon::HouseRecon() {}
 
 // Range: 0x8022FBBC -> 0x8022FC28
-void * HouseRecon::~HouseRecon(class HouseRecon * const this /* r30 */) {}
+// this: r30
+HouseRecon::~HouseRecon() {}
 
 // Range: 0x8022FC28 -> 0x8022FC6C
 int HouseRecon::findHRSelector() {
@@ -44,7 +47,8 @@ int HouseRecon::findHRSelector() {
 }
 
 // Range: 0x8022FC6C -> 0x8022FD84
-void HouseRecon::LoadHouseData(class HouseRecon * const this /* r26 */, class iResFile * pFile /* r27 */) {
+// this: r26
+void HouseRecon::LoadHouseData(class iResFile * pFile /* r27 */) {
     // Local variables
     class ObjectSaveTypeTable3 saveTable; // r1+0xC
     class ObjectSaveIDTable saveIDTable; // r1+0x8
@@ -56,13 +60,14 @@ void HouseRecon::LoadHouseData(class HouseRecon * const this /* r26 */, class iR
 }
 
 // Range: 0x8022FD84 -> 0x8022FD8C
-void * ObjectSaveIDTable::ObjectSaveIDTable() {}
+ObjectSaveIDTable::ObjectSaveIDTable() {}
 
 // Range: 0x8022FD8C -> 0x8022FD94
-void * ObjectSaveTypeTable3::ObjectSaveTypeTable3() {}
+ObjectSaveTypeTable3::ObjectSaveTypeTable3() {}
 
 // Range: 0x8022FD94 -> 0x8022FE98
-void HouseRecon::SaveHouseData(const class HouseRecon * const this /* r28 */, class iResFile * pFile /* r29 */) {
+// this: r28
+void HouseRecon::SaveHouseData(class iResFile * pFile /* r29 */) const {
     // Local variables
     int iNumSelectors; // r31
     int i; // r0

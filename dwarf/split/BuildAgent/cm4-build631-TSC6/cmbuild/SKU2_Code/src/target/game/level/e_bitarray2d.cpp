@@ -5,13 +5,13 @@
     Code range: 0x80096A04 -> 0x80096C68
 */
 // Range: 0x80096A04 -> 0x80096AA4
-class EStream & __ls(class EStream & s /* r29 */, const class BitArray2D & d /* r30 */) {
+class EStream & operator<<(class EStream & s /* r29 */, const class BitArray2D & d /* r30 */) {
     // Local variables
     unsigned int i; // r31
 }
 
 // Range: 0x80096AA4 -> 0x80096B64
-class EStream & __rs(class EStream & s /* r29 */, class BitArray2D & d /* r30 */) {
+class EStream & operator>>(class EStream & s /* r29 */, class BitArray2D & d /* r30 */) {
     // Local variables
     unsigned short version; // r1+0xC
     unsigned char xOffset; // r1+0xB
@@ -22,7 +22,7 @@ class EStream & __rs(class EStream & s /* r29 */, class BitArray2D & d /* r30 */
 }
 
 // Range: 0x80096B64 -> 0x80096C68
-class EFile & __rs(class EFile & s /* r30 */, class BitArray2D & d /* r31 */) {
+class EFile & operator>>(class EFile & s /* r30 */, class BitArray2D & d /* r31 */) {
     // Local variables
     unsigned short version; // r1+0xC
     unsigned char xOffset; // r1+0xB

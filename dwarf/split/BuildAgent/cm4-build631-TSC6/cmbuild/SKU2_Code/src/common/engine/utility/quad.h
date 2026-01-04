@@ -5,10 +5,12 @@
     Code range: 0x8020F494 -> 0x8020F57C
 */
 // Range: 0x8020F494 -> 0x8020F4D4
-void * Quad::~Quad(class Quad * const this /* r31 */) {}
+// this: r31
+Quad::~Quad() {}
 
 // Range: 0x8020F504 -> 0x8020F55C
-void * Quad::Quad(class Quad * const this /* r29 */) {}
+// this: r29
+Quad::Quad() {}
 
 // Range: 0x8020F55C -> 0x8020F568
 class EVec3 & Quad::GetCorner() {}

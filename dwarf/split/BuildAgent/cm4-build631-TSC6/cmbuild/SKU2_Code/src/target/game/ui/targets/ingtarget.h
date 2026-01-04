@@ -5,15 +5,18 @@
     Code range: 0x8015D2F0 -> 0x8015D42C
 */
 // Range: 0x8015D2F0 -> 0x8015D330
-void * AutoFood::~AutoFood(class AutoFood * const this /* r31 */) {}
+// this: r31
+AutoFood::~AutoFood() {}
 
 // Range: 0x8015D330 -> 0x8015D370
-void * AutoFood::AutoFood(class AutoFood * const this /* r31 */) {
+// this: r31
+AutoFood::AutoFood() {
     // References
     // -> struct [anonymous] __vt__8AutoFood;
 }
 
 // Range: 0x8015D3C8 -> 0x8015D42C
-void * RefrigeratorTab::RefrigeratorTab(class RefrigeratorTab * const this /* r29 */) {}
+// this: r29
+RefrigeratorTab::RefrigeratorTab() {}
 
 

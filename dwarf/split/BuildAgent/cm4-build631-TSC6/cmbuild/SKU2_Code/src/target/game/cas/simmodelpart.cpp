@@ -5,43 +5,52 @@
     Code range: 0x80048BD8 -> 0x8004B794
 */
 // Range: 0x80048BD8 -> 0x80048C34
-void * SimModelPart::SimModelPart(class SimModelPart * const this /* r30 */) {
+// this: r30
+SimModelPart::SimModelPart() {
     // References
     // -> struct [anonymous] __vt__12SimModelPart;
 }
 
 // Range: 0x80048C34 -> 0x80048CA8
-void * SimModelPart::~SimModelPart(class SimModelPart * const this /* r30 */) {
+// this: r30
+SimModelPart::~SimModelPart() {
     // References
     // -> struct [anonymous] __vt__12SimModelPart;
 }
 
 // Range: 0x80048CA8 -> 0x80048D28
-void SimModelPart::Init(class SimModelPart * const this /* r31 */) {}
+// this: r31
+void SimModelPart::Init() {}
 
 // Range: 0x80048D28 -> 0x80048D38
 void SimModelPart::Reset() {}
 
 // Range: 0x80048D38 -> 0x80048D98
-void SimModelPart::SetSimDescription(class SimModelPart * const this /* r30 */, class CasSimDescription & simDesc /* r31 */) {}
+// this: r30
+void SimModelPart::SetSimDescription(class CasSimDescription & simDesc /* r31 */) {}
 
 // Range: 0x80048D98 -> 0x80048DF0
-unsigned int SimModelPart::GetCurrentModelID(const class SimModelPart * const this /* r31 */) {}
+// this: r31
+unsigned int SimModelPart::GetCurrentModelID() const {}
 
 // Range: 0x80048DF0 -> 0x80048E04
 unsigned int SimModelPart::GetExpectedModelID() {}
 
 // Range: 0x80048E04 -> 0x80048EA0
-unsigned char SimModelPart::Update(class SimModelPart * const this /* r29 */, unsigned char bUpdateTexture /* r30 */, unsigned char bMorphAfterModelChange /* r31 */) {}
+// this: r29
+unsigned char SimModelPart::Update(unsigned char bUpdateTexture /* r30 */, unsigned char bMorphAfterModelChange /* r31 */) {}
 
 // Range: 0x80048EA0 -> 0x800490DC
-unsigned char SimModelPart::ChangeModel(class SimModelPart * const this /* r27 */, unsigned int nModelID /* r30 */, unsigned char bUpdateTexture /* r28 */, unsigned char bApplyMorph /* r29 */) {}
+// this: r27
+unsigned char SimModelPart::ChangeModel(unsigned int nModelID /* r30 */, unsigned char bUpdateTexture /* r28 */, unsigned char bApplyMorph /* r29 */) {}
 
 // Range: 0x800490DC -> 0x800491C0
-void SimModelPart::DeallocateModel(class SimModelPart * const this /* r31 */) {}
+// this: r31
+void SimModelPart::DeallocateModel() {}
 
 // Range: 0x800491C0 -> 0x80049248
-void SimModelPart::RebuildModified(class SimModelPart * const this /* r31 */) {}
+// this: r31
+void SimModelPart::RebuildModified() {}
 
 // Range: 0x80049248 -> 0x800492EC
 void SimModelPart::GetWeldableBodyPartConnections() {
@@ -50,27 +59,31 @@ void SimModelPart::GetWeldableBodyPartConnections() {
 }
 
 // Range: 0x800492EC -> 0x80049424
-void SimModelPart::WeldSharedVertices(class SimModelPart * const this /* r28 */, unsigned char bRebuild /* r29 */) {
+// this: r28
+void SimModelPart::WeldSharedVertices(unsigned char bRebuild /* r29 */) {
     // Local variables
     class SimModelPart * pSimModelPart2; // r30
 }
 
 // Range: 0x80049424 -> 0x80049550
-void SimModelPart::ApplySkin(class SimModelPart * const this /* r29 */) {
+// this: r29
+void SimModelPart::ApplySkin() {
     // Local variables
     unsigned int nAltShaderID; // r31
     class ERTexture * pAltTexture; // r30
 }
 
 // Range: 0x80049550 -> 0x8004963C
-void SimModelPart::ReapplySkin(class SimModelPart * const this /* r29 */) {
+// this: r29
+void SimModelPart::ReapplySkin() {
     // Local variables
     unsigned int nAltShaderID; // r31
     class ERTexture * pAltTexture; // r30
 }
 
 // Range: 0x8004963C -> 0x800496F8
-void SimModelPart::TransformModelUV(class SimModelPart * const this /* r31 */) {
+// this: r31
+void SimModelPart::TransformModelUV() {
     // Local variables
     class EVec2 scale; // r1+0x28
     class EVec2 translate; // r1+0x20
@@ -80,14 +93,16 @@ void SimModelPart::TransformModelUV(class SimModelPart * const this /* r31 */) {
 }
 
 // Range: 0x800496F8 -> 0x800498EC
-void SimModelPart::GetModelUVTransformParameters(class SimModelPart * const this /* r26 */, class EVec2 & scale /* r27 */, class EVec2 & translate /* r28 */, unsigned int & altShaderID /* r29 */, class EVec2 & altScale /* r30 */, class EVec2 & altTranslate /* r31 */) {
+// this: r26
+void SimModelPart::GetModelUVTransformParameters(class EVec2 & scale /* r27 */, class EVec2 & translate /* r28 */, unsigned int & altShaderID /* r29 */, class EVec2 & altScale /* r30 */, class EVec2 & altTranslate /* r31 */) {
     // Local variables
     class TRect bodyPartRect; // r1+0x10
     class TRect altBodyPartRect; // r1+0x8
 }
 
 // Range: 0x800498EC -> 0x80049F74
-void SimModelPart::ApplyLatticeMorphing(class SimModelPart * const this /* r27 */) {
+// this: r27
+void SimModelPart::ApplyLatticeMorphing() {
     // Local variables
     class EIStaticModel * bodyPartsToMorph[15]; // r1+0x14
     unsigned char bMorphHead; // r30
@@ -102,16 +117,20 @@ void SimModelPart::ApplyLatticeMorphing(class SimModelPart * const this /* r27 *
 }
 
 // Range: 0x80049F74 -> 0x8004A000
-void SimModelPart::DeallocateMorphResources(class SimModelPart * const this /* r31 */) {}
+// this: r31
+void SimModelPart::DeallocateMorphResources() {}
 
 // Range: 0x8004A000 -> 0x8004A074
-class SimModelPart * SimModelPart::GetSimModelPart(class SimModelPart * const this /* r30 */, enum eBodyPart bodyPart /* r31 */) {}
+// this: r30
+class SimModelPart * SimModelPart::GetSimModelPart(enum eBodyPart bodyPart /* r31 */) {}
 
 // Range: 0x8004A074 -> 0x8004A0F4
-class EIStaticModel * SimModelPart::GetModelPart(class SimModelPart * const this /* r30 */, enum eBodyPart bodyPart /* r31 */) {}
+// this: r30
+class EIStaticModel * SimModelPart::GetModelPart(enum eBodyPart bodyPart /* r31 */) {}
 
 // Range: 0x8004A0F4 -> 0x8004A168
-class ERTexture * SimModelPart::GetQuadrantTexture(class SimModelPart * const this /* r30 */, enum eSimPartsMapLocation quadrantNumber /* r31 */) {}
+// this: r30
+class ERTexture * SimModelPart::GetQuadrantTexture(enum eSimPartsMapLocation quadrantNumber /* r31 */) {}
 
 // Range: 0x8004A168 -> 0x8004A17C
 void SimModelPart::SwapChangingData(class EIStaticModel * pModel /* r0 */) {}
@@ -144,7 +163,8 @@ unsigned int SimModelPartHead::GetNumMorphTargetsInRegion() {}
 unsigned int SimModelPartHead::GetNumMorphTargetRegions() {}
 
 // Range: 0x8004A488 -> 0x8004A5EC
-void SimModelPartHead::GetMorphTargetResID(class SimModelPartHead * const this /* r31 */, enum eMorphTargetRegion morphRegion /* r29 */, unsigned int * pMorphTargetResID /* r27 */, unsigned int morphTargetResIDSize /* r28 */) {
+// this: r31
+void SimModelPartHead::GetMorphTargetResID(enum eMorphTargetRegion morphRegion /* r29 */, unsigned int * pMorphTargetResID /* r27 */, unsigned int morphTargetResIDSize /* r28 */) {
     // Local variables
     unsigned int nBeginIndex; // r30
     const struct BodyPartGeometryTSC6 * pBodyPartClothingSetData; // r0
@@ -152,7 +172,8 @@ void SimModelPartHead::GetMorphTargetResID(class SimModelPartHead * const this /
 }
 
 // Range: 0x8004A5EC -> 0x8004A6D4
-void SimModelPartHead::LoadCurrentBrowseMorphTargets(class SimModelPartHead * const this /* r31 */, enum eMorphTargetRegion morphRegion /* r28 */) {
+// this: r31
+void SimModelPartHead::LoadCurrentBrowseMorphTargets(enum eMorphTargetRegion morphRegion /* r28 */) {
     // Local variables
     class ERModel * pModel; // r30
     unsigned int numMorphTargets; // r29
@@ -161,7 +182,8 @@ void SimModelPartHead::LoadCurrentBrowseMorphTargets(class SimModelPartHead * co
 }
 
 // Range: 0x8004A6D4 -> 0x8004A84C
-void SimModelPartHead::ApplyMorphTargets(class SimModelPartHead * const this /* r26 */, unsigned char bUnregisterMorphTargets /* r27 */) {
+// this: r26
+void SimModelPartHead::ApplyMorphTargets(unsigned char bUnregisterMorphTargets /* r27 */) {
     // Local variables
     class ERModel * pHeadModel; // r31
     class CasSimDescription & simDesc; // r30
@@ -171,7 +193,8 @@ void SimModelPartHead::ApplyMorphTargets(class SimModelPartHead * const this /* 
 }
 
 // Range: 0x8004A84C -> 0x8004AB84
-void SimModelPartHead::ApplyMorphTargetsToRegion(class SimModelPartHead * const this /* r24 */, enum eMorphTargetRegion morphRegion /* r25 */, float fMorphValue /* f31 */, unsigned char bUnregisterMorphTargets /* r26 */) {
+// this: r24
+void SimModelPartHead::ApplyMorphTargetsToRegion(enum eMorphTargetRegion morphRegion /* r25 */, float fMorphValue /* f31 */, unsigned char bUnregisterMorphTargets /* r26 */) {
     // Local variables
     class ERModel * pStaticModel; // r31
     class CasSimDescription & simDesc; // r30
@@ -193,7 +216,8 @@ void SimModelPartHead::ApplyMorphTargetsToRegion(class SimModelPartHead * const 
 }
 
 // Range: 0x8004AB84 -> 0x8004B018
-void SimModelPartHead::HandleMorphTargetEvent(class SimModelPartHead * const this /* r30 */, const class CasEventMorphCharacter & event /* r31 */) {
+// this: r30
+void SimModelPartHead::HandleMorphTargetEvent(const class CasEventMorphCharacter & event /* r31 */) {
     // Local variables
     int morphTargetIndexPrimary; // r1+0x14
     int morphTargetIndexSecondary; // r1+0x10
@@ -226,10 +250,12 @@ void SimModelPartHead::HandleMorphTargetEvent(class SimModelPartHead * const thi
 }
 
 // Range: 0x8004B018 -> 0x8004B0B0
-void SimModelPartHead::SetupPreMorphRegion(class SimModelPartHead * const this /* r30 */, enum eMorphTargetRegion morphTargetRegion /* r31 */) {}
+// this: r30
+void SimModelPartHead::SetupPreMorphRegion(enum eMorphTargetRegion morphTargetRegion /* r31 */) {}
 
 // Range: 0x8004B0B0 -> 0x8004B158
-void SimModelPartHead::SetupPostMorphRegion(class SimModelPartHead * const this /* r30 */, enum eMorphTargetRegion morphTargetRegion /* r31 */) {}
+// this: r30
+void SimModelPartHead::SetupPostMorphRegion(enum eMorphTargetRegion morphTargetRegion /* r31 */) {}
 
 // Range: 0x8004B158 -> 0x8004B19C
 unsigned int SimModelPartFacialFeature::GetAltShaderID() {}
@@ -283,7 +309,8 @@ void SimModelPartHat::GetWeldableBodyPartConnections() {
 }
 
 // Range: 0x8004B670 -> 0x8004B6D8
-unsigned char SimModelPartSleeves::VerifyRequiredModels(const class SimModelPartSleeves * const this /* r31 */) {
+// this: r31
+unsigned char SimModelPartSleeves::VerifyRequiredModels() const {
     // Local variables
     const struct BodyPartGeometryTSC6 * pClothingSetData; // r0
 }

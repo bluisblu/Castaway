@@ -5,7 +5,8 @@
     Code range: 0x801C9358 -> 0x801CB188
 */
 // Range: 0x801C9358 -> 0x801C96C8
-void * CHouseSelectMap::CHouseSelectMap(class CHouseSelectMap * const this /* r31 */) {
+// this: r31
+CHouseSelectMap::CHouseSelectMap() {
     // Local variables
     class WeatherManager * pWeatherManager; // r0
     unsigned int nClockCycleCount; // r0
@@ -29,7 +30,8 @@ void * CHouseSelectMap::CHouseSelectMap(class CHouseSelectMap * const this /* r3
 }
 
 // Range: 0x801C96C8 -> 0x801C97C0
-void * CHouseSelectMap::~CHouseSelectMap(class CHouseSelectMap * const this /* r29 */) {
+// this: r29
+CHouseSelectMap::~CHouseSelectMap() {
     // Local variables
     class CameraDirector * pCamDir; // r3
     class WeatherManager * pWeatherManager; // r31
@@ -39,7 +41,8 @@ void * CHouseSelectMap::~CHouseSelectMap(class CHouseSelectMap * const this /* r
 }
 
 // Range: 0x801C97C0 -> 0x801C9938
-void CHouseSelectMap::DeallocateCurrentLot(class CHouseSelectMap * const this /* r30 */) {
+// this: r30
+void CHouseSelectMap::DeallocateCurrentLot() {
     // Local variables
     class FrameEffectsManager * feMgr; // r0
     class DepthOfField * dofObj; // r31
@@ -55,14 +58,16 @@ void CHouseSelectMap::DeallocateCurrentLot(class CHouseSelectMap * const this /*
 }
 
 // Range: 0x801C9938 -> 0x801C99BC
-void CHouseSelectMap::DeallocateNextLot(class CHouseSelectMap * const this /* r31 */) {
+// this: r31
+void CHouseSelectMap::DeallocateNextLot() {
     // References
     // -> class ELevelManager _levelman;
     // -> class EDatasetManager _datasetman;
 }
 
 // Range: 0x801C99BC -> 0x801C9D90
-void CHouseSelectMap::Reset(class CHouseSelectMap * const this /* r31 */) {
+// this: r31
+void CHouseSelectMap::Reset() {
     // Local variables
     class WeatherManager * pWeatherManager; // r29
     class EIDirLight * pSun; // r29
@@ -83,7 +88,8 @@ void CHouseSelectMap::Reset(class CHouseSelectMap * const this /* r31 */) {
 void CHouseSelectMap::ResetToNextLot() {}
 
 // Range: 0x801C9DCC -> 0x801CA290
-void CHouseSelectMap::Update(class CHouseSelectMap * const this /* r31 */) {
+// this: r31
+void CHouseSelectMap::Update() {
     // Local variables
     class EAnimController * pAc; // r29
     class EAnimController * ac; // r0
@@ -106,7 +112,8 @@ void CHouseSelectMap::Update(class CHouseSelectMap * const this /* r31 */) {
 }
 
 // Range: 0x801CA290 -> 0x801CA394
-unsigned char CHouseSelectMap::UpdateLoad(class CHouseSelectMap * const this /* r31 */) {
+// this: r31
+unsigned char CHouseSelectMap::UpdateLoad() {
     // References
     // -> class ELevelManager _levelman;
     // -> class EDatasetManager _datasetman;
@@ -116,7 +123,8 @@ unsigned char CHouseSelectMap::UpdateLoad(class CHouseSelectMap * const this /* 
 void CHouseSelectMap::UpdateController() {}
 
 // Range: 0x801CA398 -> 0x801CA6B4
-void CHouseSelectMap::UpdateNextLotLoad(class CHouseSelectMap * const this /* r31 */) {
+// this: r31
+void CHouseSelectMap::UpdateNextLotLoad() {
     // Local variables
     char * szNextHouseName; // r0
     char * szNextHouseName; // r0
@@ -130,7 +138,8 @@ void CHouseSelectMap::UpdateNextLotLoad(class CHouseSelectMap * const this /* r3
 }
 
 // Range: 0x801CA6B4 -> 0x801CA888
-void CHouseSelectMap::Draw(class CHouseSelectMap * const this /* r29 */, class ERC * prc /* r27 */) {
+// this: r29
+void CHouseSelectMap::Draw(class ERC * prc /* r27 */) {
     // References
     // -> class EGraphics * _pGfx;
     // -> class EGlobal _globals;

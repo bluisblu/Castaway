@@ -5,10 +5,11 @@
     Code range: 0x80134388 -> 0x8013441C
 */
 // Range: 0x80134388 -> 0x801343B4
-void * MemoryCardCache::MemoryCardCache() {}
+MemoryCardCache::MemoryCardCache() {}
 
 // Range: 0x801343B4 -> 0x80134408
-void * MemoryCardCache::~MemoryCardCache(class MemoryCardCache * const this /* r30 */) {}
+// this: r30
+MemoryCardCache::~MemoryCardCache() {}
 
 // Range: 0x80134408 -> 0x80134414
 void MemoryCardCache::SetSourceIsFile() {}

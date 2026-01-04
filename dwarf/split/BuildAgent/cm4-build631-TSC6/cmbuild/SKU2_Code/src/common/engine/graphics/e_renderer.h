@@ -20,12 +20,6 @@ class ERenderer * GetCurrentRenderer() {
 }
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\common\engine\graphics\e_renderer.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x802959DC -> 0x802959E4
-*/
 // Range: 0x802959DC -> 0x802959E4
 class ETexture * ERenderer::GetCurrentTexture() {}
 

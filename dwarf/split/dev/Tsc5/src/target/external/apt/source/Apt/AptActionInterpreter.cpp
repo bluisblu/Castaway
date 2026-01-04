@@ -216,10 +216,12 @@ enum StringCode {
 };
 static enum StringCode gaszPropertyNames[22]; // size: 0x58, address: 0x804588C0
 // Range: 0x80300688 -> 0x803006FC
-void AptActionInterpreter::initialize(struct AptActionInterpreter * const this /* r30 */, const struct AptInitParmsT & aptInitParms /* r31 */) {}
+// this: r30
+void AptActionInterpreter::initialize(const struct AptInitParmsT & aptInitParms /* r31 */) {}
 
 // Range: 0x803006FC -> 0x80300744
-void AptActionInterpreter::shutdown(struct AptActionInterpreter * const this /* r31 */) {}
+// this: r31
+void AptActionInterpreter::shutdown() {}
 
 static char __PRETTY_FUNCTION__[92]; // size: 0x5C, address: 0x80458918
 enum Actions {
@@ -357,46 +359,55 @@ enum Actions {
     AptActionBranchIfFalse = 184,
     LastAptAction = 185,
 };
+// total size: 0x4
 struct AptAction_PushString {
-    // total size: 0x4
+    // Members
     char * szStringToBePushed; // offset 0x0, size 0x4
 };
+// total size: 0x8
 struct AptAction_Push {
-    // total size: 0x8
+    // Members
     struct AptConstantPool items; // offset 0x0, size 0x8
 };
+// total size: 0x8
 struct AptAction_GetUrl {
-    // total size: 0x8
+    // Members
     char * szUrl; // offset 0x0, size 0x4
     char * szWin; // offset 0x4, size 0x4
 };
+// total size: 0x4
 struct AptAction_SetTarget {
-    // total size: 0x4
+    // Members
     char * szTarget; // offset 0x0, size 0x4
 };
+// total size: 0x4
 struct AptAction_GotoLabel {
-    // total size: 0x4
+    // Members
     char * szLabel; // offset 0x0, size 0x4
 };
+// total size: 0x18
 struct AptAction_DefineFunction {
-    // total size: 0x18
+    // Members
     const char * szName; // offset 0x0, size 0x4
     int nParams; // offset 0x4, size 0x4
     char * * aszParams; // offset 0x8, size 0x4
     int nCodeSize; // offset 0xC, size 0x4
     struct AptConstantPool constantPool; // offset 0x10, size 0x8
 };
+// total size: 0x4
 struct AptAction_With {
-    // total size: 0x4
+    // Members
     unsigned char * pEnd; // offset 0x0, size 0x4
 };
+// total size: 0x8
 struct AptRegisterParam {
-    // total size: 0x8
+    // Members
     unsigned int nRegister; // offset 0x0, size 0x4
     char * szParamName; // offset 0x4, size 0x4
 };
+// total size: 0x1C
 struct AptAction_DefineFunction2 {
-    // total size: 0x1C
+    // Members
     const char * szName; // offset 0x0, size 0x4
     int nParams; // offset 0x4, size 0x4
     signed short nRegisterCount; // offset 0x8, size 0x2
@@ -436,8 +447,9 @@ void AptActionInterpreter::_parseStream(unsigned char * pBase /* r29 */, struct 
     // -> class AptValueVector * gpValuesToRelease;
 }
 
+// total size: 0x14
 struct AptAction_TryCatchFinallyBlock {
-    // total size: 0x14
+    // Members
     unsigned int uTryCodeSize; // offset 0x0, size 0x4
     unsigned int uCatchCodeSize; // offset 0x4, size 0x4
     unsigned int uFinallyCodeSize; // offset 0x8, size 0x4
@@ -456,7 +468,8 @@ void AptActionInterpreter::unresolveStream() {}
 void AptActionInterpreter::resolveStream() {}
 
 // Range: 0x80300EC8 -> 0x80301014
-void AptActionInterpreter::loadVariables(struct AptActionInterpreter * const this /* r27 */, class AptValue * pContext /* r28 */, class AptValue * pWith /* r29 */) {
+// this: r27
+void AptActionInterpreter::loadVariables(class AptValue * pContext /* r28 */, class AptValue * pWith /* r29 */) {
     // Local variables
     class AptValue * pValue; // r0
     class EAStringC * s; // r30
@@ -505,7 +518,8 @@ unsigned char AptActionInterpreter::getContext(class AptValue * pCurrentContext 
 }
 
 // Range: 0x803013D0 -> 0x80301734
-unsigned char AptActionInterpreter::setVariable(struct AptActionInterpreter * const this /* r24 */, class AptValue * pCurrentContext /* r25 */, class AptValue * pWith /* r26 */, const class EAStringC * pVarName /* r27 */, class AptValue * pValue /* r28 */, int bGlobal /* r29 */, int bLookInFunctionScope /* r30 */, int bIsMember /* r31 */) {
+// this: r24
+unsigned char AptActionInterpreter::setVariable(class AptValue * pCurrentContext /* r25 */, class AptValue * pWith /* r26 */, const class EAStringC * pVarName /* r27 */, class AptValue * pValue /* r28 */, int bGlobal /* r29 */, int bLookInFunctionScope /* r30 */, int bIsMember /* r31 */) {
     // Local variables
     class AptValue * pContext; // r1+0xC
     class EAStringC sVar; // r1+0x8
@@ -518,8 +532,9 @@ unsigned char AptActionInterpreter::setVariable(struct AptActionInterpreter * co
     // -> class AptValue * gpGlobalObjectPrototype;
 }
 
+// total size: 0x3C0
 struct AptRenderingContext {
-    // total size: 0x3C0
+    // Members
     struct AptCXForm curCXForm; // offset 0x0, size 0x20
     struct AptMatrix curVertexMatrix; // offset 0x20, size 0x18
     struct AptCXForm aCXFormStack[16]; // offset 0x38, size 0x200
@@ -648,7 +663,8 @@ class AptValue * AptActionInterpreter::_doCloneSprite(class AptValue * pTarget /
 }
 
 // Range: 0x803024C0 -> 0x8030280C
-class AptValue * AptActionInterpreter::getVariable(struct AptActionInterpreter * const this /* r24 */, class AptValue * pCurrentContext /* r25 */, class AptValue * pWith /* r26 */, const class EAStringC * pVarName /* r27 */, int bGlobal /* r28 */, int bLookInFunctionScope /* r29 */, int bIsMember /* r30 */) {
+// this: r24
+class AptValue * AptActionInterpreter::getVariable(class AptValue * pCurrentContext /* r25 */, class AptValue * pWith /* r26 */, const class EAStringC * pVarName /* r27 */, int bGlobal /* r28 */, int bLookInFunctionScope /* r29 */, int bIsMember /* r30 */) {
     // Local variables
     class AptValue * pContext; // r1+0xC
     class EAStringC sVar; // r1+0x8
@@ -667,7 +683,8 @@ void AptActionInterpreter::valueToObject(class AptValue * pCurrentContext /* r28
 
 static char __PRETTY_FUNCTION__[64]; // size: 0x40, address: 0x80458D50
 // Range: 0x803028C0 -> 0x80302C4C
-void AptActionInterpreter::callFunction(struct AptActionInterpreter * const this /* r30 */, class AptValue * pContext /* r27 */, class AptValue * pFuncDef /* r26 */, int nStackParams /* r25 */) {
+// this: r30
+void AptActionInterpreter::callFunction(class AptValue * pContext /* r27 */, class AptValue * pFuncDef /* r26 */, int nStackParams /* r25 */) {
     // Local variables
     int i; // r27
     int nStackElementsPre; // r31
@@ -691,7 +708,8 @@ void AptActionInterpreter::callFunction(struct AptActionInterpreter * const this
 void * AptActionInterpreter::PrepareForExecution() {}
 
 // Range: 0x80302C50 -> 0x80302CD4
-void AptActionInterpreter::CleanupAfterExecution(struct AptActionInterpreter * const this /* r29 */, void * pPassedValue /* r30 */) {
+// this: r29
+void AptActionInterpreter::CleanupAfterExecution(void * pPassedValue /* r30 */) {
     // Local variables
     class AptValue * pThrown; // r31
     class EAStringC ans; // r1+0x8
@@ -699,7 +717,8 @@ void AptActionInterpreter::CleanupAfterExecution(struct AptActionInterpreter * c
 
 static char __PRETTY_FUNCTION__[90]; // size: 0x5A, address: 0x80458D90
 // Range: 0x80302CD4 -> 0x80303630
-class AptObject * AptActionInterpreter::_createObject(struct AptActionInterpreter * const this /* r27 */, class AptValue * pCurrentContext /* r16 */, const class EAStringC * szObject /* r15 */, int nParams /* r28 */, unsigned char bRunConstructor /* r29 */) {
+// this: r27
+class AptObject * AptActionInterpreter::_createObject(class AptValue * pCurrentContext /* r16 */, const class EAStringC * szObject /* r15 */, int nParams /* r28 */, unsigned char bRunConstructor /* r29 */) {
     // Local variables
     class AptObject * pObject; // [invalid]
     class AptValue * pConstructor; // r31
@@ -722,23 +741,34 @@ class AptObject * AptActionInterpreter::_createObject(struct AptActionInterprete
     // -> class AptNone * gpUndefinedValue;
 }
 
+// total size: 0x2C
 class AptError : public AptObject {
-    // total size: 0x2C
+    // Static members
+    static class AptNativeFunction * psMethod_toString; // size: 0x4
+
+    // Members
 public:
     class EAStringC msMessage; // offset 0x24, size 0x4
     class EAStringC msName; // offset 0x28, size 0x4
 };
+// total size: 0x28
 class AptStringObject : public AptObject {
-    // total size: 0x28
+    // Members
 public:
     class AptString * mpStringObject; // offset 0x24, size 0x4
 };
+// total size: 0x1
 class StringPool {
-    // total size: 0x1
+    // Static members
+    static class AptString * spFirstFree; // size: 0x4
+    static int spPoolSize; // size: 0x4
+    static class AptString * * spPool; // size: 0x4
+    static class EAStringC saConstant[178]; // size: 0x2C8
 };
 static char __PRETTY_FUNCTION__[59]; // size: 0x3B, address: 0x80458E10
 // Range: 0x80303630 -> 0x803037B8
-void AptActionInterpreter::_doEnumerate(struct AptActionInterpreter * const this /* r27 */, class AptValue * pCurrentContext /* r29 */, class AptValue * pCurWith /* r28 */) {
+// this: r27
+void AptActionInterpreter::_doEnumerate(class AptValue * pCurrentContext /* r29 */, class AptValue * pCurWith /* r28 */) {
     // Local variables
     class AptValue * pObject; // r31
     class AptNativeHash * pNativeHash; // r30
@@ -761,7 +791,8 @@ static class AptString * _concatAsStrings(class AptValue * pA /* r29 */, class A
 struct FunctionTable sGlobalTable[185]; // size: 0x2E4, address: 0x80458E4C
 static char __PRETTY_FUNCTION__[90]; // size: 0x5A, address: 0x80459130
 // Range: 0x80303890 -> 0x80303AD8
-unsigned char * AptActionInterpreter::runStream(struct AptActionInterpreter * const this /* r29 */, const unsigned char * aActionStream /* r25 */, class AptCIH * pCurrentContext /* r31 */, int nMaxStreamBytes /* r30 */, struct AptCharacterInst * pParentCharacter /* r28 */) {
+// this: r29
+unsigned char * AptActionInterpreter::runStream(const unsigned char * aActionStream /* r25 */, class AptCIH * pCurrentContext /* r31 */, int nMaxStreamBytes /* r30 */, struct AptCharacterInst * pParentCharacter /* r28 */) {
     // Local variables
     struct LocalContextT context; // r1+0x8
     enum Actions eAction; // r4
@@ -1615,8 +1646,9 @@ void AptActionInterpreter::_FunctionAptActionGreater(struct AptActionInterpreter
     // -> class AptNone * gpUndefinedValue;
 }
 
+// total size: 0x4
 struct AptAction_GotoFrame {
-    // total size: 0x4
+    // Members
     int nFrame; // offset 0x0, size 0x4
 };
 // Range: 0x8030890C -> 0x80308A10
@@ -1640,8 +1672,9 @@ void AptActionInterpreter::_FunctionAptActionGetUrl(struct AptActionInterpreter 
     // -> struct AptLinker * gpLinker;
 }
 
+// total size: 0x4
 struct AptAction_StoreRegister {
-    // total size: 0x4
+    // Members
     int nRegister; // offset 0x0, size 0x4
 };
 // Range: 0x80308B90 -> 0x80308BDC
@@ -1733,8 +1766,9 @@ void AptActionInterpreter::_FunctionAptActionDefineFunction2(struct AptActionInt
     class EAStringC strName; // r1+0x8
 }
 
+// total size: 0x4
 struct AptAction_BranchAddress {
-    // total size: 0x4
+    // Members
     int nTargetDelta; // offset 0x0, size 0x4
 };
 // Range: 0x80309438 -> 0x803094DC
@@ -1756,8 +1790,9 @@ void AptActionInterpreter::_FunctionAptActionCallFrame(struct AptActionInterpret
     class EAStringC sName; // r1+0x8
 }
 
+// total size: 0x4
 struct AptAction_GotoFrame2 {
-    // total size: 0x4
+    // Members
     int bPlay; // offset 0x0, size 0x4
 };
 // Range: 0x803095E8 -> 0x80309798
@@ -1871,15 +1906,17 @@ void AptActionInterpreter::_FunctionAptActionPushStringDictByte() {
     unsigned char uDictionary; // r0
 }
 
+// total size: 0x2
 struct /* @class$12358AptActionInterpreter_cpp */ {
-    // total size: 0x2
+    // Members
     char c0; // offset 0x0, size 0x1
     char c1; // offset 0x1, size 0x1
 };
 union /* @class$12357AptActionInterpreter_cpp */ {
     unsigned short uDictionary; // offset 0x0, size 0x2
+    // total size: 0x2
     struct /* @class$12358AptActionInterpreter_cpp */ {
-        // total size: 0x2
+        // Members
         char c0; // offset 0x0, size 0x1
         char c1; // offset 0x1, size 0x1
     } S; // offset 0x0, size 0x2
@@ -1890,8 +1927,9 @@ void AptActionInterpreter::_FunctionAptActionPushStringDictWord() {
     const unsigned char * pI; // r6
     union /* @class$12357AptActionInterpreter_cpp */ {
         unsigned short uDictionary; // offset 0x0, size 0x2
+        // total size: 0x2
         struct /* @class$12358AptActionInterpreter_cpp */ {
-            // total size: 0x2
+            // Members
             char c0; // offset 0x0, size 0x1
             char c1; // offset 0x1, size 0x1
         } S; // offset 0x0, size 0x2
@@ -1978,8 +2016,9 @@ void AptActionInterpreter::_FunctionAptActionDictCallMethodSetVar(struct AptActi
     // -> class AptValueVector * gpValuesToRelease;
 }
 
+// total size: 0x4
 struct /* @class$12492AptActionInterpreter_cpp */ {
-    // total size: 0x4
+    // Members
     char c0; // offset 0x0, size 0x1
     char c1; // offset 0x1, size 0x1
     char c2; // offset 0x2, size 0x1
@@ -1987,8 +2026,9 @@ struct /* @class$12492AptActionInterpreter_cpp */ {
 };
 union /* @class$12491AptActionInterpreter_cpp */ {
     float fValue; // offset 0x0, size 0x4
+    // total size: 0x4
     struct /* @class$12492AptActionInterpreter_cpp */ {
-        // total size: 0x4
+        // Members
         char c0; // offset 0x0, size 0x1
         char c1; // offset 0x1, size 0x1
         char c2; // offset 0x2, size 0x1
@@ -2001,8 +2041,9 @@ void AptActionInterpreter::_FunctionAptActionPushFloat(struct AptActionInterpret
     const unsigned char * pI; // r7
     union /* @class$12491AptActionInterpreter_cpp */ {
         float fValue; // offset 0x0, size 0x4
+        // total size: 0x4
         struct /* @class$12492AptActionInterpreter_cpp */ {
-            // total size: 0x4
+            // Members
             char c0; // offset 0x0, size 0x1
             char c1; // offset 0x1, size 0x1
             char c2; // offset 0x2, size 0x1
@@ -2017,15 +2058,17 @@ void AptActionInterpreter::_FunctionAptActionPushByte(struct AptActionInterprete
     signed char c; // r0
 }
 
+// total size: 0x2
 struct /* @class$12513AptActionInterpreter_cpp */ {
-    // total size: 0x2
+    // Members
     unsigned char c0; // offset 0x0, size 0x1
     unsigned char c1; // offset 0x1, size 0x1
 };
 union /* @class$12512AptActionInterpreter_cpp */ {
     signed short nValue; // offset 0x0, size 0x2
+    // total size: 0x2
     struct /* @class$12513AptActionInterpreter_cpp */ {
-        // total size: 0x2
+        // Members
         unsigned char c0; // offset 0x0, size 0x1
         unsigned char c1; // offset 0x1, size 0x1
     } S; // offset 0x0, size 0x2
@@ -2036,16 +2079,18 @@ void AptActionInterpreter::_FunctionAptActionPushWord(struct AptActionInterprete
     const unsigned char * pI; // r5
     union /* @class$12512AptActionInterpreter_cpp */ {
         signed short nValue; // offset 0x0, size 0x2
+        // total size: 0x2
         struct /* @class$12513AptActionInterpreter_cpp */ {
-            // total size: 0x2
+            // Members
             unsigned char c0; // offset 0x0, size 0x1
             unsigned char c1; // offset 0x1, size 0x1
         } S; // offset 0x0, size 0x2
     } Var; // r1+0x8
 }
 
+// total size: 0x4
 struct /* @class$12525AptActionInterpreter_cpp */ {
-    // total size: 0x4
+    // Members
     unsigned char c0; // offset 0x0, size 0x1
     unsigned char c1; // offset 0x1, size 0x1
     unsigned char c2; // offset 0x2, size 0x1
@@ -2053,8 +2098,9 @@ struct /* @class$12525AptActionInterpreter_cpp */ {
 };
 union /* @class$12524AptActionInterpreter_cpp */ {
     int nValue; // offset 0x0, size 0x4
+    // total size: 0x4
     struct /* @class$12525AptActionInterpreter_cpp */ {
-        // total size: 0x4
+        // Members
         unsigned char c0; // offset 0x0, size 0x1
         unsigned char c1; // offset 0x1, size 0x1
         unsigned char c2; // offset 0x2, size 0x1
@@ -2067,8 +2113,9 @@ void AptActionInterpreter::_FunctionAptActionPushDWord(struct AptActionInterpret
     const unsigned char * pI; // r6
     union /* @class$12524AptActionInterpreter_cpp */ {
         int nValue; // offset 0x0, size 0x4
+        // total size: 0x4
         struct /* @class$12525AptActionInterpreter_cpp */ {
-            // total size: 0x4
+            // Members
             unsigned char c0; // offset 0x0, size 0x1
             unsigned char c1; // offset 0x1, size 0x1
             unsigned char c2; // offset 0x2, size 0x1
@@ -2159,31 +2206,24 @@ void AptActionInterpreter::_FunctionAptActionTry(struct AptActionInterpreter * c
 // Range: 0x8030AC84 -> 0x8030ACC8
 void AptActionInterpreter::_FunctionAptActionThrow(struct AptActionInterpreter * const pInterpreter /* r31 */) {}
 
-struct {
-    // total size: 0x44
-} __vt__12AptMovieClip; // size: 0x44, address: 0x804597A0
-struct {
-    // total size: 0x44
-} __vt__15AptStringObject; // size: 0x44, address: 0x804597E4
-struct {
-    // total size: 0x44
-} __vt__13AptFrameStack; // size: 0x44, address: 0x80459828
-struct {
-    // total size: 0x44
-} __vt__9AptLookup; // size: 0x44, address: 0x8045986C
-struct {
-    // total size: 0x44
-} __vt__11AptRegister; // size: 0x44, address: 0x804598B0
-struct {
-    // total size: 0x44
-} __vt__12AptValueNoGC; // size: 0x44, address: 0x804598F4
+// total size: 0x44
+struct {} __vt__12AptMovieClip; // size: 0x44, address: 0x804597A0
+// total size: 0x44
+struct {} __vt__15AptStringObject; // size: 0x44, address: 0x804597E4
+// total size: 0x44
+struct {} __vt__13AptFrameStack; // size: 0x44, address: 0x80459828
+// total size: 0x44
+struct {} __vt__9AptLookup; // size: 0x44, address: 0x8045986C
+// total size: 0x44
+struct {} __vt__11AptRegister; // size: 0x44, address: 0x804598B0
+// total size: 0x44
+struct {} __vt__12AptValueNoGC; // size: 0x44, address: 0x804598F4
 // Range: 0x8030ACC8 -> 0x8030AD10
 static void __sinit_\AptActionInterpreter_cpp() {
     // References
     // -> struct AptActionInterpreter gAptActionInterpreter;
 }
 
-class AptNone : public AptValueNoGC {
-    // total size: 0xC
-};
+// total size: 0xC
+class AptNone : public AptValueNoGC {};
 

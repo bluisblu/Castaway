@@ -5,10 +5,11 @@
     Code range: 0x800DAAA4 -> 0x800DAC50
 */
 // Range: 0x800DAAA4 -> 0x800DAAE4
-void * IRect::~IRect(class IRect * const this /* r31 */) {}
+// this: r31
+IRect::~IRect() {}
 
 // Range: 0x800DAAE4 -> 0x800DAAE8
-void * IRect::IRect() {}
+IRect::IRect() {}
 
 // Range: 0x800DAAE8 -> 0x800DAAFC
 void IRect::Set() {}
@@ -17,10 +18,11 @@ void IRect::Set() {}
 void IRect::Inflate() {}
 
 // Range: 0x800DAB54 -> 0x800DAB94
-void * IPoint::~IPoint(class IPoint * const this /* r31 */) {}
+// this: r31
+IPoint::~IPoint() {}
 
 // Range: 0x800DAB94 -> 0x800DAB98
-void * IPoint::IPoint() {}
+IPoint::IPoint() {}
 
 // Range: 0x800DAB98 -> 0x800DABCC
 void IRect::Offset() {}
@@ -35,6 +37,6 @@ unsigned char IRect::PointIn() {
 }
 
 // Range: 0x800DAC44 -> 0x800DAC50
-void * IPoint::IPoint() {}
+IPoint::IPoint() {}
 
 

@@ -16,12 +16,12 @@ class AptValue * AptGlobal::objectMemberLookup(const class EAStringC * const pNa
 }
 
 // Range: 0x80330158 -> 0x803301C8
-unsigned char AptGlobal::objectMemberSet(class AptGlobal * const this /* r29 */, const class EAStringC * const pName /* r30 */, class AptValue * const pValue /* r31 */) {
+// this: r29
+unsigned char AptGlobal::objectMemberSet(const class EAStringC * const pName /* r30 */, class AptValue * const pValue /* r31 */) {
     // References
     // -> class AptGlobalExtensionObject * gpGlobalExtensionObject;
 }
 
-struct {
-    // total size: 0x44
-} __vt__9AptGlobal; // size: 0x44, address: 0x8045F298
+// total size: 0x44
+struct {} __vt__9AptGlobal; // size: 0x44, address: 0x8045F298
 

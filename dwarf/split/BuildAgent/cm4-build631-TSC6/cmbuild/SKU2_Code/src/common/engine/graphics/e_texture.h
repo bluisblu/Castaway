@@ -32,12 +32,6 @@ unsigned int ETexture::GetXSize() {}
 unsigned int ETexture::GetPaletteFormat() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\common\engine\graphics\e_texture.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x800A4278 -> 0x800A4290
-*/
 // Range: 0x800A4278 -> 0x800A4288
 void ETexture::ClearTileFlags() {}
 
@@ -45,22 +39,10 @@ void ETexture::ClearTileFlags() {}
 unsigned int ETexture::GetPaletteSize() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\common\engine\graphics\e_texture.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x801A37D8 -> 0x801A37DC
-*/
 // Range: 0x801A37D8 -> 0x801A37DC
 void ETexture::Invalidate() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\common\engine\graphics\e_texture.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x802A6D04 -> 0x802A6D28
-*/
 // Range: 0x802A6D04 -> 0x802A6D08
 void ETexture::Select() {}
 

@@ -17,21 +17,17 @@ float WeatherManager::GetWindSpeed() {}
 unsigned char WeatherManager::IsForceRain() {}
 
 // Range: 0x8002541C -> 0x80025478
-unsigned char WeatherManager::IsTreeBranchAnimationDisabled(const class WeatherManager * const this /* r30 */) {}
+// this: r30
+unsigned char WeatherManager::IsTreeBranchAnimationDisabled() const {}
 
 // Range: 0x80025478 -> 0x80025484
 unsigned char WeatherManager::IsSuspended() {}
 
 // Range: 0x80025484 -> 0x800254E0
-unsigned char WeatherManager::IsTreeTrunkAnimationDisabled(const class WeatherManager * const this /* r30 */) {}
+// this: r30
+unsigned char WeatherManager::IsTreeTrunkAnimationDisabled() const {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\target\game\weather\weather_manager.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x80031834 -> 0x8003184C
-*/
 // Range: 0x80031834 -> 0x8003183C
 void WeatherManager::SetShaderDT() {}
 
@@ -39,12 +35,6 @@ void WeatherManager::SetShaderDT() {}
 void WeatherManager::SetForceRain() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\target\game\weather\weather_manager.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x800960DC -> 0x8009611C
-*/
 // Range: 0x800960DC -> 0x800960E4
 float WeatherManager::GetMaxSkylightGloomIntensity() {}
 
@@ -70,20 +60,15 @@ class EVec3 WeatherManager::GetSunDirection() {}
 void WeatherManager::SetSunMoonAdditionalOffset() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\target\game\weather\weather_manager.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x8010FD0C -> 0x8010FE2C
-*/
 // Range: 0x8010FD0C -> 0x8010FD4C
-void * WeatherManager::__nw(unsigned long size /* r31 */) {}
+void * WeatherManager::operator new(unsigned long size /* r31 */) {}
 
 // Range: 0x8010FD4C -> 0x8010FD54
 int WeatherManager::GetNumWeatherEvents() {}
 
 // Range: 0x8010FD54 -> 0x8010FDB0
-unsigned char WeatherManager::IsWindDisabled(const class WeatherManager * const this /* r30 */) {}
+// this: r30
+unsigned char WeatherManager::IsWindDisabled() const {}
 
 // Range: 0x8010FDB0 -> 0x8010FDB8
 enum RainLevel WeatherManager::GetRainLevel() {}
@@ -113,12 +98,6 @@ void WeatherManager::SetWindSpeed() {}
 int WeatherManager::GetWeatherStateSequenceNumber() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\target\game\weather\weather_manager.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x801CB258 -> 0x801CB268
-*/
 // Range: 0x801CB258 -> 0x801CB260
 void WeatherManager::SetLightningRateMultiplier() {}
 
@@ -126,12 +105,6 @@ void WeatherManager::SetLightningRateMultiplier() {}
 void WeatherManager::SetLightningSpeedMultiplier() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\target\game\weather\weather_manager.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x801F3024 -> 0x801F303C
-*/
 // Range: 0x801F3024 -> 0x801F302C
 enum MoonPhase WeatherManager::GetMoonPhase() {}
 
@@ -142,12 +115,6 @@ signed short WeatherManager::GetCurrentMinute() {}
 signed short WeatherManager::GetCurrentHour() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\target\game\weather\weather_manager.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x801FBB4C -> 0x801FBB68
-*/
 // Range: 0x801FBB4C -> 0x801FBB54
 float WeatherManager::GetShaderDT() {}
 
@@ -158,22 +125,17 @@ unsigned char WeatherManager::GetWeather() {}
 float WeatherManager::GetRainBlend() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\target\game\weather\weather_manager.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x80248FF0 -> 0x8024907C
-*/
 // Range: 0x80248FF0 -> 0x80249030
-void * WeatherEvent::WeatherEvent(struct WeatherEvent * const this /* r31 */) {}
+// this: r31
+WeatherEvent::WeatherEvent() {}
 
 // Range: 0x80249030 -> 0x80249064
-void WeatherManager::__dl(void * p /* r31 */) {}
+void WeatherManager::operator delete(void * p /* r31 */) {}
 
 // Range: 0x80249064 -> 0x8024906C
 class EVec4 & WeatherManager::GetFogColor() {}
 
 // Range: 0x8024906C -> 0x8024907C
-void * WindyPlantInfo::WindyPlantInfo() {}
+WindyPlantInfo::WindyPlantInfo() {}
 
 

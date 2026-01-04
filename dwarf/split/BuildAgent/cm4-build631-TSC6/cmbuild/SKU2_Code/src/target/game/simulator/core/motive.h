@@ -5,6 +5,7 @@
     Code range: 0x800CE1A8 -> 0x800CE1D8
 */
 // Range: 0x800CE1A8 -> 0x800CE1D8
-void * Motives::Motives(class Motives * const this /* r31 */) {}
+// this: r31
+Motives::Motives() {}
 
 

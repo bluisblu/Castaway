@@ -5,10 +5,12 @@
     Code range: 0x80141D90 -> 0x80141E8C
 */
 // Range: 0x80141D90 -> 0x80141DEC
-void * hash_map::hash_map(class hash_map * const this /* r31 */) {}
+// this: r31
+hash_map::hash_map() {}
 
 // Range: 0x80141DEC -> 0x80141E8C
-int & hash_map::__vc(class hash_map * const this /* r30 */, const signed short & key /* r31 */) {
+// this: r30
+int & hash_map::operator[](const signed short & key /* r31 */) {
     // Local variables
     struct hashtable_iterator it; // r1+0x18
 }

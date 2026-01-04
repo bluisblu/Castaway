@@ -5,7 +5,8 @@
     Code range: 0x802614A4 -> 0x80261528
 */
 // Range: 0x802614A4 -> 0x80261528
-class TString TString::ExtractExtension(const class TString * const this /* r31 */) {
+// this: r31
+class TString TString::ExtractExtension() const {
     // Local variables
     class TString ret; // r1+0x8
 }

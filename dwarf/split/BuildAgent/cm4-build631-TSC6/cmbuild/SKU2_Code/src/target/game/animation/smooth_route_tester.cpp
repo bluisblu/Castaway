@@ -5,13 +5,14 @@
     Code range: 0x80022430 -> 0x80022B80
 */
 // Range: 0x80022430 -> 0x80022444
-void * SmoothRouteTester::SmoothRouteTester() {
+SmoothRouteTester::SmoothRouteTester() {
     // References
     // -> struct [anonymous] __vt__17SmoothRouteTester;
 }
 
 // Range: 0x80022444 -> 0x8002248C
-void * SmoothRouteTester::~SmoothRouteTester(class SmoothRouteTester * const this /* r31 */) {}
+// this: r31
+SmoothRouteTester::~SmoothRouteTester() {}
 
 // Range: 0x8002248C -> 0x800224F4
 unsigned char SmoothRouteTester::CanPlace(class EVec2 & pt /* r30 */) {
@@ -30,7 +31,8 @@ class FTilePt SmoothRouteTester::GetFTilePt(class EVec2 & pt /* r31 */) {
 }
 
 // Range: 0x80022564 -> 0x80022708
-unsigned char SmoothRouteTester::MomentumSmooth(class SmoothRouteTester * const this /* r26 */, class TileList * pTile /* r27 */, class vector & noSmoothList /* r28 */, int firstIdx /* r29 */) {
+// this: r26
+unsigned char SmoothRouteTester::MomentumSmooth(class TileList * pTile /* r27 */, class vector & noSmoothList /* r28 */, int firstIdx /* r29 */) {
     // Local variables
     int listSize; // r30
     class EVec2 p1; // r1+0x40
@@ -42,7 +44,8 @@ unsigned char SmoothRouteTester::MomentumSmooth(class SmoothRouteTester * const 
 }
 
 // Range: 0x80022708 -> 0x800229FC
-float SmoothRouteTester::SimulateWalk(class SmoothRouteTester * const this /* r28 */, class EVec2 & origin /* r29 */, class EVec2 & dest /* r30 */, float currentDir /* f28 */, unsigned char & shouldContinue /* r31 */, float deltaT /* f31 */) {
+// this: r28
+float SmoothRouteTester::SimulateWalk(class EVec2 & origin /* r29 */, class EVec2 & dest /* r30 */, float currentDir /* f28 */, unsigned char & shouldContinue /* r31 */, float deltaT /* f31 */) {
     // Local variables
     float velocity; // f30
     class EVec2 curPos; // r1+0x38
@@ -61,7 +64,8 @@ float SmoothRouteTester::SimulateWalk(class SmoothRouteTester * const this /* r2
 }
 
 // Range: 0x800229FC -> 0x80022AD4
-float SmoothRouteTester::GetAngularVelocity(class SmoothRouteTester * const this /* r30 */, float uniformVelocity /* f30 */, float distance /* f31 */, unsigned char & canRotate /* r31 */) {
+// this: r30
+float SmoothRouteTester::GetAngularVelocity(float uniformVelocity /* f30 */, float distance /* f31 */, unsigned char & canRotate /* r31 */) {
     // Local variables
     float cos2Theta; // f0
     float maxRadiusToTarget; // f0

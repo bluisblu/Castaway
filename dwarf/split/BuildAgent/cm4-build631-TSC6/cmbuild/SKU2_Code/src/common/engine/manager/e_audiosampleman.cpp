@@ -11,7 +11,8 @@ void EAudioSampleManager::Init() {}
 class EAHeap * EAudioSampleManager::GetHeap() {}
 
 // Range: 0x802A7E60 -> 0x802A7EAC
-unsigned int EAudioSampleManager::MakeSpace(class EAudioSampleManager * const this /* r31 */) {
+// this: r31
+unsigned int EAudioSampleManager::MakeSpace() {
     // Local variables
     unsigned int nBytesFreed; // r0
 }

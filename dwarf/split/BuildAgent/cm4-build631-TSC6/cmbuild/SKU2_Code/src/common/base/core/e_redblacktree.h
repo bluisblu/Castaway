@@ -5,7 +5,8 @@
     Code range: 0x80016CE4 -> 0x80016F18
 */
 // Range: 0x80016CE4 -> 0x80016D38
-void * ERedBlackTree::~ERedBlackTree(class ERedBlackTree * const this /* r30 */) {}
+// this: r30
+ERedBlackTree::~ERedBlackTree() {}
 
 // Range: 0x80016D38 -> 0x80016D5C
 class RBIteratorPtrType * ERedBlackTree::Next() {}
@@ -38,7 +39,8 @@ class RBIteratorPtrType * TRedBlackTree::Insert() {}
 class RBIteratorPtrType * TRedBlackTree::Insert() {}
 
 // Range: 0x80016DB4 -> 0x80016E30
-void TRedBlackTree::DeleteAll(class TRedBlackTree * const this /* r29 */) {
+// this: r29
+void TRedBlackTree::DeleteAll() {
     // Local variables
     class RBIteratorPtrType * i; // r31
     class RBIteratorPtrType * next; // r30
@@ -49,7 +51,8 @@ void TRedBlackTree::DeleteAll(class TRedBlackTree * const this /* r29 */) {
 unsigned char ERedBlackTree::IsValid() {}
 
 // Range: 0x80016E98 -> 0x80016F14
-void TRedBlackTree::DeleteAll(class TRedBlackTree * const this /* r29 */) {
+// this: r29
+void TRedBlackTree::DeleteAll() {
     // Local variables
     class RBIteratorPtrType * i; // r31
     class RBIteratorPtrType * next; // r30
@@ -60,12 +63,6 @@ void TRedBlackTree::DeleteAll(class TRedBlackTree * const this /* r29 */) {
 class RBIteratorPtrType * TRedBlackTree::Insert() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\common\base\core\e_redblacktree.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x8008A188 -> 0x8008A2DC
-*/
 // Range: 0x8008A188 -> 0x8008A18C
 class EQuadTree * TRedBlackTree::GetValue() {}
 
@@ -79,7 +76,7 @@ unsigned int TRedBlackTree::GetKey() {}
 unsigned int ERedBlackTree::GetKey() {}
 
 // Range: 0x8008A2D0 -> 0x8008A2D4
-class EInstance * & TRedBlackTree::__vc() {}
+class EInstance * & TRedBlackTree::operator[]() {}
 
 // Range: 0x8008A2D4 -> 0x8008A2D8
 class RBIteratorPtrType * TRedBlackTree::Insert() {}
@@ -88,14 +85,9 @@ class RBIteratorPtrType * TRedBlackTree::Insert() {}
 void TRedBlackTree::Remove() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\common\base\core\e_redblacktree.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x80220024 -> 0x8022035C
-*/
 // Range: 0x80220134 -> 0x802201AC
-void TRedBlackTree::DeleteAll(class TRedBlackTree * const this /* r29 */) {
+// this: r29
+void TRedBlackTree::DeleteAll() {
     // Local variables
     class RBIteratorPtrType * i; // r31
     class RBIteratorPtrType * next; // r30
@@ -106,7 +98,8 @@ void TRedBlackTree::DeleteAll(class TRedBlackTree * const this /* r29 */) {
 struct ERoomOcclude * TRedBlackTree::GetValue() {}
 
 // Range: 0x802201B0 -> 0x8022022C
-void TRedBlackTree::DeleteAll(class TRedBlackTree * const this /* r29 */) {
+// this: r29
+void TRedBlackTree::DeleteAll() {
     // Local variables
     class RBIteratorPtrType * i; // r31
     class RBIteratorPtrType * next; // r30
@@ -129,7 +122,8 @@ class RBIteratorPtrType * TRedBlackTree::Find() {}
 class RBIteratorPtrType * TRedBlackTree::Find() {}
 
 // Range: 0x80220240 -> 0x802202C4
-void TRedBlackTree::SafeDeleteAll(class TRedBlackTree * const this /* r29 */) {
+// this: r29
+void TRedBlackTree::SafeDeleteAll() {
     // Local variables
     class RBIteratorPtrType * i; // r31
     class RBIteratorPtrType * next; // r30
@@ -152,7 +146,8 @@ unsigned int TRedBlackTree::GetKey() {}
 class RBIteratorPtrType * TRedBlackTree::Insert() {}
 
 // Range: 0x802202D8 -> 0x8022035C
-void TRedBlackTree::SafeDeleteAll(class TRedBlackTree * const this /* r29 */) {
+// this: r29
+void TRedBlackTree::SafeDeleteAll() {
     // Local variables
     class RBIteratorPtrType * i; // r31
     class RBIteratorPtrType * next; // r30
@@ -160,12 +155,6 @@ void TRedBlackTree::SafeDeleteAll(class TRedBlackTree * const this /* r29 */) {
 }
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\common\base\core\e_redblacktree.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x80290DB0 -> 0x80290DD0
-*/
 // Range: 0x80290DB0 -> 0x80290DB8
 class EVec3 * TRedBlackTree::GetValue() {}
 

@@ -14,22 +14,10 @@ struct FloorSet & EGlobal::GetFloorSet() {}
 struct WallSet & EGlobal::GetWallSet() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\target\game\global.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x800EB4BC -> 0x800EB4C4
-*/
 // Range: 0x800EB4BC -> 0x800EB4C4
 struct FenceSet & EGlobal::GetFenceSet() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\target\game\global.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x80121C28 -> 0x80121C50
-*/
 // Range: 0x80121C28 -> 0x80121C30
 void EGlobal::SetTransitionID() {}
 
@@ -46,12 +34,6 @@ void EGlobal::SetTransitionType() {}
 signed short EGlobal::GetTransitioningNeighborID() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\target\game\global.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x8016E6B8 -> 0x8016E7B0
-*/
 // Range: 0x8016E6B8 -> 0x8016E6C0
 void EGlobal::SetUIDrawEnable() {
     // References
@@ -65,19 +47,20 @@ void EGlobal::SetUIUpdateEnable() {
 }
 
 // Range: 0x8016E6C8 -> 0x8016E708
-void * EGameStateId::~EGameStateId(class EGameStateId * const this /* r31 */) {}
+// this: r31
+EGameStateId::~EGameStateId() {}
 
 // Range: 0x8016E708 -> 0x8016E714
-void * EGameStateId::EGameStateId() {}
+EGameStateId::EGameStateId() {}
 
 // Range: 0x8016E714 -> 0x8016E71C
-unsigned int EGameStateId::__opUi() {}
+unsigned int EGameStateId::operator unsigned int() {}
 
 // Range: 0x8016E71C -> 0x8016E728
-void * EGameStateId::EGameStateId() {}
+EGameStateId::EGameStateId() {}
 
 // Range: 0x8016E728 -> 0x8016E730
-void * EGameStateId::EGameStateId() {}
+EGameStateId::EGameStateId() {}
 
 // Range: 0x8016E730 -> 0x8016E738
 int EGlobal::GetPreviousLot() {}
@@ -104,22 +87,10 @@ unsigned char EGlobal::InNPCEditorBasedToolMode() {}
 void EGlobal::ClearPlayerCheats() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\target\game\global.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x801AB0BC -> 0x801AB0C4
-*/
 // Range: 0x801AB0BC -> 0x801AB0C4
 unsigned char EGlobal::IsFastForwardEnabled() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\target\game\global.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x801FBB0C -> 0x801FBB4C
-*/
 // Range: 0x801FBB0C -> 0x801FBB14
 unsigned char EGlobal::IsUIUpdateEnabled() {
     // References

@@ -5,19 +5,21 @@
     Code range: 0x800D5A38 -> 0x800D74F8
 */
 // Range: 0x800D5A38 -> 0x800D5A70
-void * ReconBuffer::ReconBuffer() {}
+ReconBuffer::ReconBuffer() {}
 
 // Range: 0x800D5A70 -> 0x800D5AAC
-void * ReconBuffer::ReconBuffer() {}
+ReconBuffer::ReconBuffer() {}
 
 // Range: 0x800D5AAC -> 0x800D5B34
-void * ReconBuffer::~ReconBuffer(class ReconBuffer * const this /* r30 */) {}
+// this: r30
+ReconBuffer::~ReconBuffer() {}
 
 // Range: 0x800D5B34 -> 0x800D5B40
 void ReconBuffer::EnableCompression() {}
 
 // Range: 0x800D5B40 -> 0x800D5C64
-void ReconBuffer::ReconCmprInt(class ReconBuffer * const this /* r29 */, int * value /* r30 */, class Scheme * sch /* r31 */) {
+// this: r29
+void ReconBuffer::ReconCmprInt(int * value /* r30 */, class Scheme * sch /* r31 */) {
     // Local variables
     int nonZero; // r1+0x14
     int size; // r1+0x10
@@ -36,7 +38,8 @@ int Precision::GetBitCount() {}
 class Precision * Scheme::GetPrecision() {}
 
 // Range: 0x800D5C94 -> 0x800D5D30
-int Scheme::GetSize(class Scheme * const this /* r30 */, int intVal /* r31 */) {}
+// this: r30
+int Scheme::GetSize(int intVal /* r31 */) {}
 
 // Range: 0x800D5D30 -> 0x800D5D54
 unsigned char Precision::Fits() {
@@ -45,7 +48,8 @@ unsigned char Precision::Fits() {
 }
 
 // Range: 0x800D5D54 -> 0x800D5F70
-void ReconBuffer::ReconBits(class ReconBuffer * const this /* r29 */, int bitCount /* r30 */, int * bitVal /* r31 */) {
+// this: r29
+void ReconBuffer::ReconBits(int bitCount /* r30 */, int * bitVal /* r31 */) {
     // Local variables
     unsigned char * dest; // r4
     unsigned int mask; // r6
@@ -62,7 +66,8 @@ void ReconBuffer::ReconBits(class ReconBuffer * const this /* r29 */, int bitCou
 void ReconBuffer::PadBits() {}
 
 // Range: 0x800D5F7C -> 0x800D6180
-void ReconBuffer::Recon8(class ReconBuffer * const this /* r28 */, signed char * value /* r31 */, int numelems /* r29 */) {
+// this: r28
+void ReconBuffer::Recon8(signed char * value /* r31 */, int numelems /* r29 */) {
     // Local variables
     int intVal; // r1+0xC
     int intVal; // r1+0x8
@@ -80,7 +85,8 @@ void ReconBuffer::ReconBool(unsigned char * value /* r31 */) {
 }
 
 // Range: 0x800D61D4 -> 0x800D6348
-void ReconBuffer::Recon16(class ReconBuffer * const this /* r28 */, signed short * value /* r31 */, int numelems /* r29 */) {
+// this: r28
+void ReconBuffer::Recon16(signed short * value /* r31 */, int numelems /* r29 */) {
     // Local variables
     int intVal; // r1+0xC
     int intVal; // r1+0x8
@@ -95,7 +101,8 @@ void ReconBuffer::Recon16(class ReconBuffer * const this /* r28 */, signed short
 void ReconBuffer::ReconInt() {}
 
 // Range: 0x800D634C -> 0x800D64E0
-void ReconBuffer::Recon32(class ReconBuffer * const this /* r28 */, int * value /* r31 */, int numelems /* r29 */) {
+// this: r28
+void ReconBuffer::Recon32(int * value /* r31 */, int numelems /* r29 */) {
     // Local variables
     int intVal; // r1+0xC
     int intVal; // r1+0x8
@@ -107,7 +114,8 @@ void ReconBuffer::Recon32(class ReconBuffer * const this /* r28 */, int * value 
 }
 
 // Range: 0x800D64E0 -> 0x800D6674
-void ReconBuffer::ReconFloat(class ReconBuffer * const this /* r28 */, float * value /* r31 */, int numelems /* r29 */) {
+// this: r28
+void ReconBuffer::ReconFloat(float * value /* r31 */, int numelems /* r29 */) {
     // Local variables
     int intVal; // r1+0xC
     int intVal; // r1+0x8
@@ -119,7 +127,8 @@ void ReconBuffer::ReconFloat(class ReconBuffer * const this /* r28 */, float * v
 }
 
 // Range: 0x800D6674 -> 0x800D676C
-void ReconBuffer::ReconMark(class ReconBuffer * const this /* r31 */) {
+// this: r31
+void ReconBuffer::ReconMark() {
     // Local variables
     int * lastMark; // r3
     signed char * src; // r0
@@ -130,17 +139,20 @@ void ReconBuffer::ReconMark(class ReconBuffer * const this /* r31 */) {
 }
 
 // Range: 0x800D676C -> 0x800D67B8
-void ReconBuffer::ReadToNextMark(class ReconBuffer * const this /* r31 */) {}
+// this: r31
+void ReconBuffer::ReadToNextMark() {}
 
 // Range: 0x800D67B8 -> 0x800D690C
-void ReconBuffer::ReconString(class ReconBuffer * const this /* r29 */, class BString & str /* r30 */) {
+// this: r29
+void ReconBuffer::ReconString(class BString & str /* r30 */) {
     // Local variables
     int index; // r31
     const char * cstr; // r4
 }
 
 // Range: 0x800D690C -> 0x800D6BB4
-void ReconBuffer::ReconString(class ReconBuffer * const this /* r30 */, class BString2 & str /* r31 */) {
+// this: r30
+void ReconBuffer::ReconString(class BString2 & str /* r31 */) {
     // Local variables
     int index; // r28
     const char * cstr; // r4
@@ -154,13 +166,15 @@ void ReconBuffer::ReconString(class ReconBuffer * const this /* r30 */, class BS
 }
 
 // Range: 0x800D6BB4 -> 0x800D6CFC
-void ReconBuffer::ReconString(class ReconBuffer * const this /* r29 */, class StringBuffer & str /* r30 */) {
+// this: r29
+void ReconBuffer::ReconString(class StringBuffer & str /* r30 */) {
     // Local variables
     int index; // r31
 }
 
 // Range: 0x800D6CFC -> 0x800D6F54
-void ReconBuffer::ReconString(class ReconBuffer * const this /* r30 */, class StringBuffer2 & str /* r31 */) {
+// this: r30
+void ReconBuffer::ReconString(class StringBuffer2 & str /* r31 */) {
     // Local variables
     int index; // r27
     unsigned short * out; // r4
@@ -170,7 +184,8 @@ void ReconBuffer::ReconString(class ReconBuffer * const this /* r30 */, class St
 }
 
 // Range: 0x800D6F54 -> 0x800D7094
-struct HandleNode * ReconBuilder::Compact(class ReconBuilder * const this /* r24 */, class ReconObject * recon /* r25 */, int version /* r26 */) {
+// this: r24
+struct HandleNode * ReconBuilder::Compact(class ReconObject * recon /* r25 */, int version /* r26 */) {
     // Local variables
     int size; // r29
     class ReconBuffer rb; // r1+0x30
@@ -180,7 +195,8 @@ struct HandleNode * ReconBuilder::Compact(class ReconBuilder * const this /* r24
 }
 
 // Range: 0x800D7094 -> 0x800D71B0
-int ReconBuilder::Compact(class ReconBuilder * const this /* r27 */, class ReconObject * recon /* r28 */, int version /* r30 */, class iResFile * pFile /* r29 */, signed short id /* r31 */) {
+// this: r27
+int ReconBuilder::Compact(class ReconObject * recon /* r28 */, int version /* r30 */, class iResFile * pFile /* r29 */, signed short id /* r31 */) {
     // Local variables
     struct HandleNode * res; // r30
     class StackString empty; // r1+0x8
@@ -188,13 +204,15 @@ int ReconBuilder::Compact(class ReconBuilder * const this /* r27 */, class Recon
 }
 
 // Range: 0x800D71B0 -> 0x800D7254
-int ReconBuilder::Reconstitute(class ReconBuilder * const this /* r27 */, class ReconObject * recon /* r28 */, class iResFile * pFile /* r29 */, signed short id /* r30 */, int * version /* r31 */) {
+// this: r27
+int ReconBuilder::Reconstitute(class ReconObject * recon /* r28 */, class iResFile * pFile /* r29 */, signed short id /* r30 */, int * version /* r31 */) {
     // Local variables
     struct HandleNode * res; // r5
 }
 
 // Range: 0x800D7254 -> 0x800D7354
-void ReconBuilder::Reconstitute(class ReconBuilder * const this /* r27 */, class ReconObject * recon /* r28 */, struct HandleNode * hmem /* r29 */, int * version /* r30 */) {
+// this: r27
+void ReconBuilder::Reconstitute(class ReconObject * recon /* r28 */, struct HandleNode * hmem /* r29 */, int * version /* r30 */) {
     // Local variables
     unsigned char * data; // r0
     int headerType; // r1+0x10
@@ -217,7 +235,8 @@ void ReconBuilder::SwapFourByteNumber() {
 }
 
 // Range: 0x800D73B8 -> 0x800D73F8
-void * ReconObject::~ReconObject(class ReconObject * const this /* r31 */) {}
+// this: r31
+ReconObject::~ReconObject() {}
 
 // Range: 0x800D73F8 -> 0x800D73FC
 void ReconObject::DoStream() {}
@@ -226,12 +245,13 @@ void ReconObject::DoStream() {}
 int ReconObject::GetType() {}
 
 // Range: 0x800D7408 -> 0x800D74C8
-void * Scheme::Scheme(class Scheme * const this /* r25 */, int bcnt0 /* r26 */, int bcnt1 /* r27 */, int bcnt2 /* r28 */, int bcnt3 /* r29 */) {}
+// this: r25
+Scheme::Scheme(int bcnt0 /* r26 */, int bcnt1 /* r27 */, int bcnt2 /* r28 */, int bcnt3 /* r29 */) {}
 
 // Range: 0x800D74DC -> 0x800D74F4
-void * Precision::Precision() {}
+Precision::Precision() {}
 
 // Range: 0x800D74F4 -> 0x800D74F8
-void * Precision::Precision() {}
+Precision::Precision() {}
 
 

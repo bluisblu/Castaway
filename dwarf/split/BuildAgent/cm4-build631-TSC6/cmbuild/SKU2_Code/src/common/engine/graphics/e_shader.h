@@ -8,12 +8,6 @@
 void EShader::Select() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\common\engine\graphics\e_shader.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x8006B74C -> 0x8006B758
-*/
 // Range: 0x8006B74C -> 0x8006B758
 void EShader::DirtyShader() {
     // References
@@ -21,12 +15,6 @@ void EShader::DirtyShader() {
 }
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\common\engine\graphics\e_shader.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x800841F8 -> 0x80084208
-*/
 // Range: 0x800841F8 -> 0x80084200
 unsigned char EShader::IsAlphaShader() {}
 
@@ -34,32 +22,14 @@ unsigned char EShader::IsAlphaShader() {}
 struct EShaderDef * EShader::GetShaderDef() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\common\engine\graphics\e_shader.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x800A42C0 -> 0x800A42C8
-*/
 // Range: 0x800A42C0 -> 0x800A42C8
 char * EShader::GetName() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\common\engine\graphics\e_shader.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x801FA684 -> 0x801FA68C
-*/
 // Range: 0x801FA684 -> 0x801FA68C
 struct EMaterial * EShader::GetMaterial() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\common\engine\graphics\e_shader.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x8029671C -> 0x80296784
-*/
 // Range: 0x8029671C -> 0x80296720
 void EShader::UpdateMaterialCoefficients() {}
 

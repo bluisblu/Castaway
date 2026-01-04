@@ -19,13 +19,15 @@ int EMemoryBufferWriteStream::Write(int size /* r31 */) {
 }
 
 // Range: 0x80265620 -> 0x80265690
-void * EMemoryWriteStream::~EMemoryWriteStream(class EMemoryWriteStream * const this /* r30 */) {
+// this: r30
+EMemoryWriteStream::~EMemoryWriteStream() {
     // References
     // -> struct [anonymous] __vt__18EMemoryWriteStream;
 }
 
 // Range: 0x80265690 -> 0x8026581C
-int EMemoryWriteStream::Write(class EMemoryWriteStream * const this /* r30 */, int size /* r31 */) {
+// this: r30
+int EMemoryWriteStream::Write(int size /* r31 */) {
     // Local variables
     int written; // r28
     unsigned char * pSeg; // r1+0x8

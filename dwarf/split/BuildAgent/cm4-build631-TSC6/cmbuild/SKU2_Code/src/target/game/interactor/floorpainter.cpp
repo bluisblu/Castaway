@@ -5,7 +5,8 @@
     Code range: 0x80059BAC -> 0x8005C5A0
 */
 // Range: 0x80059BAC -> 0x80059C08
-void * FloorPainterParams::FloorPainterParams(struct FloorPainterParams * const this /* r31 */) {
+// this: r31
+FloorPainterParams::FloorPainterParams() {
     // References
     // -> struct [anonymous] __vt__Q316InteractorModule12FloorPainter18FloorPainterParams;
 }
@@ -21,20 +22,23 @@ int FloorPainter::CalculateAvailableItemCount(int priceperitem /* r31 */) {
 }
 
 // Range: 0x80059C6C -> 0x80059D28
-void * FloorPainter::FloorPainter(class FloorPainter * const this /* r30 */) {
+// this: r30
+FloorPainter::FloorPainter() {
     // References
     // -> class EGlobal _globals;
     // -> struct [anonymous] __vt__Q216InteractorModule12FloorPainter;
 }
 
 // Range: 0x80059D28 -> 0x80059DBC
-void * FloorPainter::~FloorPainter(class FloorPainter * const this /* r30 */) {
+// this: r30
+FloorPainter::~FloorPainter() {
     // References
     // -> struct [anonymous] __vt__Q216InteractorModule12FloorPainter;
 }
 
 // Range: 0x80059DBC -> 0x80059E20
-void FloorPainter::OnCreate(class FloorPainter * const this /* r31 */) {
+// this: r31
+void FloorPainter::OnCreate() {
     // Local variables
     int floorPatternCount; // r0
 
@@ -43,10 +47,12 @@ void FloorPainter::OnCreate(class FloorPainter * const this /* r31 */) {
 }
 
 // Range: 0x80059E20 -> 0x80059E68
-void FloorPainter::OnDestroy(class FloorPainter * const this /* r31 */) {}
+// this: r31
+void FloorPainter::OnDestroy() {}
 
 // Range: 0x80059E68 -> 0x8005A070
-void FloorPainter::OnStart(class FloorPainter * const this /* r30 */, const struct InteractorParams * pParams /* r29 */) {
+// this: r30
+void FloorPainter::OnStart(const struct InteractorParams * pParams /* r29 */) {
     // Local variables
     struct ButtonSemantic butSems[12]; // r1+0x40
     struct StickSemantic stickSems[4]; // r1+0x20
@@ -59,7 +65,8 @@ void FloorPainter::OnStart(class FloorPainter * const this /* r30 */, const stru
 }
 
 // Range: 0x8005A070 -> 0x8005A108
-void FloorPainter::OnStop(class FloorPainter * const this /* r31 */) {
+// this: r31
+void FloorPainter::OnStop() {
     // Local variables
     class cFixedWorld * world; // r0
     class InteractorResourceSet * pResourceSet; // r0
@@ -72,7 +79,8 @@ void FloorPainter::OnStop(class FloorPainter * const this /* r31 */) {
 void FloorPainter::UpdateStickState() {}
 
 // Range: 0x8005A158 -> 0x8005A650
-void FloorPainter::Update(class FloorPainter * const this /* r29 */, float delta /* f31 */) {
+// this: r29
+void FloorPainter::Update(float delta /* f31 */) {
     // Local variables
     class cFixedWorld * pWorld; // r30
     struct FloorSet floorset; // r1+0x28
@@ -106,13 +114,15 @@ void FloorPainter::Update(class FloorPainter * const this /* r29 */, float delta
 }
 
 // Range: 0x8005A650 -> 0x8005A6CC
-void FloorPainter::SendBuildItemCountChangeEvent(class FloorPainter * const this /* r30 */, int tilesLeft /* r31 */) {
+// this: r30
+void FloorPainter::SendBuildItemCountChangeEvent(int tilesLeft /* r31 */) {
     // Local variables
     struct CallbackData cbd; // r1+0x8
 }
 
 // Range: 0x8005A724 -> 0x8005A79C
-void FloorPainter::SendSuccessEvent(class FloorPainter * const this /* r30 */, int tilecount /* r31 */) {
+// this: r30
+void FloorPainter::SendSuccessEvent(int tilecount /* r31 */) {
     // Local variables
     struct CallbackData cbd; // r1+0x8
 }
@@ -124,7 +134,8 @@ unsigned char FloorPainter::IsInRemoveMode() {}
 unsigned char FloorPainter::IsArmed() {}
 
 // Range: 0x8005A7C4 -> 0x8005A984
-void FloorPainter::HandleActionCmdInRemoveMode(class FloorPainter * const this /* r30 */) {
+// this: r30
+void FloorPainter::HandleActionCmdInRemoveMode() {
     // Local variables
     int floorPatternCount; // r31
     int floorPatternCount; // r31
@@ -134,7 +145,8 @@ void FloorPainter::HandleActionCmdInRemoveMode(class FloorPainter * const this /
 }
 
 // Range: 0x8005A984 -> 0x8005AA20
-void FloorPainter::UpdateStockChanges(class FloorPainter * const this /* r28 */, int * floorList /* r29 */, int floorPatternCount /* r30 */) {
+// this: r28
+void FloorPainter::UpdateStockChanges(int * floorList /* r29 */, int floorPatternCount /* r30 */) {
     // Local variables
     struct InvStock floorPack; // r1+0x8
     int i; // r31
@@ -144,7 +156,8 @@ void FloorPainter::UpdateStockChanges(class FloorPainter * const this /* r28 */,
 }
 
 // Range: 0x8005AA20 -> 0x8005ABE8
-void FloorPainter::HandleActionCmdInPlaceMode(class FloorPainter * const this /* r29 */) {
+// this: r29
+void FloorPainter::HandleActionCmdInPlaceMode() {
     // Local variables
     int floorPatternCount; // r31
     int floorsPainted; // r30
@@ -159,7 +172,8 @@ void FloorPainter::HandleActionCmdInPlaceMode(class FloorPainter * const this /*
 unsigned char FloorPainter::IsInPlaceMode() {}
 
 // Range: 0x8005ABF0 -> 0x8005B0C0
-void FloorPainter::OnCommandPressed(class FloorPainter * const this /* r31 */) {
+// this: r31
+void FloorPainter::OnCommandPressed() {
     // Local variables
     struct InvStock stock; // r1+0x10
     class CTilePt ctpt; // r1+0x8
@@ -183,16 +197,19 @@ void FloorPainter::OnCommandRepeated() {
 }
 
 // Range: 0x8005B148 -> 0x8005B1E8
-void FloorPainter::OnCommandReleased(class FloorPainter * const this /* r31 */) {}
+// this: r31
+void FloorPainter::OnCommandReleased() {}
 
 // Range: 0x8005B1E8 -> 0x8005B238
 void FloorPainter::OnCommandUpdate() {}
 
 // Range: 0x8005B238 -> 0x8005B248
-void FloorPainter::PreDraw(class FloorPainter * const this /* r0 */) {}
+// this: r0
+void FloorPainter::PreDraw() {}
 
 // Range: 0x8005B248 -> 0x8005B258
-void FloorPainter::Draw(class FloorPainter * const this /* r0 */) {}
+// this: r0
+void FloorPainter::Draw() {}
 
 // Range: 0x8005B258 -> 0x8005B324
 unsigned char FloorPainter::IsValidFloorPlacement(const class CTilePt & point /* r30 */, enum FloorPattern floorpat /* r31 */) {
@@ -216,7 +233,8 @@ unsigned char FloorPainter::SetFloorTile(class CTilePt * pCTilePt /* r26 */, enu
 }
 
 // Range: 0x8005B4AC -> 0x8005B6BC
-unsigned char FloorPainter::SetFloorTile(class FloorPainter * const this /* r26 */, const class CTilePt & cTilePt /* r30 */, enum FloorPattern floorTileId /* r27 */, class Room * pRoom /* r28 */, int * pReplacedFloorPatternCounts /* r31 */) {
+// this: r26
+unsigned char FloorPainter::SetFloorTile(const class CTilePt & cTilePt /* r30 */, enum FloorPattern floorTileId /* r27 */, class Room * pRoom /* r28 */, int * pReplacedFloorPatternCounts /* r31 */) {
     // Local variables
     unsigned char bTileWasReplaced; // r29
     class TileWalls walls; // r1+0x3C
@@ -248,7 +266,8 @@ void FloorPainter::RemoveFloorTile(class CTilePt * pCTilePt /* r29 */, int * flo
 void FloorPainter::GetSelectedRectPoints() {}
 
 // Range: 0x8005B970 -> 0x8005BAA4
-int FloorPainter::PaintFloor(class FloorPainter * const this /* r26 */, int * replacedFloorPatternCounts /* r27 */) {
+// this: r26
+int FloorPainter::PaintFloor(int * replacedFloorPatternCounts /* r27 */) {
     // Local variables
     int startX; // r1+0x18
     int startY; // r1+0x14
@@ -263,7 +282,8 @@ int FloorPainter::PaintFloor(class FloorPainter * const this /* r26 */, int * re
 }
 
 // Range: 0x8005BAA4 -> 0x8005BC44
-unsigned char FloorPainter::RemoveFloor(class FloorPainter * const this /* r31 */, int * floorPatternCounts /* r27 */) {
+// this: r31
+unsigned char FloorPainter::RemoveFloor(int * floorPatternCounts /* r27 */) {
     // Local variables
     int startX; // r1+0x1C
     int startY; // r1+0x18
@@ -283,7 +303,8 @@ unsigned char FloorPainter::RemoveFloor(class FloorPainter * const this /* r31 *
 }
 
 // Range: 0x8005BC44 -> 0x8005BDE8
-int FloorPainter::PaintRoom(class FloorPainter * const this /* r24 */, int * pReplacedFloorPatternCounts /* r25 */) {
+// this: r24
+int FloorPainter::PaintRoom(int * pReplacedFloorPatternCounts /* r25 */) {
     // Local variables
     int x; // r0
     int y; // r0
@@ -300,7 +321,8 @@ int FloorPainter::PaintRoom(class FloorPainter * const this /* r24 */, int * pRe
 }
 
 // Range: 0x8005BDE8 -> 0x8005BFE8
-unsigned char FloorPainter::RemoveRoom(class FloorPainter * const this /* r31 */, int * replacedFloorPatternCounts /* r27 */) {
+// this: r31
+unsigned char FloorPainter::RemoveRoom(int * replacedFloorPatternCounts /* r27 */) {
     // Local variables
     int x; // r0
     int y; // r0
@@ -329,13 +351,15 @@ void FloorPainter::CheckDiagForRoomContainment(class Room * pRoom /* r25 */, con
 }
 
 // Range: 0x8005C134 -> 0x8005C1A0
-void FloorPainter::SwapTools(class FloorPainter * const this /* r31 */) {
+// this: r31
+void FloorPainter::SwapTools() {
     // Local variables
     struct CallbackData cbd; // r1+0x8
 }
 
 // Range: 0x8005C1A0 -> 0x8005C410
-unsigned char FloorPainter::CurrentSelectionIsValid(class FloorPainter * const this /* r30 */, int & tilesSelected /* r31 */) {
+// this: r30
+unsigned char FloorPainter::CurrentSelectionIsValid(int & tilesSelected /* r31 */) {
     // Local variables
     int startX; // r1+0x1C
     int startY; // r1+0x18
@@ -363,7 +387,8 @@ unsigned char FloorPainter::CurrentSelectionIsValid(class FloorPainter * const t
 unsigned char FloorPainter::GetIsAnchorDrawingOn() {}
 
 // Range: 0x8005C418 -> 0x8005C534
-unsigned char FloorPainter::OnUndoButton(class FloorPainter * const this /* r31 */) {
+// this: r31
+unsigned char FloorPainter::OnUndoButton() {
     // Local variables
     struct UndoRedoCommand command; // r1+0x28
     struct CallbackData cbd; // r1+0x8

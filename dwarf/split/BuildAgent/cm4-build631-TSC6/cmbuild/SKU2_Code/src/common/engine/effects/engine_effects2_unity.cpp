@@ -15,7 +15,6 @@ class EVec4 s_vertArray[256]; // size: 0x1000, address: 0x804F7980
 class EVec2 s_texCoordArray[256]; // size: 0x800, address: 0x804F8980
 unsigned int s_colorArray[256]; // size: 0x400, address: 0x804F9180
 static class EVec4 maxClamp; // size: 0x10, address: 0x804F9580
-struct {
-    // total size: 0x1C
-} __vt__Q27Effects19FastParticleEmitter; // size: 0x1C, address: 0x80453E68
+// total size: 0x1C
+struct {} __vt__Q27Effects19FastParticleEmitter; // size: 0x1C, address: 0x80453E68
 

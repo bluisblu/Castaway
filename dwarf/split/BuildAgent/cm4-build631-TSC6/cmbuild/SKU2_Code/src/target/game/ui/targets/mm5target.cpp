@@ -5,7 +5,8 @@
     Code range: 0x801CECC4 -> 0x801D0230
 */
 // Range: 0x801CECC4 -> 0x801CF340
-void * MMUTarget::MMUTarget(class MMUTarget * const this /* r30 */) {
+// this: r30
+MMUTarget::MMUTarget() {
     // Local variables
     unsigned long index; // r27
 
@@ -24,21 +25,24 @@ void * MMUTarget::MMUTarget(class MMUTarget * const this /* r30 */) {
 }
 
 // Range: 0x801CF340 -> 0x801CF49C
-void * MMUTarget::~MMUTarget(class MMUTarget * const this /* r30 */) {
+// this: r30
+MMUTarget::~MMUTarget() {
     // References
     // -> class EGlobal _globals;
     // -> struct [anonymous] __vt__9MMUTarget;
 }
 
 // Range: 0x801CF49C -> 0x801CF708
-void MMUTarget::SetVariable(class MMUTarget * const this /* r28 */, const char * szCommand /* r29 */, const char * szParams /* r30 */) {
+// this: r28
+void MMUTarget::SetVariable(const char * szCommand /* r29 */, const char * szParams /* r30 */) {
     // References
     // -> class EGlobal _globals;
     // -> static const char * const MMU_CANCEL_BUTTON;
 }
 
 // Range: 0x801CF708 -> 0x801CF868
-char * MMUTarget::GetVariable(class MMUTarget * const this /* r28 */, const char * szVar /* r29 */) {
+// this: r28
+char * MMUTarget::GetVariable(const char * szVar /* r29 */) {
     // Local variables
     char * retStr; // r30
 
@@ -48,7 +52,8 @@ char * MMUTarget::GetVariable(class MMUTarget * const this /* r28 */, const char
 }
 
 // Range: 0x801CF868 -> 0x801CFA4C
-unsigned short * MMUTarget::GetLocalizable(class MMUTarget * const this /* r28 */, const char * szVar /* r29 */) {
+// this: r28
+unsigned short * MMUTarget::GetLocalizable(const char * szVar /* r29 */) {
     // Local variables
     unsigned short * wideStr; // r30
     const unsigned short * name; // r0
@@ -60,13 +65,15 @@ unsigned short * MMUTarget::GetLocalizable(class MMUTarget * const this /* r28 *
 }
 
 // Range: 0x801CFA4C -> 0x801CFA90
-void MMUTarget::OnButtonChange(class MMUTarget * const this /* r31 */) {
+// this: r31
+void MMUTarget::OnButtonChange() {
     // Local variables
     int button_number; // r0
 }
 
 // Range: 0x801CFA90 -> 0x801CFB8C
-void MMUTarget::OnButtonSelect(class MMUTarget * const this /* r31 */) {
+// this: r31
+void MMUTarget::OnButtonSelect() {
     // Local variables
     int button_number; // r0
     enum MMU_MAIN_SCREEN_CHOICE button_selected; // r0
@@ -82,7 +89,8 @@ void MMUTarget::SetupCAS() {
 }
 
 // Range: 0x801CFC2C -> 0x801CFCFC
-void MMUTarget::Update(class MMUTarget * const this /* r30 */) {
+// this: r30
+void MMUTarget::Update() {
     // Local variables
     class EVec2 dummy; // r1+0x8
 
@@ -95,10 +103,12 @@ void MMUTarget::Update(class MMUTarget * const this /* r30 */) {
 void MMUTarget::Draw() {}
 
 // Range: 0x801CFD00 -> 0x801CFD58
-void MMUTarget::OnStartGameComplete(class MMUTarget * const this /* r31 */) {}
+// this: r31
+void MMUTarget::OnStartGameComplete() {}
 
 // Range: 0x801CFD58 -> 0x801CFDFC
-void MMUTarget::LaunchNewGame(class MMUTarget * const this /* r29 */) {
+// this: r29
+void MMUTarget::LaunchNewGame() {
     // References
     // -> class EGlobal _globals;
     // -> class GameData _gd;
@@ -145,10 +155,12 @@ void MMUTarget::OnCancelKeyPressed() {}
 void MMUTarget::OnSquareKeyPressed() {}
 
 // Range: 0x801D0000 -> 0x801D0054
-void MMUTarget::RemoveKeyboard(class MMUTarget * const this /* r31 */) {}
+// this: r31
+void MMUTarget::RemoveKeyboard() {}
 
 // Range: 0x801D0054 -> 0x801D01E8
-void MMUTarget::CreateNewGameDialog(class MMUTarget * const this /* r28 */) {
+// this: r28
+void MMUTarget::CreateNewGameDialog() {
     // References
     // -> class EGlobal _globals;
 }

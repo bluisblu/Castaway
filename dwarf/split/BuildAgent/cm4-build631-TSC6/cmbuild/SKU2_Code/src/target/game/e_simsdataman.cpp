@@ -89,7 +89,8 @@ void delRefList(class vector & resList /* r28 */) {
 }
 
 // Range: 0x802147FC -> 0x80214914
-void ObjectSaveTypeTable2::DoStream(class ObjectSaveTypeTable2 * const this /* r27 */, class ReconBuffer * r /* r28 */, int version /* r29 */) {
+// this: r27
+void ObjectSaveTypeTable2::DoStream(class ReconBuffer * r /* r28 */, int version /* r29 */) {
     // Local variables
     class BString tempStr; // r1+0x18
     signed short type; // r1+0xA
@@ -102,19 +103,22 @@ void ObjectSaveTypeTable2::DoStream(class ObjectSaveTypeTable2 * const this /* r
 }
 
 // Range: 0x80214914 -> 0x80214988
-void * ESimsDataManager::ESimsDataManager(class ESimsDataManager * const this /* r31 */) {
+// this: r31
+ESimsDataManager::ESimsDataManager() {
     // References
     // -> struct [anonymous] __vt__16ESimsDataManager;
 }
 
 // Range: 0x80214988 -> 0x802149E8
-void * ESimsDataManager::~ESimsDataManager(class ESimsDataManager * const this /* r30 */) {}
+// this: r30
+ESimsDataManager::~ESimsDataManager() {}
 
 // Range: 0x802149E8 -> 0x80214A54
 float ESimsDataManager::GetLoadProgress() {}
 
 // Range: 0x80214A54 -> 0x80214BB4
-class EResource * ESimsDataManager::AllocateAndLoadResource(class ESimsDataManager * const this /* r29 */, class EFile * pFile /* r31 */, unsigned int uLength /* r30 */) {
+// this: r29
+class EResource * ESimsDataManager::AllocateAndLoadResource(class EFile * pFile /* r31 */, unsigned int uLength /* r30 */) {
     // Local variables
     class ESim * pSim; // r31
     class EAutoMutex fmtx; // r1+0xC
@@ -123,32 +127,37 @@ class EResource * ESimsDataManager::AllocateAndLoadResource(class ESimsDataManag
 }
 
 // Range: 0x80214BB4 -> 0x80214C28
-void ESimsDataManager::preloadResources(class ESimsDataManager * const this /* r30 */, class EEvent & event /* r31 */) {
+// this: r30
+void ESimsDataManager::preloadResources(class EEvent & event /* r31 */) {
     // Local variables
     class NghResFile * const pNghFile; // r0
 }
 
 // Range: 0x80214C28 -> 0x80214C74
-void ESimsDataManager::incWorkQueued(class ESimsDataManager * const this /* r31 */) {
+// this: r31
+void ESimsDataManager::incWorkQueued() {
     // Local variables
     class EAutoMutex fmtx; // r1+0x8
 }
 
 // Range: 0x80214C74 -> 0x80214CCC
-void ESimsDataManager::decWorkQueued(class ESimsDataManager * const this /* r31 */) {
+// this: r31
+void ESimsDataManager::decWorkQueued() {
     // Local variables
     class EAutoMutex fmtx; // r1+0x8
 }
 
 // Range: 0x80214CCC -> 0x80214D6C
-void ESimsDataManager::LoadSelectorData(class ESimsDataManager * const this /* r29 */, class ObjSelector * sel /* r30 */, unsigned char bWait /* r31 */) {
+// this: r29
+void ESimsDataManager::LoadSelectorData(class ObjSelector * sel /* r30 */, unsigned char bWait /* r31 */) {
     // References
     // -> class EResourceLoader * _pResLoader;
     // -> static class EDummyFile _dummyFile;
 }
 
 // Range: 0x80214D6C -> 0x80214DEC
-void ESimsDataManager::UnloadSelectorData(class ESimsDataManager * const this /* r30 */, class ObjSelector * sel /* r31 */) {
+// this: r30
+void ESimsDataManager::UnloadSelectorData(class ObjSelector * sel /* r31 */) {
     // References
     // -> class EResourceLoader * _pResLoader;
 }
@@ -166,7 +175,8 @@ void ESimsDataManager::preload(class ObjSelector * sel /* r31 */) {
 }
 
 // Range: 0x80214EE8 -> 0x80214F9C
-void ESimsDataManager::QueueCommand(class ESimsDataManager * const this /* r29 */, class ESim * pSim /* r30 */, unsigned int command /* r31 */) {
+// this: r29
+void ESimsDataManager::QueueCommand(class ESim * pSim /* r30 */, unsigned int command /* r31 */) {
     // Local variables
     class EAutoMutex fmtx; // r1+0x8
 
@@ -176,7 +186,8 @@ void ESimsDataManager::QueueCommand(class ESimsDataManager * const this /* r29 *
 }
 
 // Range: 0x80214F9C -> 0x80215048
-void ESimsDataManager::QueueCASCommand(class ESimsDataManager * const this /* r29 */, class CasSimRenderer * pSimRenderer /* r30 */, unsigned int command /* r31 */) {
+// this: r29
+void ESimsDataManager::QueueCASCommand(class CasSimRenderer * pSimRenderer /* r30 */, unsigned int command /* r31 */) {
     // Local variables
     class EAutoMutex fmtx; // r1+0x8
 

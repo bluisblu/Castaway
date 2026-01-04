@@ -5,10 +5,12 @@
     Code range: 0x80025D30 -> 0x80027440
 */
 // Range: 0x80025D30 -> 0x80025DF4
-void * TreeBranchManager::TreeBranchManager(class TreeBranchManager * const this /* r28 */) {}
+// this: r28
+TreeBranchManager::TreeBranchManager() {}
 
 // Range: 0x80025EB4 -> 0x80025FF4
-void TreeBranchManager::Update(class TreeBranchManager * const this /* r27 */) {
+// this: r27
+void TreeBranchManager::Update() {
     // Local variables
     unsigned int j; // r29
     unsigned int i; // r28
@@ -31,7 +33,8 @@ class TreeBranchManager * TreeBranchManager::GetManager() {
 }
 
 // Range: 0x80026088 -> 0x800261E4
-void TreeBranchManager::Init(class TreeBranchManager * const this /* r25 */) {
+// this: r25
+void TreeBranchManager::Init() {
     // Local variables
     unsigned int j; // r30
     unsigned int i; // r31
@@ -43,7 +46,8 @@ void TreeBranchManager::Init(class TreeBranchManager * const this /* r25 */) {
 }
 
 // Range: 0x800261E4 -> 0x800262D4
-void TreeBranchManager::ComputeMidLotData(class TreeBranchManager * const this /* r25 */) {
+// this: r25
+void TreeBranchManager::ComputeMidLotData() {
     // Local variables
     unsigned int j; // r27
     unsigned int i; // r26
@@ -59,7 +63,8 @@ unsigned int TreeBranchManager::GetBranchModelID() {}
 unsigned int TreeBranchManager::GetPalmBranchModelID() {}
 
 // Range: 0x800263A0 -> 0x80026444
-void TreeBranchManager::InitAddtionalPalmBranchInstances(class TreeBranchManager * const this /* r27 */) {
+// this: r27
+void TreeBranchManager::InitAddtionalPalmBranchInstances() {
     // Local variables
     unsigned int i; // r28
     unsigned int modelId; // r3
@@ -69,7 +74,8 @@ void TreeBranchManager::InitAddtionalPalmBranchInstances(class TreeBranchManager
 }
 
 // Range: 0x80026444 -> 0x80026564
-void TreeBranchManager::BuildBranchDigests(class TreeBranchManager * const this /* r24 */) {
+// this: r24
+void TreeBranchManager::BuildBranchDigests() {
     // Local variables
     class DigestGeomShaderPtr * digest; // r28
     int cSubModel; // r27
@@ -82,7 +88,8 @@ void TreeBranchManager::BuildBranchDigests(class TreeBranchManager * const this 
 }
 
 // Range: 0x80026564 -> 0x8002665C
-void TreeBranchManager::DoLightingCalculations(class TreeBranchManager * const this /* r26 */) {
+// this: r26
+void TreeBranchManager::DoLightingCalculations() {
     // Local variables
     struct ELights & lightsOut; // r28
     class EVec3 vTargetPos; // r1+0x14
@@ -91,7 +98,8 @@ void TreeBranchManager::DoLightingCalculations(class TreeBranchManager * const t
 }
 
 // Range: 0x8002665C -> 0x8002683C
-void TreeBranchManager::AssignRandomBranches(class TreeBranchManager * const this /* r29 */, class TreeInstance * pTree /* r30 */) {
+// this: r29
+void TreeBranchManager::AssignRandomBranches(class TreeInstance * pTree /* r30 */) {
     // Local variables
     unsigned int randBranchOmit; // r31
     unsigned int randNum[8]; // r1+0x8
@@ -104,7 +112,8 @@ void TreeBranchManager::AssignRandomBranches(class TreeBranchManager * const thi
 }
 
 // Range: 0x8002683C -> 0x80026A28
-void TreeBranchManager::AssignRandomBranches(class TreeBranchManager * const this /* r29 */, class ISimInstance * pTree /* r30 */) {
+// this: r29
+void TreeBranchManager::AssignRandomBranches(class ISimInstance * pTree /* r30 */) {
     // Local variables
     unsigned int randBranchOmit; // r31
     unsigned int randNum[8]; // r1+0x8
@@ -151,19 +160,22 @@ void TreeBranchManager::AnimateBranch(struct EACNodeState * nodes /* r25 */) {
 class AngularSpring * TreeBranchManager::GetBranchSpring() {}
 
 // Range: 0x80026D7C -> 0x80026DC4
-class EVec3 & TreeBranchManager::GetLastPosition(class TreeBranchManager * const this /* r30 */, unsigned int branchOrient /* r31 */) {
+// this: r30
+class EVec3 & TreeBranchManager::GetLastPosition(unsigned int branchOrient /* r31 */) {
     // Local variables
     unsigned int branchCtrlIdx; // r0
 }
 
 // Range: 0x80026DC4 -> 0x80026E24
-void TreeBranchManager::SetLastPosition(class TreeBranchManager * const this /* r29 */, const class EVec3 & vec /* r30 */, unsigned int branchOrient /* r31 */) {
+// this: r29
+void TreeBranchManager::SetLastPosition(const class EVec3 & vec /* r30 */, unsigned int branchOrient /* r31 */) {
     // Local variables
     unsigned int branchCtrlIdx; // r0
 }
 
 // Range: 0x80026E24 -> 0x80027228
-void TreeBranchManager::Draw(class TreeBranchManager * const this /* r19 */, class ERC * prc /* r20 */) {
+// this: r19
+void TreeBranchManager::Draw(class ERC * prc /* r20 */) {
     // Local variables
     class E3DWindow * pWin; // r25
     unsigned int j; // r24
@@ -188,7 +200,8 @@ void TreeBranchManager::Draw(class TreeBranchManager * const this /* r19 */, cla
 }
 
 // Range: 0x80027228 -> 0x8002729C
-void TreeBranchManager::SetLevel(class TreeBranchManager * const this /* r26 */, class ERLevel * pLevel /* r27 */) {
+// this: r26
+void TreeBranchManager::SetLevel(class ERLevel * pLevel /* r27 */) {
     // Local variables
     unsigned int j; // r29
     unsigned int i; // r28

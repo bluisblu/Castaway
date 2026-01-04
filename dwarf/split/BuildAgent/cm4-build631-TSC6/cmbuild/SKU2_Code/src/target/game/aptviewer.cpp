@@ -36,20 +36,23 @@ static void StartItAll() {
 }
 
 // Range: 0x80203F28 -> 0x80204020
-void * AptViewer::AptViewer(class AptViewer * const this /* r29 */) {
+// this: r29
+AptViewer::AptViewer() {
     // References
     // -> unsigned long gAptOptFlags;
     // -> class EClockMan * _pClockMan;
 }
 
 // Range: 0x80204020 -> 0x802040A8
-void * AptViewer::~AptViewer(class AptViewer * const this /* r30 */) {}
+// this: r30
+AptViewer::~AptViewer() {}
 
 // Range: 0x802040A8 -> 0x802040F8
 void AptViewer::CallFunction() {}
 
 // Range: 0x802040F8 -> 0x802041F4
-void AptViewer::NewCallFunction(class AptViewer * const this /* r25 */, const char * szName /* r26 */, char * szReturnValue /* r27 */, const char * szThisObject /* r28 */, int nNumParams /* r29 */) {
+// this: r25
+void AptViewer::NewCallFunction(const char * szName /* r26 */, char * szReturnValue /* r27 */, const char * szThisObject /* r28 */, int nNumParams /* r29 */) {
     // Local variables
     char * pParams[5]; // r1+0x74
     struct __va_list_struct vaArgPtr[1]; // r1+0x68
@@ -60,10 +63,12 @@ void AptViewer::NewCallFunction(class AptViewer * const this /* r25 */, const ch
 void AptViewer::NewCallFunction2(int nNumParams /* r11 */, const char * const * pParams /* r10 */) {}
 
 // Range: 0x80204330 -> 0x8020438C
-void AptViewer::Init(class AptViewer * const this /* r30 */, class UIObjectBase * messageHandler /* r31 */) {}
+// this: r30
+void AptViewer::Init(class UIObjectBase * messageHandler /* r31 */) {}
 
 // Range: 0x8020438C -> 0x80204420
-void AptViewer::UpdateAll(class AptViewer * const this /* r31 */) {
+// this: r31
+void AptViewer::UpdateAll() {
     // References
     // -> static class QTimer s_qtimerInside;
     // -> float repeatSeconds;
@@ -71,7 +76,8 @@ void AptViewer::UpdateAll(class AptViewer * const this /* r31 */) {
 }
 
 // Range: 0x80204420 -> 0x80204840
-void AptViewer::Draw(class AptViewer * const this /* r26 */, class ERC * rc /* r27 */) {
+// this: r26
+void AptViewer::Draw(class ERC * rc /* r27 */) {
     // Local variables
     int nAnimWidth; // r1+0x1C
     int nAnimHeight; // r1+0x18
@@ -93,10 +99,12 @@ void AptViewer::Draw(class AptViewer * const this /* r26 */, class ERC * rc /* r
 }
 
 // Range: 0x80204840 -> 0x802048D8
-void AptViewer::Load(class AptViewer * const this /* r29 */, const char * szName /* r30 */, unsigned char bBlock /* r31 */) {}
+// this: r29
+void AptViewer::Load(const char * szName /* r30 */, unsigned char bBlock /* r31 */) {}
 
 // Range: 0x802048D8 -> 0x80204948
-void AptViewer::UnLoad(class AptViewer * const this /* r31 */) {}
+// this: r31
+void AptViewer::UnLoad() {}
 
 // Range: 0x80204948 -> 0x80204970
 void AptViewer::RepeatClear() {
@@ -119,7 +127,8 @@ unsigned char AptViewer::RepeatCheck(int d /* r29 */) {
 }
 
 // Range: 0x80204A3C -> 0x80204AE4
-unsigned int AptViewer::NewReadController(class AptViewer * const this /* r29 */) {
+// this: r29
+unsigned int AptViewer::NewReadController() {
     // Local variables
     int NumControllers; // r0
     int i; // r30
@@ -129,7 +138,8 @@ unsigned int AptViewer::NewReadController(class AptViewer * const this /* r29 */
 }
 
 // Range: 0x80204AE4 -> 0x8020540C
-unsigned int AptViewer::OnePlayerReadController(class AptViewer * const this /* r26 */, int playerNum /* r17 */, int controllerNum /* r27 */) {
+// this: r26
+unsigned int AptViewer::OnePlayerReadController(int playerNum /* r17 */, int controllerNum /* r27 */) {
     // Local variables
     class EController * pCtrl; // r31
     enum AptInputController ic; // r30
@@ -153,7 +163,8 @@ unsigned int AptViewer::OnePlayerReadController(class AptViewer * const this /* 
 }
 
 // Range: 0x8020540C -> 0x802054C4
-unsigned int AptViewer::PushAptButtonFilter(class AptViewer * const this /* r28 */, const char * targetName /* r29 */) {
+// this: r28
+unsigned int AptViewer::PushAptButtonFilter(const char * targetName /* r29 */) {
     // Local variables
     unsigned int filterId; // r31
     int top; // r30
@@ -161,7 +172,8 @@ unsigned int AptViewer::PushAptButtonFilter(class AptViewer * const this /* r28 
 }
 
 // Range: 0x802054C4 -> 0x8020566C
-void AptViewer::PopAptButtonFilter(class AptViewer * const this /* r31 */, unsigned int in_filterId /* r27 */) {
+// this: r31
+void AptViewer::PopAptButtonFilter(unsigned int in_filterId /* r27 */) {
     // Local variables
     class EController * pCtrl; // r3
     int top; // r28
@@ -209,7 +221,8 @@ class UIObjectBase * AptViewer::NewSetMessageHandler() {}
 unsigned char AptViewer::NewRemoveMessageHandler() {}
 
 // Range: 0x8020581C -> 0x8020582C
-unsigned char AptViewer::AllowControllerReading(class AptViewer * const this /* r5 */) {
+// this: r5
+unsigned char AptViewer::AllowControllerReading() {
     // Local variables
     unsigned char bRet; // r0
 }

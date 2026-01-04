@@ -41,14 +41,9 @@ unsigned char ClothingItem::GetIsDamaged() {}
 int ClothingItem::GetCurrentHitPoints() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\target\game\simulator\core\clothingitem.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x8011E010 -> 0x8011E190
-*/
 // Range: 0x8011E010 -> 0x8011E04C
-void * ClothingItem::ClothingItem(class ClothingItem * const this /* r31 */) {
+// this: r31
+ClothingItem::ClothingItem() {
     // References
     // -> struct [anonymous] __vt__12ClothingItem;
 }
@@ -60,7 +55,8 @@ unsigned char ClothingItem::IsWorn() {}
 signed short ClothingItem::GetID() {}
 
 // Range: 0x8011E068 -> 0x8011E0C0
-void * ClothingItem::~ClothingItem(class ClothingItem * const this /* r30 */) {}
+// this: r30
+ClothingItem::~ClothingItem() {}
 
 // Range: 0x8011E0C0 -> 0x8011E0C8
 signed short ClothingItem::GetCount() {}

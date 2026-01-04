@@ -5,13 +5,15 @@
     Code range: 0x801E0984 -> 0x801E15F0
 */
 // Range: 0x801E0984 -> 0x801E0AD8
-void * SVQTarget::SVQTarget(class SVQTarget * const this /* r29 */, enum SVQMode mode /* r31 */) {
+// this: r29
+SVQTarget::SVQTarget(enum SVQMode mode /* r31 */) {
     // References
     // -> struct [anonymous] __vt__9SVQTarget;
 }
 
 // Range: 0x801E0AD8 -> 0x801E0B70
-void * SVQTarget::~SVQTarget(class SVQTarget * const this /* r30 */) {
+// this: r30
+SVQTarget::~SVQTarget() {
     // References
     // -> struct [anonymous] __vt__9SVQTarget;
 }
@@ -28,7 +30,8 @@ unsigned short * SVQTarget::GetLocalizable() {
 }
 
 // Range: 0x801E0C04 -> 0x801E0C8C
-char * SVQTarget::GetVariable(class SVQTarget * const this /* r29 */, const char * szVar /* r30 */) {
+// this: r29
+char * SVQTarget::GetVariable(const char * szVar /* r30 */) {
     // Local variables
     char * retStr; // r31
 }
@@ -43,7 +46,8 @@ void SVQTarget::Update() {}
 void SVQTarget::SpawnDialogsBegin() {}
 
 // Range: 0x801E0CCC -> 0x801E0E24
-void SVQTarget::SpawnSaveQuitDialogBox(class SVQTarget * const this /* r28 */, enum SQVDialogState state /* r29 */) {
+// this: r28
+void SVQTarget::SpawnSaveQuitDialogBox(enum SQVDialogState state /* r29 */) {
     // References
     // -> class EGlobal _globals;
 }
@@ -61,40 +65,47 @@ class ELocString SVQTarget::GetWantToSaveString() {
 }
 
 // Range: 0x801E0E50 -> 0x801E0F48
-void SVQTarget::Setup_MainMenuPetPlazaDialog(class SVQTarget * const this /* r30 */) {
+// this: r30
+void SVQTarget::Setup_MainMenuPetPlazaDialog() {
     // References
     // -> class EGlobal _globals;
 }
 
 // Range: 0x801E0F48 -> 0x801E106C
-void SVQTarget::Setup_MainMenuStandardLotDialog(class SVQTarget * const this /* r29 */) {
+// this: r29
+void SVQTarget::Setup_MainMenuStandardLotDialog() {
     // References
     // -> class EGlobal _globals;
 }
 
 // Range: 0x801E106C -> 0x801E1174
-void SVQTarget::Setup_NeighborhoodDialog(class SVQTarget * const this /* r29 */) {
+// this: r29
+void SVQTarget::Setup_NeighborhoodDialog() {
     // References
     // -> class EGlobal _globals;
 }
 
 // Range: 0x801E1174 -> 0x801E1288
-void SVQTarget::Setup_QuitConfirmDialog(class SVQTarget * const this /* r29 */) {
+// this: r29
+void SVQTarget::Setup_QuitConfirmDialog() {
     // References
     // -> class EGlobal _globals;
 }
 
 // Range: 0x801E1288 -> 0x801E139C
-void SVQTarget::Setup_DeathQuitConfirmDialog(class SVQTarget * const this /* r29 */) {
+// this: r29
+void SVQTarget::Setup_DeathQuitConfirmDialog() {
     // References
     // -> class EGlobal _globals;
 }
 
 // Range: 0x801E139C -> 0x801E13E4
-void SVQTarget::OnCancelDialog(class SVQTarget * const this /* r31 */) {}
+// this: r31
+void SVQTarget::OnCancelDialog() {}
 
 // Range: 0x801E13E4 -> 0x801E149C
-void SVQTarget::OnSaveQuitDialogClose(class SVQTarget * const this /* r31 */) {}
+// this: r31
+void SVQTarget::OnSaveQuitDialogClose() {}
 
 // Range: 0x801E149C -> 0x801E14EC
 void SVQTarget::OnPetPlazaQuitDialogClose() {}
@@ -103,12 +114,14 @@ void SVQTarget::OnPetPlazaQuitDialogClose() {}
 void SVQTarget::OnNeighborhoodDialogClose() {}
 
 // Range: 0x801E1544 -> 0x801E1590
-void SVQTarget::OnQuitConfirmDialogClose(class SVQTarget * const this /* r31 */) {}
+// this: r31
+void SVQTarget::OnQuitConfirmDialogClose() {}
 
 // Range: 0x801E1590 -> 0x801E15A4
 void SVQTarget::OnDeathQuitConfirmDialogClose() {}
 
 // Range: 0x801E15A4 -> 0x801E15F0
-void SVQTarget::OnSaveGameComplete(class SVQTarget * const this /* r31 */) {}
+// this: r31
+void SVQTarget::OnSaveGameComplete() {}
 
 

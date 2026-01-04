@@ -5,10 +5,12 @@
     Code range: 0x801970E0 -> 0x80197184
 */
 // Range: 0x801970E0 -> 0x80197138
-void * CasEventStoreCharacter::~CasEventStoreCharacter(class CasEventStoreCharacter * const this /* r30 */) {}
+// this: r30
+CasEventStoreCharacter::~CasEventStoreCharacter() {}
 
 // Range: 0x80197138 -> 0x80197180
-void * CasEventStoreCharacter::CasEventStoreCharacter(class CasEventStoreCharacter * const this /* r31 */) {
+// this: r31
+CasEventStoreCharacter::CasEventStoreCharacter() {
     // References
     // -> struct [anonymous] __vt__22CasEventStoreCharacter;
 }

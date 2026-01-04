@@ -6,8 +6,9 @@
 */
 class EWiiController * * _wiiCtrlPads; // size: 0x4, address: 0x805DBF80
 class EControllerManager * _pCtrlMan; // size: 0x4, address: 0x805DBF84
+// total size: 0x2148
 class EWiiControllerManager : public ENgcControllerManager {
-    // total size: 0x2148
+    // Members
 protected:
     struct KPADStatus m_kpads[4][16]; // offset 0x3C, size 0x2100
     int m_numControllers; // offset 0x213C, size 0x4
@@ -17,8 +18,9 @@ protected:
 class EWiiControllerManager _wiiCtrlman; // size: 0x2148, address: 0x80522190
 static int _wpadInfoPollTime; // size: 0x4, address: 0x805DA3F0
 static unsigned char _wpadInfoCallbackPending; // size: 0x1, address: 0x805DBF88
+// total size: 0x18
 struct WPADInfo {
-    // total size: 0x18
+    // Members
     int dpd; // offset 0x0, size 0x4
     int speaker; // offset 0x4, size 0x4
     int attach; // offset 0x8, size 0x4
@@ -33,8 +35,9 @@ static struct WPADInfo _wpadInfo[4]; // size: 0x60, address: 0x805242D8
 static unsigned char _wpadInfoFlag[4]; // size: 0x4, address: 0x805DBF8C
 static int _wpadInfoUpdate[4]; // size: 0x10, address: 0x80524338
 unsigned char bWasInError; // size: 0x1, address: 0x805DBF90
+// total size: 0x220
 class EWiiController : public EController {
-    // total size: 0x220
+    // Members
     unsigned char m_bIsButtonCHold; // offset 0x205, size 0x1
     unsigned char m_bIsButtonZHold; // offset 0x206, size 0x1
     unsigned char m_bIsButtonBHold; // offset 0x207, size 0x1
@@ -53,8 +56,9 @@ static const char * BANNER_BIN_SPA_FILENAME; // size: 0x4, address: 0x805DA408
 static const char * BANNER_BIN_FILENAME; // size: 0x4, address: 0x805DA40C
 class EWiiMemoryCard _wiiMemCard; // size: 0xC, address: 0x80524354
 class EMemoryCard * _pMemoryCard; // size: 0x4, address: 0x805DBF94
+// total size: 0xF0A0
 struct NANDBanner {
-    // total size: 0xF0A0
+    // Members
     unsigned long signature; // offset 0x0, size 0x4
     unsigned long flag; // offset 0x4, size 0x4
     unsigned short iconSpeed; // offset 0x8, size 0x2
@@ -66,8 +70,9 @@ struct NANDBanner {
 static struct NANDBanner _nandBanner; // size: 0xF0A0, address: 0x80524360
 static unsigned long _nandBannerSize; // size: 0x4, address: 0x805DBF98
 static unsigned short _nandBannerComments[2][32]; // size: 0x80, address: 0x80533400
+// total size: 0x8C
 struct NANDFileInfo {
-    // total size: 0x8C
+    // Members
     long fileDescriptor; // offset 0x0, size 0x4
     long origFd; // offset 0x4, size 0x4
     char origPath[64]; // offset 0x8, size 0x40
@@ -76,8 +81,9 @@ struct NANDFileInfo {
     unsigned char stage; // offset 0x89, size 0x1
     unsigned char mark; // offset 0x8A, size 0x1
 };
+// total size: 0x94
 class NandFile {
-    // total size: 0x94
+    // Members
     struct NANDFileInfo m_info; // offset 0x0, size 0x8C
     unsigned char m_valid; // offset 0x8C, size 0x1
     int m_lastResult; // offset 0x90, size 0x4
@@ -90,20 +96,23 @@ class ENgcAudio _ngcAudio; // size: 0x88, address: 0x80533890
 class EAudio * _pActualAudio; // size: 0x4, address: 0x805DBFA0
 void (* m_fpAudioFrameCB)(); // size: 0x4, address: 0x805DBFA4
 static struct sDSPADPCM dspHeader; // size: 0x60, address: 0x80533920
+// total size: 0x2
 struct /* @class$12902engine_ngc_unity_cpp */ {
-    // total size: 0x2
+    // Members
     unsigned short looped : 1; // offset 0x0, size 0x2
 };
 union /* @class$12901engine_ngc_unity_cpp */ {
+    // total size: 0x2
     struct /* @class$12902engine_ngc_unity_cpp */ {
-        // total size: 0x2
+        // Members
         unsigned short looped : 1; // offset 0x0, size 0x2
     } __anon$12903; // offset 0x0, size 0x2
     unsigned short looped; // offset 0x0, size 0x2
     unsigned short flags; // offset 0x0, size 0x2
 };
+// total size: 0x44
 struct NGCStreamInfo {
-    // total size: 0x44
+    // Members
     unsigned int file_id; // offset 0x0, size 0x4
     unsigned int voice_id; // offset 0x4, size 0x4
     unsigned int offset; // offset 0x8, size 0x4
@@ -117,15 +126,17 @@ struct NGCStreamInfo {
     unsigned short frq; // offset 0x3C, size 0x2
     union { // inferred
         union /* @class$12901engine_ngc_unity_cpp */ {
+            // total size: 0x2
             struct /* @class$12902engine_ngc_unity_cpp */ {
-                // total size: 0x2
+                // Members
                 unsigned short looped : 1; // offset 0x0, size 0x2
             } __anon$12903; // offset 0x0, size 0x2
             unsigned short looped; // offset 0x0, size 0x2
             unsigned short flags; // offset 0x0, size 0x2
         } __anon$12904; // offset 0x3E, size 0x2
+        // total size: 0x2
         struct /* @class$12902engine_ngc_unity_cpp */ {
-            // total size: 0x2
+            // Members
             unsigned short looped : 1; // offset 0x0, size 0x2
         } __anon$12903; // offset 0x3E, size 0x2
         unsigned short looped : 1; // offset 0x3E, size 0x2
@@ -140,21 +151,23 @@ static unsigned char ActiveSFXWasPlaying[64]; // size: 0x40, address: 0x80534C80
 static class ENGCAudioStreamer * streamer; // size: 0x4, address: 0x805DBFA8
 static class ENgcSFXStreamer * fx; // size: 0x4, address: 0x805DBFAC
 static unsigned char bWasPlayingWhenPaused; // size: 0x1, address: 0x805DBFB0
+// total size: 0xD44
 class ENgcAudioSampleManager : public EAudioSampleManager {
-    // total size: 0xD44
+    // Static members
+    static unsigned int m_pZeroBuffer; // size: 0x4
 };
 class ENgcAudioSampleManager _ngcAudioSampleMan; // size: 0xD44, address: 0x80534CCC
 class EAudioSampleManager * _pAudiosampleman; // size: 0x4, address: 0x805DBFB4
 unsigned int m_pZeroBuffer; // size: 0x4, address: 0x805DBFB8
 static unsigned int AramHeapBegin; // size: 0x4, address: 0x805DBFBC
-class ENgcClockMan : public EClockMan {
-    // total size: 0x4
-};
+// total size: 0x4
+class ENgcClockMan : public EClockMan {};
 class ENgcClockMan _ngcClockMan; // size: 0x4, address: 0x805DBFC0
 class EClockMan * _pClockMan; // size: 0x4, address: 0x805DA418
 class ENgcController * * _ngcCtrlPads; // size: 0x4, address: 0x805DBFC4
+// total size: 0xC
 struct PADStatus {
-    // total size: 0xC
+    // Members
     unsigned short button; // offset 0x0, size 0x2
     signed char stickX; // offset 0x2, size 0x1
     signed char stickY; // offset 0x3, size 0x1
@@ -166,20 +179,30 @@ struct PADStatus {
     unsigned char analogB; // offset 0x9, size 0x1
     signed char err; // offset 0xA, size 0x1
 };
+// total size: 0x3C
 class ENgcControllerManager : public EControllerManager {
-    // total size: 0x3C
+    // Members
 protected:
     struct PADStatus m_Pads[4]; // offset 0xA, size 0x30
 };
 class ENgcControllerManager _ngcctrlman; // size: 0x3C, address: 0x80535A28
 unsigned char bWasInError; // size: 0x1, address: 0x805DBFC8
+// total size: 0x20C
 class ENgcController : public EController {
-    // total size: 0x20C
+    // Members
 public:
     int m_channel; // offset 0x208, size 0x4
 };
+// total size: 0x48
 class ENgcEngine : public EEngine {
-    // total size: 0x48
+    // Static members
+    static void (* sDefaultErrorHandler[17])(unsigned short, struct OSContext *); // size: 0x44
+    static void * s_pArena2Lo; // size: 0x4
+    static void * s_pArena2Hi; // size: 0x4
+    static void * s_pArenaLo; // size: 0x4
+    static void * s_pArenaHi; // size: 0x4
+
+    // Members
 public:
     unsigned short * (* statusCallback)(int); // offset 0x44, size 0x4
 };
@@ -211,8 +234,9 @@ enum ResetType {
     RESET_RETURN_TO_MENU = 3,
 };
 static enum ResetType s_RequestedReset; // size: 0x4, address: 0x805DC000
+// total size: 0x30
 struct OSFontHeader {
-    // total size: 0x30
+    // Members
     unsigned short fontType; // offset 0x0, size 0x2
     unsigned short firstChar; // offset 0x2, size 0x2
     unsigned short lastChar; // offset 0x4, size 0x2
@@ -260,24 +284,22 @@ static unsigned short kColorLUT[16]; // size: 0x20, address: 0x80454DD0
 class ENgcGraphics _ngcGfx; // size: 0x268, address: 0x805381F0
 class EGraphics * _pGfx; // size: 0x4, address: 0x805DC01C
 static unsigned char _ngcDrawPerfStats; // size: 0x1, address: 0x805DC020
-class ENgcDL : public EDL {
-    // total size: 0x68
-};
-class ENgcRC : public ERC {
-    // total size: 0x5C
-};
+// total size: 0x68
+class ENgcDL : public EDL {};
+// total size: 0x5C
+class ENgcRC : public ERC {};
 static class ENgcRC _ngcImmediateRC; // size: 0x5C, address: 0x80538464
 class EKeyboard * _pKeyboard; // size: 0x4, address: 0x805DC024
-class ENgcKeyboard : public EKeyboard {
-    // total size: 0x8
-};
+// total size: 0x8
+class ENgcKeyboard : public EKeyboard {};
 class ENgcKeyboard _ngcKeyboard; // size: 0x8, address: 0x805DC028
 static unsigned short VolumeTable[128]; // size: 0x100, address: 0x80454E20
 static int VideoDecodeThreadCreated; // size: 0x4, address: 0x805DC030
 static struct OSThread VideoDecodeThread; // size: 0x318, address: 0x805384C0
 static unsigned char VideoDecodeThreadStack[4096]; // size: 0x1000, address: 0x805387D8
+// total size: 0x20
 struct OSMessageQueue {
-    // total size: 0x20
+    // Members
     struct OSThreadQueue queueSend; // offset 0x0, size 0x8
     struct OSThreadQueue queueReceive; // offset 0x8, size 0x8
     void * msgArray; // offset 0x10, size 0x4
@@ -297,8 +319,9 @@ static struct OSMessageQueue FreeAudioBufferQueue; // size: 0x20, address: 0x805
 static struct OSMessageQueue DecodedAudioBufferQueue; // size: 0x20, address: 0x8053AB68
 static void * FreeAudioBufferMessage[3]; // size: 0xC, address: 0x8053AB88
 static void * DecodedAudioBufferMessage[3]; // size: 0xC, address: 0x8053AB94
+// total size: 0x30
 struct THPHeader {
-    // total size: 0x30
+    // Members
     char magic[4]; // offset 0x0, size 0x4
     unsigned long version; // offset 0x4, size 0x4
     unsigned long bufSize; // offset 0x8, size 0x4
@@ -312,39 +335,45 @@ struct THPHeader {
     unsigned long movieDataOffsets; // offset 0x28, size 0x4
     unsigned long finalFrameDataOffsets; // offset 0x2C, size 0x4
 };
+// total size: 0x14
 struct THPFrameCompInfo {
-    // total size: 0x14
+    // Members
     unsigned long numComponents; // offset 0x0, size 0x4
     unsigned char frameComp[16]; // offset 0x4, size 0x10
 };
+// total size: 0xC
 struct THPVideoInfo {
-    // total size: 0xC
+    // Members
     unsigned long xSize; // offset 0x0, size 0x4
     unsigned long ySize; // offset 0x4, size 0x4
     unsigned long videoType; // offset 0x8, size 0x4
 };
+// total size: 0x10
 struct THPAudioInfo {
-    // total size: 0x10
+    // Members
     unsigned long sndChannels; // offset 0x0, size 0x4
     unsigned long sndFrequency; // offset 0x4, size 0x4
     unsigned long sndNumSamples; // offset 0x8, size 0x4
     unsigned long sndNumTracks; // offset 0xC, size 0x4
 };
+// total size: 0x10
 struct THPTextureSet {
-    // total size: 0x10
+    // Members
     unsigned char * ytexture; // offset 0x0, size 0x4
     unsigned char * utexture; // offset 0x4, size 0x4
     unsigned char * vtexture; // offset 0x8, size 0x4
     int frameNumber; // offset 0xC, size 0x4
 };
+// total size: 0xC
 struct THPAudioBuffer {
-    // total size: 0xC
+    // Members
     signed short * buffer; // offset 0x0, size 0x4
     signed short * curPtr; // offset 0x4, size 0x4
     unsigned int validSample; // offset 0x8, size 0x4
 };
+// total size: 0x1D0
 struct THPPlayer {
-    // total size: 0x1D0
+    // Members
     struct DVDFileInfo fileInfo; // offset 0x0, size 0x3C
     struct THPHeader header; // offset 0x3C, size 0x30
     struct THPFrameCompInfo compInfo; // offset 0x6C, size 0x14
@@ -404,8 +433,9 @@ static signed short * CurAudioBuffer; // size: 0x4, address: 0x805DC054
 static int AudioSystem; // size: 0x4, address: 0x805DC058
 static unsigned char gIsSoundPaused; // size: 0x1, address: 0x805DC05C
 static unsigned char miniaudioboot; // size: 0x1, address: 0x805DC05D
+// total size: 0x5C
 class ENgcMovie : public EMovie {
-    // total size: 0x5C
+    // Members
     unsigned int m_audioTrack; // offset 0xC, size 0x4
     int m_frame; // offset 0x10, size 0x4
     unsigned int m_start; // offset 0x14, size 0x4
@@ -419,16 +449,18 @@ class ENgcMovie : public EMovie {
 };
 static unsigned char bPausedDueToDiskError; // size: 0x1, address: 0x805DC05E
 static unsigned char bWasPlayingWhenPaused; // size: 0x1, address: 0x805DC05F
+// total size: 0xC
 struct THPReadBuffer {
-    // total size: 0xC
+    // Members
     unsigned char * ptr; // offset 0x0, size 0x4
     int frameNumber; // offset 0x4, size 0x4
     unsigned char isValid; // offset 0x8, size 0x1
 };
 unsigned char _ngcPerfStatsEnabled; // size: 0x1, address: 0x805DC060
 static int currentPerf0Stat; // size: 0x4, address: 0x805DC064
+// total size: 0x40
 struct ENgcPerfStat {
-    // total size: 0x40
+    // Members
     unsigned int count; // offset 0x0, size 0x4
     unsigned int cycles; // offset 0x4, size 0x4
     unsigned int statid; // offset 0x8, size 0x4
@@ -532,14 +564,16 @@ static unsigned char singleOutput; // size: 0x1, address: 0x805DA46B
 static unsigned char singleOutput; // size: 0x1, address: 0x805DA46C
 static unsigned char singleOutput; // size: 0x1, address: 0x805DA46D
 static unsigned char singleOutput; // size: 0x1, address: 0x805DA46E
+// total size: 0x2C
 class ENgcRenderSurface : public ERenderSurface {
-    // total size: 0x2C
+    // Members
 protected:
     unsigned char m_isSelected; // offset 0x24, size 0x1
     class ENgcTexture * m_pTexture; // offset 0x28, size 0x4
 };
+// total size: 0x30
 struct _AXPBMIX {
-    // total size: 0x30
+    // Members
     unsigned short vL; // offset 0x0, size 0x2
     unsigned short vDeltaL; // offset 0x2, size 0x2
     unsigned short vR; // offset 0x4, size 0x2
@@ -565,8 +599,9 @@ struct _AXPBMIX {
     unsigned short vAuxCS; // offset 0x2C, size 0x2
     unsigned short vDeltaAuxCS; // offset 0x2E, size 0x2
 };
+// total size: 0xE
 struct _AXPBITD {
-    // total size: 0xE
+    // Members
     unsigned short flag; // offset 0x0, size 0x2
     unsigned short bufferHi; // offset 0x2, size 0x2
     unsigned short bufferLo; // offset 0x4, size 0x2
@@ -575,8 +610,9 @@ struct _AXPBITD {
     unsigned short targetShiftL; // offset 0xA, size 0x2
     unsigned short targetShiftR; // offset 0xC, size 0x2
 };
+// total size: 0x18
 struct _AXPBDPOP {
-    // total size: 0x18
+    // Members
     signed short aL; // offset 0x0, size 0x2
     signed short aAuxAL; // offset 0x2, size 0x2
     signed short aAuxBL; // offset 0x4, size 0x2
@@ -590,26 +626,30 @@ struct _AXPBDPOP {
     signed short aAuxBS; // offset 0x14, size 0x2
     signed short aAuxCS; // offset 0x16, size 0x2
 };
+// total size: 0x4
 struct _AXPBVE {
-    // total size: 0x4
+    // Members
     unsigned short currentVolume; // offset 0x0, size 0x2
     signed short currentDelta; // offset 0x2, size 0x2
 };
+// total size: 0x6
 struct _AXPBADPCMLOOP {
-    // total size: 0x6
+    // Members
     unsigned short loop_pred_scale; // offset 0x0, size 0x2
     unsigned short loop_yn1; // offset 0x2, size 0x2
     unsigned short loop_yn2; // offset 0x4, size 0x2
 };
+// total size: 0x8
 struct _AXPBLPF {
-    // total size: 0x8
+    // Members
     unsigned short on; // offset 0x0, size 0x2
     unsigned short yn1; // offset 0x2, size 0x2
     unsigned short a0; // offset 0x4, size 0x2
     unsigned short b0; // offset 0x6, size 0x2
 };
+// total size: 0x14
 struct _AXPBBIQUAD {
-    // total size: 0x14
+    // Members
     unsigned short on; // offset 0x0, size 0x2
     unsigned short xn1; // offset 0x2, size 0x2
     unsigned short xn2; // offset 0x4, size 0x2
@@ -621,8 +661,9 @@ struct _AXPBBIQUAD {
     unsigned short a1; // offset 0x10, size 0x2
     unsigned short a2; // offset 0x12, size 0x2
 };
+// total size: 0x20
 struct _AXPBRMTMIX {
-    // total size: 0x20
+    // Members
     unsigned short vMain0; // offset 0x0, size 0x2
     unsigned short vDeltaMain0; // offset 0x2, size 0x2
     unsigned short vAux0; // offset 0x4, size 0x2
@@ -640,8 +681,9 @@ struct _AXPBRMTMIX {
     unsigned short vAux3; // offset 0x1C, size 0x2
     unsigned short vDeltaAux3; // offset 0x1E, size 0x2
 };
+// total size: 0x10
 struct _AXPBRMTDPOP {
-    // total size: 0x10
+    // Members
     signed short aMain0; // offset 0x0, size 0x2
     signed short aMain1; // offset 0x2, size 0x2
     signed short aMain2; // offset 0x4, size 0x2
@@ -651,8 +693,9 @@ struct _AXPBRMTDPOP {
     signed short aAux2; // offset 0xC, size 0x2
     signed short aAux3; // offset 0xE, size 0x2
 };
+// total size: 0xA
 struct _AXPBRMTSRC {
-    // total size: 0xA
+    // Members
     unsigned short currentAddressFrac; // offset 0x0, size 0x2
     unsigned short last_samples[4]; // offset 0x2, size 0x8
 };
@@ -660,8 +703,9 @@ union __AXPBRMTIIR {
     struct _AXPBLPF lpf; // offset 0x0, size 0x8
     struct _AXPBBIQUAD biquad; // offset 0x0, size 0x14
 };
+// total size: 0x140
 struct _AXPB {
-    // total size: 0x140
+    // Members
     unsigned short nextHi; // offset 0x0, size 0x2
     unsigned short nextLo; // offset 0x2, size 0x2
     unsigned short currHi; // offset 0x4, size 0x2
@@ -689,8 +733,9 @@ struct _AXPB {
     union __AXPBRMTIIR rmtIIR; // offset 0x114, size 0x14
     unsigned short pad[12]; // offset 0x128, size 0x18
 };
+// total size: 0x168
 struct _AXVPB {
-    // total size: 0x168
+    // Members
     void * next; // offset 0x0, size 0x4
     void * prev; // offset 0x4, size 0x4
     void * next1; // offset 0x8, size 0x4
@@ -703,16 +748,18 @@ struct _AXVPB {
     void * itdBuffer; // offset 0x24, size 0x4
     struct _AXPB pb; // offset 0x28, size 0x140
 };
+// total size: 0x1
 struct /* @class$44762engine_ngc_unity_cpp */ {
-    // total size: 0x1
+    // Members
     unsigned char play_under_way : 1; // offset 0x0, size 0x1
     unsigned char paused : 1; // offset 0x0, size 0x1
     unsigned char looped : 1; // offset 0x0, size 0x1
     unsigned char on_queue : 1; // offset 0x0, size 0x1
 };
 union /* @class$44761engine_ngc_unity_cpp */ {
+    // total size: 0x1
     struct /* @class$44762engine_ngc_unity_cpp */ {
-        // total size: 0x1
+        // Members
         unsigned char play_under_way : 1; // offset 0x0, size 0x1
         unsigned char paused : 1; // offset 0x0, size 0x1
         unsigned char looped : 1; // offset 0x0, size 0x1
@@ -724,8 +771,9 @@ union /* @class$44761engine_ngc_unity_cpp */ {
     unsigned char on_queue; // offset 0x0, size 0x1
     unsigned char flags; // offset 0x0, size 0x1
 };
+// total size: 0x24
 struct Voice {
-    // total size: 0x24
+    // Members
     struct _AXVPB * voice; // offset 0x0, size 0x4
     struct sDSPADPCM * current_sample; // offset 0x4, size 0x4
     unsigned int aram_start; // offset 0x8, size 0x4
@@ -737,8 +785,9 @@ struct Voice {
     struct Voice * queuenext; // offset 0x1C, size 0x4
     union { // inferred
         union /* @class$44761engine_ngc_unity_cpp */ {
+            // total size: 0x1
             struct /* @class$44762engine_ngc_unity_cpp */ {
-                // total size: 0x1
+                // Members
                 unsigned char play_under_way : 1; // offset 0x0, size 0x1
                 unsigned char paused : 1; // offset 0x0, size 0x1
                 unsigned char looped : 1; // offset 0x0, size 0x1
@@ -750,8 +799,9 @@ struct Voice {
             unsigned char on_queue; // offset 0x0, size 0x1
             unsigned char flags; // offset 0x0, size 0x1
         } __anon$44764; // offset 0x20, size 0x1
+        // total size: 0x1
         struct /* @class$44762engine_ngc_unity_cpp */ {
-            // total size: 0x1
+            // Members
             unsigned char play_under_way : 1; // offset 0x0, size 0x1
             unsigned char paused : 1; // offset 0x0, size 0x1
             unsigned char looped : 1; // offset 0x0, size 0x1
@@ -767,19 +817,20 @@ struct Voice {
 static struct Voice ENgcSFXStreamer_voices[62]; // size: 0x8B8, address: 0x80542D50
 static unsigned char ENgcSFXStreamer_old_irq_state; // size: 0x1, address: 0x805DC0C0
 static unsigned int ENgcSFXStreamer_irq_counter; // size: 0x4, address: 0x805DC0C4
-class ENgcSFXStreamer {
-    // total size: 0x1
-};
+// total size: 0x1
+class ENgcSFXStreamer {};
+// total size: 0x28
 struct _AXPBADPCM {
-    // total size: 0x28
+    // Members
     unsigned short a[8][2]; // offset 0x0, size 0x20
     unsigned short gain; // offset 0x20, size 0x2
     unsigned short pred_scale; // offset 0x22, size 0x2
     unsigned short yn1; // offset 0x24, size 0x2
     unsigned short yn2; // offset 0x26, size 0x2
 };
+// total size: 0x10
 struct _AXPBADDR {
-    // total size: 0x10
+    // Members
     unsigned short loopFlag; // offset 0x0, size 0x2
     unsigned short format; // offset 0x2, size 0x2
     unsigned short loopAddressHi; // offset 0x4, size 0x2
@@ -789,18 +840,19 @@ struct _AXPBADDR {
     unsigned short currentAddressHi; // offset 0xC, size 0x2
     unsigned short currentAddressLo; // offset 0xE, size 0x2
 };
+// total size: 0xE
 struct _AXPBSRC {
-    // total size: 0xE
+    // Members
     unsigned short ratioHi; // offset 0x0, size 0x2
     unsigned short ratioLo; // offset 0x2, size 0x2
     unsigned short currentAddressFrac; // offset 0x4, size 0x2
     unsigned short last_samples[4]; // offset 0x6, size 0x8
 };
-class TGrowPool : public EGrowPool {
-    // total size: 0xC
-};
+// total size: 0xC
+class TGrowPool : public EGrowPool {};
+// total size: 0x3B8
 class ENgcScheduler : public EScheduler {
-    // total size: 0x3B8
+    // Members
 protected:
     class EMsgQueue m_commandQueue; // offset 0x344, size 0x4C
     class TGrowPool m_commandPool; // offset 0x390, size 0xC
@@ -808,9 +860,8 @@ protected:
 };
 class ENgcScheduler _ngcSched; // size: 0x3B8, address: 0x80543618
 class EScheduler * _pSched; // size: 0x4, address: 0x805DC0C8
-class ENgcShader : public EShader {
-    // total size: 0x48
-};
+// total size: 0x48
+class ENgcShader : public EShader {};
 enum StreamState {
     SS_FREE = 0,
     SS_INACTIVE = 1,
@@ -819,8 +870,9 @@ enum StreamState {
     SS_STEREOACTIVEWAIT = 4,
     SS_ACTIVE = 5,
 };
+// total size: 0x1
 struct /* @class$45457engine_ngc_unity_cpp */ {
-    // total size: 0x1
+    // Members
     unsigned char active : 1; // offset 0x0, size 0x1
     unsigned char paused : 1; // offset 0x0, size 0x1
     unsigned char start_shutdown : 1; // offset 0x0, size 0x1
@@ -828,8 +880,9 @@ struct /* @class$45457engine_ngc_unity_cpp */ {
     unsigned char shutdown_pending : 1; // offset 0x0, size 0x1
 };
 union /* @class$45456engine_ngc_unity_cpp */ {
+    // total size: 0x1
     struct /* @class$45457engine_ngc_unity_cpp */ {
-        // total size: 0x1
+        // Members
         unsigned char active : 1; // offset 0x0, size 0x1
         unsigned char paused : 1; // offset 0x0, size 0x1
         unsigned char start_shutdown : 1; // offset 0x0, size 0x1
@@ -843,8 +896,9 @@ union /* @class$45456engine_ngc_unity_cpp */ {
     unsigned char shutdown_pending; // offset 0x0, size 0x1
     unsigned char flags; // offset 0x0, size 0x1
 };
+// total size: 0x78
 struct Stream {
-    // total size: 0x78
+    // Members
     enum StreamState state; // offset 0x0, size 0x4
     unsigned int handle; // offset 0x4, size 0x4
     struct Stream * child; // offset 0x8, size 0x4
@@ -864,8 +918,9 @@ struct Stream {
     unsigned char buffer_index; // offset 0x74, size 0x1
     union { // inferred
         union /* @class$45456engine_ngc_unity_cpp */ {
+            // total size: 0x1
             struct /* @class$45457engine_ngc_unity_cpp */ {
-                // total size: 0x1
+                // Members
                 unsigned char active : 1; // offset 0x0, size 0x1
                 unsigned char paused : 1; // offset 0x0, size 0x1
                 unsigned char start_shutdown : 1; // offset 0x0, size 0x1
@@ -879,8 +934,9 @@ struct Stream {
             unsigned char shutdown_pending; // offset 0x0, size 0x1
             unsigned char flags; // offset 0x0, size 0x1
         } __anon$45459; // offset 0x75, size 0x1
+        // total size: 0x1
         struct /* @class$45457engine_ngc_unity_cpp */ {
-            // total size: 0x1
+            // Members
             unsigned char active : 1; // offset 0x0, size 0x1
             unsigned char paused : 1; // offset 0x0, size 0x1
             unsigned char start_shutdown : 1; // offset 0x0, size 0x1
@@ -899,18 +955,25 @@ struct Stream ENGCAudioStreamer_streams[2]; // size: 0xF0, address: 0x805439D0
 unsigned int next_stream_handle; // size: 0x4, address: 0x805DC0CC
 unsigned char ENGCAudioStreamer_old_irq_state; // size: 0x1, address: 0x805DC0D0
 unsigned int ENGCAudioStreamer_irq_counter; // size: 0x4, address: 0x805DC0D4
-class ENGCAudioStreamer {
-    // total size: 0x1
-};
+// total size: 0x1
+class ENGCAudioStreamer {};
 int _ngcTexCount; // size: 0x4, address: 0x805DC0D8
 int _ngcTexMem; // size: 0x4, address: 0x805DC0DC
 static enum _GXTlut sTlut; // size: 0x4, address: 0x805DC0E0
 static float lodBias; // size: 0x4, address: 0x805DC0E4
+// total size: 0x98
 class ENgcTextureC4 : public ENgcTextureBase {
-    // total size: 0x98
+    // Static members
+    static int kPixelsPerTileCol; // size: 0x4
+    static int kPixelsPerTileRow; // size: 0x4
 };
+// total size: 0xD0
 class ENgcTextureC4_32 : public ENgcTextureBase {
-    // total size: 0xD0
+    // Static members
+    static int kPixelsPerTileCol; // size: 0x4
+    static int kPixelsPerTileRow; // size: 0x4
+
+    // Members
 protected:
     struct _GXTexObj m_texObj2; // offset 0x98, size 0x20
     struct _GXTlutObj m_tlutObj2; // offset 0xB8, size 0xC
@@ -918,11 +981,19 @@ protected:
     unsigned char * m_pPaletteRG; // offset 0xC8, size 0x4
     unsigned char * m_pPaletteBA; // offset 0xCC, size 0x4
 };
+// total size: 0x98
 class ENgcTextureC8 : public ENgcTextureBase {
-    // total size: 0x98
+    // Static members
+    static int kPixelsPerTileCol; // size: 0x4
+    static int kPixelsPerTileRow; // size: 0x4
 };
+// total size: 0xD4
 class ENgcTextureC8_32 : public ENgcTextureBase {
-    // total size: 0xD4
+    // Static members
+    static int kPixelsPerTileCol; // size: 0x4
+    static int kPixelsPerTileRow; // size: 0x4
+
+    // Members
 protected:
     struct _GXTexObj m_texObj2; // offset 0x98, size 0x20
     struct _GXTlutObj m_tlutObj2; // offset 0xB8, size 0xC
@@ -931,23 +1002,32 @@ protected:
     unsigned char * m_pPaletteBA; // offset 0xCC, size 0x4
     unsigned long * m_pUpdatePalette; // offset 0xD0, size 0x4
 };
+// total size: 0x98
 class ENgcTextureCMPR : public ENgcTextureBase {
-    // total size: 0x98
+    // Static members
+    static int kPixelsPerTileCol; // size: 0x4
+    static int kPixelsPerTileRow; // size: 0x4
 };
+// total size: 0x98
 class ENgcTextureRGB5A3 : public ENgcTextureBase {
-    // total size: 0x98
+    // Static members
+    static int kPixelsPerTileCol; // size: 0x4
+    static int kPixelsPerTileRow; // size: 0x4
 };
+// total size: 0x98
 class ENgcTextureRGBA8 : public ENgcTextureBase {
-    // total size: 0x98
+    // Static members
+    static int kPixelsPerTileCol; // size: 0x4
+    static int kPixelsPerTileRow; // size: 0x4
 };
-class ENgcTextureUtil {
-    // total size: 0x1
-};
+// total size: 0x1
+class ENgcTextureUtil {};
 static unsigned int m_fbSize; // size: 0x4, address: 0x805DC0E8
 static unsigned char * m_xfb; // size: 0x4, address: 0x805DC0EC
 static unsigned int XfbWidth; // size: 0x4, address: 0x805DC0F0
+// total size: 0xC
 struct XFColor_s {
-    // total size: 0xC
+    // Members
     unsigned int Y; // offset 0x0, size 0x4
     unsigned int Cb; // offset 0x4, size 0x4
     unsigned int Cr; // offset 0x8, size 0x4
@@ -958,107 +1038,75 @@ static int y1; // size: 0x4, address: 0x805DC0F4
 static int y2; // size: 0x4, address: 0x805DA474
 static int y3; // size: 0x4, address: 0x805DA478
 unsigned int XFontBitmap[768]; // size: 0xC00, address: 0x80455780
-struct {
-    // total size: 0x60
-} __vt__16ENgcTextureC4_32; // size: 0x60, address: 0x80456380
-struct {
-    // total size: 0x60
-} __vt__16ENgcTextureC8_32; // size: 0x60, address: 0x804563E0
-struct {
-    // total size: 0x60
-} __vt__17ENgcTextureRGB5A3; // size: 0x60, address: 0x80456440
-struct {
-    // total size: 0x60
-} __vt__15ENgcTextureCMPR; // size: 0x60, address: 0x804564A0
-struct {
-    // total size: 0x60
-} __vt__13ENgcTextureC4; // size: 0x60, address: 0x80456500
-struct {
-    // total size: 0x60
-} __vt__13ENgcTextureC8; // size: 0x60, address: 0x80456560
-struct {
-    // total size: 0x60
-} __vt__16ENgcTextureRGBA8; // size: 0x60, address: 0x804565C0
-struct {
-    // total size: 0x34
-} __vt__12ENgcKeyboard; // size: 0x34, address: 0x80456620
-struct {
-    // total size: 0x24
-} __vt__9ENgcMovie; // size: 0x24, address: 0x80456654
-struct {
-    // total size: 0xC
-} __vt__6ENgcDL; // size: 0xC, address: 0x80456678
-struct {
-    // total size: 0x48
-} __vt__10ENgcShader; // size: 0x48, address: 0x80456688
-struct {
-    // total size: 0x1BC
-} __vt__6ENgcRC; // size: 0x1BC, address: 0x804566D0
-struct {
-    // total size: 0x3C
-} __vt__17ENgcRenderSurface; // size: 0x3C, address: 0x8045688C
-struct {
-    // total size: 0x120
-} __vt__12ENgcGraphics; // size: 0x120, address: 0x804568C8
-struct {
-    // total size: 0x60
-} __vt__14ENgcController; // size: 0x60, address: 0x804569E8
-struct {
-    // total size: 0x20
-} __vt__12ENgcClockMan; // size: 0x20, address: 0x80456A48
-struct {
-    // total size: 0x20
-} __vt__12ENgcRenderer; // size: 0x20, address: 0x80456A68
-struct {
-    // total size: 0x60
-} __vt__15ENgcTextureBase; // size: 0x60, address: 0x80456A88
-struct {
-    // total size: 0x50
-} __vt__11ENgcTexture; // size: 0x50, address: 0x80456AE8
-struct {
-    // total size: 0x3C
-} __vt__22ENgcAudioSampleManager; // size: 0x3C, address: 0x80456B38
-struct {
-    // total size: 0x38
-} __vt__13ENgcScheduler; // size: 0x38, address: 0x80456B78
-struct {
-    // total size: 0x38
-} __vt__10EScheduler; // size: 0x38, address: 0x80456BB0
-struct {
-    // total size: 0x48
-} __vt__12ERSampledata; // size: 0x48, address: 0x80456BE8
-struct {
-    // total size: 0x3C
-} __vt__19EAudioSampleManager; // size: 0x3C, address: 0x80456C30
-struct {
-    // total size: 0x70
-} __vt__9ENgcAudio; // size: 0x70, address: 0x80456C70
-struct {
-    // total size: 0x70
-} __vt__6EAudio; // size: 0x70, address: 0x80456CE0
-struct {
-    // total size: 0x78
-} __vt__14EWiiMemoryCard; // size: 0x78, address: 0x80456D50
-struct {
-    // total size: 0x74
-} __vt__11EMemoryCard; // size: 0x74, address: 0x80456DC8
-struct {
-    // total size: 0x60
-} __vt__14EWiiController; // size: 0x60, address: 0x80456E40
-struct {
-    // total size: 0x68
-} __vt__10ENgcEngine; // size: 0x68, address: 0x80456EA0
-struct {
-    // total size: 0x24
-} __vt__21EWiiControllerManager; // size: 0x24, address: 0x80456F08
-struct {
-    // total size: 0x24
-} __vt__21ENgcControllerManager; // size: 0x24, address: 0x80456F2C
-struct {
-    // total size: 0x20
-} __vt__9EClockMan; // size: 0x20, address: 0x80456F50
+// total size: 0x60
+struct {} __vt__16ENgcTextureC4_32; // size: 0x60, address: 0x80456380
+// total size: 0x60
+struct {} __vt__16ENgcTextureC8_32; // size: 0x60, address: 0x804563E0
+// total size: 0x60
+struct {} __vt__17ENgcTextureRGB5A3; // size: 0x60, address: 0x80456440
+// total size: 0x60
+struct {} __vt__15ENgcTextureCMPR; // size: 0x60, address: 0x804564A0
+// total size: 0x60
+struct {} __vt__13ENgcTextureC4; // size: 0x60, address: 0x80456500
+// total size: 0x60
+struct {} __vt__13ENgcTextureC8; // size: 0x60, address: 0x80456560
+// total size: 0x60
+struct {} __vt__16ENgcTextureRGBA8; // size: 0x60, address: 0x804565C0
+// total size: 0x34
+struct {} __vt__12ENgcKeyboard; // size: 0x34, address: 0x80456620
+// total size: 0x24
+struct {} __vt__9ENgcMovie; // size: 0x24, address: 0x80456654
+// total size: 0xC
+struct {} __vt__6ENgcDL; // size: 0xC, address: 0x80456678
+// total size: 0x48
+struct {} __vt__10ENgcShader; // size: 0x48, address: 0x80456688
+// total size: 0x1BC
+struct {} __vt__6ENgcRC; // size: 0x1BC, address: 0x804566D0
+// total size: 0x3C
+struct {} __vt__17ENgcRenderSurface; // size: 0x3C, address: 0x8045688C
+// total size: 0x120
+struct {} __vt__12ENgcGraphics; // size: 0x120, address: 0x804568C8
+// total size: 0x60
+struct {} __vt__14ENgcController; // size: 0x60, address: 0x804569E8
+// total size: 0x20
+struct {} __vt__12ENgcClockMan; // size: 0x20, address: 0x80456A48
+// total size: 0x20
+struct {} __vt__12ENgcRenderer; // size: 0x20, address: 0x80456A68
+// total size: 0x60
+struct {} __vt__15ENgcTextureBase; // size: 0x60, address: 0x80456A88
+// total size: 0x50
+struct {} __vt__11ENgcTexture; // size: 0x50, address: 0x80456AE8
+// total size: 0x3C
+struct {} __vt__22ENgcAudioSampleManager; // size: 0x3C, address: 0x80456B38
+// total size: 0x38
+struct {} __vt__13ENgcScheduler; // size: 0x38, address: 0x80456B78
+// total size: 0x38
+struct {} __vt__10EScheduler; // size: 0x38, address: 0x80456BB0
+// total size: 0x48
+struct {} __vt__12ERSampledata; // size: 0x48, address: 0x80456BE8
+// total size: 0x3C
+struct {} __vt__19EAudioSampleManager; // size: 0x3C, address: 0x80456C30
+// total size: 0x70
+struct {} __vt__9ENgcAudio; // size: 0x70, address: 0x80456C70
+// total size: 0x70
+struct {} __vt__6EAudio; // size: 0x70, address: 0x80456CE0
+// total size: 0x78
+struct {} __vt__14EWiiMemoryCard; // size: 0x78, address: 0x80456D50
+// total size: 0x74
+struct {} __vt__11EMemoryCard; // size: 0x74, address: 0x80456DC8
+// total size: 0x60
+struct {} __vt__14EWiiController; // size: 0x60, address: 0x80456E40
+// total size: 0x68
+struct {} __vt__10ENgcEngine; // size: 0x68, address: 0x80456EA0
+// total size: 0x24
+struct {} __vt__21EWiiControllerManager; // size: 0x24, address: 0x80456F08
+// total size: 0x24
+struct {} __vt__21ENgcControllerManager; // size: 0x24, address: 0x80456F2C
+// total size: 0x20
+struct {} __vt__9EClockMan; // size: 0x20, address: 0x80456F50
+// total size: 0x8
 class EKeyboard {
-    // total size: 0x8
+    // Members
     unsigned char m_bKeyboardHold; // offset 0x0, size 0x1
 public:
     void * __vptr$; // offset 0x4, size 0x4

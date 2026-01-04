@@ -8,6 +8,7 @@
 void HelpDialogCallback::onHelpDialogSelection() {}
 
 // Range: 0x8017DD0C -> 0x8017DD64
-void * SimpleOkDialog::~SimpleOkDialog(class SimpleOkDialog * const this /* r30 */) {}
+// this: r30
+SimpleOkDialog::~SimpleOkDialog() {}
 
 

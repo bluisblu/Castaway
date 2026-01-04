@@ -8,12 +8,6 @@
 unsigned char EResourceManager::IsValid() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\common\engine\manager\e_resourceman.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x8009B618 -> 0x8009B638
-*/
 // Range: 0x8009B618 -> 0x8009B620
 int EResourceManager::GetAllocationFlags() {}
 
@@ -24,12 +18,6 @@ unsigned char EResourceManager::CanCache() {}
 unsigned char EResourceManager::CanCache() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\common\engine\manager\e_resourceman.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x801FA4F4 -> 0x801FA500
-*/
 // Range: 0x801FA4F4 -> 0x801FA4FC
 void EResourceManager::SetDiscOffset() {}
 
@@ -37,12 +25,6 @@ void EResourceManager::SetDiscOffset() {}
 unsigned char EResourceManager::LookupId() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\common\engine\manager\e_resourceman.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x802ADF34 -> 0x802ADF50
-*/
 // Range: 0x802ADF34 -> 0x802ADF50
 unsigned char ResourceIndexRecord::CheckPos() {}
 

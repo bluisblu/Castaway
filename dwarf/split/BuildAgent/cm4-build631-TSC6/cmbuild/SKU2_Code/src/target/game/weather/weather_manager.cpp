@@ -5,7 +5,8 @@
     Code range: 0x80249118 -> 0x8024CA0C
 */
 // Range: 0x80249118 -> 0x8024941C
-void * WeatherManager::WeatherManager(class WeatherManager * const this /* r30 */) {
+// this: r30
+WeatherManager::WeatherManager() {
     // Local variables
     int i; // r7
 
@@ -14,22 +15,26 @@ void * WeatherManager::WeatherManager(class WeatherManager * const this /* r30 *
 }
 
 // Range: 0x8024941C -> 0x80249614
-void * WeatherManager::~WeatherManager(class WeatherManager * const this /* r27 */) {
+// this: r27
+WeatherManager::~WeatherManager() {
     // Local variables
     int i; // r29
 }
 
 // Range: 0x80249614 -> 0x8024965C
-void WeatherManager::DeallocateSunMoon(class WeatherManager * const this /* r31 */) {}
+// this: r31
+void WeatherManager::DeallocateSunMoon() {}
 
 // Range: 0x8024965C -> 0x802496E8
-void WeatherManager::DeallocateWindyPlantAssets(class WeatherManager * const this /* r31 */) {
+// this: r31
+void WeatherManager::DeallocateWindyPlantAssets() {
     // References
     // -> class EAnimManager _animman;
 }
 
 // Range: 0x802496E8 -> 0x80249900
-void WeatherManager::Init(class WeatherManager * const this /* r31 */) {
+// this: r31
+void WeatherManager::Init() {
     // Local variables
     unsigned int i; // r26
     signed short j; // r25
@@ -46,10 +51,12 @@ void WeatherManager::Init(class WeatherManager * const this /* r31 */) {
 }
 
 // Range: 0x80249900 -> 0x80249960
-void WeatherManager::Reset(class WeatherManager * const this /* r31 */) {}
+// this: r31
+void WeatherManager::Reset() {}
 
 // Range: 0x80249960 -> 0x80249BC0
-void WeatherManager::DoStream(class WeatherManager * const this /* r27 */, class ReconBuffer * r /* r28 */, int version /* r29 */) {
+// this: r27
+void WeatherManager::DoStream(class ReconBuffer * r /* r28 */, int version /* r29 */) {
     // Local variables
     int i; // r31
     struct WeatherEvent weatherEvent; // r1+0x18
@@ -65,13 +72,15 @@ void WeatherManager::DoStream(class WeatherManager * const this /* r27 */, class
 }
 
 // Range: 0x80249BC0 -> 0x80249C24
-int WeatherManager::GetNumWeatherSequences(class WeatherManager * const this /* r7 */) {
+// this: r7
+int WeatherManager::GetNumWeatherSequences() {
     // Local variables
     const struct WeatherState * tempData; // r1+0x8
 }
 
 // Range: 0x80249C24 -> 0x80249E68
-void WeatherManager::SetWeatherState(class WeatherManager * const this /* r29 */, int nSequenceNumber /* r30 */, unsigned char bSkipTransition /* r31 */) {
+// this: r29
+void WeatherManager::SetWeatherState(int nSequenceNumber /* r30 */, unsigned char bSkipTransition /* r31 */) {
     // Local variables
     const struct WeatherState * tempData; // r1+0x18
 
@@ -92,13 +101,15 @@ enum WeatherStateType WeatherManager::GetWeatherState() {}
 void WeatherManager::SetToDefaultWeather() {}
 
 // Range: 0x80249EF8 -> 0x80249F8C
-void WeatherManager::Suspend(class WeatherManager * const this /* r31 */) {
+// this: r31
+void WeatherManager::Suspend() {
     // References
     // -> class EEngine * _pEngine;
 }
 
 // Range: 0x80249F8C -> 0x8024A070
-void WeatherManager::Resume(class WeatherManager * const this /* r30 */, class GameTime & nNewTime /* r31 */) {
+// this: r30
+void WeatherManager::Resume(class GameTime & nNewTime /* r31 */) {
     // Local variables
     class TreeBranchManager * pTreeBranchManager; // r0
     class TreeManager * pTreeManager; // r0
@@ -108,16 +119,19 @@ void WeatherManager::Resume(class WeatherManager * const this /* r30 */, class G
 }
 
 // Range: 0x8024A070 -> 0x8024A128
-void WeatherManager::SetCurrentTime(class WeatherManager * const this /* r29 */, const class GameTime & nCurrentTime /* r30 */) {
+// this: r29
+void WeatherManager::SetCurrentTime(const class GameTime & nCurrentTime /* r30 */) {
     // Local variables
     int nDeltaTime; // r31
 }
 
 // Range: 0x8024A128 -> 0x8024A1B4
-void WeatherManager::SetWaitTimes(class WeatherManager * const this /* r31 */) {}
+// this: r31
+void WeatherManager::SetWaitTimes() {}
 
 // Range: 0x8024A1B4 -> 0x8024A214
-void WeatherManager::SetLevelData(class WeatherManager * const this /* r31 */) {
+// this: r31
+void WeatherManager::SetLevelData() {
     // References
     // -> class EGlobal _globals;
 }
@@ -126,10 +140,12 @@ void WeatherManager::SetLevelData(class WeatherManager * const this /* r31 */) {
 void WeatherManager::ResetDamageAccumulation() {}
 
 // Range: 0x8024A22C -> 0x8024A28C
-enum WindLevel WeatherManager::GetWindLevelForAmbientSound(const class WeatherManager * const this /* r31 */) {}
+// this: r31
+enum WindLevel WeatherManager::GetWindLevelForAmbientSound() const {}
 
 // Range: 0x8024A28C -> 0x8024A33C
-void WeatherManager::SetWindLevel(class WeatherManager * const this /* r30 */) {
+// this: r30
+void WeatherManager::SetWindLevel() {
     // Local variables
     enum WindLevel prevWindLevel; // r31
 
@@ -138,13 +154,16 @@ void WeatherManager::SetWindLevel(class WeatherManager * const this /* r30 */) {
 }
 
 // Range: 0x8024A33C -> 0x8024A3A8
-unsigned char WeatherManager::IsRaining(const class WeatherManager * const this /* r31 */) {}
+// this: r31
+unsigned char WeatherManager::IsRaining() const {}
 
 // Range: 0x8024A3A8 -> 0x8024A408
-enum RainLevel WeatherManager::GetRainLevelForAmbientSound(const class WeatherManager * const this /* r31 */) {}
+// this: r31
+enum RainLevel WeatherManager::GetRainLevelForAmbientSound() const {}
 
 // Range: 0x8024A408 -> 0x8024A4F4
-void WeatherManager::SetRainLevel(class WeatherManager * const this /* r31 */) {
+// this: r31
+void WeatherManager::SetRainLevel() {
     // References
     // -> char * ms_szRainLevelNames[5];
 }
@@ -159,7 +178,8 @@ void WeatherManager::SetTargetGloomLevel() {}
 void WeatherManager::SetCloudLevel() {}
 
 // Range: 0x8024A510 -> 0x8024A63C
-void WeatherManager::SetFogLevel(class WeatherManager * const this /* r29 */) {
+// this: r29
+void WeatherManager::SetFogLevel() {
     // References
     // -> char * ms_szFogLevelNames[4];
 }
@@ -171,13 +191,16 @@ struct WeatherEvent * WeatherManager::GetLastWeatherEvent() {}
 struct WeatherEvent * WeatherManager::GetWeatherEvent() {}
 
 // Range: 0x8024A6C4 -> 0x8024A708
-void WeatherManager::ClearWeatherEvents(class WeatherManager * const this /* r31 */) {}
+// this: r31
+void WeatherManager::ClearWeatherEvents() {}
 
 // Range: 0x8024A708 -> 0x8024A7D4
-void WeatherManager::AddWeatherEvent(class WeatherManager * const this /* r31 */) {}
+// this: r31
+void WeatherManager::AddWeatherEvent() {}
 
 // Range: 0x8024A7D4 -> 0x8024A8DC
-unsigned char WeatherManager::AddPossibleWeatherEvent(class WeatherManager * const this /* r29 */) {
+// this: r29
+unsigned char WeatherManager::AddPossibleWeatherEvent() {
     // Local variables
     unsigned char bNewWeatherEvent; // r31
     struct WeatherEvent * pLastWeatherEvent; // r30
@@ -185,7 +208,8 @@ unsigned char WeatherManager::AddPossibleWeatherEvent(class WeatherManager * con
 }
 
 // Range: 0x8024A8DC -> 0x8024ABF4
-void WeatherManager::GetDamageEvents(class WeatherManager * const this /* r29 */, struct WeatherEvent * pWeatherEvent /* r27 */, class GameTime & startTime /* r26 */, class GameTime & endTime /* r25 */, int lotNumber /* r24 */, class vector & damageEvents /* r30 */) {
+// this: r29
+void WeatherManager::GetDamageEvents(struct WeatherEvent * pWeatherEvent /* r27 */, class GameTime & startTime /* r26 */, class GameTime & endTime /* r25 */, int lotNumber /* r24 */, class vector & damageEvents /* r30 */) {
     // Local variables
     const struct LevelData * pLevelData; // r0
     int nNumHours; // r31
@@ -211,13 +235,15 @@ void WeatherManager::GetDamageEvents(class WeatherManager * const this /* r29 */
 }
 
 // Range: 0x8024ABF4 -> 0x8024AD04
-int WeatherManager::AdvanceTime(class WeatherManager * const this /* r29 */, class GameTime & newTime /* r30 */) {
+// this: r29
+int WeatherManager::AdvanceTime(class GameTime & newTime /* r30 */) {
     // Local variables
     int nSequenceDeltaSeconds; // r30
 }
 
 // Range: 0x8024AD04 -> 0x8024B1D8
-void WeatherManager::Update(class WeatherManager * const this /* r31 */, const class GameTime & nCurrentGameTime /* r28 */) {
+// this: r31
+void WeatherManager::Update(const class GameTime & nCurrentGameTime /* r28 */) {
     // Local variables
     int nDeltaTime; // r29
     int nSequenceDeltaSeconds; // r0
@@ -231,7 +257,8 @@ void WeatherManager::Update(class WeatherManager * const this /* r31 */, const c
 }
 
 // Range: 0x8024B1D8 -> 0x8024B370
-void WeatherManager::Draw(class WeatherManager * const this /* r29 */, class ERC * prc /* r30 */) {
+// this: r29
+void WeatherManager::Draw(class ERC * prc /* r30 */) {
     // Local variables
     float fChange; // f30
     float fNoise; // f0
@@ -239,7 +266,8 @@ void WeatherManager::Draw(class WeatherManager * const this /* r29 */, class ERC
 }
 
 // Range: 0x8024B370 -> 0x8024B480
-void WeatherManager::ChooseNewWeatherState(class WeatherManager * const this /* r31 */) {
+// this: r31
+void WeatherManager::ChooseNewWeatherState() {
     // Local variables
     signed short nCurrentYear; // r1+0x12
     signed short nCurrentMonth; // r1+0x10
@@ -257,7 +285,8 @@ void WeatherManager::ChooseNewWeatherState(class WeatherManager * const this /* 
 }
 
 // Range: 0x8024B480 -> 0x8024B620
-void WeatherManager::TriggerLightningEffect(class WeatherManager * const this /* r31 */) {
+// this: r31
+void WeatherManager::TriggerLightningEffect() {
     // Local variables
     float fIntensity; // f0
     char szRowName[64]; // r1+0x10
@@ -268,7 +297,8 @@ void WeatherManager::TriggerLightningEffect(class WeatherManager * const this /*
 }
 
 // Range: 0x8024B620 -> 0x8024B7C8
-void WeatherManager::TriggerEarthquakeEffect(class WeatherManager * const this /* r29 */) {
+// this: r29
+void WeatherManager::TriggerEarthquakeEffect() {
     // Local variables
     class BitFlags nWeatherFlags; // r1+0x8
     struct WeatherEvent weatherEvent; // r1+0x10
@@ -277,7 +307,8 @@ void WeatherManager::TriggerEarthquakeEffect(class WeatherManager * const this /
 }
 
 // Range: 0x8024B7C8 -> 0x8024B9DC
-void WeatherManager::SetTransitionVariables(class WeatherManager * const this /* r30 */, float fInterpolationFactor /* f31 */) {
+// this: r30
+void WeatherManager::SetTransitionVariables(float fInterpolationFactor /* f31 */) {
     // Local variables
     float fPreviousGloom; // f30
     enum RainLevel previousRainLevel; // r31
@@ -293,7 +324,8 @@ void WeatherManager::SetTransitionVariables(class WeatherManager * const this /*
 }
 
 // Range: 0x8024B9DC -> 0x8024BB10
-void WeatherManager::ChangeWind(class WeatherManager * const this /* r31 */) {
+// this: r31
+void WeatherManager::ChangeWind() {
     // Local variables
     float fDeltaSpeedRange; // f31
     float fDeltaSpeed; // f1
@@ -303,13 +335,15 @@ void WeatherManager::ChangeWind(class WeatherManager * const this /* r31 */) {
 }
 
 // Range: 0x8024BB10 -> 0x8024BBB0
-void WeatherManager::LoadWindyPlants(class WeatherManager * const this /* r31 */) {
+// this: r31
+void WeatherManager::LoadWindyPlants() {
     // References
     // -> class EAnimManager _animman;
 }
 
 // Range: 0x8024BBB0 -> 0x8024BD10
-void WeatherManager::UpdateWindyPlantAssetLoad(class WeatherManager * const this /* r29 */) {
+// this: r29
+void WeatherManager::UpdateWindyPlantAssetLoad() {
     // Local variables
     class ERLevel * pLevel; // r31
     class vector l; // r1+0x18
@@ -322,7 +356,8 @@ void WeatherManager::UpdateWindyPlantAssetLoad(class WeatherManager * const this
 }
 
 // Range: 0x8024BD10 -> 0x8024BE98
-void WeatherManager::StartWindyPlantAnimation(class WeatherManager * const this /* r27 */) {
+// this: r27
+void WeatherManager::StartWindyPlantAnimation() {
     // Local variables
     struct WindyPlantInfo * iter; // r29
     class EMidLotInstance * pMidLotInstance; // r28
@@ -331,7 +366,8 @@ void WeatherManager::StartWindyPlantAnimation(class WeatherManager * const this 
 }
 
 // Range: 0x8024BE98 -> 0x8024C02C
-void WeatherManager::ApplyGlobalDamage(class WeatherManager * const this /* r27 */) {
+// this: r27
+void WeatherManager::ApplyGlobalDamage() {
     // Local variables
     struct DamageEvent damage; // r1+0x8
     unsigned char bApplyDamage; // r29
@@ -344,7 +380,8 @@ void WeatherManager::ApplyGlobalDamage(class WeatherManager * const this /* r27 
 }
 
 // Range: 0x8024C02C -> 0x8024C6B0
-void WeatherManager::UpdateSunMoon(class WeatherManager * const this /* r30 */) {
+// this: r30
+void WeatherManager::UpdateSunMoon() {
     // Local variables
     const struct LightingSequence * pLightingSequence; // r31
     signed short nCurrentYear; // r1+0x12
@@ -387,7 +424,8 @@ void WeatherManager::UpdateSunMoon(class WeatherManager * const this /* r30 */) 
 }
 
 // Range: 0x8024C6B0 -> 0x8024C8E4
-void WeatherManager::CalculateSunData(class WeatherManager * const this /* r28 */, signed short nCurrentYear /* r29 */, signed short nCurrentMonth /* r30 */, signed short nCurrentDay /* r31 */) {
+// this: r28
+void WeatherManager::CalculateSunData(signed short nCurrentYear /* r29 */, signed short nCurrentMonth /* r30 */, signed short nCurrentDay /* r31 */) {
     // Local variables
     const struct MonthData * pNextMonthData; // r0
     float dt; // f3
@@ -412,7 +450,8 @@ void WeatherManager::CalculateSunData(class WeatherManager * const this /* r28 *
 }
 
 // Range: 0x8024C8E4 -> 0x8024CA00
-void WeatherManager::CalculateMoonData(class WeatherManager * const this /* r27 */, signed short nCurrentYear /* r28 */, signed short nCurrentMonth /* r29 */, signed short nCurrentDay /* r30 */) {
+// this: r27
+void WeatherManager::CalculateMoonData(signed short nCurrentYear /* r28 */, signed short nCurrentMonth /* r29 */, signed short nCurrentDay /* r30 */) {
     // Local variables
     float fMoonriseTime; // f2
     int nMoonriseSeconds; // r1+0x10

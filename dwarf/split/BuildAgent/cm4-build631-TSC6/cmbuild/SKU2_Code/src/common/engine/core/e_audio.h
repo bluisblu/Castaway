@@ -17,29 +17,18 @@ void EVoiceDesc::SetLeftVolume() {}
 void EVoiceDesc::SetPlaying() {}
 
 // Range: 0x80007D54 -> 0x80007D60
-void * EVoiceDesc::EVoiceDesc() {}
+EVoiceDesc::EVoiceDesc() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\common\engine\core\e_audio.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x8017A51C -> 0x8017A5BC
-*/
 // Range: 0x8017A51C -> 0x8017A5BC
-unsigned char EAudio::AdjustMusicVolume(class EAudio * const this /* r30 */, float fDelta /* f31 */) {
+// this: r30
+unsigned char EAudio::AdjustMusicVolume(float fDelta /* f31 */) {
     // Local variables
     unsigned char bClamped; // r31
     float vol; // f1
 }
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\common\engine\core\e_audio.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x80246EE8 -> 0x80246EF0
-*/
 // Range: 0x80246EE8 -> 0x80246EEC
 void EAudio::ResumeFX() {}
 

@@ -5,13 +5,14 @@
     Code range: 0x802715A4 -> 0x80271604
 */
 // Range: 0x802715A4 -> 0x802715B4
-void * ESyncObject::ESyncObject() {
+ESyncObject::ESyncObject() {
     // References
     // -> struct [anonymous] __vt__11ESyncObject;
 }
 
 // Range: 0x802715B4 -> 0x802715F4
-void * ESyncObject::~ESyncObject(class ESyncObject * const this /* r31 */) {}
+// this: r31
+ESyncObject::~ESyncObject() {}
 
 // Range: 0x802715F4 -> 0x80271604
 unsigned char ESyncObject::Release() {}

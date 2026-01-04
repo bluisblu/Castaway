@@ -5,19 +5,22 @@
     Code range: 0x8007715C -> 0x80078D54
 */
 // Range: 0x8007715C -> 0x800771B4
-void * FadeSquare::FadeSquare(class FadeSquare * const this /* r31 */) {
+// this: r31
+FadeSquare::FadeSquare() {
     // References
     // -> class EModelManager _modelman;
 }
 
 // Range: 0x800771B4 -> 0x80077230
-void * FadeSquare::~FadeSquare(class FadeSquare * const this /* r30 */) {
+// this: r30
+FadeSquare::~FadeSquare() {
     // References
     // -> class EModelManager _modelman;
 }
 
 // Range: 0x80077230 -> 0x8007727C
-void FadeSquare::StartDraw(class FadeSquare * const this /* r30 */, unsigned char initEfect /* r31 */) {}
+// this: r30
+void FadeSquare::StartDraw(unsigned char initEfect /* r31 */) {}
 
 // Range: 0x8007727C -> 0x80077288
 void FadeSquare::StartFade() {}
@@ -26,7 +29,8 @@ void FadeSquare::StartFade() {}
 void FadeSquare::StopDraw() {}
 
 // Range: 0x8007729C -> 0x80077344
-void FadeSquare::Update(class FadeSquare * const this /* r31 */, float elapsedTime /* f31 */) {
+// this: r31
+void FadeSquare::Update(float elapsedTime /* f31 */) {
     // References
     // -> class EModelManager _modelman;
 }
@@ -35,7 +39,8 @@ void FadeSquare::Update(class FadeSquare * const this /* r31 */, float elapsedTi
 unsigned char FadeSquare::ShouldDraw() {}
 
 // Range: 0x8007735C -> 0x8007752C
-void FadeSquare::Draw(class FadeSquare * const this /* r27 */, class ERC * pERC /* r28 */, class EVec3 & color /* r29 */) {
+// this: r27
+void FadeSquare::Draw(class ERC * pERC /* r28 */, class EVec3 & color /* r29 */) {
     // Local variables
     struct ELights lightList; // r1+0x60
     class ESimsCam * pCam; // r30
@@ -48,26 +53,31 @@ void FadeSquare::Draw(class FadeSquare * const this /* r27 */, class ERC * pERC 
 }
 
 // Range: 0x8007752C -> 0x8007760C
-void * SimInteractor::SimInteractor(class SimInteractor * const this /* r30 */) {
+// this: r30
+SimInteractor::SimInteractor() {
     // References
     // -> struct [anonymous] __vt__Q216InteractorModule13SimInteractor;
 }
 
 // Range: 0x8007760C -> 0x800776BC
-void * SimInteractor::~SimInteractor(class SimInteractor * const this /* r30 */) {
+// this: r30
+SimInteractor::~SimInteractor() {
     // References
     // -> class GameData _gd;
     // -> struct [anonymous] __vt__Q216InteractorModule13SimInteractor;
 }
 
 // Range: 0x800776BC -> 0x800776F4
-void SimInteractor::OnCreate(class SimInteractor * const this /* r31 */) {}
+// this: r31
+void SimInteractor::OnCreate() {}
 
 // Range: 0x800776F4 -> 0x8007772C
-void SimInteractor::OnDestroy(class SimInteractor * const this /* r31 */) {}
+// this: r31
+void SimInteractor::OnDestroy() {}
 
 // Range: 0x8007772C -> 0x800778C8
-void SimInteractor::OnStart(class SimInteractor * const this /* r31 */) {
+// this: r31
+void SimInteractor::OnStart() {
     // Local variables
     struct ButtonSemantic butSems[5]; // r1+0x40
     struct StickSemantic stickSems[4]; // r1+0x20
@@ -78,19 +88,22 @@ void SimInteractor::OnStart(class SimInteractor * const this /* r31 */) {
 }
 
 // Range: 0x800778C8 -> 0x8007792C
-void SimInteractor::OnStop(class SimInteractor * const this /* r31 */) {
+// this: r31
+void SimInteractor::OnStop() {
     // References
     // -> class EGlobal _globals;
 }
 
 // Range: 0x8007792C -> 0x800779D8
-void SimInteractor::ParseControls(class SimInteractor * const this /* r30 */) {
+// this: r30
+void SimInteractor::ParseControls() {
     // References
     // -> class NewControlParms s_newControlParms;
 }
 
 // Range: 0x800779D8 -> 0x8007812C
-void SimInteractor::Update(class SimInteractor * const this /* r30 */) {
+// this: r30
+void SimInteractor::Update() {
     // Local variables
     class EVec3 selectedSimPos; // r1+0x64
     const class cXPerson * pPerson; // r4
@@ -122,16 +135,20 @@ void SimInteractor::Update(class SimInteractor * const this /* r30 */) {
 float SimInteractor::GetBeamScale() {}
 
 // Range: 0x80078174 -> 0x80078194
-void SimInteractor::GetInteractorInfo(class SimInteractor * const this /* r5 */) {}
+// this: r5
+void SimInteractor::GetInteractorInfo() {}
 
 // Range: 0x80078194 -> 0x800781A4
-void SimInteractor::PreDraw(class SimInteractor * const this /* r0 */) {}
+// this: r0
+void SimInteractor::PreDraw() {}
 
 // Range: 0x800781A4 -> 0x800781B4
-void SimInteractor::Draw(class SimInteractor * const this /* r0 */) {}
+// this: r0
+void SimInteractor::Draw() {}
 
 // Range: 0x800781B4 -> 0x800782B8
-void SimInteractor::OnCommandRepeated(class SimInteractor * const this /* r29 */, enum InteractorCommand cmd /* r30 */) {
+// this: r29
+void SimInteractor::OnCommandRepeated(enum InteractorCommand cmd /* r30 */) {
     // Local variables
     class cXPerson * player; // r31
 
@@ -141,7 +158,8 @@ void SimInteractor::OnCommandRepeated(class SimInteractor * const this /* r29 */
 }
 
 // Range: 0x800782B8 -> 0x800785AC
-void SimInteractor::OnCommandPressed(class SimInteractor * const this /* r31 */, enum InteractorCommand cmd /* r28 */) {
+// this: r31
+void SimInteractor::OnCommandPressed(enum InteractorCommand cmd /* r28 */) {
     // Local variables
     class cXPerson * player; // r29
     struct InteractorParams params; // r1+0x14
@@ -165,10 +183,12 @@ void SimInteractor::OnCommandReleased() {
 void SimInteractor::OnCommandUpdate() {}
 
 // Range: 0x8007870C -> 0x80078744
-void SimInteractor::ResetInputState(class SimInteractor * const this /* r31 */) {}
+// this: r31
+void SimInteractor::ResetInputState() {}
 
 // Range: 0x80078744 -> 0x80078794
-void SimInteractor::ImmediatelyCutCursorAndCameraToPos(class SimInteractor * const this /* r30 */, const class EVec3 & pos /* r31 */) {}
+// this: r30
+void SimInteractor::ImmediatelyCutCursorAndCameraToPos(const class EVec3 & pos /* r31 */) {}
 
 // Range: 0x80078794 -> 0x800787B0
 void SimInteractor::ResetSnapTimer() {
@@ -177,13 +197,15 @@ void SimInteractor::ResetSnapTimer() {
 }
 
 // Range: 0x800787B0 -> 0x800787EC
-float SimInteractor::GetSelectionRadius(class SimInteractor * const this /* r31 */) {
+// this: r31
+float SimInteractor::GetSelectionRadius() {
     // Local variables
     float radius; // f1
 }
 
 // Range: 0x800787EC -> 0x800788E8
-void SimInteractor::UpdateOverlapIntersection(class SimInteractor * const this /* r30 */, struct OverlapData * pOverlapData /* r31 */) {
+// this: r30
+void SimInteractor::UpdateOverlapIntersection(struct OverlapData * pOverlapData /* r31 */) {
     // Local variables
     class EVec3 center; // r1+0x14
     class EVec3 delta; // r1+0x8
@@ -191,7 +213,8 @@ void SimInteractor::UpdateOverlapIntersection(class SimInteractor * const this /
 }
 
 // Range: 0x800788E8 -> 0x80078AB0
-void SimInteractor::ExecuteActionMenu(class SimInteractor * const this /* r28 */) {
+// this: r28
+void SimInteractor::ExecuteActionMenu() {
     // Local variables
     class TNodeList objList; // r1+0x8
     class ObjectSlot * os; // r31
@@ -213,7 +236,8 @@ void SimInteractor::ReturnPlumbobToSim() {}
 unsigned char SimInteractor::IsSimulatorPaused() {}
 
 // Range: 0x80078AF0 -> 0x80078CC8
-void SimInteractor::UpdateObjectHighlights(class SimInteractor * const this /* r29 */, class EIObjectMan * objMan /* r30 */) {
+// this: r29
+void SimInteractor::UpdateObjectHighlights(class EIObjectMan * objMan /* r30 */) {
     // Local variables
     class cXObject * pSelectedObject; // r31
     class ISimInstance * pSelectedInstance; // r0

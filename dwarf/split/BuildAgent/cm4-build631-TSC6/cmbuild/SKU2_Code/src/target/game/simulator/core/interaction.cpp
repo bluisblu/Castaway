@@ -5,22 +5,26 @@
     Code range: 0x8011A754 -> 0x8011B0F0
 */
 // Range: 0x8011A754 -> 0x8011A824
-class Interaction & Interaction::__as(class Interaction * const this /* r30 */, const class Interaction & interaction /* r31 */) {}
+// this: r30
+class Interaction & Interaction::operator=(const class Interaction & interaction /* r31 */) {}
 
 // Range: 0x8011A824 -> 0x8011A8AC
-void * Interaction::Interaction(class Interaction * const this /* r31 */) {
+// this: r31
+Interaction::Interaction() {
     // References
     // -> struct [anonymous] __vt__11Interaction;
 }
 
 // Range: 0x8011A8AC -> 0x8011A98C
-void * Interaction::Interaction(class Interaction * const this /* r27 */, const class Interaction & other /* r28 */) {
+// this: r27
+Interaction::Interaction(const class Interaction & other /* r28 */) {
     // References
     // -> struct [anonymous] __vt__11Interaction;
 }
 
 // Range: 0x8011A98C -> 0x8011AB68
-void * Interaction::Interaction(class Interaction * const this /* r28 */, class cXPerson * person /* r31 */, class cXPerson * personToJoin /* r29 */) {
+// this: r28
+Interaction::Interaction(class cXPerson * person /* r31 */, class cXPerson * personToJoin /* r29 */) {
     // Local variables
     const class Interaction & join; // r0
     const class ITreeTable * joinTreeTable; // r30
@@ -33,7 +37,8 @@ void * Interaction::Interaction(class Interaction * const this /* r28 */, class 
 }
 
 // Range: 0x8011AB68 -> 0x8011ACA8
-void * Interaction::Interaction(class Interaction * const this /* r27 */, class cXPerson * person /* r28 */, class cXObject * obj /* r29 */, int treeTabEntryIndex /* r30 */, int priority /* r31 */) {
+// this: r27
+Interaction::Interaction(class cXPerson * person /* r28 */, class cXObject * obj /* r29 */, int treeTabEntryIndex /* r30 */, int priority /* r31 */) {
     // Local variables
     const class ITreeTableEntry * entry; // r31
 
@@ -42,7 +47,8 @@ void * Interaction::Interaction(class Interaction * const this /* r27 */, class 
 }
 
 // Range: 0x8011ACA8 -> 0x8011AD24
-void * Interaction::~Interaction(class Interaction * const this /* r30 */) {
+// this: r30
+Interaction::~Interaction() {
     // References
     // -> struct [anonymous] __vt__11Interaction;
 }
@@ -51,13 +57,15 @@ void * Interaction::~Interaction(class Interaction * const this /* r30 */) {
 void Interaction::SetStackVars() {}
 
 // Range: 0x8011AD48 -> 0x8011ADE0
-void Interaction::SetLocalVars(class Interaction * const this /* r29 */, signed short * localVars /* r30 */, int numLocalVars /* r31 */) {
+// this: r29
+void Interaction::SetLocalVars(signed short * localVars /* r30 */, int numLocalVars /* r31 */) {
     // Local variables
     int i; // r5
 }
 
 // Range: 0x8011ADE0 -> 0x8011AE38
-class ITreeTableEntry * Interaction::GetEntry(const class Interaction * const this /* r31 */) {
+// this: r31
+class ITreeTableEntry * Interaction::GetEntry() const {
     // Local variables
     const class ITreeTable * ttab; // r0
 }
@@ -69,17 +77,20 @@ void Interaction::SetUniqueID() {
 }
 
 // Range: 0x8011AE4C -> 0x8011AEF0
-class BString2 & Interaction::GetName(const class Interaction * const this /* r30 */) {
+// this: r30
+class BString2 & Interaction::GetName() const {
     // Local variables
     const class ITreeTableEntry * entry; // r31
     class BString2 & name; // [invalid]
 }
 
 // Range: 0x8011AEF0 -> 0x8011AF28
-void Interaction::SetName(class Interaction * const this /* r31 */) {}
+// this: r31
+void Interaction::SetName() {}
 
 // Range: 0x8011AF28 -> 0x8011B068
-void Interaction::DoStream(class Interaction * const this /* r27 */, class ReconBuffer * r /* r28 */, int version /* r29 */) {
+// this: r27
+void Interaction::DoStream(class ReconBuffer * r /* r28 */, int version /* r29 */) {
     // Local variables
     class ObjectModule * om; // r31
     unsigned char isJoin; // r30

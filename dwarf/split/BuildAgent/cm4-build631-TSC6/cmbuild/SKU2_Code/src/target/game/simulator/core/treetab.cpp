@@ -16,32 +16,39 @@ float CalculateAttenuationValue() {
 }
 
 // Range: 0x800E61E0 -> 0x800E623C
-class TreeTableEntry * TreeTable::GetNthEntry(const class TreeTable * const this /* r30 */, int index /* r31 */) {}
+// this: r30
+class TreeTableEntry * TreeTable::GetNthEntry(int index /* r31 */) const {}
 
 // Range: 0x800E623C -> 0x800E6250
-float TreeTableEntry::GetAttenuationValue(const class TreeTableEntry * const this /* r5 */) {}
+// this: r5
+float TreeTableEntry::GetAttenuationValue() const {}
 
 // Range: 0x800E6250 -> 0x800E62D8
-void * TTabScratchEntry::TTabScratchEntry(class TTabScratchEntry * const this /* r31 */) {
+// this: r31
+TTabScratchEntry::TTabScratchEntry() {
     // References
     // -> struct [anonymous] __vt__16TTabScratchEntry;
 }
 
 // Range: 0x800E62D8 -> 0x800E6340
-void * TTabScratchEntry::~TTabScratchEntry(class TTabScratchEntry * const this /* r30 */) {}
+// this: r30
+TTabScratchEntry::~TTabScratchEntry() {}
 
 // Range: 0x800E6340 -> 0x800E64C0
-void TTabScratchEntry::CopyFrom(class TTabScratchEntry * const this /* r28 */, const class ITreeTableEntry * other /* r29 */) {
+// this: r28
+void TTabScratchEntry::CopyFrom(const class ITreeTableEntry * other /* r29 */) {
     // Local variables
     int adsToCopy; // r31
     int i; // r30
 }
 
 // Range: 0x800E64C0 -> 0x800E64D4
-float TTabScratchEntry::GetAttenuationValue(const class TTabScratchEntry * const this /* r5 */) {}
+// this: r5
+float TTabScratchEntry::GetAttenuationValue() const {}
 
 // Range: 0x800E64D4 -> 0x800E6574
-unsigned char TreeTableAdScratch::QueryInterface(class TreeTableAdScratch * const this /* r30 */, void * ppvObject /* r31 */) {}
+// this: r30
+unsigned char TreeTableAdScratch::QueryInterface(void * ppvObject /* r31 */) {}
 
 // Range: 0x800E6574 -> 0x800E6588
 unsigned int TreeTableAdScratch::AddRef() {}
@@ -50,7 +57,8 @@ unsigned int TreeTableAdScratch::AddRef() {}
 unsigned int TreeTableAdScratch::Release() {}
 
 // Range: 0x800E65DC -> 0x800E667C
-unsigned char TTabScratchEntry::QueryInterface(class TTabScratchEntry * const this /* r30 */, void * ppvObject /* r31 */) {}
+// this: r30
+unsigned char TTabScratchEntry::QueryInterface(void * ppvObject /* r31 */) {}
 
 // Range: 0x800E667C -> 0x800E6690
 unsigned int TTabScratchEntry::AddRef() {}
@@ -59,13 +67,15 @@ unsigned int TTabScratchEntry::AddRef() {}
 unsigned int TTabScratchEntry::Release() {}
 
 // Range: 0x800E66E4 -> 0x800E6774
-int TreeTable::GetIndexOfResource(const class TreeTable * const this /* r29 */, signed short resID /* r30 */) {
+// this: r29
+int TreeTable::GetIndexOfResource(signed short resID /* r30 */) const {
     // Local variables
     const class TreeTableEntry * pEntry; // r0
 }
 
 // Range: 0x800E6774 -> 0x800E67FC
-int TreeTable::GetIndexByTreeID(const class TreeTable * const this /* r27 */, signed short checkTreeID /* r28 */, signed short actionTreeID /* r29 */) {
+// this: r27
+int TreeTable::GetIndexByTreeID(signed short checkTreeID /* r28 */, signed short actionTreeID /* r29 */) const {
     // Local variables
     int iNumEntries; // r0
     signed short cnt; // r30
@@ -73,7 +83,8 @@ int TreeTable::GetIndexByTreeID(const class TreeTable * const this /* r27 */, si
 }
 
 // Range: 0x800E67FC -> 0x800E685C
-int TreeTable::GetIndexOfNthOrderedEntry(const class TreeTable * const this /* r30 */, int num /* r31 */) {
+// this: r30
+int TreeTable::GetIndexOfNthOrderedEntry(int num /* r31 */) const {
     // Local variables
     int iNumEntries; // r0
     const class TreeTableEntry * srch; // r0

@@ -23,7 +23,8 @@ struct NPC * cXPerson::GetServiceNPC() {}
 unsigned char cXPerson::IsChimp() {}
 
 // Range: 0x80016904 -> 0x80016960
-unsigned char cXPerson::IsIdling(const class cXPerson * const this /* r30 */) {}
+// this: r30
+unsigned char cXPerson::IsIdling() const {}
 
 // Range: 0x80016960 -> 0x80016968
 signed short cXPerson::GetIdleState() {}
@@ -35,7 +36,8 @@ unsigned short cXPerson::GetCurrentRoom() {}
 int cXPerson::GetRouteStackSize() {}
 
 // Range: 0x800169CC -> 0x80016A18
-unsigned char cXPerson::IsGhost(class cXPerson * const this /* r31 */) {}
+// this: r31
+unsigned char cXPerson::IsGhost() {}
 
 // Range: 0x80016A18 -> 0x80016A20
 class Neighbor * cXPerson::GetNeighbor() {}
@@ -44,10 +46,12 @@ class Neighbor * cXPerson::GetNeighbor() {}
 unsigned char cXPerson::IsCarrying() {}
 
 // Range: 0x80016A58 -> 0x80016AA4
-unsigned char cXPerson::IsInvisible(class cXPerson * const this /* r31 */) {}
+// this: r31
+unsigned char cXPerson::IsInvisible() {}
 
 // Range: 0x80016AA4 -> 0x80016AF8
-int cXPerson::CountActions(class cXPerson * const this /* r30 */, unsigned char bIncludeCurrent /* r31 */) {
+// this: r30
+int cXPerson::CountActions(unsigned char bIncludeCurrent /* r31 */) {
     // Local variables
     unsigned int count; // r3
 }
@@ -56,7 +60,8 @@ int cXPerson::CountActions(class cXPerson * const this /* r30 */, unsigned char 
 unsigned int ActionQueue::Count() {}
 
 // Range: 0x80016AFC -> 0x80016B48
-unsigned char cXPerson::IsInMotiveFailure(class cXPerson * const this /* r31 */) {}
+// this: r31
+unsigned char cXPerson::IsInMotiveFailure() {}
 
 // Range: 0x80016B48 -> 0x80016B50
 class SAnimator2 * cXPerson::GetSAnimator() {}
@@ -68,12 +73,6 @@ unsigned char cXPerson::IsRouting() {}
 void cXPerson::SetRainCarry() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\target\game\simulator\core\person.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x800A6CEC -> 0x800A6DCC
-*/
 // Range: 0x800A6CEC -> 0x800A6D20
 unsigned char cXPerson::IsVisitor() {}
 
@@ -129,12 +128,6 @@ void cXPerson::ResetNumRoutedThisFrame() {
 void cXPerson::SetIgnoringObject() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\target\game\simulator\core\person.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x800FC2B4 -> 0x800FC2EC
-*/
 // Range: 0x800FC2B4 -> 0x800FC2BC
 int cXPerson::GetRainCarry() {}
 
@@ -157,13 +150,8 @@ unsigned char ActionQueue::Peek() {}
 signed short * cXPerson::GetPersonDataArray() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\target\game\simulator\core\person.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x80206250 -> 0x8020629C
-*/
 // Range: 0x80206250 -> 0x8020629C
-unsigned char cXPerson::IsGreen(class cXPerson * const this /* r31 */) {}
+// this: r31
+unsigned char cXPerson::IsGreen() {}
 
 

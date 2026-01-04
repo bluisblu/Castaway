@@ -5,22 +5,26 @@
     Code range: 0x800A088C -> 0x800A0F28
 */
 // Range: 0x800A088C -> 0x800A08CC
-void * CTGFile::~CTGFile(class CTGFile * const this /* r31 */) {}
+// this: r31
+CTGFile::~CTGFile() {}
 
 // Range: 0x800A08CC -> 0x800A0918
-void * CTGFileImpl::CTGFileImpl(class CTGFileImpl * const this /* r31 */) {
+// this: r31
+CTGFileImpl::CTGFileImpl() {
     // References
     // -> struct [anonymous] __vt__11CTGFileImpl;
 }
 
 // Range: 0x800A0918 -> 0x800A09B0
-void * CTGFileImpl::~CTGFileImpl(class CTGFileImpl * const this /* r30 */) {
+// this: r30
+CTGFileImpl::~CTGFileImpl() {
     // References
     // -> struct [anonymous] __vt__11CTGFileImpl;
 }
 
 // Range: 0x800A09B0 -> 0x800A0A24
-int CTGFileImpl::GetSize(class CTGFileImpl * const this /* r29 */) {
+// this: r29
+int CTGFileImpl::GetSize() {
     // Local variables
     int oldPos; // r31
     int size; // r30
@@ -78,7 +82,8 @@ unsigned char CTGFileImpl::ReadFloat() {}
 unsigned char CTGFileImpl::WriteFloat(float f /* r1+0x8 */) {}
 
 // Range: 0x800A0C10 -> 0x800A0CD0
-unsigned char CTGFileImpl::ReadString(class CTGFileImpl * const this /* r30 */, char * buf /* r31 */) {
+// this: r30
+unsigned char CTGFileImpl::ReadString(char * buf /* r31 */) {
     // Local variables
     unsigned char bytelen; // r1+0x8
     int len; // r1+0xC
@@ -86,17 +91,19 @@ unsigned char CTGFileImpl::ReadString(class CTGFileImpl * const this /* r30 */, 
 }
 
 // Range: 0x800A0CD0 -> 0x800A0DB4
-unsigned char CTGFileImpl::WriteString(class CTGFileImpl * const this /* r29 */, const char * buf /* r30 */) {
+// this: r29
+unsigned char CTGFileImpl::WriteString(const char * buf /* r30 */) {
     // Local variables
     int len; // r31
     unsigned char good; // r0
 }
 
 // Range: 0x800A0DB4 -> 0x800A0DB8
-void * CTGFileManager::CTGFileManager() {}
+CTGFileManager::CTGFileManager() {}
 
 // Range: 0x800A0DB8 -> 0x800A0DF8
-void * CTGFileManager::~CTGFileManager(class CTGFileManager * const this /* r31 */) {}
+// this: r31
+CTGFileManager::~CTGFileManager() {}
 
 // Range: 0x800A0DF8 -> 0x800A0EA0
 class CTGFile * CTGFileManager::OpenFile(const char * name /* r31 */, unsigned char bWritable /* r30 */) {

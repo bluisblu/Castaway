@@ -5,7 +5,8 @@
     Code range: 0x8025F468 -> 0x8025F6C8
 */
 // Range: 0x8025F468 -> 0x8025F6C8
-class EBoundSphere & EBoundSphere::Combine(class EBoundSphere * const this /* r29 */, const class EBoundSphere & bs1 /* r30 */, const class EBoundSphere & bs2 /* r31 */) {
+// this: r29
+class EBoundSphere & EBoundSphere::Combine(const class EBoundSphere & bs1 /* r30 */, const class EBoundSphere & bs2 /* r31 */) {
     // Local variables
     class EVec3 vDir; // r1+0x68
     float magDir; // f0

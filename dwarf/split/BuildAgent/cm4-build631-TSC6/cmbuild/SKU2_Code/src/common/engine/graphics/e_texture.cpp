@@ -5,13 +5,14 @@
     Code range: 0x802A1AC4 -> 0x802A1C0C
 */
 // Range: 0x802A1AC4 -> 0x802A1B20
-void * ETexture::ETexture() {
+ETexture::ETexture() {
     // References
     // -> struct [anonymous] __vt__8ETexture;
 }
 
 // Range: 0x802A1B20 -> 0x802A1B78
-void * ETexture::~ETexture(class ETexture * const this /* r31 */) {
+// this: r31
+ETexture::~ETexture() {
     // References
     // -> class ETextureManager _textureman;
 }

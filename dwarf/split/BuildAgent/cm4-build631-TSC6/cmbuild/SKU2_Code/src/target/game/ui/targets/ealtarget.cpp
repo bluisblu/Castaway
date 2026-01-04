@@ -5,7 +5,8 @@
     Code range: 0x801E4254 -> 0x801E4820
 */
 // Range: 0x801E4254 -> 0x801E4410
-void * EALTarget::EALTarget(class EALTarget * const this /* r30 */) {
+// this: r30
+EALTarget::EALTarget() {
     // References
     // -> class EGlobal _globals;
     // -> const char * const ING_SndCancel;
@@ -21,14 +22,16 @@ void * EALTarget::EALTarget(class EALTarget * const this /* r30 */) {
 }
 
 // Range: 0x801E4410 -> 0x801E44A0
-void * EALTarget::~EALTarget(class EALTarget * const this /* r30 */) {
+// this: r30
+EALTarget::~EALTarget() {
     // References
     // -> class EGlobal _globals;
     // -> struct [anonymous] __vt__9EALTarget;
 }
 
 // Range: 0x801E44A0 -> 0x801E4570
-void EALTarget::SetVariable(class EALTarget * const this /* r30 */, const char * zVarName /* r31 */) {
+// this: r30
+void EALTarget::SetVariable(const char * zVarName /* r31 */) {
     // References
     // -> static const char * const EAL_square;
     // -> static const char * const EAL_cancel;
@@ -39,7 +42,8 @@ void EALTarget::SetVariable(class EALTarget * const this /* r30 */, const char *
 }
 
 // Range: 0x801E4570 -> 0x801E45F8
-char * EALTarget::GetVariable(class EALTarget * const this /* r29 */, const char * zVarName /* r30 */) {
+// this: r29
+char * EALTarget::GetVariable(const char * zVarName /* r30 */) {
     // Local variables
     char * pResultString; // r31
 
@@ -60,7 +64,8 @@ void EALTarget::Update() {}
 unsigned char EALTarget::IsDone() {}
 
 // Range: 0x801E4630 -> 0x801E4820
-void EALTarget::InstallCurrentLanguageLogoShader(class EALTarget * const this /* r31 */) {
+// this: r31
+void EALTarget::InstallCurrentLanguageLogoShader() {
     // References
     // -> class EQuickdataManager _quickdataman;
 }

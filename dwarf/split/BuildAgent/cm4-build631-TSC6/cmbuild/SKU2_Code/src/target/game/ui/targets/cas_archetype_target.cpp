@@ -5,7 +5,8 @@
     Code range: 0x80199C80 -> 0x8019AA48
 */
 // Range: 0x80199C80 -> 0x8019A028
-void * CASArchetypeTarget::CASArchetypeTarget(class CASArchetypeTarget * const this /* r28 */, class CasMediator & mediator /* r29 */) {
+// this: r28
+CASArchetypeTarget::CASArchetypeTarget(class CasMediator & mediator /* r29 */) {
     // References
     // -> class EControllerManager * _pCtrlMan;
     // -> class EGlobal _globals;
@@ -13,7 +14,8 @@ void * CASArchetypeTarget::CASArchetypeTarget(class CASArchetypeTarget * const t
 }
 
 // Range: 0x8019A028 -> 0x8019A124
-void * CASArchetypeTarget::~CASArchetypeTarget(class CASArchetypeTarget * const this /* r29 */) {
+// this: r29
+CASArchetypeTarget::~CASArchetypeTarget() {
     // References
     // -> class EControllerManager * _pCtrlMan;
     // -> class EGlobal _globals;
@@ -21,20 +23,23 @@ void * CASArchetypeTarget::~CASArchetypeTarget(class CASArchetypeTarget * const 
 }
 
 // Range: 0x8019A124 -> 0x8019A2C0
-void CASArchetypeTarget::SetVariable(class CASArchetypeTarget * const this /* r28 */, const char * szCommand /* r29 */, const char * szParams /* r30 */) {
+// this: r28
+void CASArchetypeTarget::SetVariable(const char * szCommand /* r29 */, const char * szParams /* r30 */) {
     // References
     // -> class EGlobal _globals;
 }
 
 // Range: 0x8019A2C0 -> 0x8019A38C
-char * CASArchetypeTarget::GetVariable(class CASArchetypeTarget * const this /* r29 */, const char * szVar /* r30 */) {
+// this: r29
+char * CASArchetypeTarget::GetVariable(const char * szVar /* r30 */) {
     // Local variables
     char * retStr; // r31
     class CasSimDescription * pSimDesc; // r0
 }
 
 // Range: 0x8019A38C -> 0x8019A4D0
-unsigned short * CASArchetypeTarget::GetLocalizable(class CASArchetypeTarget * const this /* r29 */, const char * szVar /* r30 */) {
+// this: r29
+unsigned short * CASArchetypeTarget::GetLocalizable(const char * szVar /* r30 */) {
     // Local variables
     unsigned short widestring[4096]; // r1+0x10
     unsigned short * pResultString; // r31
@@ -56,7 +61,8 @@ void CASArchetypeTarget::ParseNameText(enum eArchetype archetype /* r29 */, unsi
 }
 
 // Range: 0x8019A9C8 -> 0x8019AA48
-void CASArchetypeTarget::Update(class CASArchetypeTarget * const this /* r31 */) {
+// this: r31
+void CASArchetypeTarget::Update() {
     // Local variables
     class EVec2 dummy; // r1+0x8
 

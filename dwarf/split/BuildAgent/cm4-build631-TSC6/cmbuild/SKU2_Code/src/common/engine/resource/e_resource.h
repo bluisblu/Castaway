@@ -8,12 +8,6 @@
 unsigned int EResource::GetResId() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\common\engine\resource\e_resource.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x8002FE64 -> 0x8002FE90
-*/
 // Range: 0x8002FE64 -> 0x8002FE74
 void EResource::SetResSize() {}
 
@@ -24,22 +18,10 @@ char * EResource::GetResName() {}
 unsigned char EResource::IsManaged() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\common\engine\resource\e_resource.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x80080D5C -> 0x80080D64
-*/
 // Range: 0x80080D5C -> 0x80080D64
 void EResource::SetResId() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\common\engine\resource\e_resource.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x8008888C -> 0x800888A8
-*/
 // Range: 0x8008888C -> 0x80088894
 unsigned char EResource::IsSafeToDelete() {}
 
@@ -56,32 +38,14 @@ unsigned char EResource::TryIncrementSubResources() {}
 void EResource::DetachClone() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\common\engine\resource\e_resource.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x800A45D4 -> 0x800A45DC
-*/
 // Range: 0x800A45D4 -> 0x800A45DC
 int EResource::GetNumRefs() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\common\engine\resource\e_resource.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x80217980 -> 0x8021798C
-*/
 // Range: 0x80217980 -> 0x8021798C
 unsigned int EResource::GetResSize() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\common\engine\resource\e_resource.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x802ADF50 -> 0x802ADFB4
-*/
 // Range: 0x802ADF50 -> 0x802ADF54
 void EResource::Init() {}
 
@@ -116,12 +80,6 @@ unsigned short EResource::GetTypeVersion() {
 }
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\common\engine\resource\e_resource.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x802DBEC0 -> 0x802DBFA0
-*/
 // Range: 0x802DBEC0 -> 0x802DBEF0
 void EResource::Destruct() {
     // References

@@ -5,19 +5,23 @@
     Code range: 0x802AE4DC -> 0x802AE924
 */
 // Range: 0x802AE4DC -> 0x802AE52C
-void * FreeResourceManager::FreeResourceManager(class FreeResourceManager * const this /* r30 */, class EThreadMutex * resMutex /* r31 */) {}
+// this: r30
+FreeResourceManager::FreeResourceManager(class EThreadMutex * resMutex /* r31 */) {}
 
 // Range: 0x802AE52C -> 0x802AE630
-void FreeResourceManager::AddItem(class FreeResourceManager * const this /* r30 */, class EResource * res /* r31 */) {}
+// this: r30
+void FreeResourceManager::AddItem(class EResource * res /* r31 */) {}
 
 // Range: 0x802AE630 -> 0x802AE714
-unsigned char FreeResourceManager::RemoveItem(class FreeResourceManager * const this /* r30 */, class EResource * res /* r31 */) {
+// this: r30
+unsigned char FreeResourceManager::RemoveItem(class EResource * res /* r31 */) {
     // Local variables
     int i; // r5
 }
 
 // Range: 0x802AE714 -> 0x802AE910
-unsigned int FreeResourceManager::MakeSpaceExceptInThisHeap(class FreeResourceManager * const this /* r29 */, class EAHeap * myHeap /* r30 */, int max /* r24 */) {
+// this: r29
+unsigned int FreeResourceManager::MakeSpaceExceptInThisHeap(class EAHeap * myHeap /* r30 */, int max /* r24 */) {
     // Local variables
     int n; // r31
     class EResource * delList[256]; // r1+0x8

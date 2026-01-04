@@ -5,7 +5,8 @@
     Code range: 0x801C13D4 -> 0x801C2060
 */
 // Range: 0x801C13D4 -> 0x801C1700
-void * RMDTarget::RMDTarget(class RMDTarget * const this /* r30 */, int type /* r26 */, int goalIndex /* r27 */) {
+// this: r30
+RMDTarget::RMDTarget(int type /* r26 */, int goalIndex /* r27 */) {
     // Local variables
     unsigned int typeId; // r0
 
@@ -33,7 +34,8 @@ void * RMDTarget::RMDTarget(class RMDTarget * const this /* r30 */, int type /* 
 }
 
 // Range: 0x801C1700 -> 0x801C17F4
-void * RMDTarget::~RMDTarget(class RMDTarget * const this /* r30 */) {
+// this: r30
+RMDTarget::~RMDTarget() {
     // References
     // -> class EGlobal _globals;
     // -> static const char * const RMD_model;
@@ -41,7 +43,8 @@ void * RMDTarget::~RMDTarget(class RMDTarget * const this /* r30 */) {
 }
 
 // Range: 0x801C17F4 -> 0x801C192C
-void RMDTarget::SetVariable(class RMDTarget * const this /* r29 */, const char * szCommand /* r30 */) {
+// this: r29
+void RMDTarget::SetVariable(const char * szCommand /* r30 */) {
     // Local variables
     class UIReflow reflow; // r1+0x20
     class UIReflow reflow; // r1+0x8
@@ -53,7 +56,8 @@ void RMDTarget::SetVariable(class RMDTarget * const this /* r29 */, const char *
 }
 
 // Range: 0x801C192C -> 0x801C19B0
-char * RMDTarget::GetVariable(class RMDTarget * const this /* r29 */, const char * szVar /* r30 */) {
+// this: r29
+char * RMDTarget::GetVariable(const char * szVar /* r30 */) {
     // Local variables
     char * retStr; // r31
 
@@ -62,7 +66,8 @@ char * RMDTarget::GetVariable(class RMDTarget * const this /* r29 */, const char
 }
 
 // Range: 0x801C19B0 -> 0x801C1A98
-unsigned short * RMDTarget::GetLocalizable(class RMDTarget * const this /* r29 */, const char * szVar /* r30 */) {
+// this: r29
+unsigned short * RMDTarget::GetLocalizable(const char * szVar /* r30 */) {
     // Local variables
     unsigned short * wideStr; // r31
     unsigned short * outString; // r30
@@ -79,7 +84,8 @@ void RMDTarget::Update() {
 }
 
 // Range: 0x801C1AF4 -> 0x801C1E4C
-void RMDTarget::SetupWidgets(class RMDTarget * const this /* r29 */) {
+// this: r29
+void RMDTarget::SetupWidgets() {
     // Local variables
     class EVec2 strSize; // r1+0x28
     class UIReflow reflow; // r1+0x40
@@ -93,7 +99,8 @@ void RMDTarget::SetupWidgets(class RMDTarget * const this /* r29 */) {
 }
 
 // Range: 0x801C1E4C -> 0x801C1EFC
-void RMDTarget::UnloadDialog(class RMDTarget * const this /* r31 */) {
+// this: r31
+void RMDTarget::UnloadDialog() {
     // References
     // -> class GameData _gd;
     // -> class EGlobal _globals;

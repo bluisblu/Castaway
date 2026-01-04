@@ -20,6 +20,7 @@ void LevelLightingTuning::ProcessMoonYawOffsetOverride() {}
 void LevelLightingTuning::ProcessSunYawOffsetOverride() {}
 
 // Range: 0x8009609C -> 0x800960DC
-void * LevelLightingTuning::~LevelLightingTuning(class LevelLightingTuning * const this /* r31 */) {}
+// this: r31
+LevelLightingTuning::~LevelLightingTuning() {}
 
 

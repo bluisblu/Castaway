@@ -45,7 +45,8 @@ void EQuat::FromMat4() {
 }
 
 // Range: 0x80268D58 -> 0x80268E48
-float EQuat::ExtractAxisRotation(const class EQuat * const this /* r30 */, const class EVec3 & vAxis /* r31 */) {
+// this: r30
+float EQuat::ExtractAxisRotation(const class EVec3 & vAxis /* r31 */) const {
     // Local variables
     class EVec3 vRotAxis; // r1+0x8
     float rotAngle; // f30
@@ -53,7 +54,8 @@ float EQuat::ExtractAxisRotation(const class EQuat * const this /* r30 */, const
 }
 
 // Range: 0x80268E48 -> 0x80268F90
-class EQuat & EQuat::SetEuler(class EQuat * const this /* r31 */, float rotX /* f28 */, float rotY /* f27 */, float rotZ /* f26 */) {
+// this: r31
+class EQuat & EQuat::SetEuler(float rotX /* f28 */, float rotY /* f27 */, float rotZ /* f26 */) {
     // Local variables
     float sinAngleX; // f0
     float cosAngleX; // f0
@@ -64,7 +66,8 @@ class EQuat & EQuat::SetEuler(class EQuat * const this /* r31 */, float rotX /* 
 }
 
 // Range: 0x80268F90 -> 0x802691EC
-class EQuat & EQuat::Set(class EQuat * const this /* r31 */, float rotY /* f27 */, float rotZ /* f26 */) {
+// this: r31
+class EQuat & EQuat::Set(float rotY /* f27 */, float rotZ /* f26 */) {
     // Local variables
     class EQuat qRotX; // r1+0x70
     class EQuat qRotY; // r1+0x60
@@ -72,7 +75,8 @@ class EQuat & EQuat::Set(class EQuat * const this /* r31 */, float rotY /* f27 *
 }
 
 // Range: 0x802691EC -> 0x80269570
-class EQuat & EQuat::Slerp(class EQuat * const this /* r31 */, float u /* f30 */, const class EQuat & qA /* r29 */, class EQuat & qB /* r30 */) {
+// this: r31
+class EQuat & EQuat::Slerp(float u /* f30 */, const class EQuat & qA /* r29 */, class EQuat & qB /* r30 */) {
     // Local variables
     float dot; // f5
     float theta; // f0
@@ -81,13 +85,15 @@ class EQuat & EQuat::Slerp(class EQuat * const this /* r31 */, float u /* f30 */
 }
 
 // Range: 0x80269570 -> 0x80269900
-class EQuat & EQuat::Scale(class EQuat * const this /* r30 */, float u /* f31 */, const class EQuat & q /* r31 */) {
+// this: r30
+class EQuat & EQuat::Scale(float u /* f31 */, const class EQuat & q /* r31 */) {
     // Local variables
     class EQuat qId; // r1+0x78
 }
 
 // Range: 0x80269900 -> 0x802699A4
-class EQuat & EQuat::Set(class EQuat * const this /* r30 */, const class EVec3 & vAxis /* r31 */, float angle /* f30 */) {
+// this: r30
+class EQuat & EQuat::Set(const class EVec3 & vAxis /* r31 */, float angle /* f30 */) {
     // Local variables
     float sinAngle; // f0
     float cosAngle; // f0

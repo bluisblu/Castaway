@@ -20,12 +20,6 @@ class CAFTarget * CasMediator::GetCAFTarget() {}
 class CasScene * CasMediator::GetScene() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\target\game\cas\casmediator.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x8018E3A8 -> 0x8018E3D8
-*/
 // Range: 0x8018E3A8 -> 0x8018E3B0
 int CasMediator::GetCasMode() {}
 

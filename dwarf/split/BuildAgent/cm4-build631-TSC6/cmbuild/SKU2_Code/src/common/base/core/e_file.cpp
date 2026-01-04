@@ -5,13 +5,14 @@
     Code range: 0x80260274 -> 0x802609B8
 */
 // Range: 0x80260274 -> 0x802602B4
-void * EFile::EFile() {
+EFile::EFile() {
     // References
     // -> struct [anonymous] __vt__5EFile;
 }
 
 // Range: 0x802602B4 -> 0x80260338
-void * EFile::~EFile(class EFile * const this /* r30 */) {
+// this: r30
+EFile::~EFile() {
     // References
     // -> struct [anonymous] __vt__5EFile;
 }
@@ -26,7 +27,8 @@ void SplitPath(const char * path /* r27 */, char * drive /* r24 */, char * dir /
 }
 
 // Range: 0x80260524 -> 0x80260650
-void EFile::SetName(class EFile * const this /* r30 */) {
+// this: r30
+void EFile::SetName() {
     // Local variables
     char drive[3]; // r1+0x8
     char path[256]; // r1+0x210
@@ -36,7 +38,8 @@ void EFile::SetName(class EFile * const this /* r30 */) {
 }
 
 // Range: 0x80260650 -> 0x802607D8
-class EStorable * EFile::ReadStructure(class EFile * const this /* r27 */, unsigned int nObjects /* r28 */) {
+// this: r27
+class EStorable * EFile::ReadStructure(unsigned int nObjects /* r28 */) {
     // Local variables
     unsigned int pos; // r29
     unsigned int key; // r1+0x14
@@ -50,21 +53,21 @@ class EStorable * EFile::ReadStructure(class EFile * const this /* r27 */, unsig
 }
 
 // Range: 0x802607D8 -> 0x80260880
-class EFile & __rs(class EFile & f /* r27 */, class EString & s /* r28 */) {
+class EFile & operator>>(class EFile & f /* r27 */, class EString & s /* r28 */) {
     // Local variables
     char buffer[64]; // r1+0x8
     int pos; // r29
 }
 
 // Range: 0x80260880 -> 0x80260920
-class EFile & __rs(class EFile & s /* r29 */, class EStorable & d /* r30 */) {
+class EFile & operator>>(class EFile & s /* r29 */, class EStorable & d /* r30 */) {
     // Local variables
     class ETypeInfo * pType; // r31
     unsigned short typeVersion; // r1+0x8
 }
 
 // Range: 0x80260920 -> 0x802609B8
-class EFile & __rs(class EFile & s /* r30 */, class EStorable * & pD /* r31 */) {
+class EFile & operator>>(class EFile & s /* r30 */, class EStorable * & pD /* r31 */) {
     // Local variables
     unsigned int index; // r1+0x8
 }

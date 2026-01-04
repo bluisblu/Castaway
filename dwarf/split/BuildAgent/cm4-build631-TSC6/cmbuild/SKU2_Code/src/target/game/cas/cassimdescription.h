@@ -5,15 +5,10 @@
     Code range: 0x80018EFC -> 0x8001900C
 */
 // Range: 0x80018EFC -> 0x8001900C
-void * CasSimDescription::~CasSimDescription(class CasSimDescription * const this /* r30 */) {}
+// this: r30
+CasSimDescription::~CasSimDescription() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\target\game\cas\cassimdescription.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x8002E9EC -> 0x8002EAD8
-*/
 // Range: 0x8002E9EC -> 0x8002E9F4
 unsigned char CasSimDescription::GetFlag() {}
 

@@ -5,44 +5,51 @@
     Code range: 0x802A89C8 -> 0x802AB590
 */
 // Range: 0x802A89C8 -> 0x802A8A5C
-void * EResourceManager::EResourceManager(class EResourceManager * const this /* r30 */) {
+// this: r30
+EResourceManager::EResourceManager() {
     // References
     // -> struct [anonymous] __vt__16EResourceManager;
 }
 
 // Range: 0x802A8A5C -> 0x802A8B34
-void * EResourceManager::~EResourceManager(class EResourceManager * const this /* r30 */) {
+// this: r30
+EResourceManager::~EResourceManager() {
     // References
     // -> struct [anonymous] __vt__16EResourceManager;
 }
 
 // Range: 0x802A8B34 -> 0x802A8B9C
-void EResourceManager::Shutdown(class EResourceManager * const this /* r31 */) {
+// this: r31
+void EResourceManager::Shutdown() {
     // References
     // -> class EResourceLoader * _pResLoader;
 }
 
 // Range: 0x802A8B9C -> 0x802A9098
-void EResourceManager::Init(class EResourceManager * const this /* r31 */) {
+// this: r31
+void EResourceManager::Init() {
     // References
     // -> class EResourceLoader * _pResLoader;
 }
 
 // Range: 0x802A9098 -> 0x802A9170
-void EResourceManager::CalcPath(class EResourceManager * const this /* r31 */) {
+// this: r31
+void EResourceManager::CalcPath() {
     // Local variables
     class EString m_pathPrefix; // r1+0x14
 }
 
 // Range: 0x802A9170 -> 0x802A9294
-class EFile * EResourceManager::GetArchiveFile(class EResourceManager * const this /* r27 */) {
+// this: r27
+class EFile * EResourceManager::GetArchiveFile() {
     // References
     // -> class HDDThread g_hddThread;
     // -> class ENgcFileSystem _eorFileSys;
 }
 
 // Range: 0x802A9294 -> 0x802A9314
-void EResourceManager::CloseArchiveFile(class EResourceManager * const this /* r31 */) {
+// this: r31
+void EResourceManager::CloseArchiveFile() {
     // Local variables
     class EFile * pArchiveFile; // r1+0x8
 
@@ -59,10 +66,12 @@ int EResourceManager::BinarySearch() {
 }
 
 // Range: 0x802A9388 -> 0x802A9470
-unsigned char EResourceManager::LookupId(class EResourceManager * const this /* r29 */, unsigned int & posOut /* r30 */, unsigned int & lengthOut /* r31 */) {}
+// this: r29
+unsigned char EResourceManager::LookupId(unsigned int & posOut /* r30 */, unsigned int & lengthOut /* r31 */) {}
 
 // Range: 0x802A9470 -> 0x802A9610
-void EResourceManager::AddRefAll(class EResourceManager * const this /* r27 */) {
+// this: r27
+void EResourceManager::AddRefAll() {
     // Local variables
     class vector tempArray; // r1+0x18
     int cur; // r28
@@ -71,7 +80,8 @@ void EResourceManager::AddRefAll(class EResourceManager * const this /* r27 */) 
 }
 
 // Range: 0x802A9610 -> 0x802A97C4
-void EResourceManager::AddDelRefAll(class EResourceManager * const this /* r27 */) {
+// this: r27
+void EResourceManager::AddDelRefAll() {
     // Local variables
     class vector tempArray; // r1+0x18
     int cur; // r28
@@ -80,13 +90,15 @@ void EResourceManager::AddDelRefAll(class EResourceManager * const this /* r27 *
 }
 
 // Range: 0x802A97C4 -> 0x802A986C
-void EResourceManager::DelRefAll(class EResourceManager * const this /* r28 */) {
+// this: r28
+void EResourceManager::DelRefAll() {
     // Local variables
     int cur; // r29
 }
 
 // Range: 0x802A986C -> 0x802A992C
-class EResource * EResourceManager::GetRef(class EResourceManager * const this /* r29 */, unsigned int id /* r30 */) {
+// this: r29
+class EResource * EResourceManager::GetRef(unsigned int id /* r30 */) {
     // Local variables
     class EResource * pResource; // r1+0x8
     unsigned char isLoaded; // r0
@@ -94,25 +106,29 @@ class EResource * EResourceManager::GetRef(class EResourceManager * const this /
 }
 
 // Range: 0x802A992C -> 0x802A996C
-class EResource * EResourceManager::GetRef(class EResourceManager * const this /* r31 */) {
+// this: r31
+class EResource * EResourceManager::GetRef() {
     // Local variables
     unsigned int id; // r0
 }
 
 // Range: 0x802A996C -> 0x802A99A4
-unsigned long EResourceManager::ReadData(class EResourceManager * const this /* r9 */, void * pBuffer /* r8 */, unsigned int pos /* r0 */) {
+// this: r9
+unsigned long EResourceManager::ReadData(void * pBuffer /* r8 */, unsigned int pos /* r0 */) {
     // References
     // -> class EResourceLoader * _pResLoader;
 }
 
 // Range: 0x802A99A4 -> 0x802A9A50
-unsigned char EResourceManager::PreloadResource(class EResourceManager * const this /* r30 */, unsigned int id /* r31 */) {
+// this: r30
+unsigned char EResourceManager::PreloadResource(unsigned int id /* r31 */) {
     // References
     // -> class EResourceLoader * _pResLoader;
 }
 
 // Range: 0x802A9A50 -> 0x802A9B10
-unsigned char EResourceManager::PreloadResource(class EResourceManager * const this /* r30 */) {
+// this: r30
+unsigned char EResourceManager::PreloadResource() {
     // Local variables
     unsigned int id; // r31
 
@@ -121,7 +137,8 @@ unsigned char EResourceManager::PreloadResource(class EResourceManager * const t
 }
 
 // Range: 0x802A9B10 -> 0x802A9C5C
-class EResource * EResourceManager::addRef(class EResourceManager * const this /* r28 */, unsigned int id /* r1+0x8 */, class EFile * pSourceFile /* r29 */, unsigned int length /* r30 */, unsigned char bWait /* r31 */) {
+// this: r28
+class EResource * EResourceManager::addRef(unsigned int id /* r1+0x8 */, class EFile * pSourceFile /* r29 */, unsigned int length /* r30 */, unsigned char bWait /* r31 */) {
     // Local variables
     struct rbtree_iterator iter; // r1+0x14
     class EResource * pResource; // r1+0x10
@@ -132,7 +149,8 @@ class EResource * EResourceManager::addRef(class EResourceManager * const this /
 }
 
 // Range: 0x802A9C5C -> 0x802A9E38
-unsigned char EResourceManager::TryIncrementResource(class EResourceManager * const this /* r29 */, unsigned int id /* r28 */, class EResource * * pResource /* r30 */) {
+// this: r29
+unsigned char EResourceManager::TryIncrementResource(unsigned int id /* r28 */, class EResource * * pResource /* r30 */) {
     // Local variables
     unsigned char isFound; // r0
     unsigned char result; // r31
@@ -149,7 +167,8 @@ void EResourceManager::AddResource() {}
 void EResourceManager::LogResourceLoad() {}
 
 // Range: 0x802A9E44 -> 0x802A9F24
-void EResourceManager::AddResource(class EResourceManager * const this /* r27 */, class EResource * pResource /* r28 */, unsigned int id /* r29 */, unsigned char loadable /* r30 */) {
+// this: r27
+void EResourceManager::AddResource(class EResource * pResource /* r28 */, unsigned int id /* r29 */, unsigned char loadable /* r30 */) {
     // Local variables
     unsigned char ok; // r0
     class EResource * pAlreadyThere; // r1+0x8
@@ -161,14 +180,16 @@ void EResourceManager::AddResource(class EResourceManager * const this /* r27 */
 class EResource * EResourceManager::AddRef() {}
 
 // Range: 0x802A9F2C -> 0x802A9F90
-class EResource * EResourceManager::AddRef(class EResourceManager * const this /* r29 */, class EFile * pSourceFile /* r30 */, int length /* r31 */) {
+// this: r29
+class EResource * EResourceManager::AddRef(class EFile * pSourceFile /* r30 */, int length /* r31 */) {
     // Local variables
     unsigned int id; // r0
     class EResource * res; // r0
 }
 
 // Range: 0x802A9F90 -> 0x802A9FDC
-class EResource * EResourceManager::AddRefAsync(class EResourceManager * const this /* r31 */) {
+// this: r31
+class EResource * EResourceManager::AddRefAsync() {
     // Local variables
     unsigned int id; // r0
 }
@@ -183,23 +204,27 @@ void EResourceManager::AddRef(class EResource * pResource /* r30 */) {
 }
 
 // Range: 0x802AA054 -> 0x802AA148
-void EResourceManager::DelRef(class EResourceManager * const this /* r29 */, unsigned int id /* r1+0x8 */, enum DelRefMode allowCaching /* r30 */) {
+// this: r29
+void EResourceManager::DelRef(unsigned int id /* r1+0x8 */, enum DelRefMode allowCaching /* r30 */) {
     // Local variables
     class EResource * pResource; // r1+0x14
     struct rbtree_iterator iter; // r1+0x10
 }
 
 // Range: 0x802AA148 -> 0x802AA198
-void EResourceManager::DelRef(class EResourceManager * const this /* r30 */, enum DelRefMode allowCaching /* r31 */) {
+// this: r30
+void EResourceManager::DelRef(enum DelRefMode allowCaching /* r31 */) {
     // Local variables
     unsigned int id; // r0
 }
 
 // Range: 0x802AA198 -> 0x802AA1E8
-void EResourceManager::DelRefAsync(class EResourceManager * const this /* r30 */, enum DelRefMode allowCaching /* r31 */) {}
+// this: r30
+void EResourceManager::DelRefAsync(enum DelRefMode allowCaching /* r31 */) {}
 
 // Range: 0x802AA1E8 -> 0x802AA30C
-void EResourceManager::DelRefAsync(class EResourceManager * const this /* r28 */, unsigned int id /* r29 */, enum DelRefMode allowCaching /* r30 */) {
+// this: r28
+void EResourceManager::DelRefAsync(unsigned int id /* r29 */, enum DelRefMode allowCaching /* r30 */) {
     // Local variables
     class EResource * pResource; // r1+0x8
     class EAutoMutex mutex'47; // r31
@@ -209,28 +234,33 @@ void EResourceManager::DelRefAsync(class EResourceManager * const this /* r28 */
 }
 
 // Range: 0x802AA30C -> 0x802AA4A0
-void EResourceManager::DelRef(class EResourceManager * const this /* r29 */, class EResource * pResource /* r30 */, enum DelRefMode allowCaching /* r31 */) {
+// this: r29
+void EResourceManager::DelRef(class EResource * pResource /* r30 */, enum DelRefMode allowCaching /* r31 */) {
     // References
     // -> class EResourceLoader * _pResLoader;
 }
 
 // Range: 0x802AA4A0 -> 0x802AA514
-void EResourceManager::Detach(class EResourceManager * const this /* r30 */, class EResource * pResource /* r31 */) {}
+// this: r30
+void EResourceManager::Detach(class EResource * pResource /* r31 */) {}
 
 // Range: 0x802AA514 -> 0x802AA5DC
-unsigned int EResourceManager::GetPos(class EResourceManager * const this /* r30 */) {
+// this: r30
+unsigned int EResourceManager::GetPos() {
     // Local variables
     unsigned int pos; // r31
 }
 
 // Range: 0x802AA5DC -> 0x802AA6A8
-unsigned int EResourceManager::GetSize(class EResourceManager * const this /* r30 */) {
+// this: r30
+unsigned int EResourceManager::GetSize() {
     // Local variables
     unsigned int length; // r31
 }
 
 // Range: 0x802AA6A8 -> 0x802AA72C
-unsigned char EResourceManager::IsLoaded(class EResourceManager * const this /* r29 */, unsigned int id /* r30 */) {
+// this: r29
+unsigned char EResourceManager::IsLoaded(unsigned int id /* r30 */) {
     // Local variables
     unsigned char isFound; // r30
 }
@@ -248,13 +278,15 @@ unsigned int EResourceManager::CalcId(const char * szName /* r31 */) {
 class EAHeap * EResourceManager::GetHeap() {}
 
 // Range: 0x802AA794 -> 0x802AA7E0
-unsigned int EResourceManager::MakeSpace(class EResourceManager * const this /* r31 */) {
+// this: r31
+unsigned int EResourceManager::MakeSpace() {
     // Local variables
     unsigned int nBytesFreed; // r0
 }
 
 // Range: 0x802AA7E0 -> 0x802AA838
-unsigned char EResourceManager::FreeOverFlowUnreferencedResources(class EResourceManager * const this /* r31 */) {
+// this: r31
+unsigned char EResourceManager::FreeOverFlowUnreferencedResources() {
     // Local variables
     unsigned int nBytesFreed; // r0
 }
@@ -269,7 +301,8 @@ unsigned char EResourceManager::FreeUnreferencedResources() {
 int EResourceManager::GetUnreferencedResourceCount() {}
 
 // Range: 0x802AA878 -> 0x802AA900
-void * EResourceManager::Alloc(class EResourceManager * const this /* r28 */, unsigned long bytes /* r29 */, unsigned int align /* r30 */) {
+// this: r28
+void * EResourceManager::Alloc(unsigned long bytes /* r29 */, unsigned int align /* r30 */) {
     // Local variables
     void * mem; // r0
     class EAHeap * heap; // r31
@@ -336,22 +369,25 @@ unsigned char AptHeapFreeMemory(unsigned long failSize /* r29 */) {
 }
 
 // Range: 0x802AAE40 -> 0x802AAE5C
-void * EResourceMap::EResourceMap() {}
+EResourceMap::EResourceMap() {}
 
 // Range: 0x802AAE5C -> 0x802AAEB0
-void * EResourceMap::~EResourceMap(class EResourceMap * const this /* r30 */) {}
+// this: r30
+EResourceMap::~EResourceMap() {}
 
 // Range: 0x802AAEB0 -> 0x802AAF40
 unsigned char EResourceMap::Find() {}
 
 // Range: 0x802AAF40 -> 0x802AAFC8
-void EResourceMap::SetCapacity(class EResourceMap * const this /* r29 */, int capacity /* r30 */) {
+// this: r29
+void EResourceMap::SetCapacity(int capacity /* r30 */) {
     // Local variables
     struct MapEntry * newEntries; // r31
 }
 
 // Range: 0x802AAFC8 -> 0x802AB44C
-unsigned char EResourceMap::Insert(class EResourceMap * const this /* r28 */, class EResourceManager * manager /* r29 */, unsigned int id /* r30 */, class EResource * res /* r31 */) {
+// this: r28
+unsigned char EResourceMap::Insert(class EResourceManager * manager /* r29 */, unsigned int id /* r30 */, class EResource * res /* r31 */) {
     // Local variables
     int ix; // r4
     int i; // r5
@@ -364,6 +400,7 @@ unsigned char EResourceMap::Remove() {
 }
 
 // Range: 0x802AB530 -> 0x802AB590
-void EResourceMap::RemoveAll(class EResourceMap * const this /* r30 */) {}
+// this: r30
+void EResourceMap::RemoveAll() {}
 
 

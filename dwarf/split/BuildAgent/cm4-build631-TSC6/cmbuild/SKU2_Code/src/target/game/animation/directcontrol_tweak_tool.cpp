@@ -5,6 +5,7 @@
     Code range: 0x8001FFB0 -> 0x8001FFF0
 */
 // Range: 0x8001FFB0 -> 0x8001FFF0
-void * DirectControlTweakTool::~DirectControlTweakTool(class DirectControlTweakTool * const this /* r31 */) {}
+// this: r31
+DirectControlTweakTool::~DirectControlTweakTool() {}
 
 

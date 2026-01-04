@@ -5,31 +5,37 @@
     Code range: 0x8007D420 -> 0x80080020
 */
 // Range: 0x8007D420 -> 0x8007D478
-void * WallPainterParams::WallPainterParams(struct WallPainterParams * const this /* r31 */) {
+// this: r31
+WallPainterParams::WallPainterParams() {
     // References
     // -> struct [anonymous] __vt__Q316InteractorModule11WallPainter17WallPainterParams;
 }
 
 // Range: 0x8007D478 -> 0x8007D524
-void * WallPainter::WallPainter(class WallPainter * const this /* r30 */) {
+// this: r30
+WallPainter::WallPainter() {
     // References
     // -> struct [anonymous] __vt__Q216InteractorModule11WallPainter;
 }
 
 // Range: 0x8007D57C -> 0x8007D614
-void * WallPainter::~WallPainter(class WallPainter * const this /* r30 */) {
+// this: r30
+WallPainter::~WallPainter() {
     // References
     // -> struct [anonymous] __vt__Q216InteractorModule11WallPainter;
 }
 
 // Range: 0x8007D614 -> 0x8007D65C
-void WallPainter::OnCreate(class WallPainter * const this /* r31 */) {}
+// this: r31
+void WallPainter::OnCreate() {}
 
 // Range: 0x8007D65C -> 0x8007D694
-void WallPainter::OnDestroy(class WallPainter * const this /* r31 */) {}
+// this: r31
+void WallPainter::OnDestroy() {}
 
 // Range: 0x8007D694 -> 0x8007D928
-void WallPainter::OnStart(class WallPainter * const this /* r29 */, const struct InteractorParams * pParams /* r30 */) {
+// this: r29
+void WallPainter::OnStart(const struct InteractorParams * pParams /* r30 */) {
     // Local variables
     struct ButtonSemantic butSems[7]; // r1+0x40
     struct StickSemantic stickSems[4]; // r1+0x20
@@ -42,13 +48,15 @@ void WallPainter::OnStart(class WallPainter * const this /* r29 */, const struct
 }
 
 // Range: 0x8007D984 -> 0x8007D9FC
-void WallPainter::OnStop(class WallPainter * const this /* r31 */) {
+// this: r31
+void WallPainter::OnStop() {
     // References
     // -> unsigned char m_blueprintMode;
 }
 
 // Range: 0x8007D9FC -> 0x8007DB0C
-void WallPainter::CommitTransaction(class WallPainter * const this /* r29 */, enum ClientNotificationState stateMessage /* r30 */) {
+// this: r29
+void WallPainter::CommitTransaction(enum ClientNotificationState stateMessage /* r30 */) {
     // Local variables
     struct CallbackData cbd; // r1+0x10
     int i; // r31
@@ -56,19 +64,23 @@ void WallPainter::CommitTransaction(class WallPainter * const this /* r29 */, en
 }
 
 // Range: 0x8007DBCC -> 0x8007DCAC
-void WallPainter::HandleFinalizeRequest(class WallPainter * const this /* r30 */) {
+// this: r30
+void WallPainter::HandleFinalizeRequest() {
     // Local variables
     unsigned char bDidSucceed; // r31
 }
 
 // Range: 0x8007DCAC -> 0x8007DCF4
-void WallPainter::HandleSwapRequest(class WallPainter * const this /* r31 */) {}
+// this: r31
+void WallPainter::HandleSwapRequest() {}
 
 // Range: 0x8007DCF4 -> 0x8007DD68
-void WallPainter::HandleExitRequest(class WallPainter * const this /* r31 */) {}
+// this: r31
+void WallPainter::HandleExitRequest() {}
 
 // Range: 0x8007DD68 -> 0x8007DE58
-void WallPainter::AdjustCursorPosition(class WallPainter * const this /* r31 */) {
+// this: r31
+void WallPainter::AdjustCursorPosition() {
     // Local variables
     int side; // r0
 
@@ -77,7 +89,8 @@ void WallPainter::AdjustCursorPosition(class WallPainter * const this /* r31 */)
 }
 
 // Range: 0x8007DE58 -> 0x8007E228
-void WallPainter::ValidateWallSegment(class WallPainter * const this /* r29 */) {
+// this: r29
+void WallPainter::ValidateWallSegment() {
     // Local variables
     unsigned char bIsValid; // r31
     class EVec3 vDragDir; // r1+0x3C
@@ -104,7 +117,8 @@ void WallPainter::ValidateWallSegment(class WallPainter * const this /* r29 */) 
 void WallPainter::UpdateStickState() {}
 
 // Range: 0x8007E278 -> 0x8007E70C
-void WallPainter::Update(class WallPainter * const this /* r31 */, float delta /* f28 */) {
+// this: r31
+void WallPainter::Update(float delta /* f28 */) {
     // Local variables
     class EVec3 wall_hit_pos; // r1+0x48
     class EInstance * pClosestWall; // r30
@@ -121,7 +135,8 @@ void WallPainter::Update(class WallPainter * const this /* r31 */, float delta /
 }
 
 // Range: 0x8007E70C -> 0x8007EC70
-void WallPainter::OnCommandPressed(class WallPainter * const this /* r31 */) {
+// this: r31
+void WallPainter::OnCommandPressed() {
     // Local variables
     class EVec3 unused; // r1+0x38
     class EInstance * pClosestWall; // r0
@@ -154,13 +169,16 @@ void WallPainter::OnCommandReleased() {}
 void WallPainter::OnCommandUpdate() {}
 
 // Range: 0x8007ED38 -> 0x8007ED48
-void WallPainter::PreDraw(class WallPainter * const this /* r0 */) {}
+// this: r0
+void WallPainter::PreDraw() {}
 
 // Range: 0x8007ED48 -> 0x8007ED58
-void WallPainter::Draw(class WallPainter * const this /* r0 */) {}
+// this: r0
+void WallPainter::Draw() {}
 
 // Range: 0x8007ED58 -> 0x8007F210
-void WallPainter::CountWallsInRoomSelection(class WallPainter * const this /* r15 */) {
+// this: r15
+void WallPainter::CountWallsInRoomSelection() {
     // Local variables
     class EVec3 testPoint; // r1+0x38
     class CTilePt testtilept; // r1+0x1C
@@ -189,7 +207,8 @@ void WallPainter::CountWallsInRoomSelection(class WallPainter * const this /* r1
 }
 
 // Range: 0x8007F210 -> 0x8007F7B4
-unsigned char WallPainter::FinalizePaperForRoom(class WallPainter * const this /* r15 */) {
+// this: r15
+unsigned char WallPainter::FinalizePaperForRoom() {
     // Local variables
     class EVec3 testPoint; // r1+0x30
     class CTilePt wherePt; // r1+0x20
@@ -220,7 +239,8 @@ unsigned char WallPainter::FinalizePaperForRoom(class WallPainter * const this /
 }
 
 // Range: 0x8007F7B4 -> 0x8007F8D8
-unsigned char WallPainter::FinalizePaperForLine(class WallPainter * const this /* r28 */) {
+// this: r28
+unsigned char WallPainter::FinalizePaperForLine() {
     // Local variables
     int visibleSide; // r0
     unsigned char ret; // r29
@@ -230,7 +250,8 @@ unsigned char WallPainter::FinalizePaperForLine(class WallPainter * const this /
 }
 
 // Range: 0x8007F8D8 -> 0x8007F9B8
-unsigned char WallPainter::FinalizeSellPaperForLine(class WallPainter * const this /* r29 */) {
+// this: r29
+unsigned char WallPainter::FinalizeSellPaperForLine() {
     // Local variables
     int visibleSide; // r0
     unsigned char ret; // r30
@@ -240,7 +261,8 @@ unsigned char WallPainter::FinalizeSellPaperForLine(class WallPainter * const th
 }
 
 // Range: 0x8007F9B8 -> 0x8007FD14
-unsigned char WallPainter::SubmitPaperLine(class WallPainter * const this /* r27 */, const class EVec2 & v0 /* r25 */, const class EVec2 & v1 /* r24 */, enum WallPattern pattern /* r28 */, int whichSide /* r23 */) {
+// this: r27
+unsigned char WallPainter::SubmitPaperLine(const class EVec2 & v0 /* r25 */, const class EVec2 & v1 /* r24 */, enum WallPattern pattern /* r28 */, int whichSide /* r23 */) {
     // Local variables
     class CTilePt c0; // r1+0x20
     class CTilePt c1; // r1+0x1C
@@ -266,7 +288,8 @@ unsigned char WallPainter::SubmitPaperLine(class WallPainter * const this /* r27
 int WallPainter::GetShaderID() {}
 
 // Range: 0x8007FD20 -> 0x8007FDB8
-void WallPainter::SendBuildItemCountChangeEvent(class WallPainter * const this /* r30 */, int segementsLeft /* r31 */) {
+// this: r30
+void WallPainter::SendBuildItemCountChangeEvent(int segementsLeft /* r31 */) {
     // Local variables
     struct CallbackData cbd; // r1+0x8
 }
@@ -287,16 +310,19 @@ float WallPainter::GetPaperToolHeight() {}
 float WallPainter::GetWallHeight() {}
 
 // Range: 0x8007FDE0 -> 0x8007FE28
-void WallPainter::SaveInHoldPos(class WallPainter * const this /* r31 */) {}
+// this: r31
+void WallPainter::SaveInHoldPos() {}
 
 // Range: 0x8007FE28 -> 0x8007FE9C
-void WallPainter::RestoreFromHoldPos(class WallPainter * const this /* r30 */, class EVec3 & vToRestore /* r31 */) {}
+// this: r30
+void WallPainter::RestoreFromHoldPos(class EVec3 & vToRestore /* r31 */) {}
 
 // Range: 0x8007FE9C -> 0x8007FEA4
 int WallPainter::calc_paper_price() {}
 
 // Range: 0x8007FEA4 -> 0x8007FFBC
-unsigned char WallPainter::OnUndoButton(class WallPainter * const this /* r31 */) {
+// this: r31
+unsigned char WallPainter::OnUndoButton() {
     // Local variables
     struct UndoRedoCommand command; // r1+0x8
     struct CallbackData cbd; // r1+0x20

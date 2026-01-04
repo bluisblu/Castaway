@@ -11,17 +11,20 @@ class cIGZSndSys * cIGZSndSys::CreateInstance() {
 }
 
 // Range: 0x8011407C -> 0x801140BC
-void * cIGZSndSys::~cIGZSndSys(class cIGZSndSys * const this /* r31 */) {}
+// this: r31
+cIGZSndSys::~cIGZSndSys() {}
 
 // Range: 0x801140BC -> 0x8011411C
-void * cGZSndSys::cGZSndSys(class cGZSndSys * const this /* r31 */) {
+// this: r31
+cGZSndSys::cGZSndSys() {
     // References
     // -> class cGZSnd * g_soundThatIsLoading;
     // -> struct [anonymous] __vt__9cGZSndSys;
 }
 
 // Range: 0x8011412C -> 0x801141D8
-void * cGZSndSys::~cGZSndSys(class cGZSndSys * const this /* r30 */) {
+// this: r30
+cGZSndSys::~cGZSndSys() {
     // References
     // -> class EResourceLoader * _pResLoader;
     // -> static class cGZSndSys * _gzSndSys;
@@ -74,7 +77,8 @@ void cGZSndSys::killDeadSounds() {
 }
 
 // Range: 0x8011446C -> 0x801146EC
-void cGZSndSys::StartLoadingNextSound(class cGZSndSys * const this /* r24 */) {
+// this: r24
+void cGZSndSys::StartLoadingNextSound() {
     // Local variables
     class cGZSnd * pCandidate; // r30
     int curPriority; // r29
@@ -97,7 +101,8 @@ void cGZSndSys::StartLoadingNextSound(class cGZSndSys * const this /* r24 */) {
 }
 
 // Range: 0x801146EC -> 0x80114CD0
-void cGZSndSys::Update(class cGZSndSys * const this /* r30 */) {
+// this: r30
+void cGZSndSys::Update() {
     // Local variables
     class ERSampledata * pSample; // r0
     float curTime; // f0
@@ -136,14 +141,16 @@ void cGZSndSys::preloadMusic() {}
 void cGZSndSys::unloadMusic() {}
 
 // Range: 0x80114CD8 -> 0x80114D58
-void * cGZSnd::cGZSnd(class cGZSnd * const this /* r31 */) {
+// this: r31
+cGZSnd::cGZSnd() {
     // References
     // -> static class cGZSndSys * _gzSndSys;
     // -> struct [anonymous] __vt__6cGZSnd;
 }
 
 // Range: 0x80114D68 -> 0x80114DE8
-void * cGZSnd::~cGZSnd(class cGZSnd * const this /* r30 */) {
+// this: r30
+cGZSnd::~cGZSnd() {
     // References
     // -> class cGZSnd * g_soundThatIsLoading;
     // -> static class cGZSndSys * _gzSndSys;
@@ -154,7 +161,8 @@ void * cGZSnd::~cGZSnd(class cGZSnd * const this /* r30 */) {
 unsigned char cGZSnd::Init() {}
 
 // Range: 0x80114DF0 -> 0x80114EB4
-unsigned int cGZSnd::Release(class cGZSnd * const this /* r31 */) {
+// this: r31
+unsigned int cGZSnd::Release() {
     // Local variables
     struct EVoiceDesc desc; // r1+0x8
 
@@ -166,7 +174,8 @@ unsigned int cGZSnd::Release(class cGZSnd * const this /* r31 */) {
 unsigned int cGZSnd::AddRef() {}
 
 // Range: 0x80114EC8 -> 0x80115024
-unsigned char cGZSnd::Play(class cGZSnd * const this /* r30 */) {
+// this: r30
+unsigned char cGZSnd::Play() {
     // Local variables
     class ERSampledata * pSample; // r0
     struct EVoiceDesc desc; // r1+0x10
@@ -180,7 +189,8 @@ unsigned char cGZSnd::Play(class cGZSnd * const this /* r30 */) {
 }
 
 // Range: 0x80115024 -> 0x801150B4
-unsigned char cGZSnd::IsPlaying(class cGZSnd * const this /* r31 */) {
+// this: r31
+unsigned char cGZSnd::IsPlaying() {
     // Local variables
     struct EVoiceDesc desc; // r1+0x8
 
@@ -190,7 +200,8 @@ unsigned char cGZSnd::IsPlaying(class cGZSnd * const this /* r31 */) {
 }
 
 // Range: 0x801150B4 -> 0x8011515C
-unsigned char cGZSnd::Stop(class cGZSnd * const this /* r31 */) {
+// this: r31
+unsigned char cGZSnd::Stop() {
     // Local variables
     struct EVoiceDesc desc; // r1+0x8
 
@@ -202,7 +213,8 @@ unsigned char cGZSnd::Stop(class cGZSnd * const this /* r31 */) {
 void cGZSnd::SyncPitchWithSimulate(struct EVoiceDesc & desc /* r31 */) {}
 
 // Range: 0x80115194 -> 0x80115204
-unsigned char cGZSnd::Pause(class cGZSnd * const this /* r31 */) {
+// this: r31
+unsigned char cGZSnd::Pause() {
     // Local variables
     struct EVoiceDesc desc; // r1+0x8
 
@@ -211,7 +223,8 @@ unsigned char cGZSnd::Pause(class cGZSnd * const this /* r31 */) {
 }
 
 // Range: 0x80115204 -> 0x80115274
-unsigned char cGZSnd::Unpause(class cGZSnd * const this /* r31 */) {
+// this: r31
+unsigned char cGZSnd::Unpause() {
     // Local variables
     struct EVoiceDesc desc; // r1+0x8
 
@@ -232,7 +245,8 @@ int cGZSnd::GetVolume() {}
 unsigned char cGZSnd::SetVolume() {}
 
 // Range: 0x801152B0 -> 0x80115390
-unsigned char cGZSnd::setVolume(class cGZSnd * const this /* r31 */) {
+// this: r31
+unsigned char cGZSnd::setVolume() {
     // Local variables
     struct EVoiceDesc desc; // r1+0x10
     float lVol; // r1+0xC
@@ -249,7 +263,8 @@ unsigned char cGZSnd::FadeVolume() {}
 int cGZSnd::GetPan() {}
 
 // Range: 0x80115400 -> 0x801154B0
-unsigned char cGZSnd::SetPan(class cGZSnd * const this /* r31 */) {
+// this: r31
+unsigned char cGZSnd::SetPan() {
     // Local variables
     struct EVoiceDesc desc; // r1+0x10
     float lVol; // r1+0xC
@@ -269,7 +284,8 @@ unsigned char cGZSnd::SetFrequency() {}
 unsigned char cGZSnd::SetPosition() {}
 
 // Range: 0x801154C8 -> 0x8011553C
-void cGZSnd::reset(class cGZSnd * const this /* r31 */) {
+// this: r31
+void cGZSnd::reset() {
     // References
     // -> class EAudioSampleManager * _pAudiosampleman;
     // -> class EAudio * _pActualAudio;
@@ -287,14 +303,16 @@ void cGZSnd::getLRVolume() {
 }
 
 // Range: 0x801156C0 -> 0x80115734
-void * cGZMusic::cGZMusic(class cGZMusic * const this /* r31 */) {
+// this: r31
+cGZMusic::cGZMusic() {
     // References
     // -> static class cGZSndSys * _gzSndSys;
     // -> struct [anonymous] __vt__8cGZMusic;
 }
 
 // Range: 0x80115734 -> 0x801157A0
-void * cGZMusic::~cGZMusic(class cGZMusic * const this /* r30 */) {
+// this: r30
+cGZMusic::~cGZMusic() {
     // References
     // -> static class cGZSndSys * _gzSndSys;
     // -> struct [anonymous] __vt__8cGZMusic;
@@ -307,10 +325,12 @@ unsigned char cGZMusic::Init() {}
 unsigned int cGZMusic::AddRef() {}
 
 // Range: 0x801157BC -> 0x80115834
-unsigned int cGZMusic::Release(class cGZMusic * const this /* r31 */) {}
+// this: r31
+unsigned int cGZMusic::Release() {}
 
 // Range: 0x80115834 -> 0x80115928
-unsigned char cGZMusic::Play(class cGZMusic * const this /* r31 */) {
+// this: r31
+unsigned char cGZMusic::Play() {
     // Local variables
     struct EPMDesc desc; // r1+0x8
 
@@ -356,20 +376,23 @@ int cGZMusic::GetVolume() {}
 unsigned char cGZMusic::SetVolume() {}
 
 // Range: 0x80115A54 -> 0x80115B50
-unsigned char cGZMusic::setVolume(class cGZMusic * const this /* r30 */, int lNewVolume /* r31 */) {
+// this: r30
+unsigned char cGZMusic::setVolume(int lNewVolume /* r31 */) {
     // References
     // -> static class cGZSndSys * _gzSndSys;
     // -> class EAudio * _pActualAudio;
 }
 
 // Range: 0x80115B50 -> 0x80115C00
-unsigned char cGZMusic::FadeVolume(class cGZMusic * const this /* r28 */, int lEndingVolume /* r29 */, unsigned int lMilliseconds /* r30 */) {}
+// this: r28
+unsigned char cGZMusic::FadeVolume(int lEndingVolume /* r29 */, unsigned int lMilliseconds /* r30 */) {}
 
 // Range: 0x80115C00 -> 0x80115C08
 int cGZMusic::GetPan() {}
 
 // Range: 0x80115C08 -> 0x80115C94
-unsigned char cGZMusic::SetPan(class cGZMusic * const this /* r31 */) {
+// this: r31
+unsigned char cGZMusic::SetPan() {
     // References
     // -> class EAudio * _pActualAudio;
     // -> static class cGZSndSys * _gzSndSys;

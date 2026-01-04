@@ -5,7 +5,8 @@
     Code range: 0x802409D4 -> 0x802416AC
 */
 // Range: 0x802409D4 -> 0x80240A60
-void * ESims3DHead::ESims3DHead(class ESims3DHead * const this /* r30 */, class ESim * pESim /* r31 */) {
+// this: r30
+ESims3DHead::ESims3DHead(class ESim * pESim /* r31 */) {
     // Local variables
     class cXPerson * xperson; // r0
 
@@ -27,16 +28,19 @@ void ESims3DHead::ResetShaders() {
 }
 
 // Range: 0x80240ADC -> 0x80240B6C
-void ESims3DHead::InitHead(class ESims3DHead * const this /* r31 */) {}
+// this: r31
+void ESims3DHead::InitHead() {}
 
 // Range: 0x80240B6C -> 0x80240BC8
-void * ESims3DHead::~ESims3DHead(class ESims3DHead * const this /* r30 */) {}
+// this: r30
+ESims3DHead::~ESims3DHead() {}
 
 // Range: 0x80240BC8 -> 0x80240BCC
 void ESims3DHead::Update() {}
 
 // Range: 0x80240BCC -> 0x802416AC
-void ESims3DHead::Draw(class ESims3DHead * const this /* r30 */, class ERC * prc /* r31 */, struct structDrawCBparams * params /* r22 */) {
+// this: r30
+void ESims3DHead::Draw(class ERC * prc /* r31 */, struct structDrawCBparams * params /* r22 */) {
     // Local variables
     class EWindow * pOldWin; // r28
     class E3DWindow * pOld3DWin; // r26

@@ -5,25 +5,27 @@
     Code range: 0x8032FAE8 -> 0x80330044
 */
 // Range: 0x8032FAE8 -> 0x8032FAF8
-void * DOGMA_PoolManager::__nw() {
+void * DOGMA_PoolManager::operator new() {
     // References
     // -> struct AptUserFunctions gAptFuncs;
 }
 
 // Range: 0x8032FAF8 -> 0x8032FB0C
-void DOGMA_PoolManager::__dl() {
+void DOGMA_PoolManager::operator delete() {
     // References
     // -> struct AptUserFunctions gAptFuncs;
 }
 
 // Range: 0x8032FB0C -> 0x8032FC24
-void * DOGMA_PoolManager::DOGMA_PoolManager(class DOGMA_PoolManager * const this /* r26 */, unsigned long mainPoolSizeBytes /* r27 */, unsigned long maxSizeAllocation /* r28 */, unsigned char nOffsetToStoreNextInFreeItem /* r29 */, unsigned char nOffsetToStoreSizeInFreeItem /* r30 */, unsigned char bDoublyLinkFreeList /* r6 */, unsigned char nOffsetToStorePrevInFreeItem /* r31 */, unsigned char bTrackOusideAllocations /* r9 */) {
+// this: r26
+DOGMA_PoolManager::DOGMA_PoolManager(unsigned long mainPoolSizeBytes /* r27 */, unsigned long maxSizeAllocation /* r28 */, unsigned char nOffsetToStoreNextInFreeItem /* r29 */, unsigned char nOffsetToStoreSizeInFreeItem /* r30 */, unsigned char bDoublyLinkFreeList /* r6 */, unsigned char nOffsetToStorePrevInFreeItem /* r31 */, unsigned char bTrackOusideAllocations /* r9 */) {
     // References
     // -> struct AptUserFunctions gAptFuncs;
 }
 
 // Range: 0x8032FC24 -> 0x8032FCF0
-void * DOGMA_PoolManager::~DOGMA_PoolManager(class DOGMA_PoolManager * const this /* r27 */) {
+// this: r27
+DOGMA_PoolManager::~DOGMA_PoolManager() {
     // Local variables
     struct _DOGMA_MemPool * pPool; // r30
     struct _DOGMA_MemPool * pNextPool; // r29
@@ -44,7 +46,8 @@ void * DOGMA_PoolManager::GetNextOutsideAllocation() {
 }
 
 // Range: 0x8032FD48 -> 0x8032FE7C
-void * DOGMA_PoolManager::Allocate(class DOGMA_PoolManager * const this /* r29 */, unsigned long nAllocatedSize /* r30 */) {
+// this: r29
+void * DOGMA_PoolManager::Allocate(unsigned long nAllocatedSize /* r30 */) {
     // Local variables
     unsigned long nSize; // r31
     struct _OutsideAllocationT * poa; // r3
@@ -56,7 +59,8 @@ void * DOGMA_PoolManager::Allocate(class DOGMA_PoolManager * const this /* r29 *
 }
 
 // Range: 0x8032FE7C -> 0x8032FF5C
-unsigned char DOGMA_PoolManager::Deallocate(class DOGMA_PoolManager * const this /* r29 */, void * pNowFree /* r30 */, unsigned long nAllocatedSize /* r31 */) {
+// this: r29
+unsigned char DOGMA_PoolManager::Deallocate(void * pNowFree /* r30 */, unsigned long nAllocatedSize /* r31 */) {
     // Local variables
     unsigned long nSize; // r5
     struct _OutsideAllocationT * poa; // r3

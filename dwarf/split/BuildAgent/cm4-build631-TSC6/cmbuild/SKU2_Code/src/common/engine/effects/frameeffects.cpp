@@ -5,10 +5,12 @@
     Code range: 0x8028202C -> 0x802828C8
 */
 // Range: 0x8028202C -> 0x80282098
-void FrameEffect::Enable(class FrameEffect * const this /* r31 */) {}
+// this: r31
+void FrameEffect::Enable() {}
 
 // Range: 0x80282098 -> 0x8028212C
-void FrameEffect::Update(class FrameEffect * const this /* r30 */, class ERC * rc /* r31 */) {}
+// this: r30
+void FrameEffect::Update(class ERC * rc /* r31 */) {}
 
 // Range: 0x8028212C -> 0x8028214C
 unsigned char FrameEffect::IsEffectRamping() {}
@@ -17,10 +19,12 @@ unsigned char FrameEffect::IsEffectRamping() {}
 unsigned char FrameEffect::IsEffectRunning() {}
 
 // Range: 0x80282164 -> 0x80282224
-void FrameEffect::UpdateEffectState(class FrameEffect * const this /* r31 */) {}
+// this: r31
+void FrameEffect::UpdateEffectState() {}
 
 // Range: 0x80282224 -> 0x802822F8
-void MotionBlur::UpdateTargetParameters(class MotionBlur * const this /* r31 */, float elapsedTime /* f31 */) {}
+// this: r31
+void MotionBlur::UpdateTargetParameters(float elapsedTime /* f31 */) {}
 
 // Range: 0x802822F8 -> 0x80282360
 static float InterpolateLinear() {}
@@ -50,7 +54,8 @@ unsigned char Bloom::EffectIsFinishedFadingIn() {}
 unsigned char Bloom::EffectIsFinishedFadingOut() {}
 
 // Range: 0x8028259C -> 0x80282748
-void DepthOfField::UpdateTargetParameters(class DepthOfField * const this /* r31 */, float elapsedTime /* f31 */) {}
+// this: r31
+void DepthOfField::UpdateTargetParameters(float elapsedTime /* f31 */) {}
 
 // Range: 0x80282748 -> 0x8028285C
 static class EVec3 InterpolateLinear() {}

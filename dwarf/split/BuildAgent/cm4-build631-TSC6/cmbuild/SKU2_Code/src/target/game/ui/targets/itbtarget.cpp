@@ -5,7 +5,8 @@
     Code range: 0x801AE43C -> 0x801AEF64
 */
 // Range: 0x801AE43C -> 0x801AE650
-void * ITBTarget::ITBTarget(class ITBTarget * const this /* r29 */) {
+// this: r29
+ITBTarget::ITBTarget() {
     // References
     // -> class EGlobal _globals;
     // -> static const char * const ITB_message_shdr;
@@ -13,33 +14,38 @@ void * ITBTarget::ITBTarget(class ITBTarget * const this /* r29 */) {
 }
 
 // Range: 0x801AE650 -> 0x801AE6F4
-void * ITBTarget::~ITBTarget(class ITBTarget * const this /* r30 */) {
+// this: r30
+ITBTarget::~ITBTarget() {
     // References
     // -> class EGlobal _globals;
     // -> struct [anonymous] __vt__9ITBTarget;
 }
 
 // Range: 0x801AE6F4 -> 0x801AE814
-void ITBTarget::SetVariable(class ITBTarget * const this /* r29 */, const char * szCommand /* r30 */) {
+// this: r29
+void ITBTarget::SetVariable(const char * szCommand /* r30 */) {
     // Local variables
     class UIReflow reflow; // r1+0x8
 }
 
 // Range: 0x801AE814 -> 0x801AE89C
-char * ITBTarget::GetVariable(class ITBTarget * const this /* r29 */, const char * szVar /* r30 */) {
+// this: r29
+char * ITBTarget::GetVariable(const char * szVar /* r30 */) {
     // Local variables
     char * retStr; // r31
 }
 
 // Range: 0x801AE89C -> 0x801AE95C
-unsigned short * ITBTarget::GetLocalizable(class ITBTarget * const this /* r29 */, const char * szVar /* r30 */) {
+// this: r29
+unsigned short * ITBTarget::GetLocalizable(const char * szVar /* r30 */) {
     // Local variables
     unsigned short * wideStr; // r31
     unsigned short * outString; // r30
 }
 
 // Range: 0x801AE95C -> 0x801AED24
-void ITBTarget::Update(class ITBTarget * const this /* r30 */) {
+// this: r30
+void ITBTarget::Update() {
     // Local variables
     class UIReflow reflow; // r1+0x68
     class UIReflow reflow; // r1+0x50
@@ -58,7 +64,8 @@ void ITBTarget::HideIntroThoughtBalloon() {}
 void ITBTarget::UpdateIntroThoughtBalloon() {}
 
 // Range: 0x801AED84 -> 0x801AEF5C
-void ITBTarget::SpawnIntroThoughtBalloon(class ITBTarget * const this /* r28 */, class UIDialog * pDialog /* r29 */) {
+// this: r28
+void ITBTarget::SpawnIntroThoughtBalloon(class UIDialog * pDialog /* r29 */) {
     // Local variables
     unsigned char hasMessageShader; // r30
     class UIReflow reflow; // r1+0x10

@@ -5,6 +5,7 @@
     Code range: 0x802B5BA8 -> 0x802B5C00
 */
 // Range: 0x802B5BA8 -> 0x802B5C00
-void * ENgcDL::~ENgcDL(class ENgcDL * const this /* r30 */) {}
+// this: r30
+ENgcDL::~ENgcDL() {}
 
 

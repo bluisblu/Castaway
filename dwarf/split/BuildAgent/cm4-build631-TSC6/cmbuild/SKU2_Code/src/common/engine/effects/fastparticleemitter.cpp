@@ -11,19 +11,22 @@ void FastParticleEmitter::InitModule() {
 }
 
 // Range: 0x8027DCB4 -> 0x8027DD20
-void * FastParticleEmitter::FastParticleEmitter(class FastParticleEmitter * const this /* r31 */) {
+// this: r31
+FastParticleEmitter::FastParticleEmitter() {
     // References
     // -> struct [anonymous] __vt__Q27Effects19FastParticleEmitter;
 }
 
 // Range: 0x8027DD20 -> 0x8027DD8C
-void * FastParticleEmitter::FastParticleEmitter(class FastParticleEmitter * const this /* r31 */) {
+// this: r31
+FastParticleEmitter::FastParticleEmitter() {
     // References
     // -> struct [anonymous] __vt__Q27Effects19FastParticleEmitter;
 }
 
 // Range: 0x8027DD8C -> 0x8027DEA0
-void * FastParticleEmitter::~FastParticleEmitter(class FastParticleEmitter * const this /* r29 */) {
+// this: r29
+FastParticleEmitter::~FastParticleEmitter() {
     // References
     // -> class EGraphics * _pGfx;
     // -> class ETextureManager _textureman;
@@ -31,7 +34,8 @@ void * FastParticleEmitter::~FastParticleEmitter(class FastParticleEmitter * con
 }
 
 // Range: 0x8027DEA0 -> 0x8027DF44
-void FastParticleEmitter::FreeParticlePackets(class FastParticleEmitter * const this /* r31 */) {
+// this: r31
+void FastParticleEmitter::FreeParticlePackets() {
     // Local variables
     int i; // r8
 
@@ -40,7 +44,8 @@ void FastParticleEmitter::FreeParticlePackets(class FastParticleEmitter * const 
 }
 
 // Range: 0x8027DF44 -> 0x8027E410
-unsigned char FastParticleEmitter::SharedInitPart2(class FastParticleEmitter * const this /* r31 */) {
+// this: r31
+unsigned char FastParticleEmitter::SharedInitPart2() {
     // Local variables
     unsigned char bPersistent; // r5
     int packetCount; // r30
@@ -53,7 +58,8 @@ unsigned char FastParticleEmitter::SharedInitPart2(class FastParticleEmitter * c
 }
 
 // Range: 0x8027E410 -> 0x8027E634
-unsigned char FastParticleEmitter::PreRollParticles(class FastParticleEmitter * const this /* r30 */) {
+// this: r30
+unsigned char FastParticleEmitter::PreRollParticles() {
     // Local variables
     int nbAddedParticles; // r1+0xC
     int iNumBursts; // r29
@@ -81,7 +87,8 @@ unsigned char FastParticleEmitter::AllocateParticlePackets() {
 }
 
 // Range: 0x8027E738 -> 0x8027E7E0
-unsigned char FastParticleEmitter::Init(class FastParticleEmitter * const this /* r30 */, class REffectsEmitter & resourceData /* r31 */) {
+// this: r30
+unsigned char FastParticleEmitter::Init(class REffectsEmitter & resourceData /* r31 */) {
     // Local variables
     unsigned char result; // r0
 }
@@ -100,7 +107,8 @@ float FastParticleEmitter::UpdateBurst(int * nbAddedParticles /* r31 */) {
 }
 
 // Range: 0x8027E9B4 -> 0x8027F2EC
-int FastParticleEmitter::AddBurst(class FastParticleEmitter * const this /* r19 */, int nbParticles /* r20 */, float T0 /* f29 */, class EVec3 & ambientColor /* r21 */) {
+// this: r19
+int FastParticleEmitter::AddBurst(int nbParticles /* r20 */, float T0 /* f29 */, class EVec3 & ambientColor /* r21 */) {
     // Local variables
     unsigned int uvMirroringOn; // r28
     unsigned int bgr555; // r27
@@ -147,7 +155,8 @@ void FastParticleEmitter::InitParticlePool() {
 }
 
 // Range: 0x8027F3E4 -> 0x8027F644
-void FastParticleEmitter::ComputeCombinedMatrix(class FastParticleEmitter * const this /* r31 */) {
+// this: r31
+void FastParticleEmitter::ComputeCombinedMatrix() {
     // Local variables
     class EMat4 T; // r1+0x18
     class EVec3 v; // r1+0x8
@@ -157,7 +166,8 @@ void FastParticleEmitter::ComputeCombinedMatrix(class FastParticleEmitter * cons
 }
 
 // Range: 0x8027F644 -> 0x8027FBBC
-void FastParticleEmitter::Update(class FastParticleEmitter * const this /* r24 */, float currentDT /* f31 */, class EVec3 & ambientColor /* r25 */) {
+// this: r24
+void FastParticleEmitter::Update(float currentDT /* f31 */, class EVec3 & ambientColor /* r25 */) {
     // Local variables
     unsigned char killall; // r0
     float td; // f30
@@ -185,7 +195,8 @@ void FastParticleEmitter::Update(class FastParticleEmitter * const this /* r24 *
 void FastParticleEmitter::Stop() {}
 
 // Range: 0x8027FBF0 -> 0x802806BC
-void FastParticleEmitter::ComputeDispersionPositionAndVelocity(class FastParticleEmitter * const this /* r30 */, struct FastParticleState * pState /* r31 */, float P /* f26 */, float dP /* f27 */) {
+// this: r30
+void FastParticleEmitter::ComputeDispersionPositionAndVelocity(struct FastParticleState * pState /* r31 */, float P /* f26 */, float dP /* f27 */) {
     // Local variables
     float sina; // r1+0x40
     float cosa; // r1+0x3C
@@ -234,7 +245,8 @@ float FastParticleEmitter::DieOnLastFrame_Lifetime() {
 void FastParticleEmitter::Render() {}
 
 // Range: 0x80280790 -> 0x80280FD4
-void FastParticleEmitter::DoSimulationAndRender(class FastParticleEmitter * const this /* r25 */, class ERC * pRC /* r26 */) {
+// this: r25
+void FastParticleEmitter::DoSimulationAndRender(class ERC * pRC /* r26 */) {
     // Local variables
     int particleCount; // r30
     int current; // r29
@@ -311,7 +323,8 @@ void FastParticleEmitter::RenderQuad() {
 }
 
 // Range: 0x80281598 -> 0x802815B4
-unsigned char FastParticleEmitter::Accept(class FastParticleEmitter * const this /* r0 */) {}
+// this: r0
+unsigned char FastParticleEmitter::Accept() {}
 
 // Range: 0x802815B4 -> 0x80281630
 static void __sinit_\engine_effects2_unity_cpp() {

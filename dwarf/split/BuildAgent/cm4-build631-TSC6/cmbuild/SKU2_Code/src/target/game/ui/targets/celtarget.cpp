@@ -5,7 +5,8 @@
     Code range: 0x801F4540 -> 0x801F47AC
 */
 // Range: 0x801F4540 -> 0x801F4664
-void * CELTarget::CELTarget(class CELTarget * const this /* r30 */) {
+// this: r30
+CELTarget::CELTarget() {
     // References
     // -> class EGlobal _globals;
     // -> static const char * const CEL_exists;
@@ -13,7 +14,8 @@ void * CELTarget::CELTarget(class CELTarget * const this /* r30 */) {
 }
 
 // Range: 0x801F4664 -> 0x801F471C
-void * CELTarget::~CELTarget(class CELTarget * const this /* r29 */) {
+// this: r29
+CELTarget::~CELTarget() {
     // Local variables
     class UIScreenManager * pUISM; // r31
 
@@ -26,7 +28,8 @@ void * CELTarget::~CELTarget(class CELTarget * const this /* r29 */) {
 void CELTarget::SetVariable() {}
 
 // Range: 0x801F4720 -> 0x801F47A4
-char * CELTarget::GetVariable(class CELTarget * const this /* r29 */, const char * szVar /* r30 */) {
+// this: r29
+char * CELTarget::GetVariable(const char * szVar /* r30 */) {
     // Local variables
     char * retStr; // r31
 

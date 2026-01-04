@@ -5,10 +5,12 @@
     Code range: 0x80027E10 -> 0x8002827C
 */
 // Range: 0x80027E10 -> 0x80027E40
-void * TreeManager::TreeManager(class TreeManager * const this /* r31 */) {}
+// this: r31
+TreeManager::TreeManager() {}
 
 // Range: 0x80027E40 -> 0x80027ED4
-void TreeManager::Update(class TreeManager * const this /* r30 */) {
+// this: r30
+void TreeManager::Update() {
     // Local variables
     int i; // r31
 
@@ -23,7 +25,8 @@ class TreeManager * TreeManager::GetManager() {
 }
 
 // Range: 0x80027F18 -> 0x80027FE8
-void TreeManager::Init(class TreeManager * const this /* r31 */) {}
+// this: r31
+void TreeManager::Init() {}
 
 // Range: 0x80027FE8 -> 0x80028108
 void TreeManager::AnimateTree(struct EACNodeState * nodes /* r27 */) {

@@ -11,7 +11,8 @@ class IngredientManager * GetIngredientManager() {
 }
 
 // Range: 0x8011FD5C -> 0x8011FDFC
-void * IngredientManager::IngredientManager(class IngredientManager * const this /* r30 */) {
+// this: r30
+IngredientManager::IngredientManager() {
     // Local variables
     const struct ERQTable * pIngredientTypeTable; // r1+0x10
     const struct ERQTable * pIngredientTable; // r1+0xC

@@ -50,16 +50,18 @@ class StateMachineState * StateMachineStatus::GetCurState() {}
 int StateMachineState::GetStage() {}
 
 // Range: 0x8016B380 -> 0x8016B3C0
-void * StateMachineState::~StateMachineState(class StateMachineState * const this /* r31 */) {}
+// this: r31
+StateMachineState::~StateMachineState() {}
 
 // Range: 0x8016B3C0 -> 0x8016B3C8
 float StateMachineStatus::GetSecondsInCurState() {}
 
 // Range: 0x8016B3C8 -> 0x8016B3EC
-void * StateMachineStatus::StateMachineStatus() {}
+StateMachineStatus::StateMachineStatus() {}
 
 // Range: 0x8016B3EC -> 0x8016B42C
-void * StateMachineStatus::~StateMachineStatus(class StateMachineStatus * const this /* r31 */) {}
+// this: r31
+StateMachineStatus::~StateMachineStatus() {}
 
 // Range: 0x8016B42C -> 0x8016B430
 void StateMachineState::Startup() {}
@@ -71,7 +73,8 @@ void StateMachineState::Shutdown() {}
 int StateMachine::GetMachineId() {}
 
 // Range: 0x8016B43C -> 0x8016B484
-void * StateMachineManager::StateMachineManager(class StateMachineManager * const this /* r31 */) {}
+// this: r31
+StateMachineManager::StateMachineManager() {}
 
 // Range: 0x8016B484 -> 0x8016B4E0
 void StateMachineManager::RemoveAllMachines() {
@@ -92,7 +95,7 @@ void StateMachineState::NextStage() {}
 class StateMachine * StateMachineState::GetStateMachine() {}
 
 // Range: 0x8016B500 -> 0x8016B534
-void * StateMachineState::StateMachineState() {
+StateMachineState::StateMachineState() {
     // References
     // -> struct [anonymous] __vt__17StateMachineState;
 }
@@ -101,7 +104,8 @@ void * StateMachineState::StateMachineState() {
 void StateMachine::Startup() {}
 
 // Range: 0x8016B538 -> 0x8016B570
-void StateMachine::Shutdown(class StateMachine * const this /* r31 */) {}
+// this: r31
+void StateMachine::Shutdown() {}
 
 // Range: 0x8016B570 -> 0x8016B574
 void StateMachine::Reset() {}
@@ -113,10 +117,12 @@ class StateMachineManager * StateMachineManager::GetManager() {
 }
 
 // Range: 0x8016B57C -> 0x8016B5FC
-void * StateMachine::~StateMachine(class StateMachine * const this /* r30 */) {}
+// this: r30
+StateMachine::~StateMachine() {}
 
 // Range: 0x8016B654 -> 0x8016B704
-void * StateMachine::StateMachine(class StateMachine * const this /* r29 */, int machId /* r30 */) {
+// this: r29
+StateMachine::StateMachine(int machId /* r30 */) {
     // References
     // -> struct [anonymous] __vt__12StateMachine;
 }
@@ -137,23 +143,19 @@ void StateMachine::Disable() {}
 void StateMachine::Enable() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\target\game\statemachine\statemachine.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x801FA6B4 -> 0x801FA7F4
-*/
 // Range: 0x801FA6B4 -> 0x801FA704
 unsigned char StateMachineState::EnableAutoTestLog() {}
 
 // Range: 0x801FA704 -> 0x801FA718
-unsigned int StateMachineState::UnsetFlag(class StateMachineState * const this /* r5 */) {
+// this: r5
+unsigned int StateMachineState::UnsetFlag() {
     // Local variables
     unsigned int bitFlags; // r0
 }
 
 // Range: 0x801FA718 -> 0x801FA72C
-unsigned int StateMachineState::SetFlag(class StateMachineState * const this /* r5 */) {
+// this: r5
+unsigned int StateMachineState::SetFlag() {
     // Local variables
     unsigned int bitFlags; // r0
 }
@@ -162,7 +164,8 @@ unsigned int StateMachineState::SetFlag(class StateMachineState * const this /* 
 unsigned char StateMachineState::EnableValidateHeapCheck() {}
 
 // Range: 0x801FA77C -> 0x801FA7F4
-class StateMachine * StateMachineManager::AddMachine(class StateMachineManager * const this /* r31 */, class StateMachine * pMachine /* r1+0x8 */) {
+// this: r31
+class StateMachine * StateMachineManager::AddMachine(class StateMachine * pMachine /* r1+0x8 */) {
     // References
     // -> class StateMachineManager * s_pStateMachineManager;
 }

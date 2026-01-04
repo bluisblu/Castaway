@@ -5,10 +5,11 @@
     Code range: 0x80018194 -> 0x800181F8
 */
 // Range: 0x80018194 -> 0x800181D4
-void * SAnimator::~SAnimator(class SAnimator * const this /* r31 */) {}
+// this: r31
+SAnimator::~SAnimator() {}
 
 // Range: 0x800181E8 -> 0x800181F8
-void * SAnimator::SAnimator() {
+SAnimator::SAnimator() {
     // References
     // -> struct [anonymous] __vt__9SAnimator;
 }

@@ -5,7 +5,8 @@
     Code range: 0x802CF820 -> 0x802D0494
 */
 // Range: 0x802CF820 -> 0x802CF91C
-void * ENgcTextureBase::~ENgcTextureBase(class ENgcTextureBase * const this /* r29 */) {
+// this: r29
+ENgcTextureBase::~ENgcTextureBase() {
     // Local variables
     int dummyX; // r1+0xC
     int dummyY; // r1+0x8
@@ -19,7 +20,8 @@ void * ENgcTextureBase::~ENgcTextureBase(class ENgcTextureBase * const this /* r
 }
 
 // Range: 0x802CF91C -> 0x802CF990
-void ENgcTextureBase::FlushImageMemoryRange(class ENgcTextureBase * const this /* r30 */, unsigned char sync /* r31 */) {
+// this: r30
+void ENgcTextureBase::FlushImageMemoryRange(unsigned char sync /* r31 */) {
     // Local variables
     int dummyX; // r1+0xC
     int dummyY; // r1+0x8
@@ -36,7 +38,8 @@ void ENgcTextureBase::Unlock() {}
 void ENgcTextureBase::Invalidate() {}
 
 // Range: 0x802CF9B8 -> 0x802CFAC8
-unsigned char ENgcTextureBase::Create(class ENgcTextureBase * const this /* r31 */) {
+// this: r31
+unsigned char ENgcTextureBase::Create() {
     // Local variables
     int dummyX; // r1+0xC
     int dummyY; // r1+0x8
@@ -49,7 +52,8 @@ unsigned char ENgcTextureBase::Create(class ENgcTextureBase * const this /* r31 
 }
 
 // Range: 0x802CFAC8 -> 0x802CFC9C
-void ENgcTextureBase::Select(class ENgcTextureBase * const this /* r30 */, int texturecount /* r31 */) {
+// this: r30
+void ENgcTextureBase::Select(int texturecount /* r31 */) {
     // Local variables
     enum _GXTexFilter filter; // r4
 
@@ -59,10 +63,12 @@ void ENgcTextureBase::Select(class ENgcTextureBase * const this /* r30 */, int t
 }
 
 // Range: 0x802CFC9C -> 0x802CFCF0
-unsigned char ENgcTextureBase::UpdateBegin(class ENgcTextureBase * const this /* r30 */, enum ETextureUpdateType type /* r31 */) {}
+// this: r30
+unsigned char ENgcTextureBase::UpdateBegin(enum ETextureUpdateType type /* r31 */) {}
 
 // Range: 0x802CFCF0 -> 0x802CFDDC
-void * ENgcTextureBase::UpdateMipLevel(class ENgcTextureBase * const this /* r27 */, int mipLevel /* r28 */, int & pitchX /* r29 */, int & pitchY /* r30 */) {
+// this: r27
+void * ENgcTextureBase::UpdateMipLevel(int mipLevel /* r28 */, int & pitchX /* r29 */, int & pitchY /* r30 */) {
     // Local variables
     unsigned char * src; // r31
     int dummyX; // r1+0xC
@@ -75,7 +81,8 @@ void * ENgcTextureBase::UpdateMipLevel(class ENgcTextureBase * const this /* r27
 void * ENgcTextureBase::UpdatePalette() {}
 
 // Range: 0x802CFDE4 -> 0x802CFF70
-void ENgcTextureBase::UpdateEnd(class ENgcTextureBase * const this /* r31 */) {
+// this: r31
+void ENgcTextureBase::UpdateEnd() {
     // Local variables
     int dummyX; // r1+0x14
     int dummyY; // r1+0x10
@@ -103,7 +110,8 @@ int ENgcTextureBase::GetTEVStageCount() {}
 int ENgcTextureBase::GetTEXCount() {}
 
 // Range: 0x802D034C -> 0x802D0478
-void ENgcTextureBase::ClearSwizzleFlag(class ENgcTextureBase * const this /* r30 */) {
+// this: r30
+void ENgcTextureBase::ClearSwizzleFlag() {
     // Local variables
     int dx; // r1+0x14
     int dy; // r1+0x10

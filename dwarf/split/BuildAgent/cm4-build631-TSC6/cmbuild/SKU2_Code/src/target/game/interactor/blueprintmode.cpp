@@ -5,7 +5,8 @@
     Code range: 0x80080020 -> 0x80080378
 */
 // Range: 0x80080020 -> 0x800801A4
-void BlueprintInteractor::EnterBlueprintMode(class BlueprintInteractor * const this /* r30 */, unsigned char bReapply /* r31 */) {
+// this: r30
+void BlueprintInteractor::EnterBlueprintMode(unsigned char bReapply /* r31 */) {
     // References
     // -> class BluePrintGrid * s_pBPG;
     // -> class HeightFade g_heightFade;
@@ -20,7 +21,8 @@ void BlueprintInteractor::EnterBlueprintMode(class BlueprintInteractor * const t
 }
 
 // Range: 0x800801A4 -> 0x80080284
-void BlueprintInteractor::ExitBlueprintMode(class BlueprintInteractor * const this /* r31 */) {
+// this: r31
+void BlueprintInteractor::ExitBlueprintMode() {
     // References
     // -> class BluePrintGrid * s_pBPG;
     // -> class HeightFade g_heightFade;
@@ -35,7 +37,8 @@ void BlueprintInteractor::ExitBlueprintMode(class BlueprintInteractor * const th
 }
 
 // Range: 0x80080284 -> 0x800802F8
-void BlueprintInteractor::SetBlueprintModeInteractorChanging(class BlueprintInteractor * const this /* r31 */) {
+// this: r31
+void BlueprintInteractor::SetBlueprintModeInteractorChanging() {
     // References
     // -> class BluePrintGrid * s_pBPG;
     // -> unsigned char m_blueprintModeChangeInteractor;

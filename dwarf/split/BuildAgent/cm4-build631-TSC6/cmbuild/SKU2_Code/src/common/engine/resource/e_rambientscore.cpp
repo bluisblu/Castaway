@@ -5,29 +5,33 @@
     Code range: 0x802D4294 -> 0x802D513C
 */
 // Range: 0x802D4294 -> 0x802D42EC
-void * ERAmbientSound::ERAmbientSound() {}
+ERAmbientSound::ERAmbientSound() {}
 
 // Range: 0x802D42EC -> 0x802D45C0
-void ERAmbientSound::Load(class ERAmbientSound * const this /* r30 */, class EFile * pFile /* r31 */) {
+// this: r30
+void ERAmbientSound::Load(class EFile * pFile /* r31 */) {
     // Local variables
     int number; // r1+0x8
     int i; // r28
 }
 
 // Range: 0x802D45C0 -> 0x802D462C
-void * ERAmbientScore::ERAmbientScore(class ERAmbientScore * const this /* r31 */) {
+// this: r31
+ERAmbientScore::ERAmbientScore() {
     // References
     // -> struct [anonymous] __vt__14ERAmbientScore;
 }
 
 // Range: 0x802D462C -> 0x802D4718
-void * ERAmbientScore::~ERAmbientScore(class ERAmbientScore * const this /* r28 */) {
+// this: r28
+ERAmbientScore::~ERAmbientScore() {
     // References
     // -> struct [anonymous] __vt__14ERAmbientScore;
 }
 
 // Range: 0x802D4718 -> 0x802D4994
-void ERAmbientScore::Load(class ERAmbientScore * const this /* r30 */, class EFile * pFile /* r31 */) {
+// this: r30
+void ERAmbientScore::Load(class EFile * pFile /* r31 */) {
     // Local variables
     int str_length; // r1+0xC
     char * buffer; // r0

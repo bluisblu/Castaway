@@ -5,7 +5,7 @@
     Code range: 0x800965CC -> 0x8009674C
 */
 // Range: 0x800965CC -> 0x800965D0
-void * MidLotInstanceFactory::MidLotInstanceFactory() {}
+MidLotInstanceFactory::MidLotInstanceFactory() {}
 
 // Range: 0x800965D0 -> 0x80096708
 class EMidLotInstance * MidLotInstanceFactory::CreateMidLotInstance(enum eMidLotObjectType lotType /* r29 */, struct MidLotObject * pLotData /* r30 */) {

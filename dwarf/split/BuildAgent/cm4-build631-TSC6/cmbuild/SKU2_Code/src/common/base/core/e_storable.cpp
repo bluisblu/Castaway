@@ -5,7 +5,8 @@
     Code range: 0x8026F0B8 -> 0x8026F2E0
 */
 // Range: 0x8026F0B8 -> 0x8026F1D0
-class EStorable * EStorable::CreateCopy(const class EStorable * const this /* r29 */) {
+// this: r29
+class EStorable * EStorable::CreateCopy() const {
     // Local variables
     class EMemoryWriteStream writeStream; // r1+0x30
     class EStorable * pNewDataStructure; // r1+0x8
@@ -20,6 +21,7 @@ class EStorable * EStorable::CreateCopy(const class EStorable * const this /* r2
 unsigned char EStorable::IsExactType(class ETypeInfo * pType /* r31 */) {}
 
 // Range: 0x8026F264 -> 0x8026F2E0
-class EStorable * EStorable::DynamicCast(class EStorable * const this /* r30 */, class ETypeInfo * pType /* r31 */) {}
+// this: r30
+class EStorable * EStorable::DynamicCast(class ETypeInfo * pType /* r31 */) {}
 
 

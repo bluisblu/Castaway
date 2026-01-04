@@ -129,7 +129,8 @@ void FPHeap::InitializeHeapStatics() {
 }
 
 // Range: 0x80257B1C -> 0x80257BC0
-void * EAHeap::EAHeap(class EAHeap * const this /* r26 */, const char * name /* r27 */, void * core /* r28 */, unsigned long coreSize /* r29 */, class EAHeap * parent /* r30 */, class EAHeap * sibling /* r31 */) {
+// this: r26
+EAHeap::EAHeap(const char * name /* r27 */, void * core /* r28 */, unsigned long coreSize /* r29 */, class EAHeap * parent /* r30 */, class EAHeap * sibling /* r31 */) {
     // References
     // -> unsigned char s_nNextHeapID;
 }
@@ -141,7 +142,8 @@ unsigned char EAHeap::Init() {
 }
 
 // Range: 0x80257BEC -> 0x80257C6C
-void * EAHeap::MallocWrapper(class EAHeap * const this /* r29 */, unsigned long nSize /* r30 */, int nAllocationFlags /* r31 */) {
+// this: r29
+void * EAHeap::MallocWrapper(unsigned long nSize /* r30 */, int nAllocationFlags /* r31 */) {
     // Local variables
     void * ptr; // r0
 
@@ -150,13 +152,15 @@ void * EAHeap::MallocWrapper(class EAHeap * const this /* r29 */, unsigned long 
 }
 
 // Range: 0x80257C6C -> 0x80258948
-void * EAHeap::Malloc(class EAHeap * const this /* r28 */, unsigned long nSize /* r29 */, int nAllocationFlags /* r30 */) {
+// this: r28
+void * EAHeap::Malloc(unsigned long nSize /* r29 */, int nAllocationFlags /* r30 */) {
     // Local variables
     void * ptr; // r31
 }
 
 // Range: 0x80258948 -> 0x802589F0
-void * EAHeap::MallocAlignedWrapper(class EAHeap * const this /* r27 */, unsigned long nSize /* r28 */, unsigned long nAlignment /* r29 */, unsigned long nAlignmentOffset /* r30 */, int nAllocationFlags /* r31 */) {
+// this: r27
+void * EAHeap::MallocAlignedWrapper(unsigned long nSize /* r28 */, unsigned long nAlignment /* r29 */, unsigned long nAlignmentOffset /* r30 */, int nAllocationFlags /* r31 */) {
     // Local variables
     void * ptr; // r0
 
@@ -165,13 +169,15 @@ void * EAHeap::MallocAlignedWrapper(class EAHeap * const this /* r27 */, unsigne
 }
 
 // Range: 0x802589F0 -> 0x802598C4
-void * EAHeap::MallocAligned(class EAHeap * const this /* r26 */, unsigned long nSize /* r27 */, unsigned long nAlignment /* r28 */, unsigned long nAlignmentOffset /* r29 */, int nAllocationFlags /* r30 */) {
+// this: r26
+void * EAHeap::MallocAligned(unsigned long nSize /* r27 */, unsigned long nAlignment /* r28 */, unsigned long nAlignmentOffset /* r29 */, int nAllocationFlags /* r30 */) {
     // Local variables
     void * ptr; // r31
 }
 
 // Range: 0x802598C4 -> 0x8025995C
-void * EAHeap::CallocWrapper(class EAHeap * const this /* r26 */, unsigned long nElementCount /* r27 */, unsigned long nElementSize /* r28 */, int nAllocationFlags /* r29 */) {
+// this: r26
+void * EAHeap::CallocWrapper(unsigned long nElementCount /* r27 */, unsigned long nElementSize /* r28 */, int nAllocationFlags /* r29 */) {
     // Local variables
     unsigned long nSize; // r31
     void * ptr; // r30
@@ -181,13 +187,15 @@ void * EAHeap::CallocWrapper(class EAHeap * const this /* r26 */, unsigned long 
 }
 
 // Range: 0x8025995C -> 0x8025A738
-void * EAHeap::Calloc(class EAHeap * const this /* r27 */, unsigned long nElementCount /* r28 */, unsigned long nElementSize /* r29 */, int nAllocationFlags /* r30 */) {
+// this: r27
+void * EAHeap::Calloc(unsigned long nElementCount /* r28 */, unsigned long nElementSize /* r29 */, int nAllocationFlags /* r30 */) {
     // Local variables
     void * ptr; // r31
 }
 
 // Range: 0x8025A738 -> 0x8025A7FC
-void EAHeap::Free(class EAHeap * const this /* r31 */, void * p /* r29 */) {
+// this: r31
+void EAHeap::Free(void * p /* r29 */) {
     // Local variables
     class ProtectedAllocPool * pool; // r0
     class EAHeap * heap; // r0
@@ -212,25 +220,30 @@ void EAHeap::WarnHeapFull(unsigned long nSize /* r30 */) {
 }
 
 // Range: 0x8025A8EC -> 0x8025A954
-void EAHeap::Compact(class EAHeap * const this /* r30 */) {}
+// this: r30
+void EAHeap::Compact() {}
 
 // Range: 0x8025A954 -> 0x8025A9A0
-void EAHeap::Clear(class EAHeap * const this /* r31 */) {}
+// this: r31
+void EAHeap::Clear() {}
 
 // Range: 0x8025A9A0 -> 0x8025B4C4
-class EAHeap * EAHeap::FindHeapForAddress(const class EAHeap * const this /* r26 */, void * p /* r27 */) {}
+// this: r26
+class EAHeap * EAHeap::FindHeapForAddress(void * p /* r27 */) const {}
 
 // Range: 0x8025B4C4 -> 0x8025B4C8
 void EAHeap::AllocatorAssertionFailureFunction() {}
 
 // Range: 0x8025B4C8 -> 0x8025B5AC
-void * FPHeap::FPHeap(class FPHeap * const this /* r26 */, const char * name /* r27 */, void * core /* r28 */, unsigned long coreSize /* r29 */, class EAHeap * parent /* r30 */, class EAHeap * sibling /* r31 */) {
+// this: r26
+FPHeap::FPHeap(const char * name /* r27 */, void * core /* r28 */, unsigned long coreSize /* r29 */, class EAHeap * parent /* r30 */, class EAHeap * sibling /* r31 */) {
     // References
     // -> unsigned char s_nNextHeapID;
 }
 
 // Range: 0x8025B5AC -> 0x8025B624
-void * FPHeap::Malloc(class FPHeap * const this /* r29 */, unsigned long nSize /* r30 */, int nAllocationFlags /* r31 */) {
+// this: r29
+void * FPHeap::Malloc(unsigned long nSize /* r30 */, int nAllocationFlags /* r31 */) {
     // Local variables
     void * ptr; // r3
 
@@ -245,13 +258,13 @@ void FPHeap::Free() {}
 void FPHeap::AllocatorAssertionFailureFunction() {}
 
 // Range: 0x8025B638 -> 0x8025B670
-void * __nw(unsigned long size /* r31 */) {}
+void * operator new(unsigned long size /* r31 */) {}
 
 // Range: 0x8025B670 -> 0x8025B6A8
-void * __nwa(unsigned long size /* r31 */) {}
+void * operator new[](unsigned long size /* r31 */) {}
 
 // Range: 0x8025B6A8 -> 0x8025C1DC
-void __dl(void * address /* r26 */) {
+void operator delete(void * address /* r26 */) {
     // References
     // -> class AllocPoolManager * s_protectedPoolManager;
     // -> class EAHeap * g_MainHeap;
@@ -270,7 +283,7 @@ void __dl(void * address /* r26 */) {
 }
 
 // Range: 0x8025C1DC -> 0x8025C210
-void __dla(void * address /* r31 */) {}
+void operator delete[](void * address /* r31 */) {}
 
 // Range: 0x8025C210 -> 0x8025C248
 void * malloc(unsigned long size /* r31 */) {}
@@ -279,9 +292,9 @@ void * malloc(unsigned long size /* r31 */) {}
 void free(void * pAddress /* r31 */) {}
 
 // Range: 0x8025C27C -> 0x8025C2C0
-void * __nwa(unsigned long size /* r30 */, int flags /* r31 */) {}
+void * operator new[](unsigned long size /* r30 */, int flags /* r31 */) {}
 
 // Range: 0x8025C2C0 -> 0x8025C324
-void * __nwa(unsigned long size /* r28 */, unsigned long alignment /* r29 */, unsigned long alignmentOffset /* r30 */, int flags /* r31 */) {}
+void * operator new[](unsigned long size /* r28 */, unsigned long alignment /* r29 */, unsigned long alignmentOffset /* r30 */, int flags /* r31 */) {}
 
 

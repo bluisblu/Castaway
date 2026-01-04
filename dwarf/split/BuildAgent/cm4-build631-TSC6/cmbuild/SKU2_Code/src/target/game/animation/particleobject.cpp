@@ -5,26 +5,30 @@
     Code range: 0x80022B80 -> 0x80023254
 */
 // Range: 0x80022B80 -> 0x80022C3C
-void * EParticleEffect::EParticleEffect(class EParticleEffect * const this /* r29 */, struct AttachmentNode & node /* r30 */, const class EMat4 & parentTransform /* r31 */) {
+// this: r29
+EParticleEffect::EParticleEffect(struct AttachmentNode & node /* r30 */, const class EMat4 & parentTransform /* r31 */) {
     // References
     // -> class EffectsEmitterManager g_effectsEmitterMan;
     // -> unsigned char kUseEmitterPosForAlphaSort;
 }
 
 // Range: 0x80022C3C -> 0x80022CF0
-unsigned char EParticleEffect::UpdateParticleEffectLoad(class EParticleEffect * const this /* r30 */) {
+// this: r30
+unsigned char EParticleEffect::UpdateParticleEffectLoad() {
     // References
     // -> class EffectsEmitterManager g_effectsEmitterMan;
 }
 
 // Range: 0x80022CF0 -> 0x80022DC4
-void * EParticleEffect::~EParticleEffect(class EParticleEffect * const this /* r30 */) {
+// this: r30
+EParticleEffect::~EParticleEffect() {
     // References
     // -> class EffectsEmitterManager g_effectsEmitterMan;
 }
 
 // Range: 0x80022DC4 -> 0x80022E54
-void EParticleEffect::SetPos(class EParticleEffect * const this /* r29 */, const class EMat4 & m /* r30 */, class EVec3 * sortPos /* r31 */) {
+// this: r29
+void EParticleEffect::SetPos(const class EMat4 & m /* r30 */, class EVec3 * sortPos /* r31 */) {
     // Local variables
     struct ClientParams & params; // r0
 }
@@ -33,19 +37,23 @@ void EParticleEffect::SetPos(class EParticleEffect * const this /* r29 */, const
 void EParticleEffect::SetAlphaFade() {}
 
 // Range: 0x80022E74 -> 0x80022EB4
-void * EParticleObj::EParticleObj(class EParticleObj * const this /* r31 */) {}
+// this: r31
+EParticleObj::EParticleObj() {}
 
 // Range: 0x80022F0C -> 0x80022F84
-void * EParticleObj::~EParticleObj(class EParticleObj * const this /* r30 */) {}
+// this: r30
+EParticleObj::~EParticleObj() {}
 
 // Range: 0x80022F84 -> 0x80022FF0
-unsigned char EParticleObj::CreateEffects(class EParticleObj * const this /* r30 */, const class EMat4 & mObj /* r31 */, float theata /* f31 */) {
+// this: r30
+unsigned char EParticleObj::CreateEffects(const class EMat4 & mObj /* r31 */, float theata /* f31 */) {
     // Local variables
     unsigned int effectAttachmentId; // r5
 }
 
 // Range: 0x80022FF0 -> 0x80023100
-unsigned char EParticleObj::CreateEffects(class EParticleObj * const this /* r27 */, const class EMat4 & mObj /* r28 */, unsigned int effectAttachmentId /* r29 */) {
+// this: r27
+unsigned char EParticleObj::CreateEffects(const class EMat4 & mObj /* r28 */, unsigned int effectAttachmentId /* r29 */) {
     // Local variables
     int nEmitters; // r0
     int i; // r30
@@ -56,7 +64,8 @@ unsigned char EParticleObj::CreateEffects(class EParticleObj * const this /* r27
 }
 
 // Range: 0x80023100 -> 0x80023254
-void EParticleObj::UpdateEffectPosAndAlphaFade(class EParticleObj * const this /* r23 */, class EAnimController & ac /* r24 */, const class EMat4 & mObj /* r25 */, class EVec3 * sortPos /* r26 */, float alphaScale /* f31 */) {
+// this: r23
+void EParticleObj::UpdateEffectPosAndAlphaFade(class EAnimController & ac /* r24 */, const class EMat4 & mObj /* r25 */, class EVec3 * sortPos /* r26 */, float alphaScale /* f31 */) {
     // Local variables
     class NLIteratorPtrType * i; // r30
     int j; // r29

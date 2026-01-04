@@ -5,7 +5,8 @@
     Code range: 0x802FFDA0 -> 0x802FFE20
 */
 // Range: 0x802FFDA0 -> 0x802FFDFC
-void * AptValueGC_PoolManager::AptValueGC_PoolManager(class AptValueGC_PoolManager * const this /* r31 */) {
+// this: r31
+AptValueGC_PoolManager::AptValueGC_PoolManager() {
     // References
     // -> unsigned char snOffsetToStoreSize;
     // -> unsigned char snOffsetToStoreNext;
@@ -15,24 +16,18 @@ void * AptValueGC_PoolManager::AptValueGC_PoolManager(class AptValueGC_PoolManag
 }
 
 // Range: 0x802FFDFC -> 0x802FFE0C
-void * AptValueGC_PoolManager::__nw() {
+void * AptValueGC_PoolManager::operator new() {
     // References
     // -> struct AptUserFunctions gAptFuncs;
 }
 
 // Range: 0x802FFE0C -> 0x802FFE20
-void AptValueGC_PoolManager::__dl() {
+void AptValueGC_PoolManager::operator delete() {
     // References
     // -> struct AptUserFunctions gAptFuncs;
 }
 
 
-/*
-    Compile unit: C:\dev\TSC5\src\target\external\apt\include\apt\AptValueGCAllocator.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x8032F8EC -> 0x8032F97C
-*/
 // Range: 0x8032F8EC -> 0x8032F91C
 void _AptValueGC_MemItem::SetIsAllocated() {}
 

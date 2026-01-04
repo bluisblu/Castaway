@@ -5,7 +5,8 @@
     Code range: 0x801A85A8 -> 0x801AB014
 */
 // Range: 0x801A85A8 -> 0x801A89F0
-void * H2DTarget::H2DTarget(class H2DTarget * const this /* r28 */) {
+// this: r28
+H2DTarget::H2DTarget() {
     // Local variables
     class cXPerson * pPerson; // r3
 
@@ -31,7 +32,8 @@ void * H2DTarget::H2DTarget(class H2DTarget * const this /* r28 */) {
 }
 
 // Range: 0x801A89F0 -> 0x801A8C94
-void * H2DTarget::~H2DTarget(class H2DTarget * const this /* r29 */) {
+// this: r29
+H2DTarget::~H2DTarget() {
     // References
     // -> class EGlobal _globals;
     // -> unsigned int m_nPauseRefCount;
@@ -39,7 +41,8 @@ void * H2DTarget::~H2DTarget(class H2DTarget * const this /* r29 */) {
 }
 
 // Range: 0x801A8C94 -> 0x801A91EC
-void H2DTarget::SetVariable(class H2DTarget * const this /* r31 */, const char * szCommand /* r30 */, const char * szParams /* r28 */) {
+// this: r31
+void H2DTarget::SetVariable(const char * szCommand /* r30 */, const char * szParams /* r28 */) {
     // Local variables
     class cXPerson * pSelectedPerson; // r30
     class Neighborhood & hood; // r28
@@ -64,7 +67,8 @@ void H2DTarget::SetVariable(class H2DTarget * const this /* r31 */, const char *
 }
 
 // Range: 0x801A91EC -> 0x801A92C8
-unsigned char H2DTarget::DoProcessDPDMovt(class H2DTarget * const this /* r28 */) {
+// this: r28
+unsigned char H2DTarget::DoProcessDPDMovt() {
     // References
     // -> class EGlobal _globals;
     // -> class GameData _gd;
@@ -85,7 +89,8 @@ char * H2DTarget::GetVariable(const char * szVar /* r30 */) {
 }
 
 // Range: 0x801A93B0 -> 0x801A9484
-void H2DTarget::SetSuperHUDAlpha(class H2DTarget * const this /* r30 */) {
+// this: r30
+void H2DTarget::SetSuperHUDAlpha() {
     // Local variables
     char alphaString[8]; // r1+0x8
 
@@ -94,7 +99,8 @@ void H2DTarget::SetSuperHUDAlpha(class H2DTarget * const this /* r30 */) {
 }
 
 // Range: 0x801A9484 -> 0x801A9F88
-void H2DTarget::Update(class H2DTarget * const this /* r30 */) {
+// this: r30
+void H2DTarget::Update() {
     // Local variables
     class EVec2 dummy; // r1+0x8
     float xLimit; // f0
@@ -133,7 +139,8 @@ void H2DTarget::Update(class H2DTarget * const this /* r30 */) {
 }
 
 // Range: 0x801A9F88 -> 0x801AA224
-void H2DTarget::Draw(class H2DTarget * const this /* r29 */, class ERC * prc /* r30 */) {
+// this: r29
+void H2DTarget::Draw(class ERC * prc /* r30 */) {
     // Local variables
     class BString2 gameOverString; // r1+0xC
     class AptParagraph paragraph; // r1+0x90
@@ -166,13 +173,15 @@ void H2DTarget::ReleasePause() {
 }
 
 // Range: 0x801AA370 -> 0x801AA3E4
-unsigned char H2DTarget::CloseSidePanels(const class H2DTarget * const this /* r30 */) {
+// this: r30
+unsigned char H2DTarget::CloseSidePanels() const {
     // Local variables
     unsigned char ret; // r31
 }
 
 // Range: 0x801AA3E4 -> 0x801AA4C0
-void H2DTarget::SelectedPersonChanged(class H2DTarget * const this /* r30 */, class cXPerson * person /* r31 */) {
+// this: r30
+void H2DTarget::SelectedPersonChanged(class cXPerson * person /* r31 */) {
     // Local variables
     unsigned char isPet; // r31
     unsigned char panelBroughtDown; // r3
@@ -182,13 +191,15 @@ void H2DTarget::SelectedPersonChanged(class H2DTarget * const this /* r30 */, cl
 }
 
 // Range: 0x801AA4C0 -> 0x801AA534
-void H2DTarget::ACTCancelModeExited(class H2DTarget * const this /* r30 */) {
+// this: r30
+void H2DTarget::ACTCancelModeExited() {
     // References
     // -> class EGlobal _globals;
 }
 
 // Range: 0x801AA534 -> 0x801AA598
-void H2DTarget::SpawnIntroThoughtBalloon(class H2DTarget * const this /* r30 */, class UIDialog * pDialog /* r31 */) {}
+// this: r30
+void H2DTarget::SpawnIntroThoughtBalloon(class UIDialog * pDialog /* r31 */) {}
 
 // Range: 0x801AA598 -> 0x801AA5AC
 void H2DTarget::SpawnModelessDialog() {}
@@ -233,7 +244,8 @@ unsigned char H2DTarget::IsActionQueueAvailable() {
 }
 
 // Range: 0x801AA6C0 -> 0x801AA71C
-unsigned char H2DTarget::IsActionMenuFlashReady(class H2DTarget * const this /* r31 */) {
+// this: r31
+unsigned char H2DTarget::IsActionMenuFlashReady() {
     // Local variables
     unsigned char rc; // r3
 }
@@ -252,7 +264,8 @@ unsigned char H2DTarget::ShouldH2DBeVisible() {
 }
 
 // Range: 0x801AA840 -> 0x801AAA20
-void H2DTarget::DisplayFastForwardState(class H2DTarget * const this /* r28 */, enum eFastForwardState state /* r29 */) {
+// this: r28
+void H2DTarget::DisplayFastForwardState(enum eFastForwardState state /* r29 */) {
     // Local variables
     unsigned char hasId; // r3
 
@@ -262,10 +275,12 @@ void H2DTarget::DisplayFastForwardState(class H2DTarget * const this /* r28 */, 
 }
 
 // Range: 0x801AAA20 -> 0x801AAAA8
-void H2DTarget::RelationshipChangeOccured(class H2DTarget * const this /* r31 */) {}
+// this: r31
+void H2DTarget::RelationshipChangeOccured() {}
 
 // Range: 0x801AAAA8 -> 0x801AAD80
-void H2DTarget::UpdateSpeedControls(class H2DTarget * const this /* r31 */) {
+// this: r31
+void H2DTarget::UpdateSpeedControls() {
     // Local variables
     class EController * pCtrl; // r0
     class ObjectModule * pObj; // r0
@@ -283,7 +298,8 @@ void H2DTarget::UpdateSpeedControls(class H2DTarget * const this /* r31 */) {
 unsigned char H2DTarget::EnableSpeedControls() {}
 
 // Range: 0x801AAD8C -> 0x801AAF10
-unsigned char H2DTarget::AutolaunchCrafting(class H2DTarget * const this /* r24 */, int mode /* r25 */) {
+// this: r24
+unsigned char H2DTarget::AutolaunchCrafting(int mode /* r25 */) {
     // Local variables
     unsigned char rc; // r31
     class PlanManager * pPlanManager; // r30
@@ -310,7 +326,8 @@ void H2DTarget::ToggleHutObjectTransparency() {
 }
 
 // Range: 0x801AAF94 -> 0x801AAFF8
-void H2DTarget::RegisterMotivesForDPD(class H2DTarget * const this /* r31 */, int x /* r10 */, int y /* r0 */) {
+// this: r31
+void H2DTarget::RegisterMotivesForDPD(int x /* r10 */, int y /* r0 */) {
     // Local variables
     char keyString[32]; // r1+0x8
 }

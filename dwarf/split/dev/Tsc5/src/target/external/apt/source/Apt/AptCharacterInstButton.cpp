@@ -7,7 +7,6 @@
 // Range: 0x80317874 -> 0x8031787C
 void AptCharacterButtonInst::PreDestroy() {}
 
-struct {
-    // total size: 0x14
-} __vt__22AptCharacterButtonInst; // size: 0x14, address: 0x8045AEA8
+// total size: 0x14
+struct {} __vt__22AptCharacterButtonInst; // size: 0x14, address: 0x8045AEA8
 

@@ -32,17 +32,12 @@ void BG::Start() {
 }
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\target\game\bg.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x80205D2C -> 0x80205D78
-*/
 // Range: 0x80205D2C -> 0x80205D6C
-void * BG::~BG(class BG * const this /* r31 */) {}
+// this: r31
+BG::~BG() {}
 
 // Range: 0x80205D6C -> 0x80205D78
-void * BG::BG() {
+BG::BG() {
     // References
     // -> unsigned char s_bBGComplete;
 }

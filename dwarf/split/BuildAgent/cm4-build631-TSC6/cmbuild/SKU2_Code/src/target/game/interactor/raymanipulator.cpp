@@ -5,37 +5,45 @@
     Code range: 0x80080D6C -> 0x800824EC
 */
 // Range: 0x80080D6C -> 0x80080F20
-void * RayManipulator::RayManipulator(class RayManipulator * const this /* r29 */) {
+// this: r29
+RayManipulator::RayManipulator() {
     // References
     // -> struct [anonymous] __vt__Q216InteractorModule14RayManipulator;
 }
 
 // Range: 0x80080F78 -> 0x80081010
-void * RayManipulator::~RayManipulator(class RayManipulator * const this /* r30 */) {}
+// this: r30
+RayManipulator::~RayManipulator() {}
 
 // Range: 0x80081010 -> 0x80081018
 void RayManipulator::SetCameraRotationPoint() {}
 
 // Range: 0x80081018 -> 0x80081054
-void RayManipulator::Initialize(class RayManipulator * const this /* r31 */) {}
+// this: r31
+void RayManipulator::Initialize() {}
 
 // Range: 0x80081054 -> 0x80081100
-void RayManipulator::ParseControls(class RayManipulator * const this /* r30 */) {
+// this: r30
+void RayManipulator::ParseControls() {
     // References
     // -> class NewControlParms s_newControlParms;
 }
 
 // Range: 0x80081100 -> 0x800811A4
-void RayManipulator::Update(class RayManipulator * const this /* r31 */) {}
+// this: r31
+void RayManipulator::Update() {}
 
 // Range: 0x800811A4 -> 0x8008120C
-void RayManipulator::SetNewArrowPosition(class RayManipulator * const this /* r30 */, const class EVec2 & newPos /* r31 */) {}
+// this: r30
+void RayManipulator::SetNewArrowPosition(const class EVec2 & newPos /* r31 */) {}
 
 // Range: 0x8008120C -> 0x80081278
-void RayManipulator::ResetCursor(class RayManipulator * const this /* r31 */) {}
+// this: r31
+void RayManipulator::ResetCursor() {}
 
 // Range: 0x80081278 -> 0x80081440
-void RayManipulator::CastRay(class RayManipulator * const this /* r29 */) {
+// this: r29
+void RayManipulator::CastRay() {
     // Local variables
     class EVec2 current_screen_pos; // r1+0x10
     class EVec3 ray_dir; // r1+0x54
@@ -56,14 +64,16 @@ void RayManipulator::CastRay(class RayManipulator * const this /* r29 */) {
 }
 
 // Range: 0x80081440 -> 0x800814C0
-void RayManipulator::CalculateCameraRotationPoint(class RayManipulator * const this /* r31 */) {
+// this: r31
+void RayManipulator::CalculateCameraRotationPoint() {
     // Local variables
     float cam_zoom_ratio; // f1
     float distance_in_front_of_cam; // f1
 }
 
 // Range: 0x800814C0 -> 0x800816B8
-void RayManipulator::ClampPosToLot(class RayManipulator * const this /* r28 */, class EVec3 & posToUpdate /* r29 */, float * scale_lot_down /* r30 */) {
+// this: r28
+void RayManipulator::ClampPosToLot(class EVec3 & posToUpdate /* r29 */, float * scale_lot_down /* r30 */) {
     // Local variables
     float xSize; // f31
     float ySize; // f3
@@ -95,7 +105,8 @@ class EVec3 RayManipulator::GetPositionAlongCamZ(float dist /* f31 */) {
 }
 
 // Range: 0x800817C4 -> 0x8008197C
-void RayManipulator::UpdateCameraPosition(class RayManipulator * const this /* r31 */) {
+// this: r31
+void RayManipulator::UpdateCameraPosition() {
     // Local variables
     class E3DWindow * win; // r0
     float cam_acc; // f2
@@ -116,14 +127,16 @@ void RayManipulator::UpdateCameraPosition(class RayManipulator * const this /* r
 }
 
 // Range: 0x8008197C -> 0x800819C4
-float RayManipulator::GetCameraSpeedScaledByZoom(class RayManipulator * const this /* r31 */) {
+// this: r31
+float RayManipulator::GetCameraSpeedScaledByZoom() {
     // Local variables
     float cam_zoom_ratio; // f1
     float scale_factor; // f1
 }
 
 // Range: 0x800819C4 -> 0x800819F4
-unsigned char RayManipulator::UpdateInteractorOnFloorPosition(class RayManipulator * const this /* r4 */) {}
+// this: r4
+unsigned char RayManipulator::UpdateInteractorOnFloorPosition() {}
 
 // Range: 0x800819F4 -> 0x800819FC
 void RayManipulator::UpdateFloorOffset() {}
@@ -149,7 +162,8 @@ unsigned char RayManipulator::SimInstanceHitAABB(const class EVec3 & ray_dir /* 
 }
 
 // Range: 0x80081C18 -> 0x80082040
-unsigned char RayManipulator::RaySceneObjectsIntersectTest(class RayManipulator * const this /* r31 */, class EIObjectMan * objMan /* r28 */) {
+// this: r31
+unsigned char RayManipulator::RaySceneObjectsIntersectTest(class EIObjectMan * objMan /* r28 */) {
     // Local variables
     class EVec2 current_screen_pos; // r1+0x18
     class EVec3 ray_dir; // r1+0x44
@@ -180,7 +194,8 @@ unsigned char RayManipulator::RaySceneObjectsIntersectTest(class RayManipulator 
 }
 
 // Range: 0x80082040 -> 0x800821B4
-class EInstance * RayManipulator::FindClosestWall(class RayManipulator * const this /* r29 */, class EVec3 & hit_point /* r30 */) {
+// this: r29
+class EInstance * RayManipulator::FindClosestWall(class EVec3 & hit_point /* r30 */) {
     // Local variables
     float dist; // r1+0xC
     float hit_dist; // r1+0x8
@@ -204,7 +219,8 @@ class EVec3 RayManipulator::GetWallCorner(class EVec3 * corner /* r29 */, class 
 }
 
 // Range: 0x800822C0 -> 0x800823A0
-class EVec2 RayManipulator::CalculateArrowPos(class EVec2 * screen_loc /* r29 */, class RayManipulator * const this /* r30 */, const class EVec3 & world_pos /* r31 */) {
+// this: r29
+class EVec2 RayManipulator::CalculateArrowPos(class RayManipulator * const this /* r30 */, const class EVec3 & world_pos /* r31 */) {
     // Local variables
     class E3DWindow * win; // r0
     unsigned char in_front_of_cam; // r0
@@ -217,7 +233,8 @@ class EVec2 RayManipulator::CalculateArrowPos(class EVec2 * screen_loc /* r29 */
 class EVec2 RayManipulator::GetArrowPos() {}
 
 // Range: 0x800823BC -> 0x80082478
-unsigned char RayManipulator::IsCmdDown(const class RayManipulator * const this /* r28 */, unsigned int ectrlcmd /* r29 */) {
+// this: r28
+unsigned char RayManipulator::IsCmdDown(unsigned int ectrlcmd /* r29 */) const {
     // Local variables
     class EController * pCtrl; // r31
     class InteractorInputManager * pIIM; // r30
@@ -234,6 +251,7 @@ unsigned char RayManipulator::AllowCursorNavigate() {
 }
 
 // Range: 0x80082494 -> 0x800824EC
-void RayManipulator::GetInteractorInfo(class RayManipulator * const this /* r30 */, struct InteractorInfo & info /* r31 */) {}
+// this: r30
+void RayManipulator::GetInteractorInfo(struct InteractorInfo & info /* r31 */) {}
 
 

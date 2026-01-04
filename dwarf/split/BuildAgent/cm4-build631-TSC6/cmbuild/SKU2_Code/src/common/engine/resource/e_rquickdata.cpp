@@ -5,13 +5,14 @@
     Code range: 0x802E4358 -> 0x802E5098
 */
 // Range: 0x802E4358 -> 0x802E439C
-void * ERQuickdata::ERQuickdata() {
+ERQuickdata::ERQuickdata() {
     // References
     // -> struct [anonymous] __vt__11ERQuickdata;
 }
 
 // Range: 0x802E439C -> 0x802E442C
-void * ERQuickdata::~ERQuickdata(class ERQuickdata * const this /* r30 */) {
+// this: r30
+ERQuickdata::~ERQuickdata() {
     // References
     // -> class EQuickdataManager _quickdataman;
     // -> struct [anonymous] __vt__9EResource;
@@ -19,7 +20,8 @@ void * ERQuickdata::~ERQuickdata(class ERQuickdata * const this /* r30 */) {
 }
 
 // Range: 0x802E442C -> 0x802E4480
-void ERQuickdata::reset(class ERQuickdata * const this /* r31 */) {
+// this: r31
+void ERQuickdata::reset() {
     // References
     // -> class EQuickdataManager _quickdataman;
 }
@@ -28,26 +30,30 @@ void ERQuickdata::reset(class ERQuickdata * const this /* r31 */) {
 void ERQuickdata::UnlockImage() {}
 
 // Range: 0x802E4484 -> 0x802E44A4
-void ERQuickdata::Reload(class ERQuickdata * const this /* r5 */) {
+// this: r5
+void ERQuickdata::Reload() {
     // References
     // -> class EQuickdataManager _quickdataman;
 }
 
 // Range: 0x802E44A4 -> 0x802E4530
-void ERQuickdata::Load(class ERQuickdata * const this /* r29 */, class EFile * pFile /* r30 */, int iLanguage /* r31 */) {
+// this: r29
+void ERQuickdata::Load(class EFile * pFile /* r30 */, int iLanguage /* r31 */) {
     // References
     // -> class EQuickdataManager _quickdataman;
 }
 
 // Range: 0x802E4530 -> 0x802E4624
-int ERQuickdata::getTableIndex(class ERQuickdata * const this /* r27 */, int iMinIndex /* r28 */, int iMaxIndex /* r29 */, const char * pName /* r30 */) {
+// this: r27
+int ERQuickdata::getTableIndex(int iMinIndex /* r28 */, int iMaxIndex /* r29 */, const char * pName /* r30 */) {
     // Local variables
     int iCmp; // r3
     int iMiddle; // r31
 }
 
 // Range: 0x802E4624 -> 0x802E4694
-void * ERQuickdata::getTable(class ERQuickdata * const this /* r30 */) {
+// this: r30
+void * ERQuickdata::getTable() {
     // Local variables
     void * result; // r31
     int i; // r0
@@ -77,7 +83,8 @@ int ERQuickdata::findTableIndex() {
 }
 
 // Range: 0x802E4988 -> 0x802E4A34
-void * ERQuickdata::findRow(class ERQuickdata * const this /* r29 */, void * pData /* r30 */, unsigned int * pIndex /* r31 */) {
+// this: r29
+void * ERQuickdata::findRow(void * pData /* r30 */, unsigned int * pIndex /* r31 */) {
     // Local variables
     int i; // r0
     void * result; // r6

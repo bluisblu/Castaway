@@ -11,36 +11,42 @@ class FloatConstantsQuickData * FloatConstantsQuickData::CreateInstance() {}
 class FloatConstants * FloatConstants::CreateInstance() {}
 
 // Range: 0x8010E670 -> 0x8010E6C8
-void * FloatConstantsQuickData::FloatConstantsQuickData(class FloatConstantsQuickData * const this /* r31 */) {
+// this: r31
+FloatConstantsQuickData::FloatConstantsQuickData() {
     // References
     // -> struct [anonymous] __vt__23FloatConstantsQuickData;
 }
 
 // Range: 0x8010E6C8 -> 0x8010E728
-void * FloatConstantsQuickData::~FloatConstantsQuickData(class FloatConstantsQuickData * const this /* r30 */) {}
+// this: r30
+FloatConstantsQuickData::~FloatConstantsQuickData() {}
 
 // Range: 0x8010E728 -> 0x8010E7C8
-float FloatConstantsQuickData::Get(class FloatConstantsQuickData * const this /* r29 */, const char * name /* r30 */, float defaultValue /* f31 */) {
+// this: r29
+float FloatConstantsQuickData::Get(const char * name /* r30 */, float defaultValue /* f31 */) {
     // Local variables
     const struct FloatConstantItem * i; // r31
 }
 
 // Range: 0x8010E7C8 -> 0x8010E84C
-unsigned char FloatConstantsQuickData::Has(class FloatConstantsQuickData * const this /* r28 */, const char * name /* r29 */) {
+// this: r28
+unsigned char FloatConstantsQuickData::Has(const char * name /* r29 */) {
     // Local variables
     unsigned char result; // r30
     const struct FloatConstantItem * item; // r0
 }
 
 // Range: 0x8010E84C -> 0x8010E8D8
-int FloatConstantsQuickData::Load(class FloatConstantsQuickData * const this /* r28 */, unsigned int fileID /* r29 */, signed short id /* r30 */) {
+// this: r28
+int FloatConstantsQuickData::Load(unsigned int fileID /* r29 */, signed short id /* r30 */) {
     // Local variables
     class iResFile * pFile; // r0
     int err; // r31
 }
 
 // Range: 0x8010E8D8 -> 0x8010E968
-int FloatConstantsQuickData::Load(class FloatConstantsQuickData * const this /* r28 */, signed short id /* r29 */) {
+// this: r28
+int FloatConstantsQuickData::Load(signed short id /* r29 */) {
     // Local variables
     const struct ResFile * pResFile; // r0
 }
@@ -56,13 +62,15 @@ struct FloatConstantItem * FloatConstantsQuickData::findItem(const struct FloatC
 class ObjectDataID FloatConstantsQuickData::GetDataID() {}
 
 // Range: 0x8010EA50 -> 0x8010EAC4
-unsigned char FloatConstantsQuickData::LoadFromDataID(class FloatConstantsQuickData * const this /* r29 */, const class ObjectDataID & id /* r30 */) {}
+// this: r29
+unsigned char FloatConstantsQuickData::LoadFromDataID(const class ObjectDataID & id /* r30 */) {}
 
 // Range: 0x8010EAC4 -> 0x8010EACC
 unsigned char FloatConstantsQuickData::SaveDataByID() {}
 
 // Range: 0x8010EACC -> 0x8010EB6C
-unsigned char FloatConstantsQuickData::QueryInterface(class FloatConstantsQuickData * const this /* r30 */, void * ppvObject /* r31 */) {}
+// this: r30
+unsigned char FloatConstantsQuickData::QueryInterface(void * ppvObject /* r31 */) {}
 
 // Range: 0x8010EB6C -> 0x8010EB74
 enum tObjectDataType FloatConstantsQuickData::GetDataSourceType() {}

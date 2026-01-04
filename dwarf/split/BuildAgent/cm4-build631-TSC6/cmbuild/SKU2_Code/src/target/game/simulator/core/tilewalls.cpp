@@ -5,7 +5,7 @@
     Code range: 0x800E2E20 -> 0x800E416C
 */
 // Range: 0x800E2E20 -> 0x800E2EF0
-void * TileWalls::TileWalls() {}
+TileWalls::TileWalls() {}
 
 // Range: 0x800E2EF0 -> 0x800E3150
 void TileWalls::GenerateRotationLookups() {
@@ -24,19 +24,22 @@ void TileWalls::GenerateRotationLookups() {
 }
 
 // Range: 0x800E3150 -> 0x800E31C4
-enum SheerPlacement TileWalls::GetPlacement(const class TileWalls * const this /* r30 */, enum TileWallsSegment inSeg /* r31 */) {
+// this: r30
+enum SheerPlacement TileWalls::GetPlacement(enum TileWallsSegment inSeg /* r31 */) const {
     // Local variables
     int index; // r4
 }
 
 // Range: 0x800E31C4 -> 0x800E324C
-enum TileWallsSegment TileWalls::SetPlacement(class TileWalls * const this /* r29 */, enum SheerPlacement inPlc /* r30 */, enum TileWallsSegment inSeg /* r31 */) {
+// this: r29
+enum TileWallsSegment TileWalls::SetPlacement(enum SheerPlacement inPlc /* r30 */, enum TileWallsSegment inSeg /* r31 */) {
     // Local variables
     int index; // r5
 }
 
 // Range: 0x800E324C -> 0x800E34F4
-void TileWalls::Rotate(class TileWalls * const this /* r27 */, int inRot /* r28 */) {
+// this: r27
+void TileWalls::Rotate(int inRot /* r28 */) {
     // Local variables
     class TileWalls viewRep; // r1+0x8
     enum TileWallsSegment ourSegs; // r30
@@ -44,7 +47,8 @@ void TileWalls::Rotate(class TileWalls * const this /* r27 */, int inRot /* r28 
 }
 
 // Range: 0x800E34F4 -> 0x800E3630
-unsigned char TileWalls::CanAdd(const class TileWalls * const this /* r30 */, enum TileWallsSegment inSeg /* r31 */) {
+// this: r30
+unsigned char TileWalls::CanAdd(enum TileWallsSegment inSeg /* r31 */) const {
     // Local variables
     enum TileWallsSegment total; // r3
     int effective_rotation; // r4
@@ -95,16 +99,20 @@ unsigned char TileWalls::IsSingleWall() {
 }
 
 // Range: 0x800E3AD4 -> 0x800E3B0C
-void * TileWalls::TileWalls(class TileWalls * const this /* r31 */) {}
+// this: r31
+TileWalls::TileWalls() {}
 
 // Range: 0x800E3B0C -> 0x800E3B40
-void * TileWalls::TileWalls(class TileWalls * const this /* r31 */) {}
+// this: r31
+TileWalls::TileWalls() {}
 
 // Range: 0x800E3B40 -> 0x800E3B80
-void * TileWalls::~TileWalls(class TileWalls * const this /* r31 */) {}
+// this: r31
+TileWalls::~TileWalls() {}
 
 // Range: 0x800E3B80 -> 0x800E3BB4
-class TileWalls & TileWalls::__as(class TileWalls * const this /* r31 */) {}
+// this: r31
+class TileWalls & TileWalls::operator=() {}
 
 // Range: 0x800E3BB4 -> 0x800E3BCC
 unsigned char TileWalls::HasWall() {}
@@ -122,44 +130,53 @@ unsigned char TileWalls::HasFenceNotWall() {}
 unsigned char TileWalls::HasDiagonal() {}
 
 // Range: 0x800E3C78 -> 0x800E3CF0
-unsigned char TileWalls::HasDiagonalNotFence(const class TileWalls * const this /* r31 */) {}
+// this: r31
+unsigned char TileWalls::HasDiagonalNotFence() const {}
 
 // Range: 0x800E3CF0 -> 0x800E3D88
-enum WallPattern TileWalls::GetPattern(const class TileWalls * const this /* r29 */, enum TileWallsSegment inSeg /* r30 */, enum DiagonalSideSelector inSel /* r31 */) {}
+// this: r29
+enum WallPattern TileWalls::GetPattern(enum TileWallsSegment inSeg /* r30 */, enum DiagonalSideSelector inSel /* r31 */) const {}
 
 // Range: 0x800E3D88 -> 0x800E3E3C
-enum TileWallsSegment TileWalls::SetPattern(class TileWalls * const this /* r27 */, enum WallPattern inPattern /* r28 */, enum TileWallsSegment inSeg /* r29 */, enum DiagonalSideSelector inSel /* r30 */) {
+// this: r27
+enum TileWallsSegment TileWalls::SetPattern(enum WallPattern inPattern /* r28 */, enum TileWallsSegment inSeg /* r29 */, enum DiagonalSideSelector inSel /* r30 */) {
     // Local variables
     unsigned int i; // r31
     enum DiagonalSideSelector outSel; // r1+0x8
 }
 
 // Range: 0x800E3E3C -> 0x800E3E9C
-enum WallStyle TileWalls::GetStyle(const class TileWalls * const this /* r30 */, enum TileWallsSegment inSeg /* r31 */) {}
+// this: r30
+enum WallStyle TileWalls::GetStyle(enum TileWallsSegment inSeg /* r31 */) const {}
 
 // Range: 0x800E3E9C -> 0x800E3F24
-enum TileWallsSegment TileWalls::SetStyle(class TileWalls * const this /* r28 */, enum WallStyle inStyle /* r29 */, enum TileWallsSegment inSeg /* r30 */) {
+// this: r28
+enum TileWallsSegment TileWalls::SetStyle(enum WallStyle inStyle /* r29 */, enum TileWallsSegment inSeg /* r30 */) {
     // Local variables
     unsigned int i; // r31
 }
 
 // Range: 0x800E3F24 -> 0x800E3F98
-enum TileWallsSegment TileWalls::AddWall(class TileWalls * const this /* r30 */, enum TileWallsSegment inSeg /* r31 */) {}
+// this: r30
+enum TileWallsSegment TileWalls::AddWall(enum TileWallsSegment inSeg /* r31 */) {}
 
 // Range: 0x800E3F98 -> 0x800E3FEC
-void TileWalls::RemoveWall(class TileWalls * const this /* r30 */, enum TileWallsSegment inSeg /* r31 */) {}
+// this: r30
+void TileWalls::RemoveWall(enum TileWallsSegment inSeg /* r31 */) {}
 
 // Range: 0x800E3FEC -> 0x800E3FF8
 void TileWalls::RemoveAllWalls() {}
 
 // Range: 0x800E3FF8 -> 0x800E4068
-enum TileWallsSegment TileWalls::First(const class TileWalls * const this /* r30 */) {
+// this: r30
+enum TileWallsSegment TileWalls::First() const {
     // Local variables
     unsigned int out; // r31
 }
 
 // Range: 0x800E4068 -> 0x800E40D8
-enum TileWallsSegment TileWalls::Next(const class TileWalls * const this /* r30 */, enum TileWallsSegment inPrevious /* r31 */) {
+// this: r30
+enum TileWallsSegment TileWalls::Next(enum TileWallsSegment inPrevious /* r31 */) const {
     // Local variables
     int out; // [invalid]
 }

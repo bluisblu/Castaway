@@ -11,12 +11,6 @@ unsigned char EBoundTreeNode::IsBoundTreeNode() {
 }
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\common\base\core\e_boundtreenode.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x8025FB8C -> 0x8025FD0C
-*/
 // Range: 0x8025FB8C -> 0x8025FBAC
 void EBoundTreeNode::SafeDelete() {}
 

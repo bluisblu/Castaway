@@ -5,6 +5,7 @@
     Code range: 0x8002E824 -> 0x8002E878
 */
 // Range: 0x8002E824 -> 0x8002E878
-void * _IconImageInfo::_IconImageInfo(struct _IconImageInfo * const this /* r31 */) {}
+// this: r31
+_IconImageInfo::_IconImageInfo() {}
 
 

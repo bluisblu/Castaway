@@ -5,15 +5,10 @@
     Code range: 0x80027B60 -> 0x80027BC4
 */
 // Range: 0x80027B60 -> 0x80027BC4
-void * InstanceData::InstanceData(class InstanceData * const this /* r31 */) {}
+// this: r31
+InstanceData::InstanceData() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\target\game\level\e_igameinstance.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x8008857C -> 0x8008867C
-*/
 // Range: 0x8008857C -> 0x8008859C
 void EIGameInstance::SafeDelete() {}
 

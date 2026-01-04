@@ -5,13 +5,15 @@
     Code range: 0x80023494 -> 0x800247E0
 */
 // Range: 0x80023494 -> 0x800234D0
-void * BoarAnimator::BoarAnimator(class BoarAnimator * const this /* r31 */) {
+// this: r31
+BoarAnimator::BoarAnimator() {
     // References
     // -> struct [anonymous] __vt__12BoarAnimator;
 }
 
 // Range: 0x800234D0 -> 0x80023568
-void * BoarAnimator::~BoarAnimator(class BoarAnimator * const this /* r27 */) {
+// this: r27
+BoarAnimator::~BoarAnimator() {
     // Local variables
     unsigned int i; // r29
 
@@ -23,7 +25,8 @@ void * BoarAnimator::~BoarAnimator(class BoarAnimator * const this /* r27 */) {
 void BoarAnimator::GetAllIKBoneIndices(enum eIKBones eBone /* r28 */, unsigned int & outRoot /* r29 */, unsigned int & outMid /* r30 */, unsigned int & outEnd /* r31 */) {}
 
 // Range: 0x8002364C -> 0x800239D8
-unsigned char BoarAnimator::Initialize(class BoarAnimator * const this /* r29 */, class cXPerson * person /* r30 */) {
+// this: r29
+unsigned char BoarAnimator::Initialize(class cXPerson * person /* r30 */) {
     // Local variables
     unsigned int i; // r30
     unsigned int i; // r30
@@ -33,7 +36,8 @@ unsigned char BoarAnimator::Initialize(class BoarAnimator * const this /* r29 */
 }
 
 // Range: 0x80023A14 -> 0x80023C54
-void BoarAnimator::setMovementVelocityFromAnimation(class BoarAnimator * const this /* r29 */) {
+// this: r29
+void BoarAnimator::setMovementVelocityFromAnimation() {
     // Local variables
     int trans; // r4
     class EVec3 vTrans; // r1+0x1C
@@ -57,7 +61,8 @@ void BoarAnimator::setMovementVelocityFromAnimation(class BoarAnimator * const t
 void BoarAnimator::Update() {}
 
 // Range: 0x80023C58 -> 0x80023E7C
-enum TreeReturnCode BoarAnimator::CarryBehavior(class BoarAnimator * const this /* r27 */, const class AnimateNewParam * param /* r28 */, signed short animID /* r29 */, const struct AnimRef * & skill /* r30 */, class StackElem * elem /* r31 */) {
+// this: r27
+enum TreeReturnCode BoarAnimator::CarryBehavior(const class AnimateNewParam * param /* r28 */, signed short animID /* r29 */, const struct AnimRef * & skill /* r30 */, class StackElem * elem /* r31 */) {
     // Local variables
     float fBlendTime; // f31
     int behavior; // r0
@@ -80,7 +85,8 @@ void BoarAnimator::InitStaticAnimationElements() {
 }
 
 // Range: 0x80023ED4 -> 0x80024094
-float BoarAnimator::GetZRotation(class BoarAnimator * const this /* r31 */) {
+// this: r31
+float BoarAnimator::GetZRotation() {
     // Local variables
     float trackFrames; // f0
     float rot; // f1
@@ -98,7 +104,8 @@ float BoarAnimator::GetMovementVelocityFromStyle() {
 void BoarAnimator::UpdateSimDirection() {}
 
 // Range: 0x80024140 -> 0x80024308
-unsigned char BoarAnimator::rotateAnimation(class BoarAnimator * const this /* r30 */, float DeltaTime /* f30 */, float DesiredDir /* f31 */, float DeltaDir /* f29 */) {
+// this: r30
+unsigned char BoarAnimator::rotateAnimation(float DeltaTime /* f30 */, float DesiredDir /* f31 */, float DeltaDir /* f29 */) {
     // Local variables
     unsigned char bRetVal; // r31
     float TurnRate; // f0
@@ -113,17 +120,20 @@ float BoarAnimator::GetWalkToRunDistance() {}
 float BoarAnimator::GetRunToWalkDistance() {}
 
 // Range: 0x80024318 -> 0x80024360
-float BoarAnimator::GetXRotation(class BoarAnimator * const this /* r31 */) {}
+// this: r31
+float BoarAnimator::GetXRotation() {}
 
 // Range: 0x80024360 -> 0x80024420
-float BoarAnimator::ComputeOffset(class BoarAnimator * const this /* r31 */) {
+// this: r31
+float BoarAnimator::ComputeOffset() {
     // Local variables
     float retOffset; // f1
     float retOffset; // f0
 }
 
 // Range: 0x80024420 -> 0x800247E0
-void BoarAnimator::AdjustIKTargetHeight(class BoarAnimator * const this /* r28 */, class IKData * pIKData /* r29 */, class EMat4 & endBoneOrient /* r30 */) {
+// this: r28
+void BoarAnimator::AdjustIKTargetHeight(class IKData * pIKData /* r29 */, class EMat4 & endBoneOrient /* r30 */) {
     // Local variables
     float socialModeDelta; // r31
     unsigned char isFrontBackLower; // r0

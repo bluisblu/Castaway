@@ -5,7 +5,8 @@
     Code range: 0x8017BF0C -> 0x8017C2F4
 */
 // Range: 0x8017BF0C -> 0x8017BF54
-void * HelpDialog::HelpDialog(class HelpDialog * const this /* r31 */) {
+// this: r31
+HelpDialog::HelpDialog() {
     // References
     // -> struct [anonymous] __vt__10HelpDialog;
 }
@@ -14,16 +15,19 @@ void * HelpDialog::HelpDialog(class HelpDialog * const this /* r31 */) {
 void HelpDialog::ResetConfigVariables() {}
 
 // Range: 0x8017BF60 -> 0x8017BFB8
-void * HelpDialog::~HelpDialog(class HelpDialog * const this /* r30 */) {}
+// this: r30
+HelpDialog::~HelpDialog() {}
 
 // Range: 0x8017BFB8 -> 0x8017C234
-unsigned char HelpDialog::SpawnHelpDialog(class HelpDialog * const this /* r31 */, const char * bodyid /* r27 */, unsigned char useNewUIStrings /* r28 */, const char * button_string_id /* r29 */) {
+// this: r31
+unsigned char HelpDialog::SpawnHelpDialog(const char * bodyid /* r27 */, unsigned char useNewUIStrings /* r28 */, const char * button_string_id /* r29 */) {
     // References
     // -> class EGlobal _globals;
 }
 
 // Range: 0x8017C234 -> 0x8017C2BC
-unsigned char HelpDialog::SpawnHelpDialog(class HelpDialog * const this /* r27 */, const char * uidbHelpStringName /* r28 */, class HelpDialogCallback * callBack /* r29 */, unsigned char useNewUIStrings /* r30 */, const char * button_string_id /* r31 */) {
+// this: r27
+unsigned char HelpDialog::SpawnHelpDialog(const char * uidbHelpStringName /* r28 */, class HelpDialogCallback * callBack /* r29 */, unsigned char useNewUIStrings /* r30 */, const char * button_string_id /* r31 */) {
     // Local variables
     char titleid[256]; // r1+0x108
     char bodyid[256]; // r1+0x8

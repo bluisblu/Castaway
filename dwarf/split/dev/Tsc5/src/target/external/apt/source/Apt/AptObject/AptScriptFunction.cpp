@@ -56,7 +56,8 @@ void AptScriptFunctionBase::PopStaticData(void * pPushValue /* r27 */) {
 
 static char __PRETTY_FUNCTION__[119]; // size: 0x77, address: 0x8045F580
 // Range: 0x80331428 -> 0x803315BC
-void * AptScriptFunctionBase::AptScriptFunctionBase(class AptScriptFunctionBase * const this /* r28 */, class AptScriptFunctionBase * pCreatorFunction /* r31 */, class AptCIH * pCurCIH /* r30 */, unsigned char bNeedsPrototype /* r29 */) {
+// this: r28
+AptScriptFunctionBase::AptScriptFunctionBase(class AptScriptFunctionBase * pCreatorFunction /* r31 */, class AptCIH * pCurCIH /* r30 */, unsigned char bNeedsPrototype /* r29 */) {
     // References
     // -> class AptPrototype * gpObjectPrototype;
     // -> static char __PRETTY_FUNCTION__[119];
@@ -66,7 +67,8 @@ void * AptScriptFunctionBase::AptScriptFunctionBase(class AptScriptFunctionBase 
 
 static char __PRETTY_FUNCTION__[113]; // size: 0x71, address: 0x8045F5F8
 // Range: 0x803315BC -> 0x8033170C
-void * AptScriptFunctionBase::AptScriptFunctionBase(class AptScriptFunctionBase * const this /* r28 */, class AptScriptFunctionBase * pOrigFunc /* r29 */, class AptCIH * pCurCIH /* r30 */) {
+// this: r28
+AptScriptFunctionBase::AptScriptFunctionBase(class AptScriptFunctionBase * pOrigFunc /* r29 */, class AptCIH * pCurCIH /* r30 */) {
     // Local variables
     class AptValue * pTemp; // r0
 
@@ -76,60 +78,87 @@ void * AptScriptFunctionBase::AptScriptFunctionBase(class AptScriptFunctionBase 
 }
 
 // Range: 0x8033170C -> 0x80331768
-void * AptScriptFunctionBase::~AptScriptFunctionBase(class AptScriptFunctionBase * const this /* r30 */) {}
+// this: r30
+AptScriptFunctionBase::~AptScriptFunctionBase() {}
 
+// total size: 0x38
 class AptScriptFunction1 : public AptScriptFunctionBase {
-    // total size: 0x38
+    // Functions
+    AptScriptFunction1(class AptScriptFunctionBase * pCreatorFunction, const struct AptAction_DefineFunction * _pFunction);
+
+    AptScriptFunction1(class AptScriptFunction1 * pOrigFunc);
+
+    ~AptScriptFunction1();
+
+    // Members
 protected:
     const struct AptAction_DefineFunction * mpFunction; // offset 0x34, size 0x4
 };
 // Range: 0x80331768 -> 0x803317C4
-void * AptScriptFunction1::AptScriptFunction1(class AptScriptFunction1 * const this /* r30 */, class AptScriptFunctionBase * pCreatorFunction /* r0 */, const struct AptAction_DefineFunction * _pFunction /* r31 */) {
+// this: r30
+AptScriptFunction1::AptScriptFunction1(class AptScriptFunctionBase * pCreatorFunction /* r0 */, const struct AptAction_DefineFunction * _pFunction /* r31 */) {
     // References
     // -> struct [anonymous] __vt__18AptScriptFunction1;
 }
 
 // Range: 0x803317C4 -> 0x80331820
-void * AptScriptFunction1::AptScriptFunction1(class AptScriptFunction1 * const this /* r30 */, class AptScriptFunction1 * pOrigFunc /* r31 */) {
+// this: r30
+AptScriptFunction1::AptScriptFunction1(class AptScriptFunction1 * pOrigFunc /* r31 */) {
     // References
     // -> struct [anonymous] __vt__18AptScriptFunction1;
 }
 
+// total size: 0x38
 class AptScriptFunction2 : public AptScriptFunctionBase {
-    // total size: 0x38
+    // Functions
+    AptScriptFunction2(class AptScriptFunctionBase * pCreatorFunction, const struct AptAction_DefineFunction2 * _pFunction);
+
+    AptScriptFunction2(class AptScriptFunction2 * pOrigFunc);
+
+    ~AptScriptFunction2();
+
+    void SetupBeforeExecution(struct _AptScriptFunctionState * pState, class AptValue * pContext);
+
+    // Members
 protected:
     const struct AptAction_DefineFunction2 * mpFunction; // offset 0x34, size 0x4
 };
 // Range: 0x80331820 -> 0x8033187C
-void * AptScriptFunction2::AptScriptFunction2(class AptScriptFunction2 * const this /* r30 */, class AptScriptFunctionBase * pCreatorFunction /* r0 */, const struct AptAction_DefineFunction2 * _pFunction /* r31 */) {
+// this: r30
+AptScriptFunction2::AptScriptFunction2(class AptScriptFunctionBase * pCreatorFunction /* r0 */, const struct AptAction_DefineFunction2 * _pFunction /* r31 */) {
     // References
     // -> struct [anonymous] __vt__18AptScriptFunction2;
 }
 
 // Range: 0x8033187C -> 0x803318D8
-void * AptScriptFunction2::AptScriptFunction2(class AptScriptFunction2 * const this /* r30 */, class AptScriptFunction2 * pOrigFunc /* r31 */) {
+// this: r30
+AptScriptFunction2::AptScriptFunction2(class AptScriptFunction2 * pOrigFunc /* r31 */) {
     // References
     // -> struct [anonymous] __vt__18AptScriptFunction2;
 }
 
 // Range: 0x803318D8 -> 0x80331934
-void * AptScriptFunction1::~AptScriptFunction1(class AptScriptFunction1 * const this /* r30 */) {}
+// this: r30
+AptScriptFunction1::~AptScriptFunction1() {}
 
 // Range: 0x80331934 -> 0x80331990
-void * AptScriptFunction2::~AptScriptFunction2(class AptScriptFunction2 * const this /* r30 */) {}
+// this: r30
+AptScriptFunction2::~AptScriptFunction2() {}
 
 // Range: 0x80331990 -> 0x80331994
 void AptScriptFunctionBase::PreDestroy() {}
 
 // Range: 0x80331994 -> 0x80331A28
-void AptScriptFunctionBase::RegisterReferences(const class AptScriptFunctionBase * const this /* r31 */) {
+// this: r31
+void AptScriptFunctionBase::RegisterReferences() const {
     // References
     // -> void (* sReferenceRegistrationCb)(class AptValue *, class AptValue *, char *);
 }
 
 static char __PRETTY_FUNCTION__[43]; // size: 0x2B, address: 0x8045F684
 // Range: 0x80331A28 -> 0x80331B04
-void AptScriptFunctionBase::DestroyGCPointers(class AptScriptFunctionBase * const this /* r28 */) {
+// this: r28
+void AptScriptFunctionBase::DestroyGCPointers() {
     // References
     // -> static char __PRETTY_FUNCTION__[43];
 }
@@ -142,7 +171,8 @@ void AptScriptFunctionBase::SetupBeforeExecution() {
 
 static char __PRETTY_FUNCTION__[72]; // size: 0x48, address: 0x8045F6B0
 // Range: 0x80331B18 -> 0x80331BA4
-void AptScriptFunctionBase::CleanupAfterExecution(class AptScriptFunctionBase * const this /* r30 */, struct _AptScriptFunctionState * pState /* r31 */) {
+// this: r30
+void AptScriptFunctionBase::CleanupAfterExecution(struct _AptScriptFunctionState * pState /* r31 */) {
     // References
     // -> static char __PRETTY_FUNCTION__[72];
     // -> class AptFrameStack * spFrameStack;
@@ -167,7 +197,8 @@ void AptScriptFunctionBase::SetRegisterValue() {
 }
 
 // Range: 0x80331C54 -> 0x80331E5C
-void AptScriptFunction2::SetupBeforeExecution(class AptScriptFunction2 * const this /* r28 */, struct _AptScriptFunctionState * pState /* r29 */, class AptValue * pContext /* r31 */) {
+// this: r28
+void AptScriptFunction2::SetupBeforeExecution(struct _AptScriptFunctionState * pState /* r29 */, class AptValue * pContext /* r31 */) {
     // Local variables
     class AptValue * pTemp; // r0
     int nStartReg; // r30
@@ -195,8 +226,12 @@ void AptScriptFunction2::CleanupAfterExecution(struct _AptScriptFunctionState * 
     // -> static char __PRETTY_FUNCTION__[69];
 }
 
+// total size: 0x48
 class AptScriptFunctionByteCodeBlock : public AptScriptFunctionBase {
-    // total size: 0x48
+    // Functions
+    AptScriptFunctionByteCodeBlock(const unsigned char * pBytecodeBase, int blockSize, struct AptConstantPool & constantPool, const char * pName);
+
+    // Members
 protected:
     const unsigned char * mpByteCodeBase; // offset 0x34, size 0x4
     int mnByteCodeSize; // offset 0x38, size 0x4
@@ -204,21 +239,18 @@ protected:
     struct AptConstantPool mConstantPool; // offset 0x40, size 0x8
 };
 // Range: 0x80331F04 -> 0x80331F84
-void * AptScriptFunctionByteCodeBlock::AptScriptFunctionByteCodeBlock(class AptScriptFunctionByteCodeBlock * const this /* r27 */, const unsigned char * pBytecodeBase /* r28 */, int blockSize /* r29 */, struct AptConstantPool & constantPool /* r30 */, const char * pName /* r31 */) {
+// this: r27
+AptScriptFunctionByteCodeBlock::AptScriptFunctionByteCodeBlock(const unsigned char * pBytecodeBase /* r28 */, int blockSize /* r29 */, struct AptConstantPool & constantPool /* r30 */, const char * pName /* r31 */) {
     // References
     // -> struct [anonymous] __vt__30AptScriptFunctionByteCodeBlock;
 }
 
-struct {
-    // total size: 0x6C
-} __vt__30AptScriptFunctionByteCodeBlock; // size: 0x6C, address: 0x8045F77C
-struct {
-    // total size: 0x6C
-} __vt__18AptScriptFunction2; // size: 0x6C, address: 0x8045F7E8
-struct {
-    // total size: 0x6C
-} __vt__18AptScriptFunction1; // size: 0x6C, address: 0x8045F854
-struct {
-    // total size: 0x6C
-} __vt__21AptScriptFunctionBase; // size: 0x6C, address: 0x8045F8C0
+// total size: 0x6C
+struct {} __vt__30AptScriptFunctionByteCodeBlock; // size: 0x6C, address: 0x8045F77C
+// total size: 0x6C
+struct {} __vt__18AptScriptFunction2; // size: 0x6C, address: 0x8045F7E8
+// total size: 0x6C
+struct {} __vt__18AptScriptFunction1; // size: 0x6C, address: 0x8045F854
+// total size: 0x6C
+struct {} __vt__21AptScriptFunctionBase; // size: 0x6C, address: 0x8045F8C0
 

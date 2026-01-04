@@ -5,16 +5,16 @@
     Code range: 0x8032A794 -> 0x8032A8EC
 */
 static unsigned char lengthtable[6]; // size: 0x6, address: 0x805DA9D0
+// total size: 0x8
 struct StageMembers {
-    // total size: 0x8
+    // Members
     char * szName; // offset 0x0, size 0x4
     int nIndex; // offset 0x4, size 0x4
 };
 static struct StageMembers wordlist[6]; // size: 0x30, address: 0x8045DE38
 static signed char lookup[15]; // size: 0xF, address: 0x8045DE68
-class StageMembersIndex {
-    // total size: 0x1
-};
+// total size: 0x1
+class StageMembersIndex {};
 // Range: 0x8032A794 -> 0x8032A868
 struct StageMembers * StageMembersIndex::in_word_set(const char * str /* r29 */, unsigned int len /* r30 */) {
     // Local variables

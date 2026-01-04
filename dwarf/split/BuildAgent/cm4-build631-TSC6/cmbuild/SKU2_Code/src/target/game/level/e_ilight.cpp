@@ -5,18 +5,22 @@
     Code range: 0x800843A0 -> 0x800845BC
 */
 // Range: 0x800843A0 -> 0x80084494
-void * EILight::EILight(class EILight * const this /* r29 */) {
+// this: r29
+EILight::EILight() {
     // References
     // -> struct [anonymous] __vt__7EILight;
 }
 
 // Range: 0x80084494 -> 0x80084500
-void EILight::Write(class EILight * const this /* r30 */, class EStream & s /* r31 */) {}
+// this: r30
+void EILight::Write(class EStream & s /* r31 */) {}
 
 // Range: 0x80084500 -> 0x8008457C
-void EILight::Read(class EILight * const this /* r30 */, class EStream & s /* r31 */) {}
+// this: r30
+void EILight::Read(class EStream & s /* r31 */) {}
 
 // Range: 0x8008457C -> 0x800845BC
-void EILight::Init(class EILight * const this /* r31 */) {}
+// this: r31
+void EILight::Init() {}
 
 

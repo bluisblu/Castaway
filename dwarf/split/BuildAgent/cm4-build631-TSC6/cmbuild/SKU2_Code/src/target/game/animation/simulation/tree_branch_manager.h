@@ -8,7 +8,7 @@
 float TreeBranchManager::GetWindForceMultiplier() {}
 
 // Range: 0x800254E8 -> 0x80025528
-void * TreeBranchManager::__nw(unsigned long size /* r31 */) {}
+void * TreeBranchManager::operator new(unsigned long size /* r31 */) {}
 
 // Range: 0x80025528 -> 0x8002552C
 void BranchTreeInfo::Init() {}

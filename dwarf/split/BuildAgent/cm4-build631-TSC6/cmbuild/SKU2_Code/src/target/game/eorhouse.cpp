@@ -17,7 +17,8 @@ char * GetHouseNameText() {
 char * EHouse::GetHouseName() {}
 
 // Range: 0x80216550 -> 0x802167B4
-void * EHouse::EHouse(class EHouse * const this /* r23 */, const class EVec2 & vOff /* r24 */, int lot /* r25 */, class ERLevel * pLevel /* r26 */, unsigned char bObjects /* r27 */, unsigned char bWalls /* r28 */, unsigned char bForNeighborHoodMode /* r29 */) {
+// this: r23
+EHouse::EHouse(const class EVec2 & vOff /* r24 */, int lot /* r25 */, class ERLevel * pLevel /* r26 */, unsigned char bObjects /* r27 */, unsigned char bWalls /* r28 */, unsigned char bForNeighborHoodMode /* r29 */) {
     // Local variables
     unsigned int levelId; // r30
     char hack_lots[64]; // r1+0x8
@@ -31,13 +32,16 @@ void * EHouse::EHouse(class EHouse * const this /* r23 */, const class EVec2 & v
 }
 
 // Range: 0x802167B4 -> 0x80216820
-void * EHouse::~EHouse(class EHouse * const this /* r30 */) {}
+// this: r30
+EHouse::~EHouse() {}
 
 // Range: 0x80216820 -> 0x80216854
-void EHouse::Init(class EHouse * const this /* r31 */) {}
+// this: r31
+void EHouse::Init() {}
 
 // Range: 0x80216854 -> 0x8021693C
-void EHouse::BuildHouse(class EHouse * const this /* r31 */) {
+// this: r31
+void EHouse::BuildHouse() {
     // Local variables
     class EBound3 bLevel; // r1+0x18
     class EBoundSphere tempSphere; // r1+0x8
@@ -47,7 +51,8 @@ void EHouse::BuildHouse(class EHouse * const this /* r31 */) {
 }
 
 // Range: 0x8021693C -> 0x802169F0
-void EHouse::SetNextWallMode(class EHouse * const this /* r31 */) {
+// this: r31
+void EHouse::SetNextWallMode() {
     // References
     // -> class EGraphics * _pGfx;
     // -> class HeightFade g_heightFade;
@@ -98,10 +103,12 @@ static void SetupInterestFade() {
 }
 
 // Range: 0x80217060 -> 0x802170BC
-void EHouse::Draw(class EHouse * const this /* r30 */, class ERC * prc /* r31 */) {}
+// this: r30
+void EHouse::Draw(class ERC * prc /* r31 */) {}
 
 // Range: 0x802170BC -> 0x8021726C
-void EHouse::Update(class EHouse * const this /* r28 */) {
+// this: r28
+void EHouse::Update() {
     // Local variables
     class EController * controller; // r0
     class WeatherManager * pWeatherManager; // r29
@@ -117,7 +124,8 @@ void EHouse::Update(class EHouse * const this /* r28 */) {
 }
 
 // Range: 0x8021726C -> 0x802172FC
-void EHouse::UpdateRoomAmbient(const class EHouse * const this /* r27 */, const struct LightingEntry & lighting /* r28 */) {
+// this: r27
+void EHouse::UpdateRoomAmbient(const struct LightingEntry & lighting /* r28 */) const {
     // Local variables
     int roomId; // r30
     class EIAmbLight * pLight; // r29
@@ -125,19 +133,23 @@ void EHouse::UpdateRoomAmbient(const class EHouse * const this /* r27 */, const 
 }
 
 // Range: 0x802172FC -> 0x802173A8
-void EHouse::Cleanup(class EHouse * const this /* r30 */) {}
+// this: r30
+void EHouse::Cleanup() {}
 
 // Range: 0x802173A8 -> 0x802173F8
-void EHouse::DestroyWalls(class EHouse * const this /* r31 */) {}
+// this: r31
+void EHouse::DestroyWalls() {}
 
 // Range: 0x802173F8 -> 0x802174E8
-void EHouse::ReCalcHouse(class EHouse * const this /* r31 */) {
+// this: r31
+void EHouse::ReCalcHouse() {
     // References
     // -> class EGraphics * _pGfx;
 }
 
 // Range: 0x802174E8 -> 0x80217688
-void EHouse::UpdateRoomLights(class EHouse * const this /* r31 */) {
+// this: r31
+void EHouse::UpdateRoomLights() {
     // Local variables
     class RoomManager * pRoomman; // r29
     const class map & roomlist; // r28
@@ -157,7 +169,8 @@ void LightLocation(signed short & loc /* r29 */, signed short & lightLoc /* r30 
 }
 
 // Range: 0x80217708 -> 0x8021784C
-void EHouse::InitRoomLighting(class EHouse * const this /* r25 */) {
+// this: r25
+void EHouse::InitRoomLighting() {
     // Local variables
     class RoomManager * roomManager; // r27
     int c; // r26
@@ -167,7 +180,8 @@ void EHouse::InitRoomLighting(class EHouse * const this /* r25 */) {
 }
 
 // Range: 0x8021784C -> 0x802178FC
-void EHouse::CleanUpRoomLights(class EHouse * const this /* r29 */) {
+// this: r29
+void EHouse::CleanUpRoomLights() {
     // Local variables
     int c; // r30
 }

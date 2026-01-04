@@ -11,49 +11,60 @@ static void ExpandBoundingBox(class EBound3 & bound /* r31 */) {
 }
 
 // Range: 0x80086E68 -> 0x80086F18
-void * EIStaticModel::EIStaticModel(class EIStaticModel * const this /* r30 */) {
+// this: r30
+EIStaticModel::EIStaticModel() {
     // References
     // -> struct [anonymous] __vt__13EIStaticModel;
 }
 
 // Range: 0x80086F18 -> 0x80086F8C
-void * EIStaticModel::~EIStaticModel(class EIStaticModel * const this /* r30 */) {
+// this: r30
+EIStaticModel::~EIStaticModel() {
     // References
     // -> struct [anonymous] __vt__13EIStaticModel;
 }
 
 // Range: 0x80086F8C -> 0x80086FD8
-void EIStaticModel::Write(class EIStaticModel * const this /* r30 */, class EStream & s /* r31 */) {}
+// this: r30
+void EIStaticModel::Write(class EStream & s /* r31 */) {}
 
 // Range: 0x80086FD8 -> 0x80087044
-void EIStaticModel::Read(class EIStaticModel * const this /* r30 */, class EStream & s /* r31 */) {}
+// this: r30
+void EIStaticModel::Read(class EStream & s /* r31 */) {}
 
 // Range: 0x80087044 -> 0x80087054
-void EIStaticModel::GetBoundSphere(class EIStaticModel * const this /* r5 */) {}
+// this: r5
+void EIStaticModel::GetBoundSphere() {}
 
 // Range: 0x80087054 -> 0x80087134
-void EIStaticModel::Setup(class EIStaticModel * const this /* r29 */, class EInstance * shadowOwner /* r30 */, class EAnimController * pAC /* r31 */) {}
+// this: r29
+void EIStaticModel::Setup(class EInstance * shadowOwner /* r30 */, class EAnimController * pAC /* r31 */) {}
 
 // Range: 0x80087134 -> 0x800871D4
-void EIStaticModel::DeallocateModel(class EIStaticModel * const this /* r29 */) {
+// this: r29
+void EIStaticModel::DeallocateModel() {
     // Local variables
     int i; // r30
 }
 
 // Range: 0x800871D4 -> 0x80087234
-void EIStaticModel::SetModel(class EIStaticModel * const this /* r29 */, class EInstance * shadowOwner /* r30 */, class EAnimController * pAC /* r31 */) {}
+// this: r29
+void EIStaticModel::SetModel(class EInstance * shadowOwner /* r30 */, class EAnimController * pAC /* r31 */) {}
 
 // Range: 0x80087234 -> 0x800872B0
-void EIStaticModel::SetOrient(class EIStaticModel * const this /* r30 */, const class EMat4 & mOrient /* r31 */) {
+// this: r30
+void EIStaticModel::SetOrient(const class EMat4 & mOrient /* r31 */) {
     // Local variables
     float scaler; // f0
 }
 
 // Range: 0x800872B0 -> 0x800872F8
-void EIStaticModel::SlamOrient(class EIStaticModel * const this /* r30 */, const class EMat4 & mOrient2 /* r31 */) {}
+// this: r30
+void EIStaticModel::SlamOrient(const class EMat4 & mOrient2 /* r31 */) {}
 
 // Range: 0x800872F8 -> 0x80087498
-void EIStaticModel::RegisterFloor(class EIStaticModel * const this /* r31 */) {
+// this: r31
+void EIStaticModel::RegisterFloor() {
     // Local variables
     int cSubModel; // r27
     class ESubModel * pSubModel; // r26
@@ -68,7 +79,8 @@ void EIStaticModel::RegisterFloor(class EIStaticModel * const this /* r31 */) {
 }
 
 // Range: 0x80087498 -> 0x800875BC
-void EIStaticModel::SetupModel(class EIStaticModel * const this /* r29 */, class EInstance * shadowOwner /* r30 */, class EAnimController * pAC /* r31 */) {
+// this: r29
+void EIStaticModel::SetupModel(class EInstance * shadowOwner /* r30 */, class EAnimController * pAC /* r31 */) {
     // Local variables
     float prevScaler; // f0
     float newScaler; // f0
@@ -78,7 +90,8 @@ void EIStaticModel::SetupModel(class EIStaticModel * const this /* r29 */, class
 }
 
 // Range: 0x800875BC -> 0x8008776C
-void EIStaticModel::BuildDigests(class EIStaticModel * const this /* r31 */) {
+// this: r31
+void EIStaticModel::BuildDigests() {
     // Local variables
     class DigestGeomShaderPtr * digest; // r28
     int cSubModel; // r27
@@ -91,7 +104,8 @@ void EIStaticModel::BuildDigests(class EIStaticModel * const this /* r31 */) {
 }
 
 // Range: 0x8008776C -> 0x800878C4
-void EIStaticModel::SetupBounds(class EIStaticModel * const this /* r31 */) {
+// this: r31
+void EIStaticModel::SetupBounds() {
     // Local variables
     class EBound3 b; // r1+0x38
     class EVec3 vCenter; // r1+0x2C
@@ -103,7 +117,8 @@ void EIStaticModel::SetupBounds(class EIStaticModel * const this /* r31 */) {
 unsigned int EIStaticModel::VisibilityTest(class E3DWindow & win /* r31 */) {}
 
 // Range: 0x80087908 -> 0x80087AE8
-void EIStaticModel::Draw(class EIStaticModel * const this /* r27 */, struct ELevelDrawData & renderParam /* r28 */) {
+// this: r27
+void EIStaticModel::Draw(struct ELevelDrawData & renderParam /* r28 */) {
     // Local variables
     unsigned char isAlphaFadeOn; // r31
     struct ELights * pLights; // r26
@@ -115,14 +130,16 @@ void EIStaticModel::Draw(class EIStaticModel * const this /* r27 */, struct ELev
 }
 
 // Range: 0x80087AE8 -> 0x80087BE8
-void EIStaticModel::DrawAsShadow(class EIStaticModel * const this /* r30 */, struct ELevelDrawData & renderParam /* r29 */) {
+// this: r30
+void EIStaticModel::DrawAsShadow(struct ELevelDrawData & renderParam /* r29 */) {
     // Local variables
     const class DigestGeomShaderPtr * pDigest; // r31
     int nDigest; // r30
 }
 
 // Range: 0x80087BE8 -> 0x80087D54
-void EIStaticModel::DrawShadow(class EIStaticModel * const this /* r30 */, struct ELevelDrawData & renderParam /* r31 */) {
+// this: r30
+void EIStaticModel::DrawShadow(struct ELevelDrawData & renderParam /* r31 */) {
     // Local variables
     signed short location; // r1+0xA
     signed short lightLoc; // r1+0x8
@@ -138,7 +155,8 @@ void EIStaticModel::AnimOrderTableCallback(struct ELevelDrawData & renderParam /
 }
 
 // Range: 0x80087DD0 -> 0x80087EA8
-void EIStaticModel::ChangeShader(class EIStaticModel * const this /* r24 */, unsigned int oldId /* r25 */, unsigned int newId /* r26 */) {
+// this: r24
+void EIStaticModel::ChangeShader(unsigned int oldId /* r25 */, unsigned int newId /* r26 */) {
     // Local variables
     class DigestGeomShaderPtr * digest; // r30
     int cSubModel; // r29
@@ -151,16 +169,19 @@ void EIStaticModel::ChangeShader(class EIStaticModel * const this /* r24 */, uns
 }
 
 // Range: 0x80087EA8 -> 0x80087F3C
-void EIStaticModel::RebuildShaders(class EIStaticModel * const this /* r29 */) {
+// this: r29
+void EIStaticModel::RebuildShaders() {
     // Local variables
     int i; // r30
 }
 
 // Range: 0x80087F3C -> 0x80087F88
-void EIStaticModel::RealizeShaderTuning(class EIStaticModel * const this /* r31 */) {}
+// this: r31
+void EIStaticModel::RealizeShaderTuning() {}
 
 // Range: 0x80087F88 -> 0x800882B8
-void EIStaticModel::ReplaceBaseTexture(class EIStaticModel * const this /* r14 */, class ERTexture * pTexture /* r15 */, unsigned int altShaderID /* r16 */, class ERTexture * pAltTexture /* r17 */, enum ERenderPassReplaceTexture eReplaceRenderPassTexture /* r18 */) {
+// this: r14
+void EIStaticModel::ReplaceBaseTexture(class ERTexture * pTexture /* r15 */, unsigned int altShaderID /* r16 */, class ERTexture * pAltTexture /* r17 */, enum ERenderPassReplaceTexture eReplaceRenderPassTexture /* r18 */) {
     // Local variables
     class DigestGeomShaderPtr * pDigest; // r27
     class ERShader * pOverrideShader; // r26
@@ -192,7 +213,8 @@ void EIStaticModel::ModifyColor() {}
 unsigned int EIStaticModel::GetModifiableColor() {}
 
 // Range: 0x800882E0 -> 0x80088424
-void EIStaticModel::DrawImmediate(class EIStaticModel * const this /* r30 */, class ERC * prc /* r31 */, class EAnimController * pAC /* r23 */) {
+// this: r30
+void EIStaticModel::DrawImmediate(class ERC * prc /* r31 */, class EAnimController * pAC /* r23 */) {
     // Local variables
     int nSubModels; // r0
     class ESubModel * pSubModel; // r27
@@ -204,7 +226,8 @@ void EIStaticModel::DrawImmediate(class EIStaticModel * const this /* r30 */, cl
 }
 
 // Range: 0x80088424 -> 0x8008853C
-void EIStaticModel::DrawImmediateNoShader(class EIStaticModel * const this /* r26 */, class ERC * prc /* r24 */, class EAnimController * pAC /* r25 */) {
+// this: r26
+void EIStaticModel::DrawImmediateNoShader(class ERC * prc /* r24 */, class EAnimController * pAC /* r25 */) {
     // Local variables
     int nSubModels; // r0
     class ESubModel * pSubModel; // r29

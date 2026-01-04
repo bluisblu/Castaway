@@ -14,12 +14,6 @@ void TreeSim::SetError() {}
 class cXPerson * TreeSim::GetPerson() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\target\game\simulator\core\treesim.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x8006699C -> 0x800669AC
-*/
 // Range: 0x8006699C -> 0x800669A4
 class cXMTObject * TreeSim::GetMTObject() {}
 
@@ -27,12 +21,6 @@ class cXMTObject * TreeSim::GetMTObject() {}
 class cXPortal * TreeSim::GetPortal() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\target\game\simulator\core\treesim.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x800A45DC -> 0x800A4634
-*/
 // Range: 0x800A45DC -> 0x800A45E4
 void TreeSim::setPerson() {}
 
@@ -64,12 +52,6 @@ int TreeSim::GetIterations() {}
 void TreeSim::SetNoMainTreeSim() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\target\game\simulator\core\treesim.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x800FC2EC -> 0x800FC314
-*/
 // Range: 0x800FC2EC -> 0x800FC2F4
 void TreeSim::setMTObject() {}
 
@@ -92,12 +74,6 @@ unsigned char TreeSim::IsExecutingInMainSim() {
 class IBaseSimInstance * TreeSim::GetBaseISimInstance() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\target\game\simulator\core\treesim.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x8020F5A4 -> 0x8020F5B4
-*/
 // Range: 0x8020F5A4 -> 0x8020F5AC
 void TreeSim::SetISimInstance() {}
 

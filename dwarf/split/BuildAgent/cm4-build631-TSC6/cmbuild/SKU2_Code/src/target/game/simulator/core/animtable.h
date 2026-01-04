@@ -5,10 +5,11 @@
     Code range: 0x800FB724 -> 0x800FB774
 */
 // Range: 0x800FB724 -> 0x800FB764
-void * AnimTable::~AnimTable(class AnimTable * const this /* r31 */) {}
+// this: r31
+AnimTable::~AnimTable() {}
 
 // Range: 0x800FB764 -> 0x800FB774
-void * AnimTable::AnimTable() {
+AnimTable::AnimTable() {
     // References
     // -> struct [anonymous] __vt__9AnimTable;
 }

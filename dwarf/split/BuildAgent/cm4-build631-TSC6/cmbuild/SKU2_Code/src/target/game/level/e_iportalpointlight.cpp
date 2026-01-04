@@ -11,7 +11,8 @@ float EIPortalPointLight::GetLumina() {
 }
 
 // Range: 0x800860D8 -> 0x80086198
-void * EIPortalPointLight::EIPortalPointLight(class EIPortalPointLight * const this /* r30 */) {
+// this: r30
+EIPortalPointLight::EIPortalPointLight() {
     // Local variables
     class EVec3 vPos; // r1+0x8
 
@@ -25,19 +26,22 @@ void * EIPortalPointLight::EIPortalPointLight(class EIPortalPointLight * const t
 void EIPortalPointLight::SetPortal() {}
 
 // Range: 0x80086208 -> 0x80086284
-void EIPortalPointLight::Write(class EIPortalPointLight * const this /* r30 */, class EStream & s /* r31 */) {
+// this: r30
+void EIPortalPointLight::Write(class EStream & s /* r31 */) {
     // Local variables
     class EVec3 vPos; // r1+0x8
 }
 
 // Range: 0x80086284 -> 0x80086304
-void EIPortalPointLight::Read(class EIPortalPointLight * const this /* r30 */, class EStream & s /* r31 */) {
+// this: r30
+void EIPortalPointLight::Read(class EStream & s /* r31 */) {
     // Local variables
     class EVec3 vPos; // r1+0x8
 }
 
 // Range: 0x80086304 -> 0x8008640C
-void EIPortalPointLight::LightingParameters(class EIPortalPointLight * const this /* r29 */, class EVec3 & vDirectionOut /* r30 */, class EVec3 & vLightColorOut /* r31 */) {
+// this: r29
+void EIPortalPointLight::LightingParameters(class EVec3 & vDirectionOut /* r30 */, class EVec3 & vLightColorOut /* r31 */) {
     // Local variables
     signed short objLoc; // r1+0xE
     signed short objLocOtherSide; // r1+0xC
@@ -46,14 +50,16 @@ void EIPortalPointLight::LightingParameters(class EIPortalPointLight * const thi
 }
 
 // Range: 0x8008640C -> 0x800864B8
-void EIPortalPointLight::Setup(class EIPortalPointLight * const this /* r31 */) {
+// this: r31
+void EIPortalPointLight::Setup() {
     // Local variables
     class EBound3 b; // r1+0x30
     class EVec3 vPos; // r1+0x20
 }
 
 // Range: 0x800864B8 -> 0x800866BC
-void EIPortalPointLight::Update(class EIPortalPointLight * const this /* r31 */) {
+// this: r31
+void EIPortalPointLight::Update() {
     // Local variables
     class EMat4 portalMatrix; // r1+0x28
     class EVec3 vLocalPos; // r1+0x18
@@ -73,7 +79,8 @@ void EIPortalPointLight::Update(class EIPortalPointLight * const this /* r31 */)
 }
 
 // Range: 0x800866BC -> 0x80086734
-unsigned char EIPortalPointLight::IsEnabled(class EIPortalPointLight * const this /* r30 */) {
+// this: r30
+unsigned char EIPortalPointLight::IsEnabled() {
     // Local variables
     signed short objLoc; // r1+0xE
     signed short objLightLoc; // r1+0xC

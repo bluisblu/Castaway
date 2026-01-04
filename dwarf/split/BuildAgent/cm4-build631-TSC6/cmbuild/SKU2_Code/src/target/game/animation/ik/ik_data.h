@@ -26,13 +26,14 @@ void IKData::SetAnimationResID() {}
 void IKData::SetTargetAngle() {}
 
 // Range: 0x8001B2F0 -> 0x8001B328
-void IKData::SetTargetLockPos(class IKData * const this /* r31 */) {}
+// this: r31
+void IKData::SetTargetLockPos() {}
 
 // Range: 0x8001B328 -> 0x8001B350
 unsigned char IKData::IsTargetPosUpdateNeeded() {}
 
 // Range: 0x8001B350 -> 0x8001B384
-void IKData::__dl(void * p /* r31 */) {}
+void IKData::operator delete(void * p /* r31 */) {}
 
 // Range: 0x8001B384 -> 0x8001B38C
 void IKData::SetIsLeft() {}
@@ -41,6 +42,6 @@ void IKData::SetIsLeft() {}
 void IKData::SetIsArm() {}
 
 // Range: 0x8001B394 -> 0x8001B3D4
-void * IKData::__nw(unsigned long size /* r31 */) {}
+void * IKData::operator new(unsigned long size /* r31 */) {}
 
 

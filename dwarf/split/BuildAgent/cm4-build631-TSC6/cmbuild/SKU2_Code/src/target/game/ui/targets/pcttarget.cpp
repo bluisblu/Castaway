@@ -116,10 +116,11 @@ void PCTTarget::static_FloorPainterCallback() {
 }
 
 // Range: 0x801B854C -> 0x801B856C
-void * cCellInfo::cCellInfo() {}
+cCellInfo::cCellInfo() {}
 
 // Range: 0x801B856C -> 0x801B85F4
-unsigned char cCellInfo::Init(class cCellInfo * const this /* r30 */, class ObjSelector * pObjSelector /* r31 */) {}
+// this: r30
+unsigned char cCellInfo::Init(class ObjSelector * pObjSelector /* r31 */) {}
 
 // Range: 0x801B85F4 -> 0x801B8638
 unsigned char cCellInfo::Init() {}
@@ -152,7 +153,8 @@ unsigned char PCTTarget::InitializeStaticData() {
 }
 
 // Range: 0x801B8898 -> 0x801B9250
-void * PCTTarget::PCTTarget(class PCTTarget * const this /* r30 */, enum ePCTMode pctmode /* r27 */) {
+// this: r30
+PCTTarget::PCTTarget(enum ePCTMode pctmode /* r27 */) {
     // Local variables
     class HUTIO hutio; // r1+0xC
     class EResource * pTemp; // r0
@@ -241,7 +243,8 @@ void * PCTTarget::PCTTarget(class PCTTarget * const this /* r30 */, enum ePCTMod
 }
 
 // Range: 0x801B92AC -> 0x801B94D4
-void * PCTTarget::~PCTTarget(class PCTTarget * const this /* r29 */) {
+// this: r29
+PCTTarget::~PCTTarget() {
     // Local variables
     class ESimsCam * pSimsCam; // r31
     class SimsCameraParameters * pParams; // r4
@@ -253,7 +256,8 @@ void * PCTTarget::~PCTTarget(class PCTTarget * const this /* r29 */) {
 }
 
 // Range: 0x801B94D4 -> 0x801B9B10
-void PCTTarget::SetVariable(class PCTTarget * const this /* r31 */, const char * zVarName /* r30 */, const char * zValue /* r29 */) {
+// this: r31
+void PCTTarget::SetVariable(const char * zVarName /* r30 */, const char * zValue /* r29 */) {
     // Local variables
     int tempint; // r1+0x18
     int scanresult; // r0
@@ -293,7 +297,8 @@ void PCTTarget::SetVariable(class PCTTarget * const this /* r31 */, const char *
 }
 
 // Range: 0x801B9B10 -> 0x801BA1A0
-char * PCTTarget::GetVariable(class PCTTarget * const this /* r29 */, const char * zVarName /* r30 */) {
+// this: r29
+char * PCTTarget::GetVariable(const char * zVarName /* r30 */) {
     // Local variables
     char * pResult; // r31
     const struct PCTTabInfo * pCurrTabInfo; // r3
@@ -333,7 +338,8 @@ char * PCTTarget::GetVariable(class PCTTarget * const this /* r29 */, const char
 }
 
 // Range: 0x801BA1A0 -> 0x801BA8FC
-unsigned short * PCTTarget::GetLocalizable(class PCTTarget * const this /* r31 */, const char * zVarName /* r29 */) {
+// this: r31
+unsigned short * PCTTarget::GetLocalizable(const char * zVarName /* r29 */) {
     // Local variables
     const unsigned short * pString; // r3
     unsigned short widestring[4096]; // r1+0x4B8
@@ -376,7 +382,8 @@ unsigned short * PCTTarget::GetLocalizable(class PCTTarget * const this /* r31 *
 }
 
 // Range: 0x801BA8FC -> 0x801BA99C
-void PCTTarget::Update(class PCTTarget * const this /* r31 */) {
+// this: r31
+void PCTTarget::Update() {
     // Local variables
     enum ePCTInteractorState s; // r0
 }
@@ -385,13 +392,15 @@ void PCTTarget::Update(class PCTTarget * const this /* r31 */) {
 unsigned long PCTTarget::get_cell_info_array_index() {}
 
 // Range: 0x801BA9AC -> 0x801BA9F8
-class cCellInfo * PCTTarget::get_cell_info_at_gridindex(const class PCTTarget * const this /* r31 */) {
+// this: r31
+class cCellInfo * PCTTarget::get_cell_info_at_gridindex() const {
     // Local variables
     unsigned long cellinfoindex; // r0
 }
 
 // Range: 0x801BA9F8 -> 0x801BAAD8
-unsigned char PCTTarget::on_tab_changed(class PCTTarget * const this /* r31 */) {}
+// this: r31
+unsigned char PCTTarget::on_tab_changed() {}
 
 // Range: 0x801BAAD8 -> 0x801BAB80
 static unsigned char filter_object(const struct PCTTabInfo * pTabInfo /* r30 */, class ObjSelector * pObjSelector /* r31 */) {
@@ -400,7 +409,8 @@ static unsigned char filter_object(const struct PCTTabInfo * pTabInfo /* r30 */,
 }
 
 // Range: 0x801BAB80 -> 0x801BAD2C
-unsigned char PCTTarget::on_tab_changed_objects(class PCTTarget * const this /* r29 */, enum ePCTType type /* r30 */) {
+// this: r29
+unsigned char PCTTarget::on_tab_changed_objects(enum ePCTType type /* r30 */) {
     // Local variables
     const struct PCTTabInfo * pCurrTabInfo; // r31
     unsigned long selectorindex; // r26
@@ -412,7 +422,8 @@ unsigned char PCTTarget::on_tab_changed_objects(class PCTTarget * const this /* 
 }
 
 // Range: 0x801BAD2C -> 0x801BAE68
-unsigned char PCTTarget::on_tab_changed_wall(class PCTTarget * const this /* r28 */) {
+// this: r28
+unsigned char PCTTarget::on_tab_changed_wall() {
     // Local variables
     const struct FenceSet & fenceset; // r30
     const struct FenceData * pFenceData; // r5
@@ -427,7 +438,8 @@ unsigned char PCTTarget::on_tab_changed_wall(class PCTTarget * const this /* r28
 static unsigned char filter_wallpaper() {}
 
 // Range: 0x801BAEA0 -> 0x801BB040
-unsigned char PCTTarget::on_tab_changed_wallpaper(class PCTTarget * const this /* r31 */) {
+// this: r31
+unsigned char PCTTarget::on_tab_changed_wallpaper() {
     // Local variables
     const struct PCTTabInfo * pCurrTabInfo; // r28
     const struct WallSet & wallset; // r27
@@ -444,7 +456,8 @@ unsigned char PCTTarget::on_tab_changed_wallpaper(class PCTTarget * const this /
 static unsigned char filter_floor() {}
 
 // Range: 0x801BB09C -> 0x801BB254
-unsigned char PCTTarget::on_tab_changed_floor(class PCTTarget * const this /* r31 */) {
+// this: r31
+unsigned char PCTTarget::on_tab_changed_floor() {
     // Local variables
     const struct PCTTabInfo * pCurrTabInfo; // r27
     const struct FloorSet & floorset; // r26
@@ -458,7 +471,8 @@ unsigned char PCTTarget::on_tab_changed_floor(class PCTTarget * const this /* r3
 }
 
 // Range: 0x801BB254 -> 0x801BB3E8
-unsigned char PCTTarget::on_selection_changed(class PCTTarget * const this /* r28 */) {
+// this: r28
+unsigned char PCTTarget::on_selection_changed() {
     // Local variables
     unsigned long index; // r29
     class cCellInfo * pCellInfo; // r0
@@ -470,7 +484,8 @@ unsigned char PCTTarget::on_selection_changed(class PCTTarget * const this /* r2
 }
 
 // Range: 0x801BB3E8 -> 0x801BB4C4
-unsigned char PCTTarget::on_PCT_EnterPlaceMode(class PCTTarget * const this /* r29 */) {
+// this: r29
+unsigned char PCTTarget::on_PCT_EnterPlaceMode() {
     // Local variables
     class cCellInfo * pCellInfo; // r30
     float firevalue; // f0
@@ -480,7 +495,8 @@ unsigned char PCTTarget::on_PCT_EnterPlaceMode(class PCTTarget * const this /* r
 }
 
 // Range: 0x801BB4C4 -> 0x801BB618
-unsigned char PCTTarget::on_PCT_SetVisible(class PCTTarget * const this /* r30 */) {
+// this: r30
+unsigned char PCTTarget::on_PCT_SetVisible() {
     // Local variables
     class cCellInfo * pCellInfo; // r0
 
@@ -491,7 +507,8 @@ unsigned char PCTTarget::on_PCT_SetVisible(class PCTTarget * const this /* r30 *
 }
 
 // Range: 0x801BB618 -> 0x801BB718
-unsigned char PCTTarget::update_object_shader(class PCTTarget * const this /* r31 */) {
+// this: r31
+unsigned char PCTTarget::update_object_shader() {
     // Local variables
     unsigned long cellinfoindex; // r0
     class cCellInfo * pCellInfo; // r3
@@ -503,7 +520,8 @@ unsigned char PCTTarget::update_object_shader(class PCTTarget * const this /* r3
 }
 
 // Range: 0x801BB718 -> 0x801BB930
-unsigned char PCTTarget::calc_motive_ratings(class PCTTarget * const this /* r31 */) {
+// this: r31
+unsigned char PCTTarget::calc_motive_ratings() {
     // Local variables
     unsigned long cellinfoindex; // r0
     class cCellInfo * pCellInfo; // r3
@@ -541,7 +559,8 @@ unsigned char PCTTarget::can_afford_selection() {
 unsigned char PCTTarget::on_PCT_ShowHelp() {}
 
 // Range: 0x801BBBF0 -> 0x801BBD8C
-unsigned char PCTTarget::enter_tool_mode(class PCTTarget * const this /* r29 */, enum ePCTType t /* r30 */, unsigned char bSetStartPos /* r31 */) {
+// this: r29
+unsigned char PCTTarget::enter_tool_mode(enum ePCTType t /* r30 */, unsigned char bSetStartPos /* r31 */) {
     // Local variables
     unsigned char result; // r31
     struct GrabManipulatorParams params; // r1+0x8
@@ -549,7 +568,8 @@ unsigned char PCTTarget::enter_tool_mode(class PCTTarget * const this /* r29 */,
 }
 
 // Range: 0x801BBD8C -> 0x801BC248
-unsigned char PCTTarget::GrabManipulatorCallback(class PCTTarget * const this /* r31 */, const struct CallbackData * pData /* r30 */) {
+// this: r31
+unsigned char PCTTarget::GrabManipulatorCallback(const struct CallbackData * pData /* r30 */) {
     // Local variables
     const struct CallbackData * pGrabData; // r0
     int price; // r0
@@ -562,13 +582,16 @@ unsigned char PCTTarget::GrabManipulatorCallback(class PCTTarget * const this /*
 }
 
 // Range: 0x801BC248 -> 0x801BC2C8
-void PCTTarget::delete_dialog_selection_callback(class PCTTarget * const this /* r31 */) {}
+// this: r31
+void PCTTarget::delete_dialog_selection_callback() {}
 
 // Range: 0x801BC2C8 -> 0x801BC398
-void PCTTarget::sell_dialog_selection_callback(class PCTTarget * const this /* r31 */) {}
+// this: r31
+void PCTTarget::sell_dialog_selection_callback() {}
 
 // Range: 0x801BC398 -> 0x801BC5DC
-unsigned char PCTTarget::enter_place_mode(class PCTTarget * const this /* r29 */, class cCellInfo * pCellInfo /* r30 */) {
+// this: r29
+unsigned char PCTTarget::enter_place_mode(class cCellInfo * pCellInfo /* r30 */) {
     // Local variables
     unsigned char result; // r31
     struct BBHPriceInfo priceInfo; // r1+0x18
@@ -578,7 +601,8 @@ unsigned char PCTTarget::enter_place_mode(class PCTTarget * const this /* r29 */
 }
 
 // Range: 0x801BC5DC -> 0x801BC6C0
-unsigned char PCTTarget::PickedUpObject(class PCTTarget * const this /* r27 */, class cXObject * pObject /* r28 */, unsigned char bIsCloneMode /* r29 */) {
+// this: r27
+unsigned char PCTTarget::PickedUpObject(class cXObject * pObject /* r28 */, unsigned char bIsCloneMode /* r29 */) {
     // Local variables
     unsigned char showpig; // r31
     int price; // r30
@@ -587,7 +611,8 @@ unsigned char PCTTarget::PickedUpObject(class PCTTarget * const this /* r27 */, 
 }
 
 // Range: 0x801BC6C0 -> 0x801BC8A8
-unsigned char PCTTarget::PlaceModeCallback(class PCTTarget * const this /* r31 */, const struct CallbackData * pData /* r27 */) {
+// this: r31
+unsigned char PCTTarget::PlaceModeCallback(const struct CallbackData * pData /* r27 */) {
     // Local variables
     const struct CallbackData * pPlaceData; // r0
     class ObjSelector * pObjSelector; // r29
@@ -601,7 +626,8 @@ unsigned char PCTTarget::PlaceModeCallback(class PCTTarget * const this /* r31 *
 }
 
 // Range: 0x801BC8A8 -> 0x801BCA5C
-unsigned char PCTTarget::HutPlaceModeCallback(class PCTTarget * const this /* r27 */, const struct CallbackData * pData /* r28 */) {
+// this: r27
+unsigned char PCTTarget::HutPlaceModeCallback(const struct CallbackData * pData /* r28 */) {
     // Local variables
     const struct CallbackData * pPlaceData; // r0
     class ObjSelector * pObjSelector; // r30
@@ -617,14 +643,16 @@ unsigned char PCTTarget::HutPlaceModeCallback(class PCTTarget * const this /* r2
 void PCTTarget::NotifyWantsFearsSystemOfPurchase() {}
 
 // Range: 0x801BCA60 -> 0x801BCBC8
-unsigned char PCTTarget::enter_wall_mode(class PCTTarget * const this /* r29 */, class cCellInfo * pCellInfo /* r30 */, unsigned char bIsPlaceMode /* r31 */) {
+// this: r29
+unsigned char PCTTarget::enter_wall_mode(class cCellInfo * pCellInfo /* r30 */, unsigned char bIsPlaceMode /* r31 */) {
     // Local variables
     struct WallManipulatorParams params; // r1+0x8
     unsigned char result; // r31
 }
 
 // Range: 0x801BCBC8 -> 0x801BCED4
-unsigned char PCTTarget::WallManipulatorCallback(class PCTTarget * const this /* r31 */, const struct CallbackData * pData /* r30 */) {
+// this: r31
+unsigned char PCTTarget::WallManipulatorCallback(const struct CallbackData * pData /* r30 */) {
     // Local variables
     int value; // r30
     int newfunds; // r0
@@ -639,7 +667,8 @@ unsigned char PCTTarget::WallManipulatorCallback(class PCTTarget * const this /*
 }
 
 // Range: 0x801BCED4 -> 0x801BCFE4
-struct BBHPriceInfo PCTTarget::calc_wall_value(struct BBHPriceInfo * retInfo /* r31 */, class PCTTarget * const this /* r29 */, const struct CallbackData * pData /* r28 */) {
+// this: r31
+struct BBHPriceInfo PCTTarget::calc_wall_value(class PCTTarget * const this /* r29 */, const struct CallbackData * pData /* r28 */) {
     // Local variables
     const struct CallbackData * pWallData; // r0
     const class vector & fenceinfolist; // r30
@@ -659,14 +688,16 @@ int get_price_from_wall_style(const struct FenceSet & fenceset /* r29 */, enum W
 }
 
 // Range: 0x801BD074 -> 0x801BD108
-unsigned char PCTTarget::enter_hut_mode(class PCTTarget * const this /* r30 */, unsigned char bIsPlaceMode /* r31 */) {
+// this: r30
+unsigned char PCTTarget::enter_hut_mode(unsigned char bIsPlaceMode /* r31 */) {
     // Local variables
     struct HutPlaceManipulatorParams params; // r1+0x8
     unsigned char result; // r31
 }
 
 // Range: 0x801BD108 -> 0x801BD23C
-unsigned char PCTTarget::enter_wallpaper_mode(class PCTTarget * const this /* r28 */, class cCellInfo * pCellInfo /* r29 */, unsigned char bIsPlaceMode /* r30 */) {
+// this: r28
+unsigned char PCTTarget::enter_wallpaper_mode(class cCellInfo * pCellInfo /* r29 */, unsigned char bIsPlaceMode /* r30 */) {
     // Local variables
     struct WallPainterParams params; // r1+0xC
     struct WallSet paperSet; // r1+0x8
@@ -677,7 +708,8 @@ unsigned char PCTTarget::enter_wallpaper_mode(class PCTTarget * const this /* r2
 }
 
 // Range: 0x801BD23C -> 0x801BD350
-struct BBHPriceInfo PCTTarget::calc_wallpaper_value(struct BBHPriceInfo * retInfo /* r31 */, class PCTTarget * const this /* r28 */, const struct CallbackData * pData /* r27 */) {
+// this: r31
+struct BBHPriceInfo PCTTarget::calc_wallpaper_value(class PCTTarget * const this /* r28 */, const struct CallbackData * pData /* r27 */) {
     // Local variables
     const struct CallbackData * pWallpaperData; // r0
     const struct WallSet & wallpaperset; // r29
@@ -691,7 +723,8 @@ struct BBHPriceInfo PCTTarget::calc_wallpaper_value(struct BBHPriceInfo * retInf
 }
 
 // Range: 0x801BD350 -> 0x801BD648
-unsigned char PCTTarget::WallPainterCallback(class PCTTarget * const this /* r31 */, const struct CallbackData * pData /* r30 */) {
+// this: r31
+unsigned char PCTTarget::WallPainterCallback(const struct CallbackData * pData /* r30 */) {
     // Local variables
     struct BBHPriceInfo priceInfo; // r1+0x18
     int newfunds; // r3
@@ -705,7 +738,8 @@ unsigned char PCTTarget::WallPainterCallback(class PCTTarget * const this /* r31
 }
 
 // Range: 0x801BD648 -> 0x801BD768
-unsigned char PCTTarget::enter_floor_mode(class PCTTarget * const this /* r28 */, class cCellInfo * pCellInfo /* r29 */, unsigned char bIsPlaceMode /* r30 */) {
+// this: r28
+unsigned char PCTTarget::enter_floor_mode(class cCellInfo * pCellInfo /* r29 */, unsigned char bIsPlaceMode /* r30 */) {
     // Local variables
     struct FloorPainterParams params; // r1+0x10
     struct FloorSet floorSet; // r1+0x8
@@ -716,7 +750,8 @@ unsigned char PCTTarget::enter_floor_mode(class PCTTarget * const this /* r28 */
 }
 
 // Range: 0x801BD768 -> 0x801BD9D4
-unsigned char PCTTarget::FloorPainterCallback(class PCTTarget * const this /* r31 */, const struct CallbackData * pData /* r30 */) {
+// this: r31
+unsigned char PCTTarget::FloorPainterCallback(const struct CallbackData * pData /* r30 */) {
     // Local variables
     struct BBHPriceInfo priceInfo; // r1+0x18
     int newfunds; // r0
@@ -729,7 +764,8 @@ unsigned char PCTTarget::FloorPainterCallback(class PCTTarget * const this /* r3
 }
 
 // Range: 0x801BD9D4 -> 0x801BDB24
-struct BBHPriceInfo PCTTarget::calc_floor_tile_value(struct BBHPriceInfo * retInfo /* r29 */, class PCTTarget * const this /* r30 */, const struct CallbackData * pData /* r31 */) {
+// this: r29
+struct BBHPriceInfo PCTTarget::calc_floor_tile_value(class PCTTarget * const this /* r30 */, const struct CallbackData * pData /* r31 */) {
     // Local variables
     const struct CallbackData * pFloorData; // r0
     int result; // r27
@@ -761,7 +797,8 @@ enum ePCTInteractorState PCTTarget::get_interactor_state() {
 }
 
 // Range: 0x801BDCC0 -> 0x801BDED8
-unsigned char PCTTarget::onToolMenuItemSelected(class PCTTarget * const this /* r30 */) {
+// this: r30
+unsigned char PCTTarget::onToolMenuItemSelected() {
     // Local variables
     unsigned char result; // r31
 
@@ -778,13 +815,16 @@ unsigned char PCTTarget::onToolMenuItemSelected(class PCTTarget * const this /* 
 }
 
 // Range: 0x801BDED8 -> 0x801BDF48
-unsigned char PCTTarget::exit_build_buy(class PCTTarget * const this /* r31 */) {}
+// this: r31
+unsigned char PCTTarget::exit_build_buy() {}
 
 // Range: 0x801BDF48 -> 0x801BDFA0
-unsigned char PCTTarget::on_undo(class PCTTarget * const this /* r31 */) {}
+// this: r31
+unsigned char PCTTarget::on_undo() {}
 
 // Range: 0x801BDFA0 -> 0x801BE008
-unsigned char PCTTarget::launch_bbs(class PCTTarget * const this /* r31 */) {
+// this: r31
+unsigned char PCTTarget::launch_bbs() {
     // References
     // -> class EGlobal _globals;
 }
@@ -806,7 +846,8 @@ static unsigned int get_title_icon() {
 }
 
 // Range: 0x801BE0BC -> 0x801BE17C
-unsigned char PCTTarget::install_bbs_icons(class PCTTarget * const this /* r28 */, const struct PCTTabInfo * pTabInfo /* r29 */, int count /* r30 */) {
+// this: r28
+unsigned char PCTTarget::install_bbs_icons(const struct PCTTabInfo * pTabInfo /* r29 */, int count /* r30 */) {
     // Local variables
     unsigned int titleiconid; // r0
     int index; // r31

@@ -5,31 +5,35 @@
     Code range: 0x80140EC0 -> 0x801414F0
 */
 // Range: 0x80140EC0 -> 0x80140EE8
-unsigned char HashIterator::__ne() {}
+unsigned char HashIterator::operator!=() {}
 
 // Range: 0x80140EE8 -> 0x80140F28
-unsigned char HashIterator::__eq() {}
+unsigned char HashIterator::operator==() {}
 
 // Range: 0x80140F28 -> 0x80140F9C
-class ObjSelector * * HashIterator::__pp() {}
+class ObjSelector * * HashIterator::operator++() {}
 
 // Range: 0x80140F9C -> 0x80140FA4
-class ObjSelector * * HashIterator::__opPP11ObjSelector() {}
+class ObjSelector * * HashIterator::operator ObjSelector**() {}
 
 // Range: 0x80140FC0 -> 0x8014103C
-struct HashIterator HashList::begin(struct HashIterator * result /* r30 */, struct HashList * const this /* r31 */) {}
+// this: r30
+struct HashIterator HashList::begin(struct HashList * const this /* r31 */) {}
 
 // Range: 0x8014103C -> 0x80141080
-struct HashIterator HashList::end(struct HashIterator * result /* r30 */, struct HashList * const this /* r31 */) {}
+// this: r30
+struct HashIterator HashList::end(struct HashList * const this /* r31 */) {}
 
 // Range: 0x80141080 -> 0x80141090
-void * HashIterator::HashIterator() {}
+HashIterator::HashIterator() {}
 
 // Range: 0x80141090 -> 0x801410E4
-void * HashList::~HashList(struct HashList * const this /* r30 */) {}
+// this: r30
+HashList::~HashList() {}
 
 // Range: 0x801410E4 -> 0x80141130
-void HashList::clear(struct HashList * const this /* r30 */) {
+// this: r30
+void HashList::clear() {
     // Local variables
     int i; // r31
 }
@@ -42,10 +46,12 @@ void HashList::resetHash() {
 }
 
 // Range: 0x80141184 -> 0x801411BC
-void * HashList::HashList(struct HashList * const this /* r31 */) {}
+// this: r31
+HashList::HashList() {}
 
 // Range: 0x801411BC -> 0x8014121C
-int HashList::size(const struct HashList * const this /* r29 */) {
+// this: r29
+int HashList::size() const {
     // Local variables
     int i; // r31
     int result; // r30
@@ -59,39 +65,45 @@ int HashList::getSize() {
 }
 
 // Range: 0x80141244 -> 0x80141290
-class ObjSelector * HashList::findItem(struct HashList * const this /* r30 */, const int & cmp /* r31 */) {
+// this: r30
+class ObjSelector * HashList::findItem(const int & cmp /* r31 */) {
     // Local variables
     unsigned int key; // r0
 }
 
 // Range: 0x80141290 -> 0x8014131C
-class ObjSelector * HashList::findItem(struct HashList * const this /* r27 */, const int & cmp /* r28 */) {
+// this: r27
+class ObjSelector * HashList::findItem(const int & cmp /* r28 */) {
     // Local variables
     class ObjSelector * node; // r30
     class ObjSelector * prev; // r29
 }
 
 // Range: 0x8014131C -> 0x80141378
-struct HashIterator HashList::find(struct HashList * const this /* r30 */, const int & cmp /* r31 */) {
+// this: r30
+struct HashIterator HashList::find(const int & cmp /* r31 */) {
     // Local variables
     unsigned int key; // r0
 }
 
 // Range: 0x80141378 -> 0x80141404
-struct HashIterator HashList::find(struct HashIterator * result /* r27 */, struct HashList * const this /* r28 */, const int & cmp /* r29 */, unsigned int key /* r30 */) {
+// this: r27
+struct HashIterator HashList::find(struct HashList * const this /* r28 */, const int & cmp /* r29 */, unsigned int key /* r30 */) {
     // Local variables
     class ObjSelector * node; // r31
 }
 
 // Range: 0x80141404 -> 0x80141490
-void HashList::removeNode(struct HashList * const this /* r30 */, class ObjSelector * node /* r31 */) {
+// this: r30
+void HashList::removeNode(class ObjSelector * node /* r31 */) {
     // Local variables
     unsigned int key; // r0
     class ObjSelector * prev; // r4
 }
 
 // Range: 0x80141490 -> 0x801414DC
-void HashList::addNode(struct HashList * const this /* r30 */, class ObjSelector * node /* r31 */) {
+// this: r30
+void HashList::addNode(class ObjSelector * node /* r31 */) {
     // Local variables
     unsigned int key; // r0
 }
@@ -100,17 +112,13 @@ void HashList::addNode(struct HashList * const this /* r30 */, class ObjSelector
 void HashList::addNode() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\target\game\simulator\utility\thashlist.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x80212A1C -> 0x80212D2C
-*/
 // Range: 0x80212A1C -> 0x80212A70
-void * HashList::~HashList(struct HashList * const this /* r30 */) {}
+// this: r30
+HashList::~HashList() {}
 
 // Range: 0x80212A70 -> 0x80212ABC
-void HashList::clear(struct HashList * const this /* r30 */) {
+// this: r30
+void HashList::clear() {
     // Local variables
     int i; // r31
 }
@@ -123,30 +131,33 @@ void HashList::resetHash() {
 }
 
 // Range: 0x80212B10 -> 0x80212B48
-void * HashList::HashList(struct HashList * const this /* r31 */) {}
+// this: r31
+HashList::HashList() {}
 
 // Range: 0x80212B48 -> 0x80212B5C
 void HashList::addNode() {}
 
 // Range: 0x80212B5C -> 0x80212B64
-class ECheatLookup * * HashIterator::__opPP12ECheatLookup() {}
+class ECheatLookup * * HashIterator::operator ECheatLookup**() {}
 
 // Range: 0x80212B64 -> 0x80212B8C
-unsigned char HashIterator::__ne() {}
+unsigned char HashIterator::operator!=() {}
 
 // Range: 0x80212B8C -> 0x80212BCC
-unsigned char HashIterator::__eq() {}
+unsigned char HashIterator::operator==() {}
 
 // Range: 0x80212BCC -> 0x80212C10
-struct HashIterator HashList::end(struct HashIterator * result /* r30 */, struct HashList * const this /* r31 */) {}
+// this: r30
+struct HashIterator HashList::end(struct HashList * const this /* r31 */) {}
 
 // Range: 0x80212C10 -> 0x80212C20
-void * HashIterator::HashIterator() {}
+HashIterator::HashIterator() {}
 
 // Range: 0x80212C3C -> 0x80212CB0
-class ECheatLookup * * HashIterator::__pp() {}
+class ECheatLookup * * HashIterator::operator++() {}
 
 // Range: 0x80212CB0 -> 0x80212D2C
-struct HashIterator HashList::begin(struct HashIterator * result /* r30 */, struct HashList * const this /* r31 */) {}
+// this: r30
+struct HashIterator HashList::begin(struct HashList * const this /* r31 */) {}
 
 

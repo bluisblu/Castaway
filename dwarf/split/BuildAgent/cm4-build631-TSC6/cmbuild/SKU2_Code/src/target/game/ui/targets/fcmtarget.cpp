@@ -5,24 +5,28 @@
     Code range: 0x801A4F14 -> 0x801A588C
 */
 // Range: 0x801A4F14 -> 0x801A5128
-void * FCMTarget::FCMTarget(class FCMTarget * const this /* r29 */) {
+// this: r29
+FCMTarget::FCMTarget() {
     // References
     // -> class EGlobal _globals;
     // -> struct [anonymous] __vt__9FCMTarget;
 }
 
 // Range: 0x801A5128 -> 0x801A51B8
-void * FCMTarget::~FCMTarget(class FCMTarget * const this /* r30 */) {
+// this: r30
+FCMTarget::~FCMTarget() {
     // References
     // -> class EGlobal _globals;
     // -> struct [anonymous] __vt__9FCMTarget;
 }
 
 // Range: 0x801A51B8 -> 0x801A52B4
-void FCMTarget::SetVariable(class FCMTarget * const this /* r29 */, const char * szCommand /* r30 */) {}
+// this: r29
+void FCMTarget::SetVariable(const char * szCommand /* r30 */) {}
 
 // Range: 0x801A52B4 -> 0x801A533C
-char * FCMTarget::GetVariable(class FCMTarget * const this /* r29 */, const char * szVar /* r30 */) {
+// this: r29
+char * FCMTarget::GetVariable(const char * szVar /* r30 */) {
     // Local variables
     char * retStr; // r31
 }
@@ -35,10 +39,12 @@ unsigned short * FCMTarget::GetLocalizable() {
 }
 
 // Range: 0x801A53BC -> 0x801A54A0
-void FCMTarget::Update(class FCMTarget * const this /* r31 */) {}
+// this: r31
+void FCMTarget::Update() {}
 
 // Range: 0x801A54A0 -> 0x801A5608
-void FCMTarget::ShowFireCodeMeter(class FCMTarget * const this /* r28 */) {
+// this: r28
+void FCMTarget::ShowFireCodeMeter() {
     // Local variables
     float percent; // f1
     unsigned int height; // r30
@@ -52,7 +58,8 @@ void FCMTarget::ShowFireCodeMeter(class FCMTarget * const this /* r28 */) {
 void FCMTarget::HideFireCodeMeter() {}
 
 // Range: 0x801A5614 -> 0x801A5824
-void FCMTarget::UpdateFireCodeMeter(class FCMTarget * const this /* r30 */) {
+// this: r30
+void FCMTarget::UpdateFireCodeMeter() {
     // Local variables
     int meterLevel; // r0
     float percent; // f1

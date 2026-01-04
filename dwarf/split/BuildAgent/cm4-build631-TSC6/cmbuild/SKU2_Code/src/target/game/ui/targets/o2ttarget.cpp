@@ -5,7 +5,8 @@
     Code range: 0x801B5B30 -> 0x801B7F5C
 */
 // Range: 0x801B5B30 -> 0x801B6134
-void * O2TTarget::O2TTarget(class O2TTarget * const this /* r30 */) {
+// this: r30
+O2TTarget::O2TTarget() {
     // References
     // -> class AptViewer * _gpAptViewer;
     // -> class EGlobal _globals;
@@ -41,7 +42,8 @@ void * O2TTarget::O2TTarget(class O2TTarget * const this /* r30 */) {
 }
 
 // Range: 0x801B6134 -> 0x801B6270
-void * O2TTarget::~O2TTarget(class O2TTarget * const this /* r30 */) {
+// this: r30
+O2TTarget::~O2TTarget() {
     // References
     // -> class AptViewer * _gpAptViewer;
     // -> class O2TTarget * m_pSingletonPtr;
@@ -50,7 +52,8 @@ void * O2TTarget::~O2TTarget(class O2TTarget * const this /* r30 */) {
 }
 
 // Range: 0x801B6270 -> 0x801B62F0
-void O2TTarget::Update(class O2TTarget * const this /* r31 */) {
+// this: r31
+void O2TTarget::Update() {
     // Local variables
     class EVec2 dummy; // r1+0x8
 
@@ -60,7 +63,8 @@ void O2TTarget::Update(class O2TTarget * const this /* r31 */) {
 }
 
 // Range: 0x801B62F0 -> 0x801B6A8C
-void O2TTarget::SetVariable(class O2TTarget * const this /* r28 */, const char * szCommand /* r29 */, const char * szParams /* r31 */) {
+// this: r28
+void O2TTarget::SetVariable(const char * szCommand /* r29 */, const char * szParams /* r31 */) {
     // Local variables
     int state; // r0
     float fVal; // f0
@@ -103,7 +107,8 @@ void O2TTarget::SetVariable(class O2TTarget * const this /* r28 */, const char *
 }
 
 // Range: 0x801B6A8C -> 0x801B705C
-char * O2TTarget::GetVariable(class O2TTarget * const this /* r28 */, const char * szVar /* r29 */) {
+// this: r28
+char * O2TTarget::GetVariable(const char * szVar /* r29 */) {
     // Local variables
     char * retStr; // r31
 
@@ -127,7 +132,8 @@ char * O2TTarget::GetVariable(class O2TTarget * const this /* r28 */, const char
 }
 
 // Range: 0x801B705C -> 0x801B7418
-unsigned short * O2TTarget::GetLocalizable(class O2TTarget * const this /* r28 */, const char * szVar /* r29 */) {
+// this: r28
+unsigned short * O2TTarget::GetLocalizable(const char * szVar /* r29 */) {
     // Local variables
     unsigned short * wideStr; // r30
     const unsigned short * const pString; // r4
@@ -139,19 +145,22 @@ unsigned short * O2TTarget::GetLocalizable(class O2TTarget * const this /* r28 *
 }
 
 // Range: 0x801B7418 -> 0x801B7454
-void O2TTarget::SetTopLevelState(class O2TTarget * const this /* r31 */) {
+// this: r31
+void O2TTarget::SetTopLevelState() {
     // Local variables
     int state; // r0
 }
 
 // Range: 0x801B7454 -> 0x801B74D4
-void O2TTarget::Shutdown(class O2TTarget * const this /* r30 */) {
+// this: r30
+void O2TTarget::Shutdown() {
     // References
     // -> class EGlobal _globals;
 }
 
 // Range: 0x801B74D4 -> 0x801B7680
-void O2TTarget::OnStateChange(class O2TTarget * const this /* r30 */) {
+// this: r30
+void O2TTarget::OnStateChange() {
     // Local variables
     unsigned char audio_modified; // r0
     unsigned char options_modified; // r0
@@ -184,13 +193,15 @@ unsigned char O2TTarget::GameOptionsModified() {
 }
 
 // Range: 0x801B7780 -> 0x801B78CC
-void O2TTarget::SpawnSaveSettingsDialog(class O2TTarget * const this /* r28 */) {
+// this: r28
+void O2TTarget::SpawnSaveSettingsDialog() {
     // References
     // -> class EGlobal _globals;
 }
 
 // Range: 0x801B78CC -> 0x801B795C
-void O2TTarget::OnSaveSettingsDialogClose(class O2TTarget * const this /* r31 */) {}
+// this: r31
+void O2TTarget::OnSaveSettingsDialogClose() {}
 
 // Range: 0x801B795C -> 0x801B798C
 void O2TTarget::RememberAudioOptions() {
@@ -249,7 +260,8 @@ float O2TTarget::GetScreenYLocal() {}
 signed char O2TTarget::GetScreenYGlobal() {}
 
 // Range: 0x801B7C74 -> 0x801B7D9C
-void O2TTarget::UpdateShaders(class O2TTarget * const this /* r31 */) {
+// this: r31
+void O2TTarget::UpdateShaders() {
     // Local variables
     int value; // r0
 
@@ -260,7 +272,8 @@ void O2TTarget::UpdateShaders(class O2TTarget * const this /* r31 */) {
 }
 
 // Range: 0x801B7D9C -> 0x801B7E4C
-void O2TTarget::ShowHelp(class O2TTarget * const this /* r30 */) {
+// this: r30
+void O2TTarget::ShowHelp() {
     // Local variables
     class UIScreenManager * pUISM; // r4
 
@@ -269,7 +282,8 @@ void O2TTarget::ShowHelp(class O2TTarget * const this /* r30 */) {
 }
 
 // Range: 0x801B7E4C -> 0x801B7EC0
-void O2TTarget::StartScreenWizard(class O2TTarget * const this /* r31 */) {
+// this: r31
+void O2TTarget::StartScreenWizard() {
     // Local variables
     int value; // r0
 }
@@ -278,7 +292,8 @@ void O2TTarget::StartScreenWizard(class O2TTarget * const this /* r31 */) {
 void O2TTarget::ExitScreenWizard() {}
 
 // Range: 0x801B7ED8 -> 0x801B7F24
-void O2TTarget::OnSaveGameComplete(class O2TTarget * const this /* r31 */) {}
+// this: r31
+void O2TTarget::OnSaveGameComplete() {}
 
 // Range: 0x801B7F24 -> 0x801B7F5C
 unsigned char O2TTarget::FlashScreenReady() {

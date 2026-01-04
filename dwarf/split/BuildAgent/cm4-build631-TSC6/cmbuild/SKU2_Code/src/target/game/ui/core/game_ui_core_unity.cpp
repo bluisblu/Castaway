@@ -10,22 +10,20 @@ float SAFE_LEFT; // size: 0x4, address: 0x805DD888
 float SAFE_TOP; // size: 0x4, address: 0x805DD88C
 float SAFE_RIGHT; // size: 0x4, address: 0x805DD890
 float SAFE_BOTTOM; // size: 0x4, address: 0x805DD894
-class CBMemberTranslator0 : public CBFunctor0 {
-    // total size: 0x14
-};
-class CBMemberTranslator1 : public CBFunctor1 {
-    // total size: 0x14
-};
+// total size: 0x14
+class CBMemberTranslator0 : public CBFunctor0 {};
+// total size: 0x14
+class CBMemberTranslator1 : public CBFunctor1 {};
+// total size: 0xA4
 class SimpleOkDialog : public UIDialog {
-    // total size: 0xA4
+    // Members
 public:
     unsigned char m_enabled; // offset 0xA0, size 0x1
 };
 class UI2D * s_pInstance; // size: 0x4, address: 0x805DBA70
 class UI3D * s_pInstance; // size: 0x4, address: 0x805DBA74
-class CBMemberTranslator0 : public CBFunctor0 {
-    // total size: 0x14
-};
+// total size: 0x14
+class CBMemberTranslator0 : public CBFunctor0 {};
 unsigned int UIAMBIENT_frontend[47]; // size: 0xBC, address: 0x8041BCC8
 unsigned int UIAMBIENT_cas[24]; // size: 0x60, address: 0x8041BD88
 unsigned int AMBIENT_Store_lengths[2]; // size: 0x8, address: 0x805D8A38
@@ -35,8 +33,15 @@ enum eUIAMBIENT_screen {
     eUIAMBIENT_screen_cas = 1,
     eUIAMBIENT_screen_cardinal = 2,
 };
+// total size: 0x60
 class UIAMBIENT {
-    // total size: 0x60
+    // Static members
+    static unsigned int AMBIENT_Store_lengths[2]; // size: 0x8
+    static unsigned int UIAMBIENT_cas[24]; // size: 0x60
+    static unsigned int UIAMBIENT_frontend[47]; // size: 0xBC
+    static class UIAMBIENT * s_pInstance; // size: 0x4
+
+    // Members
 public:
     void * __vptr$; // offset 0x0, size 0x4
 private:
@@ -61,64 +66,52 @@ class SetVariableCommandTable * s_pInstance; // size: 0x4, address: 0x805DBA84
 class GetLocalizableCommandTable * s_pInstance; // size: 0x4, address: 0x805DBA88
 struct UIDBData s_UIDBTable[49]; // size: 0x24C, address: 0x804939D0
 unsigned char s_UIDBInitialized; // size: 0x1, address: 0x805DBA8C
+// total size: 0x1
 class UIDB {
-    // total size: 0x1
+    // Static members
+    static unsigned char s_UIDBInitialized; // size: 0x1
 };
-class CBMemberTranslator1 : public CBFunctor1 {
-    // total size: 0x14
-};
-class CBMemberTranslator0 : public CBFunctor0 {
-    // total size: 0x14
-};
-class CBMemberTranslator1wRet : public CBFunctor1wRet {
-    // total size: 0x14
-};
-class CBMemberTranslator2 : public CBFunctor2 {
-    // total size: 0x14
-};
-class CBMemberTranslator1wRet : public CBFunctor1wRet {
-    // total size: 0x14
-};
+// total size: 0x14
+class CBMemberTranslator1 : public CBFunctor1 {};
+// total size: 0x14
+class CBMemberTranslator0 : public CBFunctor0 {};
+// total size: 0x14
+class CBMemberTranslator1wRet : public CBFunctor1wRet {};
+// total size: 0x14
+class CBMemberTranslator2 : public CBFunctor2 {};
+// total size: 0x14
+class CBMemberTranslator1wRet : public CBFunctor1wRet {};
 class UIDrawTable * s_pInstance; // size: 0x4, address: 0x805DBA90
-class CBMemberTranslator1 : public CBFunctor1 {
-    // total size: 0x14
-};
-class CBMemberTranslator0 : public CBFunctor0 {
-    // total size: 0x14
-};
-class CBMemberTranslator1wRet : public CBFunctor1wRet {
-    // total size: 0x14
-};
-class CBMemberTranslator2 : public CBFunctor2 {
-    // total size: 0x14
-};
-class CBMemberTranslator1wRet : public CBFunctor1wRet {
-    // total size: 0x14
-};
+// total size: 0x14
+class CBMemberTranslator1 : public CBFunctor1 {};
+// total size: 0x14
+class CBMemberTranslator0 : public CBFunctor0 {};
+// total size: 0x14
+class CBMemberTranslator1wRet : public CBFunctor1wRet {};
+// total size: 0x14
+class CBMemberTranslator2 : public CBFunctor2 {};
+// total size: 0x14
+class CBMemberTranslator1wRet : public CBFunctor1wRet {};
 struct UIScreenData UIScreenDataTable[75]; // size: 0x5DC, address: 0x80431AC4
 int m_groupNumber; // size: 0x4, address: 0x805DBA94
-class CBMemberTranslator1 : public CBFunctor1 {
-    // total size: 0x14
-};
-class CBMemberTranslator0 : public CBFunctor0 {
-    // total size: 0x14
-};
-class CBMemberTranslator1wRet : public CBFunctor1wRet {
-    // total size: 0x14
-};
-class CBMemberTranslator2 : public CBFunctor2 {
-    // total size: 0x14
-};
-class CBMemberTranslator1wRet : public CBFunctor1wRet {
-    // total size: 0x14
-};
+// total size: 0x14
+class CBMemberTranslator1 : public CBFunctor1 {};
+// total size: 0x14
+class CBMemberTranslator0 : public CBFunctor0 {};
+// total size: 0x14
+class CBMemberTranslator1wRet : public CBFunctor1wRet {};
+// total size: 0x14
+class CBMemberTranslator2 : public CBFunctor2 {};
+// total size: 0x14
+class CBMemberTranslator1wRet : public CBFunctor1wRet {};
 enum ValidationReturnType {
     ValidationReturnType_None = 0,
     ValidationReturnType_Success = 1,
     ValidationReturnType_Failure = 2,
 };
+// total size: 0x1C
 class WidgetScreenFormat {
-    // total size: 0x1C
+    // Members
     enum ValidationReturnType m_validationReturn; // offset 0x0, size 0x4
     const char * * m_ppTags; // offset 0x4, size 0x4
     const char * m_data; // offset 0x8, size 0x4
@@ -127,39 +120,33 @@ class WidgetScreenFormat {
     char * m_pOutput; // offset 0x14, size 0x4
     const char * m_lastStartTag; // offset 0x18, size 0x4
 };
-class CBMemberTranslator1 : public CBFunctor1 {
-    // total size: 0x14
-};
-class CBMemberTranslator0 : public CBFunctor0 {
-    // total size: 0x14
-};
-class CBMemberTranslator1wRet : public CBFunctor1wRet {
-    // total size: 0x14
-};
-class CBMemberTranslator2 : public CBFunctor2 {
-    // total size: 0x14
-};
-class CBMemberTranslator1wRet : public CBFunctor1wRet {
-    // total size: 0x14
-};
-class CBMemberTranslator1 : public CBFunctor1 {
-    // total size: 0x14
-};
-class CBMemberTranslator0 : public CBFunctor0 {
-    // total size: 0x14
-};
-class CBMemberTranslator1wRet : public CBFunctor1wRet {
-    // total size: 0x14
-};
-class CBMemberTranslator2 : public CBFunctor2 {
-    // total size: 0x14
-};
-class CBMemberTranslator1wRet : public CBFunctor1wRet {
-    // total size: 0x14
-};
+// total size: 0x14
+class CBMemberTranslator1 : public CBFunctor1 {};
+// total size: 0x14
+class CBMemberTranslator0 : public CBFunctor0 {};
+// total size: 0x14
+class CBMemberTranslator1wRet : public CBFunctor1wRet {};
+// total size: 0x14
+class CBMemberTranslator2 : public CBFunctor2 {};
+// total size: 0x14
+class CBMemberTranslator1wRet : public CBFunctor1wRet {};
+// total size: 0x14
+class CBMemberTranslator1 : public CBFunctor1 {};
+// total size: 0x14
+class CBMemberTranslator0 : public CBFunctor0 {};
+// total size: 0x14
+class CBMemberTranslator1wRet : public CBFunctor1wRet {};
+// total size: 0x14
+class CBMemberTranslator2 : public CBFunctor2 {};
+// total size: 0x14
+class CBMemberTranslator1wRet : public CBFunctor1wRet {};
 class UIButtonImages * instance; // size: 0x4, address: 0x805DBA98
+// total size: 0x1B0
 class UIButtonImages {
-    // total size: 0x1B0
+    // Static members
+    static class UIButtonImages * instance; // size: 0x4
+
+    // Members
 public:
     void * __vptr$; // offset 0x0, size 0x4
 private:
@@ -170,24 +157,20 @@ private:
     int m_button_platform; // offset 0x1AC, size 0x4
 };
 class CURTarget * s_SingletonCURTarget; // size: 0x4, address: 0x805DBA9C
-class CBMemberTranslator1 : public CBFunctor1 {
-    // total size: 0x14
-};
-class CBMemberTranslator0 : public CBFunctor0 {
-    // total size: 0x14
-};
-class CBMemberTranslator1wRet : public CBFunctor1wRet {
-    // total size: 0x14
-};
-class CBMemberTranslator2 : public CBFunctor2 {
-    // total size: 0x14
-};
-class CBMemberTranslator1wRet : public CBFunctor1wRet {
-    // total size: 0x14
-};
+// total size: 0x14
+class CBMemberTranslator1 : public CBFunctor1 {};
+// total size: 0x14
+class CBMemberTranslator0 : public CBFunctor0 {};
+// total size: 0x14
+class CBMemberTranslator1wRet : public CBFunctor1wRet {};
+// total size: 0x14
+class CBMemberTranslator2 : public CBFunctor2 {};
+// total size: 0x14
+class CBMemberTranslator1wRet : public CBFunctor1wRet {};
 class UIUpdateTable * s_pInstance; // size: 0x4, address: 0x805DBAA0
+// total size: 0x10
 struct structDrawCBparams {
-    // total size: 0x10
+    // Members
     class EVec2 * TL; // offset 0x0, size 0x4
     class EVec2 * BR; // offset 0x4, size 0x4
     class EVec4 * nColourScale; // offset 0x8, size 0x4
@@ -195,12 +178,14 @@ struct structDrawCBparams {
 };
 struct structDrawCBparams s_drawCBparams; // size: 0x10, address: 0x80493C20
 class UIUserDrawCBTable * s_pInstance; // size: 0x4, address: 0x805DBAA4
+// total size: 0x14
 class CBFunctor2 : public CBFunctorBase {
-    // total size: 0x14
+    // Members
     void (* thunk)(class CBFunctorBase &, class ERC *, struct structDrawCBparams *); // offset 0x10, size 0x4
 };
+// total size: 0x8
 struct TagsAndTests {
-    // total size: 0x8
+    // Members
     const char * tagString; // offset 0x0, size 0x4
     enum WidgetLayoutValidationType testType; // offset 0x4, size 0x4
 };
@@ -262,91 +247,62 @@ enum WidgetLayoutValidationType {
     WidgetLayoutValidationType_GetVarSupport = 24,
     WidgetLayoutValidationType_ButtonSound = 25,
 };
-struct {
-    // total size: 0xC
-} __vt__9UIAMBIENT; // size: 0xC, address: 0x8043F46C
-struct {
-    // total size: 0x18
-} __vt__14SimpleOkDialog; // size: 0x18, address: 0x8043F478
-struct {
-    // total size: 0x18
-} __vt__10HelpDialog; // size: 0x18, address: 0x8043F490
-struct {
-    // total size: 0x20
-} __vt__9CURTarget; // size: 0x20, address: 0x8043F4A8
-struct {
-    // total size: 0xC
-} __vt__14UIButtonImages; // size: 0xC, address: 0x8043F4C8
-struct {
-    // total size: 0x20
-} __vt__8UIAnalog; // size: 0x20, address: 0x8043F4D8
-struct {
-    // total size: 0x20
-} __vt__13UIAUDIOTarget; // size: 0x20, address: 0x8043F4F8
-struct {
-    // total size: 0x20
-} __vt__15UIScreenManager; // size: 0x20, address: 0x8043F518
-struct {
-    // total size: 0x20
-} __vt__10UIDBTarget; // size: 0x20, address: 0x8043F538
-struct {
-    // total size: 0x20
-} __vt__8UIRouter; // size: 0x20, address: 0x8043F558
-struct {
-    // total size: 0x20
-} __vt__10UIQDTarget; // size: 0x20, address: 0x8043F578
-struct {
-    // total size: 0xC
-} __vt__7UIAUDIO; // size: 0xC, address: 0x8043F5B8
-struct {
-    // total size: 0xC
-} __vt__Q27UIAUDIO13UIAUDIORecord; // size: 0xC, address: 0x8043F5C4
-struct {
-    // total size: 0xC
-} __vt__4UI3D; // size: 0xC, address: 0x8043F5D0
-struct {
-    // total size: 0xC
-} __vt__Q24UI3D10UI3DRecord; // size: 0xC, address: 0x8043F5DC
-struct {
-    // total size: 0xC
-} __vt__4UI2D; // size: 0xC, address: 0x8043F5E8
-struct {
-    // total size: 0xC
-} __vt__Q24UI2D10UI2DRecord; // size: 0xC, address: 0x8043F5F4
-struct {
-    // total size: 0xC
-} __vt__17UIUserDrawCBTable; // size: 0xC, address: 0x8043F600
-struct {
-    // total size: 0xC
-} __vt__Q217UIUserDrawCBTable21UserDrawCBTableRecord; // size: 0xC, address: 0x8043F60C
-struct {
-    // total size: 0xC
-} __vt__11UIDrawTable; // size: 0xC, address: 0x8043F618
-struct {
-    // total size: 0xC
-} __vt__Q211UIDrawTable15DrawTableRecord; // size: 0xC, address: 0x8043F624
-struct {
-    // total size: 0xC
-} __vt__13UIUpdateTable; // size: 0xC, address: 0x8043F630
-struct {
-    // total size: 0xC
-} __vt__Q213UIUpdateTable17UpdateTableRecord; // size: 0xC, address: 0x8043F63C
-struct {
-    // total size: 0xC
-} __vt__26GetLocalizableCommandTable; // size: 0xC, address: 0x8043F648
-struct {
-    // total size: 0xC
-} __vt__Q226GetLocalizableCommandTable32GetLocalizableCommandTableRecord; // size: 0xC, address: 0x8043F654
-struct {
-    // total size: 0xC
-} __vt__23SetVariableCommandTable; // size: 0xC, address: 0x8043F660
-struct {
-    // total size: 0xC
-} __vt__Q223SetVariableCommandTable29SetVariableCommandTableRecord; // size: 0xC, address: 0x8043F66C
-struct {
-    // total size: 0xC
-} __vt__23GetVariableCommandTable; // size: 0xC, address: 0x8043F678
-struct {
-    // total size: 0xC
-} __vt__Q223GetVariableCommandTable29GetVariableCommandTableRecord; // size: 0xC, address: 0x8043F684
+// total size: 0xC
+struct {} __vt__9UIAMBIENT; // size: 0xC, address: 0x8043F46C
+// total size: 0x18
+struct {} __vt__14SimpleOkDialog; // size: 0x18, address: 0x8043F478
+// total size: 0x18
+struct {} __vt__10HelpDialog; // size: 0x18, address: 0x8043F490
+// total size: 0x20
+struct {} __vt__9CURTarget; // size: 0x20, address: 0x8043F4A8
+// total size: 0xC
+struct {} __vt__14UIButtonImages; // size: 0xC, address: 0x8043F4C8
+// total size: 0x20
+struct {} __vt__8UIAnalog; // size: 0x20, address: 0x8043F4D8
+// total size: 0x20
+struct {} __vt__13UIAUDIOTarget; // size: 0x20, address: 0x8043F4F8
+// total size: 0x20
+struct {} __vt__15UIScreenManager; // size: 0x20, address: 0x8043F518
+// total size: 0x20
+struct {} __vt__10UIDBTarget; // size: 0x20, address: 0x8043F538
+// total size: 0x20
+struct {} __vt__8UIRouter; // size: 0x20, address: 0x8043F558
+// total size: 0x20
+struct {} __vt__10UIQDTarget; // size: 0x20, address: 0x8043F578
+// total size: 0xC
+struct {} __vt__7UIAUDIO; // size: 0xC, address: 0x8043F5B8
+// total size: 0xC
+struct {} __vt__Q27UIAUDIO13UIAUDIORecord; // size: 0xC, address: 0x8043F5C4
+// total size: 0xC
+struct {} __vt__4UI3D; // size: 0xC, address: 0x8043F5D0
+// total size: 0xC
+struct {} __vt__Q24UI3D10UI3DRecord; // size: 0xC, address: 0x8043F5DC
+// total size: 0xC
+struct {} __vt__4UI2D; // size: 0xC, address: 0x8043F5E8
+// total size: 0xC
+struct {} __vt__Q24UI2D10UI2DRecord; // size: 0xC, address: 0x8043F5F4
+// total size: 0xC
+struct {} __vt__17UIUserDrawCBTable; // size: 0xC, address: 0x8043F600
+// total size: 0xC
+struct {} __vt__Q217UIUserDrawCBTable21UserDrawCBTableRecord; // size: 0xC, address: 0x8043F60C
+// total size: 0xC
+struct {} __vt__11UIDrawTable; // size: 0xC, address: 0x8043F618
+// total size: 0xC
+struct {} __vt__Q211UIDrawTable15DrawTableRecord; // size: 0xC, address: 0x8043F624
+// total size: 0xC
+struct {} __vt__13UIUpdateTable; // size: 0xC, address: 0x8043F630
+// total size: 0xC
+struct {} __vt__Q213UIUpdateTable17UpdateTableRecord; // size: 0xC, address: 0x8043F63C
+// total size: 0xC
+struct {} __vt__26GetLocalizableCommandTable; // size: 0xC, address: 0x8043F648
+// total size: 0xC
+struct {} __vt__Q226GetLocalizableCommandTable32GetLocalizableCommandTableRecord; // size: 0xC, address: 0x8043F654
+// total size: 0xC
+struct {} __vt__23SetVariableCommandTable; // size: 0xC, address: 0x8043F660
+// total size: 0xC
+struct {} __vt__Q223SetVariableCommandTable29SetVariableCommandTableRecord; // size: 0xC, address: 0x8043F66C
+// total size: 0xC
+struct {} __vt__23GetVariableCommandTable; // size: 0xC, address: 0x8043F678
+// total size: 0xC
+struct {} __vt__Q223GetVariableCommandTable29GetVariableCommandTableRecord; // size: 0xC, address: 0x8043F684
 

@@ -5,7 +5,8 @@
     Code range: 0x8025EEB4 -> 0x8025EF30
 */
 // Range: 0x8025EEB4 -> 0x8025EF30
-void * EBitArray::~EBitArray(class EBitArray * const this /* r30 */) {
+// this: r30
+EBitArray::~EBitArray() {
     // References
     // -> struct [anonymous] __vt__9EBitArray;
 }

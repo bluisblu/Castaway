@@ -5,7 +5,8 @@
     Code range: 0x8011EC64 -> 0x8011EFDC
 */
 // Range: 0x8011EC64 -> 0x8011ECE0
-void * TokenItem::TokenItem(class TokenItem * const this /* r29 */, signed short tokenID /* r30 */, signed short count /* r31 */) {
+// this: r29
+TokenItem::TokenItem(signed short tokenID /* r30 */, signed short count /* r31 */) {
     // References
     // -> struct [anonymous] __vt__9TokenItem;
 }
@@ -14,10 +15,12 @@ void * TokenItem::TokenItem(class TokenItem * const this /* r29 */, signed short
 struct IngredientToken * TokenItem::GetIngredientToken() {}
 
 // Range: 0x8011ED38 -> 0x8011ED98
-void TokenItem::DoStream(class TokenItem * const this /* r30 */, class ReconBuffer * rb /* r31 */) {}
+// this: r30
+void TokenItem::DoStream(class ReconBuffer * rb /* r31 */) {}
 
 // Range: 0x8011ED98 -> 0x8011EE7C
-class cXObject * TokenItem::MakeObject(class TokenItem * const this /* r30 */) {
+// this: r30
+class cXObject * TokenItem::MakeObject() {
     // Local variables
     class ObjSelector * selector; // r31
     signed short newObjectID; // r0

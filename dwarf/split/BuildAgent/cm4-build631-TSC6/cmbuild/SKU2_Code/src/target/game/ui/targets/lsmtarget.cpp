@@ -5,7 +5,8 @@
     Code range: 0x801F0258 -> 0x801F22A8
 */
 // Range: 0x801F0258 -> 0x801F0878
-void * LSMTarget::LSMTarget(class LSMTarget * const this /* r22 */) {
+// this: r22
+LSMTarget::LSMTarget() {
     // Local variables
     class ERShader * pShader; // r1+0x18
     class Neighbor * pNeighbor; // r0
@@ -45,7 +46,8 @@ void * LSMTarget::LSMTarget(class LSMTarget * const this /* r22 */) {
 }
 
 // Range: 0x801F0878 -> 0x801F0980
-void * LSMTarget::~LSMTarget(class LSMTarget * const this /* r28 */) {
+// this: r28
+LSMTarget::~LSMTarget() {
     // Local variables
     int i; // r30
 
@@ -55,7 +57,8 @@ void * LSMTarget::~LSMTarget(class LSMTarget * const this /* r28 */) {
 }
 
 // Range: 0x801F0980 -> 0x801F0EC0
-void LSMTarget::SetVariable(class LSMTarget * const this /* r31 */, const char * szCommand /* r27 */) {
+// this: r31
+void LSMTarget::SetVariable(const char * szCommand /* r27 */) {
     // Local variables
     unsigned char transitions[27]; // r1+0x10
     signed short energyCost; // r1+0x8
@@ -89,7 +92,8 @@ char * LSMTarget::GetVariable(const char * szVar /* r30 */) {
 }
 
 // Range: 0x801F0F40 -> 0x801F1074
-unsigned short * LSMTarget::GetLocalizable(class LSMTarget * const this /* r29 */, const char * szVar /* r30 */) {
+// this: r29
+unsigned short * LSMTarget::GetLocalizable(const char * szVar /* r30 */) {
     // Local variables
     unsigned short * wideStr; // r31
     const unsigned short * lot_name; // r0
@@ -102,7 +106,8 @@ unsigned short * LSMTarget::GetLocalizable(class LSMTarget * const this /* r29 *
 }
 
 // Range: 0x801F1074 -> 0x801F18B4
-void LSMTarget::Update(class LSMTarget * const this /* r30 */) {
+// this: r30
+void LSMTarget::Update() {
     // Local variables
     struct LotRecord * pLot; // r3
     unsigned char needToUpdateAllLotShaders; // r27
@@ -144,14 +149,16 @@ void LSMTarget::Update(class LSMTarget * const this /* r30 */) {
 }
 
 // Range: 0x801F18B4 -> 0x801F19D8
-void LSMTarget::UpdateAllLotVisibility(class LSMTarget * const this /* r26 */) {
+// this: r26
+void LSMTarget::UpdateAllLotVisibility() {
     // Local variables
     int i; // r28
     struct LotRecord * pLot; // r27
 }
 
 // Range: 0x801F19D8 -> 0x801F1BD4
-void LSMTarget::UpdateAllLotShaders(class LSMTarget * const this /* r23 */) {
+// this: r23
+void LSMTarget::UpdateAllLotShaders() {
     // Local variables
     int i; // r24
     struct LotRecord * pLot; // r3
@@ -165,10 +172,12 @@ void LSMTarget::UpdateAllLotShaders(class LSMTarget * const this /* r23 */) {
 }
 
 // Range: 0x801F1BD4 -> 0x801F1C28
-void LSMTarget::ResetCursor(class LSMTarget * const this /* r31 */) {}
+// this: r31
+void LSMTarget::ResetCursor() {}
 
 // Range: 0x801F1C28 -> 0x801F1CB4
-void LSMTarget::SetCursor(class LSMTarget * const this /* r29 */, unsigned int x /* r30 */, unsigned int y /* r31 */) {}
+// this: r29
+void LSMTarget::SetCursor(unsigned int x /* r30 */, unsigned int y /* r31 */) {}
 
 // Range: 0x801F1CB4 -> 0x801F1D84
 int LSMTarget::GetLotAtCursor() {
@@ -205,7 +214,8 @@ void LSMTarget::GetLotCenterPoint() {
 }
 
 // Range: 0x801F1EA8 -> 0x801F1FB0
-void LSMTarget::SetupIslandText(class LSMTarget * const this /* r30 */) {
+// this: r30
+void LSMTarget::SetupIslandText() {
     // Local variables
     char pdaStringName[256]; // r1+0x8
 }
@@ -228,7 +238,8 @@ unsigned short * LSMTarget::GetLotName() {
 }
 
 // Range: 0x801F20BC -> 0x801F22A8
-void LSMTarget::MakeTravelTimeMsg(class LSMTarget * const this /* r28 */, class BString2 & msg /* r30 */) {
+// this: r28
+void LSMTarget::MakeTravelTimeMsg(class BString2 & msg /* r30 */) {
     // Local variables
     unsigned char blocked; // r29
     signed short energyCost; // r1+0x8

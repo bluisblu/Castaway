@@ -5,9 +5,9 @@
     Code range: 0x801BEFD0 -> 0x801BEFFC
 */
 // Range: 0x801BEFD0 -> 0x801BEFE0
-void * BBHPriceInfo::BBHPriceInfo() {}
+BBHPriceInfo::BBHPriceInfo() {}
 
 // Range: 0x801BEFE0 -> 0x801BEFFC
-void * BBHPriceInfo::BBHPriceInfo() {}
+BBHPriceInfo::BBHPriceInfo() {}
 
 

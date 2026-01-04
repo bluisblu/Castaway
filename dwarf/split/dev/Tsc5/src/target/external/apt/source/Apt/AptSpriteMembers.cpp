@@ -5,9 +5,8 @@
     Code range: 0x8032A654 -> 0x8032A794
 */
 static struct SpriteMembers wordlist[212]; // size: 0x6A0, address: 0x8045D770
-class SpriteMembersIndex {
-    // total size: 0x1
-};
+// total size: 0x1
+class SpriteMembersIndex {};
 // Range: 0x8032A654 -> 0x8032A6F4
 struct SpriteMembers * SpriteMembersIndex::in_word_set(const char * str /* r30 */) {
     // Local variables

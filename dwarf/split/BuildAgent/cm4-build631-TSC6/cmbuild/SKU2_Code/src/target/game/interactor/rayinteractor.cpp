@@ -5,14 +5,16 @@
     Code range: 0x8007381C -> 0x80075DE4
 */
 // Range: 0x8007381C -> 0x8007399C
-void * RayInteractor::RayInteractor(class RayInteractor * const this /* r29 */) {
+// this: r29
+RayInteractor::RayInteractor() {
     // References
     // -> class RayInteractor * m_SingletonRayInteractor;
     // -> struct [anonymous] __vt__Q216InteractorModule13RayInteractor;
 }
 
 // Range: 0x8007399C -> 0x80073A6C
-void * RayInteractor::~RayInteractor(class RayInteractor * const this /* r30 */) {
+// this: r30
+RayInteractor::~RayInteractor() {
     // References
     // -> class RayInteractor * m_SingletonRayInteractor;
     // -> class GameData _gd;
@@ -20,13 +22,16 @@ void * RayInteractor::~RayInteractor(class RayInteractor * const this /* r30 */)
 }
 
 // Range: 0x80073A6C -> 0x80073AA4
-void RayInteractor::OnCreate(class RayInteractor * const this /* r31 */) {}
+// this: r31
+void RayInteractor::OnCreate() {}
 
 // Range: 0x80073AA4 -> 0x80073ADC
-void RayInteractor::OnDestroy(class RayInteractor * const this /* r31 */) {}
+// this: r31
+void RayInteractor::OnDestroy() {}
 
 // Range: 0x80073ADC -> 0x80073CC8
-void RayInteractor::OnStart(class RayInteractor * const this /* r30 */) {
+// this: r30
+void RayInteractor::OnStart() {
     // Local variables
     struct ButtonSemantic butSems[6]; // r1+0x40
     struct StickSemantic stickSems[4]; // r1+0x20
@@ -38,20 +43,23 @@ void RayInteractor::OnStart(class RayInteractor * const this /* r30 */) {
 }
 
 // Range: 0x80073CC8 -> 0x80073D78
-void RayInteractor::OnStop(class RayInteractor * const this /* r30 */) {
+// this: r30
+void RayInteractor::OnStop() {
     // References
     // -> class RayInteractor * m_SingletonRayInteractor;
     // -> class EGlobal _globals;
 }
 
 // Range: 0x80073D78 -> 0x80073E38
-void RayInteractor::ParseControls(class RayInteractor * const this /* r30 */) {
+// this: r30
+void RayInteractor::ParseControls() {
     // References
     // -> class NewControlParms s_newControlParms;
 }
 
 // Range: 0x80073E38 -> 0x800743FC
-void RayInteractor::Update(class RayInteractor * const this /* r31 */, float delta /* f31 */) {
+// this: r31
+void RayInteractor::Update(float delta /* f31 */) {
     // Local variables
     class DirectInteractor * dc_interactor; // r0
     class EVec3 selectedSimPos; // r1+0x34
@@ -72,19 +80,24 @@ void RayInteractor::Update(class RayInteractor * const this /* r31 */, float del
 }
 
 // Range: 0x800743FC -> 0x8007443C
-void RayInteractor::GetInteractorInfo(class RayInteractor * const this /* r5 */) {}
+// this: r5
+void RayInteractor::GetInteractorInfo() {}
 
 // Range: 0x8007443C -> 0x8007444C
-void RayInteractor::PreDraw(class RayInteractor * const this /* r0 */) {}
+// this: r0
+void RayInteractor::PreDraw() {}
 
 // Range: 0x8007444C -> 0x8007445C
-void RayInteractor::Draw(class RayInteractor * const this /* r0 */) {}
+// this: r0
+void RayInteractor::Draw() {}
 
 // Range: 0x8007445C -> 0x800744C4
-unsigned char RayInteractor::CurrentHitPointisValid(const class RayInteractor * const this /* r31 */) {}
+// this: r31
+unsigned char RayInteractor::CurrentHitPointisValid() const {}
 
 // Range: 0x800744C4 -> 0x80074624
-void RayInteractor::OnCommandRepeated(class RayInteractor * const this /* r31 */, enum InteractorCommand cmd /* r29 */) {
+// this: r31
+void RayInteractor::OnCommandRepeated(enum InteractorCommand cmd /* r29 */) {
     // Local variables
     class cXPerson * player; // r30
     unsigned char doSwitch; // r30
@@ -96,7 +109,8 @@ void RayInteractor::OnCommandRepeated(class RayInteractor * const this /* r31 */
 }
 
 // Range: 0x80074624 -> 0x80074908
-void RayInteractor::OnCommandPressed(class RayInteractor * const this /* r30 */, enum InteractorCommand cmd /* r29 */) {
+// this: r30
+void RayInteractor::OnCommandPressed(enum InteractorCommand cmd /* r29 */) {
     // Local variables
     class cXPerson * player; // r31
     struct InteractorParams params; // r1+0x8
@@ -118,10 +132,12 @@ void RayInteractor::OnCommandReleased() {
 void RayInteractor::OnCommandUpdate() {}
 
 // Range: 0x80074A48 -> 0x80074A88
-void RayInteractor::ResetInputState(class RayInteractor * const this /* r31 */) {}
+// this: r31
+void RayInteractor::ResetInputState() {}
 
 // Range: 0x80074A88 -> 0x80074AF4
-void RayInteractor::ResetCursor(class RayInteractor * const this /* r31 */) {
+// this: r31
+void RayInteractor::ResetCursor() {
     // References
     // -> float m_ScreenHeight;
     // -> float m_ScreenWidth;
@@ -134,13 +150,15 @@ void RayInteractor::ResetSnapTimer() {
 }
 
 // Range: 0x80074B10 -> 0x80074B4C
-float RayInteractor::GetSelectionRadius(class RayInteractor * const this /* r31 */) {
+// this: r31
+float RayInteractor::GetSelectionRadius() {
     // Local variables
     float radius; // f1
 }
 
 // Range: 0x80074B4C -> 0x80074D14
-void RayInteractor::ExecuteActionMenu(class RayInteractor * const this /* r28 */) {
+// this: r28
+void RayInteractor::ExecuteActionMenu() {
     // Local variables
     class TNodeList objList; // r1+0x8
     class ObjectSlot * os; // r31
@@ -165,7 +183,8 @@ unsigned char RayInteractor::IsSimulatorPaused() {}
 void RayInteractor::UpdateObjectHighlights() {}
 
 // Range: 0x80074D58 -> 0x80074DA0
-void RayInteractor::SetupCamera(class RayInteractor * const this /* r31 */) {
+// this: r31
+void RayInteractor::SetupCamera() {
     // Local variables
     class ESimsCam * pCam; // r0
 }
@@ -174,7 +193,8 @@ void RayInteractor::SetupCamera(class RayInteractor * const this /* r31 */) {
 unsigned char RayInteractor::ChooseAction(class Interaction * pAction /* r31 */) {}
 
 // Range: 0x80074DF8 -> 0x80074FB4
-void RayInteractor::CastRay(class RayInteractor * const this /* r30 */) {
+// this: r30
+void RayInteractor::CastRay() {
     // Local variables
     class EVec2 current_screen_pos; // r1+0x10
     class EVec3 ray_dir; // r1+0x54
@@ -194,7 +214,8 @@ void RayInteractor::CastRay(class RayInteractor * const this /* r30 */) {
 }
 
 // Range: 0x80074FB4 -> 0x800757D0
-unsigned char RayInteractor::RaySceneObjectsIntersectTest(class RayInteractor * const this /* r28 */, class EIObjectMan * objMan /* r29 */) {
+// this: r28
+unsigned char RayInteractor::RaySceneObjectsIntersectTest(class EIObjectMan * objMan /* r29 */) {
     // Local variables
     class EVec2 current_screen_pos; // r1+0x18
     class EVec3 ray_dir; // r1+0x84
@@ -246,7 +267,8 @@ unsigned char RayInteractor::RaySceneObjectsIntersectTest(class RayInteractor * 
 }
 
 // Range: 0x800757D0 -> 0x800759A0
-void RayInteractor::UpdateCameraPosition(class RayInteractor * const this /* r29 */) {
+// this: r29
+void RayInteractor::UpdateCameraPosition() {
     // Local variables
     class E3DWindow * win; // r0
     class ESimsCam * pCamera; // r30
@@ -269,10 +291,12 @@ void RayInteractor::UpdateCameraPosition(class RayInteractor * const this /* r29
 }
 
 // Range: 0x800759A0 -> 0x800759E0
-unsigned char RayInteractor::UpdateInteractorOnFloorPosition(class RayInteractor * const this /* r31 */) {}
+// this: r31
+unsigned char RayInteractor::UpdateInteractorOnFloorPosition() {}
 
 // Range: 0x800759E0 -> 0x80075A60
-void RayInteractor::MoveToNewSim(class RayInteractor * const this /* r29 */, const class EVec3 & new_sim_pos /* r30 */) {
+// this: r29
+void RayInteractor::MoveToNewSim(const class EVec3 & new_sim_pos /* r30 */) {
     // Local variables
     class ESimsCam * pCamera; // r31
     class EVec3 final_pos; // r1+0x8
@@ -303,7 +327,8 @@ class EVec3 RayInteractor::GetPositionAlongCamZ(float dist /* f31 */) {
 }
 
 // Range: 0x80075BAC -> 0x80075C2C
-void RayInteractor::CalculateCameraRotationPoint(class RayInteractor * const this /* r31 */) {
+// this: r31
+void RayInteractor::CalculateCameraRotationPoint() {
     // Local variables
     class ESimsCam * pCamera; // r0
     float cam_zoom_ratio; // f1

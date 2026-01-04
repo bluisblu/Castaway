@@ -17,7 +17,8 @@ int FileAllocator::size() {}
 unsigned char FileAllocator::Release(class QuickResFile * file /* r31 */) {}
 
 // Range: 0x80141F90 -> 0x80142068
-class QuickResFile * FileAllocator::Get(class FileAllocator * const this /* r29 */, const struct ResFile * pResFile /* r30 */) {
+// this: r29
+class QuickResFile * FileAllocator::Get(const struct ResFile * pResFile /* r30 */) {
     // Local variables
     class QuickResFile * file; // r31
 }

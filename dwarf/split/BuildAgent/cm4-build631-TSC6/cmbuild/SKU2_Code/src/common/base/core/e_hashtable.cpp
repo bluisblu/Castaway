@@ -5,25 +5,31 @@
     Code range: 0x80262794 -> 0x80262D14
 */
 // Range: 0x80262794 -> 0x802627D0
-void * EHashTable::EHashTable(class EHashTable * const this /* r31 */) {}
+// this: r31
+EHashTable::EHashTable() {}
 
 // Range: 0x802627D0 -> 0x80262838
-void * EHashTable::~EHashTable(class EHashTable * const this /* r30 */) {}
+// this: r30
+EHashTable::~EHashTable() {}
 
 // Range: 0x80262838 -> 0x8026288C
-void EHashTable::InitTable(class EHashTable * const this /* r30 */, int tableSize /* r31 */) {}
+// this: r30
+void EHashTable::InitTable(int tableSize /* r31 */) {}
 
 // Range: 0x8026288C -> 0x802628A4
-void EHashTable::ClearTable(class EHashTable * const this /* r4 */) {}
+// this: r4
+void EHashTable::ClearTable() {}
 
 // Range: 0x802628A4 -> 0x80262948
-class HTIteratorPtrType * EHashTable::Insert(class EHashTable * const this /* r28 */, unsigned int key /* r29 */, unsigned int value /* r30 */) {
+// this: r28
+class HTIteratorPtrType * EHashTable::Insert(unsigned int key /* r29 */, unsigned int value /* r30 */) {
     // Local variables
     struct EHashTableNode * pNode; // r0
 }
 
 // Range: 0x80262948 -> 0x802629FC
-class HTIteratorPtrType * EHashTable::InsertNew(class EHashTable * const this /* r28 */, unsigned int hash /* r29 */, unsigned int key /* r30 */, unsigned int value /* r31 */) {
+// this: r28
+class HTIteratorPtrType * EHashTable::InsertNew(unsigned int hash /* r29 */, unsigned int key /* r30 */, unsigned int value /* r31 */) {
     // Local variables
     struct EHashTableNode * pNode; // r3
     struct EHashTableNode * & pHead; // r0
@@ -59,7 +65,8 @@ class HTIteratorPtrType * EHashTable::Find() {
 }
 
 // Range: 0x80262B90 -> 0x80262C00
-void EHashTable::RemoveAll(class EHashTable * const this /* r30 */) {}
+// this: r30
+void EHashTable::RemoveAll() {}
 
 // Range: 0x80262C00 -> 0x80262C20
 int EHashTable::GetSize() {}
@@ -72,7 +79,8 @@ void EHashTable::AutoSizeTable() {
 }
 
 // Range: 0x80262C60 -> 0x80262D14
-void EHashTable::SetTableSize(class EHashTable * const this /* r30 */, int tableSize /* r31 */) {
+// this: r30
+void EHashTable::SetTableSize(int tableSize /* r31 */) {
     // Local variables
     struct EHashTableNode * pNode; // r6
     struct EHashTableNode * & pHead; // r0

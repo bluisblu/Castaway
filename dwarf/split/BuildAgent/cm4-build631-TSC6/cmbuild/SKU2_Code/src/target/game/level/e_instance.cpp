@@ -5,51 +5,57 @@
     Code range: 0x80084ACC -> 0x8008536C
 */
 // Range: 0x80084ACC -> 0x80084AD0
-class EStream & __ls() {}
+class EStream & operator<<() {}
 
 // Range: 0x80084AD0 -> 0x80084B18
-class EStream & __rs(class EStream & s /* r30 */, class EInstance * & pD /* r31 */) {
+class EStream & operator>>(class EStream & s /* r30 */, class EInstance * & pD /* r31 */) {
     // Local variables
     class EStorable * pStorable; // r1+0x8
 }
 
 // Range: 0x80084B18 -> 0x80084B60
-class EFile & __rs(class EFile & s /* r30 */, class EInstance * & pD /* r31 */) {
+class EFile & operator>>(class EFile & s /* r30 */, class EInstance * & pD /* r31 */) {
     // Local variables
     class EStorable * pStorable; // r1+0x8
 }
 
 // Range: 0x80084B60 -> 0x80084C14
-void * EInstance::EInstance(class EInstance * const this /* r31 */) {
+// this: r31
+EInstance::EInstance() {
     // References
     // -> struct [anonymous] __vt__9EInstance;
 }
 
 // Range: 0x80084C14 -> 0x80084C88
-void * EInstance::~EInstance(class EInstance * const this /* r30 */) {
+// this: r30
+EInstance::~EInstance() {
     // References
     // -> struct [anonymous] __vt__9EInstance;
 }
 
 // Range: 0x80084C88 -> 0x80084CEC
-void EInstance::Write(class EInstance * const this /* r30 */, class EStream & s /* r31 */) {}
+// this: r30
+void EInstance::Write(class EStream & s /* r31 */) {}
 
 // Range: 0x80084CEC -> 0x80084DB0
-void EInstance::Read(class EInstance * const this /* r30 */, class EStream & s /* r31 */) {
+// this: r30
+void EInstance::Read(class EStream & s /* r31 */) {
     // Local variables
     unsigned int dead1; // r1+0xC
     unsigned int dead2; // r1+0x8
 }
 
 // Range: 0x80084DB0 -> 0x80084E70
-void EInstance::Load(class EInstance * const this /* r30 */, class EFile & s /* r31 */) {
+// this: r30
+void EInstance::Load(class EFile & s /* r31 */) {
     // Local variables
     unsigned int dead1; // r1+0xC
     unsigned int dead2; // r1+0x8
 }
 
 // Range: 0x80084E70 -> 0x80084E98
-void EInstance::SetBounds(class EInstance * const this /* r6 */) {}
+// this: r6
+void EInstance::SetBounds() {}
 
 // Range: 0x80084E98 -> 0x80084EA0
 void EInstance::GetBoundSphere() {}
@@ -61,7 +67,8 @@ void EInstance::RemoveFromLevel() {}
 void TruncateLightDirection(class EVec3 & vDir /* r31 */) {}
 
 // Range: 0x80084F10 -> 0x80085038
-void EInstance::ShadowDirAtPoint(class EInstance * const this /* r29 */, const class EVec3 & vTargetPos /* r26 */, class EVec3 & vTotalDir /* r27 */, int modelLocation /* r28 */) {
+// this: r29
+void EInstance::ShadowDirAtPoint(const class EVec3 & vTargetPos /* r26 */, class EVec3 & vTotalDir /* r27 */, int modelLocation /* r28 */) {
     // Local variables
     const struct LightData * lights; // r0
     const signed short * ids; // r0
@@ -75,7 +82,8 @@ void EInstance::ShadowDirAtPoint(class EInstance * const this /* r29 */, const c
 }
 
 // Range: 0x80085038 -> 0x8008512C
-void EInstance::CalcShadowLight(class EInstance * const this /* r28 */, class EVec3 & vDir /* r29 */, signed short modelLocation /* r31 */) {
+// this: r28
+void EInstance::CalcShadowLight(class EVec3 & vDir /* r29 */, signed short modelLocation /* r31 */) {
     // Local variables
     const class RoomData * rd; // r30
     int nIndexOfStrongestDirectional; // r0
@@ -83,7 +91,8 @@ void EInstance::CalcShadowLight(class EInstance * const this /* r28 */, class EV
 }
 
 // Range: 0x8008512C -> 0x8008527C
-void EInstance::ShadowDirAtPointWeighted(class EInstance * const this /* r25 */, const class EVec3 & vTargetPos /* r26 */, class EVec3 & vTotalDir /* r27 */, int modelLocation /* r28 */) {
+// this: r25
+void EInstance::ShadowDirAtPointWeighted(const class EVec3 & vTargetPos /* r26 */, class EVec3 & vTotalDir /* r27 */, int modelLocation /* r28 */) {
     // Local variables
     const struct LightData * lights; // r0
     struct LightWeight lw[12]; // r1+0x30
@@ -97,7 +106,8 @@ void EInstance::ShadowDirAtPointWeighted(class EInstance * const this /* r25 */,
 }
 
 // Range: 0x8008527C -> 0x80085364
-void EInstance::CalcLights(class EInstance * const this /* r25 */, const class EVec3 & vTargetPos /* r26 */, struct ELights & lightsOut /* r27 */) {
+// this: r25
+void EInstance::CalcLights(const class EVec3 & vTargetPos /* r26 */, struct ELights & lightsOut /* r27 */) {
     // Local variables
     const class RoomData * rd; // r0
     int i; // r28

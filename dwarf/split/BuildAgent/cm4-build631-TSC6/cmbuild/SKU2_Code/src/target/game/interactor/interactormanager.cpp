@@ -5,48 +5,56 @@
     Code range: 0x800625D4 -> 0x80063590
 */
 // Range: 0x800625D4 -> 0x80062688
-void * InteractorManager::InteractorManager(class InteractorManager * const this /* r29 */) {}
+// this: r29
+InteractorManager::InteractorManager() {}
 
 // Range: 0x80062688 -> 0x800627EC
-void InteractorManager::Initialize(class InteractorManager * const this /* r31 */) {
+// this: r31
+void InteractorManager::Initialize() {
     // References
     // -> class InteractorVisualizer * s_pVisualizer;
     // -> class InteractorInputManager * s_pInputManager;
 }
 
 // Range: 0x800627EC -> 0x8006285C
-void InteractorManager::Shutdown(class InteractorManager * const this /* r30 */) {
+// this: r30
+void InteractorManager::Shutdown() {
     // References
     // -> class InteractorInputManager * s_pInputManager;
     // -> class InteractorVisualizer * s_pVisualizer;
 }
 
 // Range: 0x8006285C -> 0x800628B0
-void InteractorManager::Update(class InteractorManager * const this /* r31 */, float delta /* f31 */) {
+// this: r31
+void InteractorManager::Update(float delta /* f31 */) {
     // References
     // -> class InteractorInputManager * s_pInputManager;
 }
 
 // Range: 0x800628B0 -> 0x8006294C
-unsigned char InteractorManager::ChangeActiveInteractorToNull(class InteractorManager * const this /* r30 */, int playerId /* r31 */) {
+// this: r30
+unsigned char InteractorManager::ChangeActiveInteractorToNull(int playerId /* r31 */) {
     // Local variables
     unsigned char playerBitToCheck; // r4
 }
 
 // Range: 0x8006294C -> 0x800629A4
-enum InteractorType InteractorManager::GetPlayerInteractorType(class InteractorManager * const this /* r30 */, int playerId /* r31 */) {
+// this: r30
+enum InteractorType InteractorManager::GetPlayerInteractorType(int playerId /* r31 */) {
     // Local variables
     const struct ActiveInteractor & activeInteractor; // r0
 }
 
 // Range: 0x800629A4 -> 0x80062A1C
-class Interactor * InteractorManager::GetPlayerInteractor(class InteractorManager * const this /* r29 */, int playerId /* r30 */, enum InteractorType type /* r31 */) {
+// this: r29
+class Interactor * InteractorManager::GetPlayerInteractor(int playerId /* r30 */, enum InteractorType type /* r31 */) {
     // Local variables
     struct ActiveInteractor & activeInteractor; // r0
 }
 
 // Range: 0x80062A1C -> 0x80062A6C
-struct InteractorInfo & InteractorManager::GetPlayerInteractorInfo(const class InteractorManager * const this /* r30 */, int playerId /* r31 */) {}
+// this: r30
+struct InteractorInfo & InteractorManager::GetPlayerInteractorInfo(int playerId /* r31 */) const {}
 
 // Range: 0x80062A6C -> 0x80062AB0
 class InteractorManager * InteractorManager::GetSingleton() {
@@ -70,14 +78,16 @@ class InteractorVisualizer * InteractorManager::GetVisualizer() {
 unsigned char InteractorManager::IsInitialized() {}
 
 // Range: 0x80062AC8 -> 0x80062E00
-void InteractorManager::CreatePlayerInteractorSets(class InteractorManager * const this /* r27 */) {
+// this: r27
+void InteractorManager::CreatePlayerInteractorSets() {
     // Local variables
     int i; // r29
     class vector & interactorSet; // r28
 }
 
 // Range: 0x80062E00 -> 0x800632A4
-void InteractorManager::DestroyPlayerInteractorSets(class InteractorManager * const this /* r28 */) {
+// this: r28
+void InteractorManager::DestroyPlayerInteractorSets() {
     // Local variables
     int i; // r30
     class Interactor * pInteractor; // r0
@@ -88,7 +98,8 @@ void InteractorManager::DestroyPlayerInteractorSets(class InteractorManager * co
 unsigned char InteractorManager::IsValidPlayerId() {}
 
 // Range: 0x800632E4 -> 0x80063590
-void InteractorManager::UpdateActivePlayerInteractors(class InteractorManager * const this /* r30 */, float delta /* f31 */) {
+// this: r30
+void InteractorManager::UpdateActivePlayerInteractors(float delta /* f31 */) {
     // Local variables
     int i; // r31
     unsigned char playerBitToCheck; // r24

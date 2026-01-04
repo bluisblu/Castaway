@@ -20,13 +20,15 @@ void iResFile::Unlink() {
 }
 
 // Range: 0x800D80A8 -> 0x800D80F8
-void * iResFile::iResFile(class iResFile * const this /* r31 */) {
+// this: r31
+iResFile::iResFile() {
     // References
     // -> struct [anonymous] __vt__8iResFile;
 }
 
 // Range: 0x800D80F8 -> 0x800D8158
-void * iResFile::~iResFile(class iResFile * const this /* r30 */) {
+// this: r30
+iResFile::~iResFile() {
     // References
     // -> struct [anonymous] __vt__8iResFile;
 }
@@ -38,10 +40,12 @@ int iResFile::GetError() {}
 void iResFile::SetError() {}
 
 // Range: 0x800D8168 -> 0x800D81E0
-void iResFile::Release(class iResFile * const this /* r30 */, struct HandleNode * res /* r31 */) {}
+// this: r30
+void iResFile::Release(struct HandleNode * res /* r31 */) {}
 
 // Range: 0x800D81E0 -> 0x800D82C8
-int iResFile::Open(class iResFile * const this /* r29 */, const class StringBuffer & path /* r30 */, enum OpenFlags openFlags /* r31 */) {
+// this: r29
+int iResFile::Open(const class StringBuffer & path /* r30 */, enum OpenFlags openFlags /* r31 */) {
     // Local variables
     int err; // r0
 }
@@ -53,7 +57,8 @@ char iResFile::GetLanguage() {
 }
 
 // Range: 0x800D82FC -> 0x800D836C
-void iResFile::AddWithLanguage(class iResFile * const this /* r27 */, struct HandleNode * theHandle /* r28 */, int rType /* r29 */, signed short rID /* r30 */, unsigned char littleEndian /* r31 */) {
+// this: r27
+void iResFile::AddWithLanguage(struct HandleNode * theHandle /* r28 */, int rType /* r29 */, signed short rID /* r30 */, unsigned char littleEndian /* r31 */) {
     // Local variables
     class StackString empty; // r1+0x8
 }

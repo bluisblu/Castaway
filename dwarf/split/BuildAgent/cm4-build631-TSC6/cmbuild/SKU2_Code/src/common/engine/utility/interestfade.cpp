@@ -5,7 +5,8 @@
     Code range: 0x802F5B48 -> 0x802F7D40
 */
 // Range: 0x802F5B48 -> 0x802F69FC
-void TrapezoidFade::Setup(class TrapezoidFade * const this /* r31 */) {
+// this: r31
+void TrapezoidFade::Setup() {
     // Local variables
     class EVec3 vDelta; // r1+0x260
     float fD; // f0
@@ -18,7 +19,8 @@ void TrapezoidFade::Setup(class TrapezoidFade * const this /* r31 */) {
 }
 
 // Range: 0x802F69FC -> 0x802F6BAC
-float TrapezoidFade::CalcAlpha(class TrapezoidFade * const this /* r28 */, const class EBound3 & bounds /* r29 */) {
+// this: r28
+float TrapezoidFade::CalcAlpha(const class EBound3 & bounds /* r29 */) {
     // Local variables
     class EVec3 pt; // r1+0x20
     float fdMax; // f31
@@ -28,10 +30,12 @@ float TrapezoidFade::CalcAlpha(class TrapezoidFade * const this /* r28 */, const
 }
 
 // Range: 0x802F6BAC -> 0x802F6CE0
-void * PyramidFade::PyramidFade(class PyramidFade * const this /* r31 */) {}
+// this: r31
+PyramidFade::PyramidFade() {}
 
 // Range: 0x802F6CE0 -> 0x802F71D8
-void PyramidFade::Setup(class PyramidFade * const this /* r29 */, const class EVec3 & eye /* r30 */, const class EVec3 * farPlaneCorners /* r31 */) {
+// this: r29
+void PyramidFade::Setup(const class EVec3 & eye /* r30 */, const class EVec3 * farPlaneCorners /* r31 */) {
     // Local variables
     class EVec3 a; // r1+0x108
     class EVec3 b; // r1+0xFC
@@ -54,7 +58,8 @@ void PyramidFade::DeriveDepthData() {
 }
 
 // Range: 0x802F7304 -> 0x802F7844
-unsigned char PyramidFade::IsOutsideFadeVolume(const class PyramidFade * const this /* r26 */, class EInstance * instance /* r27 */, const class EBound3 & bounds /* r28 */) {
+// this: r26
+unsigned char PyramidFade::IsOutsideFadeVolume(class EInstance * instance /* r27 */, const class EBound3 & bounds /* r28 */) const {
     // Local variables
     void * obj; // r0
     unsigned char test1; // r30
@@ -99,7 +104,8 @@ void LineFade::SetEnabled() {}
 void HeightFade::Setup() {}
 
 // Range: 0x802F7BE0 -> 0x802F7D34
-class EVec3 HeightFade::GenerateAdjustedInterestPt(class EVec3 * ret /* r28 */, class HeightFade * const this /* r29 */, const class EVec3 & baseEyePoint /* r30 */, const class EVec3 & baseInterestPoint /* r31 */) {
+// this: r28
+class EVec3 HeightFade::GenerateAdjustedInterestPt(class HeightFade * const this /* r29 */, const class EVec3 & baseEyePoint /* r30 */, const class EVec3 & baseInterestPoint /* r31 */) {
     // Local variables
     class EVec3 delta; // r1+0x2C
     class EVec3 fullAdjustedPoint; // r1+0x20

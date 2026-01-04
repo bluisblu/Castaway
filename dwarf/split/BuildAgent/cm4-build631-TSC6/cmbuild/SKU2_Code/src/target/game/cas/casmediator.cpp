@@ -5,44 +5,51 @@
     Code range: 0x80029708 -> 0x80029B58
 */
 // Range: 0x80029708 -> 0x80029794
-void * CasMediator::CasMediator(class CasMediator * const this /* r30 */) {
+// this: r30
+CasMediator::CasMediator() {
     // References
     // -> struct [anonymous] __vt__11CasMediator;
 }
 
 // Range: 0x80029794 -> 0x80029824
-void * CasMediator::~CasMediator(class CasMediator * const this /* r30 */) {
+// this: r30
+CasMediator::~CasMediator() {
     // References
     // -> struct [anonymous] __vt__11CasMediator;
 }
 
 // Range: 0x80029824 -> 0x800298D4
-void CasMediator::AddListener(class CasMediator * const this /* r29 */, class CasListener * listener /* r1+0x8 */) {
+// this: r29
+void CasMediator::AddListener(class CasListener * listener /* r1+0x8 */) {
     // Local variables
     unsigned char bAlreadyAdded; // r31
     class CasListener * * itor; // r30
 }
 
 // Range: 0x800298D4 -> 0x8002996C
-void CasMediator::RemoveListener(class CasMediator * const this /* r29 */, class CasListener * listener /* r30 */) {
+// this: r29
+void CasMediator::RemoveListener(class CasListener * listener /* r30 */) {
     // Local variables
     class CasListener * * itor; // r31
 }
 
 // Range: 0x8002996C -> 0x800299E4
-void CasMediator::RemoveAllListeners(class CasMediator * const this /* r30 */) {
+// this: r30
+void CasMediator::RemoveAllListeners() {
     // Local variables
     class CasListener * * itor; // r31
 }
 
 // Range: 0x800299E4 -> 0x80029A70
-void CasMediator::PostEvent(const class CasMediator * const this /* r29 */, const class CasEvent & event /* r30 */) {
+// this: r29
+void CasMediator::PostEvent(const class CasEvent & event /* r30 */) const {
     // Local variables
     class CasListener * const * itor; // r31
 }
 
 // Range: 0x80029A70 -> 0x80029AE4
-void CasMediator::SetScene(class CasMediator * const this /* r30 */, class CasScene * pScene /* r31 */) {}
+// this: r30
+void CasMediator::SetScene(class CasScene * pScene /* r31 */) {}
 
 // Range: 0x80029AE4 -> 0x80029AF8
 void CasMediator::DrawSim() {}

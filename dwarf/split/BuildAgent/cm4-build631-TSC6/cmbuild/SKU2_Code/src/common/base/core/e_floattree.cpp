@@ -5,7 +5,7 @@
     Code range: 0x8026199C -> 0x802622A0
 */
 // Range: 0x8026199C -> 0x802619B8
-void * EFloatTree::EFloatTree() {
+EFloatTree::EFloatTree() {
     // References
     // -> struct EFloatTreeSentinel m_sentinel;
 }
@@ -29,7 +29,8 @@ void EFloatTree::RotateRight() {
 }
 
 // Range: 0x80261AC0 -> 0x80261C1C
-void EFloatTree::InsertFixup(class EFloatTree * const this /* r29 */, struct EFloatTreeNode * x /* r30 */) {
+// this: r29
+void EFloatTree::InsertFixup(struct EFloatTreeNode * x /* r30 */) {
     // Local variables
     struct EFloatTreeNode * y; // r3
 }
@@ -41,7 +42,8 @@ class FTIteratorPtrType * EFloatTree::Insert() {
 }
 
 // Range: 0x80261CD0 -> 0x80261E70
-class FTIteratorPtrType * EFloatTree::InsertAt(class EFloatTree * const this /* r31 */, struct EFloatTreeNode * pParent /* r28 */, float key /* f31 */, unsigned int value /* r29 */) {
+// this: r31
+class FTIteratorPtrType * EFloatTree::InsertAt(struct EFloatTreeNode * pParent /* r28 */, float key /* f31 */, unsigned int value /* r29 */) {
     // Local variables
     struct EFloatTreeNode * x; // r30
 
@@ -50,14 +52,16 @@ class FTIteratorPtrType * EFloatTree::InsertAt(class EFloatTree * const this /* 
 }
 
 // Range: 0x80261E70 -> 0x80262048
-void EFloatTree::RemoveFixup(class EFloatTree * const this /* r28 */, struct EFloatTreeNode * x /* r29 */) {
+// this: r28
+void EFloatTree::RemoveFixup(struct EFloatTreeNode * x /* r29 */) {
     // Local variables
     struct EFloatTreeNode * w; // r4
     struct EFloatTreeNode * w; // r4
 }
 
 // Range: 0x80262048 -> 0x80262238
-void EFloatTree::Remove(class EFloatTree * const this /* r29 */, class FTIteratorPtrType * i /* r30 */) {
+// this: r29
+void EFloatTree::Remove(class FTIteratorPtrType * i /* r30 */) {
     // Local variables
     struct EFloatTreeNode * z; // [invalid]
     struct EFloatTreeNode * y; // r31
@@ -69,7 +73,8 @@ void EFloatTree::Remove(class EFloatTree * const this /* r29 */, class FTIterato
 }
 
 // Range: 0x80262238 -> 0x802622A0
-void EFloatTree::RemoveAll(class EFloatTree * const this /* r30 */) {
+// this: r30
+void EFloatTree::RemoveAll() {
     // References
     // -> struct EFloatTreeSentinel m_sentinel;
 }

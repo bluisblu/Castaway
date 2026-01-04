@@ -12,12 +12,6 @@ struct ClipTransform_t * AptMath::ClipStackPop() {
 }
 
 
-/*
-    Compile unit: C:\dev\TSC5\src\target\external\apt\include\apt\AptStd\AptMath.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x8032037C -> 0x803205FC
-*/
 // Range: 0x8032037C -> 0x80320540
 void AptMath::MatMul2d() {
     // Local variables

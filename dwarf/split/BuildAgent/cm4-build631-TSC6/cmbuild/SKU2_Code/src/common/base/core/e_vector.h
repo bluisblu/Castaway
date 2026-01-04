@@ -5,7 +5,7 @@
     Code range: 0x800327A8 -> 0x80032B70
 */
 // Range: 0x800327A8 -> 0x800327DC
-struct BodyPartGeometryTSC6 & VECTOR::__vc(unsigned long n /* r31 */) {}
+struct BodyPartGeometryTSC6 & VECTOR::operator[](unsigned long n /* r31 */) {}
 
 // Range: 0x800327DC -> 0x800327E4
 struct BodyPartGeometryTSC6 * VECTOR::begin() {}
@@ -14,7 +14,7 @@ struct BodyPartGeometryTSC6 * VECTOR::begin() {}
 int VECTOR::size() {}
 
 // Range: 0x80032800 -> 0x80032834
-struct BodyPartTypeInfoTSC6 & VECTOR::__vc(unsigned long n /* r31 */) {}
+struct BodyPartTypeInfoTSC6 & VECTOR::operator[](unsigned long n /* r31 */) {}
 
 // Range: 0x80032834 -> 0x8003283C
 struct BodyPartTypeInfoTSC6 * VECTOR::begin() {}
@@ -29,31 +29,31 @@ int VECTOR::size() {}
 int VECTOR::size() {}
 
 // Range: 0x80032890 -> 0x800328C4
-struct BodyPartTextureTSC6 & VECTOR::__vc(unsigned long n /* r31 */) {}
+struct BodyPartTextureTSC6 & VECTOR::operator[](unsigned long n /* r31 */) {}
 
 // Range: 0x800328C4 -> 0x800328CC
 struct BodyPartTextureTSC6 * VECTOR::begin() {}
 
 // Range: 0x800328CC -> 0x80032900
-struct BodyPartStyleInfoTSC6 & VECTOR::__vc(unsigned long n /* r31 */) {}
+struct BodyPartStyleInfoTSC6 & VECTOR::operator[](unsigned long n /* r31 */) {}
 
 // Range: 0x80032900 -> 0x80032908
 struct BodyPartStyleInfoTSC6 * VECTOR::begin() {}
 
 // Range: 0x80032908 -> 0x8003293C
-struct BodyPartModelInfoTSC6 & VECTOR::__vc(unsigned long n /* r31 */) {}
+struct BodyPartModelInfoTSC6 & VECTOR::operator[](unsigned long n /* r31 */) {}
 
 // Range: 0x8003293C -> 0x80032944
 struct BodyPartModelInfoTSC6 * VECTOR::begin() {}
 
 // Range: 0x80032944 -> 0x80032978
-char * const & VECTOR::__vc(unsigned long n /* r31 */) {}
+char * const & VECTOR::operator[](unsigned long n /* r31 */) {}
 
 // Range: 0x80032978 -> 0x80032980
 char * const * VECTOR::begin() {}
 
 // Range: 0x80032980 -> 0x800329B4
-unsigned int & VECTOR::__vc(unsigned long n /* r31 */) {}
+unsigned int & VECTOR::operator[](unsigned long n /* r31 */) {}
 
 // Range: 0x800329B4 -> 0x800329BC
 unsigned int * VECTOR::begin() {}
@@ -62,7 +62,7 @@ unsigned int * VECTOR::begin() {}
 int VECTOR::size() {}
 
 // Range: 0x800329D8 -> 0x80032A0C
-struct BodyPartSkinTSC6 & VECTOR::__vc(unsigned long n /* r31 */) {}
+struct BodyPartSkinTSC6 & VECTOR::operator[](unsigned long n /* r31 */) {}
 
 // Range: 0x80032A0C -> 0x80032A14
 struct BodyPartSkinTSC6 * VECTOR::begin() {}
@@ -74,19 +74,19 @@ int VECTOR::size() {}
 int VECTOR::size() {}
 
 // Range: 0x80032A4C -> 0x80032A80
-float & VECTOR::__vc(unsigned long n /* r31 */) {}
+float & VECTOR::operator[](unsigned long n /* r31 */) {}
 
 // Range: 0x80032A80 -> 0x80032A88
 float * VECTOR::begin() {}
 
 // Range: 0x80032A88 -> 0x80032ABC
-struct LatticeMorphTSC6 & VECTOR::__vc(unsigned long n /* r31 */) {}
+struct LatticeMorphTSC6 & VECTOR::operator[](unsigned long n /* r31 */) {}
 
 // Range: 0x80032ABC -> 0x80032AC4
 struct LatticeMorphTSC6 * VECTOR::begin() {}
 
 // Range: 0x80032AC4 -> 0x80032AF8
-int & VECTOR::__vc(unsigned long n /* r31 */) {}
+int & VECTOR::operator[](unsigned long n /* r31 */) {}
 
 // Range: 0x80032AF8 -> 0x80032B00
 int * VECTOR::begin() {}
@@ -98,29 +98,23 @@ int VECTOR::size() {}
 int VECTOR::size() {}
 
 // Range: 0x80032B38 -> 0x80032B68
-unsigned char & VECTOR::__vc(unsigned long n /* r31 */) {}
+unsigned char & VECTOR::operator[](unsigned long n /* r31 */) {}
 
 // Range: 0x80032B68 -> 0x80032B70
 unsigned char * VECTOR::begin() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\common\base\core\e_vector.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x8005C5A0 -> 0x8005C650
-*/
 // Range: 0x8005C5A0 -> 0x8005C5BC
 int VECTOR::size() {}
 
 // Range: 0x8005C5BC -> 0x8005C5F0
-struct FloorTile * const & VECTOR::__vc(unsigned long n /* r31 */) {}
+struct FloorTile * const & VECTOR::operator[](unsigned long n /* r31 */) {}
 
 // Range: 0x8005C5F0 -> 0x8005C5F8
 struct FloorTile * const * VECTOR::begin() {}
 
 // Range: 0x8005C5F8 -> 0x8005C62C
-struct WallTile * const & VECTOR::__vc(unsigned long n /* r31 */) {}
+struct WallTile * const & VECTOR::operator[](unsigned long n /* r31 */) {}
 
 // Range: 0x8005C62C -> 0x8005C634
 struct WallTile * const * VECTOR::begin() {}
@@ -129,14 +123,8 @@ struct WallTile * const * VECTOR::begin() {}
 int VECTOR::size() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\common\base\core\e_vector.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x8009611C -> 0x80096174
-*/
 // Range: 0x8009611C -> 0x80096150
-struct LightingEntry & VECTOR::__vc(unsigned long n /* r31 */) {}
+struct LightingEntry & VECTOR::operator[](unsigned long n /* r31 */) {}
 
 // Range: 0x80096150 -> 0x80096158
 struct LightingEntry * VECTOR::begin() {}
@@ -145,14 +133,9 @@ struct LightingEntry * VECTOR::begin() {}
 int VECTOR::size() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\common\base\core\e_vector.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x800A1B58 -> 0x800A201C
-*/
 // Range: 0x800A1B58 -> 0x800A1B90
-struct ObjFnData * VECTOR::end(const class VECTOR * const this /* r31 */) {}
+// this: r31
+struct ObjFnData * VECTOR::end() const {}
 
 // Range: 0x800A1B90 -> 0x800A1BAC
 int VECTOR::size() {}
@@ -164,7 +147,7 @@ struct ObjFnData * VECTOR::begin() {}
 int VECTOR::size() {}
 
 // Range: 0x800A1BD0 -> 0x800A1C04
-unsigned short & VECTOR::__vc(unsigned long n /* r31 */) {}
+unsigned short & VECTOR::operator[](unsigned long n /* r31 */) {}
 
 // Range: 0x800A1C04 -> 0x800A1C0C
 unsigned short * VECTOR::begin() {}
@@ -173,13 +156,14 @@ unsigned short * VECTOR::begin() {}
 int VECTOR::size() {}
 
 // Range: 0x800A1C28 -> 0x800A1C5C
-signed short & VECTOR::__vc(unsigned long n /* r31 */) {}
+signed short & VECTOR::operator[](unsigned long n /* r31 */) {}
 
 // Range: 0x800A1C5C -> 0x800A1C64
 signed short * VECTOR::begin() {}
 
 // Range: 0x800A1C64 -> 0x800A1C9C
-struct PropRefTable * VECTOR::end(const class VECTOR * const this /* r31 */) {}
+// this: r31
+struct PropRefTable * VECTOR::end() const {}
 
 // Range: 0x800A1C9C -> 0x800A1CB8
 int VECTOR::size() {}
@@ -188,7 +172,7 @@ int VECTOR::size() {}
 struct PropRefTable * VECTOR::begin() {}
 
 // Range: 0x800A1CC0 -> 0x800A1CF4
-struct PropRef * const & VECTOR::__vc(unsigned long n /* r31 */) {}
+struct PropRef * const & VECTOR::operator[](unsigned long n /* r31 */) {}
 
 // Range: 0x800A1CF4 -> 0x800A1CFC
 struct PropRef * const * VECTOR::begin() {}
@@ -197,7 +181,7 @@ struct PropRef * const * VECTOR::begin() {}
 int VECTOR::size() {}
 
 // Range: 0x800A1D18 -> 0x800A1D4C
-char * const & VECTOR::__vc(unsigned long n /* r31 */) {}
+char * const & VECTOR::operator[](unsigned long n /* r31 */) {}
 
 // Range: 0x800A1D4C -> 0x800A1D54
 char * const * VECTOR::begin() {}
@@ -206,7 +190,8 @@ char * const * VECTOR::begin() {}
 int VECTOR::size() {}
 
 // Range: 0x800A1D70 -> 0x800A1DA8
-struct AStringSet * VECTOR::end(const class VECTOR * const this /* r31 */) {}
+// this: r31
+struct AStringSet * VECTOR::end() const {}
 
 // Range: 0x800A1DA8 -> 0x800A1DC4
 int VECTOR::size() {}
@@ -215,7 +200,8 @@ int VECTOR::size() {}
 struct AStringSet * VECTOR::begin() {}
 
 // Range: 0x800A1DCC -> 0x800A1E04
-struct SlotDescList * VECTOR::end(const class VECTOR * const this /* r31 */) {}
+// this: r31
+struct SlotDescList * VECTOR::end() const {}
 
 // Range: 0x800A1E04 -> 0x800A1E20
 int VECTOR::size() {}
@@ -224,10 +210,11 @@ int VECTOR::size() {}
 struct SlotDescList * VECTOR::begin() {}
 
 // Range: 0x800A1E28 -> 0x800A1E5C
-struct SlotDescList & VECTOR::__vc(unsigned long n /* r31 */) {}
+struct SlotDescList & VECTOR::operator[](unsigned long n /* r31 */) {}
 
 // Range: 0x800A1E5C -> 0x800A1E94
-struct SndInfo * VECTOR::end(const class VECTOR * const this /* r31 */) {}
+// this: r31
+struct SndInfo * VECTOR::end() const {}
 
 // Range: 0x800A1E94 -> 0x800A1EB0
 int VECTOR::size() {}
@@ -236,7 +223,7 @@ int VECTOR::size() {}
 struct SndInfo * VECTOR::begin() {}
 
 // Range: 0x800A1EB8 -> 0x800A1EEC
-class TreeTableEntry & VECTOR::__vc(unsigned long n /* r31 */) {}
+class TreeTableEntry & VECTOR::operator[](unsigned long n /* r31 */) {}
 
 // Range: 0x800A1EEC -> 0x800A1EF4
 class TreeTableEntry * VECTOR::begin() {}
@@ -245,7 +232,8 @@ class TreeTableEntry * VECTOR::begin() {}
 int VECTOR::size() {}
 
 // Range: 0x800A1F10 -> 0x800A1F48
-class TreeTableEntry * VECTOR::end(const class VECTOR * const this /* r31 */) {}
+// this: r31
+class TreeTableEntry * VECTOR::end() const {}
 
 // Range: 0x800A1F48 -> 0x800A1F50
 struct FenceData * const * VECTOR::begin() {}
@@ -257,7 +245,7 @@ int VECTOR::size() {}
 int VECTOR::size() {}
 
 // Range: 0x800A1F88 -> 0x800A1FBC
-struct DialogIcon & VECTOR::__vc(unsigned long n /* r31 */) {}
+struct DialogIcon & VECTOR::operator[](unsigned long n /* r31 */) {}
 
 // Range: 0x800A1FBC -> 0x800A1FC4
 struct DialogIcon * VECTOR::begin() {}
@@ -266,20 +254,15 @@ struct DialogIcon * VECTOR::begin() {}
 int VECTOR::size() {}
 
 // Range: 0x800A1FE0 -> 0x800A2014
-class SlotDescriptor & VECTOR::__vc(unsigned long n /* r31 */) {}
+class SlotDescriptor & VECTOR::operator[](unsigned long n /* r31 */) {}
 
 // Range: 0x800A2014 -> 0x800A201C
 class SlotDescriptor * VECTOR::begin() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\common\base\core\e_vector.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x800FB8C4 -> 0x800FBB1C
-*/
 // Range: 0x800FB8C4 -> 0x800FB8FC
-struct AnimRefTable * VECTOR::end(const class VECTOR * const this /* r31 */) {}
+// this: r31
+struct AnimRefTable * VECTOR::end() const {}
 
 // Range: 0x800FB8FC -> 0x800FB918
 int VECTOR::size() {}
@@ -288,7 +271,7 @@ int VECTOR::size() {}
 struct AnimRefTable * VECTOR::begin() {}
 
 // Range: 0x800FB920 -> 0x800FB954
-struct AnimRefName * const & VECTOR::__vc(unsigned long n /* r31 */) {}
+struct AnimRefName * const & VECTOR::operator[](unsigned long n /* r31 */) {}
 
 // Range: 0x800FB954 -> 0x800FB95C
 struct AnimRefName * const * VECTOR::begin() {}
@@ -297,7 +280,8 @@ struct AnimRefName * const * VECTOR::begin() {}
 int VECTOR::size() {}
 
 // Range: 0x800FB978 -> 0x800FB9B0
-struct CatalogData * VECTOR::end(const class VECTOR * const this /* r31 */) {}
+// this: r31
+struct CatalogData * VECTOR::end() const {}
 
 // Range: 0x800FB9B0 -> 0x800FB9CC
 int VECTOR::size() {}
@@ -306,7 +290,8 @@ int VECTOR::size() {}
 struct CatalogData * VECTOR::begin() {}
 
 // Range: 0x800FB9D4 -> 0x800FBA0C
-struct FloatConstantItem * VECTOR::end(const class VECTOR * const this /* r31 */) {}
+// this: r31
+struct FloatConstantItem * VECTOR::end() const {}
 
 // Range: 0x800FBA0C -> 0x800FBA28
 int VECTOR::size() {}
@@ -315,7 +300,8 @@ int VECTOR::size() {}
 struct FloatConstantItem * VECTOR::begin() {}
 
 // Range: 0x800FBA30 -> 0x800FBA68
-struct FloatConstantsData * VECTOR::end(const class VECTOR * const this /* r31 */) {}
+// this: r31
+struct FloatConstantsData * VECTOR::end() const {}
 
 // Range: 0x800FBA68 -> 0x800FBA84
 int VECTOR::size() {}
@@ -324,7 +310,7 @@ int VECTOR::size() {}
 struct FloatConstantsData * VECTOR::begin() {}
 
 // Range: 0x800FBA8C -> 0x800FBAC0
-struct ObjDefinition * const & VECTOR::__vc(unsigned long n /* r31 */) {}
+struct ObjDefinition * const & VECTOR::operator[](unsigned long n /* r31 */) {}
 
 // Range: 0x800FBAC0 -> 0x800FBAC8
 struct ObjDefinition * const * VECTOR::begin() {}
@@ -333,23 +319,17 @@ struct ObjDefinition * const * VECTOR::begin() {}
 int VECTOR::size() {}
 
 // Range: 0x800FBAE4 -> 0x800FBB14
-signed char & VECTOR::__vc(unsigned long n /* r31 */) {}
+signed char & VECTOR::operator[](unsigned long n /* r31 */) {}
 
 // Range: 0x800FBB14 -> 0x800FBB1C
 signed char * VECTOR::begin() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\common\base\core\e_vector.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x8015E524 -> 0x8015E6F8
-*/
 // Range: 0x8015E524 -> 0x8015E540
 int VECTOR::size() {}
 
 // Range: 0x8015E540 -> 0x8015E574
-struct BehaviorConstants & VECTOR::__vc(unsigned long n /* r31 */) {}
+struct BehaviorConstants & VECTOR::operator[](unsigned long n /* r31 */) {}
 
 // Range: 0x8015E574 -> 0x8015E57C
 struct BehaviorConstants * VECTOR::begin() {}
@@ -358,22 +338,25 @@ struct BehaviorConstants * VECTOR::begin() {}
 int VECTOR::size() {}
 
 // Range: 0x8015E598 -> 0x8015E5D0
-struct BehaviorConstants * VECTOR::end(const class VECTOR * const this /* r31 */) {}
+// this: r31
+struct BehaviorConstants * VECTOR::end() const {}
 
 // Range: 0x8015E5D0 -> 0x8015E608
-struct ObjDefinition * const * VECTOR::end(const class VECTOR * const this /* r31 */) {}
+// this: r31
+struct ObjDefinition * const * VECTOR::end() const {}
 
 // Range: 0x8015E608 -> 0x8015E624
 int VECTOR::size() {}
 
 // Range: 0x8015E624 -> 0x8015E658
-class TreeTableAd & VECTOR::__vc(unsigned long n /* r31 */) {}
+class TreeTableAd & VECTOR::operator[](unsigned long n /* r31 */) {}
 
 // Range: 0x8015E658 -> 0x8015E660
 class TreeTableAd * VECTOR::begin() {}
 
 // Range: 0x8015E660 -> 0x8015E698
-class TreeTable * VECTOR::end(const class VECTOR * const this /* r31 */) {}
+// this: r31
+class TreeTable * VECTOR::end() const {}
 
 // Range: 0x8015E698 -> 0x8015E6B4
 int VECTOR::size() {}
@@ -382,29 +365,24 @@ int VECTOR::size() {}
 class TreeTable * VECTOR::begin() {}
 
 // Range: 0x8015E6BC -> 0x8015E6F0
-struct BehaviorConstantValue & VECTOR::__vc(unsigned long n /* r31 */) {}
+struct BehaviorConstantValue & VECTOR::operator[](unsigned long n /* r31 */) {}
 
 // Range: 0x8015E6F0 -> 0x8015E6F8
 struct BehaviorConstantValue * VECTOR::begin() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\common\base\core\e_vector.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x8016A4F4 -> 0x8016A5A8
-*/
 // Range: 0x8016A4F4 -> 0x8016A510
 int VECTOR::size() {}
 
 // Range: 0x8016A510 -> 0x8016A544
-class ELocString & VECTOR::__vc(unsigned long n /* r31 */) {}
+class ELocString & VECTOR::operator[](unsigned long n /* r31 */) {}
 
 // Range: 0x8016A544 -> 0x8016A54C
 class ELocString * VECTOR::begin() {}
 
 // Range: 0x8016A54C -> 0x8016A584
-struct WStringSet * VECTOR::end(const class VECTOR * const this /* r31 */) {}
+// this: r31
+struct WStringSet * VECTOR::end() const {}
 
 // Range: 0x8016A584 -> 0x8016A5A0
 int VECTOR::size() {}
@@ -413,28 +391,19 @@ int VECTOR::size() {}
 struct WStringSet * VECTOR::begin() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\common\base\core\e_vector.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x801BE34C -> 0x801BE3F4
-*/
 // Range: 0x801BE34C -> 0x801BE384
-struct FenceData * const * VECTOR::end(const class VECTOR * const this /* r31 */) {}
+// this: r31
+struct FenceData * const * VECTOR::end() const {}
 
 // Range: 0x801BE384 -> 0x801BE3BC
-struct WallTile * const * VECTOR::end(const class VECTOR * const this /* r31 */) {}
+// this: r31
+struct WallTile * const * VECTOR::end() const {}
 
 // Range: 0x801BE3BC -> 0x801BE3F4
-struct FloorTile * const * VECTOR::end(const class VECTOR * const this /* r31 */) {}
+// this: r31
+struct FloorTile * const * VECTOR::end() const {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\common\base\core\e_vector.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x801E4230 -> 0x801E4254
-*/
 // Range: 0x801E4230 -> 0x801E4238
 struct ObjAnimDef * VECTOR::begin() {}
 
@@ -442,14 +411,8 @@ struct ObjAnimDef * VECTOR::begin() {}
 int VECTOR::size() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\common\base\core\e_vector.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x80225D0C -> 0x80225E84
-*/
 // Range: 0x80225D0C -> 0x80225D40
-struct LevelData & VECTOR::__vc(unsigned long n /* r31 */) {}
+struct LevelData & VECTOR::operator[](unsigned long n /* r31 */) {}
 
 // Range: 0x80225D40 -> 0x80225D48
 struct LevelData * VECTOR::begin() {}
@@ -461,53 +424,47 @@ int VECTOR::size() {}
 int VECTOR::size() {}
 
 // Range: 0x80225D80 -> 0x80225DB4
-struct WantItem & VECTOR::__vc(unsigned long n /* r31 */) {}
+struct WantItem & VECTOR::operator[](unsigned long n /* r31 */) {}
 
 // Range: 0x80225DB4 -> 0x80225DBC
 struct WantItem * VECTOR::begin() {}
 
 // Range: 0x80225DBC -> 0x80225DF0
-struct ObjAnimDef & VECTOR::__vc(unsigned long n /* r31 */) {}
+struct ObjAnimDef & VECTOR::operator[](unsigned long n /* r31 */) {}
 
 // Range: 0x80225DF0 -> 0x80225E0C
 int VECTOR::size() {}
 
 // Range: 0x80225E0C -> 0x80225E40
-struct ECntrMdlLkupNode & VECTOR::__vc(unsigned long n /* r31 */) {}
+struct ECntrMdlLkupNode & VECTOR::operator[](unsigned long n /* r31 */) {}
 
 // Range: 0x80225E40 -> 0x80225E48
 struct ECntrMdlLkupNode * VECTOR::begin() {}
 
 // Range: 0x80225E48 -> 0x80225E7C
-struct ObjAnimDef & VECTOR::__vc(unsigned long n /* r31 */) {}
+struct ObjAnimDef & VECTOR::operator[](unsigned long n /* r31 */) {}
 
 // Range: 0x80225E7C -> 0x80225E84
 struct ObjAnimDef * VECTOR::begin() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\common\base\core\e_vector.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x8024D6B0 -> 0x8024D780
-*/
 // Range: 0x8024D6B0 -> 0x8024D6CC
 int VECTOR::size() {}
 
 // Range: 0x8024D6CC -> 0x8024D700
-struct WeatherSequence & VECTOR::__vc(unsigned long n /* r31 */) {}
+struct WeatherSequence & VECTOR::operator[](unsigned long n /* r31 */) {}
 
 // Range: 0x8024D700 -> 0x8024D708
 struct WeatherSequence * VECTOR::begin() {}
 
 // Range: 0x8024D708 -> 0x8024D73C
-struct DayData & VECTOR::__vc(unsigned long n /* r31 */) {}
+struct DayData & VECTOR::operator[](unsigned long n /* r31 */) {}
 
 // Range: 0x8024D73C -> 0x8024D744
 struct DayData * VECTOR::begin() {}
 
 // Range: 0x8024D744 -> 0x8024D778
-struct MonthData & VECTOR::__vc(unsigned long n /* r31 */) {}
+struct MonthData & VECTOR::operator[](unsigned long n /* r31 */) {}
 
 // Range: 0x8024D778 -> 0x8024D780
 struct MonthData * VECTOR::begin() {}

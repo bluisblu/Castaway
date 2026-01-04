@@ -48,12 +48,6 @@ unsigned char AnimateNewParam::GetBackwards() {}
 unsigned char AnimateNewParam::GetUseLocalForEvents() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\target\game\simulator\core\xprimitives.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x800CE2A4 -> 0x800CE340
-*/
 // Range: 0x800CE2A4 -> 0x800CE2B0
 unsigned char SetMotiveDeltaParam::GetClearAll() {}
 
@@ -88,12 +82,6 @@ unsigned char IdleAnimateParam::GetLiteralLoopCount() {}
 unsigned char IdleAnimateParam::GetLoopsStoredInLiteralField() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\target\game\simulator\core\xprimitives.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x8010B9B4 -> 0x8010C11C
-*/
 // Range: 0x8010B9B4 -> 0x8010B9BC
 unsigned char DialogParam::GetIconIndex() {}
 

@@ -17,7 +17,7 @@ unsigned char EffectsPreRenderVisitor::Visit(class FastParticleEmitter & emitter
 }
 
 // Range: 0x8022A398 -> 0x8022A39C
-void * GameEffectsManager::GameEffectsManager() {}
+GameEffectsManager::GameEffectsManager() {}
 
 // Range: 0x8022A39C -> 0x8022A3E0
 class GameEffectsManager * GameEffectsManager::GetSingleton() {
@@ -32,10 +32,12 @@ void GameEffectsManager::PreRender() {
 }
 
 // Range: 0x8022A41C -> 0x8022A474
-void * EffectsPreRenderVisitor::~EffectsPreRenderVisitor(class EffectsPreRenderVisitor * const this /* r30 */) {}
+// this: r30
+EffectsPreRenderVisitor::~EffectsPreRenderVisitor() {}
 
 // Range: 0x8022A474 -> 0x8022A4B0
-void * EffectsPreRenderVisitor::EffectsPreRenderVisitor(class EffectsPreRenderVisitor * const this /* r31 */) {
+// this: r31
+EffectsPreRenderVisitor::EffectsPreRenderVisitor() {
     // References
     // -> struct [anonymous] __vt__23EffectsPreRenderVisitor;
 }

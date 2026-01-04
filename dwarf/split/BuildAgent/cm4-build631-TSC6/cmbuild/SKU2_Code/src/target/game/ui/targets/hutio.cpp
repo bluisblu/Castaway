@@ -66,7 +66,8 @@ unsigned char HUTIO::RotatePoint(class CTilePt & in_cTilePt /* r28 */, class CTi
 }
 
 // Range: 0x801EBA14 -> 0x801EBBC8
-unsigned char HUTIO::PlaceHut(class HUTIO * const this /* r27 */, class HutRecipe * pHutRecipe /* r28 */, const class CTilePt & in_cOffsetPt /* r30 */, int direction /* r29 */) {
+// this: r27
+unsigned char HUTIO::PlaceHut(class HutRecipe * pHutRecipe /* r28 */, const class CTilePt & in_cOffsetPt /* r30 */, int direction /* r29 */) {
     // Local variables
     class CTilePt cTempPt; // r1+0x14
     class CTilePt cRotPt; // r1+0x10
@@ -93,7 +94,8 @@ unsigned char HUTIO::AddObject(const class CTilePt & cTilePt /* r28 */, int dire
 }
 
 // Range: 0x801EBD24 -> 0x801EBEFC
-unsigned char HUTIO::MakeHutPlacementObject(class HUTIO * const this /* r30 */, class HutRecipe * pHutRecipe /* r31 */) {
+// this: r30
+unsigned char HUTIO::MakeHutPlacementObject(class HutRecipe * pHutRecipe /* r31 */) {
     // Local variables
     unsigned char rc; // r27
     class ObjectModule * pObjectModule; // r26
@@ -107,7 +109,8 @@ unsigned char HUTIO::MakeHutPlacementObject(class HUTIO * const this /* r30 */, 
 }
 
 // Range: 0x801EBEFC -> 0x801EC294
-unsigned char HUTIO::IsValidFinalHutLocation(class HUTIO * const this /* r27 */, class HutRecipe * pHutRecipe /* r28 */, const class CTilePt & in_cTilePt /* r29 */, int in_direction /* r25 */) {
+// this: r27
+unsigned char HUTIO::IsValidFinalHutLocation(class HutRecipe * pHutRecipe /* r28 */, const class CTilePt & in_cTilePt /* r29 */, int in_direction /* r25 */) {
     // Local variables
     int direction; // r31
     unsigned char bIsMultiWall; // r30
@@ -127,7 +130,8 @@ unsigned char HUTIO::IsValidFinalHutLocation(class HUTIO * const this /* r27 */,
 }
 
 // Range: 0x801EC294 -> 0x801EC3C8
-unsigned char HUTIO::IsHutPlacementObjectInBounds(class HUTIO * const this /* r25 */, class HutRecipe * pHutRecipe /* r26 */, const class CTilePt & in_cTilePt /* r27 */, int in_direction /* r28 */) {
+// this: r25
+unsigned char HUTIO::IsHutPlacementObjectInBounds(class HutRecipe * pHutRecipe /* r26 */, const class CTilePt & in_cTilePt /* r27 */, int in_direction /* r28 */) {
     // Local variables
     unsigned char rc; // r30
     int direction; // r29
@@ -136,7 +140,8 @@ unsigned char HUTIO::IsHutPlacementObjectInBounds(class HUTIO * const this /* r2
 }
 
 // Range: 0x801EC3C8 -> 0x801EC558
-unsigned char HUTIO::PlaceHutPlacementObject(class HUTIO * const this /* r29 */, class HutRecipe * pHutRecipe /* r27 */, const class CTilePt & in_cTilePt /* r30 */, int in_direction /* r28 */) {
+// this: r29
+unsigned char HUTIO::PlaceHutPlacementObject(class HutRecipe * pHutRecipe /* r27 */, const class CTilePt & in_cTilePt /* r30 */, int in_direction /* r28 */) {
     // Local variables
     unsigned char bGoodPlace; // r31
     class CTilePt cPlacePt; // r1+0x8
@@ -147,7 +152,8 @@ unsigned char HUTIO::PlaceHutPlacementObject(class HUTIO * const this /* r29 */,
 }
 
 // Range: 0x801EC558 -> 0x801EC5E0
-void HUTIO::DeleteHutPlacementObject(class HUTIO * const this /* r29 */) {
+// this: r29
+void HUTIO::DeleteHutPlacementObject() {
     // References
     // -> class GameData _gd;
 }

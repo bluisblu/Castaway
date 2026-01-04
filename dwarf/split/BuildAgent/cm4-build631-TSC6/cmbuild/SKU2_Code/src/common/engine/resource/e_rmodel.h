@@ -11,12 +11,6 @@ unsigned char ERModel::IsWeldable() {}
 void ERModel::SetMorphDirtyFlag() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\common\engine\resource\e_rmodel.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x8006B8B4 -> 0x8006B8C4
-*/
 // Range: 0x8006B8B4 -> 0x8006B8BC
 unsigned char ERModel::IsHierarchical() {}
 
@@ -24,12 +18,6 @@ unsigned char ERModel::IsHierarchical() {}
 unsigned char ERModel::AreMatsInDLs() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\common\engine\resource\e_rmodel.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x80088858 -> 0x8008888C
-*/
 // Range: 0x80088858 -> 0x80088860
 unsigned char ERModel::DontCull() {}
 
@@ -40,28 +28,17 @@ unsigned char ERModel::DontInterestFade() {}
 unsigned char ERModel::DontFrontPlaneFade() {}
 
 // Range: 0x80088870 -> 0x80088884
-void ERModel::CalcOrientedBoundBox(class ERModel * const this /* r6 */) {}
+// this: r6
+void ERModel::CalcOrientedBoundBox() {}
 
 // Range: 0x80088884 -> 0x8008888C
 unsigned char ERModel::IsIntVerts() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\common\engine\resource\e_rmodel.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x8015D7A0 -> 0x8015D7A8
-*/
 // Range: 0x8015D7A0 -> 0x8015D7A8
 class ENDummy * ERModel::GetDummy() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\common\engine\resource\e_rmodel.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x802EFD44 -> 0x802EFDF4
-*/
 // Range: 0x802EFD44 -> 0x802EFD64
 void ERModel::SafeDelete() {}
 

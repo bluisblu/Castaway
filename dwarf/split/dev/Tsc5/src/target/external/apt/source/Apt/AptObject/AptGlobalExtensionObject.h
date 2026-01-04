@@ -5,12 +5,14 @@
     Code range: 0x8032F1D4 -> 0x8032F280
 */
 // Range: 0x8032F1D4 -> 0x8032F224
-void * AptGlobalExtensionObject::AptGlobalExtensionObject(class AptGlobalExtensionObject * const this /* r31 */) {
+// this: r31
+AptGlobalExtensionObject::AptGlobalExtensionObject() {
     // References
     // -> struct [anonymous] __vt__24AptGlobalExtensionObject;
 }
 
 // Range: 0x8032F224 -> 0x8032F280
-void * AptGlobalExtensionObject::~AptGlobalExtensionObject(class AptGlobalExtensionObject * const this /* r30 */) {}
+// this: r30
+AptGlobalExtensionObject::~AptGlobalExtensionObject() {}
 
 

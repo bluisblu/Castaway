@@ -17,10 +17,12 @@ enum ChangeType CasEventChangeCharacter::GetChangeType() {}
 unsigned char CasEventChangeCharacter::GetBlockOnLoad() {}
 
 // Range: 0x80037EA8 -> 0x80037F00
-void * CasEventChangeCharacter::~CasEventChangeCharacter(class CasEventChangeCharacter * const this /* r30 */) {}
+// this: r30
+CasEventChangeCharacter::~CasEventChangeCharacter() {}
 
 // Range: 0x80037F00 -> 0x80037F78
-void * CasEventChangeCharacter::CasEventChangeCharacter(class CasEventChangeCharacter * const this /* r26 */, enum CharacterPart part /* r27 */, enum ChangeType changeType /* r28 */, unsigned int newIndex /* r29 */, unsigned int oldIndex /* r30 */, unsigned char bBlockOnLoad /* r31 */) {
+// this: r26
+CasEventChangeCharacter::CasEventChangeCharacter(enum CharacterPart part /* r27 */, enum ChangeType changeType /* r28 */, unsigned int newIndex /* r29 */, unsigned int oldIndex /* r30 */, unsigned char bBlockOnLoad /* r31 */) {
     // References
     // -> struct [anonymous] __vt__23CasEventChangeCharacter;
 }

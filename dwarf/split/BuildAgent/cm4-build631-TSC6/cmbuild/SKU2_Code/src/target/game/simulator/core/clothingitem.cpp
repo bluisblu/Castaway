@@ -5,7 +5,8 @@
     Code range: 0x8011E550 -> 0x8011EC50
 */
 // Range: 0x8011E550 -> 0x8011E638
-void * ClothingItem::ClothingItem(class ClothingItem * const this /* r28 */, signed short nID /* r29 */, unsigned char bMale /* r31 */) {
+// this: r28
+ClothingItem::ClothingItem(signed short nID /* r29 */, unsigned char bMale /* r31 */) {
     // Local variables
     const struct ClothingItems * pClothingItemLookup; // r0
     const struct BodyPartGeometryTSC6 * pBodyPartData; // r0
@@ -15,19 +16,23 @@ void * ClothingItem::ClothingItem(class ClothingItem * const this /* r28 */, sig
 }
 
 // Range: 0x8011E638 -> 0x8011E72C
-void ClothingItem::DoStream(class ClothingItem * const this /* r29 */, class ReconBuffer * r /* r30 */, int version /* r31 */) {
+// this: r29
+void ClothingItem::DoStream(class ReconBuffer * r /* r30 */, int version /* r31 */) {
     // Local variables
     signed char tempInt8; // r1+0x8
 }
 
 // Range: 0x8011E72C -> 0x8011E7C8
-void ClothingItem::CopyFromSimBodyPart(class ClothingItem * const this /* r30 */, class SimBodyPart * pSimBodyPart /* r31 */) {}
+// this: r30
+void ClothingItem::CopyFromSimBodyPart(class SimBodyPart * pSimBodyPart /* r31 */) {}
 
 // Range: 0x8011E7C8 -> 0x8011E7DC
-struct BodyPartGeometryTSC6 * ClothingItem::GetClothingSetData(const class ClothingItem * const this /* r5 */) {}
+// this: r5
+struct BodyPartGeometryTSC6 * ClothingItem::GetClothingSetData() const {}
 
 // Range: 0x8011E7DC -> 0x8011E83C
-struct BodyPartTypeInfoTSC6 * ClothingItem::GetBodyPartTypeInfo(const class ClothingItem * const this /* r30 */) {
+// this: r30
+struct BodyPartTypeInfoTSC6 * ClothingItem::GetBodyPartTypeInfo() const {
     // Local variables
     const struct BodyPartTypeInfoTableTSC6 * pBodyPartTypeInfoTable; // r31
     unsigned char bodyPartIndex; // r0
@@ -43,14 +48,16 @@ struct CatalogToken * ClothingItem::GetCatalogToken() {
 }
 
 // Range: 0x8011E88C -> 0x8011E910
-unsigned char ClothingItem::IsDyable(class ClothingItem * const this /* r31 */) {
+// this: r31
+unsigned char ClothingItem::IsDyable() {
     // Local variables
     const struct BodyPartTypeInfoTSC6 * pBodyPartTypeInfo; // r0
     const struct BodyPartGeometryTSC6 * pClothingSetData; // r0
 }
 
 // Range: 0x8011E910 -> 0x8011E9C0
-unsigned int ClothingItem::GetSmallIconID(class ClothingItem * const this /* r29 */) {
+// this: r29
+unsigned int ClothingItem::GetSmallIconID() {
     // Local variables
     unsigned int nIconTextureID; // r31
     class SimBodyPart * pBodyPart; // r30
@@ -58,7 +65,8 @@ unsigned int ClothingItem::GetSmallIconID(class ClothingItem * const this /* r29
 }
 
 // Range: 0x8011E9C0 -> 0x8011EB84
-void ClothingItem::RepairToFull(class ClothingItem * const this /* r27 */) {
+// this: r27
+void ClothingItem::RepairToFull() {
     // Local variables
     class Neighborhood * pNeighborhood; // r0
     class Neighbor * pNeighbor; // r0

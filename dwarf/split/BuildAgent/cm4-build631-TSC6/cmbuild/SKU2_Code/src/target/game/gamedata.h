@@ -14,22 +14,10 @@ class Player * GameData::GetPlayer() {}
 class ESimsCam * GameData::GetPlayerCamera() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\target\game\gamedata.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x800D0098 -> 0x800D00A0
-*/
 // Range: 0x800D0098 -> 0x800D00A0
 unsigned char GameData::IsBuildBuyMode() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\target\game\gamedata.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x80106AB8 -> 0x80106AE0
-*/
 // Range: 0x80106AB8 -> 0x80106AC0
 unsigned char GameData::IsAuthorMode() {}
 
@@ -46,12 +34,6 @@ class EMemoryMeterWin * GameData::GetMemoryMeterWin() {}
 void GameData::SetInitialSimSelection() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\target\game\gamedata.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x80170C74 -> 0x80170D20
-*/
 // Range: 0x80170C74 -> 0x80170C7C
 void GameData::SetInLevel() {}
 
@@ -86,12 +68,6 @@ unsigned char GameData::CopyrightIsFadedIn() {}
 void GameData::CopyrightFadeIn() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\target\game\gamedata.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x801AB030 -> 0x801AB038
-*/
 // Range: 0x801AB030 -> 0x801AB038
 void GameData::SetBuildBuyMode() {}
 

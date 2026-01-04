@@ -39,7 +39,8 @@ void FillNumberField(char * buffer /* r29 */, int i /* r30 */, int minFieldSize 
 }
 
 // Range: 0x801E17E0 -> 0x801E1894
-void * UIStringGenerator::UIStringGenerator(class UIStringGenerator * const this /* r26 */, const char * baseString /* r27 */, int minFieldSize /* r28 */) {
+// this: r26
+UIStringGenerator::UIStringGenerator(const char * baseString /* r27 */, int minFieldSize /* r28 */) {
     // Local variables
     int stringSize; // r30
     char scratchSpace[20]; // r1+0x8
@@ -50,7 +51,8 @@ void * UIStringGenerator::UIStringGenerator(class UIStringGenerator * const this
 char * UIStringGenerator::GetString() {}
 
 // Range: 0x801E18C0 -> 0x801E1954
-void * UIStringGenerator::~UIStringGenerator(class UIStringGenerator * const this /* r28 */) {
+// this: r28
+UIStringGenerator::~UIStringGenerator() {
     // Local variables
     int i; // r30
 }

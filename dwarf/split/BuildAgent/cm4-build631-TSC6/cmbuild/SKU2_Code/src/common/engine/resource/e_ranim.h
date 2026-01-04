@@ -17,14 +17,9 @@ void TArrayERAnimAllocator::Free() {
 }
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\common\engine\resource\e_ranim.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x802D7F50 -> 0x802D86A0
-*/
 // Range: 0x802D7F50 -> 0x802D7FCC
-void * ERAnimBitArray::~ERAnimBitArray(class ERAnimBitArray * const this /* r30 */) {
+// this: r30
+ERAnimBitArray::~ERAnimBitArray() {
     // References
     // -> struct [anonymous] __vt__9EBitArray;
     // -> struct [anonymous] __vt__14ERAnimBitArray;

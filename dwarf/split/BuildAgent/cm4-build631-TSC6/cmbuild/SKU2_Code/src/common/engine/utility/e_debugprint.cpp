@@ -5,6 +5,7 @@
     Code range: 0x802F53A0 -> 0x802F53E0
 */
 // Range: 0x802F53A0 -> 0x802F53E0
-void * EDebugPrint::~EDebugPrint(class EDebugPrint * const this /* r31 */) {}
+// this: r31
+EDebugPrint::~EDebugPrint() {}
 
 

@@ -5,7 +5,8 @@
     Code range: 0x8027BDB8 -> 0x8027CBC0
 */
 // Range: 0x8027BDB8 -> 0x8027BECC
-void * EEngine::EEngine(class EEngine * const this /* r29 */) {
+// this: r29
+EEngine::EEngine() {
     // References
     // -> class EVec3 _vZero;
     // -> class EQuat _qId;
@@ -18,7 +19,8 @@ void * EEngine::EEngine(class EEngine * const this /* r29 */) {
 }
 
 // Range: 0x8027BECC -> 0x8027BF74
-void * EEngine::~EEngine(class EEngine * const this /* r30 */) {
+// this: r30
+EEngine::~EEngine() {
     // References
     // -> struct [anonymous] __vt__20EGlobalManagerClient;
     // -> unsigned char m_shutdownComplete;
@@ -32,7 +34,8 @@ void EEngine::ManagedShutdown() {
 }
 
 // Range: 0x8027BF80 -> 0x8027C074
-unsigned char EEngine::Init(class EEngine * const this /* r31 */) {
+// this: r31
+unsigned char EEngine::Init() {
     // References
     // -> unsigned char _enable_trace_log;
     // -> class EClock _sysclock;
@@ -40,7 +43,8 @@ unsigned char EEngine::Init(class EEngine * const this /* r31 */) {
 }
 
 // Range: 0x8027C074 -> 0x8027C118
-void EEngine::ShutdownThreads(class EEngine * const this /* r30 */, unsigned char bShutdownMainThread /* r31 */) {
+// this: r30
+void EEngine::ShutdownThreads(unsigned char bShutdownMainThread /* r31 */) {
     // References
     // -> class EAudio * _pActualAudio;
     // -> class EControllerManager * _pCtrlMan;
@@ -65,7 +69,8 @@ void EEngine::ExitMovieMode() {
 }
 
 // Range: 0x8027C158 -> 0x8027C47C
-void EEngine::PreFrameUpdate(class EEngine * const this /* r31 */) {
+// this: r31
+void EEngine::PreFrameUpdate() {
     // Local variables
     float frameTime; // f31
     float smoothDt; // f0
@@ -98,7 +103,8 @@ void EEngine::PreFrameUpdate(class EEngine * const this /* r31 */) {
 }
 
 // Range: 0x8027C47C -> 0x8027C4EC
-void EEngine::PostFrameUpdate(class EEngine * const this /* r31 */) {
+// this: r31
+void EEngine::PostFrameUpdate() {
     // References
     // -> class EClockMan * _pClockMan;
     // -> float _cputime_m2;
@@ -108,7 +114,8 @@ void EEngine::PostFrameUpdate(class EEngine * const this /* r31 */) {
 }
 
 // Range: 0x8027C4EC -> 0x8027C508
-void EEngine::FrameComplete(class EEngine * const this /* r4 */) {
+// this: r4
+void EEngine::FrameComplete() {
     // References
     // -> class EScheduler * _pSched;
 }
@@ -126,7 +133,8 @@ void EEngine::PrintHeapInfo() {}
 void EEngine::PrintPoolInfo() {}
 
 // Range: 0x8027C518 -> 0x8027C638
-unsigned char EEngine::InitSubsystems(class EEngine * const this /* r31 */) {
+// this: r31
+unsigned char EEngine::InitSubsystems() {
     // References
     // -> class EAudio * _pActualAudio;
     // -> class EMemoryCard * _pMemoryCard;

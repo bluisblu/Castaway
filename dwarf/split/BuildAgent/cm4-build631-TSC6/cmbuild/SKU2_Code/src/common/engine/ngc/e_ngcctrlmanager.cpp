@@ -5,7 +5,8 @@
     Code range: 0x802B2F94 -> 0x802B3AD0
 */
 // Range: 0x802B2F94 -> 0x802B2FD4
-void * ENgcControllerManager::~ENgcControllerManager(class ENgcControllerManager * const this /* r31 */) {}
+// this: r31
+ENgcControllerManager::~ENgcControllerManager() {}
 
 // Range: 0x802B2FD4 -> 0x802B3094
 unsigned char ENgcControllerManager::Init() {
@@ -22,7 +23,8 @@ unsigned char ENgcControllerManager::Init() {
 void ENgcControllerManager::Shutdown() {}
 
 // Range: 0x802B3098 -> 0x802B3288
-void ENgcControllerManager::Update(class ENgcControllerManager * const this /* r31 */) {
+// this: r31
+void ENgcControllerManager::Update() {
     // Local variables
     unsigned int resetMask; // r30
 
@@ -52,28 +54,32 @@ unsigned int ENgcController::GetButtons() {
 unsigned char ENgcController::HasVibration() {}
 
 // Range: 0x802B37A8 -> 0x802B3870
-unsigned char ENgcController::VibrateMotorOne(class ENgcController * const this /* r31 */) {
+// this: r31
+unsigned char ENgcController::VibrateMotorOne() {
     // References
     // -> unsigned char s_bShuttingDown;
     // -> unsigned char bWasInError;
 }
 
 // Range: 0x802B3870 -> 0x802B3938
-unsigned char ENgcController::VibrateMotorTwo(class ENgcController * const this /* r31 */) {
+// this: r31
+unsigned char ENgcController::VibrateMotorTwo() {
     // References
     // -> unsigned char s_bShuttingDown;
     // -> unsigned char bWasInError;
 }
 
 // Range: 0x802B3938 -> 0x802B3A00
-unsigned char ENgcController::StopMotorOne(class ENgcController * const this /* r31 */) {
+// this: r31
+unsigned char ENgcController::StopMotorOne() {
     // References
     // -> unsigned char s_bShuttingDown;
     // -> unsigned char bWasInError;
 }
 
 // Range: 0x802B3A00 -> 0x802B3AC8
-unsigned char ENgcController::StopMotorTwo(class ENgcController * const this /* r31 */) {
+// this: r31
+unsigned char ENgcController::StopMotorTwo() {
     // References
     // -> unsigned char s_bShuttingDown;
     // -> unsigned char bWasInError;

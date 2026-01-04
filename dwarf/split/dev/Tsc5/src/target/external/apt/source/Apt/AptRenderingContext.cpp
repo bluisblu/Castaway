@@ -5,7 +5,7 @@
     Code range: 0x80329B40 -> 0x8032A010
 */
 // Range: 0x80329B40 -> 0x80329B90
-void * AptRenderingContext::AptRenderingContext() {}
+AptRenderingContext::AptRenderingContext() {}
 
 // Range: 0x80329B90 -> 0x80329BB0
 void AptRenderingContext::pushColourTransform() {}
@@ -20,7 +20,8 @@ void AptRenderingContext::appendColourTransform() {
 }
 
 // Range: 0x80329C60 -> 0x80329C88
-void AptRenderingContext::getVertexMatrix(struct AptRenderingContext * const this /* r5 */) {
+// this: r5
+void AptRenderingContext::getVertexMatrix() {
     // References
     // -> struct AptMatrix gIdentityMatrix;
 }
@@ -29,7 +30,8 @@ void AptRenderingContext::getVertexMatrix(struct AptRenderingContext * const thi
 void AptRenderingContext::pushVertexMatrix() {}
 
 // Range: 0x80329CA8 -> 0x80329D08
-void AptRenderingContext::popVertexMatrix(struct AptRenderingContext * const this /* r31 */) {
+// this: r31
+void AptRenderingContext::popVertexMatrix() {
     // References
     // -> struct AptUserFunctions gAptFuncs;
 }
@@ -42,7 +44,8 @@ void AptRenderingContext::multMatrix() {
 }
 
 // Range: 0x80329E0C -> 0x80329E58
-void AptRenderingContext::appendVertexMatrix(struct AptRenderingContext * const this /* r31 */) {
+// this: r31
+void AptRenderingContext::appendVertexMatrix() {
     // References
     // -> struct AptUserFunctions gAptFuncs;
 }

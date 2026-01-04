@@ -5,10 +5,12 @@
     Code range: 0x8002F964 -> 0x8002FA70
 */
 // Range: 0x8002F964 -> 0x8002F9BC
-void * CasEventInitCharacter::~CasEventInitCharacter(class CasEventInitCharacter * const this /* r30 */) {}
+// this: r30
+CasEventInitCharacter::~CasEventInitCharacter() {}
 
 // Range: 0x8002F9BC -> 0x8002FA4C
-void * CasEventInitCharacter::CasEventInitCharacter(class CasEventInitCharacter * const this /* r27 */, class CasSimDescription & simDesc /* r28 */, unsigned char bRenderCharacter /* r29 */, int charId /* r30 */, unsigned char bBlockOnLoad /* r31 */) {
+// this: r27
+CasEventInitCharacter::CasEventInitCharacter(class CasSimDescription & simDesc /* r28 */, unsigned char bRenderCharacter /* r29 */, int charId /* r30 */, unsigned char bBlockOnLoad /* r31 */) {
     // References
     // -> struct [anonymous] __vt__21CasEventInitCharacter;
 }

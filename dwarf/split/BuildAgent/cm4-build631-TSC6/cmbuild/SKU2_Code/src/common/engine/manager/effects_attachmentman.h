@@ -11,12 +11,6 @@ class REffectsAttachment * EffectsAttachmentManager::AddRef() {}
 class REffectsAttachment * EffectsAttachmentManager::AddRef() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\common\engine\manager\effects_attachmentman.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x802AE9D0 -> 0x802AE9D8
-*/
 // Range: 0x802AE9D0 -> 0x802AE9D8
 unsigned char EffectsAttachmentManager::CanCache() {}
 

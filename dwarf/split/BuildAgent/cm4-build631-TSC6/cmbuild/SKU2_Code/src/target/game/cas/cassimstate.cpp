@@ -5,31 +5,36 @@
     Code range: 0x8003AA08 -> 0x8003B108
 */
 // Range: 0x8003AA08 -> 0x8003AA8C
-void * CasSimState::CasSimState(class CasSimState * const this /* r31 */) {
+// this: r31
+CasSimState::CasSimState() {
     // References
     // -> struct [anonymous] __vt__11CasSimState;
 }
 
 // Range: 0x8003AA8C -> 0x8003AB28
-void * CasSimState::CasSimState(class CasSimState * const this /* r29 */, const class CasSimDescription & description /* r30 */, int charId /* r31 */) {
+// this: r29
+CasSimState::CasSimState(const class CasSimDescription & description /* r30 */, int charId /* r31 */) {
     // References
     // -> struct [anonymous] __vt__11CasSimState;
 }
 
 // Range: 0x8003AB28 -> 0x8003ABEC
-void * CasSimState::~CasSimState(class CasSimState * const this /* r30 */) {
+// this: r30
+CasSimState::~CasSimState() {
     // References
     // -> struct [anonymous] __vt__11CasSimState;
 }
 
 // Range: 0x8003ABEC -> 0x8003AC78
-void CasSimState::HandleEventInitCharacter(class CasSimState * const this /* r29 */, const class CasEventInitCharacter & event /* r30 */) {
+// this: r29
+void CasSimState::HandleEventInitCharacter(const class CasEventInitCharacter & event /* r30 */) {
     // Local variables
     class CasSimDescription & simDesc; // r31
 }
 
 // Range: 0x8003AC78 -> 0x8003AEB4
-void CasSimState::HandleEventResetCharacter(class CasSimState * const this /* r31 */, const class CasEventResetCharacter & event /* r25 */) {
+// this: r31
+void CasSimState::HandleEventResetCharacter(const class CasEventResetCharacter & event /* r25 */) {
     // Local variables
     enum eSpecies prevSpecies; // r0
     enum eSpecies currSpecies; // r0
@@ -46,17 +51,20 @@ void CasSimState::HandleEventResetCharacter(class CasSimState * const this /* r3
 }
 
 // Range: 0x8003AEB4 -> 0x8003AED0
-void CasSimState::HandleEventStoreCharacter(class CasSimState * const this /* r4 */) {}
+// this: r4
+void CasSimState::HandleEventStoreCharacter() {}
 
 // Range: 0x8003AED0 -> 0x8003AF8C
-void CasSimState::HandleEventChangeCharacter(class CasSimState * const this /* r30 */, const class CasEventChangeCharacter & event /* r31 */) {
+// this: r30
+void CasSimState::HandleEventChangeCharacter(const class CasEventChangeCharacter & event /* r31 */) {
     // Local variables
     unsigned char oldIndex; // r1+0x9
     unsigned char newIndex; // r1+0x8
 }
 
 // Range: 0x8003AF8C -> 0x8003B100
-void CasSimState::HandleEventMorphCharacter(class CasSimState * const this /* r29 */, const class CasEventMorphCharacter & event /* r30 */) {
+// this: r29
+void CasSimState::HandleEventMorphCharacter(const class CasEventMorphCharacter & event /* r30 */) {
     // Local variables
     enum eMorphTargetRegion morphTargetParamRegion; // r31
 }

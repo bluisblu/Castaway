@@ -5,7 +5,8 @@
     Code range: 0x802B2DB0 -> 0x802B2F54
 */
 // Range: 0x802B2DB0 -> 0x802B2DF0
-void * ENgcClockMan::~ENgcClockMan(class ENgcClockMan * const this /* r31 */) {}
+// this: r31
+ENgcClockMan::~ENgcClockMan() {}
 
 // Range: 0x802B2DF0 -> 0x802B2DF4
 void ENgcClockMan::Init() {}

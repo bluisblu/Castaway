@@ -5,13 +5,14 @@
     Code range: 0x802EB088 -> 0x802EB97C
 */
 // Range: 0x802EB088 -> 0x802EB0EC
-void * RParticle::RParticle() {
+RParticle::RParticle() {
     // References
     // -> struct [anonymous] __vt__9RParticle;
 }
 
 // Range: 0x802EB0EC -> 0x802EB17C
-void * RParticle::~RParticle(class RParticle * const this /* r30 */) {
+// this: r30
+RParticle::~RParticle() {
     // References
     // -> class ParticleManager _particleman;
     // -> struct [anonymous] __vt__9EResource;
@@ -19,19 +20,22 @@ void * RParticle::~RParticle(class RParticle * const this /* r30 */) {
 }
 
 // Range: 0x802EB17C -> 0x802EB1CC
-void RParticle::Deallocate(class RParticle * const this /* r31 */) {
+// this: r31
+void RParticle::Deallocate() {
     // References
     // -> class ParticleManager _particleman;
 }
 
 // Range: 0x802EB1CC -> 0x802EB294
-void RParticle::DelRefSubResources(class RParticle * const this /* r26 */) {
+// this: r26
+void RParticle::DelRefSubResources() {
     // Local variables
     int i; // r27
 }
 
 // Range: 0x802EB294 -> 0x802EB374
-void RParticle::AddRefSubResources(class RParticle * const this /* r27 */) {
+// this: r27
+void RParticle::AddRefSubResources() {
     // Local variables
     struct pemitterinfo * pInfo; // r0
     unsigned int * resId; // r0
@@ -45,7 +49,8 @@ void RParticle::AddRefSubResources(class RParticle * const this /* r27 */) {
 }
 
 // Range: 0x802EB374 -> 0x802EB514
-unsigned char RParticle::TryIncrementSubResources(class RParticle * const this /* r31 */) {
+// this: r31
+unsigned char RParticle::TryIncrementSubResources() {
     // Local variables
     unsigned int * resId; // r0
     struct pemitterinfo * pInfo; // r0
@@ -59,7 +64,8 @@ unsigned char RParticle::TryIncrementSubResources(class RParticle * const this /
 }
 
 // Range: 0x802EB514 -> 0x802EB7B8
-void RParticle::Load(class RParticle * const this /* r30 */, class EFile * pFile /* r25 */) {
+// this: r30
+void RParticle::Load(class EFile * pFile /* r25 */) {
     // Local variables
     class EDataHeader resourceHeader; // r1+0x1C
     struct ParticleHeader header; // r1+0x8
@@ -83,7 +89,8 @@ void RParticle::Load(class RParticle * const this /* r30 */, class EFile * pFile
 }
 
 // Range: 0x802EB7B8 -> 0x802EB924
-void RParticle::Refresh(class RParticle * const this /* r28 */, class EFile * pFile /* r29 */) {
+// this: r28
+void RParticle::Refresh(class EFile * pFile /* r29 */) {
     // Local variables
     struct pemitterinfo * pInfo; // r31
     class EDataHeader resourceHeader; // r1+0x1C

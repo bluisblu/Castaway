@@ -5,7 +5,8 @@
     Code range: 0x80040A30 -> 0x8004233C
 */
 // Range: 0x80040A30 -> 0x80040AF8
-void * CharacterImageMaker::CharacterImageMaker(class CharacterImageMaker * const this /* r29 */) {
+// this: r29
+CharacterImageMaker::CharacterImageMaker() {
     // References
     // -> unsigned int kDefaultAnimID[2];
     // -> class EVec3 kDefaultCameraUp;
@@ -15,7 +16,8 @@ void * CharacterImageMaker::CharacterImageMaker(class CharacterImageMaker * cons
 }
 
 // Range: 0x80040AF8 -> 0x80040B54
-void * CharacterImageMaker::~CharacterImageMaker(class CharacterImageMaker * const this /* r30 */) {}
+// this: r30
+CharacterImageMaker::~CharacterImageMaker() {}
 
 // Range: 0x80040B54 -> 0x80040B64
 void CharacterImageMaker::OverrideImageSize() {}
@@ -24,19 +26,23 @@ void CharacterImageMaker::OverrideImageSize() {}
 void CharacterImageMaker::OverridePose() {}
 
 // Range: 0x80040B6C -> 0x80040BDC
-void CharacterImageMaker::OverrideCamera(class CharacterImageMaker * const this /* r29 */, const class EVec3 & camTarget /* r30 */, const class EVec3 & camUp /* r31 */, float camFOV /* f31 */) {}
+// this: r29
+void CharacterImageMaker::OverrideCamera(const class EVec3 & camTarget /* r30 */, const class EVec3 & camUp /* r31 */, float camFOV /* f31 */) {}
 
 // Range: 0x80040BDC -> 0x80040C50
-void CharacterImageMaker::OverrideBackground(class CharacterImageMaker * const this /* r30 */, unsigned int bgTexId /* r31 */) {
+// this: r30
+void CharacterImageMaker::OverrideBackground(unsigned int bgTexId /* r31 */) {
     // References
     // -> class ETextureManager _textureman;
 }
 
 // Range: 0x80040C50 -> 0x80040CCC
-void CharacterImageMaker::RenderCharacter(class CharacterImageMaker * const this /* r29 */, class ERC * prc /* r30 */) {}
+// this: r29
+void CharacterImageMaker::RenderCharacter(class ERC * prc /* r30 */) {}
 
 // Range: 0x80040CCC -> 0x800410C8
-class ETexture * CharacterImageMaker::CreateImage(class CharacterImageMaker * const this /* r29 */, unsigned char bCatalogThumbnail /* r30 */) {
+// this: r29
+class ETexture * CharacterImageMaker::CreateImage(unsigned char bCatalogThumbnail /* r30 */) {
     // Local variables
     class ERC * prc; // r31
     class E3DWindow window; // r1+0x68
@@ -52,7 +58,8 @@ class ETexture * CharacterImageMaker::CreateImage(class CharacterImageMaker * co
 }
 
 // Range: 0x800410C8 -> 0x80041248
-void CharacterImageMaker::InitWindow(class CharacterImageMaker * const this /* r28 */, class E3DWindow & window /* r29 */, class ERC * prc /* r30 */) {
+// this: r28
+void CharacterImageMaker::InitWindow(class E3DWindow & window /* r29 */, class ERC * prc /* r30 */) {
     // Local variables
     class ERenderSurface * pRenderSurface; // r31
     struct ERenderSurfaceDef rsd; // r1+0x18
@@ -62,7 +69,8 @@ void CharacterImageMaker::InitWindow(class CharacterImageMaker * const this /* r
 }
 
 // Range: 0x80041248 -> 0x80041AC0
-class ETexture * CharacterImageMaker::CopyToFinalImage(class CharacterImageMaker * const this /* r25 */, class ETexture * pOriginalTexture /* r26 */, unsigned char bCatalogThumbnail /* r17 */) {
+// this: r25
+class ETexture * CharacterImageMaker::CopyToFinalImage(class ETexture * pOriginalTexture /* r26 */, unsigned char bCatalogThumbnail /* r17 */) {
     // Local variables
     int pitchX; // r1+0x18
     int pitchY; // r1+0x14
@@ -97,7 +105,8 @@ class ETexture * CharacterImageMaker::CopyToFinalImage(class CharacterImageMaker
 }
 
 // Range: 0x80041AC0 -> 0x80041CB4
-class ETexture * CharacterImageMaker::CreateImage32x32(class CharacterImageMaker * const this /* r27 */, unsigned char bCatalogThumbnail /* r28 */) {
+// this: r27
+class ETexture * CharacterImageMaker::CreateImage32x32(unsigned char bCatalogThumbnail /* r28 */) {
     // Local variables
     int originalDepth; // r31
     class ETexture * pLargeTexture; // r30
@@ -112,13 +121,15 @@ class ETexture * CharacterImageMaker::CreateImage32x32(class CharacterImageMaker
 }
 
 // Range: 0x80041D40 -> 0x80041DA0
-void * SimImageMaker::SimImageMaker(class SimImageMaker * const this /* r30 */, class SimModelTSC6 * pSimModel /* r31 */) {
+// this: r30
+SimImageMaker::SimImageMaker(class SimModelTSC6 * pSimModel /* r31 */) {
     // References
     // -> struct [anonymous] __vt__13SimImageMaker;
 }
 
 // Range: 0x80041DA0 -> 0x80041E14
-void * SimImageMaker::~SimImageMaker(class SimImageMaker * const this /* r30 */) {
+// this: r30
+SimImageMaker::~SimImageMaker() {
     // References
     // -> struct [anonymous] __vt__13SimImageMaker;
 }
@@ -127,13 +138,16 @@ void * SimImageMaker::~SimImageMaker(class SimImageMaker * const this /* r30 */)
 unsigned char SimImageMaker::Init() {}
 
 // Range: 0x80041E38 -> 0x80041E8C
-void SimImageMaker::Shutdown(class SimImageMaker * const this /* r31 */) {}
+// this: r31
+void SimImageMaker::Shutdown() {}
 
 // Range: 0x80041E8C -> 0x80041EE0
-void SimImageMaker::Reset(class SimImageMaker * const this /* r31 */) {}
+// this: r31
+void SimImageMaker::Reset() {}
 
 // Range: 0x80041EE0 -> 0x80042038
-void SimImageMaker::SetToDefaultValues(class SimImageMaker * const this /* r27 */) {
+// this: r27
+void SimImageMaker::SetToDefaultValues() {
     // Local variables
     int i; // r27
 
@@ -148,13 +162,15 @@ void SimImageMaker::SetToDefaultValues(class SimImageMaker * const this /* r27 *
 }
 
 // Range: 0x80042038 -> 0x80042080
-void SimImageMaker::SetModel(class SimImageMaker * const this /* r30 */, const class EIStaticModel * pModel /* r31 */) {
+// this: r30
+void SimImageMaker::SetModel(const class EIStaticModel * pModel /* r31 */) {
     // Local variables
     unsigned int bodyPartIndex; // r0
 }
 
 // Range: 0x80042080 -> 0x8004214C
-void SimImageMaker::SetImageModels(class SimImageMaker * const this /* r29 */, enum eImageModelSetType imageModelSetType /* r30 */) {
+// this: r29
+void SimImageMaker::SetImageModels(enum eImageModelSetType imageModelSetType /* r30 */) {
     // Local variables
     enum eBodyPart bodyParts[15]; // r1+0xC
     unsigned int numParts; // r1+0x8
@@ -165,7 +181,8 @@ void SimImageMaker::SetImageModels(class SimImageMaker * const this /* r29 */, e
 void SimImageMaker::SetPortraitModels() {}
 
 // Range: 0x80042150 -> 0x80042288
-void SimImageMaker::PoseCharacter(class SimImageMaker * const this /* r28 */, class ERC * prc /* r29 */) {
+// this: r28
+void SimImageMaker::PoseCharacter(class ERC * prc /* r29 */) {
     // Local variables
     class EMat4 mSimOrient; // r1+0x30
     unsigned int skeletonIndex; // r0
@@ -177,12 +194,14 @@ void SimImageMaker::PoseCharacter(class SimImageMaker * const this /* r28 */, cl
 }
 
 // Range: 0x80042288 -> 0x800422CC
-void SimImageMaker::SetSpecies(class SimImageMaker * const this /* r31 */) {
+// this: r31
+void SimImageMaker::SetSpecies() {
     // References
     // -> unsigned int kDefaultAnimID[2];
 }
 
 // Range: 0x800422CC -> 0x8004233C
-void SimImageMaker::RenderCharacter(class SimImageMaker * const this /* r29 */, class ERC * prc /* r30 */) {}
+// this: r29
+void SimImageMaker::RenderCharacter(class ERC * prc /* r30 */) {}
 
 

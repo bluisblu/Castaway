@@ -5,6 +5,7 @@
     Code range: 0x8001FF70 -> 0x8001FFB0
 */
 // Range: 0x8001FF70 -> 0x8001FFB0
-void * BlendingTweakTool::~BlendingTweakTool(class BlendingTweakTool * const this /* r31 */) {}
+// this: r31
+BlendingTweakTool::~BlendingTweakTool() {}
 
 

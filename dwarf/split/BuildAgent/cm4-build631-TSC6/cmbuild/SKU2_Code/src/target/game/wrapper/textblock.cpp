@@ -5,10 +5,12 @@
     Code range: 0x8009B638 -> 0x8009BD24
 */
 // Range: 0x8009B638 -> 0x8009B738
-void TextBlock::Clear(class TextBlock * const this /* r31 */) {}
+// this: r31
+void TextBlock::Clear() {}
 
 // Range: 0x8009B738 -> 0x8009BBDC
-void TextBlock::DrawWrappedText(class TextBlock * const this /* r19 */, class ERC * prc /* r20 */, class EVec2 & vPos /* r21 */, float fBottomY /* f28 */, float fAlpha /* f29 */) {
+// this: r19
+void TextBlock::DrawWrappedText(class ERC * prc /* r20 */, class EVec2 & vPos /* r21 */, float fBottomY /* f28 */, float fAlpha /* f29 */) {
     // Local variables
     class EVec4 tColor; // r1+0x50
     float fWidth; // f31
@@ -35,7 +37,8 @@ void TextBlock::DrawWrappedText(class TextBlock * const this /* r19 */, class ER
 }
 
 // Range: 0x8009BBDC -> 0x8009BD18
-void TextBlock::DrawText(class TextBlock * const this /* r30 */, class ERC * prc /* r31 */, float fAlpha /* f31 */) {
+// this: r30
+void TextBlock::DrawText(class ERC * prc /* r31 */, float fAlpha /* f31 */) {
     // Local variables
     class EVec2 vTopLeft; // r1+0x18
     class EVec2 vCenter; // r1+0x10

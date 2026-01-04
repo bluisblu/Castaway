@@ -5,7 +5,8 @@
     Code range: 0x802CDC14 -> 0x802CF2E8
 */
 // Range: 0x802CDC14 -> 0x802CDD08
-void * ENGCAudioStreamer::ENGCAudioStreamer(class ENGCAudioStreamer * const this /* r24 */) {
+// this: r24
+ENGCAudioStreamer::ENGCAudioStreamer() {
     // Local variables
     unsigned int i; // r25
 
@@ -16,7 +17,8 @@ void * ENGCAudioStreamer::ENGCAudioStreamer(class ENGCAudioStreamer * const this
 }
 
 // Range: 0x802CDD08 -> 0x802CDDB8
-void * ENGCAudioStreamer::~ENGCAudioStreamer(class ENGCAudioStreamer * const this /* r28 */) {
+// this: r28
+ENGCAudioStreamer::~ENGCAudioStreamer() {
     // Local variables
     int i; // r30
 

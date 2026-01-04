@@ -5,20 +5,23 @@
     Code range: 0x8027A154 -> 0x8027A680
 */
 // Range: 0x8027A154 -> 0x8027A190
-void * ENgcFileSystem::ENgcFileSystem(class ENgcFileSystem * const this /* r31 */) {
+// this: r31
+ENgcFileSystem::ENgcFileSystem() {
     // References
     // -> struct [anonymous] __vt__14ENgcFileSystem;
 }
 
 // Range: 0x8027A190 -> 0x8027A208
-void * ENgcFileSystem::~ENgcFileSystem(class ENgcFileSystem * const this /* r30 */) {
+// this: r30
+ENgcFileSystem::~ENgcFileSystem() {
     // References
     // -> unsigned char m_shutdownComplete;
     // -> struct [anonymous] __vt__14ENgcFileSystem;
 }
 
 // Range: 0x8027A208 -> 0x8027A2E0
-unsigned char ENgcFileSystem::Init(class ENgcFileSystem * const this /* r30 */, enum DeviceType eDefaultType /* r31 */) {
+// this: r30
+unsigned char ENgcFileSystem::Init(enum DeviceType eDefaultType /* r31 */) {
     // Local variables
     unsigned char result; // r31
 }
@@ -57,7 +60,8 @@ int efseek() {
 long eftell() {}
 
 // Range: 0x8027A3F8 -> 0x8027A498
-void ENgcFileSystem::InitResetFileList(class ENgcFileSystem * const this /* r29 */) {}
+// this: r29
+void ENgcFileSystem::InitResetFileList() {}
 
 // Range: 0x8027A498 -> 0x8027A524
 void ENgcFileSystem::AddFileToResetList(class EFile * pFile /* r1+0x8 */) {}
@@ -66,7 +70,8 @@ void ENgcFileSystem::AddFileToResetList(class EFile * pFile /* r1+0x8 */) {}
 void ENgcFileSystem::DeleteFileFromResetList() {}
 
 // Range: 0x8027A5A4 -> 0x8027A680
-void ENgcFileSystem::ShutdownResetList(class ENgcFileSystem * const this /* r28 */) {
+// this: r28
+void ENgcFileSystem::ShutdownResetList() {
     // Local variables
     class EFile * * iter; // r31
     class EFile * pFile; // r1+0x8

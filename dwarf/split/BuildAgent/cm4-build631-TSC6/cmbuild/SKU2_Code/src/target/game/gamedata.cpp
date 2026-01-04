@@ -5,10 +5,12 @@
     Code range: 0x80227780 -> 0x8022A068
 */
 // Range: 0x80227780 -> 0x80227864
-void * GameData::GameData(class GameData * const this /* r30 */) {}
+// this: r30
+GameData::GameData() {}
 
 // Range: 0x80227864 -> 0x802278D8
-void * GameData::~GameData(class GameData * const this /* r30 */) {}
+// this: r30
+GameData::~GameData() {}
 
 // Range: 0x802278D8 -> 0x8022790C
 void GameData::GamePlayShutdown() {
@@ -17,7 +19,8 @@ void GameData::GamePlayShutdown() {
 }
 
 // Range: 0x8022790C -> 0x80227964
-void GameData::GamePlayReset(class GameData * const this /* r31 */) {
+// this: r31
+void GameData::GamePlayReset() {
     // References
     // -> class GameData _gd;
 }
@@ -57,7 +60,8 @@ void GameData::UnloadPlayerFamilyThumbnails() {
 }
 
 // Range: 0x80227CCC -> 0x80227E0C
-void GameData::PrepareSimData(class GameData * const this /* r27 */, int neighborId /* r29 */, int nSlotIndex /* r28 */) {
+// this: r27
+void GameData::PrepareSimData(int neighborId /* r29 */, int nSlotIndex /* r28 */) {
     // Local variables
     class Neighbor * neighbor; // r29
     int familyNum; // r29
@@ -71,7 +75,8 @@ void GameData::PrepareSimData(class GameData * const this /* r27 */, int neighbo
 }
 
 // Range: 0x80227E0C -> 0x80227ECC
-void GameData::ReplaceSimData(class GameData * const this /* r28 */, int neighborId /* r31 */, int nSimNum /* r29 */, int nSlotIndex /* r30 */) {
+// this: r28
+void GameData::ReplaceSimData(int neighborId /* r31 */, int nSimNum /* r29 */, int nSlotIndex /* r30 */) {
     // Local variables
     class Neighbor * neighbor; // r3
     int familyNum; // r31
@@ -100,14 +105,16 @@ void GameData::PlayerEnterHouse() {
 }
 
 // Range: 0x80228014 -> 0x8022809C
-void GameData::SetInitialSimSelectionFromSimulator(class GameData * const this /* r30 */) {
+// this: r30
+void GameData::SetInitialSimSelectionFromSimulator() {
     // Local variables
     signed short nSelectedSimInstanceID; // r0
     class cXObject * pObject; // r31
 }
 
 // Range: 0x8022809C -> 0x80228394
-void GameData::PrepCreateAFamilyData(class GameData * const this /* r31 */, int iFamilyNum /* r22 */) {
+// this: r31
+void GameData::PrepCreateAFamilyData(int iFamilyNum /* r22 */) {
     // Local variables
     class Family * family; // r25
     int i; // r26
@@ -128,7 +135,8 @@ int GameData::CreateAFamilyAddFamilyMember(class Family * family /* r30 */, unsi
 }
 
 // Range: 0x80228408 -> 0x80228B20
-unsigned char GameData::StoreCreateAFamilyDataNewGame(class GameData * const this /* r31 */, int nPrimarySimIndex /* r15 */) {
+// this: r31
+unsigned char GameData::StoreCreateAFamilyDataNewGame(int nPrimarySimIndex /* r15 */) {
     // Local variables
     int nStartingLots[6]; // r1+0x30
     class vector sims; // r1+0x20
@@ -161,7 +169,8 @@ unsigned char GameData::StoreCreateAFamilyDataNewGame(class GameData * const thi
 }
 
 // Range: 0x80228B20 -> 0x80229010
-unsigned char GameData::StoreCreateAFamilyDataExistingGame(class GameData * const this /* r31 */) {
+// this: r31
+unsigned char GameData::StoreCreateAFamilyDataExistingGame() {
     // Local variables
     class Family * pFamily; // r27
     unsigned char found; // r26
@@ -193,14 +202,16 @@ unsigned char GameData::SaveSimDescriptionToNeighbor(class Neighbor * pNeighbor 
 }
 
 // Range: 0x802290E4 -> 0x802291C0
-unsigned char GameData::SaveCreateAFamily(class GameData * const this /* r26 */, unsigned char bNewGame /* r27 */, int nPrimarySimIndex /* r28 */) {
+// this: r26
+unsigned char GameData::SaveCreateAFamily(unsigned char bNewGame /* r27 */, int nPrimarySimIndex /* r28 */) {
     // Local variables
     unsigned char bFound; // r30
     unsigned int i; // r29
 }
 
 // Range: 0x802291C0 -> 0x80229338
-unsigned char GameData::SystemPreUpdate(class GameData * const this /* r29 */) {
+// this: r29
+unsigned char GameData::SystemPreUpdate() {
     // Local variables
     signed char i; // r31
     unsigned char bContinue; // r30
@@ -237,14 +248,16 @@ void GameData::GotoLiveMode() {
 }
 
 // Range: 0x80229680 -> 0x80229754
-unsigned char GameData::CopyrightUpdate(class GameData * const this /* r30 */) {
+// this: r30
+unsigned char GameData::CopyrightUpdate() {
     // Local variables
     unsigned char bDone; // r31
     float fAlpha; // f3
 }
 
 // Range: 0x80229754 -> 0x80229888
-void GameData::CopyrightDraw(class GameData * const this /* r28 */, class ERC * prc /* r29 */) {
+// this: r28
+void GameData::CopyrightDraw(class ERC * prc /* r29 */) {
     // Local variables
     class ERFont * pFont; // r30
 
@@ -334,7 +347,8 @@ void GameData::StageEndFrame(int iOldStage /* r30 */, int iNewStage /* r31 */) {
 }
 
 // Range: 0x80229E68 -> 0x80229ED8
-void GameData::StageEnd(const class GameData * const this /* r29 */, const char * tableLabel /* r30 */) {
+// this: r29
+void GameData::StageEnd(const char * tableLabel /* r30 */) const {
     // References
     // -> class EGlobal _globals;
 }

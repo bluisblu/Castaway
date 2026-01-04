@@ -100,7 +100,7 @@ unsigned char HoodManager::ResetNeighbors() {
 unsigned char HoodManager::GetMatrix(class Neighbor * n2 /* r29 */, class RelMatrix * * matrix /* r30 */, int * key /* r31 */) {}
 
 // Range: 0x8022F360 -> 0x8022F5CC
-unsigned char RelationsCmp::__cl(class Neighbor * n1 /* r30 */, class Neighbor * n2 /* r31 */) {
+unsigned char RelationsCmp::operator()(class Neighbor * n1 /* r30 */, class Neighbor * n2 /* r31 */) {
     // Local variables
     unsigned char inFamily1; // r28
     unsigned char inFamily2; // r27
@@ -133,9 +133,10 @@ void HoodManager::GetRelatedPeople(int player /* r27 */, class cXPerson * pSelf 
 }
 
 // Range: 0x8022F720 -> 0x8022F760
-void * RelationsCmp::~RelationsCmp(class RelationsCmp * const this /* r31 */) {}
+// this: r31
+RelationsCmp::~RelationsCmp() {}
 
 // Range: 0x8022F760 -> 0x8022F768
-void * RelationsCmp::RelationsCmp() {}
+RelationsCmp::RelationsCmp() {}
 
 

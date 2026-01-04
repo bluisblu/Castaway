@@ -5,10 +5,12 @@
     Code range: 0x80271604 -> 0x80271718
 */
 // Range: 0x80271604 -> 0x8027163C
-void EThread::AttachToCallingThread(class EThread * const this /* r31 */) {}
+// this: r31
+void EThread::AttachToCallingThread() {}
 
 // Range: 0x8027163C -> 0x802716F8
-unsigned char EThread::SetupStack(class EThread * const this /* r29 */, int stackSize /* r30 */, void * pStack /* r31 */) {}
+// this: r29
+unsigned char EThread::SetupStack(int stackSize /* r30 */, void * pStack /* r31 */) {}
 
 // Range: 0x802716F8 -> 0x802716FC
 void EThread::ValidateStack() {}

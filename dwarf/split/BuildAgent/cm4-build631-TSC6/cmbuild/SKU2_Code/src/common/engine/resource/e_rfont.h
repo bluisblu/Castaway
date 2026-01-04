@@ -8,35 +8,18 @@
 void ERFont::SetColor() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\common\engine\resource\e_rfont.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x8009BFE0 -> 0x8009C080
-*/
 // Range: 0x8009BFE0 -> 0x8009C074
-void ERFont::Draw(class ERFont * const this /* r22 */, class ERC * prc /* r23 */, const unsigned short * szString /* r24 */, enum EFontAlignX xAlign /* r25 */, enum EFontAlignY yAlign /* r26 */, class EVec2 * pvBotRightPosOut /* r27 */, class EMat4 * mat /* r28 */, enum EFontMatrixType matType /* r29 */, union fontFXcommand * fxData /* r30 */, unsigned char posNormalized /* r31 */) {}
+// this: r22
+void ERFont::Draw(class ERC * prc /* r23 */, const unsigned short * szString /* r24 */, enum EFontAlignX xAlign /* r25 */, enum EFontAlignY yAlign /* r26 */, class EVec2 * pvBotRightPosOut /* r27 */, class EMat4 * mat /* r28 */, enum EFontMatrixType matType /* r29 */, union fontFXcommand * fxData /* r30 */, unsigned char posNormalized /* r31 */) {}
 
 // Range: 0x8009C074 -> 0x8009C080
 class EVec2 ERFont::GetStringSize() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\common\engine\resource\e_rfont.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x802003D8 -> 0x802003E0
-*/
 // Range: 0x802003D8 -> 0x802003E0
 class EVec4 & ERFont::GetColor() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\common\engine\resource\e_rfont.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x802F0C60 -> 0x802F0EC0
-*/
 // Range: 0x802F0C60 -> 0x802F0C80
 void ERFont::SafeDelete() {}
 

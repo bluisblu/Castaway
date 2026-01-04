@@ -5,25 +5,29 @@
     Code range: 0x800300EC -> 0x8003169C
 */
 // Range: 0x800300EC -> 0x8003028C
-void * CasScene::CasScene(class CasScene * const this /* r29 */) {
+// this: r29
+CasScene::CasScene() {
     // References
     // -> struct [anonymous] __vt__8CasScene;
 }
 
 // Range: 0x8003028C -> 0x80030384
-void * CasScene::~CasScene(class CasScene * const this /* r29 */) {
+// this: r29
+CasScene::~CasScene() {
     // References
     // -> struct [anonymous] __vt__8CasScene;
 }
 
 // Range: 0x80030384 -> 0x80030438
-void CasScene::Init(class CasScene * const this /* r31 */) {}
+// this: r31
+void CasScene::Init() {}
 
 // Range: 0x80030438 -> 0x80030440
 void CasScene::SetMediator() {}
 
 // Range: 0x80030440 -> 0x8003050C
-void CasScene::Update(class CasScene * const this /* r31 */) {
+// this: r31
+void CasScene::Update() {
     // Local variables
     struct CreatedLightingEntry lighting; // r1+0x8
 
@@ -32,7 +36,8 @@ void CasScene::Update(class CasScene * const this /* r31 */) {
 }
 
 // Range: 0x800305C0 -> 0x8003063C
-void CasScene::Draw(class CasScene * const this /* r30 */, class ERC * prc /* r31 */) {
+// this: r30
+void CasScene::Draw(class ERC * prc /* r31 */) {
     // Local variables
     class EMat4 transform; // r1+0x8
 
@@ -41,7 +46,8 @@ void CasScene::Draw(class CasScene * const this /* r30 */, class ERC * prc /* r3
 }
 
 // Range: 0x8003063C -> 0x80030904
-void CasScene::ApplyLighting(class CasScene * const this /* r30 */, class ERC * prc /* r31 */, const class EVec3 & pos /* r22 */, unsigned char bApplySimLighting /* r23 */) {
+// this: r30
+void CasScene::ApplyLighting(class ERC * prc /* r31 */, const class EVec3 & pos /* r22 */, unsigned char bApplySimLighting /* r23 */) {
     // Local variables
     class ERLevel * pLevel; // r25
     struct ELights lights; // r1+0xA0
@@ -66,7 +72,8 @@ void CasScene::ApplyLighting(class CasScene * const this /* r30 */, class ERC * 
 void CasScene::SetProjectionParams() {}
 
 // Range: 0x80030914 -> 0x80030B60
-void CasScene::RepositionCamera(class CasScene * const this /* r30 */, unsigned int newAngleIndex /* r31 */, float duration /* f30 */, float delay /* f31 */) {
+// this: r30
+void CasScene::RepositionCamera(unsigned int newAngleIndex /* r31 */, float duration /* f30 */, float delay /* f31 */) {
     // Local variables
     struct CameraAngle newAngle; // r1+0x50
     struct CameraAngle newAltAngle; // r1+0x38
@@ -82,7 +89,8 @@ void CasScene::RepositionCamera(class CasScene * const this /* r30 */, unsigned 
 }
 
 // Range: 0x80030B60 -> 0x80030C48
-void CasScene::InitCamera(class CasScene * const this /* r31 */) {
+// this: r31
+void CasScene::InitCamera() {
     // Local variables
     struct CameraAngle newAngle; // r1+0x20
     class EVec3 newPosition; // r1+0x14
@@ -94,7 +102,8 @@ void CasScene::InitCamera(class CasScene * const this /* r31 */) {
 }
 
 // Range: 0x80030C48 -> 0x80030FA0
-void CasScene::UpdateCamera(class CasScene * const this /* r28 */) {
+// this: r28
+void CasScene::UpdateCamera() {
     // Local variables
     int playerNum; // r31
     int filterId; // r31
@@ -112,7 +121,8 @@ void CasScene::UpdateCamera(class CasScene * const this /* r28 */) {
 }
 
 // Range: 0x80030FA0 -> 0x800310C4
-void CasScene::SetUpWindow(class CasScene * const this /* r28 */, class ERC * prc /* r29 */) {
+// this: r28
+void CasScene::SetUpWindow(class ERC * prc /* r29 */) {
     // Local variables
     int screenX; // r0
     int screenY; // r0
@@ -122,7 +132,8 @@ void CasScene::SetUpWindow(class CasScene * const this /* r28 */, class ERC * pr
 }
 
 // Range: 0x800310C4 -> 0x8003131C
-void CasScene::HandleEventChangeFocus(class CasScene * const this /* r29 */, const class CasEventChangeFocus & event /* r30 */) {
+// this: r29
+void CasScene::HandleEventChangeFocus(const class CasEventChangeFocus & event /* r30 */) {
     // Local variables
     int nCASMode; // r0
 

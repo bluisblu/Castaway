@@ -5,10 +5,10 @@
     Code range: 0x802449D8 -> 0x80244A90
 */
 // Range: 0x802449D8 -> 0x802449DC
-void * WaterCameraTweakTool::WaterCameraTweakTool() {}
+WaterCameraTweakTool::WaterCameraTweakTool() {}
 
 // Range: 0x802449DC -> 0x80244A90
-void * TerrainCameraTweakTool::TerrainCameraTweakTool() {
+TerrainCameraTweakTool::TerrainCameraTweakTool() {
     // References
     // -> float s_minWaterTilt;
     // -> float s_minWaterZoom;

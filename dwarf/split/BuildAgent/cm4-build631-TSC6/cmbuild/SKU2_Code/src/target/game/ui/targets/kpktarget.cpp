@@ -5,14 +5,16 @@
     Code range: 0x801E4820 -> 0x801E54E4
 */
 // Range: 0x801E4820 -> 0x801E490C
-void * KPKTarget::~KPKTarget(class KPKTarget * const this /* r30 */) {
+// this: r30
+KPKTarget::~KPKTarget() {
     // References
     // -> class EGlobal _globals;
     // -> struct [anonymous] __vt__9KPKTarget;
 }
 
 // Range: 0x801E490C -> 0x801E4BF4
-void KPKTarget::SetVariable(class KPKTarget * const this /* r31 */, const char * szCommand /* r28 */, const char * szParams /* r27 */) {
+// this: r31
+void KPKTarget::SetVariable(const char * szCommand /* r28 */, const char * szParams /* r27 */) {
     // Local variables
     unsigned short newChar[2]; // r1+0x8
     int i; // r0
@@ -29,7 +31,8 @@ void KPKTarget::SetVariable(class KPKTarget * const this /* r31 */, const char *
 }
 
 // Range: 0x801E4BF4 -> 0x801E4E8C
-char * KPKTarget::GetVariable(class KPKTarget * const this /* r30 */, const char * szVar /* r28 */) {
+// this: r30
+char * KPKTarget::GetVariable(const char * szVar /* r28 */) {
     // Local variables
     char * retStr; // r31
     unsigned char moved; // r29
@@ -51,7 +54,8 @@ char * KPKTarget::GetVariable(class KPKTarget * const this /* r30 */, const char
 }
 
 // Range: 0x801E4E8C -> 0x801E4F74
-unsigned short * KPKTarget::GetLocalizable(class KPKTarget * const this /* r29 */, const char * szVar /* r30 */) {
+// this: r29
+unsigned short * KPKTarget::GetLocalizable(const char * szVar /* r30 */) {
     // Local variables
     unsigned short * wideStr; // r31
     unsigned short * outString; // r30
@@ -62,7 +66,8 @@ unsigned short * KPKTarget::GetLocalizable(class KPKTarget * const this /* r29 *
 }
 
 // Range: 0x801E4F74 -> 0x801E4FF4
-void KPKTarget::Update(class KPKTarget * const this /* r31 */) {
+// this: r31
+void KPKTarget::Update() {
     // Local variables
     class EVec2 dummy; // r1+0x8
 
@@ -72,7 +77,8 @@ void KPKTarget::Update(class KPKTarget * const this /* r31 */) {
 }
 
 // Range: 0x801E4FF4 -> 0x801E51F8
-void KPKTarget::DrawUserText(class KPKTarget * const this /* r29 */, class ERC * prc /* r30 */, const struct structDrawCBparams * params /* r31 */) {
+// this: r29
+void KPKTarget::DrawUserText(class ERC * prc /* r30 */, const struct structDrawCBparams * params /* r31 */) {
     // Local variables
     class AptParagraph paragraph; // r1+0x68
     class EVec4 vColor; // r1+0x18
@@ -89,7 +95,8 @@ void KPKTarget::DrawUserText(class KPKTarget * const this /* r29 */, class ERC *
 }
 
 // Range: 0x801E51F8 -> 0x801E544C
-void KPKTarget::MakeDisplayString(class KPKTarget * const this /* r25 */) {
+// this: r25
+void KPKTarget::MakeDisplayString() {
     // Local variables
     int dashCounter; // r28
     unsigned short dashString[8]; // r1+0x8

@@ -5,13 +5,15 @@
     Code range: 0x8023D2A4 -> 0x8023D7B8
 */
 // Range: 0x8023D2A4 -> 0x8023D314
-void * EMemoryMeterWin::EMemoryMeterWin(class EMemoryMeterWin * const this /* r31 */) {
+// this: r31
+EMemoryMeterWin::EMemoryMeterWin() {
     // References
     // -> struct [anonymous] __vt__15EMemoryMeterWin;
 }
 
 // Range: 0x8023D314 -> 0x8023D380
-void * EMemoryMeterWin::~EMemoryMeterWin(class EMemoryMeterWin * const this /* r30 */) {
+// this: r30
+EMemoryMeterWin::~EMemoryMeterWin() {
     // References
     // -> struct [anonymous] __vt__15EMemoryMeterWin;
 }
@@ -26,7 +28,8 @@ void EMemoryMeterWin::Reset() {}
 void EMemoryMeterWin::SetState() {}
 
 // Range: 0x8023D38C -> 0x8023D630
-void EMemoryMeterWin::PollMemoryLevels(class EMemoryMeterWin * const this /* r30 */) {
+// this: r30
+void EMemoryMeterWin::PollMemoryLevels() {
     // Local variables
     float uniqueObjects; // r1+0x18
     float totalObjects; // r1+0x14

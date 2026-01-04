@@ -8,7 +8,8 @@
 class EAHeap * EQuickdataManager::GetHeap() {}
 
 // Range: 0x802A87F4 -> 0x802A88A4
-class EResource * EQuickdataManager::AllocateAndLoadResource(class EQuickdataManager * const this /* r27 */, class EFile * pFile /* r28 */, unsigned int uLength /* r29 */, unsigned int id /* r31 */) {
+// this: r27
+class EResource * EQuickdataManager::AllocateAndLoadResource(class EFile * pFile /* r28 */, unsigned int uLength /* r29 */, unsigned int id /* r31 */) {
     // Local variables
     unsigned int uOffs; // r0
 
@@ -17,7 +18,8 @@ class EResource * EQuickdataManager::AllocateAndLoadResource(class EQuickdataMan
 }
 
 // Range: 0x802A88A4 -> 0x802A89C8
-void EQuickdataManager::Reload(class EQuickdataManager * const this /* r29 */, unsigned int id /* r30 */) {
+// this: r29
+void EQuickdataManager::Reload(unsigned int id /* r30 */) {
     // Local variables
     class EResource * pRes; // r1+0x14
     class ERQuickdata * pResource; // r31

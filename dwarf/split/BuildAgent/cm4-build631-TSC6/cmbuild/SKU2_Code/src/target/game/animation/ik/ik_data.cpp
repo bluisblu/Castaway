@@ -5,7 +5,8 @@
     Code range: 0x800282BC -> 0x80028EC0
 */
 // Range: 0x800282BC -> 0x800283A4
-void * IKData::IKData(class IKData * const this /* r28 */) {
+// this: r28
+IKData::IKData() {
     // References
     // -> struct [anonymous] __vt__6IKData;
 }
@@ -20,13 +21,15 @@ unsigned int IKData::GetIKBoneIdx() {}
 void IKData::SetEnableIK() {}
 
 // Range: 0x800283E8 -> 0x80028458
-void IKData::SetOriginalBonesPosOrient(class IKData * const this /* r27 */, class EAnimController * pAC /* r28 */) {
+// this: r27
+void IKData::SetOriginalBonesPosOrient(class EAnimController * pAC /* r28 */) {
     // Local variables
     unsigned int i; // r29
 }
 
 // Range: 0x80028458 -> 0x800286C8
-void IKData::ComputeBoneInfo(class IKData * const this /* r29 */, class EAnimController * pAC /* r30 */) {
+// this: r29
+void IKData::ComputeBoneInfo(class EAnimController * pAC /* r30 */) {
     // Local variables
     class EMat4 rootBindPose; // r1+0xF0
     class EMat4 midBindPose; // r1+0xB0
@@ -58,7 +61,8 @@ void IKData::UpdateBoneInAnimController(class EAnimController * pAC /* r28 */, c
 }
 
 // Range: 0x80028888 -> 0x80028A04
-void IKData::ComputeIKBoneOrient(class IKData * const this /* r28 */, class EAnimController * pAC /* r29 */, class EQuat & rootQ /* r30 */, class EQuat & midQ /* r31 */) {
+// this: r28
+void IKData::ComputeIKBoneOrient(class EAnimController * pAC /* r29 */, class EQuat & rootQ /* r30 */, class EQuat & midQ /* r31 */) {
     // Local variables
     class EMat4 parentOrient; // r1+0x248
     class EMat4 parentOrientInv; // r1+0x208
@@ -73,7 +77,8 @@ void IKData::ComputeIKBoneOrient(class IKData * const this /* r28 */, class EAni
 }
 
 // Range: 0x80028A04 -> 0x80028B14
-void IKData::UpdateChildBones(class IKData * const this /* r24 */, class EAnimController * pAC /* r25 */, unsigned int boneIdx /* r26 */, class EMat4 & newMat /* r27 */, class EMat4 & boneOrientInv /* r28 */) {
+// this: r24
+void IKData::UpdateChildBones(class EAnimController * pAC /* r25 */, unsigned int boneIdx /* r26 */, class EMat4 & newMat /* r27 */, class EMat4 & boneOrientInv /* r28 */) {
     // Local variables
     unsigned int numChild; // r0
     unsigned int i; // r30
@@ -86,7 +91,8 @@ void IKData::UpdateChildBones(class IKData * const this /* r24 */, class EAnimCo
 }
 
 // Range: 0x80028B14 -> 0x80028EC0
-void IKData::ComputeIK(class IKData * const this /* r29 */, class EAnimController * pAC /* r30 */) {
+// this: r29
+void IKData::ComputeIK(class EAnimController * pAC /* r30 */) {
     // Local variables
     class EVec3 targetFromRoot; // r1+0x104
     class EVec3 targetDiff; // r1+0xF8

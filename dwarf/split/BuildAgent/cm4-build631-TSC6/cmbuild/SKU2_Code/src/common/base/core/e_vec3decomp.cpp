@@ -14,13 +14,14 @@ void EVec3Decomp::Init() {
 }
 
 // Range: 0x80271F84 -> 0x80271FBC
-void * EVec3Decomp::__nw(unsigned long size /* r31 */) {}
+void * EVec3Decomp::operator new(unsigned long size /* r31 */) {}
 
 // Range: 0x80271FBC -> 0x80271FF0
-void EVec3Decomp::__dl(void * p /* r31 */) {}
+void EVec3Decomp::operator delete(void * p /* r31 */) {}
 
 // Range: 0x80271FF0 -> 0x8027246C
-class EVec3 EVec3Decomp::GetFrame(class EVec3Decomp * const this /* r31 */, float frame /* f31 */) {
+// this: r31
+class EVec3 EVec3Decomp::GetFrame(float frame /* f31 */) {
     // Local variables
     float fCurrentSplineStartFrame; // f2
     float fCurrentSplineEndFrame; // f3
@@ -31,14 +32,16 @@ class EVec3 EVec3Decomp::GetFrame(class EVec3Decomp * const this /* r31 */, floa
 }
 
 // Range: 0x8027246C -> 0x802725D8
-void EVec3Decomp::NextSegment(class EVec3Decomp * const this /* r31 */) {
+// this: r31
+void EVec3Decomp::NextSegment() {
     // Local variables
     int nextTimePos; // r4
     int nextFrame; // r30
 }
 
 // Range: 0x802725D8 -> 0x80272744
-void EVec3Decomp::LastSegment(class EVec3Decomp * const this /* r31 */) {
+// this: r31
+void EVec3Decomp::LastSegment() {
     // Local variables
     int lastTimePos; // r4
 }
@@ -56,7 +59,8 @@ void EVec3Decomp::ResetEnd() {
 }
 
 // Range: 0x80272900 -> 0x80272984
-void EVec3Decomp::ReadAllVs(class EVec3Decomp * const this /* r30 */) {
+// this: r30
+void EVec3Decomp::ReadAllVs() {
     // Local variables
     int nextFrame; // r31
 }
@@ -83,7 +87,8 @@ void EVec3Decomp::GetVPoint() {
 }
 
 // Range: 0x8027318C -> 0x802735BC
-void EVec3Decomp::GetV(class EVec3Decomp * const this /* r28 */, int sel /* r29 */, int keyframe /* r30 */, class EVec3 & vOut /* r31 */) {
+// this: r28
+void EVec3Decomp::GetV(int sel /* r29 */, int keyframe /* r30 */, class EVec3 & vOut /* r31 */) {
     // Local variables
     struct EVec3Keyframe kn_1; // r1+0x110
     struct EVec3Keyframe kn; // r1+0xF8

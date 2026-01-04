@@ -5,10 +5,12 @@
     Code range: 0x8010FAC4 -> 0x8010FD0C
 */
 // Range: 0x8010FAC4 -> 0x8010FAFC
-void * LightingParameters::LightingParameters(class LightingParameters * const this /* r31 */) {}
+// this: r31
+LightingParameters::LightingParameters() {}
 
 // Range: 0x8010FAFC -> 0x8010FB3C
-void * LightingParameters::~LightingParameters(class LightingParameters * const this /* r31 */) {}
+// this: r31
+LightingParameters::~LightingParameters() {}
 
 // Range: 0x8010FB3C -> 0x8010FC14
 void Globs::Startup() {

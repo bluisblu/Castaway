@@ -5,7 +5,8 @@
     Code range: 0x801E5A3C -> 0x801E6710
 */
 // Range: 0x801E5A3C -> 0x801E5D80
-void * CLPTarget::CLPTarget(class CLPTarget * const this /* r28 */) {
+// this: r28
+CLPTarget::CLPTarget() {
     // Local variables
     int i; // r29
 
@@ -30,14 +31,16 @@ void * CLPTarget::CLPTarget(class CLPTarget * const this /* r28 */) {
 }
 
 // Range: 0x801E5D80 -> 0x801E5E3C
-void * CLPTarget::~CLPTarget(class CLPTarget * const this /* r29 */) {
+// this: r29
+CLPTarget::~CLPTarget() {
     // References
     // -> class EGlobal _globals;
     // -> struct [anonymous] __vt__9CLPTarget;
 }
 
 // Range: 0x801E5E3C -> 0x801E619C
-void CLPTarget::SetVariable(class CLPTarget * const this /* r31 */, const char * szVar /* r28 */, const char * zValue /* r29 */) {
+// this: r31
+void CLPTarget::SetVariable(const char * szVar /* r28 */, const char * zValue /* r29 */) {
     // Local variables
     int group; // r1+0xC
     int item; // r1+0x8
@@ -50,7 +53,8 @@ void CLPTarget::SetVariable(class CLPTarget * const this /* r31 */, const char *
 }
 
 // Range: 0x801E619C -> 0x801E62EC
-char * CLPTarget::GetVariable(class CLPTarget * const this /* r29 */, const char * szVar /* r30 */) {
+// this: r29
+char * CLPTarget::GetVariable(const char * szVar /* r30 */) {
     // Local variables
     char * pResultString; // r31
 
@@ -64,7 +68,8 @@ char * CLPTarget::GetVariable(class CLPTarget * const this /* r29 */, const char
 }
 
 // Range: 0x801E62EC -> 0x801E6460
-unsigned short * CLPTarget::GetLocalizable(class CLPTarget * const this /* r29 */, const char * szVar /* r30 */) {
+// this: r29
+unsigned short * CLPTarget::GetLocalizable(const char * szVar /* r30 */) {
     // Local variables
     unsigned short widestring[4096]; // r1+0x18
     unsigned short * pResultString; // r31
@@ -75,7 +80,8 @@ unsigned short * CLPTarget::GetLocalizable(class CLPTarget * const this /* r29 *
 }
 
 // Range: 0x801E6460 -> 0x801E6558
-void CLPTarget::Update(class CLPTarget * const this /* r31 */) {
+// this: r31
+void CLPTarget::Update() {
     // Local variables
     class EVec2 dummy; // r1+0x8
 

@@ -30,35 +30,18 @@ enum EMC_OpStatus EMemoryCard::CreateFileS() {}
 void EMemoryCard::SetChecksum(class NghResFileSectionHeader * pInData /* r31 */) {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\common\engine\utility\e_memorycard.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x80175800 -> 0x8017580C
-*/
 // Range: 0x80175800 -> 0x8017580C
-void * MemoryDevicePort_t::MemoryDevicePort_t() {}
+MemoryDevicePort_t::MemoryDevicePort_t() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\common\engine\utility\e_memorycard.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x801B372C -> 0x801B376C
-*/
 // Range: 0x801B372C -> 0x801B373C
 void MemoryDevicePort_t::Reset() {}
 
 // Range: 0x801B373C -> 0x801B376C
-void * MemoryDevicePort_t::MemoryDevicePort_t(class MemoryDevicePort_t * const this /* r31 */) {}
+// this: r31
+MemoryDevicePort_t::MemoryDevicePort_t() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\common\engine\utility\e_memorycard.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x802421E4 -> 0x802421F4
-*/
 // Range: 0x802421E4 -> 0x802421EC
 unsigned char EMemoryCard::GetFileRefCount() {}
 
@@ -66,14 +49,9 @@ unsigned char EMemoryCard::GetFileRefCount() {}
 unsigned char EMemoryCard::IsWrongDevice() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\common\engine\utility\e_memorycard.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x802B1488 -> 0x802B14DC
-*/
 // Range: 0x802B1488 -> 0x802B14C8
-void * EMemoryCard::~EMemoryCard(class EMemoryCard * const this /* r31 */) {}
+// this: r31
+EMemoryCard::~EMemoryCard() {}
 
 // Range: 0x802B14C8 -> 0x802B14CC
 void EMemoryCard::SetMemCardCopyProtection() {}

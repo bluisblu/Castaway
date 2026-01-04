@@ -5,13 +5,15 @@
     Code range: 0x8015D97C -> 0x8015E51C
 */
 // Range: 0x8015D97C -> 0x8015D9E0
-void * ObjectDataBehaviorConstants::ObjectDataBehaviorConstants(class ObjectDataBehaviorConstants * const this /* r30 */) {
+// this: r30
+ObjectDataBehaviorConstants::ObjectDataBehaviorConstants() {
     // References
     // -> struct [anonymous] __vt__27ObjectDataBehaviorConstants;
 }
 
 // Range: 0x8015D9E0 -> 0x8015DA78
-void * ObjectDataBehaviorConstants::~ObjectDataBehaviorConstants(class ObjectDataBehaviorConstants * const this /* r30 */) {
+// this: r30
+ObjectDataBehaviorConstants::~ObjectDataBehaviorConstants() {
     // References
     // -> struct [anonymous] __vt__27ObjectDataBehaviorConstants;
 }
@@ -20,7 +22,8 @@ void * ObjectDataBehaviorConstants::~ObjectDataBehaviorConstants(class ObjectDat
 signed short ObjectDataBehaviorConstants::CountValues() {}
 
 // Range: 0x8015DA84 -> 0x8015DB4C
-void ObjectDataBehaviorConstants::SetValueCount(class ObjectDataBehaviorConstants * const this /* r30 */, int count /* r31 */) {}
+// this: r30
+void ObjectDataBehaviorConstants::SetValueCount(int count /* r31 */) {}
 
 // Range: 0x8015DB4C -> 0x8015DB58
 unsigned char ObjectDataBehaviorConstants::IsTuning() {}
@@ -35,7 +38,7 @@ unsigned char ObjectDataBehaviorConstants::GetResourceName() {}
 unsigned char ObjectDataBehaviorConstants::SetResourceName() {}
 
 // Range: 0x8015DBAC -> 0x8015DC04
-void * QuickDataBehaviorConstants::__nw(unsigned long size /* r31 */) {
+void * QuickDataBehaviorConstants::operator new(unsigned long size /* r31 */) {
     // Local variables
     void * p; // r0
 
@@ -44,20 +47,22 @@ void * QuickDataBehaviorConstants::__nw(unsigned long size /* r31 */) {
 }
 
 // Range: 0x8015DC04 -> 0x8015DC68
-void QuickDataBehaviorConstants::__dl(void * p /* r30 */) {
+void QuickDataBehaviorConstants::operator delete(void * p /* r30 */) {
     // References
     // -> class FastAllocPool g_poolQdBcon;
 }
 
 // Range: 0x8015DC68 -> 0x8015DD2C
-unsigned char QuickDataBehaviorConstants::LoadFromIndex(class QuickDataBehaviorConstants * const this /* r28 */, unsigned int fileID /* r29 */, int index /* r30 */) {
+// this: r28
+unsigned char QuickDataBehaviorConstants::LoadFromIndex(unsigned int fileID /* r29 */, int index /* r30 */) {
     // Local variables
     class iResFile * file; // r0
     const struct ResFile * pResFile; // r0
 }
 
 // Range: 0x8015DD2C -> 0x8015DDEC
-unsigned char QuickDataBehaviorConstants::LoadFromDataID(class QuickDataBehaviorConstants * const this /* r28 */, const class ObjectDataID & id /* r30 */) {
+// this: r28
+unsigned char QuickDataBehaviorConstants::LoadFromDataID(const class ObjectDataID & id /* r30 */) {
     // Local variables
     class iResFile * file; // r0
     const struct ResFile * pResFile; // r0
@@ -67,7 +72,8 @@ unsigned char QuickDataBehaviorConstants::LoadFromDataID(class QuickDataBehavior
 void QuickDataBehaviorConstants::SetValueCount() {}
 
 // Range: 0x8015DDF0 -> 0x8015DE90
-unsigned char QuickDataBehaviorConstants::QueryInterface(class QuickDataBehaviorConstants * const this /* r30 */, void * ppvObject /* r31 */) {}
+// this: r30
+unsigned char QuickDataBehaviorConstants::QueryInterface(void * ppvObject /* r31 */) {}
 
 // Range: 0x8015DE90 -> 0x8015DEA4
 unsigned int QuickDataBehaviorConstants::AddRef() {}
@@ -76,7 +82,8 @@ unsigned int QuickDataBehaviorConstants::AddRef() {}
 unsigned int QuickDataBehaviorConstants::Release() {}
 
 // Range: 0x8015DEF8 -> 0x8015E0BC
-void IFFBehaviorConstants::LoadData(class IFFBehaviorConstants * const this /* r27 */, class iResFile * file /* r28 */, struct HandleNode * handle /* r29 */) {
+// this: r27
+void IFFBehaviorConstants::LoadData(class iResFile * file /* r28 */, struct HandleNode * handle /* r29 */) {
     // Local variables
     struct EdithBehaviorConstants * obc; // r30
     signed short cnt; // r0
@@ -85,7 +92,8 @@ void IFFBehaviorConstants::LoadData(class IFFBehaviorConstants * const this /* r
 }
 
 // Range: 0x8015E0BC -> 0x8015E164
-unsigned char IFFBehaviorConstants::LoadFromIndex(class IFFBehaviorConstants * const this /* r28 */, unsigned int fileID /* r29 */, int index /* r30 */) {
+// this: r28
+unsigned char IFFBehaviorConstants::LoadFromIndex(unsigned int fileID /* r29 */, int index /* r30 */) {
     // Local variables
     class iResFile * file; // r31
     struct HandleNode * handle; // r5
@@ -95,14 +103,16 @@ unsigned char IFFBehaviorConstants::LoadFromIndex(class IFFBehaviorConstants * c
 unsigned char IFFBehaviorConstants::LoadOnlyNameAndIDFromIndex() {}
 
 // Range: 0x8015E174 -> 0x8015E224
-unsigned char IFFBehaviorConstants::LoadFromDataID(class IFFBehaviorConstants * const this /* r29 */, const class ObjectDataID & id /* r30 */) {
+// this: r29
+unsigned char IFFBehaviorConstants::LoadFromDataID(const class ObjectDataID & id /* r30 */) {
     // Local variables
     class iResFile * file; // r31
     struct HandleNode * handle; // r5
 }
 
 // Range: 0x8015E224 -> 0x8015E390
-unsigned char IFFBehaviorConstants::SaveDataByID(class IFFBehaviorConstants * const this /* r25 */, const class ObjectDataID & id /* r26 */) {
+// this: r25
+unsigned char IFFBehaviorConstants::SaveDataByID(const class ObjectDataID & id /* r26 */) {
     // Local variables
     class iResFile * file; // r30
     struct HandleNode * bcHand; // r29
@@ -112,13 +122,15 @@ unsigned char IFFBehaviorConstants::SaveDataByID(class IFFBehaviorConstants * co
 }
 
 // Range: 0x8015E390 -> 0x8015E3EC
-unsigned char IFFBehaviorConstants::GetResourceName(const class IFFBehaviorConstants * const this /* r30 */, class StringBuffer & name /* r31 */) {}
+// this: r30
+unsigned char IFFBehaviorConstants::GetResourceName(class StringBuffer & name /* r31 */) const {}
 
 // Range: 0x8015E3EC -> 0x8015E414
 unsigned char IFFBehaviorConstants::SetResourceName() {}
 
 // Range: 0x8015E414 -> 0x8015E4B4
-unsigned char IFFBehaviorConstants::QueryInterface(class IFFBehaviorConstants * const this /* r30 */, void * ppvObject /* r31 */) {}
+// this: r30
+unsigned char IFFBehaviorConstants::QueryInterface(void * ppvObject /* r31 */) {}
 
 // Range: 0x8015E4B4 -> 0x8015E4C8
 unsigned int IFFBehaviorConstants::AddRef() {}

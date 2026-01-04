@@ -5,7 +5,8 @@
     Code range: 0x802BB5C4 -> 0x802C5C00
 */
 // Range: 0x802BB5C4 -> 0x802BB8F0
-void * ENgcRenderer::ENgcRenderer(class ENgcRenderer * const this /* r31 */) {
+// this: r31
+ENgcRenderer::ENgcRenderer() {
     // References
     // -> int _tvHZ;
     // -> class ERenderer * _pRend;
@@ -14,7 +15,8 @@ void * ENgcRenderer::ENgcRenderer(class ENgcRenderer * const this /* r31 */) {
 }
 
 // Range: 0x802BB8F0 -> 0x802BB960
-void * ENgcRenderer::~ENgcRenderer(class ENgcRenderer * const this /* r30 */) {
+// this: r30
+ENgcRenderer::~ENgcRenderer() {
     // References
     // -> class ERenderer * _pRend;
 }
@@ -97,7 +99,8 @@ void * ENgcRenderer::CreateGXDisplayList(class EDL * pDL /* r31 */, enum _GXPrim
 }
 
 // Range: 0x802BCBD0 -> 0x802BCC60
-void ENgcRenderer::SetClearColor(class ENgcRenderer * const this /* r30 */) {
+// this: r30
+void ENgcRenderer::SetClearColor() {
     // Local variables
     unsigned char * gxcolor; // r31
 
@@ -150,7 +153,8 @@ void ENgcRenderer::BeginFullScenePass() {}
 void ENgcRenderer::EndFullScenePass() {}
 
 // Range: 0x802BCD98 -> 0x802BD018
-void ENgcRenderer::InitGX(class ENgcRenderer * const this /* r29 */, struct _GXRenderModeObj * rMode /* r30 */) {
+// this: r29
+void ENgcRenderer::InitGX(struct _GXRenderModeObj * rMode /* r30 */) {
     // Local variables
     unsigned long hi; // r1+0xC
     unsigned long lo; // r1+0x8
@@ -166,7 +170,8 @@ void ENgcRenderer::InitGX(class ENgcRenderer * const this /* r29 */, struct _GXR
 void ENgcRenderer::InitGXVertexFormats() {}
 
 // Range: 0x802BD3DC -> 0x802BDB74
-unsigned char ENgcRenderer::InitVideo(class ENgcRenderer * const this /* r29 */, int & screenx /* r30 */, int & screeny /* r31 */) {
+// this: r29
+unsigned char ENgcRenderer::InitVideo(int & screenx /* r30 */, int & screeny /* r31 */) {
     // Local variables
     struct _GXRenderModeObj defRenderMode; // r1+0xC
     unsigned short verticlePixels; // r0
@@ -187,13 +192,15 @@ unsigned char ENgcRenderer::InitVideo(class ENgcRenderer * const this /* r29 */,
 }
 
 // Range: 0x802BDB74 -> 0x802BDD74
-void ENgcRenderer::InitData(class ENgcRenderer * const this /* r30 */) {
+// this: r30
+void ENgcRenderer::InitData() {
     // References
     // -> static unsigned char clear_alpha;
 }
 
 // Range: 0x802BDD74 -> 0x802BE1AC
-void ENgcRenderer::ClearRect(class ENgcRenderer * const this /* r26 */, class EVec4 & rect /* r27 */) {
+// this: r26
+void ENgcRenderer::ClearRect(class EVec4 & rect /* r27 */) {
     // Local variables
     unsigned char u8color[4]; // r1+0x8
 
@@ -203,7 +210,8 @@ void ENgcRenderer::ClearRect(class ENgcRenderer * const this /* r26 */, class EV
 }
 
 // Range: 0x802BE1AC -> 0x802BE2DC
-void ENgcRenderer::EndFrame(class ENgcRenderer * const this /* r31 */) {
+// this: r31
+void ENgcRenderer::EndFrame() {
     // Local variables
     class EEvent * event; // r29
     void * fifoRead; // r1+0xC
@@ -219,7 +227,8 @@ void ENgcRenderer::EndFrame(class ENgcRenderer * const this /* r31 */) {
 }
 
 // Range: 0x802BE2DC -> 0x802BEC38
-void ENgcRenderer::UpdateLightingEquation(class ENgcRenderer * const this /* r24 */) {
+// this: r24
+void ENgcRenderer::UpdateLightingEquation() {
     // Local variables
     struct _GXColor shadowColor; // r1+0x3C
     struct _GXColor ambient; // r1+0x38
@@ -246,7 +255,8 @@ void ENgcRenderer::UpdateLightingEquation(class ENgcRenderer * const this /* r24
 void ENgcRenderer::SetLightingOff() {}
 
 // Range: 0x802BEC58 -> 0x802BECE4
-void ENgcRenderer::Execute(class ENgcRenderer * const this /* r30 */) {
+// this: r30
+void ENgcRenderer::Execute() {
     // Local variables
     struct EDLEntry * pCurrentEntry; // r4
     unsigned int command; // r3
@@ -265,7 +275,8 @@ void ENgcRenderer::TriStrip(struct EDLEntry * pe /* r5 */) {
 }
 
 // Range: 0x802BED0C -> 0x802BF0AC
-void ENgcRenderer::TriStrip(class ENgcRenderer * const this /* r29 */, const struct EGEVert * verts /* r30 */, int nVerts /* r31 */) {
+// this: r29
+void ENgcRenderer::TriStrip(const struct EGEVert * verts /* r30 */, int nVerts /* r31 */) {
     // Local variables
     int i; // r26
     struct Vec tc; // r1+0x20
@@ -275,7 +286,8 @@ void ENgcRenderer::TriStrip(class ENgcRenderer * const this /* r29 */, const str
 }
 
 // Range: 0x802BF0AC -> 0x802BF3CC
-void ENgcRenderer::WeightedBlend(class ENgcRenderer * const this /* r23 */, int nVerts /* r24 */, const float * pos /* r25 */, const signed char * normals /* r26 */, const float * tcs /* r27 */, const unsigned char * colors /* r28 */, const unsigned char * weights /* r29 */, unsigned char dualTexCoords /* r30 */) {
+// this: r23
+void ENgcRenderer::WeightedBlend(int nVerts /* r24 */, const float * pos /* r25 */, const signed char * normals /* r26 */, const float * tcs /* r27 */, const unsigned char * colors /* r28 */, const unsigned char * weights /* r29 */, unsigned char dualTexCoords /* r30 */) {
     // Local variables
     struct Vec v; // r1+0x44
     struct Vec n; // r1+0x38
@@ -306,7 +318,8 @@ void ENgcRenderer::TriStripPacked() {
 }
 
 // Range: 0x802BF41C -> 0x802BFBA0
-void ENgcRenderer::TriStripPacked(class ENgcRenderer * const this /* r26 */, int nVerts /* r27 */, const float * pos /* r28 */, const float * texcoords /* r29 */, const unsigned char * colors /* r30 */, const signed char * normals /* r31 */, const unsigned char * weights /* r24 */, const unsigned char * pCallDL /* r23 */, unsigned char dualTexCoords /* r22 */) {
+// this: r26
+void ENgcRenderer::TriStripPacked(int nVerts /* r27 */, const float * pos /* r28 */, const float * texcoords /* r29 */, const unsigned char * colors /* r30 */, const signed char * normals /* r31 */, const unsigned char * weights /* r24 */, const unsigned char * pCallDL /* r23 */, unsigned char dualTexCoords /* r22 */) {
     // Local variables
     enum _GXAttrType type; // r25
     const float * pPos; // [invalid]
@@ -343,7 +356,8 @@ void ENgcRenderer::TriStripPacked(class ENgcRenderer * const this /* r26 */, int
 }
 
 // Range: 0x802BFBA0 -> 0x802C0438
-void ENgcRenderer::TriStripPackedInt(class ENgcRenderer * const this /* r27 */, struct EDLEntry * pe /* r20 */) {
+// this: r27
+void ENgcRenderer::TriStripPackedInt(struct EDLEntry * pe /* r20 */) {
     // Local variables
     int nVerts; // r25
     unsigned int dlSize; // r24
@@ -408,7 +422,8 @@ void ENgcRenderer::LineList(struct EDLEntry * pe /* r5 */) {
 }
 
 // Range: 0x802C0448 -> 0x802C0614
-void ENgcRenderer::LineList(class ENgcRenderer * const this /* r29 */, const struct EGEVert * verts /* r30 */, int nVerts /* r31 */) {
+// this: r29
+void ENgcRenderer::LineList(const struct EGEVert * verts /* r30 */, int nVerts /* r31 */) {
     // Local variables
     int i; // r0
 }
@@ -453,7 +468,8 @@ void ENgcRenderer::ClipRect() {
 }
 
 // Range: 0x802C073C -> 0x802C081C
-void ENgcRenderer::Scissor(class ENgcRenderer * const this /* r30 */) {
+// this: r30
+void ENgcRenderer::Scissor() {
     // Local variables
     class TRect * frect; // r31
     float w; // f31
@@ -476,10 +492,12 @@ void ENgcRenderer::ModelMatrices() {
 }
 
 // Range: 0x802C0958 -> 0x802C0A38
-void ENgcRenderer::ModelMatrixIndex(class ENgcRenderer * const this /* r31 */) {}
+// this: r31
+void ENgcRenderer::ModelMatrixIndex() {}
 
 // Range: 0x802C0A38 -> 0x802C0B3C
-void ENgcRenderer::ModelMatrixIndices(class ENgcRenderer * const this /* r27 */, struct EDLEntry * pe /* r28 */) {
+// this: r27
+void ENgcRenderer::ModelMatrixIndices(struct EDLEntry * pe /* r28 */) {
     // Local variables
     struct EDLEntryCommandU8 * p; // r0
     int i; // r29
@@ -487,13 +505,15 @@ void ENgcRenderer::ModelMatrixIndices(class ENgcRenderer * const this /* r27 */,
 }
 
 // Range: 0x802C0B3C -> 0x802C0BEC
-void ENgcRenderer::ViewMatrix(class ENgcRenderer * const this /* r31 */) {
+// this: r31
+void ENgcRenderer::ViewMatrix() {
     // Local variables
     class EMat4 * pmView; // r5
 }
 
 // Range: 0x802C0BEC -> 0x802C0CD8
-void ENgcRenderer::ProjectionMatrix(class ENgcRenderer * const this /* r31 */) {
+// this: r31
+void ENgcRenderer::ProjectionMatrix() {
     // Local variables
     class EMat4 * pmProjection; // r6
     float a; // f1
@@ -515,19 +535,22 @@ void ENgcRenderer::WindowMatrix() {
 }
 
 // Range: 0x802C0D74 -> 0x802C0E2C
-void ENgcRenderer::TextureMatrix(class ENgcRenderer * const this /* r31 */) {
+// this: r31
+void ENgcRenderer::TextureMatrix() {
     // Local variables
     class EMat4 * pTextureMatrix; // r4
 }
 
 // Range: 0x802C0E2C -> 0x802C0E74
-void ENgcRenderer::Texture(class ENgcRenderer * const this /* r31 */, struct EDLEntry * pe /* r5 */) {
+// this: r31
+void ENgcRenderer::Texture(struct EDLEntry * pe /* r5 */) {
     // Local variables
     struct EDLEntryCommandU32 * p; // r0
 }
 
 // Range: 0x802C0E74 -> 0x802C0F94
-unsigned char ENgcRenderer::SetTexture(class ENgcRenderer * const this /* r27 */, class ENgcTexture * pNewTexture /* r28 */, int renderPass /* r29 */) {
+// this: r27
+unsigned char ENgcRenderer::SetTexture(class ENgcTexture * pNewTexture /* r28 */, int renderPass /* r29 */) {
     // Local variables
     class ETexture * pOldTexture; // r3
     int texcount; // r31
@@ -565,7 +588,8 @@ void ENgcRenderer::SetRasterModes() {}
 void ENgcRenderer::SetAlpha() {}
 
 // Range: 0x802C115C -> 0x802C11AC
-void ENgcRenderer::SetFogValues(class ENgcRenderer * const this /* r31 */, float intensity /* f31 */) {
+// this: r31
+void ENgcRenderer::SetFogValues(float intensity /* f31 */) {
     // Local variables
     struct _GXColor gxColor; // r1+0x8
 }
@@ -583,7 +607,8 @@ void ENgcRenderer::Lights() {
 }
 
 // Range: 0x802C1338 -> 0x802C1680
-void ENgcRenderer::Rect(class ENgcRenderer * const this /* r31 */) {
+// this: r31
+void ENgcRenderer::Rect() {
     // Local variables
     float * pf; // r30
     class EVec2 vUpperLeft; // r1+0x48
@@ -603,7 +628,8 @@ void ENgcRenderer::Rect(class ENgcRenderer * const this /* r31 */) {
 }
 
 // Range: 0x802C1680 -> 0x802C1A40
-void ENgcRenderer::DirectRect(class ENgcRenderer * const this /* r31 */) {
+// this: r31
+void ENgcRenderer::DirectRect() {
     // Local variables
     class ENgcTexture * pTexture; // r30
     float * pf; // r0
@@ -641,7 +667,8 @@ void ENgcRenderer::Debug() {
 }
 
 // Range: 0x802C1AC0 -> 0x802C1B10
-void ENgcRenderer::GeometrySetup(class ENgcRenderer * const this /* r31 */) {}
+// this: r31
+void ENgcRenderer::GeometrySetup() {}
 
 // Range: 0x802C1B10 -> 0x802C1B6C
 void ENgcRenderer::ZTest() {
@@ -670,7 +697,8 @@ void ENgcRenderer::AlphaTest() {
 }
 
 // Range: 0x802C1C0C -> 0x802C1D60
-void ENgcRenderer::RenderSurface(class ENgcRenderer * const this /* r30 */) {
+// this: r30
+void ENgcRenderer::RenderSurface() {
     // Local variables
     class ENgcRenderSurface * pSurface; // r31
     class EVec4 rect; // r1+0x18
@@ -704,7 +732,8 @@ void ENgcRenderer::SpriteListPacked() {
 }
 
 // Range: 0x802C1DAC -> 0x802C2000
-void ENgcRenderer::SpriteListPacked(class ENgcRenderer * const this /* r27 */, int nVerts /* r28 */, const float * xyzs /* r29 */, const float * texcoords /* r30 */, const unsigned char * colors /* r31 */) {
+// this: r27
+void ENgcRenderer::SpriteListPacked(int nVerts /* r28 */, const float * xyzs /* r29 */, const float * texcoords /* r30 */, const unsigned char * colors /* r31 */) {
     // Local variables
     int i; // r25
     struct Vec p1; // r1+0x14
@@ -724,7 +753,8 @@ void ENgcRenderer::QuadList() {
 }
 
 // Range: 0x802C2050 -> 0x802C2748
-void ENgcRenderer::QuadList(class ENgcRenderer * const this /* r22 */, int nVerts /* r23 */, const float * xyzs /* r24 */, const float * texcoords /* r25 */, const unsigned char * colors /* r26 */, const signed char * normals /* r27 */, const unsigned char * weights /* r30 */, const unsigned char * pCallDL /* r29 */, unsigned char dualTexcoords /* r28 */) {
+// this: r22
+void ENgcRenderer::QuadList(int nVerts /* r23 */, const float * xyzs /* r24 */, const float * texcoords /* r25 */, const unsigned char * colors /* r26 */, const signed char * normals /* r27 */, const unsigned char * weights /* r30 */, const unsigned char * pCallDL /* r29 */, unsigned char dualTexcoords /* r28 */) {
     // Local variables
     enum _GXAttrType type; // r4
     const float * pPos; // [invalid]
@@ -774,7 +804,8 @@ void ENgcRenderer::SetBlendMode() {
 }
 
 // Range: 0x802C2790 -> 0x802C3004
-void ENgcRenderer::MovieFrame(class ENgcRenderer * const this /* r26 */) {
+// this: r26
+void ENgcRenderer::MovieFrame() {
     // Local variables
     class ENgcMovie * pMovie; // r27
     int status; // r0
@@ -788,7 +819,8 @@ void ENgcRenderer::MovieFrame(class ENgcRenderer * const this /* r26 */) {
 }
 
 // Range: 0x802C3004 -> 0x802C33FC
-void ENgcRenderer::RectListRot(class ENgcRenderer * const this /* r29 */, struct EDLEntry * pe /* r27 */) {
+// this: r29
+void ENgcRenderer::RectListRot(struct EDLEntry * pe /* r27 */) {
     // Local variables
     struct EDLEntryCommandU16andU32 * p; // r0
     class EVec4 vColor; // r1+0x30
@@ -805,7 +837,8 @@ void ENgcRenderer::RectListRot(class ENgcRenderer * const this /* r29 */, struct
 }
 
 // Range: 0x802C33FC -> 0x802C36CC
-void ENgcRenderer::RectList(class ENgcRenderer * const this /* r29 */, struct EDLEntry * pe /* r30 */) {
+// this: r29
+void ENgcRenderer::RectList(struct EDLEntry * pe /* r30 */) {
     // Local variables
     struct EDLEntryCommandU16andU32 * p; // r0
     class EVec4 vColor; // r1+0x10
@@ -822,7 +855,8 @@ void ENgcRenderer::RectList(class ENgcRenderer * const this /* r29 */, struct ED
 }
 
 // Range: 0x802C36CC -> 0x802C38A8
-void ENgcRenderer::Stencil(class ENgcRenderer * const this /* r31 */, struct EDLEntry * pe /* r30 */) {
+// this: r31
+void ENgcRenderer::Stencil(struct EDLEntry * pe /* r30 */) {
     // Local variables
     struct EDLEntryCommandU8andU32 * p; // r0
     int write; // r3
@@ -834,7 +868,8 @@ void ENgcRenderer::Stencil(class ENgcRenderer * const this /* r31 */, struct EDL
 void ENgcRenderer::NgcTexInvalidateAll() {}
 
 // Range: 0x802C38AC -> 0x802C39B4
-void ENgcRenderer::NgcGXDisplayListApplyAndCall(class ENgcRenderer * const this /* r28 */, unsigned char * pCallDL /* r29 */, unsigned int size /* r30 */) {
+// this: r28
+void ENgcRenderer::NgcGXDisplayListApplyAndCall(unsigned char * pCallDL /* r29 */, unsigned int size /* r30 */) {
     // Local variables
     unsigned char inShadowGeometryMode; // r0
     unsigned char useMultiPassShaders; // r0
@@ -845,7 +880,8 @@ void ENgcRenderer::NgcGXDisplayListApplyAndCall(class ENgcRenderer * const this 
 }
 
 // Range: 0x802C39B4 -> 0x802C3D64
-void ENgcRenderer::NgcGXDisplayListInt(class ENgcRenderer * const this /* r23 */, struct EDLEntry * pe /* r24 */) {
+// this: r23
+void ENgcRenderer::NgcGXDisplayListInt(struct EDLEntry * pe /* r24 */) {
     // Local variables
     unsigned char dualTexCoords; // r0
     unsigned int * p32; // r0
@@ -870,7 +906,8 @@ void ENgcRenderer::NgcGXDisplayListInt(class ENgcRenderer * const this /* r23 */
 }
 
 // Range: 0x802C3D64 -> 0x802C40D4
-void ENgcRenderer::NgcGXDisplayList(class ENgcRenderer * const this /* r22 */, struct EDLEntry * pe /* r21 */) {
+// this: r22
+void ENgcRenderer::NgcGXDisplayList(struct EDLEntry * pe /* r21 */) {
     // Local variables
     unsigned char dualTexCoords; // r30
     unsigned int * p32; // r0
@@ -893,7 +930,8 @@ void ENgcRenderer::NgcGXDisplayList(class ENgcRenderer * const this /* r22 */, s
 }
 
 // Range: 0x802C40D4 -> 0x802C4418
-void ENgcRenderer::NgcTriListInt(class ENgcRenderer * const this /* r22 */, struct EDLEntry * pe /* r24 */) {
+// this: r22
+void ENgcRenderer::NgcTriListInt(struct EDLEntry * pe /* r24 */) {
     // Local variables
     int nVerts; // r30
     unsigned char dualTexCoords; // r0
@@ -909,7 +947,8 @@ void ENgcRenderer::NgcTriListInt(class ENgcRenderer * const this /* r22 */, stru
 }
 
 // Range: 0x802C4418 -> 0x802C4718
-void ENgcRenderer::NgcTriList(class ENgcRenderer * const this /* r23 */, struct EDLEntry * pe /* r24 */) {
+// this: r23
+void ENgcRenderer::NgcTriList(struct EDLEntry * pe /* r24 */) {
     // Local variables
     int nVerts; // r30
     unsigned char dualTexCoords; // r0
@@ -925,7 +964,8 @@ void ENgcRenderer::NgcTriList(class ENgcRenderer * const this /* r23 */, struct 
 }
 
 // Range: 0x802C4718 -> 0x802C49C4
-void ENgcRenderer::NgcScreenTriList(class ENgcRenderer * const this /* r27 */) {
+// this: r27
+void ENgcRenderer::NgcScreenTriList() {
     // Local variables
     int nVerts; // r31
     unsigned int * p32; // r0
@@ -951,7 +991,8 @@ void ENgcRenderer::SetShaderPass() {
 }
 
 // Range: 0x802C4ADC -> 0x802C4E30
-void ENgcRenderer::SetShader(class ENgcRenderer * const this /* r29 */, class ENgcShader * shd /* r30 */) {
+// this: r29
+void ENgcRenderer::SetShader(class ENgcShader * shd /* r30 */) {
     // Local variables
     const struct EShaderDef * def; // r0
     int i; // r6
@@ -969,7 +1010,8 @@ void ENgcRenderer::ScrambleRect() {
 }
 
 // Range: 0x802C4E7C -> 0x802C523C
-void ENgcRenderer::ScrambleRect(class ENgcRenderer * const this /* r24 */, const class EVec2 & ul /* r21 */, const class EVec2 & lr /* r20 */, float z /* f31 */) {
+// this: r24
+void ENgcRenderer::ScrambleRect(const class EVec2 & ul /* r21 */, const class EVec2 & lr /* r20 */, float z /* f31 */) {
     // Local variables
     float width; // f2
     float height; // f0
@@ -1003,7 +1045,8 @@ void ENgcRenderer::ScrambleRect(class ENgcRenderer * const this /* r24 */, const
 }
 
 // Range: 0x802C523C -> 0x802C53D4
-void ENgcRenderer::VertexMorph(class ENgcRenderer * const this /* r21 */) {
+// this: r21
+void ENgcRenderer::VertexMorph() {
     // Local variables
     int nVerts; // r25
     unsigned int * p32; // r0
@@ -1022,7 +1065,8 @@ void ENgcRenderer::VertexMorph(class ENgcRenderer * const this /* r21 */) {
 void ENgcRenderer::VertexMorphEnd() {}
 
 // Range: 0x802C53E8 -> 0x802C56D0
-void ENgcRenderer::WeightedBlendInt(class ENgcRenderer * const this /* r19 */, enum _GXPrimitive prim /* r18 */, int nVerts /* r24 */, signed short * pos /* r25 */, signed char * normals /* r26 */, signed short * tcs /* r27 */, unsigned char * colors /* r28 */, unsigned char * weights /* r29 */, unsigned char dualTexCoords /* r30 */) {
+// this: r19
+void ENgcRenderer::WeightedBlendInt(enum _GXPrimitive prim /* r18 */, int nVerts /* r24 */, signed short * pos /* r25 */, signed char * normals /* r26 */, signed short * tcs /* r27 */, unsigned char * colors /* r28 */, unsigned char * weights /* r29 */, unsigned char dualTexCoords /* r30 */) {
     // Local variables
     float savedMatrices[4][3][4]; // r1+0x48
     struct Vec v; // r1+0x3C
@@ -1050,10 +1094,12 @@ void * ENgcRenderer::GetPreviousFrameBuffer() {}
 struct _GXRenderModeObj ENgcRenderer::GetCurrentRenderMode() {}
 
 // Range: 0x802C575C -> 0x802C57B8
-void * ENgcRenderer::ParticleListBegin(class ENgcRenderer * const this /* r29 */, unsigned int iParticles /* r30 */, unsigned int iParticleType /* r31 */) {}
+// this: r29
+void * ENgcRenderer::ParticleListBegin(unsigned int iParticles /* r30 */, unsigned int iParticleType /* r31 */) {}
 
 // Range: 0x802C57B8 -> 0x802C5B5C
-void ENgcRenderer::ParticleListEnd(class ENgcRenderer * const this /* r25 */, unsigned int iParticles /* r26 */) {
+// this: r25
+void ENgcRenderer::ParticleListEnd(unsigned int iParticles /* r26 */) {
     // Local variables
     struct EGEPackedParticle * p; // r29
     float m[3][4]; // r1+0x38

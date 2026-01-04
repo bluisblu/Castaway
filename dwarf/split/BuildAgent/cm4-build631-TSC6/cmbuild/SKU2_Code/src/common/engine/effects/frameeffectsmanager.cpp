@@ -5,7 +5,8 @@
     Code range: 0x802828C8 -> 0x80282B90
 */
 // Range: 0x802828C8 -> 0x80282AD4
-void FrameEffectsManager::Init(class FrameEffectsManager * const this /* r31 */) {
+// this: r31
+void FrameEffectsManager::Init() {
     // References
     // -> struct [anonymous] __vt__15DepthOfFieldNGC;
     // -> struct [anonymous] __vt__8BloomNGC;
@@ -14,7 +15,8 @@ void FrameEffectsManager::Init(class FrameEffectsManager * const this /* r31 */)
 }
 
 // Range: 0x80282AD4 -> 0x80282B78
-void FrameEffectsManager::Shutdown(class FrameEffectsManager * const this /* r31 */) {}
+// this: r31
+void FrameEffectsManager::Shutdown() {}
 
 // Range: 0x80282B78 -> 0x80282B80
 class MotionBlur * FrameEffectsManager::MotionBlurObject() {}

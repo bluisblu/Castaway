@@ -8,7 +8,8 @@
 void EIFloor::SafeDelete() {}
 
 // Range: 0x802311F4 -> 0x80231268
-void * EIFloor::~EIFloor(class EIFloor * const this /* r30 */) {
+// this: r30
+EIFloor::~EIFloor() {
     // References
     // -> struct [anonymous] __vt__7EIFloor;
 }
@@ -57,7 +58,7 @@ void EIFloor::Destruct() {}
 void EIFloor::Construct() {}
 
 // Range: 0x80231324 -> 0x8023132C
-void * EIFloor::__nw() {}
+void * EIFloor::operator new() {}
 
 // Range: 0x8023132C -> 0x8023135C
 class EIFloor * EIFloor::New() {}

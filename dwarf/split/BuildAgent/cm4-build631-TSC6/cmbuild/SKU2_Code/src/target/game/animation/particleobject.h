@@ -5,9 +5,9 @@
     Code range: 0x80023254 -> 0x800232C8
 */
 // Range: 0x80023254 -> 0x80023288
-void EParticleEffect::__dl(void * p /* r31 */) {}
+void EParticleEffect::operator delete(void * p /* r31 */) {}
 
 // Range: 0x80023288 -> 0x800232C8
-void * EParticleEffect::__nw(unsigned long size /* r31 */) {}
+void * EParticleEffect::operator new(unsigned long size /* r31 */) {}
 
 

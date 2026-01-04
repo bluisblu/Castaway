@@ -10,8 +10,9 @@ static const char * const AQU; // size: 0x4, address: 0x805DD908
 static const char * const AQU_exists; // size: 0x4, address: 0x805DD90C
 static const char * const AQU_show_callback; // size: 0x4, address: 0x805DD910
 static const char * const AQU_hide_callback; // size: 0x4, address: 0x805DD914
+// total size: 0x48
 struct ACTRecord {
-    // total size: 0x48
+    // Members
     int nth; // offset 0x0, size 0x4
     unsigned char active; // offset 0x4, size 0x1
     unsigned char exiting; // offset 0x5, size 0x1
@@ -33,8 +34,9 @@ struct ACTRecord {
     struct ACTRecord * next; // offset 0x40, size 0x4
     struct ACTRecord * prev; // offset 0x44, size 0x4
 };
+// total size: 0x620
 class ACTTarget : public UIObjectBase {
-    // total size: 0x620
+    // Members
     class EVec2 m_pos[9]; // offset 0xA4, size 0x48
     unsigned char m_ACTLoaded; // offset 0xEC, size 0x1
     unsigned char m_ACTActive; // offset 0xED, size 0x1
@@ -48,25 +50,32 @@ class ACTTarget : public UIObjectBase {
     struct ACTRecord * m_previousCancelModeItem; // offset 0x610, size 0x4
     class list m_list; // offset 0x614, size 0xC
 };
+// total size: 0xC
 class ListBase {
-    // total size: 0xC
+    // Static members
+    static unsigned long kAlignment; // size: 0x4
+    static unsigned long kAlignmentOffset; // size: 0x4
+
+    // Members
 protected:
     struct ListNodeBase mNode; // offset 0x0, size 0x8
     class allocator mAllocator; // offset 0x8, size 0x1
 };
-class list : public ListBase {
-    // total size: 0xC
-};
+// total size: 0xC
+class list : public ListBase {};
+// total size: 0x4
 struct ListIterator {
-    // total size: 0x4
+    // Members
     struct ListNode * mpNode; // offset 0x0, size 0x4
 };
+// total size: 0x4
 struct ListIterator {
-    // total size: 0x4
+    // Members
     struct ListNode * mpNode; // offset 0x0, size 0x4
 };
+// total size: 0x20
 class iqRecord {
-    // total size: 0x20
+    // Members
 public:
     class cXPerson * person; // offset 0x0, size 0x4
     const class Interaction * pAction; // offset 0x4, size 0x4
@@ -77,8 +86,9 @@ public:
     unsigned int insertGUID; // offset 0x18, size 0x4
     void * __vptr$; // offset 0x1C, size 0x4
 };
+// total size: 0xC
 struct ListNode : public ListNodeBase {
-    // total size: 0xC
+    // Members
     class iqRecord * mValue; // offset 0x8, size 0x4
 };
 static const char * const BBH_exists; // size: 0x4, address: 0x805DD920
@@ -113,24 +123,20 @@ static const char * const BBH_exit_text; // size: 0x4, address: 0x805DD990
 char * IconStateNames[26]; // size: 0x68, address: 0x80441F68
 char * SwfNameTable[5]; // size: 0x14, address: 0x80442020
 static int ToolStates[2][10][5]; // size: 0x190, address: 0x8041C128
-class CBMemberTranslator1 : public CBFunctor1 {
-    // total size: 0x14
-};
-class CBMemberTranslator0 : public CBFunctor0 {
-    // total size: 0x14
-};
-class CBMemberTranslator1wRet : public CBFunctor1wRet {
-    // total size: 0x14
-};
-class CBMemberTranslator2 : public CBFunctor2 {
-    // total size: 0x14
-};
-class CBMemberTranslator1wRet : public CBFunctor1wRet {
-    // total size: 0x14
-};
+// total size: 0x14
+class CBMemberTranslator1 : public CBFunctor1 {};
+// total size: 0x14
+class CBMemberTranslator0 : public CBFunctor0 {};
+// total size: 0x14
+class CBMemberTranslator1wRet : public CBFunctor1wRet {};
+// total size: 0x14
+class CBMemberTranslator2 : public CBFunctor2 {};
+// total size: 0x14
+class CBMemberTranslator1wRet : public CBFunctor1wRet {};
 static int recordOfDollars; // size: 0x4, address: 0x805D9870
+// total size: 0x114
 class CRDTarget : public UIObjectBase {
-    // total size: 0x114
+    // Members
     unsigned char m_CRDLoaded; // offset 0xA4, size 0x1
     unsigned char m_CRDActive; // offset 0xA5, size 0x1
     unsigned char m_tweenActive; // offset 0xA6, size 0x1
@@ -156,24 +162,18 @@ class CRDTarget : public UIObjectBase {
     class UIObjectBase * m_pCallingTarget; // offset 0x10C, size 0x4
     unsigned int m_filterId; // offset 0x110, size 0x4
 };
-class CBMemberTranslator2 : public CBFunctor2 {
-    // total size: 0x14
-};
-class CBMemberTranslator1 : public CBFunctor1 {
-    // total size: 0x14
-};
-class CBMemberTranslator0 : public CBFunctor0 {
-    // total size: 0x14
-};
-class CBMemberTranslator1wRet : public CBFunctor1wRet {
-    // total size: 0x14
-};
-class CBMemberTranslator2 : public CBFunctor2 {
-    // total size: 0x14
-};
-class CBMemberTranslator1wRet : public CBFunctor1wRet {
-    // total size: 0x14
-};
+// total size: 0x14
+class CBMemberTranslator2 : public CBFunctor2 {};
+// total size: 0x14
+class CBMemberTranslator1 : public CBFunctor1 {};
+// total size: 0x14
+class CBMemberTranslator0 : public CBFunctor0 {};
+// total size: 0x14
+class CBMemberTranslator1wRet : public CBFunctor1wRet {};
+// total size: 0x14
+class CBMemberTranslator2 : public CBFunctor2 {};
+// total size: 0x14
+class CBMemberTranslator1wRet : public CBFunctor1wRet {};
 static class EVec2 textWidHei; // size: 0x8, address: 0x805DBAB8
 static float yBaseOffset; // size: 0x4, address: 0x805DBAC0
 static const char * const CSP_Cancel; // size: 0x4, address: 0x805DD9E8
@@ -230,8 +230,9 @@ static unsigned int CSP_TabSelectedIconIds[3]; // size: 0xC, address: 0x8041C2C4
 static unsigned int CSP_ZodiacIconIds[13]; // size: 0x34, address: 0x8041C2D0
 static unsigned int CSP_JobIconIds[4]; // size: 0x10, address: 0x8041C308
 static unsigned int CSP_SkillIconIds[6]; // size: 0x18, address: 0x8041C318
+// total size: 0x1B4
 class CSPTarget : public UIObjectBase, public HelpDialogCallback {
-    // total size: 0x1B4
+    // Members
     unsigned char m_CSPLoaded; // offset 0xA8, size 0x1
     enum eTabs m_selectedTab; // offset 0xAC, size 0x4
     unsigned int m_ControllerFilterID; // offset 0xB0, size 0x4
@@ -249,23 +250,19 @@ enum eTabs {
     eTabs_Skills = 1,
     eTabs_Personality = 2,
 };
-class CBMemberTranslator1 : public CBFunctor1 {
-    // total size: 0x14
-};
-class CBMemberTranslator0 : public CBFunctor0 {
-    // total size: 0x14
-};
-class CBMemberTranslator1wRet : public CBFunctor1wRet {
-    // total size: 0x14
-};
-class CBMemberTranslator2 : public CBFunctor2 {
-    // total size: 0x14
-};
-class CBMemberTranslator1wRet : public CBFunctor1wRet {
-    // total size: 0x14
-};
+// total size: 0x14
+class CBMemberTranslator1 : public CBFunctor1 {};
+// total size: 0x14
+class CBMemberTranslator0 : public CBFunctor0 {};
+// total size: 0x14
+class CBMemberTranslator1wRet : public CBFunctor1wRet {};
+// total size: 0x14
+class CBMemberTranslator2 : public CBFunctor2 {};
+// total size: 0x14
+class CBMemberTranslator1wRet : public CBFunctor1wRet {};
+// total size: 0xCC
 class FCMTarget : public UIObjectBase {
-    // total size: 0xCC
+    // Members
     unsigned char m_FCMLoaded; // offset 0xA4, size 0x1
     unsigned char m_FCMActive; // offset 0xA5, size 0x1
     unsigned char m_tweenActive; // offset 0xA6, size 0x1
@@ -277,40 +274,30 @@ class FCMTarget : public UIObjectBase {
     int m_currentZenith; // offset 0xB0, size 0x4
     class UIReflow m_reflow; // offset 0xB4, size 0x18
 };
-class CBMemberTranslator1 : public CBFunctor1 {
-    // total size: 0x14
-};
-class CBMemberTranslator0 : public CBFunctor0 {
-    // total size: 0x14
-};
-class CBMemberTranslator1wRet : public CBFunctor1wRet {
-    // total size: 0x14
-};
-class CBMemberTranslator2 : public CBFunctor2 {
-    // total size: 0x14
-};
-class CBMemberTranslator1wRet : public CBFunctor1wRet {
-    // total size: 0x14
-};
+// total size: 0x14
+class CBMemberTranslator1 : public CBFunctor1 {};
+// total size: 0x14
+class CBMemberTranslator0 : public CBFunctor0 {};
+// total size: 0x14
+class CBMemberTranslator1wRet : public CBFunctor1wRet {};
+// total size: 0x14
+class CBMemberTranslator2 : public CBFunctor2 {};
+// total size: 0x14
+class CBMemberTranslator1wRet : public CBFunctor1wRet {};
 static const char * const G2D_loaded; // size: 0x4, address: 0x805DDAB4
 unsigned char m_bInitComplete; // size: 0x1, address: 0x805DBAC4
 unsigned int g_g2dDialogTimeout; // size: 0x4, address: 0x805D98BC
 char * G2D_buttonN_Table[3]; // size: 0xC, address: 0x80442B98
-class CBMemberTranslator1 : public CBFunctor1 {
-    // total size: 0x14
-};
-class CBMemberTranslator0 : public CBFunctor0 {
-    // total size: 0x14
-};
-class CBMemberTranslator1wRet : public CBFunctor1wRet {
-    // total size: 0x14
-};
-class CBMemberTranslator2 : public CBFunctor2 {
-    // total size: 0x14
-};
-class CBMemberTranslator1wRet : public CBFunctor1wRet {
-    // total size: 0x14
-};
+// total size: 0x14
+class CBMemberTranslator1 : public CBFunctor1 {};
+// total size: 0x14
+class CBMemberTranslator0 : public CBFunctor0 {};
+// total size: 0x14
+class CBMemberTranslator1wRet : public CBFunctor1wRet {};
+// total size: 0x14
+class CBMemberTranslator2 : public CBFunctor2 {};
+// total size: 0x14
+class CBMemberTranslator1wRet : public CBFunctor1wRet {};
 static const char * const H2D_exists; // size: 0x4, address: 0x805DDB00
 static const char * const H2D_SQUARE; // size: 0x4, address: 0x805DDB04
 static const char * const H2D_PAUSE; // size: 0x4, address: 0x805DDB08
@@ -327,8 +314,9 @@ float m_fSuperHudFade_CursorMovtThreshold; // size: 0x4, address: 0x805DDB2C
 float m_fSuperHudFade_FrameThreshold; // size: 0x4, address: 0x805DDB30
 float m_fSuperHudFade_FrameAlphaDecrement; // size: 0x4, address: 0x805DDB34
 float m_fSuperHudFade_MaxAlpha; // size: 0x4, address: 0x805DDB38
+// total size: 0x20
 class SWSRecord {
-    // total size: 0x20
+    // Members
 public:
     class cXPerson * pPerson; // offset 0x0, size 0x4
     const class Interaction * pAction; // offset 0x4, size 0x4
@@ -340,8 +328,12 @@ public:
     unsigned char deleted; // offset 0x1C, size 0x1
     unsigned char fake; // offset 0x1D, size 0x1
 };
+// total size: 0x268
 class SWSTarget : public UIObjectBase {
-    // total size: 0x268
+    // Static members
+    static char * s_SWSShaderNames[6][9]; // size: 0xD8
+
+    // Members
     unsigned char m_SWSLoaded; // offset 0xA4, size 0x1
     unsigned char m_SWSActive; // offset 0xA5, size 0x1
     unsigned char m_displayState; // offset 0xA6, size 0x1
@@ -364,23 +356,19 @@ class SWSTarget : public UIObjectBase {
     class CursorMovementTracker m_CursorTracker; // offset 0x210, size 0x50
     class EVec2 m_CursorPoint; // offset 0x260, size 0x8
 };
-class CBMemberTranslator1 : public CBFunctor1 {
-    // total size: 0x14
-};
-class CBMemberTranslator0 : public CBFunctor0 {
-    // total size: 0x14
-};
-class CBMemberTranslator1wRet : public CBFunctor1wRet {
-    // total size: 0x14
-};
-class CBMemberTranslator2 : public CBFunctor2 {
-    // total size: 0x14
-};
-class CBMemberTranslator1wRet : public CBFunctor1wRet {
-    // total size: 0x14
-};
+// total size: 0x14
+class CBMemberTranslator1 : public CBFunctor1 {};
+// total size: 0x14
+class CBMemberTranslator0 : public CBFunctor0 {};
+// total size: 0x14
+class CBMemberTranslator1wRet : public CBFunctor1wRet {};
+// total size: 0x14
+class CBMemberTranslator2 : public CBFunctor2 {};
+// total size: 0x14
+class CBMemberTranslator1wRet : public CBFunctor1wRet {};
+// total size: 0x20
 class RSPRecord {
-    // total size: 0x20
+    // Members
 public:
     unsigned int guid; // offset 0x0, size 0x4
     class Neighbor * pNeighbor; // offset 0x4, size 0x4
@@ -391,8 +379,9 @@ public:
     class BString2 firstName; // offset 0x18, size 0x4
     class BString2 lastName; // offset 0x1C, size 0x4
 };
+// total size: 0xCC
 class RSPTarget : public UIObjectBase {
-    // total size: 0xCC
+    // Members
     unsigned char m_RSPLoaded; // offset 0xA4, size 0x1
     unsigned char m_RSPActive; // offset 0xA5, size 0x1
     unsigned char m_displayState; // offset 0xA6, size 0x1
@@ -421,8 +410,9 @@ enum eSidePanelIcon {
     eSidePanelIcon_Motives = 8,
     eSidePanelIcon_WantsAndFears = 9,
 };
+// total size: 0xC4
 class MODTarget : public UIObjectBase {
-    // total size: 0xC4
+    // Members
     unsigned char m_MODLoaded; // offset 0xA4, size 0x1
     unsigned char m_MODActive; // offset 0xA5, size 0x1
     unsigned char m_MODFLashLoaded; // offset 0xA6, size 0x1
@@ -440,21 +430,16 @@ const char * const ING_SndCancel; // size: 0x4, address: 0x805DDB80
 char * const ING_HelpBodyIDs[2]; // size: 0x8, address: 0x805DDB88
 int m_sRefrigeratorLevel; // size: 0x4, address: 0x805DBAD4
 int m_sNumberOfItemsToTransfer; // size: 0x4, address: 0x805D98F4
-class CBMemberTranslator1 : public CBFunctor1 {
-    // total size: 0x14
-};
-class CBMemberTranslator0 : public CBFunctor0 {
-    // total size: 0x14
-};
-class CBMemberTranslator1wRet : public CBFunctor1wRet {
-    // total size: 0x14
-};
-class CBMemberTranslator2 : public CBFunctor2 {
-    // total size: 0x14
-};
-class CBMemberTranslator1wRet : public CBFunctor1wRet {
-    // total size: 0x14
-};
+// total size: 0x14
+class CBMemberTranslator1 : public CBFunctor1 {};
+// total size: 0x14
+class CBMemberTranslator0 : public CBFunctor0 {};
+// total size: 0x14
+class CBMemberTranslator1wRet : public CBFunctor1wRet {};
+// total size: 0x14
+class CBMemberTranslator2 : public CBFunctor2 {};
+// total size: 0x14
+class CBMemberTranslator1wRet : public CBFunctor1wRet {};
 static unsigned long prevTabIndex; // size: 0x4, address: 0x805DBAD8
 static const char * const ITB_message_shdr; // size: 0x4, address: 0x805DDB94
 enum eITBShowState {
@@ -464,8 +449,9 @@ enum eITBShowState {
     eITBShowState_Text = 3,
     eITBShowState_FinishText = 4,
 };
+// total size: 0xB8
 class ITBTarget : public UIObjectBase {
-    // total size: 0xB8
+    // Members
     unsigned char m_ITBLoaded; // offset 0xA4, size 0x1
     unsigned char m_ITBActive; // offset 0xA5, size 0x1
     class BString2 * m_text; // offset 0xA8, size 0x4
@@ -474,60 +460,45 @@ class ITBTarget : public UIObjectBase {
     unsigned char m_displayState; // offset 0xB1, size 0x1
     float m_userReadTime; // offset 0xB4, size 0x4
 };
-class CBMemberTranslator1 : public CBFunctor1 {
-    // total size: 0x14
-};
-class CBMemberTranslator0 : public CBFunctor0 {
-    // total size: 0x14
-};
-class CBMemberTranslator1wRet : public CBFunctor1wRet {
-    // total size: 0x14
-};
-class CBMemberTranslator2 : public CBFunctor2 {
-    // total size: 0x14
-};
-class CBMemberTranslator1wRet : public CBFunctor1wRet {
-    // total size: 0x14
-};
+// total size: 0x14
+class CBMemberTranslator1 : public CBFunctor1 {};
+// total size: 0x14
+class CBMemberTranslator0 : public CBFunctor0 {};
+// total size: 0x14
+class CBMemberTranslator1wRet : public CBFunctor1wRet {};
+// total size: 0x14
+class CBMemberTranslator2 : public CBFunctor2 {};
+// total size: 0x14
+class CBMemberTranslator1wRet : public CBFunctor1wRet {};
 unsigned short * m_currentEntryPtr; // size: 0x4, address: 0x805DBAE0
 unsigned short * EmptyString; // size: 0x4, address: 0x805D9974
-class CBMemberTranslator1 : public CBFunctor1 {
-    // total size: 0x14
-};
-class CBMemberTranslator0 : public CBFunctor0 {
-    // total size: 0x14
-};
-class CBMemberTranslator1wRet : public CBFunctor1wRet {
-    // total size: 0x14
-};
-class CBMemberTranslator2 : public CBFunctor2 {
-    // total size: 0x14
-};
-class CBMemberTranslator1wRet : public CBFunctor1wRet {
-    // total size: 0x14
-};
+// total size: 0x14
+class CBMemberTranslator1 : public CBFunctor1 {};
+// total size: 0x14
+class CBMemberTranslator0 : public CBFunctor0 {};
+// total size: 0x14
+class CBMemberTranslator1wRet : public CBFunctor1wRet {};
+// total size: 0x14
+class CBMemberTranslator2 : public CBFunctor2 {};
+// total size: 0x14
+class CBMemberTranslator1wRet : public CBFunctor1wRet {};
 char * M2M_buttonN_Table[8]; // size: 0x20, address: 0x804442D0
 char szItemTextID[15]; // size: 0xF, address: 0x804442F0
-class CBMemberTranslator1 : public CBFunctor1 {
-    // total size: 0x14
-};
-class CBMemberTranslator1 : public CBFunctor1 {
-    // total size: 0x14
-};
-class CBMemberTranslator0 : public CBFunctor0 {
-    // total size: 0x14
-};
-class CBMemberTranslator1wRet : public CBFunctor1wRet {
-    // total size: 0x14
-};
-class CBMemberTranslator2 : public CBFunctor2 {
-    // total size: 0x14
-};
-class CBMemberTranslator1wRet : public CBFunctor1wRet {
-    // total size: 0x14
-};
+// total size: 0x14
+class CBMemberTranslator1 : public CBFunctor1 {};
+// total size: 0x14
+class CBMemberTranslator1 : public CBFunctor1 {};
+// total size: 0x14
+class CBMemberTranslator0 : public CBFunctor0 {};
+// total size: 0x14
+class CBMemberTranslator1wRet : public CBFunctor1wRet {};
+// total size: 0x14
+class CBMemberTranslator2 : public CBFunctor2 {};
+// total size: 0x14
+class CBMemberTranslator1wRet : public CBFunctor1wRet {};
+// total size: 0xB4
 class MDITarget : public UIObjectBase {
-    // total size: 0xB4
+    // Members
     struct ModelessDialog * m_pHead; // offset 0xA4, size 0x4
     int m_count; // offset 0xA8, size 0x4
     int m_boxHeight; // offset 0xAC, size 0x4
@@ -536,23 +507,19 @@ class MDITarget : public UIObjectBase {
     unsigned char m_tweenActive; // offset 0xB2, size 0x1
     unsigned char m_displayState; // offset 0xB3, size 0x1
 };
-class CBMemberTranslator1 : public CBFunctor1 {
-    // total size: 0x14
-};
-class CBMemberTranslator0 : public CBFunctor0 {
-    // total size: 0x14
-};
-class CBMemberTranslator1wRet : public CBFunctor1wRet {
-    // total size: 0x14
-};
-class CBMemberTranslator2 : public CBFunctor2 {
-    // total size: 0x14
-};
-class CBMemberTranslator1wRet : public CBFunctor1wRet {
-    // total size: 0x14
-};
+// total size: 0x14
+class CBMemberTranslator1 : public CBFunctor1 {};
+// total size: 0x14
+class CBMemberTranslator0 : public CBFunctor0 {};
+// total size: 0x14
+class CBMemberTranslator1wRet : public CBFunctor1wRet {};
+// total size: 0x14
+class CBMemberTranslator2 : public CBFunctor2 {};
+// total size: 0x14
+class CBMemberTranslator1wRet : public CBFunctor1wRet {};
+// total size: 0x24
 struct ModelessDialog {
-    // total size: 0x24
+    // Members
     class BString2 m_body; // offset 0x0, size 0x4
     class BString2 m_title; // offset 0x4, size 0x4
     class ERShader * m_pShader; // offset 0x8, size 0x4
@@ -585,8 +552,9 @@ enum eMotiveState {
     eMotiveState_Increase = 1,
     eMotiveState_Decrease = 2,
 };
+// total size: 0x1A8
 class MOTTarget : public UIObjectBase {
-    // total size: 0x1A8
+    // Members
     unsigned char m_MOTLoaded; // offset 0xA4, size 0x1
     unsigned char m_MOTActive; // offset 0xA5, size 0x1
     unsigned char m_MOTFlashLoaded; // offset 0xA6, size 0x1
@@ -611,21 +579,16 @@ class MOTTarget : public UIObjectBase {
     int m_numberUnlocked; // offset 0x1A0, size 0x4
     unsigned char m_forceUpdatePending; // offset 0x1A4, size 0x1
 };
-class CBMemberTranslator1 : public CBFunctor1 {
-    // total size: 0x14
-};
-class CBMemberTranslator0 : public CBFunctor0 {
-    // total size: 0x14
-};
-class CBMemberTranslator1wRet : public CBFunctor1wRet {
-    // total size: 0x14
-};
-class CBMemberTranslator2 : public CBFunctor2 {
-    // total size: 0x14
-};
-class CBMemberTranslator1wRet : public CBFunctor1wRet {
-    // total size: 0x14
-};
+// total size: 0x14
+class CBMemberTranslator1 : public CBFunctor1 {};
+// total size: 0x14
+class CBMemberTranslator0 : public CBFunctor0 {};
+// total size: 0x14
+class CBMemberTranslator1wRet : public CBFunctor1wRet {};
+// total size: 0x14
+class CBMemberTranslator2 : public CBFunctor2 {};
+// total size: 0x14
+class CBMemberTranslator1wRet : public CBFunctor1wRet {};
 static const char * const O2T_Close_Screen; // size: 0x4, address: 0x805DDC1C
 static const char * const O2T_Get_Cam_Rot_DC; // size: 0x4, address: 0x805DDC20
 static const char * const O2T_invert_cam_rot; // size: 0x4, address: 0x805DDC24
@@ -667,8 +630,9 @@ unsigned char m_bCameraRotate; // size: 0x1, address: 0x805DBAEE
 unsigned char m_bFreeWill; // size: 0x1, address: 0x805DBAEF
 unsigned char m_bFreeWillClassic; // size: 0x1, address: 0x805DBAF0
 signed char m_DelayInitiateFreeWill; // size: 0x1, address: 0x805D9A1F
+// total size: 0xDC8
 class MSSTarget : public UIObjectBase {
-    // total size: 0xDC8
+    // Members
 public:
     class UIDialog m_UIDialog; // offset 0xA4, size 0xA0
     unsigned int m_ControllerFilterID; // offset 0x144, size 0x4
@@ -679,24 +643,18 @@ public:
     char m_GetLocSongs[6][16][16]; // offset 0x1C8, size 0x600
     char m_GetLocArtists[6][16][16]; // offset 0x7C8, size 0x600
 };
-class CBMemberTranslator1 : public CBFunctor1 {
-    // total size: 0x14
-};
-class CBMemberTranslator0 : public CBFunctor0 {
-    // total size: 0x14
-};
-class CBMemberTranslator1wRet : public CBFunctor1wRet {
-    // total size: 0x14
-};
-class CBMemberTranslator2 : public CBFunctor2 {
-    // total size: 0x14
-};
-class CBMemberTranslator1wRet : public CBFunctor1wRet {
-    // total size: 0x14
-};
-class CBMemberTranslator1 : public CBFunctor1 {
-    // total size: 0x14
-};
+// total size: 0x14
+class CBMemberTranslator1 : public CBFunctor1 {};
+// total size: 0x14
+class CBMemberTranslator0 : public CBFunctor0 {};
+// total size: 0x14
+class CBMemberTranslator1wRet : public CBFunctor1wRet {};
+// total size: 0x14
+class CBMemberTranslator2 : public CBFunctor2 {};
+// total size: 0x14
+class CBMemberTranslator1wRet : public CBFunctor1wRet {};
+// total size: 0x14
+class CBMemberTranslator1 : public CBFunctor1 {};
 static const char * const kUserDefined; // size: 0x4, address: 0x805DDCB0
 static const char * const PCTTargetName; // size: 0x4, address: 0x805DDCB4
 static const char * const CAT_exists; // size: 0x4, address: 0x805DDCB8
@@ -784,8 +742,9 @@ static const char * const BBS_icn_1_03; // size: 0x4, address: 0x805DDDFC
 static const char * const BBS_icn_1_04; // size: 0x4, address: 0x805DDE00
 static const char * const BBS_icn_1_05; // size: 0x4, address: 0x805DDE04
 static const char * const BBS_icn_1_06; // size: 0x4, address: 0x805DDE08
+// total size: 0x14
 struct PCTTabInfo {
-    // total size: 0x14
+    // Members
     enum ePCTType mPCTType; // offset 0x0, size 0x4
     signed short mBuildModeType; // offset 0x4, size 0x2
     signed short mFunctionFlags; // offset 0x6, size 0x2
@@ -799,8 +758,16 @@ static struct PCTTabInfo BB5TabInfoForWalls[1]; // size: 0x14, address: 0x8041C3
 static struct PCTTabInfo BB5TabInfoForWallpaper[5]; // size: 0x64, address: 0x80445C98
 static struct PCTTabInfo BB5TabInfoForFloors[4]; // size: 0x50, address: 0x80445D58
 static struct PCTTabInfo BB5TabInfoForTools[10]; // size: 0xC8, address: 0x80445DD0
+// total size: 0x360
 class PCTTarget : public UIObjectBase {
-    // total size: 0x360
+    // Static members
+    static int m_SavedHutTabIndex; // size: 0x4
+    static int m_SavedFloorTabIndex; // size: 0x4
+    static int m_SavedPaperTabIndex; // size: 0x4
+    static int m_SavedObjectTabIndex; // size: 0x4
+    static int m_SavedToolIndex; // size: 0x4
+
+    // Members
     class UIStringGenerator m_GridShaderTable; // offset 0xA4, size 0x8
     class UIStringGenerator m_MotiveShaderTable; // offset 0xAC, size 0x8
     unsigned int m_ControllerFilterID; // offset 0xB4, size 0x4
@@ -856,8 +823,9 @@ union /* @class$52564game_ui_targets_s2c_unity_cpp */ {
     const struct WallTile * mpWallTile; // offset 0x0, size 0x4
     const struct FloorTile * mpFloorTile; // offset 0x0, size 0x4
 };
+// total size: 0x14
 class cCellInfo {
-    // total size: 0x14
+    // Members
 public:
     enum ePCTType mPCTType; // offset 0x0, size 0x4
     int mItemID; // offset 0x4, size 0x4
@@ -886,21 +854,16 @@ enum ePCTMode {
     kPCTMode_Tools = 0,
     kPCTMode_ObjectCatalog = 1,
 };
-class CBMemberTranslator1 : public CBFunctor1 {
-    // total size: 0x14
-};
-class CBMemberTranslator0 : public CBFunctor0 {
-    // total size: 0x14
-};
-class CBMemberTranslator1wRet : public CBFunctor1wRet {
-    // total size: 0x14
-};
-class CBMemberTranslator2 : public CBFunctor2 {
-    // total size: 0x14
-};
-class CBMemberTranslator1wRet : public CBFunctor1wRet {
-    // total size: 0x14
-};
+// total size: 0x14
+class CBMemberTranslator1 : public CBFunctor1 {};
+// total size: 0x14
+class CBMemberTranslator0 : public CBFunctor0 {};
+// total size: 0x14
+class CBMemberTranslator1wRet : public CBFunctor1wRet {};
+// total size: 0x14
+class CBMemberTranslator2 : public CBFunctor2 {};
+// total size: 0x14
+class CBMemberTranslator1wRet : public CBFunctor1wRet {};
 static int plotPattern[9][2]; // size: 0x48, address: 0x80445FF8
 enum ePCTInteractorState {
     kPCTIS_Other = 0,
@@ -922,54 +885,67 @@ enum ePCTType {
     kPCTType_HutObject = 5,
     kPCTType_COUNT = 6,
 };
-class multimap : public rbtree {
-    // total size: 0x1C
-};
+// total size: 0x1C
+class multimap : public rbtree {};
+// total size: 0x4
 struct rbtree_iterator {
-    // total size: 0x4
+    // Members
     struct rbtree_node * mpNode; // offset 0x0, size 0x4
 };
+// total size: 0x1C
 class rbtree : public rb_base {
-    // total size: 0x1C
+    // Static members
+    static unsigned long kKeyAlignment; // size: 0x4
+    static unsigned long kKeyAlignmentOffset; // size: 0x4
+    static unsigned long kValueAlignment; // size: 0x4
+    static unsigned long kValueAlignmentOffset; // size: 0x4
+
+    // Members
 public:
     struct rbtree_node_base mAnchor; // offset 0x4, size 0x10
     unsigned long mnSize; // offset 0x14, size 0x4
     class allocator mAllocator; // offset 0x18, size 0x1
 };
+// total size: 0x1
 struct rb_base {
-    // total size: 0x1
+    // Members
     struct greater mCompare; // offset 0x0, size 0x1
 };
+// total size: 0x8
 struct pair {
-    // total size: 0x8
+    // Members
     enum InteractorType first; // offset 0x0, size 0x4
     struct GrabManipulatorParams * second; // offset 0x4, size 0x4
 };
-class CBMemberTranslator1 : public CBFunctor1 {
-    // total size: 0x14
-};
+// total size: 0x14
+class CBMemberTranslator1 : public CBFunctor1 {};
+// total size: 0x8
 struct pair {
-    // total size: 0x8
+    // Members
     enum InteractorType first; // offset 0x0, size 0x4
     struct HutPlaceManipulatorParams * second; // offset 0x4, size 0x4
 };
+// total size: 0x8
 struct pair {
-    // total size: 0x8
+    // Members
     enum InteractorType first; // offset 0x0, size 0x4
     struct PlaceManipulatorParams * second; // offset 0x4, size 0x4
 };
+// total size: 0x8
 struct pair {
-    // total size: 0x8
+    // Members
     enum InteractorType first; // offset 0x0, size 0x4
     struct WallManipulatorParams * second; // offset 0x4, size 0x4
 };
+// total size: 0x8
 struct pair {
-    // total size: 0x8
+    // Members
     enum InteractorType first; // offset 0x0, size 0x4
     struct WallPainterParams * second; // offset 0x4, size 0x4
 };
+// total size: 0x8
 struct pair {
-    // total size: 0x8
+    // Members
     enum InteractorType first; // offset 0x0, size 0x4
     struct FloorPainterParams * second; // offset 0x4, size 0x4
 };
@@ -1006,29 +982,25 @@ static const char * const PRG_StatVal11; // size: 0x4, address: 0x805DDE80
 static const char * const PRG_StatVal12; // size: 0x4, address: 0x805DDE84
 static const char * const PRG_CANCEL_BUTTON; // size: 0x4, address: 0x805DDE88
 const char * PRG_CLOSE_MENU; // size: 0x4, address: 0x805D9A50
+// total size: 0xC
 struct PersonalInfoStat {
-    // total size: 0xC
+    // Members
     int (* calculationFunction)(); // offset 0x0, size 0x4
     int (* possibleFucntion)(); // offset 0x4, size 0x4
     char * uiString; // offset 0x8, size 0x4
 };
 struct PersonalInfoStat m_StatusFetchers[13]; // size: 0x9C, address: 0x80446568
 static const char * const PRG_TabIcon0; // size: 0x4, address: 0x805DDE8C
-class CBMemberTranslator1 : public CBFunctor1 {
-    // total size: 0x14
-};
-class CBMemberTranslator0 : public CBFunctor0 {
-    // total size: 0x14
-};
-class CBMemberTranslator1wRet : public CBFunctor1wRet {
-    // total size: 0x14
-};
-class CBMemberTranslator2 : public CBFunctor2 {
-    // total size: 0x14
-};
-class CBMemberTranslator1wRet : public CBFunctor1wRet {
-    // total size: 0x14
-};
+// total size: 0x14
+class CBMemberTranslator1 : public CBFunctor1 {};
+// total size: 0x14
+class CBMemberTranslator0 : public CBFunctor0 {};
+// total size: 0x14
+class CBMemberTranslator1wRet : public CBFunctor1wRet {};
+// total size: 0x14
+class CBMemberTranslator2 : public CBFunctor2 {};
+// total size: 0x14
+class CBMemberTranslator1wRet : public CBFunctor1wRet {};
 static const char * const R2L_exists; // size: 0x4, address: 0x805DDE90
 static const char * const R2L_TotInv; // size: 0x4, address: 0x805DDE94
 static const char * const R2L_ShadToItem; // size: 0x4, address: 0x805DDE98
@@ -1047,8 +1019,9 @@ static unsigned int R2L_IconHappyFaceShaders[10]; // size: 0x28, address: 0x8041
 static char * const R2L_gHeadTable[20]; // size: 0x50, address: 0x8041C398
 static char * const R2L_gLevelTable[20]; // size: 0x50, address: 0x8041C3E8
 static char * const R2L_gValTable[20]; // size: 0x50, address: 0x8041C438
+// total size: 0x2E8
 class R2LTarget : public UIObjectBase, public HelpDialogCallback {
-    // total size: 0x2E8
+    // Members
     unsigned int m_ControllerFilterID; // offset 0xA8, size 0x4
     class R2LRecord * m_records; // offset 0xAC, size 0x4
     int m_recordCount; // offset 0xB0, size 0x4
@@ -1064,23 +1037,19 @@ class R2LTarget : public UIObjectBase, public HelpDialogCallback {
     class CursorMovementTracker m_CursorTracker; // offset 0x290, size 0x50
     class EVec2 m_CursorPoint; // offset 0x2E0, size 0x8
 };
-class CBMemberTranslator1 : public CBFunctor1 {
-    // total size: 0x14
-};
-class CBMemberTranslator0 : public CBFunctor0 {
-    // total size: 0x14
-};
-class CBMemberTranslator1wRet : public CBFunctor1wRet {
-    // total size: 0x14
-};
-class CBMemberTranslator2 : public CBFunctor2 {
-    // total size: 0x14
-};
-class CBMemberTranslator1wRet : public CBFunctor1wRet {
-    // total size: 0x14
-};
+// total size: 0x14
+class CBMemberTranslator1 : public CBFunctor1 {};
+// total size: 0x14
+class CBMemberTranslator0 : public CBFunctor0 {};
+// total size: 0x14
+class CBMemberTranslator1wRet : public CBFunctor1wRet {};
+// total size: 0x14
+class CBMemberTranslator2 : public CBFunctor2 {};
+// total size: 0x14
+class CBMemberTranslator1wRet : public CBFunctor1wRet {};
+// total size: 0x1C
 class R2LRecord {
-    // total size: 0x1C
+    // Members
 public:
     unsigned int guid; // offset 0x0, size 0x4
     class Neighbor * pNeighbor; // offset 0x4, size 0x4
@@ -1110,8 +1079,9 @@ static const char * const RMD_btn_A3; // size: 0x4, address: 0x805DDEFC
 static char * const RMD_Title_Strings[6]; // size: 0x18, address: 0x8041C488
 static char * const RMD_Button_Strings[6]; // size: 0x18, address: 0x8041C4A0
 static unsigned int RMD_Audio_Samples[6]; // size: 0x18, address: 0x80446F18
+// total size: 0xC
 struct rmdModelInfo_s {
-    // total size: 0xC
+    // Members
     unsigned int modelId; // offset 0x0, size 0x4
     unsigned int charId; // offset 0x4, size 0x4
     unsigned int animId; // offset 0x8, size 0x4
@@ -1124,8 +1094,9 @@ enum eState {
     eState_HideTween = 3,
     eState_Unloading = 4,
 };
+// total size: 0xCC
 class RMDTarget : public UIObjectBase {
-    // total size: 0xCC
+    // Members
     unsigned char m_RMDLoaded; // offset 0xA4, size 0x1
     enum eState m_rmdState; // offset 0xA8, size 0x4
     unsigned int m_controllerFilterID; // offset 0xAC, size 0x4
@@ -1137,88 +1108,60 @@ class RMDTarget : public UIObjectBase {
     float m_nDialogTimer; // offset 0xC4, size 0x4
     unsigned char m_timeoutOccured; // offset 0xC8, size 0x1
 };
-class CBMemberTranslator1 : public CBFunctor1 {
-    // total size: 0x14
-};
-class CBMemberTranslator0 : public CBFunctor0 {
-    // total size: 0x14
-};
-class CBMemberTranslator1wRet : public CBFunctor1wRet {
-    // total size: 0x14
-};
-class CBMemberTranslator2 : public CBFunctor2 {
-    // total size: 0x14
-};
-class CBMemberTranslator1wRet : public CBFunctor1wRet {
-    // total size: 0x14
-};
-struct {
-    // total size: 0x30
-} __vt__9R2LTarget; // size: 0x30, address: 0x80446FE8
-struct {
-    // total size: 0x20
-} __vt__9PRGTarget; // size: 0x20, address: 0x80447018
-struct {
-    // total size: 0x28
-} __vt__9PCTTarget; // size: 0x28, address: 0x80447050
-struct {
-    // total size: 0x20
-} __vt__9O2TTarget; // size: 0x20, address: 0x80447078
-struct {
-    // total size: 0x30
-} __vt__9INGTarget; // size: 0x30, address: 0x80447098
-struct {
-    // total size: 0x20
-} __vt__9RMDTarget; // size: 0x20, address: 0x804470C8
-struct {
-    // total size: 0x20
-} __vt__9MDITarget; // size: 0x20, address: 0x804470E8
-struct {
-    // total size: 0x20
-} __vt__9ITBTarget; // size: 0x20, address: 0x80447108
-struct {
-    // total size: 0x20
-} __vt__9MOTTarget; // size: 0x20, address: 0x80447128
-struct {
-    // total size: 0x30
-} __vt__9CSPTarget; // size: 0x30, address: 0x80447148
-struct {
-    // total size: 0xC
-} __vt__18HelpDialogCallback; // size: 0xC, address: 0x80447178
-struct {
-    // total size: 0x44
-} __vt__9M2MTarget; // size: 0x44, address: 0x80447184
-struct {
-    // total size: 0x54
-} __vt__9K2YTarget; // size: 0x54, address: 0x804471C8
-struct {
-    // total size: 0x20
-} __vt__9CRDTarget; // size: 0x20, address: 0x80447220
-struct {
-    // total size: 0x20
-} __vt__9BBHTarget; // size: 0x20, address: 0x80447240
-struct {
-    // total size: 0x20
-} __vt__9FCMTarget; // size: 0x20, address: 0x80447260
-struct {
-    // total size: 0xC
-} __vt__12AptParagraph; // size: 0xC, address: 0x80447280
-struct {
-    // total size: 0x20
-} __vt__9ACTTarget; // size: 0x20, address: 0x80447290
-struct {
-    // total size: 0xC
-} __vt__Q29ACTTarget8iqRecord; // size: 0xC, address: 0x804472B0
-struct {
-    // total size: 0x20
-} __vt__9H2DTarget; // size: 0x20, address: 0x804472C0
-struct {
-    // total size: 0x20
-} __vt__9G2DTarget; // size: 0x20, address: 0x804472E0
-struct {
-    // total size: 0x18
-} __vt__8UIDialog; // size: 0x18, address: 0x80447300
-struct greater : public binary_function {
-    // total size: 0x1
-};
+// total size: 0x14
+class CBMemberTranslator1 : public CBFunctor1 {};
+// total size: 0x14
+class CBMemberTranslator0 : public CBFunctor0 {};
+// total size: 0x14
+class CBMemberTranslator1wRet : public CBFunctor1wRet {};
+// total size: 0x14
+class CBMemberTranslator2 : public CBFunctor2 {};
+// total size: 0x14
+class CBMemberTranslator1wRet : public CBFunctor1wRet {};
+// total size: 0x30
+struct {} __vt__9R2LTarget; // size: 0x30, address: 0x80446FE8
+// total size: 0x20
+struct {} __vt__9PRGTarget; // size: 0x20, address: 0x80447018
+// total size: 0x28
+struct {} __vt__9PCTTarget; // size: 0x28, address: 0x80447050
+// total size: 0x20
+struct {} __vt__9O2TTarget; // size: 0x20, address: 0x80447078
+// total size: 0x30
+struct {} __vt__9INGTarget; // size: 0x30, address: 0x80447098
+// total size: 0x20
+struct {} __vt__9RMDTarget; // size: 0x20, address: 0x804470C8
+// total size: 0x20
+struct {} __vt__9MDITarget; // size: 0x20, address: 0x804470E8
+// total size: 0x20
+struct {} __vt__9ITBTarget; // size: 0x20, address: 0x80447108
+// total size: 0x20
+struct {} __vt__9MOTTarget; // size: 0x20, address: 0x80447128
+// total size: 0x30
+struct {} __vt__9CSPTarget; // size: 0x30, address: 0x80447148
+// total size: 0xC
+struct {} __vt__18HelpDialogCallback; // size: 0xC, address: 0x80447178
+// total size: 0x44
+struct {} __vt__9M2MTarget; // size: 0x44, address: 0x80447184
+// total size: 0x54
+struct {} __vt__9K2YTarget; // size: 0x54, address: 0x804471C8
+// total size: 0x20
+struct {} __vt__9CRDTarget; // size: 0x20, address: 0x80447220
+// total size: 0x20
+struct {} __vt__9BBHTarget; // size: 0x20, address: 0x80447240
+// total size: 0x20
+struct {} __vt__9FCMTarget; // size: 0x20, address: 0x80447260
+// total size: 0xC
+struct {} __vt__12AptParagraph; // size: 0xC, address: 0x80447280
+// total size: 0x20
+struct {} __vt__9ACTTarget; // size: 0x20, address: 0x80447290
+// total size: 0xC
+struct {} __vt__Q29ACTTarget8iqRecord; // size: 0xC, address: 0x804472B0
+// total size: 0x20
+struct {} __vt__9H2DTarget; // size: 0x20, address: 0x804472C0
+// total size: 0x20
+struct {} __vt__9G2DTarget; // size: 0x20, address: 0x804472E0
+// total size: 0x18
+struct {} __vt__8UIDialog; // size: 0x18, address: 0x80447300
+// total size: 0x1
+struct greater : public binary_function {};
 

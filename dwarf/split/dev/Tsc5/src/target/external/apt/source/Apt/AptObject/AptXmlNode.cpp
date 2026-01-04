@@ -5,7 +5,8 @@
     Code range: 0x80332D04 -> 0x8033398C
 */
 // Range: 0x80332D04 -> 0x80332D5C
-void * AptXmlNode::AptXmlNode(class AptXmlNode * const this /* r30 */, class IAptXmlNode * pIXmlNodeParam /* r31 */) {
+// this: r30
+AptXmlNode::AptXmlNode(class IAptXmlNode * pIXmlNodeParam /* r31 */) {
     // References
     // -> struct [anonymous] __vt__10AptXmlNode;
 }
@@ -14,7 +15,8 @@ void * AptXmlNode::AptXmlNode(class AptXmlNode * const this /* r30 */, class IAp
 void AptXmlNode::PreDestroy() {}
 
 // Range: 0x80332D68 -> 0x80332DD0
-void * AptXmlNode::~AptXmlNode(class AptXmlNode * const this /* r30 */) {}
+// this: r30
+AptXmlNode::~AptXmlNode() {}
 
 static char __PRETTY_FUNCTION__[35]; // size: 0x23, address: 0x8045FA68
 // Range: 0x80332DD0 -> 0x80332F3C
@@ -39,7 +41,8 @@ unsigned char AptXmlNode::objectMemberSet(class AptValue * const pContext /* r31
 
 static char __PRETTY_FUNCTION__[80]; // size: 0x50, address: 0x8045FAB8
 // Range: 0x80333088 -> 0x80333848
-class AptValue * AptXmlNode::objectMemberLookup(const class AptXmlNode * const this /* r29 */, const class EAStringC * const pName /* r28 */) {
+// this: r29
+class AptValue * AptXmlNode::objectMemberLookup(const class EAStringC * const pName /* r28 */) const {
     // Local variables
     class AptXmlNode * pXmlNode; // r0
     class AptXmlAttributes * pXmlAttr; // r30
@@ -119,7 +122,6 @@ class AptValue * AptXmlNode::sMethod_toString(class AptValue * pThis /* r30 */) 
     // -> class AptNone * gpUndefinedValue;
 }
 
-struct {
-    // total size: 0x44
-} __vt__10AptXmlNode; // size: 0x44, address: 0x8045FB4C
+// total size: 0x44
+struct {} __vt__10AptXmlNode; // size: 0x44, address: 0x8045FB4C
 

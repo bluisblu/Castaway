@@ -50,21 +50,16 @@ static const char * const BBS_usable_1_03; // size: 0x4, address: 0x805DE578
 static const char * const BBS_usable_1_04; // size: 0x4, address: 0x805DE57C
 int CLPLastIndex; // size: 0x4, address: 0x805DBB58
 struct PLNIconData CLPIconDataTable[7]; // size: 0x70, address: 0x8044B570
-class CBMemberTranslator1 : public CBFunctor1 {
-    // total size: 0x14
-};
-class CBMemberTranslator0 : public CBFunctor0 {
-    // total size: 0x14
-};
-class CBMemberTranslator1wRet : public CBFunctor1wRet {
-    // total size: 0x14
-};
-class CBMemberTranslator2 : public CBFunctor2 {
-    // total size: 0x14
-};
-class CBMemberTranslator1wRet : public CBFunctor1wRet {
-    // total size: 0x14
-};
+// total size: 0x14
+class CBMemberTranslator1 : public CBFunctor1 {};
+// total size: 0x14
+class CBMemberTranslator0 : public CBFunctor0 {};
+// total size: 0x14
+class CBMemberTranslator1wRet : public CBFunctor1wRet {};
+// total size: 0x14
+class CBMemberTranslator2 : public CBFunctor2 {};
+// total size: 0x14
+class CBMemberTranslator1wRet : public CBFunctor1wRet {};
 static const char * const COL_exists; // size: 0x4, address: 0x805DE58C
 static const char * const COL_totalCount; // size: 0x4, address: 0x805DE590
 static const char * const COL_setCounts; // size: 0x4, address: 0x805DE594
@@ -81,21 +76,16 @@ static const char * const COL_tabIcon0; // size: 0x4, address: 0x805DE5BC
 static const char * const COL_tabIcon1; // size: 0x4, address: 0x805DE5C0
 int m_heiroglyphics_shaders[9]; // size: 0x24, address: 0x8044B828
 int m_treasure_map_shaders[9]; // size: 0x24, address: 0x8044B84C
-class CBMemberTranslator1 : public CBFunctor1 {
-    // total size: 0x14
-};
-class CBMemberTranslator0 : public CBFunctor0 {
-    // total size: 0x14
-};
-class CBMemberTranslator1wRet : public CBFunctor1wRet {
-    // total size: 0x14
-};
-class CBMemberTranslator2 : public CBFunctor2 {
-    // total size: 0x14
-};
-class CBMemberTranslator1wRet : public CBFunctor1wRet {
-    // total size: 0x14
-};
+// total size: 0x14
+class CBMemberTranslator1 : public CBFunctor1 {};
+// total size: 0x14
+class CBMemberTranslator0 : public CBFunctor0 {};
+// total size: 0x14
+class CBMemberTranslator1wRet : public CBFunctor1wRet {};
+// total size: 0x14
+class CBMemberTranslator2 : public CBFunctor2 {};
+// total size: 0x14
+class CBMemberTranslator1wRet : public CBFunctor1wRet {};
 static const char * const GOL_exists; // size: 0x4, address: 0x805DE5C4
 static const char * const GOL_initialTab; // size: 0x4, address: 0x805DE5C8
 static const char * const GOL_totalTabs; // size: 0x4, address: 0x805DE5CC
@@ -117,24 +107,18 @@ static const char * const GOL_Rollover; // size: 0x4, address: 0x805DE608
 static const char * const GOL_HoverTab; // size: 0x4, address: 0x805DE60C
 static const char * const GOL_rgSizeX; // size: 0x4, address: 0x805DE610
 static const char * const GOL_rgSizeY; // size: 0x4, address: 0x805DE614
-class CBMemberTranslator1 : public CBFunctor1 {
-    // total size: 0x14
-};
-class CBMemberTranslator0 : public CBFunctor0 {
-    // total size: 0x14
-};
-class CBMemberTranslator1wRet : public CBFunctor1wRet {
-    // total size: 0x14
-};
-class CBMemberTranslator2 : public CBFunctor2 {
-    // total size: 0x14
-};
-class CBMemberTranslator1wRet : public CBFunctor1wRet {
-    // total size: 0x14
-};
-class EBinaryManager : public EResourceManager {
-    // total size: 0xD44
-};
+// total size: 0x14
+class CBMemberTranslator1 : public CBFunctor1 {};
+// total size: 0x14
+class CBMemberTranslator0 : public CBFunctor0 {};
+// total size: 0x14
+class CBMemberTranslator1wRet : public CBFunctor1wRet {};
+// total size: 0x14
+class CBMemberTranslator2 : public CBFunctor2 {};
+// total size: 0x14
+class CBMemberTranslator1wRet : public CBFunctor1wRet {};
+// total size: 0xD44
+class EBinaryManager : public EResourceManager {};
 static const char * const KFT_exists; // size: 0x4, address: 0x805DE618
 static const char * const KFT_SelectedCell; // size: 0x4, address: 0x805DE61C
 static const char * const KFT_ResourceBoxCount; // size: 0x4, address: 0x805DE620
@@ -172,21 +156,16 @@ struct HutData HutDataTable[39]; // size: 0x3A8, address: 0x8044BF28
 struct KFTModeShader ModeShaderTable[34]; // size: 0x110, address: 0x8044C2D0
 int m_lastMode; // size: 0x4, address: 0x805DBB60
 int m_lastIndex; // size: 0x4, address: 0x805DBB64
-class CBMemberTranslator1 : public CBFunctor1 {
-    // total size: 0x14
-};
-class CBMemberTranslator0 : public CBFunctor0 {
-    // total size: 0x14
-};
-class CBMemberTranslator1wRet : public CBFunctor1wRet {
-    // total size: 0x14
-};
-class CBMemberTranslator2 : public CBFunctor2 {
-    // total size: 0x14
-};
-class CBMemberTranslator1wRet : public CBFunctor1wRet {
-    // total size: 0x14
-};
+// total size: 0x14
+class CBMemberTranslator1 : public CBFunctor1 {};
+// total size: 0x14
+class CBMemberTranslator0 : public CBFunctor0 {};
+// total size: 0x14
+class CBMemberTranslator1wRet : public CBFunctor1wRet {};
+// total size: 0x14
+class CBMemberTranslator2 : public CBFunctor2 {};
+// total size: 0x14
+class CBMemberTranslator1wRet : public CBFunctor1wRet {};
 static const char * const LSM_exists; // size: 0x4, address: 0x805DE6A4
 static const char * const LSM_select; // size: 0x4, address: 0x805DE6A8
 static const char * const LSM_cancel; // size: 0x4, address: 0x805DE6AC
@@ -218,21 +197,16 @@ unsigned int m_litTikiShaderTable[4]; // size: 0x10, address: 0x8044CA80
 int m_islandCenterPointTable[3][2]; // size: 0x18, address: 0x8044CA90
 int m_scrollTimeTable[3][3]; // size: 0x24, address: 0x8044CAA8
 struct LotRect m_LotRectTable[27]; // size: 0x1B0, address: 0x8044CAD0
-class CBMemberTranslator1 : public CBFunctor1 {
-    // total size: 0x14
-};
-class CBMemberTranslator0 : public CBFunctor0 {
-    // total size: 0x14
-};
-class CBMemberTranslator1wRet : public CBFunctor1wRet {
-    // total size: 0x14
-};
-class CBMemberTranslator2 : public CBFunctor2 {
-    // total size: 0x14
-};
-class CBMemberTranslator1wRet : public CBFunctor1wRet {
-    // total size: 0x14
-};
+// total size: 0x14
+class CBMemberTranslator1 : public CBFunctor1 {};
+// total size: 0x14
+class CBMemberTranslator0 : public CBFunctor0 {};
+// total size: 0x14
+class CBMemberTranslator1wRet : public CBFunctor1wRet {};
+// total size: 0x14
+class CBMemberTranslator2 : public CBFunctor2 {};
+// total size: 0x14
+class CBMemberTranslator1wRet : public CBFunctor1wRet {};
 static const char * const HUD_exists; // size: 0x4, address: 0x805DE714
 static const char * const HUD_meter; // size: 0x4, address: 0x805DE718
 static const char * const HUD_tod; // size: 0x4, address: 0x805DE71C
@@ -241,27 +215,32 @@ static const char * const HUD_moon; // size: 0x4, address: 0x805DE724
 static const char * const HUD_warning_text; // size: 0x4, address: 0x805DE728
 static const char * const HUD_warning_icon; // size: 0x4, address: 0x805DE72C
 static const char * const HUD_icon; // size: 0x4, address: 0x805DE730
-class CBMemberTranslator2 : public CBFunctor2 {
-    // total size: 0x14
-};
-class CBMemberTranslator1 : public CBFunctor1 {
-    // total size: 0x14
-};
-class CBMemberTranslator0 : public CBFunctor0 {
-    // total size: 0x14
-};
-class CBMemberTranslator1wRet : public CBFunctor1wRet {
-    // total size: 0x14
-};
-class CBMemberTranslator2 : public CBFunctor2 {
-    // total size: 0x14
-};
-class CBMemberTranslator1wRet : public CBFunctor1wRet {
-    // total size: 0x14
-};
+// total size: 0x14
+class CBMemberTranslator2 : public CBFunctor2 {};
+// total size: 0x14
+class CBMemberTranslator1 : public CBFunctor1 {};
+// total size: 0x14
+class CBMemberTranslator0 : public CBFunctor0 {};
+// total size: 0x14
+class CBMemberTranslator1wRet : public CBFunctor1wRet {};
+// total size: 0x14
+class CBMemberTranslator2 : public CBFunctor2 {};
+// total size: 0x14
+class CBMemberTranslator1wRet : public CBFunctor1wRet {};
 static class ERFont * pFont; // size: 0x4, address: 0x805DBB68
+// total size: 0x3C0
 class ESims3DHead {
-    // total size: 0x3C0
+    // Static members
+    static class ERShader * m_pHeadBorder; // size: 0x4
+    static float _p2head_yoff; // size: 0x4
+    static float _p2head_xoff; // size: 0x4
+    static float _p1head_yoff; // size: 0x4
+    static float _p1head_xoff; // size: 0x4
+    static float ESims3DHead_far; // size: 0x4
+    static float ESims3DHead_near; // size: 0x4
+    static float ESims3DHead_yfov; // size: 0x4
+
+    // Members
 public:
     void * __vptr$; // offset 0x0, size 0x4
 protected:
@@ -278,163 +257,115 @@ static int lastMoon; // size: 0x4, address: 0x805D9E08
 int PLNLastIndex; // size: 0x4, address: 0x805DBB6C
 struct PLNIconData PLNIconDataTable[15]; // size: 0x168, address: 0x8041C7D8
 enum eKFTType m_object; // size: 0x4, address: 0x805DBB70
-class CBMemberTranslator1 : public CBFunctor1 {
-    // total size: 0x14
-};
-class CBMemberTranslator0 : public CBFunctor0 {
-    // total size: 0x14
-};
-class CBMemberTranslator1wRet : public CBFunctor1wRet {
-    // total size: 0x14
-};
-class CBMemberTranslator2 : public CBFunctor2 {
-    // total size: 0x14
-};
-class CBMemberTranslator1wRet : public CBFunctor1wRet {
-    // total size: 0x14
-};
+// total size: 0x14
+class CBMemberTranslator1 : public CBFunctor1 {};
+// total size: 0x14
+class CBMemberTranslator0 : public CBFunctor0 {};
+// total size: 0x14
+class CBMemberTranslator1wRet : public CBFunctor1wRet {};
+// total size: 0x14
+class CBMemberTranslator2 : public CBFunctor2 {};
+// total size: 0x14
+class CBMemberTranslator1wRet : public CBFunctor1wRet {};
 static const char * const TIR_exists; // size: 0x4, address: 0x805DE74C
 static const char * const TIR_TransInDone; // size: 0x4, address: 0x805DE750
 static const char * const TIR_TransOutDone; // size: 0x4, address: 0x805DE754
 static const char * const TIR_Loaded; // size: 0x4, address: 0x805DE758
 static const char * const TIR_TransInProgress; // size: 0x4, address: 0x805DE75C
-class CBMemberTranslator1 : public CBFunctor1 {
-    // total size: 0x14
-};
-class CBMemberTranslator0 : public CBFunctor0 {
-    // total size: 0x14
-};
-class CBMemberTranslator1wRet : public CBFunctor1wRet {
-    // total size: 0x14
-};
-class CBMemberTranslator2 : public CBFunctor2 {
-    // total size: 0x14
-};
-class CBMemberTranslator1wRet : public CBFunctor1wRet {
-    // total size: 0x14
-};
-class CBMemberTranslator1 : public CBFunctor1 {
-    // total size: 0x14
-};
-class CBMemberTranslator0 : public CBFunctor0 {
-    // total size: 0x14
-};
-class CBMemberTranslator1wRet : public CBFunctor1wRet {
-    // total size: 0x14
-};
-class CBMemberTranslator2 : public CBFunctor2 {
-    // total size: 0x14
-};
-class CBMemberTranslator1wRet : public CBFunctor1wRet {
-    // total size: 0x14
-};
+// total size: 0x14
+class CBMemberTranslator1 : public CBFunctor1 {};
+// total size: 0x14
+class CBMemberTranslator0 : public CBFunctor0 {};
+// total size: 0x14
+class CBMemberTranslator1wRet : public CBFunctor1wRet {};
+// total size: 0x14
+class CBMemberTranslator2 : public CBFunctor2 {};
+// total size: 0x14
+class CBMemberTranslator1wRet : public CBFunctor1wRet {};
+// total size: 0x14
+class CBMemberTranslator1 : public CBFunctor1 {};
+// total size: 0x14
+class CBMemberTranslator0 : public CBFunctor0 {};
+// total size: 0x14
+class CBMemberTranslator1wRet : public CBFunctor1wRet {};
+// total size: 0x14
+class CBMemberTranslator2 : public CBFunctor2 {};
+// total size: 0x14
+class CBMemberTranslator1wRet : public CBFunctor1wRet {};
 static const char * const CEL_exists; // size: 0x4, address: 0x805DE760
-class CBMemberTranslator1 : public CBFunctor1 {
-    // total size: 0x14
-};
-class CBMemberTranslator0 : public CBFunctor0 {
-    // total size: 0x14
-};
-class CBMemberTranslator1wRet : public CBFunctor1wRet {
-    // total size: 0x14
-};
-class CBMemberTranslator2 : public CBFunctor2 {
-    // total size: 0x14
-};
-class CBMemberTranslator1wRet : public CBFunctor1wRet {
-    // total size: 0x14
-};
-class CBMemberTranslator1 : public CBFunctor1 {
-    // total size: 0x14
-};
-class CBMemberTranslator0 : public CBFunctor0 {
-    // total size: 0x14
-};
-class CBMemberTranslator1wRet : public CBFunctor1wRet {
-    // total size: 0x14
-};
-class CBMemberTranslator2 : public CBFunctor2 {
-    // total size: 0x14
-};
-class CBMemberTranslator1wRet : public CBFunctor1wRet {
-    // total size: 0x14
-};
+// total size: 0x14
+class CBMemberTranslator1 : public CBFunctor1 {};
+// total size: 0x14
+class CBMemberTranslator0 : public CBFunctor0 {};
+// total size: 0x14
+class CBMemberTranslator1wRet : public CBFunctor1wRet {};
+// total size: 0x14
+class CBMemberTranslator2 : public CBFunctor2 {};
+// total size: 0x14
+class CBMemberTranslator1wRet : public CBFunctor1wRet {};
+// total size: 0x14
+class CBMemberTranslator1 : public CBFunctor1 {};
+// total size: 0x14
+class CBMemberTranslator0 : public CBFunctor0 {};
+// total size: 0x14
+class CBMemberTranslator1wRet : public CBFunctor1wRet {};
+// total size: 0x14
+class CBMemberTranslator2 : public CBFunctor2 {};
+// total size: 0x14
+class CBMemberTranslator1wRet : public CBFunctor1wRet {};
 static const char * const TRC_loaded; // size: 0x4, address: 0x805DE764
 char * TRC_buttonN_Table[3]; // size: 0xC, address: 0x8044D3FC
-class CBMemberTranslator0 : public CBFunctor0 {
-    // total size: 0x14
-};
-class CBMemberTranslator1 : public CBFunctor1 {
-    // total size: 0x14
-};
-class CBMemberTranslator1 : public CBFunctor1 {
-    // total size: 0x14
-};
-class CBMemberTranslator0 : public CBFunctor0 {
-    // total size: 0x14
-};
-class CBMemberTranslator1wRet : public CBFunctor1wRet {
-    // total size: 0x14
-};
-class CBMemberTranslator2 : public CBFunctor2 {
-    // total size: 0x14
-};
-class CBMemberTranslator1wRet : public CBFunctor1wRet {
-    // total size: 0x14
-};
-struct {
-    // total size: 0x44
-} __vt__9TRCTarget; // size: 0x44, address: 0x8044D6B8
-struct {
-    // total size: 0x20
-} __vt__21EndGameCreditsManager; // size: 0x20, address: 0x8044D700
-struct {
-    // total size: 0x20
-} __vt__9CELTarget; // size: 0x20, address: 0x8044D720
-struct {
-    // total size: 0x20
-} __vt__9MMSTarget; // size: 0x20, address: 0x8044D740
-struct {
-    // total size: 0x20
-} __vt__9TIRTarget; // size: 0x20, address: 0x8044D760
-struct {
-    // total size: 0x20
-} __vt__9MODTarget; // size: 0x20, address: 0x8044D780
-struct {
-    // total size: 0x20
-} __vt__9LSMTarget; // size: 0x20, address: 0x8044D7A0
-struct {
-    // total size: 0xC
-} __vt__19HRObjectFloorRecord; // size: 0xC, address: 0x8044D7CC
-struct {
-    // total size: 0xC
-} __vt__14HRObjectRecord; // size: 0xC, address: 0x8044D7D8
-struct {
-    // total size: 0x20
-} __vt__9GOLTarget; // size: 0x20, address: 0x8044D7E8
-struct {
-    // total size: 0x20
-} __vt__9COLTarget; // size: 0x20, address: 0x8044D808
-struct {
-    // total size: 0x20
-} __vt__9CLPTarget; // size: 0x20, address: 0x8044D828
-struct {
-    // total size: 0x20
-} __vt__9PLNTarget; // size: 0x20, address: 0x8044D848
-struct {
-    // total size: 0x2C
-} __vt__9KFTTarget; // size: 0x2C, address: 0x8044D868
-struct {
-    // total size: 0xC
-} __vt__9KFTRecord; // size: 0xC, address: 0x8044D894
-struct {
-    // total size: 0xC
-} __vt__23KFTPlaceToolSkillRecord; // size: 0xC, address: 0x8044D8A0
-struct {
-    // total size: 0xC
-} __vt__17KFTResourceRecord; // size: 0xC, address: 0x8044D8AC
+// total size: 0x14
+class CBMemberTranslator0 : public CBFunctor0 {};
+// total size: 0x14
+class CBMemberTranslator1 : public CBFunctor1 {};
+// total size: 0x14
+class CBMemberTranslator1 : public CBFunctor1 {};
+// total size: 0x14
+class CBMemberTranslator0 : public CBFunctor0 {};
+// total size: 0x14
+class CBMemberTranslator1wRet : public CBFunctor1wRet {};
+// total size: 0x14
+class CBMemberTranslator2 : public CBFunctor2 {};
+// total size: 0x14
+class CBMemberTranslator1wRet : public CBFunctor1wRet {};
+// total size: 0x44
+struct {} __vt__9TRCTarget; // size: 0x44, address: 0x8044D6B8
+// total size: 0x20
+struct {} __vt__21EndGameCreditsManager; // size: 0x20, address: 0x8044D700
+// total size: 0x20
+struct {} __vt__9CELTarget; // size: 0x20, address: 0x8044D720
+// total size: 0x20
+struct {} __vt__9MMSTarget; // size: 0x20, address: 0x8044D740
+// total size: 0x20
+struct {} __vt__9TIRTarget; // size: 0x20, address: 0x8044D760
+// total size: 0x20
+struct {} __vt__9MODTarget; // size: 0x20, address: 0x8044D780
+// total size: 0x20
+struct {} __vt__9LSMTarget; // size: 0x20, address: 0x8044D7A0
+// total size: 0xC
+struct {} __vt__19HRObjectFloorRecord; // size: 0xC, address: 0x8044D7CC
+// total size: 0xC
+struct {} __vt__14HRObjectRecord; // size: 0xC, address: 0x8044D7D8
+// total size: 0x20
+struct {} __vt__9GOLTarget; // size: 0x20, address: 0x8044D7E8
+// total size: 0x20
+struct {} __vt__9COLTarget; // size: 0x20, address: 0x8044D808
+// total size: 0x20
+struct {} __vt__9CLPTarget; // size: 0x20, address: 0x8044D828
+// total size: 0x20
+struct {} __vt__9PLNTarget; // size: 0x20, address: 0x8044D848
+// total size: 0x2C
+struct {} __vt__9KFTTarget; // size: 0x2C, address: 0x8044D868
+// total size: 0xC
+struct {} __vt__9KFTRecord; // size: 0xC, address: 0x8044D894
+// total size: 0xC
+struct {} __vt__23KFTPlaceToolSkillRecord; // size: 0xC, address: 0x8044D8A0
+// total size: 0xC
+struct {} __vt__17KFTResourceRecord; // size: 0xC, address: 0x8044D8AC
+// total size: 0x4
 class generic_iterator {
-    // total size: 0x4
+    // Members
 protected:
     struct KFTRecord * * mIterator; // offset 0x0, size 0x4
 };

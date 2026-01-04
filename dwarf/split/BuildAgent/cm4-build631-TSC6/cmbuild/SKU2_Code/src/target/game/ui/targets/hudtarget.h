@@ -8,12 +8,6 @@
 unsigned int HUDTarget::GetHudTransitionTarget() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\target\game\ui\targets\hudtarget.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x8022E26C -> 0x8022E280
-*/
 // Range: 0x8022E26C -> 0x8022E280
 unsigned char HUDTarget::GetHUDMode() {}
 

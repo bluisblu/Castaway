@@ -5,10 +5,12 @@
     Code range: 0x8022A564 -> 0x8022E06C
 */
 // Range: 0x8022A564 -> 0x8022A5CC
-void * EGlobal::~EGlobal(class EGlobal * const this /* r30 */) {}
+// this: r30
+EGlobal::~EGlobal() {}
 
 // Range: 0x8022A5CC -> 0x8022A8A8
-void * EGlobal::EGlobal(class EGlobal * const this /* r29 */) {
+// this: r29
+EGlobal::EGlobal() {
     // References
     // -> class ERShader * m_pWhiteShader;
     // -> static const unsigned short * const _pEmptyString;
@@ -22,7 +24,8 @@ void EGlobal::SetAuthorModeCheats() {}
 unsigned int EGlobal::GetGameFontID() {}
 
 // Range: 0x8022A8C8 -> 0x8022AE1C
-void EGlobal::LoadIntroRequirements(class EGlobal * const this /* r29 */) {
+// this: r29
+void EGlobal::LoadIntroRequirements() {
     // Local variables
     class UI2D * pUI2D; // r30
     const char * const kGlobalShaders; // r29
@@ -35,13 +38,15 @@ void EGlobal::LoadIntroRequirements(class EGlobal * const this /* r29 */) {
 }
 
 // Range: 0x8022AE1C -> 0x8022AE6C
-void EGlobal::LoadPreGlobalRequirements(class EGlobal * const this /* r31 */) {
+// this: r31
+void EGlobal::LoadPreGlobalRequirements() {
     // References
     // -> struct ECheatVariables * pEORCheats;
 }
 
 // Range: 0x8022AE6C -> 0x8022B1EC
-void EGlobal::SetDefaults(class EGlobal * const this /* r31 */) {
+// this: r31
+void EGlobal::SetDefaults() {
     // Local variables
     const struct ERQTable * pWalTab; // r1+0x14
     const struct ERQTable * pFloorTab; // r1+0x10
@@ -118,7 +123,8 @@ void EGlobal::SetupSubstitutionStrings() {
 }
 
 // Range: 0x8022B4A0 -> 0x8022B948
-void EGlobal::Reset(class EGlobal * const this /* r31 */) {
+// this: r31
+void EGlobal::Reset() {
     // References
     // -> class GameData _gd;
     // -> class ERShader * m_pWhiteShader;
@@ -126,13 +132,15 @@ void EGlobal::Reset(class EGlobal * const this /* r31 */) {
 }
 
 // Range: 0x8022B948 -> 0x8022B9F0
-void EGlobal::SetCurHouse(class EGlobal * const this /* r29 */, int house /* r30 */) {
+// this: r29
+void EGlobal::SetCurHouse(int house /* r30 */) {
     // References
     // -> class EGlobal _globals;
 }
 
 // Range: 0x8022B9F0 -> 0x8022BA2C
-void EGlobal::ClearCurHouse(class EGlobal * const this /* r31 */) {}
+// this: r31
+void EGlobal::ClearCurHouse() {}
 
 // Range: 0x8022BA2C -> 0x8022BA44
 class E3DWindow * EGlobal::GetWin() {}
@@ -147,7 +155,8 @@ class ESimsCam * EGlobal::GetCam() {}
 void EGlobal::SetCameraDirector() {}
 
 // Range: 0x8022BA5C -> 0x8022BABC
-void EGlobal::TransformToWorld(class EGlobal * const this /* r29 */, const class EVec2 & vScreenIn /* r30 */, class EVec3 & vWorldOut /* r31 */) {}
+// this: r29
+void EGlobal::TransformToWorld(const class EVec2 & vScreenIn /* r30 */, class EVec3 & vWorldOut /* r31 */) {}
 
 // Range: 0x8022BABC -> 0x8022BAC4
 class ELocString EGlobal::GetLiveModeMenuUIString() {
@@ -197,7 +206,8 @@ struct LightingSequence * EGlobal::GetHouseLightingSequence(int lotNum /* r31 */
 }
 
 // Range: 0x8022BCCC -> 0x8022BD1C
-struct LightingSequence * EGlobal::GetCurrentHouseLightingSequence(const class EGlobal * const this /* r31 */) {}
+// this: r31
+struct LightingSequence * EGlobal::GetCurrentHouseLightingSequence() const {}
 
 // Range: 0x8022BD1C -> 0x8022BD98
 struct LightingSequence * EGlobal::GetDefaultLightingSequence() {
@@ -220,7 +230,8 @@ struct LevelData * EGlobal::GetLevelData(int lotNum /* r31 */) {
 }
 
 // Range: 0x8022BE1C -> 0x8022BE6C
-struct LevelData * EGlobal::GetCurrentLevelData(const class EGlobal * const this /* r31 */) {}
+// this: r31
+struct LevelData * EGlobal::GetCurrentLevelData() const {}
 
 // Range: 0x8022BE6C -> 0x8022BEC8
 struct WorldData * EGlobal::GetWorldData() {
@@ -246,7 +257,8 @@ class ELocString EGlobal::GetNewUIString(const char * pRef /* r29 */, const char
 }
 
 // Range: 0x8022BFC4 -> 0x8022C0F4
-class ELocString EGlobal::GetGenderString(class EGlobal * const this /* r27 */, const char * pRef /* r28 */, unsigned char bMale /* r29 */) {
+// this: r27
+class ELocString EGlobal::GetGenderString(const char * pRef /* r28 */, unsigned char bMale /* r29 */) {
     // Local variables
     unsigned int index; // r1+0x10
     const struct ERQTable * pTab; // r1+0xC
@@ -309,7 +321,8 @@ void EGlobal::GetNghFamilyName(class BString2 & name /* r28 */) {
 }
 
 // Range: 0x8022C478 -> 0x8022C5F4
-void EGlobal::GetNghHouseName(class EGlobal * const this /* r29 */, class BString2 & name /* r28 */) {
+// this: r29
+void EGlobal::GetNghHouseName(class BString2 & name /* r28 */) {
     // Local variables
     const struct ERQTable * pTab; // r1+0xC
     const struct HouseData * pData; // r1+0x8
@@ -334,7 +347,8 @@ int EGlobal::GetWallIndex(const struct WallTile * pTile /* r28 */) {
 class cXPerson * EGlobal::GetSelectedPerson() {}
 
 // Range: 0x8022C684 -> 0x8022C7F8
-void EGlobal::SetSelectedPerson(class EGlobal * const this /* r29 */, class cXPerson * newSelection /* r30 */) {
+// this: r29
+void EGlobal::SetSelectedPerson(class cXPerson * newSelection /* r30 */) {
     // Local variables
     class cXPerson * cursel; // r31
     signed short playerObjectId; // r30
@@ -366,7 +380,8 @@ class cXPerson * EGlobal::FindNextInFamily(class Family * family /* r24 */, int 
 }
 
 // Range: 0x8022CA04 -> 0x8022CA74
-void EGlobal::AdvanceSelectedPerson(class EGlobal * const this /* r31 */) {
+// this: r31
+void EGlobal::AdvanceSelectedPerson() {
     // Local variables
     class ObjectModule * pObjMod; // r0
     class cXPerson * sel; // r4
@@ -376,7 +391,8 @@ void EGlobal::AdvanceSelectedPerson(class EGlobal * const this /* r31 */) {
 }
 
 // Range: 0x8022CA74 -> 0x8022CBCC
-class cXPerson * EGlobal::FindNextSelectablePerson(class EGlobal * const this /* r25 */, class cXPerson * sel /* r26 */, unsigned char includeAtWork /* r27 */) {
+// this: r25
+class cXPerson * EGlobal::FindNextSelectablePerson(class cXPerson * sel /* r26 */, unsigned char includeAtWork /* r27 */) {
     // Local variables
     class ObjectModule * pObjMod; // r31
     class cXPerson * ret; // r0
@@ -388,7 +404,8 @@ class cXPerson * EGlobal::FindNextSelectablePerson(class EGlobal * const this /*
 }
 
 // Range: 0x8022CBCC -> 0x8022CD04
-unsigned char EGlobal::SelectPrevInFamily(class EGlobal * const this /* r26 */, class Family * family /* r27 */, int startIndex /* r28 */) {
+// this: r26
+unsigned char EGlobal::SelectPrevInFamily(class Family * family /* r27 */, int startIndex /* r28 */) {
     // Local variables
     class ObjectModule * pObjMod; // r30
     int n; // r3
@@ -397,7 +414,8 @@ unsigned char EGlobal::SelectPrevInFamily(class EGlobal * const this /* r26 */, 
 }
 
 // Range: 0x8022CD04 -> 0x8022CE3C
-void EGlobal::ReverseSelectedPerson(class EGlobal * const this /* r26 */) {
+// this: r26
+void EGlobal::ReverseSelectedPerson() {
     // Local variables
     class ObjectModule * pObjMod; // r31
     class cXPerson * sel; // r29
@@ -426,13 +444,15 @@ void EGlobal::GetCursorPosAsFtile(class FTilePt & pOut /* r30 */) {
 }
 
 // Range: 0x8022CF84 -> 0x8022D064
-void EGlobal::DestroyInstance(class EGlobal * const this /* r29 */, class IBaseSimInstance * * ppInstance /* r30 */) {
+// this: r29
+void EGlobal::DestroyInstance(class IBaseSimInstance * * ppInstance /* r30 */) {
     // Local variables
     class ISimInstance * pInstance; // r31
 }
 
 // Range: 0x8022D064 -> 0x8022D124
-void EGlobal::AllocInstance(class EGlobal * const this /* r30 */, class cXObject * pObject /* r31 */) {
+// this: r30
+void EGlobal::AllocInstance(class cXObject * pObject /* r31 */) {
     // Local variables
     class ISimInstance * pInst; // r0
 }
@@ -488,7 +508,8 @@ void OrientObjectInstance(class cXObject * pObj /* r31 */) {}
 class ISimInstance * GetObjectInstance() {}
 
 // Range: 0x8022D3F8 -> 0x8022D440
-void EGlobal::RecalcHouse(class EGlobal * const this /* r31 */) {}
+// this: r31
+void EGlobal::RecalcHouse() {}
 
 // Range: 0x8022D440 -> 0x8022D4E8
 void EGlobal::BeginSaveGame() {

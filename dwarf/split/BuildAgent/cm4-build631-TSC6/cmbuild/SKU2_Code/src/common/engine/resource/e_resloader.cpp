@@ -5,10 +5,12 @@
     Code range: 0x802D99AC -> 0x802DBC7C
 */
 // Range: 0x802D99AC -> 0x802D99EC
-void * EResourceLoader::~EResourceLoader(class EResourceLoader * const this /* r31 */) {}
+// this: r31
+EResourceLoader::~EResourceLoader() {}
 
 // Range: 0x802D99EC -> 0x802D9B44
-unsigned char EResLoaderMsgPriQueue::Create(class EResLoaderMsgPriQueue * const this /* r30 */, int size /* r31 */) {
+// this: r30
+unsigned char EResLoaderMsgPriQueue::Create(int size /* r31 */) {
     // Local variables
     unsigned char inRet; // r0
     unsigned char outRet; // r0
@@ -17,27 +19,31 @@ unsigned char EResLoaderMsgPriQueue::Create(class EResLoaderMsgPriQueue * const 
 }
 
 // Range: 0x802D9B44 -> 0x802D9C20
-unsigned char EResLoaderMsgPriQueue::IsInQueue(class EResLoaderMsgPriQueue * const this /* r29 */, class EResourceManager * pManager /* r30 */, unsigned int id /* r31 */) {
+// this: r29
+unsigned char EResLoaderMsgPriQueue::IsInQueue(class EResourceManager * pManager /* r30 */, unsigned int id /* r31 */) {
     // Local variables
     struct QueueList * pQueue; // r3
     struct EResLoadCmd * cmd; // r4
 }
 
 // Range: 0x802D9C20 -> 0x802D9D0C
-unsigned char EResLoaderMsgPriQueue::CollapseDelRef(class EResLoaderMsgPriQueue * const this /* r29 */, class EResourceManager * pManager /* r30 */, unsigned int id /* r31 */) {
+// this: r29
+unsigned char EResLoaderMsgPriQueue::CollapseDelRef(class EResourceManager * pManager /* r30 */, unsigned int id /* r31 */) {
     // Local variables
     struct QueueList * pQueue; // r3
     struct EResLoadCmd * cmd; // r4
 }
 
 // Range: 0x802D9D0C -> 0x802D9E2C
-unsigned char EResLoaderMsgPriQueue::Send(class EResLoaderMsgPriQueue * const this /* r30 */, unsigned int msg /* r31 */) {
+// this: r30
+unsigned char EResLoaderMsgPriQueue::Send(unsigned int msg /* r31 */) {
     // Local variables
     unsigned char success; // r0
 }
 
 // Range: 0x802D9E2C -> 0x802D9FC4
-unsigned char EResLoaderMsgPriQueue::Receive(class EResLoaderMsgPriQueue * const this /* r31 */, unsigned int * pMsgOut /* r30 */) {
+// this: r31
+unsigned char EResLoaderMsgPriQueue::Receive(unsigned int * pMsgOut /* r30 */) {
     // Local variables
     unsigned char success; // r0
     struct QueueList * pQueue; // r3
@@ -53,7 +59,8 @@ int EResourceLoaderImpl::GetQueuedCommandCount() {}
 unsigned char EResourceLoaderImpl::IsBusy() {}
 
 // Range: 0x802DA024 -> 0x802DA11C
-void * EResourceLoaderImpl::EResourceLoaderImpl(class EResourceLoaderImpl * const this /* r28 */) {
+// this: r28
+EResourceLoaderImpl::EResourceLoaderImpl() {
     // References
     // -> class EResourceLoader * _pResLoader;
     // -> struct [anonymous] __vt__19EResourceLoaderImpl;
@@ -61,25 +68,29 @@ void * EResourceLoaderImpl::EResourceLoaderImpl(class EResourceLoaderImpl * cons
 }
 
 // Range: 0x802DA11C -> 0x802DA21C
-void * EResourceLoaderImpl::~EResourceLoaderImpl(class EResourceLoaderImpl * const this /* r29 */) {
+// this: r29
+EResourceLoaderImpl::~EResourceLoaderImpl() {
     // References
     // -> class EResourceLoader * _pResLoader;
 }
 
 // Range: 0x802DA21C -> 0x802DA2F0
-void EResourceLoaderImpl::Shutdown(class EResourceLoaderImpl * const this /* r28 */) {
+// this: r28
+void EResourceLoaderImpl::Shutdown() {
     // Local variables
     int i; // r29
 }
 
 // Range: 0x802DA2F0 -> 0x802DA370
-void EResourceLoaderImpl::TerminateThread(class EResourceLoaderImpl * const this /* r31 */) {}
+// this: r31
+void EResourceLoaderImpl::TerminateThread() {}
 
 // Range: 0x802DA370 -> 0x802DA378
 unsigned char EResourceLoaderImpl::IsCallingThread() {}
 
 // Range: 0x802DA378 -> 0x802DA3F8
-void EResourceLoaderImpl::Init(class EResourceLoaderImpl * const this /* r30 */) {}
+// this: r30
+void EResourceLoaderImpl::Init() {}
 
 // Range: 0x802DA3F8 -> 0x802DA3FC
 void EResourceLoaderImpl::Update() {}
@@ -88,16 +99,19 @@ void EResourceLoaderImpl::Update() {}
 void EResourceLoaderImpl::sendCommand() {}
 
 // Range: 0x802DA408 -> 0x802DA4F8
-void EResourceLoaderImpl::FlushCommandQueue(class EResourceLoaderImpl * const this /* r30 */) {
+// this: r30
+void EResourceLoaderImpl::FlushCommandQueue() {
     // Local variables
     class EEvent flushEvent; // r1+0x8
 }
 
 // Range: 0x802DA4F8 -> 0x802DA5BC
-unsigned int * EResourceLoaderImpl::AddManager(class EResourceLoaderImpl * const this /* r29 */, class EResourceManager * pManager /* r30 */) {}
+// this: r29
+unsigned int * EResourceLoaderImpl::AddManager(class EResourceManager * pManager /* r30 */) {}
 
 // Range: 0x802DA5BC -> 0x802DA694
-void EResourceLoaderImpl::RemoveManager(class EResourceLoaderImpl * const this /* r29 */, class EResourceManager * pManager /* r30 */) {
+// this: r29
+void EResourceLoaderImpl::RemoveManager(class EResourceManager * pManager /* r30 */) {
     // Local variables
     class EAutoMutex mutex'47; // r31
 }
@@ -109,7 +123,8 @@ unsigned char EResourceLoaderImpl::CollapseDelRef() {}
 unsigned char EResourceLoaderImpl::IsInQueue() {}
 
 // Range: 0x802DA6A4 -> 0x802DA884
-class EResource * EResourceLoaderImpl::Load(class EResourceLoaderImpl * const this /* r29 */, class EResourceManager * pManager /* r30 */, unsigned int id /* r31 */, class EFile * pSourceFile /* r23 */, unsigned int uStartOffset /* r24 */, unsigned int uLength /* r28 */, unsigned char bWait /* r25 */) {
+// this: r29
+class EResource * EResourceLoaderImpl::Load(class EResourceManager * pManager /* r30 */, unsigned int id /* r31 */, class EFile * pSourceFile /* r23 */, unsigned int uStartOffset /* r24 */, unsigned int uLength /* r28 */, unsigned char bWait /* r25 */) {
     // Local variables
     class EResource * result; // r26
     class EFile * pfile; // r3
@@ -122,16 +137,19 @@ class EResource * EResourceLoaderImpl::Load(class EResourceLoaderImpl * const th
 }
 
 // Range: 0x802DA884 -> 0x802DA97C
-void EResourceLoaderImpl::Unload(class EResourceLoaderImpl * const this /* r29 */, class EResourceManager * pManager /* r30 */, unsigned int id /* r31 */) {}
+// this: r29
+void EResourceLoaderImpl::Unload(class EResourceManager * pManager /* r30 */, unsigned int id /* r31 */) {}
 
 // Range: 0x802DA97C -> 0x802DAAEC
-unsigned int EResourceLoaderImpl::ReadData(class EResourceLoaderImpl * const this /* r23 */, class EFile * pSourceFile /* r24 */, void * pBuffer /* r25 */, unsigned int uStartOffset /* r26 */, unsigned int uLength /* r27 */, unsigned char bWait /* r28 */, struct EResLoadCmdResult * pResult /* r29 */) {
+// this: r23
+unsigned int EResourceLoaderImpl::ReadData(class EFile * pSourceFile /* r24 */, void * pBuffer /* r25 */, unsigned int uStartOffset /* r26 */, unsigned int uLength /* r27 */, unsigned char bWait /* r28 */, struct EResLoadCmdResult * pResult /* r29 */) {
     // Local variables
     unsigned int result; // r30
 }
 
 // Range: 0x802DAAEC -> 0x802DAC84
-unsigned int EResourceLoaderImpl::ReadData(class EResourceLoaderImpl * const this /* r23 */, class EResourceManager * manager /* r24 */, void * pBuffer /* r25 */, unsigned int uStartOffset /* r26 */, unsigned int uLength /* r27 */, unsigned char bWait /* r28 */, struct EResLoadCmdResult * pResult /* r29 */) {
+// this: r23
+unsigned int EResourceLoaderImpl::ReadData(class EResourceManager * manager /* r24 */, void * pBuffer /* r25 */, unsigned int uStartOffset /* r26 */, unsigned int uLength /* r27 */, unsigned char bWait /* r28 */, struct EResLoadCmdResult * pResult /* r29 */) {
     // Local variables
     unsigned int result; // r30
     class EFile * pfile; // r0
@@ -139,13 +157,15 @@ unsigned int EResourceLoaderImpl::ReadData(class EResourceLoaderImpl * const thi
 }
 
 // Range: 0x802DAC84 -> 0x802DADF4
-unsigned int EResourceLoaderImpl::WriteData(class EResourceLoaderImpl * const this /* r23 */, class EFile * pDestFile /* r24 */, void * pBuffer /* r25 */, unsigned int uStartOffset /* r26 */, unsigned int uLength /* r27 */, unsigned char bWait /* r28 */, struct EResLoadCmdResult * pResult /* r29 */) {
+// this: r23
+unsigned int EResourceLoaderImpl::WriteData(class EFile * pDestFile /* r24 */, void * pBuffer /* r25 */, unsigned int uStartOffset /* r26 */, unsigned int uLength /* r27 */, unsigned char bWait /* r28 */, struct EResLoadCmdResult * pResult /* r29 */) {
     // Local variables
     unsigned int result; // r30
 }
 
 // Range: 0x802DADF4 -> 0x802DAE74
-class EResourceManager * EResourceLoaderImpl::FindResourceManager(class EResourceLoaderImpl * const this /* r29 */, const char * szDataType /* r30 */) {}
+// this: r29
+class EResourceManager * EResourceLoaderImpl::FindResourceManager(const char * szDataType /* r30 */) {}
 
 // Range: 0x802DAE74 -> 0x802DAEE0
 class EResourceManager * EResourceLoaderImpl::FindResourceManagerInternal(const char * szDataType /* r30 */) {
@@ -154,20 +174,23 @@ class EResourceManager * EResourceLoaderImpl::FindResourceManagerInternal(const 
 }
 
 // Range: 0x802DAEE0 -> 0x802DAF80
-void EResourceLoaderImpl::OpenFiles(class EResourceLoaderImpl * const this /* r30 */) {
+// this: r30
+void EResourceLoaderImpl::OpenFiles() {
     // Local variables
     class EResourceManager * pManager; // r30
     class EAutoMutex fmutex2'39; // r31
 }
 
 // Range: 0x802DAF80 -> 0x802DB090
-void EResourceLoaderImpl::CloseArchiveFile(class EResourceLoaderImpl * const this /* r31 */, class EResourceManager * manager /* r30 */) {
+// this: r31
+void EResourceLoaderImpl::CloseArchiveFile(class EResourceManager * manager /* r30 */) {
     // Local variables
     class EAutoMutex fmutex2'55; // r31
 }
 
 // Range: 0x802DB090 -> 0x802DB128
-void EResourceLoaderImpl::AddRefDelRefAllResources(class EResourceLoaderImpl * const this /* r30 */) {
+// this: r30
+void EResourceLoaderImpl::AddRefDelRefAllResources() {
     // Local variables
     class EResourceManager * pManager; // r30
 }
@@ -187,7 +210,8 @@ unsigned char EResourceLoaderImpl::FreeUnreferencedResources() {
 }
 
 // Range: 0x802DB220 -> 0x802DB2F8
-unsigned char EResourceLoaderImpl::FreeUnreferencedResources(class EResourceLoaderImpl * const this /* r30 */, const char * resourceType /* r29 */) {}
+// this: r30
+unsigned char EResourceLoaderImpl::FreeUnreferencedResources(const char * resourceType /* r29 */) {}
 
 // Range: 0x802DB2F8 -> 0x802DB354
 int EResourceLoaderImpl::GetUnreferencedResourceCount() {
@@ -197,13 +221,15 @@ int EResourceLoaderImpl::GetUnreferencedResourceCount() {
 }
 
 // Range: 0x802DB354 -> 0x802DB41C
-int EResourceLoaderImpl::GetUnreferencedResourceCount(class EResourceLoaderImpl * const this /* r29 */, const char * resourceType /* r28 */) {
+// this: r29
+int EResourceLoaderImpl::GetUnreferencedResourceCount(const char * resourceType /* r28 */) {
     // Local variables
     int count; // r29
 }
 
 // Range: 0x802DB41C -> 0x802DB65C
-void EResourceLoaderImpl::allocateGlobalIndex(class EResourceLoaderImpl * const this /* r31 */) {
+// this: r31
+void EResourceLoaderImpl::allocateGlobalIndex() {
     // Local variables
     int currentIndexNum; // r24
     class EString indexPath; // r1+0x10
@@ -226,21 +252,24 @@ unsigned int * EResourceLoaderImpl::getIndexPointer(const class EString & dataTy
 }
 
 // Range: 0x802DB700 -> 0x802DB7AC
-void EResourceLoaderImpl::Main(class EResourceLoaderImpl * const this /* r28 */) {
+// this: r28
+void EResourceLoaderImpl::Main() {
     // Local variables
     unsigned int msg; // r1+0x8
     unsigned char received; // r0
 }
 
 // Range: 0x802DB7AC -> 0x802DBA5C
-unsigned char EResourceLoaderImpl::ProcessMessage(class EResourceLoaderImpl * const this /* r30 */) {
+// this: r30
+unsigned char EResourceLoaderImpl::ProcessMessage() {
     // Local variables
     struct EResLoadCmd * pCmd; // r31
     class EResource * res; // r1+0x8
 }
 
 // Range: 0x802DBA5C -> 0x802DBC48
-class EResource * EResourceLoaderImpl::DoLoadResource(class EResourceLoaderImpl * const this /* r26 */, class EResourceManager * pManager /* r27 */, unsigned int id /* r28 */, class EFile * pSourceFile /* r29 */, unsigned int uStartOffset /* r1+0x8 */, unsigned int uLength /* r1+0xC */) {
+// this: r26
+class EResource * EResourceLoaderImpl::DoLoadResource(class EResourceManager * pManager /* r27 */, unsigned int id /* r28 */, class EFile * pSourceFile /* r29 */, unsigned int uStartOffset /* r1+0x8 */, unsigned int uLength /* r1+0xC */) {
     // Local variables
     class EFile * overrideFile; // r1+0x10
     unsigned int endPos; // r31

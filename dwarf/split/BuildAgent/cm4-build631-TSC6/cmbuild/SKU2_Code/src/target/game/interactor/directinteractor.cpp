@@ -5,7 +5,8 @@
     Code range: 0x8004DE60 -> 0x80050DA0
 */
 // Range: 0x8004DE60 -> 0x8004DF18
-void * DirectInteractor::DirectInteractor(class DirectInteractor * const this /* r30 */) {
+// this: r30
+DirectInteractor::DirectInteractor() {
     // Local variables
     class FlashPiMenu * pPiMenu; // r0
 
@@ -16,7 +17,8 @@ void * DirectInteractor::DirectInteractor(class DirectInteractor * const this /*
 }
 
 // Range: 0x8004DF70 -> 0x8004E024
-void * DirectInteractor::~DirectInteractor(class DirectInteractor * const this /* r30 */) {
+// this: r30
+DirectInteractor::~DirectInteractor() {
     // Local variables
     class FlashPiMenu * pPiMenu; // r0
 
@@ -26,13 +28,16 @@ void * DirectInteractor::~DirectInteractor(class DirectInteractor * const this /
 }
 
 // Range: 0x8004E024 -> 0x8004E05C
-void DirectInteractor::OnCreate(class DirectInteractor * const this /* r31 */) {}
+// this: r31
+void DirectInteractor::OnCreate() {}
 
 // Range: 0x8004E05C -> 0x8004E094
-void DirectInteractor::OnDestroy(class DirectInteractor * const this /* r31 */) {}
+// this: r31
+void DirectInteractor::OnDestroy() {}
 
 // Range: 0x8004E094 -> 0x8004E200
-void DirectInteractor::OnStart(class DirectInteractor * const this /* r31 */) {
+// this: r31
+void DirectInteractor::OnStart() {
     // Local variables
     struct ButtonSemantic butSems[3]; // r1+0x30
     struct StickSemantic stickSems[4]; // r1+0x10
@@ -43,13 +48,15 @@ void DirectInteractor::OnStart(class DirectInteractor * const this /* r31 */) {
 }
 
 // Range: 0x8004E200 -> 0x8004E264
-void DirectInteractor::OnStop(class DirectInteractor * const this /* r31 */) {
+// this: r31
+void DirectInteractor::OnStop() {
     // References
     // -> class EGlobal _globals;
 }
 
 // Range: 0x8004E264 -> 0x8004E310
-void DirectInteractor::ParseControls(class DirectInteractor * const this /* r30 */) {
+// this: r30
+void DirectInteractor::ParseControls() {
     // References
     // -> class NewControlParms s_newControlParms;
 }
@@ -62,7 +69,8 @@ enum eAnimState DirectInteractor::GetDesiredAnimState() {
 }
 
 // Range: 0x8004E38C -> 0x8004E53C
-unsigned char DirectInteractor::InitPlayerPos(class DirectInteractor * const this /* r28 */) {
+// this: r28
+unsigned char DirectInteractor::InitPlayerPos() {
     // Local variables
     class EVec3 selectedSimPos; // r1+0x20
     unsigned char bRetVal; // r29
@@ -74,7 +82,8 @@ unsigned char DirectInteractor::InitPlayerPos(class DirectInteractor * const thi
 }
 
 // Range: 0x8004E53C -> 0x8004E600
-void DirectInteractor::UpdatePlumbBob(class DirectInteractor * const this /* r31 */) {
+// this: r31
+void DirectInteractor::UpdatePlumbBob() {
     // Local variables
     class EVec3 simPos; // r1+0x8
     class SAnimator2 * anim; // r0
@@ -82,7 +91,8 @@ void DirectInteractor::UpdatePlumbBob(class DirectInteractor * const this /* r31
 }
 
 // Range: 0x8004E600 -> 0x8004E684
-void DirectInteractor::UpdateControlStatus(class DirectInteractor * const this /* r31 */) {
+// this: r31
+void DirectInteractor::UpdateControlStatus() {
     // Local variables
     class SAnimator2 * animator; // r0
 }
@@ -94,7 +104,8 @@ unsigned char DirectInteractor::CameraDirectorPermitsDirectControl() {
 }
 
 // Range: 0x8004E6CC -> 0x8004E724
-void DirectInteractor::SetVelocityModifiers(class DirectInteractor * const this /* r30 */) {
+// this: r30
+void DirectInteractor::SetVelocityModifiers() {
     // Local variables
     class SAnimator2 * animator; // r31
 }
@@ -106,7 +117,8 @@ void DirectInteractor::SendNeutralFreeMoveInput() {
 }
 
 // Range: 0x8004E778 -> 0x8004E818
-void DirectInteractor::InterpretFreeMoveInput(class DirectInteractor * const this /* r29 */) {
+// this: r29
+void DirectInteractor::InterpretFreeMoveInput() {
     // Local variables
     class SAnimator2 * animator; // r31
     enum eAnimState desiredAnimState; // r30
@@ -115,7 +127,8 @@ void DirectInteractor::InterpretFreeMoveInput(class DirectInteractor * const thi
 }
 
 // Range: 0x8004E818 -> 0x8004F550
-void DirectInteractor::Update(class DirectInteractor * const this /* r30 */, float delta /* f31 */) {
+// this: r30
+void DirectInteractor::Update(float delta /* f31 */) {
     // Local variables
     class FlashPiMenu * pPiMenu; // r31
     class cXPerson * pNewPlayer; // r3
@@ -153,19 +166,23 @@ void DirectInteractor::Update(class DirectInteractor * const this /* r30 */, flo
 }
 
 // Range: 0x8004F550 -> 0x8004F5A4
-void DirectInteractor::UpdateInteractorPos(class DirectInteractor * const this /* r31 */) {
+// this: r31
+void DirectInteractor::UpdateInteractorPos() {
     // Local variables
     class SAnimator2 * animator; // r0
 }
 
 // Range: 0x8004F5A4 -> 0x8004F5EC
-void DirectInteractor::SetAdvanceRightISim(class DirectInteractor * const this /* r31 */) {}
+// this: r31
+void DirectInteractor::SetAdvanceRightISim() {}
 
 // Range: 0x8004F5EC -> 0x8004F634
-void DirectInteractor::SetAdvanceLeftISim(class DirectInteractor * const this /* r31 */) {}
+// this: r31
+void DirectInteractor::SetAdvanceLeftISim() {}
 
 // Range: 0x8004F634 -> 0x8004F67C
-void DirectInteractor::SetExpandedMenuISim(class DirectInteractor * const this /* r31 */) {}
+// this: r31
+void DirectInteractor::SetExpandedMenuISim() {}
 
 // Range: 0x8004F67C -> 0x8004F6A4
 void DirectInteractor::SetLeftArrow() {
@@ -180,7 +197,8 @@ void DirectInteractor::SetRightArrow() {
 }
 
 // Range: 0x8004F6CC -> 0x8004F754
-void DirectInteractor::ResetDisplayArrows(class DirectInteractor * const this /* r29 */, class TNodeList & objList /* r30 */, class NLIteratorPtrType * & it /* r31 */) {}
+// this: r29
+void DirectInteractor::ResetDisplayArrows(class TNodeList & objList /* r30 */, class NLIteratorPtrType * & it /* r31 */) {}
 
 // Range: 0x8004F754 -> 0x8004F884
 void DirectInteractor::GetInteractionMenuObjectList(class TNodeList & objList /* r28 */) {
@@ -200,7 +218,8 @@ void DirectInteractor::GetInteractionMenuObjectList(class TNodeList & objList /*
 unsigned char DirectInteractor::IsSimulatorPaused() {}
 
 // Range: 0x8004F8B8 -> 0x8004FB98
-unsigned char DirectInteractor::ShouldHighlightObject(class DirectInteractor * const this /* r26 */, class cXObject * obj /* r27 */, float maxDist /* f30 */) {
+// this: r26
+unsigned char DirectInteractor::ShouldHighlightObject(class cXObject * obj /* r27 */, float maxDist /* f30 */) {
     // Local variables
     unsigned char shouldHighlight; // r28
     class cXPerson * selectedSim; // r29
@@ -224,7 +243,8 @@ unsigned char DirectInteractor::ShouldHighlightObject(class DirectInteractor * c
 }
 
 // Range: 0x8004FB98 -> 0x8004FBFC
-void DirectInteractor::GetInteractorInfo(class DirectInteractor * const this /* r30 */, struct InteractorInfo & info /* r31 */) {
+// this: r30
+void DirectInteractor::GetInteractorInfo(struct InteractorInfo & info /* r31 */) {
     // Local variables
     const class EVec3 & physPos; // r0
 }
@@ -236,7 +256,8 @@ void DirectInteractor::StartCancelTimer() {}
 void DirectInteractor::ClearCancelTimer() {}
 
 // Range: 0x8004FC24 -> 0x8004FC90
-void DirectInteractor::CancelQueuedActions(class DirectInteractor * const this /* r31 */) {
+// this: r31
+void DirectInteractor::CancelQueuedActions() {
     // Local variables
     class SAnimator2 * animator; // r0
 }
@@ -248,13 +269,16 @@ unsigned char DirectInteractor::CheckCancelTimer() {
 }
 
 // Range: 0x8004FCC8 -> 0x8004FCD8
-void DirectInteractor::PreDraw(class DirectInteractor * const this /* r0 */) {}
+// this: r0
+void DirectInteractor::PreDraw() {}
 
 // Range: 0x8004FCD8 -> 0x8004FCE8
-void DirectInteractor::Draw(class DirectInteractor * const this /* r0 */) {}
+// this: r0
+void DirectInteractor::Draw() {}
 
 // Range: 0x8004FCE8 -> 0x8004FE3C
-void DirectInteractor::OnCommandRepeated(class DirectInteractor * const this /* r29 */, enum InteractorCommand cmd /* r30 */) {
+// this: r29
+void DirectInteractor::OnCommandRepeated(enum InteractorCommand cmd /* r30 */) {
     // Local variables
     class cXPerson * player; // r31
     unsigned char doSwitch; // r31
@@ -266,7 +290,8 @@ void DirectInteractor::OnCommandRepeated(class DirectInteractor * const this /* 
 }
 
 // Range: 0x8004FE3C -> 0x80050014
-void DirectInteractor::OnCommandPressed(class DirectInteractor * const this /* r30 */, enum InteractorCommand cmd /* r31 */) {
+// this: r30
+void DirectInteractor::OnCommandPressed(enum InteractorCommand cmd /* r31 */) {
     // Local variables
     class cXPerson * player; // r29
     unsigned char doSwitch; // r28
@@ -284,19 +309,22 @@ void DirectInteractor::OnCommandReleased() {
 }
 
 // Range: 0x800500C4 -> 0x80050190
-void DirectInteractor::OnCommandUpdate(class DirectInteractor * const this /* r30 */, enum InteractorCommand cmd /* r31 */, float value /* f31 */) {
+// this: r30
+void DirectInteractor::OnCommandUpdate(enum InteractorCommand cmd /* r31 */, float value /* f31 */) {
     // References
     // -> class EGlobal _globals;
 }
 
 // Range: 0x80050190 -> 0x800501C4
-void DirectInteractor::ResetInputState(class DirectInteractor * const this /* r31 */) {}
+// this: r31
+void DirectInteractor::ResetInputState() {}
 
 // Range: 0x800501C4 -> 0x800501CC
 float DirectInteractor::GetSelectionRadius() {}
 
 // Range: 0x800501CC -> 0x80050594
-void DirectInteractor::ExecuteActionMenu(class DirectInteractor * const this /* r31 */) {
+// this: r31
+void DirectInteractor::ExecuteActionMenu() {
     // Local variables
     class TNodeList objList; // r1+0x44
     class ObjectSlot * os; // r30
@@ -326,7 +354,8 @@ void DirectInteractor::ExecuteActionMenu(class DirectInteractor * const this /* 
 }
 
 // Range: 0x80050594 -> 0x8005067C
-void DirectInteractor::ExecuteObjectActionMenu(class DirectInteractor * const this /* r29 */, class cXObject * pObj /* r30 */) {
+// this: r29
+void DirectInteractor::ExecuteObjectActionMenu(class cXObject * pObj /* r30 */) {
     // Local variables
     class TNodeList objList; // r1+0x8
     class ISimInstance * pData; // r0
@@ -346,10 +375,12 @@ void DirectInteractor::StopInObjectMenu() {
 unsigned char DirectInteractor::ChooseAction(class Interaction * pAction /* r31 */) {}
 
 // Range: 0x800506F4 -> 0x80050738
-void DirectInteractor::SetupCamera(class DirectInteractor * const this /* r31 */) {}
+// this: r31
+void DirectInteractor::SetupCamera() {}
 
 // Range: 0x80050738 -> 0x80050BB4
-void DirectInteractor::UpdateObjectHighlights(class DirectInteractor * const this /* r31 */, class EIObjectMan * objMan /* r25 */) {
+// this: r31
+void DirectInteractor::UpdateObjectHighlights(class EIObjectMan * objMan /* r25 */) {
     // Local variables
     const class vector * objects; // r30
     class cXObject * pSelectedObject; // r28
@@ -385,7 +416,8 @@ void DirectInteractor::SetAutonomous() {
 }
 
 // Range: 0x80050BDC -> 0x80050C90
-void DirectInteractor::ResetIdleTime(class DirectInteractor * const this /* r30 */) {
+// this: r30
+void DirectInteractor::ResetIdleTime() {
     // Local variables
     class SAnimator2 * pAnimator; // r31
 

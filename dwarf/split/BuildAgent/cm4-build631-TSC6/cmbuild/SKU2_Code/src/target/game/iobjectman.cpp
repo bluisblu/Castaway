@@ -5,13 +5,15 @@
     Code range: 0x8023A1B4 -> 0x8023AF70
 */
 // Range: 0x8023A1B4 -> 0x8023A1FC
-void * EIObjectMan::EIObjectMan(class EIObjectMan * const this /* r30 */, class EHouse * pHouse /* r31 */) {}
+// this: r30
+EIObjectMan::EIObjectMan(class EHouse * pHouse /* r31 */) {}
 
 // Range: 0x8023A254 -> 0x8023A258
 void EIObjectMan::Init() {}
 
 // Range: 0x8023A258 -> 0x8023A2C0
-void * EIObjectMan::~EIObjectMan(class EIObjectMan * const this /* r30 */) {}
+// this: r30
+EIObjectMan::~EIObjectMan() {}
 
 // Range: 0x8023A2C0 -> 0x8023A350
 void EIObjectMan::TurnOffAllHighlights() {
@@ -22,7 +24,8 @@ void EIObjectMan::TurnOffAllHighlights() {
 }
 
 // Range: 0x8023A350 -> 0x8023A4F4
-void EIObjectMan::GetObjectsWithCursorHighlight(class EIObjectMan * const this /* r27 */, unsigned int flag /* r25 */, class TNodeList & vList /* r26 */) {
+// this: r27
+void EIObjectMan::GetObjectsWithCursorHighlight(unsigned int flag /* r25 */, class TNodeList & vList /* r26 */) {
     // Local variables
     class TileList paintingTileList; // r1+0x18
     class ObjectModule * pModule; // r0
@@ -47,16 +50,19 @@ void EIObjectMan::GetObjects(class TNodeList & vList /* r30 */) {
 }
 
 // Range: 0x8023A55C -> 0x8023A5C0
-void EIObjectMan::FreeSimsObjectInstance(class EIObjectMan * const this /* r30 */, class ISimInstance * pInst /* r31 */) {}
+// this: r30
+void EIObjectMan::FreeSimsObjectInstance(class ISimInstance * pInst /* r31 */) {}
 
 // Range: 0x8023A5C0 -> 0x8023A60C
-void EIObjectMan::AttachObject(class EIObjectMan * const this /* r30 */, class ISimInstance * pModel /* r31 */) {
+// this: r30
+void EIObjectMan::AttachObject(class ISimInstance * pModel /* r31 */) {
     // Local variables
     unsigned int handel; // r0
 }
 
 // Range: 0x8023A60C -> 0x8023A7E4
-class ISimInstance * EIObjectMan::AddObject(class EIObjectMan * const this /* r28 */, class cXObject * pXObject /* r29 */, class ERLevel * pLevel /* r30 */) {
+// this: r28
+class ISimInstance * EIObjectMan::AddObject(class cXObject * pXObject /* r29 */, class ERLevel * pLevel /* r30 */) {
     // Local variables
     class ISimInstance * pModel; // r31
     unsigned int handle; // r0
@@ -64,14 +70,16 @@ class ISimInstance * EIObjectMan::AddObject(class EIObjectMan * const this /* r2
 }
 
 // Range: 0x8023A7E4 -> 0x8023A884
-void EIObjectMan::RemoveObjectsFromHouse(class EIObjectMan * const this /* r28 */, class ERLevel * pLevel /* r29 */) {
+// this: r28
+void EIObjectMan::RemoveObjectsFromHouse(class ERLevel * pLevel /* r29 */) {
     // Local variables
     class RBIteratorPtrType * i; // r31
     class ISimInstance * pIModel; // r30
 }
 
 // Range: 0x8023A884 -> 0x8023AB00
-class ISimInstance * EIObjectMan::AllocSimsObjectInstance(class EIObjectMan * const this /* r28 */, class cXObject * pXOb /* r29 */) {
+// this: r28
+class ISimInstance * EIObjectMan::AllocSimsObjectInstance(class cXObject * pXOb /* r29 */) {
     // Local variables
     struct ObjDefinition * pDef; // r31
     class CTilePt tile; // r1+0x8
@@ -93,7 +101,8 @@ unsigned char APlacementObject() {
 }
 
 // Range: 0x8023AB6C -> 0x8023AE9C
-void EIObjectMan::CountObjects(class EIObjectMan * const this /* r25 */, float & uniqueObjects /* r30 */, float & totalObjects /* r22 */, float & totalObjectsNodes /* r23 */, float & totalStructureObjects /* r24 */, float & modelRam /* r31 */) {
+// this: r25
+void EIObjectMan::CountObjects(float & uniqueObjects /* r30 */, float & totalObjects /* r22 */, float & totalObjectsNodes /* r23 */, float & totalStructureObjects /* r24 */, float & modelRam /* r31 */) {
     // Local variables
     float cost; // f28
     int skipCount; // r27

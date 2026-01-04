@@ -5,7 +5,8 @@
     Code range: 0x80310230 -> 0x80310560
 */
 // Range: 0x80310230 -> 0x803102F4
-void * AptValueSet::~AptValueSet(class AptValueSet * const this /* r25 */) {
+// this: r25
+AptValueSet::~AptValueSet() {
     // Local variables
     int nCount; // r28
     int i; // r27
@@ -16,7 +17,8 @@ void * AptValueSet::~AptValueSet(class AptValueSet * const this /* r25 */) {
 }
 
 // Range: 0x803102F4 -> 0x803103B8
-void * AptValueSet::~AptValueSet(class AptValueSet * const this /* r25 */) {
+// this: r25
+AptValueSet::~AptValueSet() {
     // Local variables
     int nCount; // r28
     int i; // r27
@@ -27,7 +29,8 @@ void * AptValueSet::~AptValueSet(class AptValueSet * const this /* r25 */) {
 }
 
 // Range: 0x803103B8 -> 0x80310400
-void * AptValueSet::AptValueSet(class AptValueSet * const this /* r31 */) {
+// this: r31
+AptValueSet::AptValueSet() {
     // References
     // -> class DOGMA_PoolManager * gpNonGCPoolManager;
 }
@@ -36,7 +39,8 @@ void * AptValueSet::AptValueSet(class AptValueSet * const this /* r31 */) {
 void AptValueSet::clear() {}
 
 // Range: 0x8031041C -> 0x80310464
-void * AptValueSet::AptValueSet(class AptValueSet * const this /* r31 */) {
+// this: r31
+AptValueSet::AptValueSet() {
     // References
     // -> class DOGMA_PoolManager * gpNonGCPoolManager;
 }
@@ -51,7 +55,8 @@ int AptValueSet::capacity() {}
 int AptValueSet::capacity() {}
 
 // Range: 0x80310490 -> 0x80310560
-int AptValueSet::remove(class AptValueSet * const this /* r30 */) {
+// this: r30
+int AptValueSet::remove() {
     // Local variables
     int i; // r8
 
@@ -60,12 +65,6 @@ int AptValueSet::remove(class AptValueSet * const this /* r30 */) {
 }
 
 
-/*
-    Compile unit: C:\dev\Tsc5\src\target\external\apt\source\Apt\_AptSet.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x803177D0 -> 0x80317874
-*/
 // Range: 0x803177D0 -> 0x80317838
 void AptValueSet::add() {
     // Local variables
@@ -82,14 +81,9 @@ unsigned char AptValueSet::has() {
 }
 
 
-/*
-    Compile unit: C:\dev\Tsc5\src\target\external\apt\source\Apt\_AptSet.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x8031A388 -> 0x8031A458
-*/
 // Range: 0x8031A388 -> 0x8031A458
-int AptValueSet::remove(class AptValueSet * const this /* r30 */) {
+// this: r30
+int AptValueSet::remove() {
     // Local variables
     int i; // r8
 
@@ -98,12 +92,6 @@ int AptValueSet::remove(class AptValueSet * const this /* r30 */) {
 }
 
 
-/*
-    Compile unit: C:\dev\Tsc5\src\target\external\apt\source\Apt\_AptSet.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x80327B08 -> 0x80327BAC
-*/
 // Range: 0x80327B08 -> 0x80327B70
 void AptValueSet::add() {
     // Local variables

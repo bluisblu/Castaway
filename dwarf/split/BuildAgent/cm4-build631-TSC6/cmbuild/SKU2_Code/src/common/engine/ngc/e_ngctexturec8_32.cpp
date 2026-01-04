@@ -5,21 +5,24 @@
     Code range: 0x802D0C14 -> 0x802D12E8
 */
 // Range: 0x802D0C14 -> 0x802D0CA8
-void * ENgcTextureC8_32::ENgcTextureC8_32(class ENgcTextureC8_32 * const this /* r31 */) {
+// this: r31
+ENgcTextureC8_32::ENgcTextureC8_32() {
     // References
     // -> struct [anonymous] __vt__16ENgcTextureC8_32;
     // -> struct [anonymous] __vt__15ENgcTextureBase;
 }
 
 // Range: 0x802D0CA8 -> 0x802D0D68
-void * ENgcTextureC8_32::~ENgcTextureC8_32(class ENgcTextureC8_32 * const this /* r29 */) {
+// this: r29
+ENgcTextureC8_32::~ENgcTextureC8_32() {
     // References
     // -> class ETextureManager _textureman;
     // -> struct [anonymous] __vt__16ENgcTextureC8_32;
 }
 
 // Range: 0x802D0D68 -> 0x802D0E1C
-unsigned char ENgcTextureC8_32::Create(class ENgcTextureC8_32 * const this /* r28 */, const struct ETextureDef & td /* r29 */) {
+// this: r28
+unsigned char ENgcTextureC8_32::Create(const struct ETextureDef & td /* r29 */) {
     // Local variables
     unsigned char status; // r30
 
@@ -34,20 +37,23 @@ void ENgcTextureC8_32::SwizzleImage() {}
 void ENgcTextureC8_32::UnswizzleImage() {}
 
 // Range: 0x802D0E44 -> 0x802D0EF4
-void * ENgcTextureC8_32::UpdatePaletteDeswizzled(class ENgcTextureC8_32 * const this /* r31 */) {
+// this: r31
+void * ENgcTextureC8_32::UpdatePaletteDeswizzled() {
     // Local variables
     unsigned long i; // r10
 }
 
 // Range: 0x802D0EF4 -> 0x802D102C
-void ENgcTextureC8_32::UpdateEnd(class ENgcTextureC8_32 * const this /* r31 */) {
+// this: r31
+void ENgcTextureC8_32::UpdateEnd() {
     // Local variables
     unsigned char * color; // r8
     unsigned long i; // r9
 }
 
 // Range: 0x802D102C -> 0x802D12D8
-void ENgcTextureC8_32::Select(class ENgcTextureC8_32 * const this /* r30 */, int texturecount /* r31 */) {
+// this: r30
+void ENgcTextureC8_32::Select(int texturecount /* r31 */) {
     // References
     // -> static enum _GXTlut sTlut;
 }

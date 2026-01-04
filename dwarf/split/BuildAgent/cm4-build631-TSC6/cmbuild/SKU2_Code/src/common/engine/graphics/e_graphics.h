@@ -8,12 +8,6 @@
 void EGraphics::DrawCensorRects() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\common\engine\graphics\e_graphics.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x8002FE2C -> 0x8002FE50
-*/
 // Range: 0x8002FE2C -> 0x8002FE34
 unsigned char EGraphics::NeedFlushToDestroy() {}
 
@@ -30,32 +24,14 @@ void EGraphics::DiscardAllVram() {}
 class ERenderSurface * EGraphics::GetShadowMapRenderSurface() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\common\engine\graphics\e_graphics.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x800601D0 -> 0x800601D8
-*/
 // Range: 0x800601D0 -> 0x800601D8
 unsigned char EGraphics::GetWiiWideScreen() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\common\engine\graphics\e_graphics.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x8008A180 -> 0x8008A188
-*/
 // Range: 0x8008A180 -> 0x8008A188
 class ETexture * EGraphics::GetShadowMapTexture() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\common\engine\graphics\e_graphics.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x80174530 -> 0x80174548
-*/
 // Range: 0x80174530 -> 0x80174538
 int EGraphics::GetActualScreenXSize() {}
 
@@ -66,22 +42,10 @@ int EGraphics::GetActualScreenYSize() {}
 float EGraphics::GetWiiWideScreenXOffsetScaled() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\common\engine\graphics\e_graphics.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x801A1D48 -> 0x801A1D50
-*/
 // Range: 0x801A1D48 -> 0x801A1D50
 float EGraphics::GetWiiWideScreenXOffset() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\common\engine\graphics\e_graphics.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x801FA68C -> 0x801FA6B4
-*/
 // Range: 0x801FA68C -> 0x801FA694
 unsigned char EGraphics::FrameBufferClearFlag() {}
 
@@ -98,12 +62,6 @@ void EGraphics::SetScreenXOffset() {}
 float EGraphics::GetWiiWideScreenXScale() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\common\engine\graphics\e_graphics.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x80286F04 -> 0x80286F78
-*/
 // Range: 0x80286F04 -> 0x80286F0C
 float EGraphics::GetNearZVal() {}
 

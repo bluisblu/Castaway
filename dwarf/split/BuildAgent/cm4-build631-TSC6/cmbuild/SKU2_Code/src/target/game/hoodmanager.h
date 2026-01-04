@@ -5,6 +5,7 @@
     Code range: 0x8022E124 -> 0x8022E174
 */
 // Range: 0x8022E124 -> 0x8022E174
-void * EFamilyConstructData::EFamilyConstructData(class EFamilyConstructData * const this /* r31 */) {}
+// this: r31
+EFamilyConstructData::EFamilyConstructData() {}
 
 

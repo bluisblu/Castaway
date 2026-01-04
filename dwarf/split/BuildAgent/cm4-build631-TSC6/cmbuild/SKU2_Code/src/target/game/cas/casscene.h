@@ -23,7 +23,8 @@ void CasScene::DrawRoom() {}
 class E3DWindow * CasScene::Get3DWindow() {}
 
 // Range: 0x8002AD08 -> 0x8002AD98
-unsigned char CasScene::QueryInterface(class CasScene * const this /* r30 */, void * ppvObject /* r31 */) {}
+// this: r30
+unsigned char CasScene::QueryInterface(void * ppvObject /* r31 */) {}
 
 // Range: 0x8002AD98 -> 0x8002ADA0
 enum eSlideShowPositions CasScene::MapSimIndexToCrewPosition() {}

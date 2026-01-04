@@ -5,7 +5,8 @@
     Code range: 0x801800DC -> 0x80180E30
 */
 // Range: 0x801800DC -> 0x8018017C
-void * GetVariableCommandTable::GetVariableCommandTable(class GetVariableCommandTable * const this /* r29 */) {
+// this: r29
+GetVariableCommandTable::GetVariableCommandTable() {
     // Local variables
     class GetVariableCommandTableRecord * prev; // r31
     int i; // r30
@@ -15,7 +16,8 @@ void * GetVariableCommandTable::GetVariableCommandTable(class GetVariableCommand
 }
 
 // Range: 0x8018017C -> 0x80180238
-void * GetVariableCommandTable::~GetVariableCommandTable(class GetVariableCommandTable * const this /* r29 */) {
+// this: r29
+GetVariableCommandTable::~GetVariableCommandTable() {
     // Local variables
     class GetVariableCommandTableRecord * record; // r5
     class GetVariableCommandTableRecord * next; // r31
@@ -34,13 +36,15 @@ void GetVariableCommandTable::AddRecord() {
 void GetVariableCommandTable::RemoveRecord() {}
 
 // Range: 0x80180338 -> 0x801803D8
-unsigned char GetVariableCommandTable::InstallCommand(class GetVariableCommandTable * const this /* r28 */, const char * command /* r29 */, class CBFunctor1wRet & ftor /* r30 */) {
+// this: r28
+unsigned char GetVariableCommandTable::InstallCommand(const char * command /* r29 */, class CBFunctor1wRet & ftor /* r30 */) {
     // Local variables
     class GetVariableCommandTableRecord * record; // r31
 }
 
 // Range: 0x801803D8 -> 0x8018044C
-unsigned char GetVariableCommandTable::UnInstallAllCommands(class GetVariableCommandTable * const this /* r29 */, class CBFunctor1wRet & ftor /* r30 */) {
+// this: r29
+unsigned char GetVariableCommandTable::UnInstallAllCommands(class CBFunctor1wRet & ftor /* r30 */) {
     // Local variables
     unsigned char rc; // r3
     class GetVariableCommandTableRecord * record; // r5
@@ -48,13 +52,15 @@ unsigned char GetVariableCommandTable::UnInstallAllCommands(class GetVariableCom
 }
 
 // Range: 0x8018044C -> 0x80180524
-char * GetVariableCommandTable::ExecuteCommand(class GetVariableCommandTable * const this /* r27 */, const char * command /* r28 */, const char * paramString /* r29 */) {
+// this: r27
+char * GetVariableCommandTable::ExecuteCommand(const char * command /* r28 */, const char * paramString /* r29 */) {
     // Local variables
     class GetVariableCommandTableRecord * record; // r30
 }
 
 // Range: 0x80180524 -> 0x801805C4
-void * SetVariableCommandTable::SetVariableCommandTable(class SetVariableCommandTable * const this /* r29 */) {
+// this: r29
+SetVariableCommandTable::SetVariableCommandTable() {
     // Local variables
     class SetVariableCommandTableRecord * prev; // r31
     int i; // r30
@@ -64,7 +70,8 @@ void * SetVariableCommandTable::SetVariableCommandTable(class SetVariableCommand
 }
 
 // Range: 0x801805C4 -> 0x80180680
-void * SetVariableCommandTable::~SetVariableCommandTable(class SetVariableCommandTable * const this /* r29 */) {
+// this: r29
+SetVariableCommandTable::~SetVariableCommandTable() {
     // Local variables
     class SetVariableCommandTableRecord * record; // r5
     class SetVariableCommandTableRecord * next; // r31
@@ -83,19 +90,22 @@ void SetVariableCommandTable::AddRecord() {
 void SetVariableCommandTable::RemoveRecord() {}
 
 // Range: 0x80180780 -> 0x80180820
-unsigned char SetVariableCommandTable::InstallCommand(class SetVariableCommandTable * const this /* r28 */, const char * command /* r29 */, class CBFunctor2 & ftor /* r30 */) {
+// this: r28
+unsigned char SetVariableCommandTable::InstallCommand(const char * command /* r29 */, class CBFunctor2 & ftor /* r30 */) {
     // Local variables
     class SetVariableCommandTableRecord * record; // r31
 }
 
 // Range: 0x80180820 -> 0x801808A4
-unsigned char SetVariableCommandTable::UnInstallCommand(class SetVariableCommandTable * const this /* r29 */, const char * command /* r30 */) {
+// this: r29
+unsigned char SetVariableCommandTable::UnInstallCommand(const char * command /* r30 */) {
     // Local variables
     class SetVariableCommandTableRecord * record; // r31
 }
 
 // Range: 0x801808A4 -> 0x80180918
-unsigned char SetVariableCommandTable::UnInstallAllCommands(class SetVariableCommandTable * const this /* r29 */, class CBFunctor2 & ftor /* r30 */) {
+// this: r29
+unsigned char SetVariableCommandTable::UnInstallAllCommands(class CBFunctor2 & ftor /* r30 */) {
     // Local variables
     unsigned char rc; // r3
     class SetVariableCommandTableRecord * record; // r5
@@ -103,13 +113,15 @@ unsigned char SetVariableCommandTable::UnInstallAllCommands(class SetVariableCom
 }
 
 // Range: 0x80180918 -> 0x801809E8
-void SetVariableCommandTable::ExecuteCommand(class SetVariableCommandTable * const this /* r26 */, const char * command /* r27 */, const char * szCommand /* r28 */, const char * szParams /* r29 */) {
+// this: r26
+void SetVariableCommandTable::ExecuteCommand(const char * command /* r27 */, const char * szCommand /* r28 */, const char * szParams /* r29 */) {
     // Local variables
     class SetVariableCommandTableRecord * record; // r30
 }
 
 // Range: 0x801809E8 -> 0x80180A88
-void * GetLocalizableCommandTable::GetLocalizableCommandTable(class GetLocalizableCommandTable * const this /* r29 */) {
+// this: r29
+GetLocalizableCommandTable::GetLocalizableCommandTable() {
     // Local variables
     class GetLocalizableCommandTableRecord * prev; // r31
     int i; // r30
@@ -119,7 +131,8 @@ void * GetLocalizableCommandTable::GetLocalizableCommandTable(class GetLocalizab
 }
 
 // Range: 0x80180A88 -> 0x80180B44
-void * GetLocalizableCommandTable::~GetLocalizableCommandTable(class GetLocalizableCommandTable * const this /* r29 */) {
+// this: r29
+GetLocalizableCommandTable::~GetLocalizableCommandTable() {
     // Local variables
     class GetLocalizableCommandTableRecord * record; // r5
     class GetLocalizableCommandTableRecord * next; // r31
@@ -138,13 +151,15 @@ void GetLocalizableCommandTable::AddRecord() {
 void GetLocalizableCommandTable::RemoveRecord() {}
 
 // Range: 0x80180C44 -> 0x80180CE4
-unsigned char GetLocalizableCommandTable::InstallCommand(class GetLocalizableCommandTable * const this /* r28 */, const char * command /* r29 */, class CBFunctor1wRet & ftor /* r30 */) {
+// this: r28
+unsigned char GetLocalizableCommandTable::InstallCommand(const char * command /* r29 */, class CBFunctor1wRet & ftor /* r30 */) {
     // Local variables
     class GetLocalizableCommandTableRecord * record; // r31
 }
 
 // Range: 0x80180CE4 -> 0x80180D58
-unsigned char GetLocalizableCommandTable::UnInstallAllCommands(class GetLocalizableCommandTable * const this /* r29 */, class CBFunctor1wRet & ftor /* r30 */) {
+// this: r29
+unsigned char GetLocalizableCommandTable::UnInstallAllCommands(class CBFunctor1wRet & ftor /* r30 */) {
     // Local variables
     unsigned char rc; // r3
     class GetLocalizableCommandTableRecord * record; // r5
@@ -152,7 +167,8 @@ unsigned char GetLocalizableCommandTable::UnInstallAllCommands(class GetLocaliza
 }
 
 // Range: 0x80180D58 -> 0x80180E30
-unsigned short * GetLocalizableCommandTable::ExecuteCommand(class GetLocalizableCommandTable * const this /* r27 */, const char * command /* r28 */, const char * paramString /* r29 */) {
+// this: r27
+unsigned short * GetLocalizableCommandTable::ExecuteCommand(const char * command /* r28 */, const char * paramString /* r29 */) {
     // Local variables
     class GetLocalizableCommandTableRecord * record; // r30
 }

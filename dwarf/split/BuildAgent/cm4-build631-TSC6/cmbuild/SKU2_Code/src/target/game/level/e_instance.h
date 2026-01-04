@@ -26,34 +26,16 @@ void EBaseInstance::SetInstAlpha() {}
 float EBaseInstance::GetInstAlpha() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\target\game\level\e_instance.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x8004B794 -> 0x8004B798
-*/
 // Range: 0x8004B794 -> 0x8004B798
 void EInstance::Init() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\target\game\level\e_instance.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x80052498 -> 0x800524A0
-*/
 // Range: 0x80052498 -> 0x800524A0
 int EInstance::GetContext() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\target\game\level\e_instance.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x80083148 -> 0x800834C8
-*/
 // Range: 0x80083148 -> 0x80083178
-void * EBaseInstance::EBaseInstance() {
+EBaseInstance::EBaseInstance() {
     // References
     // -> struct [anonymous] __vt__13EBaseInstance;
 }
@@ -152,7 +134,8 @@ void EBaseInstance::GetBoundSphere() {}
 unsigned int EBaseInstance::GetInstanceFlags() {}
 
 // Range: 0x800832CC -> 0x8008334C
-void EInstance::ResetLocation(class EInstance * const this /* r31 */) {
+// this: r31
+void EInstance::ResetLocation() {
     // Local variables
     signed short lightLocationId; // r1+0xA
     signed short locationId; // r1+0x8
@@ -262,12 +245,6 @@ void EInstance::Construct() {}
 class EInstance * EInstance::New() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\target\game\level\e_instance.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x80218230 -> 0x80218244
-*/
 // Range: 0x80218230 -> 0x80218238
 void EInstance::SetShadowInterpolated() {}
 

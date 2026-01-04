@@ -5,7 +5,8 @@
     Code range: 0x802CA22C -> 0x802CC148
 */
 // Range: 0x802CA22C -> 0x802CA7B0
-void ENgcRenderStateCache::InitToDefaults(class ENgcRenderStateCache * const this /* r29 */, unsigned short viWidth /* r30 */, unsigned short viHeight /* r31 */) {
+// this: r29
+void ENgcRenderStateCache::InitToDefaults(unsigned short viWidth /* r30 */, unsigned short viHeight /* r31 */) {
     // Local variables
     int i; // r0
     enum _GXTevStageID stage; // r0
@@ -45,7 +46,8 @@ void ENgcRenderStateCache::RestoreViewportState() {
 }
 
 // Range: 0x802CA9C0 -> 0x802CB140
-void ENgcRenderStateCache::Reset(class ENgcRenderStateCache * const this /* r29 */, unsigned char isWeighted /* r30 */) {
+// this: r29
+void ENgcRenderStateCache::Reset(unsigned char isWeighted /* r30 */) {
     // Local variables
     int w; // r5
     int i; // r27
@@ -68,7 +70,8 @@ void ENgcRenderStateCache::Reset(class ENgcRenderStateCache * const this /* r29 
 }
 
 // Range: 0x802CB140 -> 0x802CC034
-void ENgcRenderStateCache::Apply(class ENgcRenderStateCache * const this /* r28 */, unsigned char isWeighted /* r29 */) {
+// this: r28
+void ENgcRenderStateCache::Apply(unsigned char isWeighted /* r29 */) {
     // Local variables
     int w; // r5
     int i; // r26

@@ -5,7 +5,8 @@
     Code range: 0x8017A950 -> 0x8017A990
 */
 // Range: 0x8017A950 -> 0x8017A990
-void * UrbzModeNewGameState::UrbzModeNewGameState(class UrbzModeNewGameState * const this /* r31 */) {
+// this: r31
+UrbzModeNewGameState::UrbzModeNewGameState() {
     // References
     // -> struct [anonymous] __vt__20UrbzModeNewGameState;
 }

@@ -5,7 +5,8 @@
     Code range: 0x802FAAE4 -> 0x802FC24C
 */
 // Range: 0x802FAAE4 -> 0x802FACF0
-unsigned char TGAWriter::Write(class TGAWriter * const this /* r22 */, const char * szFileName /* r23 */, class ETexture * pTexture /* r24 */, unsigned char bWriteTDF /* r25 */, unsigned char bWriteSDF /* r26 */, struct TDF_INFO * pTDFOverride /* r27 */, unsigned char bCatalogThumbnail /* r28 */) {
+// this: r22
+unsigned char TGAWriter::Write(const char * szFileName /* r23 */, class ETexture * pTexture /* r24 */, unsigned char bWriteTDF /* r25 */, unsigned char bWriteSDF /* r26 */, struct TDF_INFO * pTDFOverride /* r27 */, unsigned char bCatalogThumbnail /* r28 */) {
     // Local variables
     unsigned char bTexturePalettized; // r30
     void * paletteData; // r30
@@ -16,13 +17,15 @@ unsigned char TGAWriter::Write(class TGAWriter * const this /* r22 */, const cha
 }
 
 // Range: 0x802FACF0 -> 0x802FAF7C
-unsigned char TGAWriter::OpenTGA(class TGAWriter * const this /* r29 */, const char * fileName /* r31 */, struct TGA_INFO & info /* r30 */) {
+// this: r29
+unsigned char TGAWriter::OpenTGA(const char * fileName /* r31 */, struct TGA_INFO & info /* r30 */) {
     // References
     // -> class ENgcFileSystem _eorFileSys;
 }
 
 // Range: 0x802FAF7C -> 0x802FB2E4
-unsigned char TGAWriter::WriteTGARows(class TGAWriter * const this /* r25 */, void * pPixelData /* r26 */, unsigned int width /* r27 */, unsigned int height /* r28 */) {
+// this: r25
+unsigned char TGAWriter::WriteTGARows(void * pPixelData /* r26 */, unsigned int width /* r27 */, unsigned int height /* r28 */) {
     // Local variables
     unsigned int color; // r5
     unsigned int y; // r31
@@ -34,13 +37,15 @@ unsigned char TGAWriter::WriteTGARows(class TGAWriter * const this /* r25 */, vo
 }
 
 // Range: 0x802FB2E4 -> 0x802FB474
-unsigned char TGAWriter::CloseTGA(class TGAWriter * const this /* r31 */) {
+// this: r31
+unsigned char TGAWriter::CloseTGA() {
     // References
     // -> class ENgcFileSystem _eorFileSys;
 }
 
 // Range: 0x802FB474 -> 0x802FBD08
-unsigned char TGAWriter::WriteTDF(class TGAWriter * const this /* r31 */, struct TDF_INFO * pTDFOverride /* r28 */, unsigned char bCatalogThumbnail /* r29 */) {
+// this: r31
+unsigned char TGAWriter::WriteTDF(struct TDF_INFO * pTDFOverride /* r28 */, unsigned char bCatalogThumbnail /* r29 */) {
     // Local variables
     class EString strTDFName; // r1+0xD4
     class EString strTDF; // r1+0xD0
@@ -55,7 +60,8 @@ unsigned char TGAWriter::WriteTDF(class TGAWriter * const this /* r31 */, struct
 }
 
 // Range: 0x802FBD08 -> 0x802FC198
-unsigned char TGAWriter::WriteSDF(class TGAWriter * const this /* r29 */, unsigned char bCatalogThumbnail /* r30 */) {
+// this: r29
+unsigned char TGAWriter::WriteSDF(unsigned char bCatalogThumbnail /* r30 */) {
     // Local variables
     class EString strSDFPath; // r1+0x14
     class EString strSDF; // r1+0x10

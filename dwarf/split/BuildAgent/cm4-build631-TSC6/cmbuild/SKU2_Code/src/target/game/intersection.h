@@ -8,7 +8,8 @@
 unsigned char Intersection::AssignIfCloser() {}
 
 // Range: 0x8021437C -> 0x802143BC
-void * Intersection::Intersection(class Intersection * const this /* r31 */) {}
+// this: r31
+Intersection::Intersection() {}
 
 // Range: 0x802143BC -> 0x802143C8
 void Intersection::Reset() {}

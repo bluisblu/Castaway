@@ -17,7 +17,8 @@ unsigned char EffectsManager::Initialize() {}
 unsigned char EffectsManager::Shutdown() {}
 
 // Range: 0x8027D5F4 -> 0x8027D780
-void EffectsManager::Update(class EffectsManager * const this /* r29 */, float delta /* f31 */) {
+// this: r29
+void EffectsManager::Update(float delta /* f31 */) {
     // Local variables
     class NLIteratorPtrType * i; // r1+0x8
     struct EffectEntry * pEntry; // r30
@@ -32,7 +33,8 @@ void EffectsManager::Update(class EffectsManager * const this /* r29 */, float d
 }
 
 // Range: 0x8027D780 -> 0x8027D80C
-unsigned char EffectsManager::DeleteAll(class EffectsManager * const this /* r29 */) {
+// this: r29
+unsigned char EffectsManager::DeleteAll() {
     // Local variables
     class NLIteratorPtrType * i; // r1+0x8
     struct EffectEntry * pEntry; // r30
@@ -40,14 +42,16 @@ unsigned char EffectsManager::DeleteAll(class EffectsManager * const this /* r29
 }
 
 // Range: 0x8027D80C -> 0x8027D90C
-class FastParticleEmitter * EffectsManager::CreateEffect(class EffectsManager * const this /* r29 */, class REffectsEmitter & resource /* r30 */, struct ClientParams * pParams /* r31 */) {
+// this: r29
+class FastParticleEmitter * EffectsManager::CreateEffect(class REffectsEmitter & resource /* r30 */, struct ClientParams * pParams /* r31 */) {
     // Local variables
     class FastParticleEmitter * pEmitter; // r31
     unsigned char result; // r0
 }
 
 // Range: 0x8027D90C -> 0x8027D98C
-unsigned char EffectsManager::DeleteEffect(class EffectsManager * const this /* r30 */) {
+// this: r30
+unsigned char EffectsManager::DeleteEffect() {
     // Local variables
     class NLIteratorPtrType * iter; // r1+0x8
     struct EffectEntry * pEffectEntry; // r31
@@ -57,7 +61,8 @@ unsigned char EffectsManager::DeleteEffect(class EffectsManager * const this /* 
 void EffectsManager::ScheduleEffectForDeletion() {}
 
 // Range: 0x8027D9AC -> 0x8027DA54
-unsigned char EffectsManager::AddEffect(class EffectsManager * const this /* r30 */, class Effect * pEffect /* r29 */) {
+// this: r30
+unsigned char EffectsManager::AddEffect(class Effect * pEffect /* r29 */) {
     // Local variables
     unsigned char result; // r30
 }

@@ -5,13 +5,16 @@
     Code range: 0x8020F830 -> 0x80212A1C
 */
 // Range: 0x8020F830 -> 0x8020F870
-void * ECheats::ECheats(class ECheats * const this /* r31 */) {}
+// this: r31
+ECheats::ECheats() {}
 
 // Range: 0x8020F870 -> 0x8020F8D8
-void * ECheats::~ECheats(class ECheats * const this /* r30 */) {}
+// this: r30
+ECheats::~ECheats() {}
 
 // Range: 0x8020F8D8 -> 0x80211EF4
-void ECheats::Init(class ECheats * const this /* r29 */, const class EGlobal & Globals /* r30 */) {
+// this: r29
+void ECheats::Init(const class EGlobal & Globals /* r30 */) {
     // Local variables
     unsigned char bOldSoundValue; // r28
 
@@ -33,10 +36,12 @@ void ECheats::Init(class ECheats * const this /* r29 */, const class EGlobal & G
 }
 
 // Range: 0x80211EF4 -> 0x80211F28
-void ECheats::Reset(class ECheats * const this /* r31 */) {}
+// this: r31
+void ECheats::Reset() {}
 
 // Range: 0x80211F28 -> 0x80211F5C
-void ECheats::EmptyLookupList(class ECheats * const this /* r31 */) {}
+// this: r31
+void ECheats::EmptyLookupList() {}
 
 // Range: 0x80211F5C -> 0x80211F68
 void ECheats::ReadCheatsFile() {}
@@ -48,7 +53,8 @@ void ECheats::WriteCheatsFile() {}
 void ECheats::Update() {}
 
 // Range: 0x80211F70 -> 0x8021206C
-void ECheats::EnableCheats(class ECheats * const this /* r28 */) {
+// this: r28
+void ECheats::EnableCheats() {
     // Local variables
     struct HashIterator pCheat; // r1+0x20
     class ECheatLookup & cheat; // r29
@@ -58,7 +64,8 @@ void ECheats::EnableCheats(class ECheats * const this /* r28 */) {
 }
 
 // Range: 0x8021206C -> 0x8021213C
-void ECheats::DisableCheats(class ECheats * const this /* r29 */) {
+// this: r29
+void ECheats::DisableCheats() {
     // Local variables
     struct HashIterator pCheat; // r1+0x20
     class ECheatLookup & cheat; // r30
@@ -68,10 +75,12 @@ void ECheats::DisableCheats(class ECheats * const this /* r29 */) {
 }
 
 // Range: 0x8021213C -> 0x802121E8
-void * ECheatLookup::ECheatLookup(class ECheatLookup * const this /* r26 */, int index /* r0 */, enum CheatType type /* r27 */, void * pVar /* r28 */, const char * pDescr /* r29 */, unsigned char extraNewLine /* r30 */, unsigned char addToMenu /* r31 */) {}
+// this: r26
+ECheatLookup::ECheatLookup(int index /* r0 */, enum CheatType type /* r27 */, void * pVar /* r28 */, const char * pDescr /* r29 */, unsigned char extraNewLine /* r30 */, unsigned char addToMenu /* r31 */) {}
 
 // Range: 0x802121E8 -> 0x802124A4
-void ECheatLookup::WriteCheat(class ECheatLookup * const this /* r29 */, class EFile * pFile /* r30 */, int & cnt /* r31 */) {
+// this: r29
+void ECheatLookup::WriteCheat(class EFile * pFile /* r30 */, int & cnt /* r31 */) {
     // Local variables
     char s[256]; // r1+0x8
     int len; // r0
@@ -83,13 +92,16 @@ void ECheatLookup::WriteCheat(class ECheatLookup * const this /* r29 */, class E
 void ECheatDMI::GetDescription(char * szBuffer /* r30 */, int bufLen /* r31 */) {}
 
 // Range: 0x802124FC -> 0x80212628
-void ECheatDMI::GetValue(class ECheatDMI * const this /* r30 */, char * szBuffer /* r31 */) {}
+// this: r30
+void ECheatDMI::GetValue(char * szBuffer /* r31 */) {}
 
 // Range: 0x80212628 -> 0x802128AC
-void ECheatDMI::ButtonPress(class ECheatDMI * const this /* r30 */, enum EDebugMenuButton button /* r31 */) {}
+// this: r30
+void ECheatDMI::ButtonPress(enum EDebugMenuButton button /* r31 */) {}
 
 // Range: 0x802128AC -> 0x80212A0C
-void ECheatDMI::ButtonPress(class ECheatDMI * const this /* r29 */, enum EDebugMenuButton button /* r30 */) {
+// this: r29
+void ECheatDMI::ButtonPress(enum EDebugMenuButton button /* r30 */) {
     // Local variables
     int inc; // r0
     unsigned char & val; // r0

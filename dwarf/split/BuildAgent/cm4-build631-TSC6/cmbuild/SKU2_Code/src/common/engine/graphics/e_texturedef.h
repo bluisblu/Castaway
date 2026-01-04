@@ -5,6 +5,6 @@
     Code range: 0x8002FEA4 -> 0x8002FEE8
 */
 // Range: 0x8002FEA4 -> 0x8002FEE8
-void * ETextureDef::ETextureDef() {}
+ETextureDef::ETextureDef() {}
 
 

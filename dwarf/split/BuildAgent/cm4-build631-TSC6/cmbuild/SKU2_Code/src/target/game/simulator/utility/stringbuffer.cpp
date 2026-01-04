@@ -5,7 +5,8 @@
     Code range: 0x8016905C -> 0x801695DC
 */
 // Range: 0x8016905C -> 0x80169094
-void * StringBuffer::StringBuffer(class StringBuffer * const this /* r31 */) {}
+// this: r31
+StringBuffer::StringBuffer() {}
 
 // Range: 0x80169094 -> 0x8016909C
 int StringBuffer::capacity() {}
@@ -17,7 +18,8 @@ int StringBuffer::length() {}
 void StringBuffer::erase() {}
 
 // Range: 0x801690B4 -> 0x80169290
-void StringBuffer::append(class StringBuffer * const this /* r27 */, const char * str /* r28 */, int len /* r29 */) {
+// this: r27
+void StringBuffer::append(const char * str /* r28 */, int len /* r29 */) {
     // Local variables
     int srcLen; // r3
     int myLen; // r0
@@ -31,22 +33,28 @@ char * StringBuffer::c_str() {}
 char * StringBuffer::buffer() {}
 
 // Range: 0x801692A0 -> 0x801692E8
-void StringBuffer::copy(class StringBuffer * const this /* r30 */, const char * str /* r31 */) {}
+// this: r30
+void StringBuffer::copy(const char * str /* r31 */) {}
 
 // Range: 0x801692E8 -> 0x80169330
-void StringBuffer::copy(class StringBuffer * const this /* r30 */, const class StringBuffer & other /* r31 */) {}
+// this: r30
+void StringBuffer::copy(const class StringBuffer & other /* r31 */) {}
 
 // Range: 0x80169330 -> 0x8016937C
-void StringBuffer::append(class StringBuffer * const this /* r30 */, int len /* r31 */) {}
+// this: r30
+void StringBuffer::append(int len /* r31 */) {}
 
 // Range: 0x8016937C -> 0x801693C8
-int StringBuffer::compare(const class StringBuffer * const this /* r30 */) {}
+// this: r30
+int StringBuffer::compare() const {}
 
 // Range: 0x801693C8 -> 0x80169428
-int StringBuffer::compareNoCase(const class StringBuffer * const this /* r29 */, const class StringBuffer & other /* r30 */) {}
+// this: r29
+int StringBuffer::compareNoCase(const class StringBuffer & other /* r30 */) const {}
 
 // Range: 0x80169428 -> 0x801694FC
-int StringBuffer::compareNoCase(const class StringBuffer * const this /* r28 */, const char * s2 /* r29 */, int s2_len /* r30 */) {
+// this: r28
+int StringBuffer::compareNoCase(const char * s2 /* r29 */, int s2_len /* r30 */) const {
     // Local variables
     const char * s1; // r0
     int len1; // r0
@@ -58,7 +66,8 @@ int StringBuffer::compareNoCase(const class StringBuffer * const this /* r28 */,
 }
 
 // Range: 0x801694FC -> 0x8016955C
-char StringBuffer::charAt(const class StringBuffer * const this /* r30 */, int pos /* r31 */) {}
+// this: r30
+char StringBuffer::charAt(int pos /* r31 */) const {}
 
 // Range: 0x8016955C -> 0x80169590
 void StringBuffer::appendChar() {
@@ -67,7 +76,8 @@ void StringBuffer::appendChar() {
 }
 
 // Range: 0x80169590 -> 0x801695DC
-void StringBuffer::appendNum(class StringBuffer * const this /* r31 */) {
+// this: r31
+void StringBuffer::appendNum() {
     // Local variables
     char numStr[32]; // r1+0x8
 }

@@ -5,7 +5,7 @@
     Code range: 0x8001CF2C -> 0x8001D020
 */
 // Range: 0x8001CF2C -> 0x8001CF30
-void * AnimatorFactory::AnimatorFactory() {}
+AnimatorFactory::AnimatorFactory() {}
 
 // Range: 0x8001CF30 -> 0x8001CFDC
 class SAnimator2 * AnimatorFactory::CreateAnimator() {

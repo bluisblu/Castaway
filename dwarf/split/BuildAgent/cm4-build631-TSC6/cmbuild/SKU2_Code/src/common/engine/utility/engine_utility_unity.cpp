@@ -4,8 +4,9 @@
     Language: C++
     Code range: 0x802F18CC -> 0x802F18CC
 */
+// total size: 0x84
 class EControllerData {
-    // total size: 0x84
+    // Members
 protected:
     unsigned int buttons; // offset 0x0, size 0x4
     unsigned int lastButtons; // offset 0x4, size 0x4
@@ -31,8 +32,9 @@ private:
 };
 int _nCtrlPads; // size: 0x4, address: 0x805DC170
 static unsigned int lastfilterId; // size: 0x4, address: 0x805DA4FC
+// total size: 0x1C
 class EDebugMenu {
-    // total size: 0x1C
+    // Members
 protected:
     unsigned char m_enable; // offset 0x0, size 0x1
     float m_maxWidth; // offset 0x4, size 0x4
@@ -44,13 +46,13 @@ protected:
 class EDebugMenu _debugmenu; // size: 0x1C, address: 0x80544C58
 static class EVec3 _labelColor; // size: 0xC, address: 0x80544C74
 static class EVec3 _valueColor; // size: 0xC, address: 0x80544C80
-class EDebugPrint {
-    // total size: 0x1
-};
+// total size: 0x1
+class EDebugPrint {};
 class EDebugPrint _debugprint; // size: 0x1, address: 0x805DC174
 class EFrameAllocGroup _frag; // size: 0x38, address: 0x80544CA8
+// total size: 0x4
 class EMouse {
-    // total size: 0x4
+    // Members
 public:
     void * __vptr$; // offset 0x0, size 0x4
 };
@@ -74,23 +76,17 @@ static unsigned char * gInBufferEnd; // size: 0x4, address: 0x805DC1A4
 static unsigned char * gOutBuffer; // size: 0x4, address: 0x805DC1A8
 static unsigned char * gOutBufferEnd; // size: 0x4, address: 0x805DC1AC
 static unsigned char gIsOutBufferFull; // size: 0x1, address: 0x805DC1B0
-class LZSSCompressor {
-    // total size: 0x1
-};
+// total size: 0x1
+class LZSSCompressor {};
 unsigned char s_fullAlphaValue; // size: 0x1, address: 0x805DF1E4
-struct {
-    // total size: 0x30
-} __vt__6EMouse; // size: 0x30, address: 0x80458120
-struct {
-    // total size: 0x34
-} __vt__9EKeyboard; // size: 0x34, address: 0x80458150
-struct {
-    // total size: 0x14
-} __vt__16EFrameAllocGroup; // size: 0x14, address: 0x80458184
-struct {
-    // total size: 0x18
-} __vt__14EDebugMenuItem; // size: 0x18, address: 0x80458198
-struct {
-    // total size: 0x60
-} __vt__11EController; // size: 0x60, address: 0x804581B0
+// total size: 0x30
+struct {} __vt__6EMouse; // size: 0x30, address: 0x80458120
+// total size: 0x34
+struct {} __vt__9EKeyboard; // size: 0x34, address: 0x80458150
+// total size: 0x14
+struct {} __vt__16EFrameAllocGroup; // size: 0x14, address: 0x80458184
+// total size: 0x18
+struct {} __vt__14EDebugMenuItem; // size: 0x18, address: 0x80458198
+// total size: 0x60
+struct {} __vt__11EController; // size: 0x60, address: 0x804581B0
 

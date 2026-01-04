@@ -5,16 +5,20 @@
     Code range: 0x8025FFB4 -> 0x80260274
 */
 // Range: 0x8025FFB4 -> 0x8025FFEC
-void * EDataHeader::EDataHeader(class EDataHeader * const this /* r31 */) {}
+// this: r31
+EDataHeader::EDataHeader() {}
 
 // Range: 0x8025FFEC -> 0x80260040
-void * EDataHeader::~EDataHeader(class EDataHeader * const this /* r30 */) {}
+// this: r30
+EDataHeader::~EDataHeader() {}
 
 // Range: 0x80260040 -> 0x80260098
-void EDataHeader::Clear(class EDataHeader * const this /* r30 */) {}
+// this: r30
+void EDataHeader::Clear() {}
 
 // Range: 0x80260098 -> 0x8026026C
-unsigned char EDataHeader::Read(class EDataHeader * const this /* r22 */, class EFile & f /* r23 */, unsigned int signature /* r24 */, unsigned int minVersion /* r25 */, unsigned int maxVersion /* r26 */) {
+// this: r22
+unsigned char EDataHeader::Read(class EFile & f /* r23 */, unsigned int signature /* r24 */, unsigned int minVersion /* r25 */, unsigned int maxVersion /* r26 */) {
     // Local variables
     unsigned int pos; // r29
     int retryCnt; // r28

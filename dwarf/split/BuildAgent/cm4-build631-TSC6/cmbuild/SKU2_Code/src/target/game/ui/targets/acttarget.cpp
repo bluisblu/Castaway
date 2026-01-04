@@ -5,7 +5,8 @@
     Code range: 0x8019AD0C -> 0x8019BE38
 */
 // Range: 0x8019AD64 -> 0x8019AE7C
-void * ACTTarget::~ACTTarget(class ACTTarget * const this /* r29 */) {
+// this: r29
+ACTTarget::~ACTTarget() {
     // Local variables
     struct ListIterator it; // r1+0x10
     class iqRecord * iqRec; // r31
@@ -16,7 +17,8 @@ void * ACTTarget::~ACTTarget(class ACTTarget * const this /* r29 */) {
 }
 
 // Range: 0x8019AE7C -> 0x8019AFB0
-void ACTTarget::SetVariable(class ACTTarget * const this /* r31 */, const char * szCommand /* r29 */) {
+// this: r31
+void ACTTarget::SetVariable(const char * szCommand /* r29 */) {
     // Local variables
     int item; // r1+0x8
     class UIReflow reflow; // r1+0x10
@@ -28,7 +30,8 @@ void ACTTarget::SetVariable(class ACTTarget * const this /* r31 */, const char *
 }
 
 // Range: 0x8019AFB0 -> 0x8019B034
-char * ACTTarget::GetVariable(class ACTTarget * const this /* r29 */, const char * szVar /* r30 */) {
+// this: r29
+char * ACTTarget::GetVariable(const char * szVar /* r30 */) {
     // Local variables
     char * retStr; // r31
 
@@ -37,7 +40,8 @@ char * ACTTarget::GetVariable(class ACTTarget * const this /* r29 */, const char
 }
 
 // Range: 0x8019B034 -> 0x8019B2C0
-void ACTTarget::Update(class ACTTarget * const this /* r28 */) {
+// this: r28
+void ACTTarget::Update() {
     // Local variables
     class InteractorManager * interactorManager; // r0
     unsigned char interactorInitialized; // r0
@@ -62,7 +66,8 @@ void ACTTarget::ShowActionQueue() {}
 void ACTTarget::HideActionQueue() {}
 
 // Range: 0x8019B2D8 -> 0x8019B46C
-void ACTTarget::AddAction(class ACTTarget * const this /* r24 */, const class Interaction * pAction /* r25 */, const class BString2 & strName /* r26 */, unsigned int shaderID /* r27 */, class ERShader * pShader /* r28 */, unsigned int insertGUID /* r29 */) {
+// this: r24
+void ACTTarget::AddAction(const class Interaction * pAction /* r25 */, const class BString2 & strName /* r26 */, unsigned int shaderID /* r27 */, class ERShader * pShader /* r28 */, unsigned int insertGUID /* r29 */) {
     // Local variables
     unsigned char found; // r30
     struct ListIterator it; // r1+0x14
@@ -75,7 +80,8 @@ void ACTTarget::AddAction(class ACTTarget * const this /* r24 */, const class In
 }
 
 // Range: 0x8019B46C -> 0x8019B6B8
-void ACTTarget::PlaceItem(class ACTTarget * const this /* r27 */, struct ACTRecord * rec /* r31 */, unsigned int insertGUID /* r28 */) {
+// this: r27
+void ACTTarget::PlaceItem(struct ACTRecord * rec /* r31 */, unsigned int insertGUID /* r28 */) {
     // Local variables
     unsigned char insertOccured; // r30
     struct ACTRecord * irec; // r29
@@ -83,7 +89,8 @@ void ACTTarget::PlaceItem(class ACTTarget * const this /* r27 */, struct ACTReco
 }
 
 // Range: 0x8019B6B8 -> 0x8019B900
-void ACTTarget::RemoveAction(class ACTTarget * const this /* r27 */, const class Interaction * pAction /* r28 */) {
+// this: r27
+void ACTTarget::RemoveAction(const class Interaction * pAction /* r28 */) {
     // Local variables
     unsigned char found; // r25
     struct ListIterator it; // r1+0x14
@@ -93,7 +100,8 @@ void ACTTarget::RemoveAction(class ACTTarget * const this /* r27 */, const class
 }
 
 // Range: 0x8019B900 -> 0x8019B994
-void ACTTarget::RemoveAllActions(class ACTTarget * const this /* r29 */) {
+// this: r29
+void ACTTarget::RemoveAllActions() {
     // Local variables
     int i; // r30
 }
@@ -109,7 +117,8 @@ struct ACTRecord * ACTTarget::GetRecord() {
 }
 
 // Range: 0x8019BA08 -> 0x8019BAFC
-void ACTTarget::ReOrderActionQueue(class ACTTarget * const this /* r27 */) {
+// this: r27
+void ACTTarget::ReOrderActionQueue() {
     // Local variables
     int pos; // r29
     struct ACTRecord * rec; // r28
@@ -131,13 +140,15 @@ class Interaction * ACTTarget::GetInteractionFromID(int id /* r27 */) {
 }
 
 // Range: 0x8019BB8C -> 0x8019BCD8
-void ACTTarget::CancelCurrentObject(class ACTTarget * const this /* r31 */) {
+// this: r31
+void ACTTarget::CancelCurrentObject() {
     // Local variables
     class cXPerson * pPerson; // r29
 }
 
 // Range: 0x8019BCD8 -> 0x8019BDCC
-void ACTTarget::UpdateCancelModeWidgets(class ACTTarget * const this /* r31 */) {
+// this: r31
+void ACTTarget::UpdateCancelModeWidgets() {
     // Local variables
     class UIReflow reflow; // r1+0x8
 }

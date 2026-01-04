@@ -11,12 +11,6 @@ class cXMTObject * cXMTObject::GetNextMultiTileObject() {}
 class cXMTObject * cXMTObject::GetFirstMultiTileObject() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\target\game\simulator\core\mtobject.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x80109EC0 -> 0x80109EE8
-*/
 // Range: 0x80109EC0 -> 0x80109EC4
 class ISimInstance * cXMTObject::GetISimInstanceBaseVer() {}
 

@@ -37,7 +37,8 @@ static void CollapsePenaltyRects(class vector & partition /* r26 */) {
 }
 
 // Range: 0x800EBF18 -> 0x800EC128
-enum EvalTile XRoute::EvalTileForGoal(class XRoute * const this /* r28 */, class FTilePt & loc /* r29 */, int facingDirection /* r30 */) {
+// this: r28
+enum EvalTile XRoute::EvalTileForGoal(class FTilePt & loc /* r29 */, int facingDirection /* r30 */) {
     // Local variables
     class RoutingSlot * rs; // r0
     class CTilePt pt; // r1+0xC
@@ -49,13 +50,16 @@ enum EvalTile XRoute::EvalTileForGoal(class XRoute * const this /* r28 */, class
 }
 
 // Range: 0x800EC128 -> 0x800EC19C
-void * XRoute::XRoute(class XRoute * const this /* r31 */) {}
+// this: r31
+XRoute::XRoute() {}
 
 // Range: 0x800EC19C -> 0x800EC234
-void * XRoute::XRoute(class XRoute * const this /* r28 */, class cXObject * start /* r29 */, class cXObject * dest /* r30 */, const class RoutingSlot * slot /* r31 */) {}
+// this: r28
+XRoute::XRoute(class cXObject * start /* r29 */, class cXObject * dest /* r30 */, const class RoutingSlot * slot /* r31 */) {}
 
 // Range: 0x800EC234 -> 0x800EC320
-void XRoute::Construct(class XRoute * const this /* r30 */) {
+// this: r30
+void XRoute::Construct() {
     // Local variables
     class cXPerson * person; // r31
 }
@@ -70,22 +74,27 @@ int XRoute::CountGoals() {}
 struct RouteGoal & XRoute::GetNthGoal() {}
 
 // Range: 0x800EC340 -> 0x800EC384
-void XRoute::SetCurrentGoal(class XRoute * const this /* r30 */, int goal /* r31 */) {}
+// this: r30
+void XRoute::SetCurrentGoal(int goal /* r31 */) {}
 
 // Range: 0x800EC384 -> 0x800EC408
-void XRoute::ClearCurrentGoal(class XRoute * const this /* r30 */) {}
+// this: r30
+void XRoute::ClearCurrentGoal() {}
 
 // Range: 0x800EC408 -> 0x800EC410
 class RoutingSlot * XRoute::GetRoutingSlot() {}
 
 // Range: 0x800EC410 -> 0x800EC45C
-void XRoute::AddGoal(class XRoute * const this /* r30 */, const struct RouteGoal & goal /* r31 */) {}
+// this: r30
+void XRoute::AddGoal(const struct RouteGoal & goal /* r31 */) {}
 
 // Range: 0x800EC45C -> 0x800EC4A8
-struct RouteGoal & XRoute::GetCurrentGoal(class XRoute * const this /* r30 */) {}
+// this: r30
+struct RouteGoal & XRoute::GetCurrentGoal() {}
 
 // Range: 0x800EC4A8 -> 0x800EC554
-unsigned char XRoute::IsPersonSittingOnChairGoal(class XRoute * const this /* r28 */, class cXPerson * person /* r29 */) {
+// this: r28
+unsigned char XRoute::IsPersonSittingOnChairGoal(class cXPerson * person /* r29 */) {
     // Local variables
     struct RouteGoal * i; // r31
     signed short chairID; // r4
@@ -93,7 +102,8 @@ unsigned char XRoute::IsPersonSittingOnChairGoal(class XRoute * const this /* r2
 }
 
 // Range: 0x800EC554 -> 0x800EC678
-unsigned char XRoute::ShouldIgnore(class XRoute * const this /* r30 */, class cXObject * obj /* r31 */) {
+// this: r30
+unsigned char XRoute::ShouldIgnore(class cXObject * obj /* r31 */) {
     // Local variables
     int penalty; // r0
     class cXPerson * pers; // r0
@@ -104,7 +114,8 @@ unsigned char XRoute::ShouldIgnore(class XRoute * const this /* r30 */, class cX
 void XRoute::DoStream() {}
 
 // Range: 0x800EC67C -> 0x800EC6B4
-void XRoute::ResetGoals(class XRoute * const this /* r31 */) {}
+// this: r31
+void XRoute::ResetGoals() {}
 
 // Range: 0x800EC6B4 -> 0x800ECDCC
 void BuildRoomPartition(unsigned short inRoom /* r21 */, class vector * outPartition /* r22 */) {
@@ -153,7 +164,8 @@ static void ConvertToFTileRect() {}
 void BuildRoomPartition() {}
 
 // Range: 0x800ECE08 -> 0x800ECEEC
-void XRoute::BuildGoalList(class XRoute * const this /* r29 */) {
+// this: r29
+void XRoute::BuildGoalList() {
     // Local variables
     class cXPerson * person; // r30
     class Room * rm; // r0
@@ -161,7 +173,8 @@ void XRoute::BuildGoalList(class XRoute * const this /* r29 */) {
 }
 
 // Range: 0x800ECEEC -> 0x800ED93C
-unsigned char XRoute::FindPath(class XRoute * const this /* r15 */, class TileList & outTileList /* r16 */, int nMaxIterations /* r17 */) {
+// this: r15
+unsigned char XRoute::FindPath(class TileList & outTileList /* r16 */, int nMaxIterations /* r17 */) {
     // Local variables
     unsigned char ignoreAllObjects; // f24
     unsigned char ignoreRooms; // r24
@@ -203,7 +216,8 @@ unsigned char XRoute::FindPath(class XRoute * const this /* r15 */, class TileLi
 }
 
 // Range: 0x800ED93C -> 0x800EDBC0
-void TileList::FindNearestPoint(class TileList * const this /* r28 */, class FTilePt * inOutPt /* r29 */) {
+// this: r28
+void TileList::FindNearestPoint(class FTilePt * inOutPt /* r29 */) {
     // Local variables
     int minCnt; // [invalid]
     int maxCnt; // r31
@@ -230,7 +244,8 @@ static void SetDirectionForGoalSearch(class cXObject * router /* r28 */, signed 
 }
 
 // Range: 0x800EDCB0 -> 0x800EDE1C
-void XRoute::ChooseStartingPoint(class XRoute * const this /* r31 */) {
+// this: r31
+void XRoute::ChooseStartingPoint() {
     // Local variables
     class FTilePt startLoc; // r1+0x20
     class cXObject * container; // r28
@@ -246,7 +261,8 @@ void XRoute::ChooseStartingPoint(class XRoute * const this /* r31 */) {
 }
 
 // Range: 0x800EDE1C -> 0x800EEAF8
-void XRoute::ConstructGoals(class XRoute * const this /* r27 */) {
+// this: r27
+void XRoute::ConstructGoals() {
     // Local variables
     class RoutingSlot * routingSlot; // r23
     class cXObject * dest; // r22
@@ -311,7 +327,7 @@ int RouteBlockers::ComputeRouteResult() {}
 void RouteBlockers::ProcessTile() {}
 
 // Range: 0x800EEBD0 -> 0x800EEBF0
-void * RouteBlockers::RouteBlockers() {}
+RouteBlockers::RouteBlockers() {}
 
 // Range: 0x800EEC20 -> 0x800EEC74
 void XRoute::DeallocateAllPathData() {

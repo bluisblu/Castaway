@@ -5,7 +5,8 @@
     Code range: 0x80127AA8 -> 0x8012B188
 */
 // Range: 0x80127AA8 -> 0x80127C64
-void NeighborhoodConstants::UpdateConstants(class NeighborhoodConstants * const this /* r31 */) {
+// this: r31
+void NeighborhoodConstants::UpdateConstants() {
     // Local variables
     unsigned int fileID; // r29
     signed short id; // r0
@@ -21,14 +22,16 @@ void NeighborhoodConstants::UpdateConstants(class NeighborhoodConstants * const 
 }
 
 // Range: 0x80127C64 -> 0x80127CF4
-void NeighborList::DeleteAll(class NeighborList * const this /* r30 */) {
+// this: r30
+void NeighborList::DeleteAll() {
     // Local variables
     class Neighbor * * i; // r31
     class vector temp; // r1+0x10
 }
 
 // Range: 0x80127CF4 -> 0x80127E70
-void * Neighborhood::Neighborhood(class Neighborhood * const this /* r30 */) {
+// this: r30
+Neighborhood::Neighborhood() {
     // Local variables
     int i; // r0
 
@@ -37,7 +40,8 @@ void * Neighborhood::Neighborhood(class Neighborhood * const this /* r30 */) {
 }
 
 // Range: 0x80127E70 -> 0x80127F68
-void * Neighborhood::~Neighborhood(class Neighborhood * const this /* r29 */) {
+// this: r29
+Neighborhood::~Neighborhood() {
     // Local variables
     class FamilyImpl * * j; // r31
 
@@ -46,7 +50,8 @@ void * Neighborhood::~Neighborhood(class Neighborhood * const this /* r29 */) {
 }
 
 // Range: 0x80127F68 -> 0x80127FC4
-void Neighborhood::RelationshipsChanged(class Neighborhood * const this /* r30 */) {
+// this: r30
+void Neighborhood::RelationshipsChanged() {
     // Local variables
     class FamilyImpl * f; // r0
 }
@@ -62,7 +67,8 @@ static unsigned char SortFamilyByCreation(class Family * const & a /* r29 */, cl
 }
 
 // Range: 0x80128090 -> 0x80128144
-void Neighborhood::Unload(class Neighborhood * const this /* r30 */) {
+// this: r30
+void Neighborhood::Unload() {
     // Local variables
     class FamilyImpl * * i; // r31
     class vector temp; // r1+0x10
@@ -72,7 +78,8 @@ void Neighborhood::Unload(class Neighborhood * const this /* r30 */) {
 }
 
 // Range: 0x80128144 -> 0x801287BC
-int Neighborhood::Load(class Neighborhood * const this /* r28 */, class NghResFile * pFile /* r29 */) {
+// this: r28
+int Neighborhood::Load(class NghResFile * pFile /* r29 */) {
     // Local variables
     class ObjectFolder * f; // r31
     int err; // r30
@@ -104,7 +111,8 @@ int Neighborhood::Load(class Neighborhood * const this /* r28 */, class NghResFi
 }
 
 // Range: 0x801287BC -> 0x801288DC
-void Neighborhood::UpdateFamilyNumbers(class Neighborhood * const this /* r28 */) {
+// this: r28
+void Neighborhood::UpdateFamilyNumbers() {
     // Local variables
     class Neighbor * * n; // r31
     class FamilyImpl * * i; // r31
@@ -114,7 +122,8 @@ void Neighborhood::UpdateFamilyNumbers(class Neighborhood * const this /* r28 */
 }
 
 // Range: 0x801288DC -> 0x80128AF8
-int Neighborhood::Save(class Neighborhood * const this /* r24 */, class NghResFile * pFile /* r25 */, int version /* r26 */) {
+// this: r24
+int Neighborhood::Save(class NghResFile * pFile /* r25 */, int version /* r26 */) {
     // Local variables
     class cSimulator * sim; // r29
     signed short nCurrentTransitionType; // r0
@@ -128,7 +137,8 @@ int Neighborhood::Save(class Neighborhood * const this /* r24 */, class NghResFi
 }
 
 // Range: 0x80128AF8 -> 0x80128C7C
-void Neighborhood::DoStream(class Neighborhood * const this /* r28 */, class ReconBuffer * r /* r29 */, int version /* r30 */) {
+// this: r28
+void Neighborhood::DoStream(class ReconBuffer * r /* r29 */, int version /* r30 */) {
     // Local variables
     signed short tutorialState; // r31
     class EGlobal * pGlobal; // r0
@@ -136,34 +146,39 @@ void Neighborhood::DoStream(class Neighborhood * const this /* r28 */, class Rec
 }
 
 // Range: 0x80128C7C -> 0x80128CF4
-class Neighbor * Neighborhood::FindNeighborByID(class Neighborhood * const this /* r30 */, int id /* r31 */) {
+// this: r30
+class Neighbor * Neighborhood::FindNeighborByID(int id /* r31 */) {
     // Local variables
     class Neighbor * n; // r31
 }
 
 // Range: 0x80128CF4 -> 0x80128D98
-class Neighbor * Neighborhood::FindNeighborByGUID(class Neighborhood * const this /* r28 */, int guid /* r29 */) {
+// this: r28
+class Neighbor * Neighborhood::FindNeighborByGUID(int guid /* r29 */) {
     // Local variables
     class Neighbor * * i; // r31
     class Neighbor * n; // r30
 }
 
 // Range: 0x80128D98 -> 0x80128E2C
-class Neighbor * Neighborhood::FindNeighborByType(class Neighborhood * const this /* r28 */, const class ObjSelector * sel /* r29 */) {
+// this: r28
+class Neighbor * Neighborhood::FindNeighborByType(const class ObjSelector * sel /* r29 */) {
     // Local variables
     class Neighbor * * i; // r31
     class Neighbor * n; // r30
 }
 
 // Range: 0x80128E2C -> 0x80128F2C
-class Neighbor * Neighborhood::AddNewNeighbor(class Neighborhood * const this /* r28 */, class ObjSelector * sel /* r29 */) {
+// this: r28
+class Neighbor * Neighborhood::AddNewNeighbor(class ObjSelector * sel /* r29 */) {
     // Local variables
     class Neighbor * * i; // r31
     int newID; // r30
 }
 
 // Range: 0x80128F2C -> 0x801290D8
-void Neighborhood::LoadPersistentData(class Neighborhood * const this /* r29 */, class cXPerson * person /* r30 */) {
+// this: r29
+void Neighborhood::LoadPersistentData(class cXPerson * person /* r30 */) {
     // Local variables
     int i; // r4
     class Neighbor * n; // r31
@@ -173,7 +188,8 @@ void Neighborhood::LoadPersistentData(class Neighborhood * const this /* r29 */,
 }
 
 // Range: 0x801290D8 -> 0x80129178
-void Neighborhood::RemoveNeighborRelationships(class Neighborhood * const this /* r28 */, class Neighbor * n /* r29 */) {
+// this: r28
+void Neighborhood::RemoveNeighborRelationships(class Neighbor * n /* r29 */) {
     // Local variables
     int id; // r31
     class Neighbor * * i; // r30
@@ -181,13 +197,15 @@ void Neighborhood::RemoveNeighborRelationships(class Neighborhood * const this /
 }
 
 // Range: 0x80129178 -> 0x80129214
-void Neighborhood::RemoveNeighbor(class Neighborhood * const this /* r29 */, class Neighbor * n /* r30 */) {
+// this: r29
+void Neighborhood::RemoveNeighbor(class Neighbor * n /* r30 */) {
     // Local variables
     int id; // r31
 }
 
 // Range: 0x80129214 -> 0x801293AC
-void Neighborhood::SavePersistentData(class Neighborhood * const this /* r31 */, class cXPerson * person /* r30 */) {
+// this: r31
+void Neighborhood::SavePersistentData(class cXPerson * person /* r30 */) {
     // Local variables
     class Neighbor * n; // r31
     class Family * neighborFamily; // r0
@@ -203,10 +221,12 @@ class ObjSelector * Neighborhood::GetNeighborSelector() {
 }
 
 // Range: 0x801293E0 -> 0x80129458
-signed short Neighborhood::GetNextNeighborID(class Neighborhood * const this /* r30 */, signed short startID /* r31 */) {}
+// this: r30
+signed short Neighborhood::GetNextNeighborID(signed short startID /* r31 */) {}
 
 // Range: 0x80129458 -> 0x80129738
-signed short Neighborhood::GetNeighborData(class Neighborhood * const this /* r28 */, signed short dataIndex /* r27 */, const signed short * * ref /* r26 */) {
+// this: r28
+signed short Neighborhood::GetNeighborData(signed short dataIndex /* r27 */, const signed short * * ref /* r26 */) {
     // Local variables
     class Neighbor * n; // r29
     class cXPerson * p; // r28
@@ -222,13 +242,15 @@ signed short Neighborhood::GetNeighborData(class Neighborhood * const this /* r2
 }
 
 // Range: 0x80129738 -> 0x801297C0
-class Family * Neighborhood::GetFamily(class Neighborhood * const this /* r29 */, int number /* r30 */) {
+// this: r29
+class Family * Neighborhood::GetFamily(int number /* r30 */) {
     // Local variables
     class FamilyImpl * * i; // r31
 }
 
 // Range: 0x801297C0 -> 0x80129848
-class Family * Neighborhood::GetFamilyInHouse(class Neighborhood * const this /* r29 */, int houseNumber /* r30 */) {
+// this: r29
+class Family * Neighborhood::GetFamilyInHouse(int houseNumber /* r30 */) {
     // Local variables
     class FamilyImpl * * i; // r31
 }
@@ -237,7 +259,8 @@ class Family * Neighborhood::GetFamilyInHouse(class Neighborhood * const this /*
 int Neighborhood::GetNumFamilies() {}
 
 // Range: 0x80129850 -> 0x80129984
-int Neighborhood::GetNextUnusedFamilyNum(class Neighborhood * const this /* r28 */) {
+// this: r28
+int Neighborhood::GetNextUnusedFamilyNum() {
     // Local variables
     int maxFamilies; // r30
     class vector familyUsed; // r1+0x10
@@ -250,10 +273,12 @@ int Neighborhood::GetNextUnusedFamilyNum(class Neighborhood * const this /* r28 
 class Family * Neighborhood::GetFamilyByIndex() {}
 
 // Range: 0x801299AC -> 0x80129A04
-class Family * Neighborhood::MakeNewFreePlayFamily(class Neighborhood * const this /* r30 */, int nFamilyNum /* r31 */) {}
+// this: r30
+class Family * Neighborhood::MakeNewFreePlayFamily(int nFamilyNum /* r31 */) {}
 
 // Range: 0x80129A04 -> 0x80129BA8
-class Family * Neighborhood::BaseMakeNewFamily(class Neighborhood * const this /* r27 */, unsigned char bFreePlay /* r28 */) {
+// this: r27
+class Family * Neighborhood::BaseMakeNewFamily(unsigned char bFreePlay /* r28 */) {
     // Local variables
     int newNumber; // [invalid]
     int unusedNumber; // r31
@@ -266,19 +291,22 @@ class Family * Neighborhood::BaseMakeNewFamily(class Neighborhood * const this /
 }
 
 // Range: 0x80129BA8 -> 0x80129C7C
-int Neighborhood::RemoveFamily(class Neighborhood * const this /* r29 */, class Family * f /* r30 */) {
+// this: r29
+int Neighborhood::RemoveFamily(class Family * f /* r30 */) {
     // Local variables
     class FamilyImpl * * i; // r31
 }
 
 // Range: 0x80129C7C -> 0x80129DA0
-int Neighborhood::AddToFamily(class Neighborhood * const this /* r29 */, class Neighbor * n /* r30 */, class Family * f /* r31 */) {
+// this: r29
+int Neighborhood::AddToFamily(class Neighbor * n /* r30 */, class Family * f /* r31 */) {
     // Local variables
     const class FamilyMember * fm; // r0
 }
 
 // Range: 0x80129DA0 -> 0x80129EC4
-int Neighborhood::RemoveFromFamily(class Neighborhood * const this /* r28 */, class Neighbor * n /* r29 */, unsigned char bSilent /* r30 */) {
+// this: r28
+int Neighborhood::RemoveFromFamily(class Neighbor * n /* r29 */, unsigned char bSilent /* r30 */) {
     // Local variables
     int familyNumber; // r4
     class FamilyImpl * f; // r31
@@ -289,14 +317,16 @@ int Neighborhood::RemoveFromFamily(class Neighborhood * const this /* r28 */, cl
 }
 
 // Range: 0x80129EC4 -> 0x80129F3C
-int Neighborhood::AddNewCharacter(class Neighborhood * const this /* r29 */, class Neighbor * * outNewNeighbor /* r30 */, unsigned char bIsPet /* r31 */) {
+// this: r29
+int Neighborhood::AddNewCharacter(class Neighbor * * outNewNeighbor /* r30 */, unsigned char bIsPet /* r31 */) {
     // Local variables
     class ObjSelector * newSel; // r0
     class Neighbor * newNeighbor; // r31
 }
 
 // Range: 0x80129F3C -> 0x8012A060
-int Neighborhood::DeleteCharacter(class Neighborhood * const this /* r25 */, class Neighbor * n /* r26 */) {
+// this: r25
+int Neighborhood::DeleteCharacter(class Neighbor * n /* r26 */) {
     // Local variables
     class ObjSelector * sel; // r31
     int guid; // r30
@@ -314,7 +344,8 @@ int Neighborhood::GetFamilyFriendsCount() {
 }
 
 // Range: 0x8012A09C -> 0x8012A1A0
-int Neighborhood::GetFamilyNetWorth(class Neighborhood * const this /* r28 */) {
+// this: r28
+int Neighborhood::GetFamilyNetWorth() {
     // Local variables
     class FamilyImpl * f; // r31
     int funds; // r30
@@ -331,19 +362,22 @@ int Neighborhood::GetFamilyNetWorth(class Neighborhood * const this /* r28 */) {
 class SimCache & Neighborhood::GetSimCache() {}
 
 // Range: 0x8012A1A8 -> 0x8012A1FC
-int Neighborhood::GetTotalAspirationPoints(const class Neighborhood * const this /* r30 */) {
+// this: r30
+int Neighborhood::GetTotalAspirationPoints() const {
     // Local variables
     int points; // r31
 }
 
 // Range: 0x8012A1FC -> 0x8012A2A0
-void Neighborhood::SetTotalAspirationPoints(class Neighborhood * const this /* r29 */, int points /* r30 */) {}
+// this: r29
+void Neighborhood::SetTotalAspirationPoints(int points /* r30 */) {}
 
 // Range: 0x8012A2A0 -> 0x8012A348
 int Neighborhood::MoveIn(class Family * f /* r29 */, int houseNum /* r30 */, unsigned char bIsTransition /* r31 */) {}
 
 // Range: 0x8012A348 -> 0x8012A47C
-void Neighborhood::UpdateFamilyFriendsCount(class Neighborhood * const this /* r26 */, class Family * f /* r27 */) {
+// this: r26
+void Neighborhood::UpdateFamilyFriendsCount(class Family * f /* r27 */) {
     // Local variables
     int friendCnt; // r31
     class Neighbor * * i; // r30
@@ -355,7 +389,8 @@ void Neighborhood::UpdateFamilyFriendsCount(class Neighborhood * const this /* r
 }
 
 // Range: 0x8012A47C -> 0x8012A530
-int Neighborhood::GetNumberOfPeopleOnIslands(class Neighborhood * const this /* r28 */) {
+// this: r28
+int Neighborhood::GetNumberOfPeopleOnIslands() {
     // Local variables
     int humanCnt; // r31
     class Neighbor * * i; // r30
@@ -377,13 +412,15 @@ unsigned char Neighborhood::GetFamilyInfo(class Family * f /* r29 */, class Fami
 }
 
 // Range: 0x8012A69C -> 0x8012A6F8
-unsigned char Neighborhood::GetFamilyInfo(class Neighborhood * const this /* r30 */, class FamilyInfo * info /* r31 */) {
+// this: r30
+unsigned char Neighborhood::GetFamilyInfo(class FamilyInfo * info /* r31 */) {
     // Local variables
     class Family * f; // r4
 }
 
 // Range: 0x8012A6F8 -> 0x8012A7D8
-unsigned char Neighborhood::GetHouseInfo(class Neighborhood * const this /* r28 */, class NghResFile * pFile /* r29 */, int houseNumber /* r30 */, class HouseInfo * info /* r31 */) {
+// this: r28
+unsigned char Neighborhood::GetHouseInfo(class NghResFile * pFile /* r29 */, int houseNumber /* r30 */, class HouseInfo * info /* r31 */) {
     // Local variables
     class Family * f; // r0
 }
@@ -392,7 +429,8 @@ unsigned char Neighborhood::GetHouseInfo(class Neighborhood * const this /* r28 
 unsigned char Neighborhood::GetHouseInfo() {}
 
 // Range: 0x8012A7EC -> 0x8012A8D8
-unsigned char Neighborhood::GetHouseFileInfo(class Neighborhood * const this /* r31 */, class NghResFile * inFile /* r25 */, int * price /* r26 */, unsigned char * isTutorial /* r27 */, unsigned char * hasHouse /* r30 */, unsigned char * moveInAllowed /* r28 */) {
+// this: r31
+unsigned char Neighborhood::GetHouseFileInfo(class NghResFile * inFile /* r25 */, int * price /* r26 */, unsigned char * isTutorial /* r27 */, unsigned char * hasHouse /* r30 */, unsigned char * moveInAllowed /* r28 */) {
     // Local variables
     int version; // r1+0x8
     class cSimulator * sim; // r29
@@ -415,7 +453,8 @@ unsigned char Neighborhood::compareHouses(const int & h1 /* r29 */, const int & 
 }
 
 // Range: 0x8012A9A8 -> 0x8012AE74
-int Neighborhood::LoadHouse(class Neighborhood * const this /* r26 */, class NghResFile * pFile /* r27 */, int houseNum /* r28 */, enum TransitionType transitionType /* r29 */) {
+// this: r26
+int Neighborhood::LoadHouse(class NghResFile * pFile /* r27 */, int houseNum /* r28 */, enum TransitionType transitionType /* r29 */) {
     // Local variables
     class cSimulator * simulator; // r31
     int err; // r24
@@ -451,7 +490,8 @@ int Neighborhood::LoadHouse(class Neighborhood * const this /* r26 */, class Ngh
 }
 
 // Range: 0x8012AE74 -> 0x8012AFFC
-int Neighborhood::SaveHouse(class Neighborhood * const this /* r27 */, class NghResFile * pFile /* r28 */) {
+// this: r27
+int Neighborhood::SaveHouse(class NghResFile * pFile /* r28 */) {
     // Local variables
     class ObjectModule * pObjMod; // r30
     unsigned int numPpl; // r0
@@ -494,7 +534,8 @@ unsigned char Neighborhood::GetEventFlag() {}
 void Neighborhood::SetEventFlag() {}
 
 // Range: 0x8012B148 -> 0x8012B188
-void * NeighborhoodConstants::NeighborhoodConstants(class NeighborhoodConstants * const this /* r31 */) {
+// this: r31
+NeighborhoodConstants::NeighborhoodConstants() {
     // References
     // -> struct [anonymous] __vt__21NeighborhoodConstants;
 }

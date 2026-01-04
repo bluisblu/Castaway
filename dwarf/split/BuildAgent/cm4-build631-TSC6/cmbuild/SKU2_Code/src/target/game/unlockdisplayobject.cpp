@@ -5,13 +5,15 @@
     Code range: 0x80243720 -> 0x80243FF4
 */
 // Range: 0x80243720 -> 0x80243838
-void * CUnlockDisplayObject::CUnlockDisplayObject(class CUnlockDisplayObject * const this /* r31 */) {
+// this: r31
+CUnlockDisplayObject::CUnlockDisplayObject() {
     // References
     // -> struct [anonymous] __vt__20CUnlockDisplayObject;
 }
 
 // Range: 0x80243838 -> 0x80243948
-void * CUnlockDisplayObject::~CUnlockDisplayObject(class CUnlockDisplayObject * const this /* r30 */) {
+// this: r30
+CUnlockDisplayObject::~CUnlockDisplayObject() {
     // References
     // -> class EAnimManager _animman;
     // -> class EModelManager _modelman;
@@ -19,7 +21,8 @@ void * CUnlockDisplayObject::~CUnlockDisplayObject(class CUnlockDisplayObject * 
 }
 
 // Range: 0x80243948 -> 0x80243A00
-unsigned char CUnlockDisplayObject::ServiceDataReady(class CUnlockDisplayObject * const this /* r30 */) {
+// this: r30
+unsigned char CUnlockDisplayObject::ServiceDataReady() {
     // Local variables
     unsigned char ready; // r31
 
@@ -29,10 +32,12 @@ unsigned char CUnlockDisplayObject::ServiceDataReady(class CUnlockDisplayObject 
 }
 
 // Range: 0x80243A00 -> 0x80243A84
-void CUnlockDisplayObject::Setup(class CUnlockDisplayObject * const this /* r31 */) {}
+// this: r31
+void CUnlockDisplayObject::Setup() {}
 
 // Range: 0x80243A84 -> 0x80243E20
-void CUnlockDisplayObject::Update(class CUnlockDisplayObject * const this /* r31 */) {
+// this: r31
+void CUnlockDisplayObject::Update() {
     // Local variables
     class EMat4 mat; // r1+0x60
     class EBound3 bound; // r1+0x48
@@ -44,7 +49,8 @@ void CUnlockDisplayObject::Update(class CUnlockDisplayObject * const this /* r31
 }
 
 // Range: 0x80243E20 -> 0x80243F4C
-void CUnlockDisplayObject::Draw(class CUnlockDisplayObject * const this /* r28 */, class ERC * prc /* r29 */) {
+// this: r28
+void CUnlockDisplayObject::Draw(class ERC * prc /* r29 */) {
     // Local variables
     int nNodes; // r31
     class EMat4 * pmNodes; // r30
@@ -58,6 +64,7 @@ unsigned char CUnlockDisplayObject::IsActive() {
 }
 
 // Range: 0x80243F74 -> 0x80243FF4
-void CUnlockDisplayObject::SetMultiColorIndex(class CUnlockDisplayObject * const this /* r30 */, int index /* r31 */) {}
+// this: r30
+void CUnlockDisplayObject::SetMultiColorIndex(int index /* r31 */) {}
 
 

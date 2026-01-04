@@ -5,16 +5,20 @@
     Code range: 0x8016E82C -> 0x8016EC44
 */
 // Range: 0x8016E82C -> 0x8016E888
-void * EGameState::~EGameState(class EGameState * const this /* r30 */) {}
+// this: r30
+EGameState::~EGameState() {}
 
 // Range: 0x8016E888 -> 0x8016E8D0
-void * EGameStateMan::EGameStateMan(class EGameStateMan * const this /* r31 */) {}
+// this: r31
+EGameStateMan::EGameStateMan() {}
 
 // Range: 0x8016E928 -> 0x8016E990
-void * EGameStateMan::~EGameStateMan(class EGameStateMan * const this /* r30 */) {}
+// this: r30
+EGameStateMan::~EGameStateMan() {}
 
 // Range: 0x8016E990 -> 0x8016EAA4
-void EGameStateMan::SetState(class EGameStateMan * const this /* r27 */, class EGameStateId & newState /* r28 */) {
+// this: r27
+void EGameStateMan::SetState(class EGameStateId & newState /* r28 */) {
     // Local variables
     class NLIteratorPtrType * nli; // r30
     class EGameState * pState; // r29
@@ -24,19 +28,23 @@ void EGameStateMan::SetState(class EGameStateMan * const this /* r27 */, class E
 }
 
 // Range: 0x8016EAA4 -> 0x8016EAE4
-void EGameStateMan::AddState(class EGameStateMan * const this /* r30 */, class EGameState * pState /* r31 */) {}
+// this: r30
+void EGameStateMan::AddState(class EGameState * pState /* r31 */) {}
 
 // Range: 0x8016EAE4 -> 0x8016EB3C
-void EGameStateMan::KillState(class EGameStateMan * const this /* r31 */) {}
+// this: r31
+void EGameStateMan::KillState() {}
 
 // Range: 0x8016EB3C -> 0x8016EBA8
-void EGameStateMan::DeleteAllStates(class EGameStateMan * const this /* r31 */) {
+// this: r31
+void EGameStateMan::DeleteAllStates() {
     // References
     // -> class EGlobal _globals;
 }
 
 // Range: 0x8016EBA8 -> 0x8016EC00
-void EGameStateMan::Update(class EGameStateMan * const this /* r31 */) {
+// this: r31
+void EGameStateMan::Update() {
     // Local variables
     class EGameState * pState; // r0
 

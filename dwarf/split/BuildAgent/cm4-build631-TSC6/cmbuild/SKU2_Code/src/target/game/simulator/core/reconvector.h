@@ -51,7 +51,7 @@ int ReconLoadVector(class iResFile * file /* r28 */, int type /* r29 */, signed 
 }
 
 // Range: 0x800CEBEC -> 0x800CEBF8
-void * ReconStreamVector::ReconStreamVector() {}
+ReconStreamVector::ReconStreamVector() {}
 
 // Range: 0x800CEBF8 -> 0x800CEC68
 int ReconSaveVector(class iResFile * file /* r28 */, int type /* r29 */, signed short id /* r30 */, int version /* r31 */) {
@@ -60,7 +60,8 @@ int ReconSaveVector(class iResFile * file /* r28 */, int type /* r29 */, signed 
 }
 
 // Range: 0x800CEC68 -> 0x800CECC4
-void ReconStreamVector::DoStream(class ReconStreamVector * const this /* r29 */, class ReconBuffer * r /* r30 */, int version /* r31 */) {}
+// this: r29
+void ReconStreamVector::DoStream(class ReconBuffer * r /* r30 */, int version /* r31 */) {}
 
 // Range: 0x800CECC4 -> 0x800CEDC4
 void DoContainerStream(class vector & cont /* r27 */, class ReconBuffer * r /* r28 */, int version /* r29 */) {
@@ -71,12 +72,6 @@ void DoContainerStream(class vector & cont /* r27 */, class ReconBuffer * r /* r
 }
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\target\game\simulator\core\reconvector.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x8010CF48 -> 0x8010D4E8
-*/
 // Range: 0x8010CF48 -> 0x8010D048
 void DoContainerStream(class vector & cont /* r27 */, class ReconBuffer * r /* r28 */, int version /* r29 */) {
     // Local variables
@@ -108,7 +103,7 @@ int ReconLoadPtrVector(class iResFile * file /* r28 */, int type /* r29 */, sign
 }
 
 // Range: 0x8010D2C0 -> 0x8010D2CC
-void * ReconStreamPtrVector::ReconStreamPtrVector() {}
+ReconStreamPtrVector::ReconStreamPtrVector() {}
 
 // Range: 0x8010D2CC -> 0x8010D33C
 int ReconSavePtrVector(class iResFile * file /* r28 */, int type /* r29 */, signed short id /* r30 */, int version /* r31 */) {

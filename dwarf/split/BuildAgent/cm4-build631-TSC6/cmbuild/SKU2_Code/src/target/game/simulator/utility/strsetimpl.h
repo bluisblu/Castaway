@@ -14,10 +14,12 @@ int QuickStringSet::Count() {}
 int QuickStringSet::size() {}
 
 // Range: 0x80169DD4 -> 0x80169E4C
-char * QuickStringSet::GetString(class QuickStringSet * const this /* r30 */, int index /* r31 */) {}
+// this: r30
+char * QuickStringSet::GetString(int index /* r31 */) {}
 
 // Range: 0x80169E4C -> 0x80169EC4
-class ELocString QuickStringSet::GetLocString(class QuickStringSet * const this /* r30 */, int index /* r31 */) {}
+// this: r30
+class ELocString QuickStringSet::GetLocString(int index /* r31 */) {}
 
 // Range: 0x80169EC4 -> 0x80169ECC
 char * QuickStringSet::GetNativeString() {}
@@ -47,43 +49,52 @@ void QuickStringSet::GetName() {}
 void QuickStringSet::SetName() {}
 
 // Range: 0x80169EF4 -> 0x80169F60
-void QuickStringSet::SetInfo(class QuickStringSet * const this /* r26 */, unsigned int fileID /* r27 */, signed short resID /* r28 */, unsigned int type /* r29 */, unsigned char cst /* r30 */, char nLanguage /* r31 */) {}
+// this: r26
+void QuickStringSet::SetInfo(unsigned int fileID /* r27 */, signed short resID /* r28 */, unsigned int type /* r29 */, unsigned char cst /* r30 */, char nLanguage /* r31 */) {}
 
 // Range: 0x80169F60 -> 0x80169FF4
-void QuickStringSet::SetInfo(class QuickStringSet * const this /* r28 */, signed short resID /* r29 */) {
+// this: r28
+void QuickStringSet::SetInfo(signed short resID /* r29 */) {
     // Local variables
     const struct ResFile * pResFile; // r0
 }
 
 // Range: 0x80169FF4 -> 0x8016A060
-void QuickStringSet::SetLocInfo(class QuickStringSet * const this /* r26 */, unsigned int fileID /* r27 */, signed short resID /* r28 */, unsigned int type /* r29 */, unsigned char cst /* r30 */, char nLanguage /* r31 */) {}
+// this: r26
+void QuickStringSet::SetLocInfo(unsigned int fileID /* r27 */, signed short resID /* r28 */, unsigned int type /* r29 */, unsigned char cst /* r30 */, char nLanguage /* r31 */) {}
 
 // Range: 0x8016A060 -> 0x8016A0F0
-void QuickStringSet::SetLocInfo(class QuickStringSet * const this /* r28 */, signed short resID /* r29 */) {
+// this: r28
+void QuickStringSet::SetLocInfo(signed short resID /* r29 */) {
     // Local variables
     const struct ResFile * pResFile; // r0
 }
 
 // Range: 0x8016A0F0 -> 0x8016A14C
-int QuickStringSet::LoadRes(class QuickStringSet * const this /* r29 */, unsigned int fileID /* r30 */, signed short resID /* r31 */) {}
+// this: r29
+int QuickStringSet::LoadRes(unsigned int fileID /* r30 */, signed short resID /* r31 */) {}
 
 // Range: 0x8016A14C -> 0x8016A200
-int QuickStringSet::LoadRes(class QuickStringSet * const this /* r29 */, class iResFile * file /* r30 */, signed short resID /* r31 */) {
+// this: r29
+int QuickStringSet::LoadRes(class iResFile * file /* r30 */, signed short resID /* r31 */) {
     // Local variables
     int err; // r3
 }
 
 // Range: 0x8016A200 -> 0x8016A25C
-int QuickStringSet::LoadLocRes(class QuickStringSet * const this /* r29 */, unsigned int fileID /* r30 */, signed short resID /* r31 */) {}
+// this: r29
+int QuickStringSet::LoadLocRes(unsigned int fileID /* r30 */, signed short resID /* r31 */) {}
 
 // Range: 0x8016A25C -> 0x8016A2AC
-int QuickStringSet::LoadLocRes(class QuickStringSet * const this /* r31 */) {}
+// this: r31
+int QuickStringSet::LoadLocRes() {}
 
 // Range: 0x8016A2AC -> 0x8016A2B4
 int QuickStringSet::Save() {}
 
 // Range: 0x8016A2B4 -> 0x8016A310
-int QuickStringSet::Save(class QuickStringSet * const this /* r29 */, unsigned int fileID /* r30 */, signed short resID /* r31 */) {}
+// this: r29
+int QuickStringSet::Save(unsigned int fileID /* r30 */, signed short resID /* r31 */) {}
 
 // Range: 0x8016A310 -> 0x8016A318
 int QuickStringSet::Save() {}
@@ -98,7 +109,8 @@ signed short QuickStringSet::GetID() {}
 class ObjectDataID QuickStringSet::GetDataID() {}
 
 // Range: 0x8016A348 -> 0x8016A3BC
-unsigned char QuickStringSet::LoadFromDataID(class QuickStringSet * const this /* r29 */, const class ObjectDataID & id /* r30 */) {}
+// this: r29
+unsigned char QuickStringSet::LoadFromDataID(const class ObjectDataID & id /* r30 */) {}
 
 // Range: 0x8016A3BC -> 0x8016A3C4
 unsigned char QuickStringSet::LoadFromIndex() {}
@@ -119,7 +131,8 @@ enum tObjectDataType QuickStringSet::GetDataSourceType() {}
 unsigned char QuickStringSet::LoadOnlyNameAndIDFromIndex() {}
 
 // Range: 0x8016A3EC -> 0x8016A48C
-unsigned char QuickStringSet::QueryInterface(class QuickStringSet * const this /* r30 */, void * ppvObject /* r31 */) {}
+// this: r30
+unsigned char QuickStringSet::QueryInterface(void * ppvObject /* r31 */) {}
 
 // Range: 0x8016A48C -> 0x8016A4A0
 unsigned int QuickStringSet::AddRef() {}

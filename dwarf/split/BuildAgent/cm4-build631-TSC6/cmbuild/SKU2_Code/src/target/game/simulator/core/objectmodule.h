@@ -14,12 +14,6 @@ int ObjectModule::GetNumPeople() {}
 signed short ObjectModule::AddObject() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\target\game\simulator\core\objectmodule.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x800CE25C -> 0x800CE2A4
-*/
 // Range: 0x800CE25C -> 0x800CE264
 class RoutingSlot & ObjectModule::GetGlobalRoutingSlot() {}
 
@@ -36,14 +30,9 @@ int ObjectModule::GetNumPortals() {}
 class cXObject * ObjectModule::GetFirst() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\target\game\simulator\core\objectmodule.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x800FB424 -> 0x800FB500
-*/
 // Range: 0x800FB424 -> 0x800FB4D4
-void * ObjectModule::~ObjectModule(class ObjectModule * const this /* r30 */) {}
+// this: r30
+ObjectModule::~ObjectModule() {}
 
 // Range: 0x800FB4D4 -> 0x800FB4E0
 class cXObject * ObjectModule::FindMailbox() {}
@@ -67,22 +56,10 @@ void ObjectModule::SkillAccessed() {}
 void ObjectModule::PersonalityAccessed() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\target\game\simulator\core\objectmodule.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x8017449C -> 0x801744A4
-*/
 // Range: 0x8017449C -> 0x801744A4
 void ObjectModule::ClearKillQueue() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\target\game\simulator\core\objectmodule.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x801AB038 -> 0x801AB068
-*/
 // Range: 0x801AB038 -> 0x801AB068
 unsigned char ObjectModule::IsBuyAndBuildDisabled() {}
 

@@ -6,13 +6,15 @@
 */
 static char __PRETTY_FUNCTION__[34]; // size: 0x22, address: 0x8045F2E0
 // Range: 0x80330224 -> 0x80330290
-void AptPrototype::DestroyGCPointers(class AptPrototype * const this /* r31 */) {
+// this: r31
+void AptPrototype::DestroyGCPointers() {
     // References
     // -> static char __PRETTY_FUNCTION__[34];
 }
 
 // Range: 0x80330290 -> 0x803302E0
-void AptPrototype::RegisterReferences(const class AptPrototype * const this /* r31 */) {
+// this: r31
+void AptPrototype::RegisterReferences() const {
     // References
     // -> void (* sReferenceRegistrationCb)(class AptValue *, class AptValue *, char *);
 }
@@ -30,19 +32,22 @@ void AptObject::RegisterReferences() {}
 void AptObject::DestroyGCPointers() {}
 
 // Range: 0x80330328 -> 0x803303A4
-void AptObject::SetImplementedObjects(class AptObject * const this /* r29 */, class AptArray * paImplementedObjects /* r30 */, int nNumObjects /* r31 */) {
+// this: r29
+void AptObject::SetImplementedObjects(class AptArray * paImplementedObjects /* r30 */, int nNumObjects /* r31 */) {
     // Local variables
     class EAStringC sTmp; // r1+0x8
 }
 
 // Range: 0x803303A4 -> 0x80330418
-class AptArray * AptObject::GetImplementedObjects(const class AptObject * const this /* r31 */) {
+// this: r31
+class AptArray * AptObject::GetImplementedObjects() const {
     // Local variables
     class EAStringC sTmp; // r1+0x8
 }
 
 // Range: 0x80330418 -> 0x80330540
-unsigned char AptObject::DoesImplementObject(const class AptObject * const this /* r28 */, class AptValue * pPrototype /* r29 */) {
+// this: r28
+unsigned char AptObject::DoesImplementObject(class AptValue * pPrototype /* r29 */) const {
     // Local variables
     class AptValue * pProto; // r31
     class EAStringC sTmp; // r1+0x8
@@ -50,10 +55,8 @@ unsigned char AptObject::DoesImplementObject(const class AptObject * const this 
     unsigned int i; // r30
 }
 
-struct {
-    // total size: 0x44
-} __vt__9AptObject; // size: 0x44, address: 0x8045F358
-struct {
-    // total size: 0x44
-} __vt__12AptPrototype; // size: 0x44, address: 0x8045F39C
+// total size: 0x44
+struct {} __vt__9AptObject; // size: 0x44, address: 0x8045F358
+// total size: 0x44
+struct {} __vt__12AptPrototype; // size: 0x44, address: 0x8045F39C
 

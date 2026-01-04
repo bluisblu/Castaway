@@ -5,12 +5,14 @@
     Code range: 0x8031232C -> 0x803123DC
 */
 // Range: 0x8031232C -> 0x80312380
-void * AptNativeFunction::AptNativeFunction(class AptNativeFunction * const this /* r30 */, class AptValue * (* _pFunc)(class AptValue *, int) /* r31 */) {
+// this: r30
+AptNativeFunction::AptNativeFunction(class AptValue * (* _pFunc)(class AptValue *, int) /* r31 */) {
     // References
     // -> struct [anonymous] __vt__17AptNativeFunction;
 }
 
 // Range: 0x80312380 -> 0x803123DC
-void * AptNativeFunction::~AptNativeFunction(class AptNativeFunction * const this /* r30 */) {}
+// this: r30
+AptNativeFunction::~AptNativeFunction() {}
 
 

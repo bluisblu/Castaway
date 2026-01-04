@@ -5,7 +5,8 @@
     Code range: 0x801ED1C0 -> 0x801EFF98
 */
 // Range: 0x801ED1C0 -> 0x801ED884
-void * KFTTarget::KFTTarget(class KFTTarget * const this /* r29 */, enum eKFTType mode /* r30 */, class UIObjectBase * parent /* r25 */) {
+// this: r29
+KFTTarget::KFTTarget(enum eKFTType mode /* r30 */, class UIObjectBase * parent /* r25 */) {
     // Local variables
     int i; // r27
     unsigned char found; // r4
@@ -56,7 +57,8 @@ void * KFTTarget::KFTTarget(class KFTTarget * const this /* r29 */, enum eKFTTyp
 }
 
 // Range: 0x801ED884 -> 0x801EDA30
-void * KFTTarget::~KFTTarget(class KFTTarget * const this /* r29 */) {
+// this: r29
+KFTTarget::~KFTTarget() {
     // References
     // -> class EGlobal _globals;
     // -> class GameData _gd;
@@ -65,7 +67,8 @@ void * KFTTarget::~KFTTarget(class KFTTarget * const this /* r29 */) {
 }
 
 // Range: 0x801EDA30 -> 0x801EDB34
-void KFTTarget::DeleteAllRecords(class KFTTarget * const this /* r26 */) {
+// this: r26
+void KFTTarget::DeleteAllRecords() {
     // Local variables
     struct KFTRecord * const * it; // r28
     struct KFTRecord * pRec; // r27
@@ -88,7 +91,8 @@ void KFTTarget::ExitToolMode() {
 unsigned char KFTTarget::InToolMode() {}
 
 // Range: 0x801EDB64 -> 0x801EE0B0
-void KFTTarget::SetVariable(class KFTTarget * const this /* r31 */, const char * szVar /* r26 */, const char * zValue /* r25 */) {
+// this: r31
+void KFTTarget::SetVariable(const char * szVar /* r26 */, const char * zValue /* r25 */) {
     // Local variables
     struct KFTRecord * pRec; // r28
     unsigned char playErrorSound; // r27
@@ -125,7 +129,8 @@ void KFTTarget::SetVariable(class KFTTarget * const this /* r31 */, const char *
 }
 
 // Range: 0x801EE0B0 -> 0x801EE558
-char * KFTTarget::GetVariable(class KFTTarget * const this /* r27 */, const char * szVar /* r28 */) {
+// this: r27
+char * KFTTarget::GetVariable(const char * szVar /* r28 */) {
     // Local variables
     unsigned char bTestSize; // r31
     char * pResultString; // r30
@@ -164,7 +169,8 @@ char * KFTTarget::GetVariable(class KFTTarget * const this /* r27 */, const char
 }
 
 // Range: 0x801EE558 -> 0x801EE974
-unsigned short * KFTTarget::GetLocalizable(class KFTTarget * const this /* r28 */, const char * szVar /* r29 */) {
+// this: r28
+unsigned short * KFTTarget::GetLocalizable(const char * szVar /* r29 */) {
     // Local variables
     unsigned short widestring[4096]; // r1+0x48
     unsigned char found; // r4
@@ -194,7 +200,8 @@ unsigned short * KFTTarget::GetLocalizable(class KFTTarget * const this /* r28 *
 }
 
 // Range: 0x801EE974 -> 0x801EEA08
-void KFTTarget::Update(class KFTTarget * const this /* r31 */) {
+// this: r31
+void KFTTarget::Update() {
     // Local variables
     class EVec2 dummy; // r1+0x8
 
@@ -204,13 +211,15 @@ void KFTTarget::Update(class KFTTarget * const this /* r31 */) {
 }
 
 // Range: 0x801EEA08 -> 0x801EEA90
-unsigned char KFTTarget::end_dialog(class KFTTarget * const this /* r30 */, unsigned char bAccepted /* r31 */) {
+// this: r30
+unsigned char KFTTarget::end_dialog(unsigned char bAccepted /* r31 */) {
     // References
     // -> class GameData _gd;
 }
 
 // Range: 0x801EEA90 -> 0x801EEC70
-void KFTTarget::UpdatedSelectedItemInfo(class KFTTarget * const this /* r30 */) {
+// this: r30
+void KFTTarget::UpdatedSelectedItemInfo() {
     // Local variables
     struct KFTRecord * pRec; // r31
     int i; // r27
@@ -224,17 +233,20 @@ void KFTTarget::UpdatedSelectedItemInfo(class KFTTarget * const this /* r30 */) 
 }
 
 // Range: 0x801EEC70 -> 0x801EED40
-void KFTTarget::BlankAllGridItemShaders(class KFTTarget * const this /* r29 */) {
+// this: r29
+void KFTTarget::BlankAllGridItemShaders() {
     // Local variables
     int i; // r31
     unsigned int blank; // r30
 }
 
 // Range: 0x801EED40 -> 0x801EEDE4
-void KFTTarget::VisibilityCallFunction(class KFTTarget * const this /* r31 */) {}
+// this: r31
+void KFTTarget::VisibilityCallFunction() {}
 
 // Range: 0x801EEDE4 -> 0x801EEE50
-void KFTTarget::ExitBBHMode(class KFTTarget * const this /* r31 */) {
+// this: r31
+void KFTTarget::ExitBBHMode() {
     // Local variables
     class PlanManager * pPlanManager; // r0
     const struct Plan * pPlan; // r0
@@ -244,7 +256,8 @@ void KFTTarget::ExitBBHMode(class KFTTarget * const this /* r31 */) {
 }
 
 // Range: 0x801EEE50 -> 0x801EEF24
-char * KFTTarget::GetUnavailableList(class KFTTarget * const this /* r28 */) {
+// this: r28
+char * KFTTarget::GetUnavailableList() {
     // Local variables
     int size; // r31
     char * retData; // r30
@@ -254,7 +267,8 @@ char * KFTTarget::GetUnavailableList(class KFTTarget * const this /* r28 */) {
 }
 
 // Range: 0x801EEF24 -> 0x801EEF88
-struct KFTRecord * KFTTarget::GetCurrentItem(class KFTTarget * const this /* r30 */) {}
+// this: r30
+struct KFTRecord * KFTTarget::GetCurrentItem() {}
 
 // Range: 0x801EEF88 -> 0x801EF06C
 unsigned char KFTTarget::IsCraftingRequirementsMet(struct KFTRecord * pRec /* r28 */) {
@@ -264,14 +278,16 @@ unsigned char KFTTarget::IsCraftingRequirementsMet(struct KFTRecord * pRec /* r2
 }
 
 // Range: 0x801EF06C -> 0x801EF130
-void KFTTarget::PopulateRecordsForMode(class KFTTarget * const this /* r28 */, enum eKFTType type /* r29 */) {
+// this: r28
+void KFTTarget::PopulateRecordsForMode(enum eKFTType type /* r29 */) {
     // Local variables
     const struct Plan * pPlanData; // r31
     class PlanManager * pPlanManager; // r30
 }
 
 // Range: 0x801EF130 -> 0x801EF534
-unsigned char KFTTarget::AddRecord(class KFTTarget * const this /* r30 */, const struct Plan * pPlanData /* r31 */) {
+// this: r30
+unsigned char KFTTarget::AddRecord(const struct Plan * pPlanData /* r31 */) {
     // Local variables
     class BString2 temp; // r1+0x10
     class ELocString name; // r1+0xC
@@ -305,34 +321,42 @@ unsigned char KFTTarget::HasPlanType(enum eKFTType type /* r29 */, enum eKFTType
 }
 
 // Range: 0x801EF5D8 -> 0x801EF624
-void * KFTInteractorManager::KFTInteractorManager(class KFTInteractorManager * const this /* r31 */) {}
+// this: r31
+KFTInteractorManager::KFTInteractorManager() {}
 
 // Range: 0x801EF624 -> 0x801EF6B4
-void * KFTInteractorManager::~KFTInteractorManager(class KFTInteractorManager * const this /* r30 */) {}
+// this: r30
+KFTInteractorManager::~KFTInteractorManager() {}
 
 // Range: 0x801EF6B4 -> 0x801EF704
-void KFTInteractorManager::Initialize(class KFTInteractorManager * const this /* r31 */) {}
+// this: r31
+void KFTInteractorManager::Initialize() {}
 
 // Range: 0x801EF704 -> 0x801EF77C
-void KFTInteractorManager::EnterToolMode(class KFTInteractorManager * const this /* r29 */, struct KFTRecord * pRec /* r30 */, enum eKFTIMToolMode mode /* r31 */) {}
+// this: r29
+void KFTInteractorManager::EnterToolMode(struct KFTRecord * pRec /* r30 */, enum eKFTIMToolMode mode /* r31 */) {}
 
 // Range: 0x801EF77C -> 0x801EF7E0
-void KFTInteractorManager::ExitInteractionMode(class KFTInteractorManager * const this /* r30 */, unsigned char bPlaced /* r31 */) {
+// this: r30
+void KFTInteractorManager::ExitInteractionMode(unsigned char bPlaced /* r31 */) {
     // References
     // -> class GameData _gd;
 }
 
 // Range: 0x801EF7E0 -> 0x801EF860
-void KFTInteractorManager::Update(class KFTInteractorManager * const this /* r31 */) {
+// this: r31
+void KFTInteractorManager::Update() {
     // References
     // -> float _dt;
 }
 
 // Range: 0x801EF860 -> 0x801EF8D4
-void KFTInteractorManager::UpdateBBHState(class KFTInteractorManager * const this /* r28 */, struct BBHPriceInfo * info /* r29 */, unsigned int shaderId /* r30 */, int mode /* r31 */) {}
+// this: r28
+void KFTInteractorManager::UpdateBBHState(struct BBHPriceInfo * info /* r29 */, unsigned int shaderId /* r30 */, int mode /* r31 */) {}
 
 // Range: 0x801EF8D4 -> 0x801EF9D4
-void KFTInteractorManager::EnterPlaceMode(class KFTInteractorManager * const this /* r28 */) {
+// this: r28
+void KFTInteractorManager::EnterPlaceMode() {
     // Local variables
     class ObjSelector * pObjSelector; // r29
     struct BBHPriceInfo priceInfo; // r1+0x8
@@ -340,7 +364,8 @@ void KFTInteractorManager::EnterPlaceMode(class KFTInteractorManager * const thi
 }
 
 // Range: 0x801EF9D4 -> 0x801EFB18
-void KFTInteractorManager::EnterHutPlacementMode(class KFTInteractorManager * const this /* r29 */, int planId /* r30 */) {
+// this: r29
+void KFTInteractorManager::EnterHutPlacementMode(int planId /* r30 */) {
     // Local variables
     struct BBHPriceInfo priceInfo; // r1+0x8
     struct HutPlaceManipulatorParams params; // r1+0x18
@@ -364,7 +389,8 @@ void KFTInteractorManager::static_HutPlaceManipulatorCallback() {
 }
 
 // Range: 0x801EFB50 -> 0x801EFD04
-unsigned char KFTInteractorManager::PlaceModeCallback(class KFTInteractorManager * const this /* r29 */, const struct CallbackData * pData /* r30 */) {
+// this: r29
+unsigned char KFTInteractorManager::PlaceModeCallback(const struct CallbackData * pData /* r30 */) {
     // Local variables
     const struct CallbackData * pPlaceData; // r0
     class cXObject * pObject; // r31
@@ -375,13 +401,15 @@ unsigned char KFTInteractorManager::PlaceModeCallback(class KFTInteractorManager
 }
 
 // Range: 0x801EFD04 -> 0x801EFDCC
-unsigned char KFTInteractorManager::HutPlaceModeCallback(class KFTInteractorManager * const this /* r31 */) {
+// this: r31
+unsigned char KFTInteractorManager::HutPlaceModeCallback() {
     // References
     // -> class GameData _gd;
 }
 
 // Range: 0x801EFDCC -> 0x801EFF04
-void KFTTarget::SetupCraftingCamera(class KFTTarget * const this /* r29 */) {
+// this: r29
+void KFTTarget::SetupCraftingCamera() {
     // Local variables
     class ESimsCam * pSimsCam; // r31
     class SimsCameraParameters * pParams; // r30
@@ -391,7 +419,8 @@ void KFTTarget::SetupCraftingCamera(class KFTTarget * const this /* r29 */) {
 }
 
 // Range: 0x801EFF04 -> 0x801EFF98
-void KFTTarget::RestoreCamera(class KFTTarget * const this /* r30 */) {
+// this: r30
+void KFTTarget::RestoreCamera() {
     // Local variables
     class ESimsCam * pSimsCam; // r31
     class SimsCameraParameters * pParams; // r4

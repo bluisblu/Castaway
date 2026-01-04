@@ -5,7 +5,8 @@
     Code range: 0x8008536C -> 0x80085414
 */
 // Range: 0x8008536C -> 0x800853AC
-void * EStorable::~EStorable(class EStorable * const this /* r31 */) {}
+// this: r31
+EStorable::~EStorable() {}
 
 // Range: 0x800853AC -> 0x800853B0
 void EStorable::Write() {}
@@ -44,12 +45,6 @@ unsigned short EStorable::GetTypeVersion() {
 void EStorable::Load() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\common\base\core\e_storable.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x8025FB38 -> 0x8025FB8C
-*/
 // Range: 0x8025FB38 -> 0x8025FB3C
 void EStorable::Destruct() {}
 

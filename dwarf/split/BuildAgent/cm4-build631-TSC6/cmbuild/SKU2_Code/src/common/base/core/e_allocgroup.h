@@ -5,6 +5,7 @@
     Code range: 0x80292C50 -> 0x80292CB8
 */
 // Range: 0x80292C50 -> 0x80292CB8
-void * EAllocGroup::~EAllocGroup(class EAllocGroup * const this /* r30 */) {}
+// this: r30
+EAllocGroup::~EAllocGroup() {}
 
 

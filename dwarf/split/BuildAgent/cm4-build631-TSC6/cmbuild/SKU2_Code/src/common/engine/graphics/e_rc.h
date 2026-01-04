@@ -8,22 +8,10 @@
 void ERC::ModelMatrix() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\common\engine\graphics\e_rc.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x80200D04 -> 0x80200D08
-*/
 // Range: 0x80200D04 -> 0x80200D08
 void ERC::SetVertexMorphingOnOrOff() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\common\engine\graphics\e_rc.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x8029A798 -> 0x8029A800
-*/
 // Range: 0x8029A798 -> 0x8029A7B0
 void ERC::EndCommand() {}
 
@@ -37,6 +25,7 @@ void ERC::ProcessFrameEffects() {}
 void * ERC::AllocVertexData() {}
 
 // Range: 0x8029A7C0 -> 0x8029A800
-void * DepthFade::~DepthFade(class DepthFade * const this /* r31 */) {}
+// this: r31
+DepthFade::~DepthFade() {}
 
 

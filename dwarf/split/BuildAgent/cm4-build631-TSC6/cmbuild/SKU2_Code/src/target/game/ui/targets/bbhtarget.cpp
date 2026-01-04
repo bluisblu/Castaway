@@ -5,7 +5,8 @@
     Code range: 0x801A0578 -> 0x801A1D48
 */
 // Range: 0x801A0578 -> 0x801A09C0
-void * BBHTarget::BBHTarget(class BBHTarget * const this /* r31 */, unsigned char inventory /* r29 */) {
+// this: r31
+BBHTarget::BBHTarget(unsigned char inventory /* r29 */) {
     // References
     // -> class EGlobal _globals;
     // -> static const char * const BBH_wii_floorplan;
@@ -41,14 +42,16 @@ void * BBHTarget::BBHTarget(class BBHTarget * const this /* r31 */, unsigned cha
 }
 
 // Range: 0x801A09C0 -> 0x801A0A7C
-void * BBHTarget::~BBHTarget(class BBHTarget * const this /* r30 */) {
+// this: r30
+BBHTarget::~BBHTarget() {
     // References
     // -> class EGlobal _globals;
     // -> struct [anonymous] __vt__9BBHTarget;
 }
 
 // Range: 0x801A0A7C -> 0x801A0CA4
-void BBHTarget::SetVariable(class BBHTarget * const this /* r29 */, const char * szCommand /* r30 */) {
+// this: r29
+void BBHTarget::SetVariable(const char * szCommand /* r30 */) {
     // Local variables
     int index; // r0
 
@@ -69,7 +72,8 @@ char * BBHTarget::GetVariable(const char * szVar /* r30 */) {
 }
 
 // Range: 0x801A0D14 -> 0x801A0E80
-unsigned short * BBHTarget::GetLocalizable(class BBHTarget * const this /* r30 */, const char * szVar /* r31 */) {
+// this: r30
+unsigned short * BBHTarget::GetLocalizable(const char * szVar /* r31 */) {
     // Local variables
     unsigned short wideStr[8192]; // r1+0x18
     const unsigned short * const pString; // r0
@@ -84,10 +88,12 @@ unsigned short * BBHTarget::GetLocalizable(class BBHTarget * const this /* r30 *
 }
 
 // Range: 0x801A0E80 -> 0x801A1020
-void BBHTarget::Update(class BBHTarget * const this /* r30 */) {}
+// this: r30
+void BBHTarget::Update() {}
 
 // Range: 0x801A1020 -> 0x801A1120
-void BBHTarget::SetCurrentPriceAndShaderID(class BBHTarget * const this /* r29 */, struct BBHPriceInfo * priceInfo /* r6 */, unsigned int shaderID /* r30 */) {
+// this: r29
+void BBHTarget::SetCurrentPriceAndShaderID(struct BBHPriceInfo * priceInfo /* r6 */, unsigned int shaderID /* r30 */) {
     // Local variables
     int toolActiveNext; // r31
 }
@@ -96,10 +102,12 @@ void BBHTarget::SetCurrentPriceAndShaderID(class BBHTarget * const this /* r29 *
 void BBHTarget::SetCurrentPrice() {}
 
 // Range: 0x801A1160 -> 0x801A125C
-void BBHTarget::ReflowWiiWidgets(class BBHTarget * const this /* r27 */, unsigned char isGrabMode /* r28 */, unsigned char isRemovable /* r29 */, unsigned char isSwitch /* r30 */) {}
+// this: r27
+void BBHTarget::ReflowWiiWidgets(unsigned char isGrabMode /* r28 */, unsigned char isRemovable /* r29 */, unsigned char isSwitch /* r30 */) {}
 
 // Range: 0x801A125C -> 0x801A13C0
-void BBHTarget::ReflowPriceWidgets(class BBHTarget * const this /* r28 */) {
+// this: r28
+void BBHTarget::ReflowPriceWidgets() {
     // Local variables
     unsigned short * wideStr; // r29
     class EVec2 priceBox; // r1+0x18
@@ -107,7 +115,8 @@ void BBHTarget::ReflowPriceWidgets(class BBHTarget * const this /* r28 */) {
 }
 
 // Range: 0x801A13C0 -> 0x801A1478
-void BBHTarget::ReflowToolNameGadget(class BBHTarget * const this /* r29 */, unsigned short * text /* r30 */) {
+// this: r29
+void BBHTarget::ReflowToolNameGadget(unsigned short * text /* r30 */) {
     // Local variables
     class EVec2 textBox; // r1+0x18
     int toolTextLength; // r31
@@ -123,13 +132,16 @@ void BBHTarget::SetCurrentShader() {
 unsigned char BBHTarget::IsBuildBuyHUDActive() {}
 
 // Range: 0x801A14D4 -> 0x801A1520
-void BBHTarget::ShowBuildBuyHUD(class BBHTarget * const this /* r31 */) {}
+// this: r31
+void BBHTarget::ShowBuildBuyHUD() {}
 
 // Range: 0x801A1520 -> 0x801A156C
-void BBHTarget::HideBuildBuyHUD(class BBHTarget * const this /* r31 */) {}
+// this: r31
+void BBHTarget::HideBuildBuyHUD() {}
 
 // Range: 0x801A156C -> 0x801A1640
-void BBHTarget::UpdateBuildBuyHUD(class BBHTarget * const this /* r29 */) {
+// this: r29
+void BBHTarget::UpdateBuildBuyHUD() {
     // Local variables
     int dollars; // r30
     class cSimulator * pSimulator; // r0
@@ -146,14 +158,16 @@ void BBHTarget::SetSellingPig() {}
 void BBHTarget::SetBBHMode() {}
 
 // Range: 0x801A166C -> 0x801A1770
-void BBHTarget::ReflowIconsOpen(class BBHTarget * const this /* r29 */) {
+// this: r29
+void BBHTarget::ReflowIconsOpen() {
     // Local variables
     int i; // r30
     int i; // r30
 }
 
 // Range: 0x801A1770 -> 0x801A1834
-void BBHTarget::ReflowIconAnimation(class BBHTarget * const this /* r29 */, int swfNum /* r31 */, int currentToolState /* r30 */) {
+// this: r29
+void BBHTarget::ReflowIconAnimation(int swfNum /* r31 */, int currentToolState /* r30 */) {
     // Local variables
     char animBuffer[50]; // r1+0x8
 
@@ -171,7 +185,8 @@ class EVec2 BBHTarget::GetOptionTextSize(class EVec2 * ret /* r28 */, unsigned s
 }
 
 // Range: 0x801A1900 -> 0x801A1A5C
-void BBHTarget::MakeBBHPriceInfoString(class BBHTarget * const this /* r31 */, unsigned short * wideStr /* r30 */) {
+// this: r31
+void BBHTarget::MakeBBHPriceInfoString(unsigned short * wideStr /* r30 */) {
     // Local variables
     unsigned short scratchSpace[2048]; // r1+0x8
     int average; // r5
@@ -184,7 +199,8 @@ class ELocString BBHTarget::GetCurrentToolName() {
 }
 
 // Range: 0x801A1B70 -> 0x801A1D20
-void BBHTarget::UpdateCornerIcon(class BBHTarget * const this /* r31 */) {}
+// this: r31
+void BBHTarget::UpdateCornerIcon() {}
 
 // Range: 0x801A1D20 -> 0x801A1D48
 unsigned char BBHTarget::ShowCloneToolCallout() {}

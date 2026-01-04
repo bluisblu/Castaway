@@ -20,7 +20,8 @@ int StateMachineState::OwnerGetReturnVal() {}
 void StateMachineState::OwnerResetReturnVal() {}
 
 // Range: 0x8016A654 -> 0x8016A810
-void StateMachine::Update(class StateMachine * const this /* r27 */, float fDeltaSeconds /* f30 */) {
+// this: r27
+void StateMachine::Update(float fDeltaSeconds /* f30 */) {
     // Local variables
     unsigned char bSwitchedState; // r29
     class StateMachineState * pCurState; // r28
@@ -28,22 +29,26 @@ void StateMachine::Update(class StateMachine * const this /* r27 */, float fDelt
 }
 
 // Range: 0x8016A810 -> 0x8016A864
-void StateMachine::Draw(class StateMachine * const this /* r30 */, class ERC * pGraphicsState /* r31 */) {}
+// this: r30
+void StateMachine::Draw(class ERC * pGraphicsState /* r31 */) {}
 
 // Range: 0x8016A864 -> 0x8016A8CC
-void StateMachine::DrawTopmost(class StateMachine * const this /* r30 */, class ERC * pGraphicsState /* r31 */) {
+// this: r30
+void StateMachine::DrawTopmost(class ERC * pGraphicsState /* r31 */) {
     // References
     // -> class GameData _gd;
 }
 
 // Range: 0x8016A8CC -> 0x8016A91C
-void StateMachine::SetNextState(class StateMachine * const this /* r31 */, float fSecondsBeforeNextState /* f31 */) {
+// this: r31
+void StateMachine::SetNextState(float fSecondsBeforeNextState /* f31 */) {
     // Local variables
     class StateMachineState * pState; // r3
 }
 
 // Range: 0x8016A91C -> 0x8016A954
-void StateMachine::CallState(class StateMachine * const this /* r31 */) {
+// this: r31
+void StateMachine::CallState() {
     // Local variables
     class StateMachineState * pState; // r0
 }
@@ -52,13 +57,16 @@ void StateMachine::CallState(class StateMachine * const this /* r31 */) {
 void StateMachine::ReturnFromState() {}
 
 // Range: 0x8016A964 -> 0x8016A9B0
-int StateMachine::GetCurStateId(const class StateMachine * const this /* r31 */) {}
+// this: r31
+int StateMachine::GetCurStateId() const {}
 
 // Range: 0x8016A9B0 -> 0x8016AA00
-class StateMachineState * StateMachine::AddState(class StateMachine * const this /* r31 */, class StateMachineState * pState /* r1+0x8 */) {}
+// this: r31
+class StateMachineState * StateMachine::AddState(class StateMachineState * pState /* r1+0x8 */) {}
 
 // Range: 0x8016AA00 -> 0x8016AAD0
-void StateMachine::DeleteAllStates(class StateMachine * const this /* r29 */) {
+// this: r29
+void StateMachine::DeleteAllStates() {
     // Local variables
     class StateMachineState * * stateIter; // r30
     class StateMachineState * pThis; // r3
@@ -69,30 +77,35 @@ void StateMachine::DeleteAllStates(class StateMachine * const this /* r29 */) {
 float StateMachine::GetTimeInState() {}
 
 // Range: 0x8016AAD8 -> 0x8016AB60
-class StateMachineState * StateMachine::FindStateById(class StateMachine * const this /* r28 */, int stateId /* r29 */) {
+// this: r28
+class StateMachineState * StateMachine::FindStateById(int stateId /* r29 */) {
     // Local variables
     class StateMachineState * * stateIter; // r31
     class StateMachineState * pThis; // r30
 }
 
 // Range: 0x8016AB60 -> 0x8016ABD4
-class StateMachineState * StateMachine::FindState(class StateMachine * const this /* r29 */, const class StateMachineState * pState /* r30 */) {
+// this: r29
+class StateMachineState * StateMachine::FindState(const class StateMachineState * pState /* r30 */) {
     // Local variables
     class StateMachineState * * stateIter; // r31
     class StateMachineState * pThis; // r3
 }
 
 // Range: 0x8016ABD4 -> 0x8016AC0C
-void StateMachine::SetState(class StateMachine * const this /* r31 */) {}
+// this: r31
+void StateMachine::SetState() {}
 
 // Range: 0x8016AC0C -> 0x8016AC60
-void StateMachine::PushStatus(class StateMachine * const this /* r31 */) {
+// this: r31
+void StateMachine::PushStatus() {
     // Local variables
     class StateMachineStatus * pStatus; // r1+0x8
 }
 
 // Range: 0x8016AC60 -> 0x8016ACBC
-void StateMachine::PopStatus(class StateMachine * const this /* r30 */) {
+// this: r30
+void StateMachine::PopStatus() {
     // Local variables
     class StateMachineStatus * pStatus; // r31
 }
@@ -101,7 +114,8 @@ void StateMachine::PopStatus(class StateMachine * const this /* r30 */) {
 void StateMachineStatus::StatusReset() {}
 
 // Range: 0x8016ACE0 -> 0x8016ADF8
-void StateMachineStatus::SetState(class StateMachineStatus * const this /* r29 */, class StateMachineState * pState /* r30 */) {}
+// this: r29
+void StateMachineStatus::SetState(class StateMachineState * pState /* r30 */) {}
 
 // Range: 0x8016ADF8 -> 0x8016AE20
 void StateMachineStatus::AddToSecondsBeforeNextState() {}
@@ -110,26 +124,32 @@ void StateMachineStatus::AddToSecondsBeforeNextState() {}
 void StateMachineStatus::AddToSecondsInCurState() {}
 
 // Range: 0x8016AE30 -> 0x8016AEAC
-void StateMachineStatus::ShutdownCurState(class StateMachineStatus * const this /* r30 */) {}
+// this: r30
+void StateMachineStatus::ShutdownCurState() {}
 
 // Range: 0x8016AEAC -> 0x8016AF24
-void StateMachineStatus::UpdateCurState(class StateMachineStatus * const this /* r31 */, float fDeltaSeconds /* f31 */) {}
+// this: r31
+void StateMachineStatus::UpdateCurState(float fDeltaSeconds /* f31 */) {}
 
 // Range: 0x8016AF24 -> 0x8016AF9C
-void StateMachineStatus::DrawCurState(class StateMachineStatus * const this /* r30 */, class ERC * pGraphicsState /* r31 */) {}
+// this: r30
+void StateMachineStatus::DrawCurState(class ERC * pGraphicsState /* r31 */) {}
 
 // Range: 0x8016AF9C -> 0x8016B020
-void StateMachineStatus::DrawTopmostCurState(class StateMachineStatus * const this /* r29 */, class ERC * pGraphicsState /* r30 */) {}
+// this: r29
+void StateMachineStatus::DrawTopmostCurState(class ERC * pGraphicsState /* r30 */) {}
 
 // Range: 0x8016B020 -> 0x8016B0A4
-class StateMachine * StateMachineManager::FindMachineById(class StateMachineManager * const this /* r28 */, int machineId /* r29 */) {
+// this: r28
+class StateMachine * StateMachineManager::FindMachineById(int machineId /* r29 */) {
     // Local variables
     class StateMachine * * iMachine; // r31
     class StateMachine * pThis; // r30
 }
 
 // Range: 0x8016B0A4 -> 0x8016B114
-class StateMachine * StateMachineManager::FindMachine(class StateMachineManager * const this /* r29 */, const class StateMachine * pMachine /* r30 */) {
+// this: r29
+class StateMachine * StateMachineManager::FindMachine(const class StateMachine * pMachine /* r30 */) {
     // Local variables
     class StateMachine * * iMachine; // r31
     class StateMachine * pThis; // r3
@@ -148,7 +168,8 @@ void StateMachineManager::Shutdown() {
 }
 
 // Range: 0x8016B170 -> 0x8016B1E4
-void StateMachineManager::UpdateMachine(class StateMachineManager * const this /* r30 */, float fDeltaSeconds /* f31 */) {
+// this: r30
+void StateMachineManager::UpdateMachine(float fDeltaSeconds /* f31 */) {
     // Local variables
     class StateMachine * * iMachine; // r31
 }
@@ -160,13 +181,15 @@ void StateMachineManager::UpdateMachines() {
 }
 
 // Range: 0x8016B1F8 -> 0x8016B26C
-void StateMachineManager::DrawMachine(class StateMachineManager * const this /* r29 */, class ERC * pGraphicsState /* r30 */) {
+// this: r29
+void StateMachineManager::DrawMachine(class ERC * pGraphicsState /* r30 */) {
     // Local variables
     class StateMachine * * iMachine; // r31
 }
 
 // Range: 0x8016B26C -> 0x8016B2E0
-void StateMachineManager::DrawTopmostMachine(class StateMachineManager * const this /* r29 */, class ERC * pGraphicsState /* r30 */) {
+// this: r29
+void StateMachineManager::DrawTopmostMachine(class ERC * pGraphicsState /* r30 */) {
     // Local variables
     class StateMachine * * iMachine; // r31
 }

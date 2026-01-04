@@ -5,19 +5,21 @@
     Code range: 0x802E967C -> 0x802E9888
 */
 // Range: 0x802E967C -> 0x802E96C4
-void * ERSoundTrackData::ERSoundTrackData() {
+ERSoundTrackData::ERSoundTrackData() {
     // References
     // -> struct [anonymous] __vt__16ERSoundTrackData;
 }
 
 // Range: 0x802E96C4 -> 0x802E975C
-void * ERSoundTrackData::~ERSoundTrackData(class ERSoundTrackData * const this /* r30 */) {
+// this: r30
+ERSoundTrackData::~ERSoundTrackData() {
     // References
     // -> struct [anonymous] __vt__9EResource;
 }
 
 // Range: 0x802E975C -> 0x802E9888
-void ERSoundTrackData::Load(class ERSoundTrackData * const this /* r30 */, class EFile * s /* r31 */) {
+// this: r30
+void ERSoundTrackData::Load(class EFile * s /* r31 */) {
     // Local variables
     class EDataHeader resourceHeader; // r1+0xC
     int progSize; // r7

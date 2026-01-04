@@ -17,7 +17,7 @@ unsigned int EAnimController::ExecutingFlags() {}
 class EACTrack * EAnimController::GetExecutingTrack() {}
 
 // Range: 0x80019698 -> 0x800196CC
-void EACTrack::__dl(void * p /* r31 */) {}
+void EACTrack::operator delete(void * p /* r31 */) {}
 
 // Range: 0x800196CC -> 0x800196E4
 unsigned char EAnimController::GetPlayerControl() {}
@@ -29,7 +29,8 @@ void EAnimController::Compute() {
 }
 
 // Range: 0x800196EC -> 0x8001973C
-int EAnimController::GetNodeCount(class EAnimController * const this /* r31 */) {}
+// this: r31
+int EAnimController::GetNodeCount() {}
 
 // Range: 0x8001973C -> 0x80019744
 void EAnimController::SetUpdateMatrixesAtAll() {}
@@ -41,7 +42,8 @@ void EAnimController::SetPlayerControl() {}
 unsigned int EAnimController::GetNumOutgoingTracks() {}
 
 // Range: 0x80019774 -> 0x800197AC
-void EAnimController::RemoveTranslatableBones(class EAnimController * const this /* r31 */) {}
+// this: r31
+void EAnimController::RemoveTranslatableBones() {}
 
 // Range: 0x800197AC -> 0x800197B8
 void EAnimController::AddMirrorBonePair() {}
@@ -59,12 +61,6 @@ void EAnimController::SetRootTransBone() {}
 float EAnimController::GetModelScaler() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\common\engine\graphics\e_animcontroller.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x8003A784 -> 0x8003A7AC
-*/
 // Range: 0x8003A784 -> 0x8003A78C
 class EMat4 * EAnimController::GetNodeMatrices() {}
 
@@ -78,22 +74,10 @@ void EAnimController::SetModelScaler() {}
 void EAnimController::ClearLastComputeFrame() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\common\engine\graphics\e_animcontroller.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x8006B8AC -> 0x8006B8B4
-*/
 // Range: 0x8006B8AC -> 0x8006B8B4
 void EAnimController::SetDrawOverrideFlag() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\common\engine\graphics\e_animcontroller.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x80082EF4 -> 0x80082F14
-*/
 // Range: 0x80082EF4 -> 0x80082F00
 unsigned char EAnimController::IsEnabled() {}
 
@@ -104,22 +88,10 @@ struct EACNodeState * EAnimController::GetNodeStates() {}
 unsigned char EAnimController::AnyNodesHidden() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\common\engine\graphics\e_animcontroller.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x801CB2FC -> 0x801CB308
-*/
 // Range: 0x801CB2FC -> 0x801CB308
 void EAnimController::SetPostComputeCallback() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\common\engine\graphics\e_animcontroller.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x8020F600 -> 0x8020F6B4
-*/
 // Range: 0x8020F600 -> 0x8020F608
 float EAnimController::GetGlobalSpeed() {}
 
@@ -130,6 +102,7 @@ unsigned char EAnimController::OutgoingBlendingInProcess() {
 }
 
 // Range: 0x8020F668 -> 0x8020F6B4
-unsigned int EAnimController::GetCharacterId(class EAnimController * const this /* r31 */) {}
+// this: r31
+unsigned int EAnimController::GetCharacterId() {}
 
 

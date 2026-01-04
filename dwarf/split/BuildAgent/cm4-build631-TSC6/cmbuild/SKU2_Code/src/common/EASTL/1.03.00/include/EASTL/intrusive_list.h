@@ -15,19 +15,19 @@ void intrusive_list::remove() {
 }
 
 // Range: 0x8012299C -> 0x801229B8
-unsigned char __ne() {}
+unsigned char operator!=() {}
 
 // Range: 0x801229B8 -> 0x801229C8
-class intrusive_list_iterator & intrusive_list_iterator::__pp() {}
+class intrusive_list_iterator & intrusive_list_iterator::operator++() {}
 
 // Range: 0x801229C8 -> 0x801229D0
-struct LotNode * intrusive_list_iterator::__rf() {}
+struct LotNode * intrusive_list_iterator::operator->() {}
 
 // Range: 0x801229D0 -> 0x801229D4
 class intrusive_list_iterator intrusive_list::end() {}
 
 // Range: 0x801229D4 -> 0x801229DC
-void * intrusive_list_iterator::intrusive_list_iterator() {}
+intrusive_list_iterator::intrusive_list_iterator() {}
 
 // Range: 0x801229DC -> 0x801229E4
 class intrusive_list_iterator intrusive_list::begin() {}
@@ -36,9 +36,10 @@ class intrusive_list_iterator intrusive_list::begin() {}
 void intrusive_list::push_front() {}
 
 // Range: 0x80122A00 -> 0x80122A30
-void * intrusive_list::intrusive_list(class intrusive_list * const this /* r31 */) {}
+// this: r31
+intrusive_list::intrusive_list() {}
 
 // Range: 0x80122A30 -> 0x80122A3C
-void * intrusive_list_base::intrusive_list_base() {}
+intrusive_list_base::intrusive_list_base() {}
 
 

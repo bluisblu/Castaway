@@ -11,14 +11,9 @@ unsigned char EIWallPart::IsDiagonal() {}
 unsigned char EIWallPart::IsWindow() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\target\game\eroom.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x80059AD0 -> 0x80059B30
-*/
 // Range: 0x80059AD0 -> 0x80059B14
-unsigned char EIWallPart::IsDown(class EIWallPart * const this /* r31 */) {}
+// this: r31
+unsigned char EIWallPart::IsDown() {}
 
 // Range: 0x80059B14 -> 0x80059B1C
 void EIWallPart::SetForceFadeOff() {}
@@ -27,20 +22,15 @@ void EIWallPart::SetForceFadeOff() {}
 unsigned char EIWallPart::isDiagonal() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\target\game\eroom.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x8021F970 -> 0x8021FEF8
-*/
 // Range: 0x8021F970 -> 0x8021F9A4
-void EIFenceWall::__dl(void * p /* r31 */) {}
+void EIFenceWall::operator delete(void * p /* r31 */) {}
 
 // Range: 0x8021F9A4 -> 0x8021F9E4
-void * EIFenceWall::__nw(unsigned long size /* r31 */) {}
+void * EIFenceWall::operator new(unsigned long size /* r31 */) {}
 
 // Range: 0x8021F9E4 -> 0x8021FA58
-void * ERoomWall::ERoomWall(class ERoomWall * const this /* r31 */) {
+// this: r31
+ERoomWall::ERoomWall() {
     // References
     // -> struct [anonymous] __vt__9ERoomWall;
 }
@@ -52,22 +42,25 @@ void EIWallPart::SafeDelete() {}
 void ERoomWall::SafeDelete() {}
 
 // Range: 0x8021FAF0 -> 0x8021FB38
-void * ERoomWallPtr::~ERoomWallPtr(class ERoomWallPtr * const this /* r31 */) {}
+// this: r31
+ERoomWallPtr::~ERoomWallPtr() {}
 
 // Range: 0x8021FB38 -> 0x8021FB40
 void ERoomWallPtr::SetPtr() {}
 
 // Range: 0x8021FB40 -> 0x8021FB90
-void ERoomWallPtr::Delete(class ERoomWallPtr * const this /* r31 */) {}
+// this: r31
+void ERoomWallPtr::Delete() {}
 
 // Range: 0x8021FB90 -> 0x8021FB9C
-void * ERoomWallPtr::ERoomWallPtr() {}
+ERoomWallPtr::ERoomWallPtr() {}
 
 // Range: 0x8021FB9C -> 0x8021FBA4
 class ERoomWall * ERoomWallPtr::GetPtr() {}
 
 // Range: 0x8021FBA4 -> 0x8021FBE4
-void * WallFadeParms::~WallFadeParms(class WallFadeParms * const this /* r31 */) {}
+// this: r31
+WallFadeParms::~WallFadeParms() {}
 
 // Range: 0x8021FBE4 -> 0x8021FBF0
 class ETypeInfo * EIWallPart::GetTypeInfo() {
@@ -149,7 +142,7 @@ void EIWallPart::Destruct() {}
 void EIWallPart::Construct() {}
 
 // Range: 0x8021FD88 -> 0x8021FD90
-void * EIWallPart::__nw() {}
+void * EIWallPart::operator new() {}
 
 // Range: 0x8021FD90 -> 0x8021FDC0
 class EIWallPart * EIWallPart::New() {}
@@ -168,14 +161,15 @@ void EIFenceWall::Destruct() {}
 void EIFenceWall::Construct() {}
 
 // Range: 0x8021FE34 -> 0x8021FE84
-void * EIFenceWall::EIFenceWall(class EIFenceWall * const this /* r31 */) {
+// this: r31
+EIFenceWall::EIFenceWall() {
     // References
     // -> int m_nInstances;
     // -> struct [anonymous] __vt__11EIFenceWall;
 }
 
 // Range: 0x8021FE84 -> 0x8021FE8C
-void * EIFenceWall::__nw() {}
+void * EIFenceWall::operator new() {}
 
 // Range: 0x8021FE8C -> 0x8021FEBC
 class EIFenceWall * EIFenceWall::New() {}

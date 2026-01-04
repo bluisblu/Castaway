@@ -5,6 +5,7 @@
     Code range: 0x802AE9E8 -> 0x802AEA44
 */
 // Range: 0x802AE9E8 -> 0x802AEA44
-void * ERAudioStream::~ERAudioStream(class ERAudioStream * const this /* r30 */) {}
+// this: r30
+ERAudioStream::~ERAudioStream() {}
 
 

@@ -36,7 +36,8 @@ static void _Parse(class CDirtyXmlNode * pNode /* r29 */) {
 class IAptXml * CDirtyXmlImpl::createNewAptXml(const char * pUrl /* r30 */) {}
 
 // Range: 0x8009F920 -> 0x8009F9F0
-void * CDirtyXmlNode::~CDirtyXmlNode(class CDirtyXmlNode * const this /* r28 */) {
+// this: r28
+CDirtyXmlNode::~CDirtyXmlNode() {
     // Local variables
     int iChild; // r30
 
@@ -51,7 +52,8 @@ void CDirtyXmlNode::appendChild() {}
 class AptXmlAttributePair CDirtyXmlNode::getFirstAttribute() {}
 
 // Range: 0x8009FA0C -> 0x8009FABC
-class AptXmlAttributePair CDirtyXmlNode::getNextAttribute(class CDirtyXmlNode * const this /* r29 */) {
+// this: r29
+class AptXmlAttributePair CDirtyXmlNode::getNextAttribute() {
     // Local variables
     class AptXmlAttributePair AttribPair; // r1+0x8
 
@@ -210,7 +212,8 @@ void CDirtyXml::removeNode() {}
 char * CDirtyXml::toString() {}
 
 // Range: 0x8009FD40 -> 0x8009FDD0
-void * CDirtyXml::~CDirtyXml(class CDirtyXml * const this /* r30 */) {
+// this: r30
+CDirtyXml::~CDirtyXml() {
     // References
     // -> struct [anonymous] __vt__9CDirtyXml;
 }
@@ -252,7 +255,8 @@ void CDirtyXml::load() {}
 int CDirtyXml::isLoaded() {}
 
 // Range: 0x8009FE20 -> 0x8009FEB4
-void CDirtyXml::parseXml(class CDirtyXml * const this /* r30 */, const char * pSourceString /* r31 */) {}
+// this: r30
+void CDirtyXml::parseXml(const char * pSourceString /* r31 */) {}
 
 // Range: 0x8009FEB4 -> 0x8009FEB8
 void CDirtyXml::send() {}

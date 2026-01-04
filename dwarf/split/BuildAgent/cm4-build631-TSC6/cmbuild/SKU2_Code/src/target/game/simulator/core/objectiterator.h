@@ -8,9 +8,10 @@
 unsigned char ObjectIterator::finished() {}
 
 // Range: 0x8005DFC0 -> 0x8005DFC8
-class cXObject * ObjectIterator::__ml() {}
+class cXObject * ObjectIterator::operator*() {}
 
 // Range: 0x8005DFC8 -> 0x8005DFF8
-void * ObjectIterator::ObjectIterator(class ObjectIterator * const this /* r31 */) {}
+// this: r31
+ObjectIterator::ObjectIterator() {}
 
 

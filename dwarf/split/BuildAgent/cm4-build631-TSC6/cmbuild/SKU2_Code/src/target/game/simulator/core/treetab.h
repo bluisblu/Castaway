@@ -8,10 +8,12 @@
 class ITreeTableAd * TTabScratchEntry::GetAd() {}
 
 // Range: 0x800A5FAC -> 0x800A5FEC
-void * TreeTableAdScratch::~TreeTableAdScratch(class TreeTableAdScratch * const this /* r31 */) {}
+// this: r31
+TreeTableAdScratch::~TreeTableAdScratch() {}
 
 // Range: 0x800A5FEC -> 0x800A603C
-void * TreeTableAdScratch::TreeTableAdScratch(class TreeTableAdScratch * const this /* r31 */) {
+// this: r31
+TreeTableAdScratch::TreeTableAdScratch() {
     // References
     // -> struct [anonymous] __vt__18TreeTableAdScratch;
 }
@@ -20,7 +22,8 @@ void * TreeTableAdScratch::TreeTableAdScratch(class TreeTableAdScratch * const t
 void TTabScratchEntry::SetAd(int motiveNum /* r0 */) {}
 
 // Range: 0x800A60D4 -> 0x800A6190
-class ITreeTableAd & TreeTableAdScratch::__as(class TreeTableAdScratch * const this /* r30 */, const class ITreeTableAd & ad /* r31 */) {}
+// this: r30
+class ITreeTableAd & TreeTableAdScratch::operator=(const class ITreeTableAd & ad /* r31 */) {}
 
 // Range: 0x800A6190 -> 0x800A6198
 void TreeTableAdScratch::SetRange() {}
@@ -254,12 +257,6 @@ void TTabScratchEntry::GetActivationExtents() {}
 void TTabScratchEntry::SetActivationExtents() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\target\game\simulator\core\treetab.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x8015D808 -> 0x8015D838
-*/
 // Range: 0x8015D808 -> 0x8015D818
 signed short * TTabScratchEntry::GetMinRef() {}
 

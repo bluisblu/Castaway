@@ -8,6 +8,6 @@
 unsigned char cSoundPlayer::IsPaused() {}
 
 // Range: 0x80107C78 -> 0x80107C98
-void * SoundEventInfo::SoundEventInfo() {}
+SoundEventInfo::SoundEventInfo() {}
 
 

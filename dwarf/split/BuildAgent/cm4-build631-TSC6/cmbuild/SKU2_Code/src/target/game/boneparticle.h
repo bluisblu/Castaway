@@ -8,7 +8,7 @@
 void EBoneParticle::SetStopImmediate() {}
 
 // Range: 0x800198D0 -> 0x80019910
-void * EBoneParticle::__nw(unsigned long size /* r31 */) {}
+void * EBoneParticle::operator new(unsigned long size /* r31 */) {}
 
 // Range: 0x80019910 -> 0x80019918
 void EBoneParticle::SetShouldContinueOnSkillStart() {}
@@ -17,12 +17,6 @@ void EBoneParticle::SetShouldContinueOnSkillStart() {}
 unsigned char EBoneParticle::GetShouldContinueOnSkillStart() {}
 
 
-/*
-    Compile unit: C:\BuildAgent\cm4-build631-TSC6\cmbuild\SKU2_Code\src\target\game\boneparticle.h
-    Producer: MW EABI PPC C-Compiler
-    Language: C++
-    Code range: 0x8020629C -> 0x80206300
-*/
 // Range: 0x8020629C -> 0x802062B4
 unsigned char AnimParticleData::GetFlag() {}
 
@@ -34,6 +28,6 @@ enum AttachmentEffectType AnimParticleData::GetEffectType() {
 }
 
 // Range: 0x802062CC -> 0x80206300
-void EBoneParticle::__dl(void * p /* r31 */) {}
+void EBoneParticle::operator delete(void * p /* r31 */) {}
 
 

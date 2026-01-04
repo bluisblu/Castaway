@@ -5,16 +5,19 @@
     Code range: 0x802F5824 -> 0x802F5B48
 */
 // Range: 0x802F5824 -> 0x802F587C
-void * EVibrate::EVibrate(class EVibrate * const this /* r31 */) {
+// this: r31
+EVibrate::EVibrate() {
     // References
     // -> unsigned char s_u8SysAlign[6];
 }
 
 // Range: 0x802F587C -> 0x802F58BC
-void * EVibrate::~EVibrate(class EVibrate * const this /* r31 */) {}
+// this: r31
+EVibrate::~EVibrate() {}
 
 // Range: 0x802F58BC -> 0x802F5908
-void EVibrate::Enable(class EVibrate * const this /* r31 */) {}
+// this: r31
+void EVibrate::Enable() {}
 
 // Range: 0x802F5908 -> 0x802F5914
 void EVibrate::Disable() {}
@@ -23,7 +26,8 @@ void EVibrate::Disable() {}
 unsigned char EVibrate::IsOn() {}
 
 // Range: 0x802F591C -> 0x802F599C
-unsigned char EVibrate::TurnOn(class EVibrate * const this /* r30 */, unsigned char Port /* r31 */) {
+// this: r30
+unsigned char EVibrate::TurnOn(unsigned char Port /* r31 */) {
     // Local variables
     class EController * pController; // r0
 
@@ -59,7 +63,8 @@ unsigned char EVibrate::VibrateAll(float I1 /* f28 */, float I2 /* f29 */, float
 }
 
 // Range: 0x802F5AB0 -> 0x802F5B40
-void EVibrate::StopAllVibration(class EVibrate * const this /* r30 */) {
+// this: r30
+void EVibrate::StopAllVibration() {
     // Local variables
     int i; // r31
     class EController * pController; // r0

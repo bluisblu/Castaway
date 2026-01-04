@@ -5,13 +5,14 @@
     Code range: 0x802E9888 -> 0x802EA09C
 */
 // Range: 0x802E9888 -> 0x802E98C8
-void * ERTexture::ERTexture() {
+ERTexture::ERTexture() {
     // References
     // -> struct [anonymous] __vt__9ERTexture;
 }
 
 // Range: 0x802E98C8 -> 0x802E9958
-void * ERTexture::~ERTexture(class ERTexture * const this /* r30 */) {
+// this: r30
+ERTexture::~ERTexture() {
     // References
     // -> class ETextureManager _textureman;
     // -> struct [anonymous] __vt__9EResource;
@@ -19,22 +20,26 @@ void * ERTexture::~ERTexture(class ERTexture * const this /* r30 */) {
 }
 
 // Range: 0x802E9958 -> 0x802E9994
-void ERTexture::Attach(class ERTexture * const this /* r30 */, class ETexture * pTexture /* r31 */) {}
+// this: r30
+void ERTexture::Attach(class ETexture * pTexture /* r31 */) {}
 
 // Range: 0x802E9994 -> 0x802E99DC
-void ERTexture::Deallocate(class ERTexture * const this /* r31 */) {
+// this: r31
+void ERTexture::Deallocate() {
     // References
     // -> class EGraphics * _pGfx;
 }
 
 // Range: 0x802E99DC -> 0x802E9A78
-void ERTexture::Refresh(class ERTexture * const this /* r30 */, class EFile * pFile /* r31 */) {
+// this: r30
+void ERTexture::Refresh(class EFile * pFile /* r31 */) {
     // References
     // -> class EGraphics * _pGfx;
 }
 
 // Range: 0x802E9A78 -> 0x802E9CE4
-void ERTexture::LoadFromFile(class ERTexture * const this /* r30 */, class EFile * s /* r31 */) {
+// this: r30
+void ERTexture::LoadFromFile(class EFile * s /* r31 */) {
     // Local variables
     struct ETextureDef td; // r1+0x10
     int nImages; // r0
@@ -55,7 +60,8 @@ void ERTexture::LoadFromFile(class ERTexture * const this /* r30 */, class EFile
 }
 
 // Range: 0x802E9CE4 -> 0x802E9D84
-void ERTexture::Load(class ERTexture * const this /* r30 */, class EFile & s /* r31 */) {
+// this: r30
+void ERTexture::Load(class EFile & s /* r31 */) {
     // Local variables
     class EDataHeader resourceHeader; // r1+0x8
 }
@@ -64,7 +70,8 @@ void ERTexture::Load(class ERTexture * const this /* r30 */, class EFile & s /* 
 void ERTexture::Load() {}
 
 // Range: 0x802E9D8C -> 0x802EA00C
-void ERTexture::LoadFromMemory(class ERTexture * const this /* r30 */, unsigned char * pData /* r31 */) {
+// this: r30
+void ERTexture::LoadFromMemory(unsigned char * pData /* r31 */) {
     // Local variables
     struct ETextureDef td; // r1+0x10
     int xSize; // r27
@@ -83,7 +90,8 @@ void ERTexture::LoadFromMemory(class ERTexture * const this /* r30 */, unsigned 
 }
 
 // Range: 0x802EA00C -> 0x802EA09C
-unsigned char ERTexture::IsSafeToDelete(class ERTexture * const this /* r30 */) {
+// this: r30
+unsigned char ERTexture::IsSafeToDelete() {
     // Local variables
     int p; // r31
 

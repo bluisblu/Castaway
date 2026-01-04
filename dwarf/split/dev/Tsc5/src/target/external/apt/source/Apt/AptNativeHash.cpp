@@ -11,13 +11,14 @@ static char __PRETTY_FUNCTION__[32]; // size: 0x20, address: 0x8045D288
 static char __PRETTY_FUNCTION__[32]; // size: 0x20, address: 0x8045D2A8
 static int aSpriteGperfToActionFlag[19]; // size: 0x4C, address: 0x8041FAC0
 // Range: 0x803287FC -> 0x8032883C
-void * AptNativeHash::AptNativeHash() {
+AptNativeHash::AptNativeHash() {
     // Local variables
     int NextHighestPowerOfTwo; // r0
 }
 
 // Range: 0x8032883C -> 0x80328910
-void * AptNativeHash::~AptNativeHash(class AptNativeHash * const this /* r27 */) {
+// this: r27
+AptNativeHash::~AptNativeHash() {
     // Local variables
     int i; // r29
 
@@ -27,7 +28,8 @@ void * AptNativeHash::~AptNativeHash(class AptNativeHash * const this /* r27 */)
 
 static char __PRETTY_FUNCTION__[35]; // size: 0x23, address: 0x8045D2C8
 // Range: 0x80328910 -> 0x803289CC
-void AptNativeHash::DestroyGCPointers(class AptNativeHash * const this /* r26 */) {
+// this: r26
+void AptNativeHash::DestroyGCPointers() {
     // Local variables
     int i; // r27
 
@@ -36,42 +38,49 @@ void AptNativeHash::DestroyGCPointers(class AptNativeHash * const this /* r26 */
 }
 
 // Range: 0x803289CC -> 0x80328AD0
-void AptNativeHash::Set(class AptNativeHash * const this /* r28 */, const class EAStringC * const pKey /* r29 */, class AptValue * const pValue /* r30 */) {
+// this: r28
+void AptNativeHash::Set(const class EAStringC * const pKey /* r29 */, class AptValue * const pValue /* r30 */) {
     // Local variables
     unsigned int h; // r31
 }
 
 // Range: 0x80328AD0 -> 0x80328BC4
-void AptNativeHash::Unset(class AptNativeHash * const this /* r28 */, const class EAStringC * const pKey /* r29 */) {
+// this: r28
+void AptNativeHash::Unset(const class EAStringC * const pKey /* r29 */) {
     // Local variables
     unsigned int h; // r31
     struct AptHashItem * pHashItem; // r30
 }
 
 // Range: 0x80328BC4 -> 0x80328C94
-class AptValue * AptNativeHash::Lookup(const class AptNativeHash * const this /* r29 */, const class EAStringC * const pKey /* r30 */) {
+// this: r29
+class AptValue * AptNativeHash::Lookup(const class EAStringC * const pKey /* r30 */) const {
     // Local variables
     struct AptHashItem * pItem; // r0
     unsigned int h; // r31
 }
 
 // Range: 0x80328C94 -> 0x80328D3C
-struct AptHashItem * AptNativeHash::GetFirstItem(class AptNativeHash * const this /* r29 */) {
+// this: r29
+struct AptHashItem * AptNativeHash::GetFirstItem() {
     // Local variables
     int i; // r30
 }
 
 // Range: 0x80328D3C -> 0x80328DD0
-struct AptHashItem * AptNativeHash::GetNextItem(class AptNativeHash * const this /* r30 */, struct AptHashItem * pItem /* r31 */) {}
+// this: r30
+struct AptHashItem * AptNativeHash::GetNextItem(struct AptHashItem * pItem /* r31 */) {}
 
 // Range: 0x80328DD0 -> 0x80328E1C
-void AptNativeHash::FirstAllocation(class AptNativeHash * const this /* r31 */) {
+// this: r31
+void AptNativeHash::FirstAllocation() {
     // References
     // -> class DOGMA_PoolManager * gpNonGCPoolManager;
 }
 
 // Range: 0x80328E1C -> 0x80328F08
-void AptNativeHash::Expand(class AptNativeHash * const this /* r28 */) {
+// this: r28
+void AptNativeHash::Expand() {
     // Local variables
     class AptNativeHash TempHash; // r1+0x8
     class EAStringC * pKey; // r30
@@ -81,7 +90,8 @@ void AptNativeHash::Expand(class AptNativeHash * const this /* r28 */) {
 }
 
 // Range: 0x80328F08 -> 0x803291CC
-void AptNativeHash::HashSet(class AptNativeHash * const this /* r27 */, const class EAStringC * const pKey /* r28 */, class AptValue * const pValue /* r29 */) {
+// this: r27
+void AptNativeHash::HashSet(const class EAStringC * const pKey /* r28 */, class AptValue * const pValue /* r29 */) {
     // Local variables
     int nBoundMin; // r24
     int nBoundMax; // r0
@@ -92,7 +102,8 @@ void AptNativeHash::HashSet(class AptNativeHash * const this /* r27 */, const cl
 }
 
 // Range: 0x803291CC -> 0x803293B0
-struct AptHashItem * AptNativeHash::HashFindKey(const class AptNativeHash * const this /* r29 */, const class EAStringC * pKey /* r30 */) {
+// this: r29
+struct AptHashItem * AptNativeHash::HashFindKey(const class EAStringC * pKey /* r30 */) const {
     // Local variables
     int nBoundMin; // r26
     int nBoundMax; // r0
@@ -102,7 +113,8 @@ struct AptHashItem * AptNativeHash::HashFindKey(const class AptNativeHash * cons
 }
 
 // Range: 0x803293B0 -> 0x80329474
-void AptNativeHash::UpdateObjectMethods(class AptNativeHash * const this /* r28 */, const class EAStringC * pVar /* r29 */, int bRemove /* r30 */) {
+// this: r28
+void AptNativeHash::UpdateObjectMethods(const class EAStringC * pVar /* r29 */, int bRemove /* r30 */) {
     // Local variables
     struct SpriteMembers * pProp; // r0
     int nFlag; // r4
@@ -112,7 +124,8 @@ void AptNativeHash::UpdateObjectMethods(class AptNativeHash * const this /* r28 
 }
 
 // Range: 0x80329474 -> 0x80329580
-void AptNativeHash::RegisterReferences(const class AptNativeHash * const this /* r28 */, const class AptValue * pFromRef /* r29 */) {
+// this: r28
+void AptNativeHash::RegisterReferences(const class AptValue * pFromRef /* r29 */) const {
     // Local variables
     int i; // r30
 

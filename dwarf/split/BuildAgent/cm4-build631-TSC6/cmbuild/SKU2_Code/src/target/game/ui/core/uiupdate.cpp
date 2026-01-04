@@ -5,7 +5,8 @@
     Code range: 0x80187370 -> 0x80187798
 */
 // Range: 0x80187370 -> 0x80187410
-void * UIUpdateTable::UIUpdateTable(class UIUpdateTable * const this /* r29 */) {
+// this: r29
+UIUpdateTable::UIUpdateTable() {
     // Local variables
     class UpdateTableRecord * prev; // r31
     int i; // r30
@@ -15,7 +16,8 @@ void * UIUpdateTable::UIUpdateTable(class UIUpdateTable * const this /* r29 */) 
 }
 
 // Range: 0x80187410 -> 0x801874CC
-void * UIUpdateTable::~UIUpdateTable(class UIUpdateTable * const this /* r29 */) {
+// this: r29
+UIUpdateTable::~UIUpdateTable() {
     // Local variables
     class UpdateTableRecord * record; // r5
     class UpdateTableRecord * next; // r31

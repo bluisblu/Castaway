@@ -5,9 +5,11 @@
     Code range: 0x8013D83C -> 0x8013D91C
 */
 // Range: 0x8013D83C -> 0x8013D88C
-void cXObject::Error(class cXObject * const this /* r31 */) {}
+// this: r31
+void cXObject::Error() {}
 
 // Range: 0x8013D88C -> 0x8013D91C
-void cXObject::HandleError(class cXObject * const this /* r31 */) {}
+// this: r31
+void cXObject::HandleError() {}
 
 
